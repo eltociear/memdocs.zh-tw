@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/03/2020
+ms.date: 03/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d364c77266e51b3dcbc19c237e93f17e6f8d1aa
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7817a747a01a137fd29ee8aae117cd604da233a5
+ms.sourcegitcommit: 4815f07c8c0399c077b71721c6e6b61047c75ae6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352159"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79437110"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>使用 Intune 保護裝置的 Windows 10 (及更新版本) 設定
 
@@ -359,7 +359,7 @@ Microsoft Intune 包含許多設定，可協助保護您的裝置。 本文描�
   選取**任何位址**或**指定的位址**。  
 
   當您使用「指定的位址」  時，您可以將一或多個位址新增為規則涵蓋的本機位址清單 (以逗號分隔)。 有效的權杖包括：  
-  - 針對「任何」  本機位址，使用星號 “*”。 如果您使用星號，則其必須是您唯一使用的權杖。  
+  - 針對「任何」  本機位址，使用星號 "*"。 如果您使用星號，則其必須是您唯一使用的權杖。  
   - 若要指定子網路，請使用子網路遮罩或網路首碼表示法。 如果未指定子網路遮罩或網路首碼，則子網路遮罩預設會是 255.255.255.255。  
   - 有效的 IPv6 位址。  
   - 格式為「起始位址 - 結束位址」的 IPv4 位址範圍，不含空格。  
@@ -372,7 +372,7 @@ Microsoft Intune 包含許多設定，可協助保護您的裝置。 本文描�
   選取**任何位址**或**指定的位址**。  
 
   當您使用「指定的位址」  時，您可以將一或多個位址，新增為規則涵蓋的遠端位址清單 (以逗號分隔)。 權杖不區分大小寫。 有效的權杖包括：  
-  - 針對「任何」  遠端位址，使用星號 “*”。 如果您使用星號，則其必須是您唯一使用的權杖。  
+  - 針對「任何」  遠端位址，使用星號 "*"。 如果您使用星號，則其必須是您唯一使用的權杖。  
   - "Defaultgateway"  
   - "DHCP"  
   - "DNS"  
@@ -1302,7 +1302,7 @@ Microsoft Defender 資訊安全中心是以個別的應用程式或各個功能�
   LocalPoliciesSecurityOptions CSP：[InteractiveLogon_MachineInactivityLimit](https://go.microsoft.com/fwlink/?linkid=867891)  
 
 
-  輸入互動式桌面登入畫面閒置，直到螢幕保護裝置啟動的最長分鐘數。 (**0** - **99999**)  
+  輸入螢幕保護裝置啟動前互動式桌面登入畫面處於非使用狀態的分鐘數上限。 (**0** - **99999**)  
 
 - **需要 CTRL+ALT+DEL 才能登入**  
   **預設**：尚未設定  
@@ -1649,240 +1649,6 @@ Microsoft Defender 資訊安全中心是以個別的應用程式或各個功能�
   - **手動**
   - **自動**
   - **停用**
-
-## <a name="user-rights"></a>使用者權限
-
-- **存取認證管理員作為信任的呼叫者**  
-  **預設**：尚未設定  
-  CSP：[UserRights/AccessCredentialManagerAsTrustedCaller](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accesscredentialmanagerastrustedcaller)
-
-  在備份與還原作業期間，認證管理員會使用此使用者權限。 如果將此權限提供給其他實體，使用者的儲存認證可能會受到危害。
-  - **未設定**
-  - **允許**
-
-- **允許本機登入**  
-  **預設**：尚未設定  
-  CSP：[UserRights/AllowLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-allowlocallogon)
-
-  此使用者權限會決定可以登入此電腦的使用者。
-  - **未設定**
-  - **允許**
-
-- **允許從網路存取**  
-  **預設**：尚未設定  
-  CSP：[UserRights/AccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accessfromnetwork)
-
-  此使用者權限會決定可以從網路連線到電腦的使用者與群組。
-  - **未設定**
-  - **允許**
-
-- **當成作業系統的一部分**  
-  **預設**：尚未設定  
-  CSP：[UserRights/ActAsPartOfTheOperatingSystem](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-actaspartoftheoperatingsystem)
-
-  當成作業系統的一部分
-  - **未設定**
-  - **允許**  
-
-- **備份檔案和目錄**  
-  **預設**：尚未設定  
-  CSP：[UserRights/BackupFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-backupfilesanddirectories)
-
-  此使用者權限會決定在備份檔案和目錄時，哪些使用者可以略過檔案、目錄、登錄及其他持續性物件使用權限。
-  - **未設定**
-  - **允許**
-
-- **變更系統時間**  
-  **預設**：尚未設定  
-  CSP：[UserRights/ChangeSystemTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-changesystemtime)
-
-  此使用者權限會決定指定哪些使用者和群組可以變更電腦內部時鐘的時間與日期。
-  - **未設定**
-  - **允許**
-
-- **建立全域物件**  
-  **預設**：尚未設定  
-  CSP：[UserRights/CreateGlobalObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createglobalobjects)
-
-  此安全性設定會決定使用者是否可以建立可供所有工作階段使用的全域物件。 可以建立全域物件的使用者，可能會影響在其他使用者工作階段下執行的處理緒，這可能會導致應用程式失敗或資料損毀。
-  - **未設定**
-  - **允許**
-
-- **建立分頁檔**  
-  **預設**：尚未設定  
-  CSP：[UserRights/CreatePageFile](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpagefile)
-
-  此使用者權限會決定可以呼叫內部 (API)，以建立及變更分頁檔大小的使用者及群組。
-  - **未設定**
-  - **允許**
-
-- **建立永久共用物件**  
-  **預設**：尚未設定  
-  CSP：[UserRights/CreatePermanentSharedObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpermanentsharedobjects)
-
-  此使用者權限會決定處理序可使用哪些帳戶以使用物件管理員來建立目錄物件。
-  - **未設定**
-  - **允許**
-
-- **建立符號連結**  
-  **預設**：尚未設定  
-  CSP：[UserRights/CreateSymbolicLinks](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createsymboliclinks)
-
-  此使用者權限會決定使用者是否可以從其登入的電腦建立符號連結。
-  - **未設定**
-  - **允許**
-
-- **建立權杖**  
-  **預設**：尚未設定  
-  CSP：[UserRights/CreateToken](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createtoken)
-
-  此使用者權限會決定處理序可使用哪些使用者/群組來建立權杖，當處理緒使用內部 API 來建立存取權杖時，就可以使用這些使用者/群組來存取任何本機資源。
-  - **未設定**
-  - **允許**
-
-- **偵錯程式**  
-  **預設**：尚未設定  
-    CSP：[UserRights/DebugPrograms](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-debugprograms)
-
-  此使用者權限會決定哪些使用者可以將偵錯工具附加至任何處理序或核心。
-  - **未設定**
-  - **允許**
-
-- **拒絕從網路存取**  
-  **預設**：尚未設定  
-  CSP：[UserRights/DenyAccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyaccessfromnetwork)
-
-  此使用者權限會決定哪些使用者禁止透過網路存取電腦。
-  - **未設定**
-  - **允許**
-
-- **拒絕以服務方式登入**  
-  **預設**：尚未設定  
-  CSP：[UserRights/DenyLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denylocallogon)
-
-  此安全性設定會決定不得將處理序註冊為服務的服務帳戶。
-  - **未設定**
-  - **允許**
-
-- **拒絕透過遠端桌面服務登入**  
-  **預設**：尚未設定  
-  CSP：[UserRights/DenyRemoteDesktopServicesLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyremotedesktopserviceslogon)
-
-  此使用者權限會決定不得以遠端桌面服務用戶端身分登入的使用者與群組。
-  - **未設定**
-  - **允許**
-
-- **啟用委派**  
-  **預設**：尚未設定  
-  CSP：[UserRights/EnableDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-enabledelegation)
-
- 此使用者權限會決定哪些使用者可以在使用者或電腦物件上設定「受信任委派」的設定。
-  - **未設定**
-  - **允許**
-
-- **產生安全性稽核**  
-  **預設**：尚未設定  
-  CSP：[UserRights/GenerateSecurityAudits](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-generatesecurityaudits)
-
-  此使用者權限會決定處理序可使用哪些帳戶，以將項目新增至安全性記錄。 安全性記錄用於追蹤未經授權的系統存取。
-  - **未設定**
-  - **允許**
-
-- **模擬用戶端**  
-  **預設**：尚未設定  
-  CSP：[UserRights/ImpersonateClient](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-impersonateclient)
-
-  將此使用者權限指派給使用者，可讓代表該使用者執行的程式模擬用戶端。 此類型的模擬需要此使用者權限，可以防止未經授權的使用者說服用戶端連線到其所建立的服務，然後模擬該用戶端，以將未經授權的使用者權限提升至系統管理層級或系統層級。
-  - **未設定**
-  - **允許**
-
-- **增加排程優先順序**  
-  **預設**：尚未設定  
-  CSP：[UserRights/IncreaseSchedulingPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-increaseschedulingpriority)
-
-  此使用者權限會決定哪些帳戶可以使用處理序搭配其他處理序的「寫入屬性」存取權，以提高指派給其他處理序的執行優先順序。
-  - **未設定**
-  - **允許**
-
-- **載入及卸載裝置驅動程式**  
-  **預設**：尚未設定  
-  CSP：[UserRights/LoadUnloadDeviceDrivers](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-loadunloaddevicedrivers)
-
-  此使用者權限會決定哪些使用者可以動態載入和卸載設備磁碟機或其他程式碼到核心模式中。
-  - **未設定**
-  - **允許**
-
-- **鎖定記憶體內部分頁**  
-  **預設**：尚未設定  
-  CSP：[UserRights/LockMemory](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-lockmemory)
-
-  此使用者權限會決定哪些帳戶可以使用處理序將資料保留在實體記憶體中，以防止系統將資料傳送到磁碟上的虛擬記憶體。
-  - **未設定**
-  - **允許**
-
-- **管理稽核和安全性記錄檔**  
-  **預設**：尚未設定  
-  CSP：[UserRights/ManageAuditingAndSecurityLog](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-manageauditingandsecuritylog)
-
-  此使用者權限會決定哪些使用者可以為個別資源 (例如檔案、Active Directory 物件和登錄機碼) 指定物件存取稽核選項。
-  - **未設定**
-  - **允許**
-
-- **執行磁碟區維護工作**  
-  **預設**：尚未設定  
-  CSP：[UserRights/ManageVolume](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-managevolume)
-
-  此使用者權限會決定哪些使用者及群組可以在磁碟區上執行維護工作，例如遠端磁碟重組。
-  - **未設定**
-  - **允許**
-
-- **修改韌體環境值**  
-  **預設**：尚未設定  
-  CSP：[UserRights/ModifyFirmwareEnvironment](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyfirmwareenvironment)
-
-  此使用者會權限會決定可修改韌體環境值的人員。
-  - **未設定**
-  - **允許**
-
-- **修改物件標籤**  
-  **預設**：尚未設定  
-  CSP：[UserRights/ModifyObjectLabel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyobjectlabel)
-
-  此使用者權限會決定哪些使用者帳戶可以修改物件的完整性標籤，例如檔案、登錄機碼或其他使用者所擁有的處理序。
-  - **未設定**
-  - **允許**
-
-- **設定檔單一處理序**  
-  **預設**：尚未設定  
-  CSP：[UserRights/ProfileSingleProcess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-profilesingleprocess)
-
-  此使用者權限會決定哪些使用者可以使用效能監視工具，以監視系統處理序的效能。
-  - **未設定**
-  - **允許**
-
-- **遠端關機**  
-  **預設**：尚未設定  
-  CSP：[UserRights/RemoteShutdown](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-remoteshutdown)
-
-  此使用者權限會決定哪些使用者可以從網路遠端位置關閉電腦。 誤用此使用者權限可能會導致拒絕服務。
-  - **未設定**
-  - **允許**
-  
-- **還原檔案和目錄**  
-  **預設**：尚未設定  
-  CSP：[UserRights/RestoreFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-restorefilesanddirectories)
-  
-  此使用者權限會決定在還原備份的檔案和目錄時，哪些使用者可以略過檔案、目錄、登錄及其他持續性物件使用權限，並決定哪些使用者可以將任何有效安全性主體設為物件的擁有者。
-  - **未設定**
-  - **允許**
-  
-- **取得檔案或物件的擁有權**  
-  **預設**：尚未設定  
-  CSP：[UserRights/TakeOwnership](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-takeownership)
-
-  此使用者權限會決定可以取得系統中任何安全物件的使用者，包括 Active Directory 物件、檔案與資料夾、印表機、登錄機碼、處理序與執行緒。
-  - **未設定**
-  - **允許**
 
 ## <a name="next-steps"></a>後續步驟
 
