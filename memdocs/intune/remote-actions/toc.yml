@@ -49,7 +49,9 @@
           href: device-rename.md
         - name: 傳送通知
           href: custom-notifications.md
-        - name: 遠端控制行動裝置
+        - name: 從遠端協助行動裝置
+          href: remote-assist-mobile-devices.md
+        - name: 使用 TeamViewer 進行遠端系統管理
           href: teamviewer-support.md
         - name: 同步裝置
           href: device-sync.md

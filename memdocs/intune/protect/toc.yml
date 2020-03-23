@@ -265,6 +265,12 @@
               href: security-baseline-settings-defender-atp.md
             - name: Microsoft Edge 基準設定
               href: security-baseline-settings-edge.md
+        - name: 防毒軟體原則設定
+          items:
+            - name: macOS Defender 防毒軟體設定
+              href: antivirus-microsoft-defender-settings-macos.md
+            - name: Windows 10 Microsoft Defender 防毒軟體設定
+              href: antivirus-microsoft-defender-settings-windows.md
         - name: Windows 更新設定
           href: windows-update-settings.md
         - name: 合規性政策設定 - Android
