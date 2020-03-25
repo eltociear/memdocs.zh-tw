@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 889c7ef6d45a51a4aed86bf1a76842feb6f6251a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b5df63a14f27b657c585eb43e09b02368d969939
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79336104"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084403"
 ---
 # <a name="install-mobile-threat-defense"></a>安裝 Mobile Threat Defense   
 
@@ -79,9 +79,9 @@ ms.locfileid: "79336104"
 如果安裝失敗，請連絡 IT 支援人員。 前往[公司入口網站網站](https://go.microsoft.com/fwlink/?linkid=2010980)來尋找您組織的連絡資訊。  
 
 您也可以將應用程式記錄檔傳送給 IT 支援人員，以提供安裝的其他相關內容。  
-* Android 使用者：從公司入口網站[上傳及以電子郵件傳送記錄檔](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android)。   
+* Android 使用者：從公司入口網站[上傳及以電子郵件傳送記錄檔](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android)。   
 
-* iOS 裝置使用者：從 iOS 版 Microsoft Edge [擷取及傳送記錄檔](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-on-ios-to-access-managed-app-logs)。  
+* iOS 裝置使用者：從 iOS 版 Microsoft Edge [擷取及傳送記錄檔](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs)。  
 
 ## <a name="resolve-a-threat"></a>解決威脅  
 如果威脅超過您組織定義的威脅等級，則組織將會：  

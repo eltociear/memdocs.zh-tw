@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a81d0cad6e7fa985733675912ada6f446eb501d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4aaa8bcee3684c73fa5ec3d488fd3107585dfc61
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359400"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086162"
 ---
 # <a name="what-is-device-enrollment"></a>什麼是裝置註冊？
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -39,7 +39,7 @@ Intune 可供管理員工的裝置與應用程式，以及員工存取公司資�
 |:---:|:---:|:---:|:---:|:---:|
 | | 裝置會在註冊期間抹除。 | 建立每部裝置與使用者的關聯。| 如果會，使用者就無法取消註冊裝置。 | |
 |**[BYOD](#bring-your-own-device)** | 否| 是 | 否 | [詳細資訊](apple-mdm-push-certificate-get.md)|
-|**[DEM](#device-enrollment-manager)**| 否 |否 |否 | [詳細資訊](device-enrollment-program-enroll-ios.md)|
+|**[DEM](#device-enrollment-manager)**| 否 |否 |否 | [詳細資訊](device-enrollment-manager-enroll.md)|
 |**[DEP](#apple-device-enrollment-program)**| 是 | 選用 | 選用|[詳細資訊](device-enrollment-program-enroll-ios.md)|
 |**[USB-SA](#usb-sa)**| 是 | 選用 | 否| [詳細資訊](apple-configurator-enroll-ios.md)|
 |**[USB-Direct](#usb-direct)**| 否 | 否 | 否|[詳細資訊](apple-configurator-enroll-ios.md)|
@@ -67,7 +67,7 @@ Intune 可供管理員工的裝置與應用程式，以及員工存取公司資�
 
 | **個人** | **註冊方法** | **需要重設** | **使用者親和性** | **鎖定** | **詳細資料**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Android 裝置系統管理員**|**透過公司入口網站起始使用者** | 否 | 是 | 否 | [詳細資訊](https://docs.microsoft.com/user-help/enroll-device-android-company-portal)|
+|**Android 裝置系統管理員**|**透過公司入口網站起始使用者** | 否 | 是 | 否 | [詳細資訊](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
 |**Android Enterprise 工作設定檔**|**透過公司入口網站起始使用者**| 否 | 是 | 否 | [詳細資訊](android-work-profile-enroll.md)|
 
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/25/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: ''
-ms.openlocfilehash: eac0eff9167e46d73dffe1c74ce073ffa68c7070
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a6b45cef3cc13357638753efd5b8179c5ce41f6c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363196"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085701"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>適用於 Windows 裝置的 Intune 註冊方法
 
@@ -36,7 +36,7 @@ ms.locfileid: "79363196"
 
 使用者可以使用下列任何方法來自行註冊其 Windows 裝置：
 
-- [攜帶您自己的裝置 (BYOD)](https://docs.microsoft.com/user-help/enroll-windows-10-device)：使用者可以從裝置的 [設定]  選擇連線到**公司或學校**帳戶，來註冊其個人擁有的裝置。 此程序會：
+- [攜帶您自己的裝置 (BYOD)](https://docs.microsoft.com/mem/intune/user-help/enroll-windows-10-device)：使用者可以從裝置的 [設定]  選擇連線到**公司或學校**帳戶，來註冊其個人擁有的裝置。 此程序會：
   - 向 Azure Active Directory 註冊裝置，以存取電子郵件等公司資源。
   - 在 Intune 中註冊裝置作為個人擁有的裝置 (BYOD)。
 如果系統管理員已設定自動註冊 (適用於 Azure AD Premium 訂閱)，使用者只需輸入其認證一次。 否則，使用者必須透過僅限 MDM 註冊個別註冊，並重新輸入其認證。  

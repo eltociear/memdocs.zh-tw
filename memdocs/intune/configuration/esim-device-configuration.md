@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f12282acebaa90d3afe868bb28743444d01001d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e4e9a37e2dbb725a06d304d345fd085dabbc5e14
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343488"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086999"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>在 Intune 中設定 eSIM 行動數據設定檔 - 公開預覽
 
 eSIM 是內嵌的 SIM 卡晶片，可讓您透過支援 eSIM 之裝置 (例如 [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro)) 上的行動數據連線來連線到網際網路。 使用 eSIM，您不需要從您的電信業者取得 SIM 卡。 身為全球旅行者，您也可以切換電信業者與數據方案，一律保持連線。
 
 例如，您有工作用行動數據方案，以及另一個不同電信業者的個人用行動數據方案。 出差旅遊時，您可以尋找當地提供行動數據方案的電信業者來取得網際網路存取。
+
+本功能適用於：
+
+- Windows 10 和更新版本
 
 在 Intune 中，您可以匯入由電信業者提供、僅使用一次的啟用代碼。 若要在 eSIM 模組上設定行動數據方案，請將這些啟用代碼部署到支援 eSIM 的裝置。 當 Intune 安裝啟用代碼時，eSIM 硬體模組會使用啟用代碼中的資料來連絡電信業者。 完成之後，eSIM 設定檔會下載到裝置上，並設定以啟用行動數據。
 

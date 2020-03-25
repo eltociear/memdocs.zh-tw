@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2f0d78fa929a7ed7ca33f7688027fb55c083280
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ed0194f0ace1ed1e962a8b993a4e93f7ef487bdc
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353173"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084935"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>使用 Intune，透過 Windows 10 及更新版本的設定將裝置標示為相容或不相容
 
@@ -177,7 +177,7 @@ ms.locfileid: "79353173"
   [防火牆 CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
 
   > [!NOTE]
-  > 如果裝置在重新開機後立即同步，或立即同步從睡眠狀態喚醒，則此設定可能會回報為**錯誤**。 此案例可能不會影響整體裝置相容性狀態。 若要重新評估相容性狀態，請手動[同步裝置](https://docs.microsoft.com/user-help/sync-your-device-manually-windows)。
+  > 如果裝置在重新開機後立即同步，或立即同步從睡眠狀態喚醒，則此設定可能會回報為**錯誤**。 此案例可能不會影響整體裝置相容性狀態。 若要重新評估相容性狀態，請手動[同步裝置](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows)。
 
 - [信賴平台模組 (TPM)]  ：  
   - **未設定** (預設值  ) -  Intune 不會檢查裝置是否有 TPM 晶片版本。

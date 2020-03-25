@@ -18,17 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b3927f09bb74f9058b19dad7f2f3b72f21a0d43
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 17b120faa0021a1fc044d7831b4b81ea88f404a7
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351925"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526575"
 ---
 # <a name="lookout-mobile-endpoint-security-connector-with-intune"></a>Lookout Mobile Endpoint Security 連接器與 Intune
 
 您可以根據由 Lookout (一個與 Microsoft Intune 整合的 Mobile Threat Defense 解決方案) 所進行的風險評估，來控制行動裝置對公司資源的存取。 風險評估是根據 Lookout 服務收集自裝置的遙測，包括︰
-
 - 作業系統漏洞
 - 安裝的惡意應用程式
 - 惡意網路設定檔
@@ -41,12 +40,12 @@ ms.locfileid: "79351925"
 
 - **支援已註冊的裝置** - Intune 裝置相容性原則包含行動威脅防護 (MTD) 規則，可使用 Lookout for Work 的風險評定資訊。 啟用 MTD 規則時，Intune 會評估裝置是否符合所啟用的原則。 如果發現裝置不相容，則會封鎖使用者對 Exchange Online 和 SharePoint Online 這類公司資源的存取。 使用者也會從安裝在其裝置內的 Lookout for Work 應用程式收到指導方針，以解決問題並重新取得公司資源的存取權。 若要支援搭配使用 Lookout for Work 與已註冊的裝置，請：
   - [將 MTD 應用程式新增至裝置](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md)
-  - [建立支援 MTD 的裝置相容性原則](../protect/mtd-device-compliance-policy-create.md)
+  - [建立支援 MTD 的裝置合規性政策](../protect/mtd-device-compliance-policy-create.md)
   - [在 Intune 中啟用 MTD 連接器](../protect/mtd-connector-enable.md)
 
 - **支援未註冊的裝置** - 當使用 Intune 應用程式保護原則時，Intune 可以在未註冊裝置上使用 Lookout for Work 應用程式中的風險評定資料。 系統管理員可以使用此組合來協助保護[受 Microsoft Intune 保護的應用程式](../apps/apps-supported-intune-apps.md)中的公司資料，也可以針對未註冊裝置上的公司資料發出封鎖或選擇性抹除。 若要支援搭配使用 Lookout for Work 與未註冊的裝置，請：
   - [將 MTD 應用程式新增至未註冊的裝置](../protect/mtd-add-apps-unenrolled-devices.md)
-  - [建立行動威脅防禦應用程式防護原則](../protect/mtd-app-protection-policy.md)
+  - [建立行動威脅防禦應用程式保護原則](../protect/mtd-app-protection-policy.md)
   - [在 Intune 中針對未註冊的裝置啟用 MTD 連接器](../protect/mtd-enable-unenrolled-devices.md)
 
 ## <a name="supported-platforms"></a>支援的平台

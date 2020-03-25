@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 66dafbeea3d5fa540a4306c811f784a4c6088c2c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ad586baf79bb818ccdfc012c04a58e55d19d8cc8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79347921"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084493"
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>安裝並登入公司入口網站應用程式
 
@@ -38,6 +38,6 @@ ms.locfileid: "79347921"
 
 3. 開啟公司入口網站應用程式，輸入您的公司或學校電子郵件地址和密碼，然後點選 [登入]  。
 
-    如果是第一次登入公司入口網站應用程式，且貴公司或學校使用 Intune，則會出現提示要求您在 Intune 註冊裝置。 若要註冊，請遵循[在 Intune 註冊 iOS 裝置](enroll-your-device-in-intune-ios.md)中的步驟。 您也可以[使用其他裝置登入](https://docs.microsoft.com/user-help/sign-in-to-the-company-portal#sign-in-from-another-device)。
+    如果是第一次登入公司入口網站應用程式，且貴公司或學校使用 Intune，則會出現提示要求您在 Intune 註冊裝置。 若要註冊，請遵循[在 Intune 註冊 iOS 裝置](enroll-your-device-in-intune-ios.md)中的步驟。 您也可以[使用其他裝置登入](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal#sign-in-from-another-device)。
 
 是否仍需要協助？ 請連絡您公司的支援人員。 如需連絡資訊，請查看[公司入口網站](https://go.microsoft.com/fwlink/?linkid=2010980)。

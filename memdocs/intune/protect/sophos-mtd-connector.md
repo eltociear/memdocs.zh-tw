@@ -15,15 +15,14 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d40d290fbe07ab4d1f0cf66761b0c78867cf5677
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 285f323f55d41edab5ccd450deb0244b6fbda874
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338743"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526439"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Sophos Mobile Threat Defense 與 Intune 的連接器
-
 您可以根據由 Sophos Mobile (與 Microsoft Intune 整合的 Mobile Threat Defense (MTD) 解決方案) 所進行的風險評量，使用條件式存取來控制行動裝置對公司資源的存取。 風險是根據從執行 Sophos Mobile 應用程式之裝置所收集的遙測來評定的。
 您可以根據透過 Intune 裝置合規性政策所啟用的 Sophos Mobile 風險評量，來設定條件式存取原則，而您可以根據偵測到的威脅，使用它們來允許或禁止不符合規範的裝置存取公司資源。
 

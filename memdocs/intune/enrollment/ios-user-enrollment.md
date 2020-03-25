@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 842b262c2ae19a7a026d87600df5ffb0e80cf9b8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 969dbcbe3fe1b1a155769bec6403b889b3d326bc
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359231"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086108"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>設定 iOS/iPadOS 與 iPadOS 使用者註冊 (預覽)
 
@@ -59,7 +59,7 @@ ms.locfileid: "79359231"
 
     - **裝置註冊**：此設定檔中的所有使用者都將使用 [裝置註冊]。
     - **使用者註冊**：此設定檔中的所有使用者都將使用 [使用者註冊]。
-    - **根據使用者的選擇來決定**：此群組中的所有使用者都可以選擇要使用的註冊類型。 當使用者註冊其裝置時，他們會看到可選擇 [我擁有此裝置]  或 [(公司) 擁有此裝置]  的選項。 如果選擇後者，就會使用裝置註冊來註冊裝置。 如果使用者選擇 [我擁有此裝置]  ，系統將會提供另一個選項，讓他們選擇要保護整部裝置，或只保護工作相關的應用程式與資料。 終端使用者選擇是否擁有裝置的動作會決定要在其裝置上實作的註冊類型。 Intune 中的「裝置擁有權」屬性也會反映這個使用者選擇項目。 若要深入了解使用者體驗，請參閱[設定 iOS/iPadOS 裝置對公司資源的存取](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios) \(英文\)。
+    - **根據使用者的選擇來決定**：此群組中的所有使用者都可以選擇要使用的註冊類型。 當使用者註冊其裝置時，他們會看到可選擇 [我擁有此裝置]  或 [(公司) 擁有此裝置]  的選項。 如果選擇後者，就會使用裝置註冊來註冊裝置。 如果使用者選擇 [我擁有此裝置]  ，系統將會提供另一個選項，讓他們選擇要保護整部裝置，或只保護工作相關的應用程式與資料。 終端使用者選擇是否擁有裝置的動作會決定要在其裝置上實作的註冊類型。 Intune 中的「裝置擁有權」屬性也會反映這個使用者選擇項目。 若要深入了解使用者體驗，請參閱[設定 iOS/iPadOS 裝置對公司資源的存取](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp) \(英文\)。
     
 5. 選取 [下一步]  。
 

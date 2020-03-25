@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c2a32561f66f3170b41209cb4d324e368768878
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1f4d51cbd5c8bc6c82822d5e26191c01d2e1bb1d
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344424"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220144"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>設定 Windows 裝置的註冊
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-本文將協助 IT 管理員為其使用者簡化 Windows 註冊。 一旦您[設定 Intune](../fundamentals/setup-steps.md)，使用者以其工作或學校帳戶[登入](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-windows)即可註冊 Windows 裝置。  
+本文將協助 IT 管理員為其使用者簡化 Windows 註冊。 一旦您[設定 Intune](../fundamentals/setup-steps.md)，使用者以其工作或學校帳戶[登入](https://docs.microsoft.com/mem/intune/user-help/windows-enrollment-company-portal)即可註冊 Windows 裝置。  
 
 身為 Intune 系統管理員，您可以用下列方式來簡化註冊：
 
@@ -111,7 +111,7 @@ EnterpriseEnrollment-s.manage.microsoft.com 是註冊慣用的 FQDN；但在過�
 > [!NOTE]
 > 使用者必須透過 Microsoft Edge 存取公司入口網站，檢視針對特定 Windows 版本指派的 Windows 應用程式。 其他瀏覽器，包括 Google Chrome、Mozilla Firefox 和 Internet Explorer 均不支援這種篩選。
 
-如需使用者註冊指示，請參閱[在 Intune 註冊 Windows 裝置](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-windows)。 您也可以告訴使用者檢閱[我的 IT 系統管理員可以在我的裝置上看到哪些資訊](https://docs.microsoft.com/user-help/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows)。
+如需使用者註冊指示，請參閱[在 Intune 註冊 Windows 裝置](../user-help/windows-enrollment-company-portal.md)。 您也可以告訴使用者檢閱[我的 IT 系統管理員可以在我的裝置上看到哪些資訊](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)。
 
 >[!IMPORTANT]
 > 如果您未啟用 Auto-MDM 註冊，但您的 Windows 10 裝置已加入至 Azure AD，則會在註冊之後於 Intune 主控台中顯示兩筆記錄。 停止方式是使用相同的帳戶確定具有加入 Azure AD 之裝置的使用者移至 [帳戶]   > [Access work or school] (存取工作或學校)  和 [連線]  。 

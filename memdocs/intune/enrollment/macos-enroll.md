@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1066e2d86a2c3be4ad4d55a0fd2bbbac03066cc6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7538cce4b116098db21e89d491476e8e0cd7f4e5
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363482"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086084"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>在 Intune 中設定 macOS 裝置的註冊
 
@@ -51,7 +51,7 @@ Intune 可讓您管理 macOS 裝置，以為使用者提供公司電子郵件與
 - 移至[公司入口網站](https://portal.manage.microsoft.com)或
 - 在 [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac) 下載 Mac 公司入口網站應用程式。
 
-您也可以向使用者傳送線上註冊步驟的連結：[在 Intune 註冊 macOS 裝置](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-macos)。
+您也可以向使用者傳送線上註冊步驟的連結：[在 Intune 註冊 macOS 裝置](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp)。
 
 如需其他使用者工作的資訊，請參閱下列文章：
 

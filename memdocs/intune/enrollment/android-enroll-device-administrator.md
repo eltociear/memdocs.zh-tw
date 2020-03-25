@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebe011c5549762c865eacdc2719e5ec28fdbed8c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4c22da8e3c4fdbcf40c3292476e734dd50f9543a
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339705"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086222"
 ---
 # <a name="android-device-administrator-enrollment"></a>Android 裝置系統管理員註冊
 
@@ -51,7 +51,7 @@ Android 裝置系統管理員 (有時稱為「舊版」Android 管理，隨 Andr
 
 如需其他使用者工作的資訊，請參閱下列文章：
 - [使用 Microsoft Intune 之使用者體驗的相關資源](../fundamentals/end-user-educate.md)
-- [搭配 Intune 使用您的 Android 裝置](https://docs.microsoft.com/user-help/using-your-android-device-with-intune)
+- [搭配 Intune 使用您的 Android 裝置](https://docs.microsoft.com/mem/intune/user-help/why-enroll-android-device)
 
 
 ## <a name="block-device-administrator-enrollment"></a>封鎖裝置系統管理員註冊

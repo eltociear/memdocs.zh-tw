@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d7ec41361571647cc417dc34ad29522d50477eb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b530e4590d50190160695049e2b72f03a0384131
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339562"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233581"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>使用 Samsung Knox Mobile Enrollment 自動註冊 Android 裝置
 
@@ -61,7 +61,7 @@ ms.locfileid: "79339562"
 - 若要建立 Android MDM 設定檔，請在 Knox 入口網站中選取 [Device Admin] \(裝置系統管理員\)  作為設定檔類型。 
 - 若要建立 Android 企業 MDM 設定檔，請在 Knox 入口網站中選取 [Device Owner] \(裝置擁有者\)  作為設定檔類型。  
 
-### <a name="for-android"></a>適用於 Android
+### <a name="for-android-enterprise"></a>針對 Android Enterprise
 
 | MDM 設定檔欄位| 必要？ | 值 | 
 |-------------------|-----------|-------| 
@@ -78,7 +78,7 @@ ms.locfileid: "79339562"
 
 \* 在 Knox 入口網站中完成設定檔建立時，不需要此欄位。 不過，Intune 必須填入此欄位，才能讓設定檔在 Intune 中成功註冊裝置。
 
-### <a name="for-android-enterprise"></a>針對 Android Enterprise
+### <a name="for-android"></a>適用於 Android
 
 如需逐步指導方針，請參閱 [Samsung 的建立設定檔](https://docs.samsungknox.com/KME-Getting-Started/Content/create-profiles.htm) \(英文\) 的指示。
 

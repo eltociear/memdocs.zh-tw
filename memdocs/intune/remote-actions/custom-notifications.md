@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79bcfe4adead40e8a38d7f84af52406af320a394
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4b79c7a9cdc740984e1ace90b37bdea8dbdc70de
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338236"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220246"
 ---
 # <a name="send-custom-notifications-in-intune"></a>在 Intune 中傳送自訂通知
 
@@ -73,7 +73,6 @@ ms.locfileid: "79338236"
 - 若要建立訊息，請使用已指派 Intune 角色的帳戶，其中包含如先前「權限」  區段中所述的正確權限。 若要將權限指派給使用者，請參閱[角色指派](../fundamentals/role-based-access-control.md#role-assignments)。
 - 自訂通知限制為 50 個字元的標題，以及 500 個字元的訊息。  
 - Intune 不會儲存先前所傳送自訂通知中的文字。 若要重新傳送訊息，您必須重新建立該訊息。  
-- 每小時最多只能將 25 則訊息傳送至群組。 這是租用戶層級的限制。 將通知傳送至個人裝置時，不適用這項限制。
 - 每小時最多只能將 25 則訊息傳送至群組。 這是租用戶層級的限制。 將通知傳送至個人時，不適用這項限制。
 - 將訊息傳送至個別裝置時，每小時最多只能傳送 10 則訊息給同一個裝置。
 - 您可以將通知傳送給群組中的使用者。 將通知傳送至群組時，每則通知最多可直接針對 25 個群組傳送。 巢狀群組不計入於此總計中。 將通知傳送至群組時，訊息只會以群組中的使用者為目標，並傳送至該使用者已註冊的每部 iOS/iPadOS 或 Android 裝置。 以通知為目標時，將會忽略群組中的裝置。

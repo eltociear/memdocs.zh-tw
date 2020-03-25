@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f7d58d2766444be924bd525b5aff20e17a302d56
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8e5abdfe69d5553be420d96da60f34df93a6b2f4
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342513"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083677"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Microsoft Intune 的應用程式設定原則
 
@@ -93,7 +93,7 @@ ms.locfileid: "79342513"
 
 ### <a name="iosipados-configuration-on-unmanaged-devices"></a>非受控裝置上的 iOS/iPadOS 設定
 
-您可以在非受控裝置上使用 [Intune 診斷記錄]  針對受控應用程式設定驗證 iOS/iPadOS 設定。 除了下列步驟之外，您可以使用 Microsoft Edge 來存取受控應用程式記錄。 如需詳細資訊，請參閱[在 iOS/iPadOS 上使用 Microsoft Edge 來存取受控應用程式記錄](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs)。
+您可以在非受控裝置上使用 [Intune 診斷記錄]  針對受控應用程式設定驗證 iOS/iPadOS 設定。 除了下列步驟之外，您可以使用 Microsoft Edge 來存取受控應用程式記錄。 如需詳細資訊，請參閱[在 iOS/iPadOS 上使用 Microsoft Edge 來存取受控應用程式記錄](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)。
 
 1. 如果尚未在裝置上安裝，請從 App Store 下載並安裝 **Microsoft Edge**。 如需詳細資訊，請參閱[受 Microsoft Intune 保護的應用程式](apps-supported-intune-apps.md)。
 2. 啟動 [Microsoft Edge]  並從導覽列中選取 [關於]   > [intunehelp]  。

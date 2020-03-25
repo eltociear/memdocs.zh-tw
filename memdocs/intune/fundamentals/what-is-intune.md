@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c567cdeb6cd4e91d40068ba642be4f3838e41d3f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c8fce5e8d7a92922d6061c33655bc4e83b3a1a95
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354616"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233485"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune 是適用於您裝置的 MDM 和 MAM 提供者
 
@@ -107,7 +107,7 @@ Intune 用於許多領域，包括[政府機關](https://docs.microsoft.com/ente
 
 ## <a name="next-steps"></a>後續步驟
 
-- 閱讀ㄧ些 [Intune 協助解決的常見商務問題](https://docs.microsoft.com/intune/common-scenarios)。
+- 閱讀ㄧ些 [Intune 協助解決的常見商務問題](common-scenarios.md)。
 - 開始使用 [Intune 30 天試用版](free-trial-sign-up.md)。
 - 規劃您的 [Intune 移轉](migration-guide.md)。
 - 使用免費試用版或訂用帳戶，逐步執行 [Quickstart:Create an email device profile for iOS](../configuration/quickstart-email-profile.md) (快速入門：建立 iOS 的電子郵件裝置設定檔)

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/8/2018
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5709caa36b4b543546793c9f3826469fbd1e04b0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8b68aa94f924141d1de8f216f7501ccd76f9d35f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79345659"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086308"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>在 Intune 中為 Windows 10 和更新版本裝置新增 Wi-Fi 設定
 
@@ -31,7 +31,7 @@ ms.locfileid: "79345659"
 
 ## <a name="before-you-begin"></a>開始之前
 
-[建立裝置設定檔](device-profile-create.md)。
+[建立裝置設定檔](wi-fi-settings-configure.md)。
 
 ## <a name="basic-profile"></a>基本設定檔
 
