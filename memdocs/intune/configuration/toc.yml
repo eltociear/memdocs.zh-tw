@@ -15,36 +15,20 @@
       href: tutorial-walkthrough-administrative-templates.md
 - name: 操作指南
   items:
-    - name: 建立設定檔
+    - name: 概觀
       href: device-profile-create.md
-    - name: Windows 上的系統管理範本
-      items:
-        - name: Windows 上的系統管理範本
-          href: administrative-templates-windows.md
-        - name: 使用系統管理範本更新 Office
-          href: administrative-templates-update-office.md
-      displayName: 'ADMX, GPO, group policy'
-    - name: iOS/iPadOS 與 macOS 上的裝置功能
-      href: device-features-configure.md
+    - name: 自訂裝置設定
+      href: custom-settings-configure.md
+      displayName: oma-uri
     - name: 限制裝置設定與功能
       href: device-restrictions-configure.md
-      displayName: Device restrictions
-    - name: 更新 Windows
-      href: delivery-optimization-windows.md
-      displayName: delivery optimization; updates
-    - name: Windows 上的 BIOS 設定
-      href: device-firmware-configuration-interface-windows.md
-      displayName: 'DFCI, firmware'
-    - name: Windows 上的網域加入
-      href: domain-join-configure.md
-    - name: 升級 Windows 與 S 模式
-      href: edition-upgrade-configure-windows-10.md
+      displayName: device restrictions
     - name: 電子郵件
-      href: email-settings-configure.md
-    - name: Kiosks 與專用裝置
-      href: kiosk-settings.md
-    - name: 共用的多重使用者裝置
-      href: shared-user-device-settings.md
+      items:
+        - name: 設定電子郵件
+          href: email-settings-configure.md
+        - name: 問題與解決方法
+          href: troubleshoot-email-profiles-in-microsoft-intune.md
     - name: VPN
       href: vpn-settings-configure.md
       items:
@@ -54,46 +38,82 @@
           href: vpn-setting-configure-per-app.md
     - name: Wi-Fi 網路
       href: wi-fi-settings-configure.md
-      displayName: wifi
+      displayName: 'wifi, wireless'
       items:
         - name: 使用預先共用金鑰的 Wi-Fi
           href: wi-fi-profile-shared-key.md
+          displayName: 'psk, oma-uri, eap'
         - name: 針對 Wi-Fi 進行疑難排解
           href: troubleshoot-wi-fi-profiles.md
+    - name: Windows 上的系統管理範本
+      displayName: 'admx, gpo, group policy'
+      items:
+        - name: 系統管理範本
+          href: administrative-templates-windows.md
+        - name: 使用系統管理範本更新 Office
+          href: administrative-templates-update-office.md
+    - name: Windows 上的 BIOS 設定
+      href: device-firmware-configuration-interface-windows.md
+      displayName: 'dfci, firmware'
+    - name: Windows 上的網域加入
+      href: domain-join-configure.md
+      displayName: 'enrollment, active directory, azure ad joined, join domain'
+    - name: 更新 Windows
+      href: delivery-optimization-windows.md
+      displayName: 'delivery optimization, windows updates'
+    - name: 升級 Windows 與 S 模式
+      href: edition-upgrade-configure-windows-10.md
+    - name: iOS/iPadOS 與 macOS 上的裝置功能
+      href: device-features-configure.md
+      displayName: 'airprint, home screen, lock screen, sso, single sign-on'
     - name: macOS 上的延伸模組
       href: kernel-extensions-overview-macos.md
-    - name: 教育版使用測試應用程式
-      href: education-settings-configure.md
+      displayName: 'kernel extensions, system extensions'
+    - name: macOS 上的喜好設定檔案
+      href: preference-file-settings-macos.md
+      displayName: 'property list files, plist'
     - name: Zebra 裝置上的行動性延伸模組
-      href: android-zebra-mx-overview.md
-      displayName: mx
+      displayName: 'mx, android, stagenow'
+      items:
+        - name: MX on Android 裝置系統管理員
+          href: android-zebra-mx-overview.md
+        - name: StageNow 記錄及常見問題
+          href: android-zebra-mx-logs-troubleshoot.md
     - name: Android Enterprise 上的 OEMConfig
       href: android-oem-configuration-overview.md
+      displayName: 'original equipment manufacturers, schema'
+    - name: Kiosks 與專用裝置
+      href: kiosk-settings.md
+      displayName: 'single app, multi app'
+    - name: 共用的多重使用者裝置
+      href: shared-user-device-settings.md
+      displayName: 'shared pc, education'
+    - name: 教育版使用測試應用程式
+      href: education-settings-configure.md
     - name: Windows 上的 eSIM 行動數據
       href: esim-device-configuration.md
+      displayName: embedded sim
     - name: Android、iOS/iPadOS 上的電信費用
       href: telecom-expenses-monitor.md
-    - name: 自訂裝置設定
-      href: custom-settings-configure.md
-    - name: 指派設定檔
-      href: device-profile-assign.md
-    - name: 監視設定檔
-      href: device-profile-monitor.md
+      displayName: saaswedo datalert
+    - name: 部署和監視
+      items:
+        - name: 指派設定檔
+          href: device-profile-assign.md
+          displayName: 'deploy, push'
+        - name: 監視設定檔
+          href: device-profile-monitor.md
     - name: 疑難排解
       items:
         - name: 針對原則及設定檔進行疑難排解
           href: troubleshoot-policies-in-microsoft-intune.md
-        - name: 電子郵件設定檔問題和解決方式
-          href: troubleshoot-email-profiles-in-microsoft-intune.md
-        - name: StageNow 記錄及常見問題
-          href: android-zebra-mx-logs-troubleshoot.md
         - name: 常見問題和解答
           href: device-profile-troubleshoot.md
 - name: 參考
   items:
     - name: 設定檔設定
       items:
-        - name: Android
+        - name: Android 裝置管理員
           items:
             - name: 裝置限制
               href: device-restrictions-android.md
@@ -146,8 +166,6 @@
               href: ../protect/endpoint-protection-macos.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
             - name: 延伸模組
               href: kernel-extensions-settings-macos.md
-            - name: 喜好設定檔案
-              href: preference-file-settings-macos.md
             - name: VPN
               href: vpn-settings-macos.md
             - name: Wi-Fi
