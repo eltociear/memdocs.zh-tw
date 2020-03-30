@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ search.appverid: MET150
 ms.reviewer: maholdaa
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: befd2ba9894d8b5d4f7fac32a96d4ed4cae6337a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ab544d285e49fd3914a8e9867c35ad9ed97f5fe8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364249"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087021"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>用以在 Intune 中設定電子郵件、驗證及同步處理的 Android 企業裝置設定
-
-
 
 本文會列出並說明您可以在 Android 企業裝置上控制的不同電子郵件設定。 作為行動裝置管理 (MDM) 解決方案的一部分，請使用這些設定來設定電子郵件伺服器，使用 SSL 來加密電子郵件。
 
@@ -35,16 +33,16 @@ ms.locfileid: "79364249"
 
 ## <a name="before-you-begin"></a>開始之前
 
-建立[裝置組態設定檔](email-settings-configure.md#create-a-device-profile) (選擇工作設定檔)，或建立[應用程式設定原則](../apps/app-configuration-policies-use-android.md)。
+建立[裝置組態設定檔](email-settings-configure.md) (選擇工作設定檔)，或建立[應用程式設定原則](../apps/app-configuration-policies-use-android.md)。
 
 ## <a name="android-enterprise"></a>Android 企業
 
-- **電子郵件應用程式**：選取 **Gmail** 或 **Nine Work**
-- **電子郵件伺服器**：Exchange Server 的主機名稱。 例如，輸入 `outlook.office365.com`。
+- **電子郵件應用程式**：選取 [Gmail]  或 [Nine Work]  。
+- **電子郵件伺服器**：輸入 Exchange Server 的主機名稱。 例如，輸入 `outlook.office365.com`。
 - **AAD 中的使用者名稱屬性**：此名稱是 Intune 從 Azure Active Directory (Azure AD) 中取得的屬性。 Intune 會動態產生此設定檔所使用的使用者名稱。 選項包括：
 
-  - **使用者主體名稱**：取得名稱，例如 `user1` 或 `user1@contoso.com`
-  - **使用者名稱**：只取得名稱，例如 `user1`
+  - **使用者主體名稱**：取得名稱，例如 `user1` 或 `user1@contoso.com`。
+  - **使用者名稱**：只取得名稱，例如 `user1`。
 
 - **AAD 中的電子郵件地址屬性**：此名稱是 Intune 從 Azure AD 取得的電子郵件屬性。 Intune 會動態產生此設定檔所使用的電子郵件地址。 選項包括：
   - **使用者主體名稱**：使用完整主體名稱 (例如 `user1@contoso.com` 或 `user1`) 作為電子郵件地址。

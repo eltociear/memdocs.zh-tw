@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f12ea7e320e3334d1925c8ab04905cd84ed56c82
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c57a201d71d3a8278499636c6ca794b437e11e9a
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341655"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083813"
 ---
 # <a name="app-protection-policies-overview"></a>應用程式保護原則概觀
 
@@ -205,6 +205,9 @@ Office 所需的受控位置 (例如 OneDrive)。 Intune 會將應用程式中�
 舉一個工作或「公司」內容的範例，想像有一個使用其公司帳戶來啟動 OneDrive 應用程式的使用者。 在工作環境中，他們無法將檔案移至個人儲存位置。 之後，當使用者以個人帳戶使用 OneDrive 時，他們可以從個人 OneDrive 複製並移動資料，而沒有任何限制。
 
 Outlook 具有「個人」和「公司」電子郵件的合併電子郵件檢視。 在此情況下，Outlook 應用程式會在啟動時提示您提供 Intune PIN。
+
+  >[!NOTE]
+  > 儘管 Edge 位於「公司」內容中，使用者還是能夠刻意地將 OneDrive「公司」內容檔案移至未知的個人雲端儲存空間位置。 若要避免這種情況，請參閱[針對 Microsoft Edge 指定允許或封鎖的網站清單](../apps/manage-microsoft-edge.md#specify-allowed-or-blocked-sites-list-for-microsoft-edge)，並針對 Edge 設定允許/封鎖的網站清單。
 
 如需 Intune 中多重身分識別的詳細資訊，請參閱 [MAM 和多重身分識別](apps-supported-intune-apps.md)。
 

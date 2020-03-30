@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7eb597aec20e8010d8694475d2af5d8033a809f0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9c8c78106125b45f52b45cb5fc6494b8e13b7a15
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352887"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084940"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>搭配 Intune 使用條件式存取的常見方式為何？
 
@@ -83,7 +83,7 @@ Intune 與 Mobile Threat Defense 整合在以裝置風險為基礎的條件式�
 
 #### <a name="corporate-owned"></a>屬公司擁有
 
-- **已加入內部部署 AD 網域：** 此選項通常是由已採用透過 AD 群組原則或 Configuration Manager 來管理其電腦的組織所使用。
+- **已加入混合式 Azure AD：** 此選項通常是由已採用透過 AD 群組原則或 Configuration Manager 來管理其電腦的組織所使用。
 
 - **已加入 Azure AD 網域和 Intune 管理：** 此案例適用於想要成為雲端優先 (也就是主要使用雲端服務，並以減少使用內部部署基礎結構為目標) 或僅限雲端 (沒有內部部署基礎結構) 的組織。 Azure AD Join 適用於混合式環境，可讓您同時存取雲端與內部部署應用程式與資源。 裝置會加入 Azure AD 並向 Intune 註冊；這可在存取公司資源時作為條件式存取準則使用。
 

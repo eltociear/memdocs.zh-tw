@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65f2fa658069b9ff9ac99026adbb8b56d955727b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 627fb13554f8f379f75f08c27d18cdd0b1106028
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351522"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084852"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>使用 Intune 新增並指派 Mobile Threat Defense (MTD) 應用程式
 
@@ -224,7 +224,7 @@ Pradeo 在 iOS/iPadOS 上不支援應用程式設定原則。  若要取得設�
 
 ### <a name="sophos-mobile-app-configuration-policy"></a>Sophos Mobile 應用程式設定原則
 
-建立 iOS 應用程式設定原則，如[使用 iOS 應用程式設定原則](../apps/app-configuration-policies-use-ios.md)一文中所述。
+建立 iOS 應用程式設定原則，如[使用 iOS 應用程式設定原則](../apps/app-configuration-policies-use-ios.md)一文中所述。 如需其他資訊，請參閱 Sophos 知識庫中的 [Sophos Intercept X for Mobile iOS - 可用的受控設定](https://community.sophos.com/kb/133963) \(英文\)。
 
 ### <a name="wandera-app-configuration-policy"></a>Wandera 應用程式設定原則
 

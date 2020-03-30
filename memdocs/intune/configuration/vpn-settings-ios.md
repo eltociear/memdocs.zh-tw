@@ -1,11 +1,11 @@
 ---
 title: 在 Microsoft Intune 中設定 iOS/iPadOS 裝置的 VPN 設定 - Azure | Microsoft Docs
-description: 在 Microsoft Intune 中，使用虛擬私人網路 (VPN) 組態設定在執行 iOS/iPadOS 的裝置上新增或建立 VPN 組態設定檔，包括基底設定中的連線詳細資料、驗證方法與分割通道；具有識別碼的自訂 VPN 設定，以及機碼值組；包含 Safari URL 的個別應用程式 VPN 設定，與具有 SSID 或 DNS 搜尋網域的隨選 VPN；以及要包含設定指令碼、IP 或 FQDN 位址與 TCP 連接埠的 Proxy 設定。
+description: 在 iOS/iPadOS 裝置上，使用虛擬私人網路 (VPN) 組態設定，來新增或建立 VPN 組態設定檔。 在 Microsoft Intune 中，設定連線詳細資料、驗證方法與分割通道；自訂含有識別碼的 VPN 設定，以及機碼值組；包含 Safari URL 的個別應用程式 VPN 設定，以及具有 SSID 或 DNS 搜尋網域的隨選 VPN；要包含設定指令碼、IP 或 FQDN 位址與 TCP 連接埠的 Proxy 設定。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80ff24193c607003889c2246bb9199db795f1623
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 74e889419dcaaa75c2a31fe16931dddd84d1a967
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360453"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086544"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>在 Microsoft Intune 中新增 iOS 與 iPadOS 裝置上的 VPN 設定
 
@@ -43,7 +43,7 @@ Microsoft Intune 包含許多 VPN 設定，可部署到您的 iOS/iPadOS 裝置�
 - **SonicWall Mobile Connect**
 - **F5 Access Legacy**：適用於 F5 Access 應用程式 2.1 版及更舊版本。
 - **F5 Access**：適用於 F5 Access 應用程式 3.0 版及更新版本。
-- **Palo Alto Networks GlobalProtect (舊版)**：適用於 Palo Alto Networks GlobalProtect 應用程式 4.1 版及更舊版本。
+- **Palo Alto Networks GlobalProtect (舊版)** ：適用於 Palo Alto Networks GlobalProtect 應用程式 4.1 版及更舊版本。
 - **Palo Alto Networks GlobalProtect**：適用於 Palo Alto Networks GlobalProtect 應用程式 5.0 版及更新版本。
 - **Pulse Secure**
 - **Cisco (IPSec)**
@@ -65,7 +65,7 @@ Microsoft Intune 包含許多 VPN 設定，可部署到您的 iOS/iPadOS 裝置�
 - **IP 位址或 FQDN**：裝置所連線之 VPN 伺服器的 IP 位址或完整網域名稱 (FQDN)。 例如，輸入 `192.168.1.1` 或 `vpn.contoso.com`。
 - **組織的雲端名稱** (僅限 Zscaler)：輸入您組織佈建所在的雲端名稱。 您用來登入 Zscaler 的 URL 具有名稱。  
 - **驗證方法**：選擇裝置向 VPN 伺服器進行驗證的方式。 
-  - **憑證**：在 [驗證憑證] 底下，選取現有的 SCEP 或 PKCS 憑證設定檔來驗證連線。 [設定憑證](../protect/certificates-configure.md)提供了一些有關憑證設定檔的指引。
+  - **憑證**：在 [驗證憑證]  底下，選取現有的 SCEP 或 PKCS 憑證設定檔來驗證連線。 [設定憑證](../protect/certificates-configure.md)提供了一些有關憑證設定檔的指引。
   - **使用者名稱和密碼**：使用者必須輸入使用者名稱及密碼，才能登入 VPN 伺服器。  
 
     > [!NOTE]
@@ -75,17 +75,17 @@ Microsoft Intune 包含許多 VPN 設定，可部署到您的 iOS/iPadOS 裝置�
 
 - **排除的 URL** (僅限 Zscaler)：連線到 Zscaler VPN 時，所列出的 URL 可從 Zscaler 雲端外部存取。 
 
-- **分割通道**：[啟用] 或 [停用] 來讓裝置依據流量決定所要使用的連線。 例如，旅館中的使用者使用 VPN 連線存取工作檔案，但使用旅館的標準網路進行一般的網頁瀏覽。
+- **分割通道**：[啟用]  或 [停用]  來讓裝置依據流量決定所要使用的連線。 例如，旅館中的使用者使用 VPN 連線存取工作檔案，但使用旅館的標準網路進行一般的網頁瀏覽。
 
 - **VPN 識別碼** (自訂 VPN、Zscaler 及 Citrix)：您正在使用之 VPN 應用程式的識別碼，由您的 VPN 提供者所提供。
-- **輸入您組織之自訂 VPN 屬性的索引鍵/值組** (自訂 VPN、Zscaler 和 Citrix)：新增或匯入能自訂您 VPN 連線的 [金鑰] 和 [值]。 請記住，這些值通常由 VPN 提供者提供。
+- **輸入您組織之自訂 VPN 屬性的索引鍵/值組** (自訂 VPN、Zscaler 和 Citrix)：新增或匯入能自訂您 VPN 連線的 [金鑰]  和 [值]  。 請記住，這些值通常由 VPN 提供者提供。
 
-- **啟用網路存取控制 (NAC)** (Citrix SSO、F5 Access)：當您選擇 [我同意] 時，此裝置識別碼會包含在 VPN 設定檔中。 此識別碼可用來向 VPN 驗證以允許或防止網路存取。
+- **啟用網路存取控制 (NAC)** (Citrix SSO、F5 Access)：當您選擇 [我同意]  時，此裝置識別碼會包含在 VPN 設定檔中。 此識別碼可用來向 VPN 驗證以允許或防止網路存取。
 
-    **當搭配 ISE 使用 Cisco AnyConnect 時**，請務必：
+  **當搭配 ISE 使用 Cisco AnyConnect 時**，請務必：
 
-    - 若您尚未執行此作業，請在 [[Cisco Identity Services Engine Administrator Guide]](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html) (Cisco 身分識別服務引擎系統管理員指南)中，使用**將 Microsoft Intune 設定為 MDM 伺服器**中 NAC 的步驟，整合 Intune 與 ISE。
-    - 在 VPN 設定檔中啟用 NAC。
+  - 若您尚未執行此作業，請針對 NAC 整合 ISE 與 Intune，如 [Cisco 識別服務引擎系統管理員指南](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html) \(英文\) 的**將 Microsoft Intune 設定為 MDM 伺服器**中所述。
+  - 在 VPN 設定檔中啟用 NAC。
 
   **搭配 Gateway 使用 Citrix SSO 時**，請務必：
 
@@ -102,11 +102,39 @@ Microsoft Intune 包含許多 VPN 設定，可部署到您的 iOS/iPadOS 裝置�
 
   針對支援裝置識別碼的 VPN 合作夥伴，VPN 用戶端 (例如 Citrix SSO) 可以取得識別碼。 接著，它可以查詢 Intune 來確認裝置已註冊，以及 VPN 設定檔是否相容。
 
-  - 若要移除此設定，請重新建立設定檔，但不要選取 [我同意]。 然後，重新指派設定檔。
+  - 若要移除此設定，請重新建立設定檔，但不要選取 [我同意]  。 然後，重新指派設定檔。
 
 ## <a name="ikev2-settings"></a>IKEv2 設定
 
-當您選擇 [連線類型] > [IKEv2] 時，就會套用這些設定。
+當您選擇 [連線類型]   > [IKEv2]  時，就會套用這些設定。
+
+- **Always-On VPN**：[啟用]  會將 VPN 用戶端設定為自動連線及重新連線至 VPN。 在使用者鎖定裝置、裝置重新啟動，或是無線網路變更時，AlwaysOn VPN 連線將會保持連線或立即連線。 設定為 [停用]  \(預設\) 時，會停用所有 VPN 用戶端的 Always-on VPN。 啟用時，亦請設定：
+
+  - **網路介面**：所有 IKEv2 設定只會套用至您選擇的網路介面。 選項包括：
+    - **Wi-Fi 與行動數據** \(預設\)：IKEv2 設定會套用至裝置上的 Wi-Fi 與行動數據介面。
+    - **行動數據**：IKEv2 設定只會套用至裝置上的行動數據介面。 如果您要部署到已停用或移除 Wi-Fi 介面的裝置，請選取此選項。
+    - **Wi-Fi**：IKEv2 設定只會套用至裝置上的 Wi-Fi 介面。
+  - **要停用 VPN 設定的使用者**：[啟用]  可讓使用者關閉 Always-on VPN。 [停用]  \(預設\) 可防止使用者將其關閉。 此設定的預設值為最安全的選項。
+  - **語音信箱**：選擇啟用 Always-on VPN 時語音信箱流量會發生什麼事。 選項包括：
+    - **強制網路流量通過 VPN** (預設)：此設定是最安全的選項。
+    - **允許網路流量在 VPN 外部傳遞**
+    - **卸除網路流量**
+  - **AirPrint**：選擇啟用 Always-on VPN 時 AirPrint 流量會發生什麼事。 選項包括：
+    - **強制網路流量通過 VPN** (預設)：此設定是最安全的選項。
+    - **允許網路流量在 VPN 外部傳遞**
+    - **卸除網路流量**
+  - **行動數據服務**：在 iOS 13.0+ 上，選擇啟用 Always-on VPN 時行動數據流量會發生什麼事。 選項包括：
+    - **強制網路流量通過 VPN** (預設)：此設定是最安全的選項。
+    - **允許網路流量在 VPN 外部傳遞**
+    - **卸除網路流量**
+  - **允許非原生網頁驗證網路應用程式的流量在 VPN 外部傳遞**：網頁驗證網路指的是通常可在餐廳和飯店中發現的 Wi-Fi 熱點。 選項包括：
+    - **否**：強制所有網頁驗證網路 (CM) 應用程式流量通過 VPN 通道。
+    - **是，所有應用程式**：允許所有 CN 應用程式流量略過 VPN。
+    - **是，特定應用程式**：**新增**流量可略過 VPN 的 CN 應用程式清單。 輸入 CN 應用程式的套件組合識別碼。 例如，輸入 `com.contoso.app.id.package`。
+
+  - **要在 VPN 外部傳遞的 Captive Websheet 應用程式流量**：Captive WebSheet 是負責處理網頁驗證登入的內建網頁瀏覽器。 [啟用]  可讓瀏覽器應用程式流量略過 VPN。 [停用]  \(預設\) 會強制 WebSheet 流量使用 Always-on VPN。 預設值為最安全的選項。
+  - **網路位址轉譯 (NAT) 持續連線間隔 (秒)** ：為了保持連線到 VPN，裝置會傳送網路封包以保持作用中狀態。 輸入這些封包傳送頻率的值 (20-1440，以秒為單位)。 例如，輸入 `60` 的值，即會每 60 秒將網路封包傳送至 VPN 一次。 根據預設，此值會設定為 `110` 秒。
+  - **當裝置處於睡眠狀態時，將 NAT 持續連線卸載至硬體**：當裝置處於睡眠狀態時，[啟用]  \(預設\) 會持續傳送持續連線封包，讓裝置保持連線到 VPN。 [停用]  會關閉此功能。
 
 - **遠端識別碼**：輸入 IKEv2 伺服器的網路 IP 位址、FQDN、UserFQDN 或 ASN1DN。 例如，輸入 `10.0.0.3` 或 `vpn.contoso.com`。 一般而言，您會輸入與[**連線名稱**](#base-vpn-settings) (在此文章中) 相同的值。 但其事實上是取決於您的 IKEv2 伺服器設定。
 
@@ -130,7 +158,7 @@ Microsoft Intune 包含許多 VPN 設定，可部署到您的 iOS/iPadOS 裝置�
 - **伺服器憑證通用名稱**：輸入伺服器憑證的 CN。 如果留白，則會使用遠端識別碼值。
 
 - **無效對等偵測速率**：選擇 VPN 用戶端檢查 VPN 通道作用與否的頻率。 選項包括：
-  - **未設定**：使用 iOS/iPadOS 系統預設：可能與選擇 [中] 相同。
+  - **未設定**：使用 iOS/iPadOS 系統預設：可能與選擇 [中]  相同。
   - **無**：停用無效對等偵測。
   - **低**：每 30 分鐘傳送一次持續連線訊息。
   - **中** (預設)：每 10 分鐘傳送一次持續連線訊息。
@@ -142,10 +170,10 @@ Microsoft Intune 包含許多 VPN 設定，可部署到您的 iOS/iPadOS 裝置�
 > [!NOTE]
 > 使用使用者驗證與憑證時，必須設定 TLS 版本範圍的最小值與最大值。
 
-- **完整轉寄密碼**：選取 [啟用]，以開啟完整轉寄密碼 (PFS)。 PFS 是 IP 安全性功能，可降低工作階段金鑰遭到入侵時的影響。 [停用] (預設) 不使用 PFS。
-- **憑證撤銷檢查**：選取 [啟用]，以確定不會在允許 VPN 連線成功之前撤銷憑證。 此檢查是最佳做法。 如果 VPN 伺服器在判斷憑證是否為已撤銷之前逾時，則會授與存取權。 [停用] (預設) 不會檢查是否有已撤銷的憑證。
+- **完整轉寄密碼**：選取 [啟用]  ，以開啟完整轉寄密碼 (PFS)。 PFS 是 IP 安全性功能，可降低工作階段金鑰遭到入侵時的影響。 [停用]  (預設) 不使用 PFS。
+- **憑證撤銷檢查**：選取 [啟用]  ，以確定不會在允許 VPN 連線成功之前撤銷憑證。 此檢查是最佳做法。 如果 VPN 伺服器在判斷憑證是否為已撤銷之前逾時，則會授與存取權。 [停用]  (預設) 不會檢查是否有已撤銷的憑證。
 
-- **設定安全性關聯參數**：**未設定** (預設) 使用 iOS/iPadOS 系統預設。 選取 [啟用] 以輸入與 VPN 伺服器建立安全性關聯時所使用的參數：
+- **設定安全性關聯參數**：**未設定** (預設) 使用 iOS/iPadOS 系統預設。 選取 [啟用]  以輸入與 VPN 伺服器建立安全性關聯時所使用的參數：
   - **加密演算法**：選擇所要使用的演算法：
     - DES
     - 3DES
@@ -164,7 +192,7 @@ Microsoft Intune 包含許多 VPN 設定，可部署到您的 iOS/iPadOS 裝置�
 
 - **設定子安全性關聯的另外一組參數**：iOS/iPadOS 可讓您針對 IKE 連線與任何子系連線設定個別參數。 
 
-  [未設定] \(預設\) 會使用您在先前的 [設定安全性關聯參數] 設定中輸入的值。 選取 [啟用] 以輸入與 VPN 伺服器建立「子系」安全性關聯時所使用的參數：
+  [未設定]  \(預設\) 會使用您在先前的 [設定安全性關聯參數]  設定中輸入的值。 選取 [啟用]  以輸入與 VPN 伺服器建立「子系」  安全性關聯時所使用的參數：
   - **加密演算法**：選擇所要使用的演算法：
     - DES
     - 3DES
@@ -185,16 +213,16 @@ Microsoft Intune 包含許多 VPN 設定，可部署到您的 iOS/iPadOS 裝置�
 
 - **個別應用程式 VPN**：啟用個別應用程式 VPN。 允許 VPN 連線在特定應用程式開啟時自動觸發。 另請建立應用程式與此 VPN 設定檔的關聯。 IKEv2 不支援個別應用程式 VPN。 如需詳細資訊，請參閱[為 iOS/iPadOS 設定個別應用程式 VPN 的指示](vpn-setting-configure-per-app.md)。 
   - **提供者類型**：僅適用於 Pulse Secure 和自訂 VPN。
-  - 搭配 Pulse Secure 或自訂 VPN 使用 iOS/iPadOS **個別應用程式 VPN** 設定檔時，選擇應用程式層通道 (app-proxy) 或封包層通道 (packet-tunnel)。 若是應用程式層通道，請將 [ProviderType] 值設定為 [應用程式 Proxy]，若是封包層通道，則設定為 [封包通道]。 如果您不確定要使用的值，請參閱您 VPN 提供者的文件。
+  - 搭配 Pulse Secure 或自訂 VPN 使用 iOS/iPadOS **個別應用程式 VPN** 設定檔時，選擇應用程式層通道 (app-proxy) 或封包層通道 (packet-tunnel)。 若是應用程式層通道，請將 [ProviderType]  值設定為 [應用程式 Proxy]  ，若是封包層通道，則設定為 [封包通道]  。 如果您不確定要使用的值，請參閱您 VPN 提供者的文件。
   - **觸發此 VPN 的 Safari URL**：新增一或多個網站 URL。 在裝置上使用 Safari 瀏覽器瀏覽這些 URL 時，就會自動建立 VPN 連線。
 
 - **隨選 VPN**：設定可控制 VPN 連線啟動時機的條件式規則。 例如，建立一個只在裝置未連線到公司 Wi-Fi 網路時才使用 VPN 連線的條件。 或者，建立一個條件。 例如，若裝置無法存取所輸入 DNS 搜尋網域，則不會啟動 VPN 連線。
 
-  - **SSID 或 DNS 搜尋網域**：選取此條件要使用無線網路 **SSID** 或 **DNS 搜尋網域**。 選擇 [新增] 即可設定一或多個 SSID 或搜尋網域。
+  - **SSID 或 DNS 搜尋網域**：選取此條件要使用無線網路 **SSID** 或 **DNS 搜尋網域**。 選擇 [新增]  即可設定一或多個 SSID 或搜尋網域。
   - **URL 字串探查**：選擇性。 請輸入規則用來作為測試的 URL。 如果裝置無須重新導向就能存取此 URL，則 VPN 連線已啟動。 而裝置會連線到目標 URL。 使用者不會看到 URL 字串探查網站。
 
     例如，URL 字串探查是稽核網頁伺服器 URL，此伺服器會在連線 VPN 之前先檢查裝置合規性。 或者，URL 會先測試 VPN 連線到網站的能力，然後再透過 VPN 將裝置連線到目標 URL。
-。
+
   - **網域動作**：選擇下列其中一個項目︰
     - 連線 (若需要)
     - 一律不連線
@@ -208,7 +236,7 @@ Microsoft Intune 包含許多 VPN 設定，可部署到您的 iOS/iPadOS 裝置�
 
 如果使用 Proxy，請設定下列設定。 Proxy 設定不適用於 Zscaler VPN 連線。  
 
-- **自動設定指令碼**：使用檔案設定 Proxy 伺服器。 輸入包含設定檔的 [Proxy 伺服器 URL] (例如 `http://proxy.contoso.com`)。
+- **自動設定指令碼**：使用檔案設定 Proxy 伺服器。 輸入包含設定檔的 [Proxy 伺服器 URL]  (例如 `http://proxy.contoso.com`)。
 - **位址**：輸入 Proxy 伺服器的完整主機名稱 IP 位址。
 - **連接埠號碼**：輸入與 Proxy 伺服器相關聯的連接埠號碼。
 

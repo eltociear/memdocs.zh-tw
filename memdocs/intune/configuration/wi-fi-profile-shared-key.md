@@ -12,17 +12,17 @@ ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
-ms.reviewer: karanda
+ms.reviewer: maholdaa
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 105a25e33e0f8f0a76934199d24060328d50c05f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: df5c33e1e8e589f430fe8265ee4762b4755f3618
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360362"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086459"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>使用自訂裝置設定檔，在 Intune 中建立包含預先共用金鑰的 WiFi 設定檔
 
@@ -52,7 +52,7 @@ ms.locfileid: "79360362"
 2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 3. 輸入下列內容：
 
-    - **名稱**：輸入政策的描述性名稱。 為您的設定檔命名，以方便之後能夠輕鬆識別。 例如，**適用於 Android 裝置的自訂 OMA-URI Wi-Fi 設定檔設定**是良好原則名稱。
+    - **名稱**：輸入政策的描述性名稱。 為您的設定檔命名，以方便之後能夠輕鬆識別。 例如，**適用於 Android 裝置系統管理員裝置的自訂 OMA-URI Wi-Fi 設定檔設定**就是一個良好的原則名稱。
     - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
     - **平台**：選擇平台。
     - **設定檔類型**：選取 [自訂]  。
@@ -139,6 +139,7 @@ xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
 ```
 
 ### <a name="eap-based-wi-fi-profile-example"></a>EAP 型 Wi-Fi 設定檔範例
+
 下例包含 EAP 型 Wi-Fi 設定檔的 XML 程式碼：提供此範例是為了顯示適當的格式，並提供更多的詳細資料。 它只是範例，不適合作為您環境的建議設定。
 
 

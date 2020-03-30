@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26f2998c6b166e1f45c839d7006551867b8deb80
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8d2f671e88b1221961e978d1945e28c7cec474cb
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364080"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086498"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>要使用 Intune 新增 VPN 連線的 Windows 10 和 Windows Holographic 裝置設定
-
-
 
 您可以使用 Microsoft Intune 新增和設定裝置的 VPN 連線。 本文列出並描述建立虛擬私人網路 (VPN) 時常用的設定和功能。 這些 VPN 設定和功能用於 Intune 中推送或部署到裝置的裝置組態設定檔。
 
@@ -46,11 +44,11 @@ ms.locfileid: "79364080"
 
 - **連線名稱**：輸入此連線的名稱。 終端使用者瀏覽其裝置的可用 VPN 連線清單時，使用者會看到此名稱。
 - **伺服器**：新增裝置要連線的一或多部 VPN 伺服器。 當您新增伺服器時，要輸入下列資訊：
-  - **描述**：為伺服器輸入描述性名稱，例如 **Contoso VPN 伺服器**
-  - **IP 位址或 FQDN**：輸入裝置所連線 VPN 伺服器的 IP 位址或完整網域名稱 (FQDN)，例如 **192.168.1.1** 或 **vpn.contoso.com**
+  - **描述**：為伺服器輸入描述性名稱，例如 **Contoso VPN 伺服器**。
+  - **IP 位址或 FQDN**：輸入裝置所連線之 VPN 伺服器的 IP 位址或完整網域名稱 (FQDN)，例如 **192.168.1.1** 或 **vpn.contoso.com**。
   - **預設伺服器**：啟用此伺服器作為裝置用來建立連線的預設伺服器。 只設定一部伺服器為預設。
   - **匯入**：瀏覽至內含伺服器清單並以逗點分隔的檔案 (格式為：描述, IP 位址或 FQDN, 預設伺服器)。 選擇 [確定]  ，以將這些伺服器匯入**伺服器**清單。
-  - **匯出**：將伺服器清單匯出成逗點分隔值 (csv) 檔案
+  - [匯出]  ：將伺服器清單匯出成逗點分隔值 (csv) 檔案。
 
 - **將 IP 位址註冊到內部 DNS**：選取 [啟用]  將 Windows 10 VPN 設定檔設定為動態註冊 IP 位址 (指派給具有內部 DNS 的 VPN 介面)。 選取 [停用]  ，不要動態註冊 IP 位址。
 
@@ -68,10 +66,10 @@ ms.locfileid: "79364080"
   - **PPTP**
 
   當您選擇 VPN 連線類型時，可能也會要求您進行下列設定：  
-  - **Always On**：選擇 [啟用]  ，以在發生下列事件時自動連線至 VPN 連線： 
+  - **Always On**：選擇 [啟用]  ，以在發生下列事件時自動連線至 VPN 連線：
     - 使用者登入其裝置
     - 裝置上的網路發生變更
-    - 裝置上的螢幕在關閉後恢復開啟 
+    - 裝置上的螢幕在關閉後恢復開啟
 
   - **驗證方法**：選取您要讓 VPN 伺服器驗證使用者的方法。 使用 [憑證]  可提供增強的功能，例如零觸控體驗、隨選 VPN 和個別應用程式 VPN。
   - **在每次登入時記住認證**：選擇此選項以快取驗證認證。

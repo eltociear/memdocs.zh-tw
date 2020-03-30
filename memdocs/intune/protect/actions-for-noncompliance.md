@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/08/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17a3a3b38b28eda0e4bde9c353482d0234fa3329
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5a98b57fe8cc2d9d2af3c0095297eb676796029f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354317"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085214"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>在 Intune 中將電子郵件自動化，並為不符合規範的裝置新增動作
 
@@ -40,7 +40,16 @@ ms.locfileid: "79354317"
 
 - **將裝置標記為不符合規範**：在裝置被標記為不符合規範後建立排程 (數天)。 您可以將動作設定為立即生效，或給使用者一個寬限期，讓其符合規範。
 
-本文將示範下列項目的作法：
+- **淘汰不符合規範的裝置**：此動作會從裝置移除所有公司資料，然後從 Intune 管理移除裝置。 為了防止意外抹除裝置，此動作支援的最小排程為 30 天。 下列平台支援此動作：
+  - Android
+  - iOS
+  - macOS
+  - Windows 10 Mobile
+  - Windows Phone 8.1 和更新版本
+
+  深入了解[淘汰裝置](../remote-actions/devices-wipe.md#retire)。
+  
+  本文將示範下列項目的作法：
 
 - 建立訊息通知範本
 - 針對不符合規範建立動作，例如傳送電子郵件或從遠端鎖定裝置
@@ -76,7 +85,7 @@ ms.locfileid: "79354317"
    - **電子郵件頁尾 – 包含公司名稱**
    - **電子郵件頁尾 – 包含連絡人資訊**
 
-   您當作公司入口網站商標一部分上傳的標誌將會用於電子郵件範本。 如需公司入口網站商標的詳細資訊，請參閱[公司識別商標自訂](../apps/company-portal-app.md#company-identity-branding-customization)。
+   您當作公司入口網站商標一部分上傳的標誌將會用於電子郵件範本。 如需公司入口網站商標的詳細資訊，請參閱[公司識別商標自訂](../apps/company-portal-app.md#customizing-the-user-experience)。
 
    ![在 Intune 中符合規範的通知訊息範例](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
@@ -112,11 +121,13 @@ ms.locfileid: "79354317"
 
    - **遠端鎖定不符合規範的裝置**：裝置不符合規範時，鎖定裝置。 此動作會強制使用者輸入 PIN 或密碼來解除鎖定裝置。
 
-5. 設定 [排程]  ：輸入不符合規範之後在使用者裝置觸發動作的天數 (0 到 365)。 在此寬限期間之後，您可以強制執行[條件式存取](conditional-access-intune-common-ways-use.md)原則。 如果您輸入 **0** (零) 天，則條件式存取會**立即**生效。 例如，如果裝置不符合規範，請使用條件式存取來立即封鎖對電子郵件、SharePoint 與其他組織資源的存取。
+   - **淘汰不符合規範的裝置**：裝置不符合規範時，從裝置移除所有公司資料，然後從 Intune 管理移除裝置。 為了防止意外抹除裝置，此動作支援的最小排程為 **30** 天。
+
+5. 設定 [排程]  ：輸入不符合規範之後在使用者裝置觸發動作的天數 (0 到 365)。 (*淘汰不符合規範的裝置*最少支援 30 天)。在此寬限期間之後，您可以強制執行[條件式存取](conditional-access-intune-common-ways-use.md)原則。 如果您輸入 **0** (零) 天，則條件式存取會**立即**生效。 例如，如果裝置不符合規範，請使用條件式存取來立即封鎖對電子郵件、SharePoint 與其他組織資源的存取。
 
    當您建立合規性政策時，會自動建立 [標記裝置不合規]  動作，並自動設定為 **0** 天 (立即)。 使用此動作時，當裝置簽入時，裝置會立即評估為不符合規範。 如果也使用條件式存取，則條件式存取會立即啟動。 如果您想要允許寬限期，請在 [標記裝置不合規]  動作上變更 [排程]  。
 
-   例如，在您的合規性政策中，您也會想要通知使用者。 您可以新增 [傳送電子郵件給使用者]  動作。 在此 [傳送電子郵件]  動作中，您將 [排程]  設定為 2 天。 如果裝置或終端使用者在第 2 天仍被評估為不符合規範，則會在第 2 天傳送您的電子郵件。 如果您想要在不符合規範的第 5 天再次傳送電子郵件給使用者，請新增另一個動作，並將 [排程]  設定為 5 天。
+  例如，在您的合規性政策中，您也會想要通知使用者。 您可以新增 [傳送電子郵件給使用者]  動作。 在此 [傳送電子郵件]  動作中，您將 [排程]  設定為兩天。 如果裝置或終端使用者在第二天仍被評估為不符合規範，則會在第二天傳送您的電子郵件。 如果您想要在不符合規範的第五天再次傳送電子郵件給使用者，請新增另一個動作，並將 [排程]  設定為五天。
 
    如需有關合規性與內建動作的詳細資訊，請參閱[合規性概觀](device-compliance-get-started.md)。
 

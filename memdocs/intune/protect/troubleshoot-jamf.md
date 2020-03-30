@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 335841a8642429e36c277673fd8a238d486366c9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f685f1f3d009d7ba7a1dc061ec3025b2f8c96b5f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350612"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084641"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>針對 Jamf Pro 與 Microsoft Intune 的整合進行疑難排解
 
@@ -89,8 +89,8 @@ ms.locfileid: "79350612"
 例如，開啟 Microsoft Teams 時，會出現包含與下列範例相似文字的提示：
 
 ``` 
-  Microsoft Teams wants to sign using key “Microsoft Workplace Join Key” in your keychain.  
-  To allow this, enter the “login” keychain password 
+  Microsoft Teams wants to sign using key "Microsoft Workplace Join Key" in your keychain.  
+  To allow this, enter the "login" keychain password 
 ```
 
 **原因**：Jamf Pro 會為每個需要 Azure AD 登錄的適用應用程式產生這些提示。 
@@ -118,7 +118,7 @@ Mac 裝置無法登錄有數個常見的原因。
 
 #### <a name="cause-2"></a>原因 2  
 
-****Jamf Native macOS Connector** 應用程式並未在 Azure AD 租用戶中建立，或該連接器其同意是由不具備全域管理員權限的帳戶所簽署**  
+****Jamf Native macOS Connector** 應用程式並未在您的 Azure AD 租用戶中建立，或該連接器的同意是由不具備全域管理員權限的帳戶所簽署**  
 
   **解決方法**  
   請參閱 docs.jamf.com 上 [Integrating with Microsoft Intune](https://docs.jamf.com/10.13.0/jamf-pro/administrator-guide/Integrating_with_Microsoft_Intune.html) (與 Microsoft Intune 整合) 中的 *Configuring macOS Intune Integration* (設定 macOS Intune 整合) 一節。 
@@ -156,7 +156,7 @@ Mac 裝置無法登錄有數個常見的原因。
 
 **解決方法**  
 將登錄來源從 Intune 變更為 Jamf：
-1. [從 Intune 取消註冊 macOS 裝置](https://docs.microsoft.com/user-help/unenroll-your-device-from-intune-macos)。 為了避免使並未完全從 Intune 中移除的裝置變得更為複雜，請參閱原因清單中的[原因 6  ](#cause-6)。  
+1. [從 Intune 取消註冊 macOS 裝置](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos)。 為了避免使並未完全從 Intune 中移除的裝置變得更為複雜，請參閱原因清單中的[原因 6  ](#cause-6)。  
 
 2. 在裝置上，使用 Jamf Self Service 開啟公司入口網站應用程式，然後使用 Intune 註冊裝置。 這項工作需要[已使用 Jamf 部署 macOS 的公司入口網站應用程式](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro)，且[已在 Jamf Pro 中建立原則，向 Azure AD 登錄使用者裝置](conditional-access-assign-jamf.md#create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory)。  
 
@@ -242,9 +242,9 @@ Jamf Pro 伺服器會在整合關閉時傳送脈衝到 Intune 伺服器，告知
 在登錄期間，macOS 裝置的使用者會收到下列提示，要求允許 JamfAAD 存取其 keychain 中的金鑰： 
 
 ```
-   JamfAAD wants to access key “Microsoft Workplace Join Key" in your keychain. 
+   JamfAAD wants to access key "Microsoft Workplace Join Key" in your keychain. 
     
-   To allow this, enter the “login” keychain password
+   To allow this, enter the "login" keychain password
 ```
 
 **解決方法**  

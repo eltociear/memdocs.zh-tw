@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,20 +15,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76813e4634e55651b44712fb486e0b1babcfba09
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2c80bf57b195d7e97308ba423c9e5b53f7e29c74
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360401"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086460"
 ---
 # <a name="add-vpn-settings-on-windows-81-devices-in-microsoft-intune"></a>在 Microsoft Intune 中新增 Windows 8.1 裝置的 VPN 設定
-
-
 
 本文說明可用於設定執行 Windows 8.1 之裝置上 VPN 連線的 Intune 設定。
 
 下列清單中的值並非全部都能設定，須取決於您選擇的設定。
+
+## <a name="before-you-begin"></a>開始之前
+
+[建立裝置組態設定檔](vpn-settings-configure.md)。
 
 ## <a name="base-vpn-settings"></a>基本 VPN 設定
 
@@ -48,7 +50,7 @@ ms.locfileid: "79360401"
   - **F5 Edge Client**
   - **Pulse Secure**
 
-<!--- **Fingerprint** (Check Point Capsule VPN only): Specify a string (for example, "Contoso Fingerprint Code") that will be used to verify that the VPN server can be trusted. A fingerprint can be sent to the client so it knows to trust any server that presents the same fingerprint when connecting. If the device doesn’t already have the fingerprint, it will prompt the user to trust the VPN server that they are connecting to while showing the fingerprint. (The user manually verifies the fingerprint and chooses **trust** to connect.) --->
+<!--- **Fingerprint** (Check Point Capsule VPN only): Specify a string (for example, "Contoso Fingerprint Code") that will be used to verify that the VPN server can be trusted. A fingerprint can be sent to the client so it knows to trust any server that presents the same fingerprint when connecting. If the device doesn't already have the fingerprint, it will prompt the user to trust the VPN server that they are connecting to while showing the fingerprint. (The user manually verifies the fingerprint and chooses **trust** to connect.) --->
 
 - **登入群組或網域** (僅限 SonicWall Mobile Connect)：指定您想要連線之登入群組或網域的名稱。
 
@@ -83,6 +85,8 @@ ms.locfileid: "79360401"
   ```
 
   如需撰寫自訂 XML 命令的詳細資訊，請參閱製造商的 VPN 文件。
+
+- **分割通道**：[啟用]  可讓裝置依據流量決定要使用的連線。 例如，旅館中的使用者使用 VPN 連線存取工作檔案，但使用旅館的標準網路進行一般的網頁瀏覽。 如果您想要在 VPN 連線為使用中時強制所有流量使用 VPN 通道，則設定為 [停用]  。
 
 ## <a name="proxy-settings"></a>Proxy 設定
 

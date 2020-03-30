@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31310accbaded1e048cb3c5b574557ffcef0335c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 36e17dc12622b3bb95c35a4472556f1c4f31ccd0
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364223"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087019"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>在 Intune 中設定電子郵件、驗證及同步處理的 Android 裝置設定
 
@@ -32,25 +32,23 @@ ms.locfileid: "79364223"
 
 ## <a name="before-you-begin"></a>開始之前
 
-[建立裝置組態設定檔](email-settings-configure.md#create-a-device-profile)。
+[建立裝置組態設定檔](email-settings-configure.md)。
 
 ## <a name="android-samsung-knox"></a>Android (Samsung Knox)
 
 - **電子郵件伺服器**：輸入 Exchange Server 的主機名稱。 例如，輸入 `outlook.office365.com`。
 - **帳戶名稱**：輸入電子郵件帳戶的顯示名稱。 此名稱會在其裝置上向使用者顯示。
 - **AAD 中的使用者名稱屬性**：此名稱是 Intune 從 Azure Active Directory (Azure AD) 中取得的屬性。 Intune 會動態產生此設定檔所使用的使用者名稱。 選項包括：
-  - **使用者主體名稱**：取得名稱，例如 `user1` 或 `user1@contoso.com`
-  - **使用者名稱**：只取得名稱，例如 `user1`
-  - **sAM 帳戶名稱**：需要網域，例如 `domain\user1`。 SAM 帳戶名稱只能與 Android 裝置搭配使用。
-
-    另請輸入：  
+  - **使用者主體名稱**：取得名稱，例如 `user1` 或 `user1@contoso.com`。
+  - **使用者名稱**：只取得名稱，例如 `user1`。
+  - **sAM 帳戶名稱**：需要網域，例如 `domain\user1`。 SAM 帳戶名稱只能與 Android 裝置搭配使用。 另請輸入：  
     - **使用者網域名稱來源**：選擇 [AAD]  (Azure Active Directory) 或 [自訂]  。
 
       選擇要從 [AAD]  取得屬性時，請輸入：
-      - **AAD 中的使用者網域名稱屬性**：選擇取得使用者的 [完整網域名稱]  或 [NetBIOS 名稱]  屬性
+      - **AAD 中的使用者網域名稱屬性**：選擇以取得使用者的 [完整網域名稱]  或 [NetBIOS 名稱]  屬性。
 
       選擇使用 [自訂]  屬性時，請輸入：
-      - **要使用的自訂網域名稱**：輸入 Intune 用於網域名稱的值，例如 `contoso.com` 或 `contoso`
+      - **要使用的自訂網域名稱**：輸入 Intune 用於網域名稱的值，例如 `contoso.com` 或 `contoso`。
 
 - **AAD 中的電子郵件地址屬性**：此名稱是 Intune 從 Azure AD 取得的電子郵件屬性。 Intune 會動態產生此設定檔所使用的電子郵件地址。 選項包括：
   - **使用者主體名稱**：使用完整主體名稱 (例如 `user1@contoso.com` 或 `user1`) 作為電子郵件地址。

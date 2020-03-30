@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4354d4b5aeb0957790d469a2a3fd5c6787aa93eb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 367a632b082ad5d58221f33ca9a191fb229f8f66
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363768"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086340"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK for Android 開發人員指南
 
@@ -297,7 +297,7 @@ Gradle 外掛程式具有 [Javassist](https://jboss-javassist.github.io/javassis
 | android.preference.PreferenceActivity | MAMPreferenceActivity |
 | android.support.multidex.MultiDexApplication | MAMMultiDexApplication |
 | android.widget.TextView | MAMTextView |
-| android.widget.AutoCompleteTextView | MAMAutoCompleteTextView |
+| android.widget.AutoCompleteTextView |    MAMAutoCompleteTextView |
 | android.widget.CheckedTextView | MAMCheckedTextView |
 | android.widget.EditText | MAMEditText |
 | android.inputmethodservice.ExtractEditText | MAMExtractEditText |
@@ -324,7 +324,7 @@ Gradle 外掛程式具有 [Javassist](https://jboss-javassist.github.io/javassis
 |--|--|
 | android.support.v7.app.AlertDialog.Builder | MAMAlertDialogBuilder |
 | android.support.v7.app.AppCompatActivity | MAMAppCompatActivity |
-| android.support.v7.widget.AppCompatAutoCompleteTextView | MAMAppCompatAutoCompleteTextView |
+| android.support.v7.widget.AppCompatAutoCompleteTextView |    MAMAppCompatAutoCompleteTextView |
 | android.support.v7.widget.AppCompatCheckedTextView | MAMAppCompatCheckedTextView |
 | android.support.v7.widget.AppCompatEditText | MAMAppCompatEditText |
 | android.support.v7.widget.AppCompatMultiAutoCompleteTextView | MAMAppCompatMultiAutoCompleteTextView |
@@ -970,7 +970,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 | `NOT_LICENSED` | 使用者沒有針對 Intune 取得授權，或是連絡 Intune MAM 服務的嘗試失敗。  應用程式應該會持續以未受管理 (一般) 的狀態進行，且使用者應該不會被封鎖。  註冊將會定期進行重試，以防使用者於日後取得授權。 |
 | `ENROLLMENT_SUCCEEDED` | 註冊嘗試成功，或是使用者已經註冊。  針對成功註冊的情況，將會在此通知之前傳送原則重新整理的通知。  應用程式應該會允許針對公司資料的存取。 |
 | `ENROLLMENT_FAILED` | 註冊嘗試失敗。  您可以在裝置記錄檔中找到進一步的詳細資料。  在此狀態下，應用程式應該不會允許對公司資料的存取，因為先前已判斷使用者已針對 Intune 取得授權。|
-| `WRONG_USER` | 每個裝置上只能有一個使用者可以將應用程式與 MAM 服務進行註冊。 此結果表示接收所傳遞之此項結果的使用者 (第二位使用者)，應接受 MAM 原則的約束，但其他使用者已經註冊。 因為 MAM 原則無法套用到第二位使用者，所以除非這名使用者之後註冊成功，否則您的應用程式不應允許存取此使用者的資料 (可能會從您的應用程式移除該名使用者)。 MAM 會在傳遞此 `WRONG_USER` 結果的同時提供選項，提示您移除現有帳戶。 若該使用者回答是，可能很就能註冊第二位使用者。 只要第二位使用者保持在已註冊的狀態，MAM 就會定期重試註冊。 |
+| `WRONG_USER` | 每個裝置上只能有一個使用者可以將應用程式與 MAM 服務進行註冊。 此結果表示接收所傳遞之此項結果的使用者 (第二位使用者)，應接受 MAM 原則的約束，但其他使用者已經註冊。 因為無法針對第二位使用者強制執行 MAM 原則，所以除非這位使用者之後註冊成功，否則您的應用程式不得允許存取此使用者的資料 (可能會從您的應用程式移除該使用者)。 MAM 會在傳遞此 `WRONG_USER` 結果的同時提供選項，提示您移除現有帳戶。 若該使用者回答是，可能很就能註冊第二位使用者。 只要第二位使用者保持在已註冊的狀態，MAM 就會定期重試註冊。 |
 | `UNENROLLMENT_SUCCEEDED` | 已順利完成取消註冊。|
 | `UNENROLLMENT_FAILED` | 取消註冊要求失敗。  您可以在裝置記錄檔中找到進一步的詳細資料。 一般而言，只要應用程式傳遞有效的 (不是 null 或空白) UPN，就不會發生這種情況。 應用程式目前沒有直接可靠的補救措施可以採取。 若還未取消註冊有效的 UPN 時便收到此值，請向 Intune MAM 小組回報此 Bug。|
 | `PENDING` | 使用者的初始註冊嘗試正在進行中。  應用程式可以 (但非必要) 封鎖對公司資料的存取，直到知道註冊狀態為止。 |
@@ -1079,7 +1079,7 @@ public interface MAMComplianceNotification extends MAMUserNotification {
 | PENDING | 嘗試補救合規性失敗，因為在超過時間限制時仍未從服務接收到狀態回應。 應用程式應在稍後再次嘗試取得權杖。 |
 | COMPANY_PORTAL_REQUIRED | 必須在裝置上安裝公司入口網站，才能使合規性補救成功。  若已在裝置上安裝公司入口網站，應用程式需要重新啟動。  在此情況下，會顯示對話方塊，要求使用者重新啟動應用程式。 |
 
-若合規性狀態為 `MAMCAComplianceStatus.COMPLIANT`，應用程式應重新啟動原先取得權杖的過程 (適用其自身的資源)。 若合規性補救嘗試失敗，`getComplianceErrorTitle()` 和 `getComplianceErrorMessage()` 方法會傳回應用程式可向終端使用者顯示的當地語系化字串 (若其選擇的話)。  大多數的錯誤案例都無法由應用程式進行補救，因此一般情況下，使建立帳戶或登入的過程失敗，並允許使用者稍後再次進行嘗試可能會是最佳的做法。  若失敗持續發生，MAM 記錄可能可以協助判斷原因。  終端使用者可以依照[這裡](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android "使用電子郵件將記錄傳送給公司支援人員")所提供的指示提交記錄。
+若合規性狀態為 `MAMCAComplianceStatus.COMPLIANT`，應用程式應重新啟動原先取得權杖的過程 (適用其自身的資源)。 若合規性補救嘗試失敗，`getComplianceErrorTitle()` 和 `getComplianceErrorMessage()` 方法會傳回應用程式可向終端使用者顯示的當地語系化字串 (若其選擇的話)。  大多數的錯誤案例都無法由應用程式進行補救，因此一般情況下，使建立帳戶或登入的過程失敗，並允許使用者稍後再次進行嘗試可能會是最佳的做法。  若失敗持續發生，MAM 記錄可能可以協助判斷原因。  終端使用者可以依照[這裡](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android "使用電子郵件將記錄傳送給公司支援人員")所提供的指示提交記錄。
 
 由於 `MAMComplianceNotification` 會延伸 `MAMUserNotification`，因此也會提供嘗試補救的使用者身分識別。
 
@@ -1206,7 +1206,7 @@ BackupAgent 可讓您更明確了解備份了哪些資料。 由於開發人員�
 
 **多重身分識別還原：**
 
-《資料備份》指南在[擴充 BackupAgent (英文)](https://developer.android.com/guide/topics/data/keyvaluebackup.html#BackupAgent) 一節中詳述還原應用程式資料的一般演算法，並提供程式碼範例。 若要成功進行多重身分識別還原，您必須遵循此程式碼範例中所提供的一般結構，並特別注意下列事項：
+《資料備份》指南會指定用於還原應用程式資料的一般演算法，並在[擴充 BackupAgent](https://developer.android.com/guide/topics/data/keyvaluebackup.html#BackupAgent) \(英文\) 一節中提供程式碼範例。 若要成功進行多重身分識別還原，您必須遵循此程式碼範例中所提供的一般結構，並特別注意下列事項：
 
 1. 您必須利用 `while(data.readNextHeader())`* 迴圈以完整瀏覽備份實體。 在上一個程式碼中，`data` 是在還原時傳遞至您應用程式的 **MAMBackupDataInput** 區域變數名稱。
 
@@ -1343,7 +1343,7 @@ public static void setUIPolicyIdentity(final Context context, final String ident
 除了應用程式設定身分識別的能力之外，執行緒或內容的身分識別也可能會根據來自另一個具有應用程式保護原則的 Intune 受控應用程式的資料輸入而變更。
 
 #### <a name="examples"></a>範例
-1. 如果活動是根據另一個 MAM 應用程式所傳送的 `Intent` 來啟動，就會根據另一個應用程式在傳送 `Intent` 時的有效身分識別，來設定活動的身分識別。
+1. 如果活動是從另一個 MAM 應用程式所傳送的 `Intent` 來啟動，就會根據另一個應用程式在傳送 `Intent` 時的有效身分識別，來設定活動的身分識別。
 
 2. 針對服務，執行緒的身分識別會在 `onStart` 或 `onBind` 呼叫期間以類似的方式進行設定。 針對從 `onBind` 傳回之 `Binder` 的呼叫，也會暫時設定執行緒身分識別。
 
@@ -1457,12 +1457,12 @@ public final class MAMFileProtectionManager {
     * this method will silently do nothing.
     *
     * @param identity
-    *       Identity to set.
+    *         Identity to set.
     * @param file
-    *       File to protect.
+    *         File to protect.
     *
     * @throws IOException
-    *       If the file cannot be protected.
+    *         If the file cannot be protected.
     */
    public static void protect(final File file, final String identity) throws IOException;
 
@@ -1864,7 +1864,7 @@ Intune SDK 會維護由 Android API 所提供的合約，但可能會因為強�
 Intune App SDK for Android 不會控制來自您應用程式的資料收集。 根據預設，公司入口網站應用程式會記錄系統產生的資料。 這些資料會傳送到 Microsoft Intune。 根據 Microsoft 的原則，我們不會收集任何個人資料。
 
 > [!NOTE]
-> 如果終端使用者選擇不要傳送此資料，則必須在公司入口網站應用程式的 [設定] 下關閉遙測。 若要深入了解，請參閱[關閉 Microsoft 使用狀況資料收集](https://docs.microsoft.com/user-help/turn-off-microsoft-usage-data-collection-android)。 
+> 如果終端使用者選擇不要傳送此資料，則必須在公司入口網站應用程式的 [設定] 下關閉遙測。 若要深入了解，請參閱[關閉 Microsoft 使用狀況資料收集](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android)。 
 
 ## <a name="recommended-android-best-practices"></a>建議的 Android 最佳作法
 

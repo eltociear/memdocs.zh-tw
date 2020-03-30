@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0733ac48aa39f611db43164137d129a3248f13d4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 936dc5d4167252fcb2280ca3c9aa8b450a924a98
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342812"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083644"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>使用 Microsoft Intune 的受原則保護瀏覽器來管理 Web 存取
 
@@ -88,6 +88,9 @@ Microsoft Edge 和 Intune Managed Browser 是網頁瀏覽器應用程式，您�
 ## <a name="conditional-access-for-protected-browsers"></a>受保護瀏覽器的條件式存取
 
 Managed Browser 現在是進行條件式存取的經過核准用戶端應用程式。 這表示您可以限制行動瀏覽器對 Azure AD 已連線 Web 應用程式的存取，而在這些 Web 應用程式中，使用者只能使用 Managed Browser，並封鎖存取任何其他未受保護的瀏覽器 (如 Safari 或 Chrome)。 這項保護可以套用至 Azure 資源，例如 Exchange Online 和 SharePoint Online、Microsoft 365 系統管理中心，甚至是已透過 [Azure AD 應用程式 Proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) 對外部使用者公開的內部部署網站。 
+
+> [!NOTE]
+> 需要在受保護的瀏覽器中開啟時，iOS 裝置上新的 Web 剪輯 (釘選的 Web 應用程式) 將會在 Microsoft Edge (而不是 Intune Managed Browser) 中開啟。 針對較舊的 iOS Web 剪輯，您必須為這些 Web 剪輯重定目標，以確保其會在 Microsoft Edge (而非 Managed Browser) 中開啟。
 
 若要限制 Azure AD 已連線 Web 應用程式在行動平台上使用 Intune Managed Browser，您可以建立條件式存取原則要求使用經過核准的用戶端應用程式。 
 

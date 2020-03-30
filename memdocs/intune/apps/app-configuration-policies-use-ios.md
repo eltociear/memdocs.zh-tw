@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a110b268c31f4e1ee5dada6554215b648449f01
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 28ce4e7d80e79f752bded8f0cdf03494aa629e1b
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342422"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233456"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>為受控 iOS/iPadOS 裝置新增應用程式設定原則
 
@@ -106,7 +106,7 @@ Microsoft Intune 提供應用程式專屬的組態設定。 您可在 Microsoft 
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>在多重身分識別應用程式中只允許設定的組織帳戶 
 
-針對 iOS/iPadOS 裝置，請使用下列機碼/值組：
+身為 Microsoft Intune 管理員，您可以控制要新增至受控裝置上 Microsoft 應用程式的使用者帳戶。 您可以僅允許組織使用者帳戶進行存取，並封鎖已註冊裝置上的個人帳戶。 針對 iOS/iPadOS 裝置，請使用下列機碼/值組：
 
 | **Key** | **值** |
 |----|----|
@@ -114,7 +114,10 @@ Microsoft Intune 提供應用程式專屬的組態設定。 您可在 Microsoft 
 | IntuneMAMUPN | <ul><li>允許用於登入應用程式其帳戶的 UPN。</li><li> 若為 Intune 註冊的裝置，<code>{{userprincipalname}}</code> 權杖可用來代表註冊的使用者帳戶。</li></ul>  |
 
    > [!NOTE]
-   > 只允許搭配多身分識別使用已設定的組織帳戶時，您必須使用 iOS 版 OneDrive 10.34 或更新版本、iOS 版Outlook 2.99.0 或更新版本或 iOS 版 Edge 44.8.7 或更新版本，且必須使用 [Intune 應用程式保護原則](app-protection-policy.md)將應用程式設為目標。
+   > 下列應用程式會處理上述應用程式設定，而且只允許組織帳戶：
+   > - 適用於 iOS 的 Edge (44.8.7 和更新版本)
+   > - 適用於 iOS 的 OneDrive (10.34 和更新版本)
+   > - 適用於 iOS 的 Outlook (2.99.0 或更新版本)
 
 ## <a name="enter-xml-data"></a>輸入 XML 資料
 

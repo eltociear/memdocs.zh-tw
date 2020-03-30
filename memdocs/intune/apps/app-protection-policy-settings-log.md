@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 03/17/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe508dac691f922ec638709e04d6d4dd9f47f078
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f58c20731395c95e532e28165553743fdef701e9
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341694"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083565"
 ---
 # <a name="review-client-app-protection-logs"></a>檢閱用戶端應用程式保護記錄
 
 深入了解應用程式防護記錄中您可以檢閱的設定。 藉由在行動用戶端上啟用 Intune 診斷來存取記錄。 
 
 啟用及收集記錄的流程會因平台而有所不同：
-- **iOS/iPadOS 裝置** - 使用適用於 iOS/iPadOS 的 Microsoft Edge 來收集記錄。 如需詳細資料，請參閱[透過搭配 Microsoft Intune 使用 Microsoft Edge 來管理 Web 存取](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs)。 
+- **iOS/iPadOS 裝置** - 使用適用於 iOS/iPadOS 的 Microsoft Edge 來收集記錄。 如需詳細資料，請參閱[透過搭配 Microsoft Intune 使用 Microsoft Edge 來管理 Web 存取](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)。 
 - **Windows 10 裝置** - 使用 *MDMDiag* 及事件記錄。 請參閱 Windows 用戶端管理內容中的[診斷 Windows 10 中的 MDM 失敗](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) \(部分機器翻譯\)，以及部落格[針對 Windows 10 Intune 原則失敗進行疑難排解](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) \(英文\)。
-- **Android 裝置** - Android 裝置上的應用程式保護原則 (APP) 沒有診斷資料。
+- **Android 裝置** - 使用適用於 Android 的 Microsoft Edge 來收集記錄。 如需詳細資料，請參閱[透過搭配 Microsoft Intune 使用 Microsoft Edge 來管理 Web 存取](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)。 
 
 下表列出應用程式保護原則設定名稱，以及記錄在記錄檔中支援的值。 此外，每個設定都會識別在 Microsoft Endpoint Manager 入口網站中找到的原則設定。 如需每個設定的詳細資訊，請參閱 [iOS/iPadOS 應用程式保護原則設定](app-protection-policy-settings-ios.md)。
 

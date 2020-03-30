@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3fc6b9fc427ab6e0dc0488061378e78060527676
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b30d2a3ef7c85557222aa39740417a1a6fd463f1
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361974"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084135"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>將 Web 應用程式新增至 Microsoft Intune
 
@@ -37,9 +37,10 @@ Intune 會在使用者的裝置上建立 Web 應用程式捷徑。 針對 iOS/iP
 
 > [!Note]
 > 使用者的裝置上必須安裝瀏覽器，以啟動 Web 應用程式。 
-
-> [!Note]
-> 針對 Android Enterprise 裝置，請參閱[受控 Google Play Web 連結](apps-add-android-for-work.md#managed-google-play-web-links)
+> 
+> 針對 Android Enterprise 裝置，請參閱[受控 Google Play Web 連結](apps-add-android-for-work.md#managed-google-play-web-links)。
+> 
+> 針對 iOS 裝置，需要在受保護的瀏覽器中開啟時，新的 Web 剪輯 (釘選的 Web 應用程式) 將會在 Microsoft Edge (而不是 Intune Managed Browser) 中開啟。 針對較舊的 iOS Web 剪輯，您必須為這些 Web 剪輯重定目標，以確保其會在 Microsoft Edge (而非 Managed Browser) 中開啟。
 
 ## <a name="add-a-web-app-to-intune"></a>將 Web 應用程式新增至 Intune
 您可以執行下列動作，將應用程式新增至 Intune 以作為該應用程式的網路捷徑：

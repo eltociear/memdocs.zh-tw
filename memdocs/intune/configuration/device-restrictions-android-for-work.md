@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0546b280f6a04b6bc396b39a9a04031ee9800172
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a3e6679e27e7d373243874ea40c2d028ff25d3e9
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361883"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220110"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>使用 Intune 來允許或限制功能的 Android Enterprise 裝置設定
 
@@ -78,7 +78,7 @@ ms.locfileid: "79361883"
 
 ### <a name="system-security-settings"></a>系統安全性設定
 
-- **對應用程式進行威脅掃描**：[必要]  \(預設\) 可讓 Google Play Protect 在應用程式安裝之前和之後，掃描這些應用程式。 如果它偵測到威脅，就可能會警告使用者從裝置中移除應用程式。 [未設定]  不會啟用或執行 Google Play Protect 來掃描應用程式。
+- **對應用程式進行威脅掃描**：[必要]  (預設值) 可讓 Google Play 安全防護在應用程式安裝前後掃描這些應用程式。 如果它偵測到威脅，就可能會警告使用者從裝置中移除應用程式。 [未設定]  不會啟用或執行 Google Play Protect 來掃描應用程式。
 
 ### <a name="dedicated-device-settings"></a>專用的裝置設定
 
@@ -316,7 +316,7 @@ ms.locfileid: "79361883"
 - **密碼長度下限**：輸入使用者的密碼必須至少包含的字元數 (**4**-**16**)。
 - **停止活動最長幾分鐘後鎖定工作設定檔**：選取工作設定檔鎖定前所需的時間長度。 然後，使用者必須輸入其認證，才能重新取得存取權。
 - **登入失敗幾次後即抹除裝置**：輸入從裝置中抹除工作設定檔前可輸入錯誤密碼的次數。
-- **密碼到期 (天數)** ：輸入使用者的密碼在多少天後必須變更 (**1**-**255**)。
+- **密碼到期 (天數)** ：輸入終端使用者的密碼必須在多少天後變更 (**1**-**365**)。
 - **必要的密碼類型**：選取必須在裝置上設定的密碼類型。 從下列選項進行選擇：
   - **裝置預設**
   - **低安全性生物識別**
@@ -337,7 +337,7 @@ ms.locfileid: "79361883"
 - **密碼長度下限**：輸入使用者的密碼必須至少包含的字元數 (**4**-**14**)。
 - **停止活動最多幾分鐘後鎖定螢幕**：選取非作用中裝置自動鎖定前所需的時間長度
 - **登入失敗幾次後即抹除裝置**：輸入從裝置中抹除工作設定檔前可輸入錯誤密碼的次數。
-- **密碼到期 (天數)** ：輸入使用者的密碼在多少天後必須變更 (**1**-**255**)
+- **密碼到期 (天數)** ：輸入終端使用者的密碼必須在多少天後變更 (**1**-**365**)。
 - **必要的密碼類型**：選取必須在裝置上設定的密碼類型。 從下列選項進行選擇：
   - **裝置預設**
   - **低安全性生物識別**

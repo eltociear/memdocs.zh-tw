@@ -1,11 +1,11 @@
 ---
-title: 自訂設定 - Windows Holographic for Business 裝置 - Microsoft Intune
+title: 自訂設定 - Windows Holographic for Business 裝置 - Microsoft Intune | Microsoft Docs
 description: 在 Microsoft Intune 中新增或建立自訂設定檔，以將 OMA-URI 設定用於執行 Windows Holographic for Business 的裝置，包括 Microsoft Hololens。 您可以設定 AllowFastReconnect、AllowVPN、AllowUpdateService、UpdateServiceURL、RequireUpdatesApproval、ApprovedUpdates 及 ApplicationLaunchRestrictions 原則設定服務提供者 (CSP) 設定。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 03/19/2020
 ms.article: article
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e72995942ebbc9fbcd35697bc525c9af75e77d18
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 43199009740f259c6a6484e455b0205da76492ba
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361896"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084039"
 ---
 # <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>在 Intune 中使用 Windows Holographic for Business 裝置的自訂設定
 
@@ -93,12 +93,12 @@ Windows Holographic for Business 提供許多設定服務提供者 (CSP) 設定�
 > |---|---|
 > |./Vendor/MSFT/Policy/Config/Settings/AllowVPN|整數<br/>0 - 不允許<br/>1 - 允許 (預設值)|
 
-### <a name="requireupdatesapproval"></a>[RequireUpdatesApproval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
+### <a name="requireupdateapproval"></a>[RequireUpdateApproval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|資料類型|
 > |---|---|
-> |./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|整數<br/>0 - 未設定。 裝置會安裝所有適用的更新。<br/>1 - 裝置只會安裝適用並且在核准更新清單上的更新。 如果 IT 想要控制在裝置上部署更新，例如需要先測試才能部署時，將此原則設定為 1。|
+> |./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|此設定適用於 RS5 (組建 17763) 和更早版本。 從 19H1 (組建 18362) 開始，請使用[商務用 Windows Update](../protect/windows-update-for-business-configure.md)。<br/><br/>整數<br/>0 - 未設定。 裝置會安裝所有適用的更新。<br/>1 - 裝置只會安裝適用並且在核准更新清單上的更新。 如果 IT 想要控制在裝置上部署更新，例如需要先測試才能部署時，將此原則設定為 1。|
 
 ### <a name="scheduledinstalltime"></a>[ScheduledInstallTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduledinstalltime)
 
@@ -112,7 +112,7 @@ Windows Holographic for Business 提供許多設定服務提供者 (CSP) 設定�
 > [!div class="mx-tableFixed"]
 > |OMA-URI|資料類型|
 > |---|---|
-> |./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|字串<br/>URL - 裝置會在指定的 URL 檢查來自 WSUS 伺服器的更新。<br/>未設定 - 裝置會檢查來自 Microsoft Update 的更新。|
+> |./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|此設定適用於 RS5 (組建 17763) 和更早版本。 從 19H1 (組建 18362) 開始，請使用[商務用 Windows Update](../protect/windows-update-for-business-configure.md)。<br/><br/>字串<br/>URL - 裝置會在指定的 URL 檢查來自 WSUS 伺服器的更新。<br/>未設定 - 裝置會檢查來自 Microsoft Update 的更新。|
 
 ### <a name="approvedupdates"></a>[ApprovedUpdates](https://docs.microsoft.com/windows/client-management/mdm/update-csp)
 

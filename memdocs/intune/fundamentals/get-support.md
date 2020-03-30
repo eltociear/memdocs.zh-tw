@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
-ms.reviewer: srik
+ms.reviewer: crisk
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b746317ef15065af246cfd977f6e9d745ef4dea7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cf732907b9123dfe8cbd72970556ecfbb5380733
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79362676"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086038"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>如何取得 Microsoft Intune 支援
 
@@ -36,7 +36,6 @@ Microsoft 為 Microsoft Intune 提供全球的技術、售前、帳單及訂閱�
 >
 > 如需針對 Microsoft Intune 相關問題進行疑難排解的資訊，請參閱 Intune 文件的[疑難排解](help-desk-operators.md)一節。
 
-
 ## <a name="help-and-support-experience"></a>說明及支援體驗
 
 Intune 的說明及支援體驗可以從 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，以及從 Azure 入口網站中 Intune 下的所有刀鋒視窗 (或頁面) 存取。
@@ -48,14 +47,13 @@ Intune 的說明及支援體驗可以從 [Microsoft 端點管理員系統管理�
 
 ### <a name="options-to-access-help-and-support"></a>存取 [說明及支援] 的選項
 
-當您針對 Intune 使用新建立的租用戶時，[說明及支援]  可能會無法開啟，並傳回下列訊息：
+當您針對 Intune 使用新建立的租用戶時，可能無法開啟 [說明及支援]  ，並傳回下列訊息：
 
 - 「我們遇到未知的問題。  請重新整理頁面。如果問題仍然存在，請透過 [M365 系統管理中心](https://admin.microsoft.com)建立案例並參考所提供的工作階段識別碼。」
 
-錯誤詳細資料會包含「工作階段識別碼」  、「擴充」  詳細資料等。 
- 
-此問題會在您尚未透過 **M365 系統管理中心** (位於 https://admin.microsoft.com )，或透過 **Office 365 入口網站** (位於 https://portal.office.com ) 驗證您新的租用戶帳戶時發生。 若要解決此問題，請選取訊息中的「M365 系統管理中心」  連結，或是造訪 https://portal.office.com ，然後登入。 在任一網站上完成驗證之後，Intune 的 [說明及支援]  便可供存取。
+錯誤詳細資料會包含「工作階段識別碼」  、「擴充」  詳細資料等。
 
+此問題會在您尚未透過 **M365 系統管理中心** (位於 https://admin.microsoft.com ) 或 **Office 365 入口網站** (位於 https://portal.office.com ) 驗證新的租用戶帳戶時發生。 若要解決此問題，請選取訊息中的「M365 系統管理中心」  連結，或是造訪 https://portal.office.com ，然後登入。 在任一網站上完成驗證之後，Intune 的 [說明及支援]  便可供存取。
 
 **存取說明及支援**：
 
@@ -67,18 +65,28 @@ Intune 的說明及支援體驗可以從 [Microsoft 端點管理員系統管理�
   > 如果您的 Intune 執行個體裝載於如 Azure Government 之類的政府私人雲端 (也稱為主權雲端) 中，請參閱此文章後段的[適用於政府私人雲端的 Intune 支援](#intune-support-for-private-cloud-for-government)。 Intune 的 [說明及支援]  體驗要到明年才會在政府私人雲端上提供。
 
 - **從 Microsoft 端點管理員系統管理中心**
-  - 在您選取了 Intune 的功能區域之後，請選取**說明及支援**的選項。
-  - 從 Microsoft 端點管理員系統管理中心的任何節點中，選取 [?]  圖示，然後使用下拉式清單來選取您需要協助的服務。 裝置管理入口網站中的 [?]  圖示 (位於 Microsoft 端點管理員系統管理中心中) 支援多個服務，而您必須選取您需要協助的特定服務。  
 
-    ![選取您的服務](./media/get-support/select-a-service.png)
+  - 從 Microsoft 端點管理員系統管理中心的任何節點中，選取 [?]  圖示 (位於入口網站右上角)，然後使用下拉式清單來選取您需要協助的管理類型。 Microsoft 端點管理員系統管理中心支援下列管理類型，而您必須選取您需要協助的管理類型 (例如 Intune)：
 
-    選取服務之後，您將看到該服務的 [說明及支援]  頁面，您可在此針對特定問題指定詳細資料以[尋找解決方案](#find-solutions)。
+    - Configuration Manager (包含電腦分析)
+    - Intune
+    - 共同管理  
 
-    當搜尋結果似乎與對服務的預期不符時，請檢查以確定已選取正確的服務。 選擇服務會出現在「說明及支援」  的正後方。  若未選取正確的服務，請按一下 [選取服務]  以返回 [選擇服務] 下拉式清單。
+    > [!div class="mx-imgBorder"]
+    > ![選取您的管理類型](./media/get-support/select-management-type.png)
 
-    ![確認您的服務](./media/get-support/confirm-your-service-selection.png)
+    選取管理類型之後，即會開啟 [說明及支援]  頁面，您接著可在其中針對特定問題指定詳細資料來[尋找解決方案](#find-solutions)。 詳細資料會根據您選取的管理類型進行篩選。
 
-###  <a name="the-support-experience"></a>支援體驗
+     如果未選取正確的管理類型 **(1)** ，按一下 [選取管理類型]  **(2)** ，以返回管理類型選取項目下拉式清單：
+
+    > [!div class="mx-imgBorder"]
+    > ![確認您的管理類型](./media/get-support/confirm-management-selection.png)
+
+  - 如果您從 [疑難排解 + 支援]   > [說明及支援]  開啟 [說明及支援]，將不會看到您選取的管理類型列於 [說明及支援]  下方。
+
+  - 如果您深入探索任何其他節點 (例如 [裝置]  、[應用程式]  或 [使用者]  )，然後選取 [說明及支援]  ，則不會有機會選取管理類型，該類型也不會顯示於 [說明及支援]  下方。 在此案例中為 *Intune*。 如果您不想要將內容設定為 Intune，請使用 [?]  選項，讓您可以選取不同的管理類型。
+
+### <a name="the-support-experience"></a>支援體驗
 
   開啟 [說明及支援] 時，入口網站會顯示 [需要協助嗎?]  視窗：
 
@@ -124,7 +132,7 @@ Intune 的說明及支援體驗可以從 [Microsoft 端點管理員系統管理�
 
 如果您有進行中的支援案例編號，可以在此輸入該編號來跳到該問題，或是在包含進行中與已關閉問題的清單選取任何事件，來檢視有關事件的詳細資訊。
 
-檢閱完事件的詳細資料後，請在三個 [需要協助嗎?]  窗格圖示上方的服務要求頂端，選取顯示的向左箭號。 向後箭頭會返回您開啟的支援事件清單。
+當您完成檢視事件的詳細資料之後，請在三個 [需要協助嗎?]  窗格圖示正上方的服務要求頂端，選取顯示的向左箭號。 向後箭頭會返回您開啟的支援事件清單。
 
 #### <a name="premier-and-unified-support-customers"></a>頂級與統一支援客戶
 
@@ -144,8 +152,7 @@ Intune 的說明及支援體驗可以從 [Microsoft 端點管理員系統管理�
 除非您的訂用帳戶是位於政府的私人雲端上，否則您無法再使用 Azure 的 [說明 + 支援]  體驗來取得 Intune 的協助。
 如果您的 Intune 執行個體未在政府的私人雲端上執行，瀏覽 Azure 的 [說明 + 支援]  會將您重新導向至 Intune 的 [說明及支援]  體驗，以建立及管理支援事件：
 
-當您使用左側瀏覽窗格的 [說明 + 支援]  ，或使用 Azure 入口網站右上角的 [?]  開啟 [說明]  窗格，然後選取 [說明 + 支援]  的選項，您可以開啟 Azure [說明 + 支援]  頁面。 
-
+當您使用左側瀏覽窗格的 [說明 + 支援]  ，或使用 Azure 入口網站右上角的 [?]  開啟 [說明]  窗格，然後選取 [說明 + 支援]  的選項，您可以開啟 Azure [說明 + 支援]  頁面。
 
 從此頁面選取 [+ 新增支援要求]  以開啟 [說明 + 支援 + 新增支援要求]  頁面的 [基本]  索引標籤。
 
@@ -160,10 +167,9 @@ Intune 的說明及支援體驗可以從 [Microsoft 端點管理員系統管理�
   
   ![新增支援要求](./media/get-support/new-request.png)
 
-
 ## <a name="intune-support-for-private-cloud-for-government"></a>適用於政府私人雲端的 Intune 支援
 
-當您的 Intune 訂用帳戶裝載於如 Azure Government 的政府私人雲端 (也稱為主權雲端) 上時，您還無法存取較新的 Intune [說明及支援] 體驗。  請改用下列資訊來取得 Intune 的支援。
+當您的 Intune 訂用帳戶裝載於如 Azure Government 的政府私人雲端 (也稱為主權雲端) 時，您還無法存取較新的 Intune [說明及支援] 體驗。  請改用下列資訊來取得 Intune 的支援。
 
 ### <a name="create-an-online-support-ticket"></a>建立線上支援票證
 

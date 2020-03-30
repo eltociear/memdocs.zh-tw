@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4d5fe8ed78aa5537552ecf3db12eabd2bb6fbde
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359283"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086122"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>在 Intune 中註冊 iOS/iPadOS 裝置
 
@@ -46,7 +46,7 @@ Intune 啟用 iPad 和 iPhone 的行動裝置管理 (MDM)，讓使用者安全�
 - 您可以將裝置註冊視為一般的 BYOD 註冊。 它也為系統管理員提供各式各樣的管理選項。
 - 使用者註冊是更簡化的註冊程序，可為系統管理員提供一組裝置管理選項的子集。 這項功能目前為預覽狀態。 
 
-當您完成必要條件及指派使用者授權之後，使用者即可從 App Store 下載 Intune 公司入口網站應用程式，並遵循應用程式中的註冊指示進行。 您可以在 iOS/iPadOS 裝置上自訂公司入口網站隱私權聲明，如[隱私權聲明自訂](../apps/company-portal-app.md#privacy-statement-customization)中所述。
+當您完成必要條件及指派使用者授權之後，使用者即可從 App Store 下載 Intune 公司入口網站應用程式，並遵循應用程式中的註冊指示進行。 您可以在 iOS/iPadOS 裝置上自訂公司入口網站隱私權聲明，如同[如何自訂 Intune 公司入口網站應用程式、公司入口網站及 Intune 應用程式](../apps/company-portal-app.md#configuration)中所述。
 
 ## <a name="company-owned-iosipados-devices"></a>屬公司擁有的 iOS/iPadOS 裝置
 

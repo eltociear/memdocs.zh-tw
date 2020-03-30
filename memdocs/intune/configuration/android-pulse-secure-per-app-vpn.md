@@ -1,12 +1,11 @@
 ---
-title: 自訂 Android 的個別應用程式 VPN 設定檔
-titleSuffix: Microsoft Intune
-description: 了解如何針對 Microsoft Intune 所管理的 Android 裝置建立個別應用程式 VPN 設定檔。
+title: 在 Microsoft Intune 中自訂適用於 Android 的個別應用程式 VPN 設定檔 - Azure | Microsoft Docs
+description: 了解如何針對 Microsoft Intune 所管理的 Android 裝置系統管理員裝置建立個別應用程式 VPN 設定檔。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fbcf60d3707097a323a05bf36d2cfe3902d5214
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d58ab666929e1e28cab4e19f2e2cec668f428452
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340004"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083878"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>使用 Microsoft Intune 自訂設定檔來建立 Android 裝置的個別應用程式 VPN 設定檔
 
@@ -32,7 +31,7 @@ ms.locfileid: "79340004"
 > [!NOTE]
 > 若要在 Android Enterprise 裝置上使用個別應用程式 VPN，您也可以使用這些步驟。 但是，建議您針對您的 VPN 用戶端應用程式使用[應用程式設定原則](../apps/app-configuration-policies-use-android.md)。
 
-在您將原則指派給 Android 裝置或使用者群組之後，使用者應該啟動 Pulse Secure 或 Citrix VPN 用戶端。 接著，VPN 用戶端 就只會允許來自指定應用程式的流量使用開啟的 VPN 連線。
+在您將原則指派給 Android 裝置或使用者群組之後，使用者應該啟動 Pulse Secure 或 Citrix VPN 用戶端。 接著，VPN 用戶端只允許來自指定應用程式的流量使用開啟的 VPN 連線。
 
 > [!NOTE]
 >
@@ -44,14 +43,23 @@ ms.locfileid: "79340004"
 2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 3. 輸入下列內容：
 
-    - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，良好設定檔名稱為**適用於整家公司的 Android 各個應用程式 VPN 設定檔**。
+    - **平台**：選取 [Android 裝置系統管理員]  。
+    - **設定檔**：選取 [VPN]  。
+
+4. 選取 [建立]  。
+5. 在 [基本資訊]  中，輸入下列內容：
+
+    - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，一個良好的設定檔名稱是**適用於整家公司的 Android 裝置系統管理員個別應用程式 VPN 設定檔**。
     - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
-    - **平台**：選取 [Android]  。
-    - **設定檔類型**：選取 [VPN]  。
 
-4. 選擇 [設定]   >  [設定]  。 然後，設定 VPN 設定檔。 如需詳細資訊，請參閱[如何設定 VPN 設定](vpn-settings-configure.md)和 [Android 裝置的 Intune VPN 設定](vpn-settings-android.md)。
+6. 選取 [下一步]  。
+7. 在 [組態設定]  中，於設定檔中進行所需的設定：
 
-請記下您在建立 VPN 設定檔時指定的 [連線名稱]  值。 下一個步驟將會需要這個名稱。 例如，**MyAppVpnProfile**。
+    - [適用於 Android 裝置系統管理員裝置的 VPN 設定](vpn-settings-android.md)。
+
+    請記下您在建立 VPN 設定檔時輸入的**連線名稱**值。 下一個步驟中需要這個名稱。 在此範例中，連線名稱為 **MyAppVpnProfile**。
+
+8. 選取 [下一步]  ，然後繼續建立設定檔。 如需詳細資訊，請參閱[建立 VPN 設定檔](vpn-settings-configure.md#create-the-profile)。
 
 ## <a name="step-2-create-a-custom-configuration-policy"></a>步驟 2：建立自訂設定原則
 
@@ -61,7 +69,7 @@ ms.locfileid: "79340004"
 
     - **名稱**：為自訂設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，良好設定檔名稱為**適用於整家公司的自訂 OMA-URI Android VPN 設定檔**。
     - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
-    - **平台**：選取 [Android]  。
+    - **平台**：選取 [Android 裝置系統管理員]  。
     - **設定檔類型**：選取 [自訂]  。
 
 4. 選擇 [設定]   >  [設定]  。
@@ -72,7 +80,8 @@ ms.locfileid: "79340004"
     - **資料類型**：輸入**字串**。
     - **值**：輸入要與設定檔建立關聯的套件清單 (以分號區隔)。 例如，如果想要 Excel 和 Google Chrome 瀏覽器使用 VPN 連線，請輸入 `com.microsoft.office.excel;com.android.chrome`。
 
-![Android 個別應用程式 VPN 自訂原則範例](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
+    > [!div class="mx-imgBorder"]
+    >![Android 裝置系統管理員個別應用程式 VPN 自訂原則範例](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
 
 ### <a name="set-your-app-list-to-blacklist-or-whitelist-optional"></a>將應用程式清單設定為封鎖清單或允許清單 (選用)
 
@@ -87,3 +96,8 @@ ms.locfileid: "79340004"
 ## <a name="step-3-assign-both-policies"></a>步驟 3：指派這兩項原則
 
 [指派這兩個裝置設定檔](device-profile-assign.md)給所需的使用者或裝置。
+
+## <a name="next-steps"></a>後續步驟
+
+- 如需所有 Android 裝置系統管理員 VPN 設定的清單，請參閱[設定 VPN 的 Android 裝置設定](vpn-settings-android.md)。
+- 若要深入了解 VPN 設定和 Intune，請參閱[在 Microsoft Intune 中進行 VPN 設定](vpn-settings-configure.md)。

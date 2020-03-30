@@ -1,12 +1,12 @@
 ---
 title: 在 Microsoft Intune 中設定電子郵件設定 - Azure | Microsoft Docs
 titleSuffix: ''
-description: 在 Microsoft Intune 中建立電子郵件設定檔，並將此設定檔部署到 Android Enterprise、iOS、iPadOS 和 Windows 裝置。 使用電子郵件設定檔來設定一般電子郵件設定，包括電子郵件伺服器和驗證方法，以連線到您所管理裝置上的公司電子郵件。
+description: 在 Microsoft Intune 中建立電子郵件設定檔，並將此設定檔部署到 Android 裝置系統管理員、Android Enterprise、iOS、iPadOS 和 Windows 裝置。 使用電子郵件設定檔來設定一般電子郵件設定，包括電子郵件伺服器和驗證方法，以連線到您所管理裝置上的公司電子郵件。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3921da0032fdc0b28ff21812b99029d22fbbb27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fdf722acf463bf576b222e5f13da2dcaff64504e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364236"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086974"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>使用 Intune 將電子郵件設定新增至裝置
 
@@ -29,7 +29,7 @@ Microsoft Intune 包含不同的電子郵件設定，可部署到您組織中的
 
 您可以使用電子郵件設定檔，針對下列裝置設定內建電子郵件設定：
 
-- Android Samsung Knox Standard 4.0 及更新版本
+- Samsung Knox Standard 4.0 和更新版本上的 Android 裝置系統管理員
 - Android 企業
 - iOS 8.0 及更新版本
 - iPadOS 13.0 和更新版本
@@ -38,35 +38,48 @@ Microsoft Intune 包含不同的電子郵件設定，可部署到您組織中的
 
 本文示範如何在 Microsoft Intune 中建立電子郵件設定檔。 它也包含不同平台的連結，以取得更具體的設定。
 
-## <a name="create-a-device-profile"></a>建立裝置設定檔
+## <a name="create-the-profile"></a>建立設定檔
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 3. 輸入下列內容：
 
-    - **名稱**：輸入政策的描述性名稱。 為您的設定檔命名，以方便之後能夠輕鬆識別。 例如，良好的原則名稱是**適用於所有 Windows 裝置的電子郵件設定**。
-    - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
-    - **平台**：選擇您的裝置平台。 選項包括：
+    - **平台**：選擇您的裝置平台。 選項包括：  
 
-        - **Android** (僅限 Samsung Android Knox Standard)
-        - **Android 企業**
+        - **Android 裝置系統管理員** (僅限 Samsung Android Knox Standard)
+        - **Android Enterprise**
         - **iOS/iPadOS**
-        - **Windows Phone 8.1**
         - **Windows 10 及以上版本**
+        - **Windows Phone 8.1**
 
-    - **設定檔類型**：選取 [電子郵件]  。
+    - **設定檔**：選取 [電子郵件]  。
 
-4. 您可設定的設定會視您選擇的平台而不同。 選擇您平台來進行詳細設定：
+4. 選取 [建立]  。
+5. 在 [基本資訊]  中，輸入下列內容：
 
-    - [Android Samsung Knox Standard 設定](email-settings-android.md)
-    - [Android 企業設定](email-settings-android-enterprise.md)
-    - [iOS/iPadOS 設定](email-settings-ios.md)
-    - [Windows Phone 8.1 設定](email-settings-windows-phone-8-1.md)
-    - [Windows 10 設定](email-settings-windows-10.md)
+    - **名稱**：輸入政策的描述性名稱。 為您的設定檔命名，以方便之後能夠輕鬆識別。 例如，一個良好的原則名稱是 **Windows 10：適用於所有 Windows 10 裝置的電子郵件設定**。
+    - **描述**：輸入政策的描述。 這是選擇性設定，但建議執行。
 
-5. 當您完成時，請選取 [確定]   > [建立]  儲存變更。
+6. 選取 [下一步]  。
 
-輸入您的設定並建立設定檔之後，您的設定檔會顯示在 [設定檔] 清單中。 接下來，請[將此設定檔指派給一些群組](device-profile-assign.md)。
+7. 在 [組態設定]  中，您可進行的設定會根據您選擇的平台而不同。 選擇您平台來進行詳細設定：
+
+    - [Android 裝置系統管理員 (Samsung Knox Standard)](email-settings-android.md)
+    - [Android Enterprise](email-settings-android-enterprise.md)
+    - [iOS/iPadOS](email-settings-ios.md)
+    - [Windows 10](email-settings-windows-10.md)
+    - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
+
+8. 選取 [下一步]  。
+9. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+
+    選取 [下一步]  。
+
+10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
+
+    選取 [下一步]  。
+
+11. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立]  時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 ## <a name="remove-an-email-profile"></a>移除電子郵件設定檔
 
@@ -104,4 +117,4 @@ Microsoft Intune 包含不同的電子郵件設定，可部署到您組織中的
 
 ## <a name="next-steps"></a>後續步驟
 
-一旦設定檔建立完成，它還不會執行任何動作。 接下來，請[指派此設定檔](device-profile-assign.md)。
+一旦設定檔建立完成，它還不會執行任何動作。 接下來，[指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。

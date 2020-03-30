@@ -1,12 +1,12 @@
 ---
 title: 在 Microsoft Intune 中設定電信費用管理服務 - Azure | Microsoft Docs
 titleSuffix: ''
-description: 將 Microsoft Intune 與 Saaswedo 電信費用管理服務整合來監視數據使用量，並在 Android、iOS 和 iPadOS 裝置上設定閾值或限制。
+description: 將 Microsoft Intune 與 Saaswedo 電信費用管理服務整合來監視數據使用量，並在 Android 裝置系統管理員、iOS 和 iPadOS 裝置上設定閾值或限制。
 keywords: Saaswedo
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,22 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a11151b874e34d12b71b3429f55603d5e6f2a11
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 62fe18a086630a768976220b8de7469f53f25cc4
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361532"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086951"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>在 Intune 中設定電信費用管理服務
 
-使用 Intune，您可以在組織擁有的行動裝置上管理來自數據使用量的電信費用。 Intune 會與 Saaswedo 的 [Datalert 電信費用管理](http://datalert.biz/get-started) \(英文\) 整合。 Datalert 是可管理電信數據使用量的即時電信費用管理解決方案。 這可協助受 Intune 管理的裝置避免產生高額與預期外的數據與漫遊費用。
+使用 Intune，您可以在組織擁有的行動裝置上管理來自數據使用量的電信費用。 Intune 會與 Saaswedo 的 [Datalert 電信費用管理](http://datalert.biz/get-started) \(英文\) 整合。 Datalert 是可管理電信數據使用量的即時電信費用管理解決方案。 這有助於避免受 Intune 管理的裝置產生非預期的數據與漫遊費用。
 
-與 Datalert 整合可以設定、監視及強制限制漫遊與國內數據使用量。 當限制超過定義的閾值時，即會自動觸發警示。 您也可以設定服務來對個人或群組套用不同的動作 (例如，停用漫遊或超出閾值)。 Datalert 管理主控台包括顯示數據使用量與監視資訊的報表。
+與 Datalert 整合可以設定、監視及強制限制漫遊與國內數據使用量。 當限制超過閾值時，即會自動觸發警示。 您也可以設定服務來對使用者或群組套用不同的動作，例如停用漫遊或超出閾值。 Datalert 管理主控台包括顯示數據使用量與監視資訊的報表。
 
 下圖顯示 Intune 如何與 Datalert 整合：
 
-  ![Intune 與 Datalert 整合的圖表](./media/telecom-expenses-monitor/tem-datalert-intune-solution-diagram.png)
+> [!div class="mx-imgBorder"]
+> ![Intune 與 Datalert 整合的圖表](./media/telecom-expenses-monitor/tem-datalert-intune-solution-diagram.png)
 
 若要搭配 Intune 使用 Datalert 服務，Datalert 與 Intune 中有一些組態設定。 本文將示範下列項目的作法：
 
@@ -44,7 +45,7 @@ ms.locfileid: "79361532"
 
 ## <a name="supported-platforms"></a>支援的平台
 
-- 具備 Knox 功能的 Android 4.4 與更新版本裝置 (Samsung)
+- 具備 Knox 功能的 Android 裝置系統管理員 4.4 與更新版本裝置 (Samsung)
 
   [支援 Knox 的 Android 版本](https://seap.samsung.com/faq/what-versions-android-support-knox-standard-and-knox-premium-sdks-0) \(英文\) (開啟 Samsung 的網站) 列出 Knox 支援的版本。
 
@@ -84,7 +85,8 @@ Intune 可與下列電信費用管理提供者整合：
 
     下圖顯示連線成功時的綠色核取記號：
 
-      ![顯示成功連線的 Datalert 頁面](./media/telecom-expenses-monitor/tem-datalert-connection.png)
+      > [!div class="mx-imgBorder"]
+      > ![顯示成功連線的 Datalert 頁面](./media/telecom-expenses-monitor/tem-datalert-connection.png)
 
 7. 在 [Datalert App / ADAL Consent]  \(Datalert 應用程式 / ADAL 同意\) 中，將開關設定為 [On]  \(開啟\)。 在 Microsoft 驗證頁面上選取 [接受]  。
 
@@ -92,7 +94,8 @@ Intune 可與下列電信費用管理提供者整合：
 
     下圖顯示連線成功時的綠色核取記號：
 
-      ![顯示成功連線的 Datalert 頁面](./media/telecom-expenses-monitor/tem-datalert-adal-consent.png)
+      > [!div class="mx-imgBorder"]
+      > ![顯示成功連線的 Datalert 頁面](./media/telecom-expenses-monitor/tem-datalert-adal-consent.png)
 
 8. 在 [MDM Profiles management (optional)]  \(MDM 設定檔管理 (選擇性)\) 中，將開關設定為 [On]  \(開啟\)。 此設定讓 Datalert 能夠讀取 Intune 中的可用設定檔，以協助您設定原則。 
 
@@ -102,7 +105,8 @@ Intune 可與下列電信費用管理提供者整合：
 
     下圖顯示連線成功時的綠色核取記號：
 
-   ![顯示成功連線的 Datalert 頁面](./media/telecom-expenses-monitor/tem-datalert-mdm-profiles.png)
+    > [!div class="mx-imgBorder"]
+    > ![顯示成功連線的 Datalert 頁面](./media/telecom-expenses-monitor/tem-datalert-mdm-profiles.png)
 
 ### <a name="step-2-confirm-telecom-expense-management-is-active-in-intune"></a>步驟 2：在 Intune 中確認電信費用管理為作用中狀態
 
@@ -112,7 +116,8 @@ Intune 可與下列電信費用管理提供者整合：
 
 2. 選取 [租用戶系統管理]   > [連接器與權杖]   > [電信費用管理]  。 尋找 [作用中]  連線狀態：
 
-   ![顯示 [使用中] Datalert 連線狀態的 Intune 頁面](./media/telecom-expenses-monitor/tem-azure-portal-enable-service.png)
+    > [!div class="mx-imgBorder"]
+    > ![顯示 [使用中] Datalert 連線狀態的 Intune 頁面](./media/telecom-expenses-monitor/tem-azure-portal-enable-service.png)
 
 ### <a name="step-3-deploy-the-datalert-app-to-devices"></a>步驟 3：將 Datalert 應用程式部署至裝置
 
@@ -131,7 +136,8 @@ Intune 可與下列電信費用管理提供者整合：
 
 系統會在註冊期間 ([註冊 Android 裝置](../enrollment/android-enroll.md)) 向使用者顯示這些類別。 根據使用者選擇的類別，系統會將註冊的裝置移至對應的裝置群組。
 
-  ![[新增原則] 窗格的螢幕擷取畫面](./media/telecom-expenses-monitor/tem-dynamic-membership-rules.png)
+> [!div class="mx-imgBorder"]
+> ![[新增原則] 窗格的螢幕擷取畫面](./media/telecom-expenses-monitor/tem-dynamic-membership-rules.png)
 
 #### <a name="add-the-datalert-app-to-intune"></a>將 Datalert 應用程式新增至 Intune
 
@@ -145,11 +151,13 @@ Intune 可與下列電信費用管理提供者整合：
 
 4. 選擇 [Datalert]  應用程式 > [選取]  ：
 
-   ![將 Datalert 應用程式從 App Store 新增至 Intune 用戶端應用程式](./media/telecom-expenses-monitor/tem-select-app-from-apple-app-store.png)
+    > [!div class="mx-imgBorder"]
+    > ![將 Datalert 應用程式從 App Store 新增至 Intune 用戶端應用程式](./media/telecom-expenses-monitor/tem-select-app-from-apple-app-store.png)
 
 5. 輸入任何其他屬性，例如應用程式資訊與範圍標籤：
 
-   ![輸入應用程式屬性，包括名稱、描述、選擇 OS，以及 Intune 中應用程式的其他設定](./media/telecom-expenses-monitor/tem-steps-to-create-the-app.png)
+    > [!div class="mx-imgBorder"]
+    > ![輸入應用程式屬性，包括名稱、描述、選擇 OS，以及 Intune 中應用程式的其他設定](./media/telecom-expenses-monitor/tem-steps-to-create-the-app.png)
 
 6. 選取 [確定]   > [新增]  以儲存您的變更。 Datalert 應用程式會顯示於清單中。
 
@@ -161,15 +169,17 @@ Intune 可與下列電信費用管理提供者整合：
 
     在這些步驟中，您將選擇要讓應用程式安裝成為群組的必要或選擇性項目。 下列範例會視需要顯示安裝。 必要時，使用者必須在註冊其裝置之後，安裝 Datalert 應用程式。
 
-   ![[新增原則] 窗格的螢幕擷取畫面](./media/telecom-expenses-monitor/tem-assign-datalert-app-to-device-group.png)
+    > [!div class="mx-imgBorder"]
+    > ![[新增原則] 窗格的螢幕擷取畫面](./media/telecom-expenses-monitor/tem-assign-datalert-app-to-device-group.png)
 
 ### <a name="step-4-add-organization-phone-lines-to-the-datalert-console"></a>步驟 4：將組織電話線路新增至 Datalert 主控台
 
-Intune 與 Datalert 服務現在會設定為與彼此通訊。 接下來，將組織付費電話線路新增至 Datalert 主控台。 然後，輸入任何行動數據或漫遊使用量違規的閾值與動作。 您可以手動將公司付費電話線路新增至 Datalert 主控台，或是讓線路在裝置註冊到 Intune 後自動新增。
+Intune 與 Datalert 服務現在會設定為與彼此通訊。 接下來，將組織付費電話線路新增至 Datalert 主控台。 輸入任何行動數據或漫遊使用量違規的閾值與動作。 您可以手動將公司付費電話線路新增至 Datalert 主控台，或是讓線路在裝置註冊到 Intune 後自動新增。
 
 若要設定這些項目，請移至[適用於 Microsoft Intune 的 Datalert 設定](http://www.datalert.fr/microsoft-intune/intune-setup) \(英文\) (開啟 Datalert 的網站)。 在 [Settings]  \(設定\) 下方，遵循設定精靈中的步驟。
 
-  ![[新增原則] 窗格的螢幕擷取畫面](./media/telecom-expenses-monitor/tem-add-phone-lines-to-datalert-console.png)
+> [!div class="mx-imgBorder"]
+> ![[新增原則] 窗格的螢幕擷取畫面](./media/telecom-expenses-monitor/tem-add-phone-lines-to-datalert-console.png)
 
 Datalert 服務目前為作用中狀態。 它會開始監視數據使用量，並在超出所設定使用量限制的裝置上停用行動數據與漫遊數據。
 
@@ -177,8 +187,8 @@ Datalert 服務目前為作用中狀態。 它會開始監視數據使用量，�
 
 針對終端使用者體驗，下列文章或許能提供協助：
 
-- [在電信費用管理中註冊您的 iOS/iPadOS 裝置](https://docs.microsoft.com/user-help/enroll-your-device-with-telecom-expense-management-ios)
-- [在電信費用管理中註冊您的 Android 裝置](https://docs.microsoft.com/user-help/enroll-your-device-with-telecom-expense-management-android)
+- [在電信費用管理中註冊您的 iOS/iPadOS 裝置](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-with-telecom-expense-management-ios)
+- [在電信費用管理中註冊您的 Android 裝置](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-with-telecom-expense-management-android)
 
 ## <a name="turn-off-the-datalert-service"></a>關閉 Datalert 服務
 

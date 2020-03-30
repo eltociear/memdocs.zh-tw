@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 63090c61039c5029e6a8b80f53232191e1beb99a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 95f9677b95dc9dde4b12e60e3006b4cee5081471
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79347063"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233427"
 ---
 # <a name="what-is-device-enrollment"></a>什麼是裝置註冊？
 若要從裝置存取公司或學校資源，則將需要向 Intune 公司入口網站應用程式或 Microsoft Intune 應用程式註冊裝置。 
@@ -111,5 +111,3 @@ Microsoft Intune 應用程式適用於公司擁有的 Android 裝置，且沒有
 * [註冊您組織提供的 iOS 裝置](enroll-your-device-dep-ios.md)
 * [註冊 macOS 裝置](enroll-your-device-in-intune-macos-cp.md)
 * [註冊您組織提供的 macOS 裝置](enroll-company-device-macos.md)
-
-

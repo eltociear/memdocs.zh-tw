@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7cdd92948aed51eb37b4774d2521a1d28cd8245f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344606"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526269"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>針對 Microsoft Intune 中的 Windows 裝置註冊問題進行疑難排解
 
@@ -321,6 +321,8 @@ Registering your device for mobile management (Previous step failed)
 當裝置在初始登入畫面期間逾時時，通常會在混合式 Azure AD Autopilot 情節中重新啟動裝置之前發生此問題。 這表示因為連線問題，所以找不到或無法成功連線到網域控制站。 或者，裝置已進入無法加入網域的狀態。
 
 **原因：** 最常見的原因是正在使用混合式 Azure AD Join，且已在 Autopilot 設定檔中設定 [指派使用者] 功能。 使用 [指派使用者] 功能會在初始登入畫面期間，於裝置上執行 Azure AD 加入，讓裝置處於無法加入內部部署網域的狀態。 因此，[指派使用者] 功能只應用於標準 Azure AD Join Autopilot 情節。  混合式 Azure AD Join 情節中不應使用此功能。
+
+此錯誤的另一個可能原因是已刪除 Autopilot 物件的相關聯 AzureAD 裝置。 若要解決此問題，請刪除 Autopilot 物件，然後重新匯入雜湊來產生新物件。
 
 #### <a name="resolution"></a>解決方案
 

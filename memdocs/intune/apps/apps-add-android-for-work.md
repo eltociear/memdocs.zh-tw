@@ -1,12 +1,12 @@
 ---
-title: 將受控 Google Play 應用程式指派給 Android Enterprise 裝置
+title: 新增受控 Google Play 應用程式並指派給 Android Enterprise 裝置
 titleSuffix: Microsoft Intune
 description: 了解如何同步應用程式，並將應用程式從受控 Google Play 商店指派給 Android Enterprise 裝置。
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dec2b1ace9b9b8a5c27ef468969a52f05e1bdcca
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b6dab926a59e69f5afb6c2f40ea7e315afed49f8
+ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341447"
+ms.lasthandoff: 03/22/2020
+ms.locfileid: "80117282"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>使用 Intune 將受控 Google Play 應用程式新增至 Android Enterprise 裝置
 
@@ -33,7 +33,7 @@ ms.locfileid: "79341447"
 
 - **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - 用於 Android 企業完全受控案例。 此應用程式會在裝置註冊程序中自動安裝到完全受控裝置上。
 - **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - 協助您登入帳戶 (若您使用雙重要素驗證)。 此應用程式會在裝置註冊程序中自動安裝到完全受控裝置上。
-- **[Intune 公司入口網站](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - 用於應用程式保護原則 (APP) 與 Android 企業公司設定檔案例。
+- **[Intune 公司入口網站](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - 用於應用程式保護原則 (APP) 與 Android 企業公司設定檔案例。 此應用程式會在裝置註冊程序中自動安裝到完全受控裝置上。
 - **[Managed Home Screen](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise)** - 用於 Android Enterprise 專用的多應用程式 Kiosk 案例。 IT 系統管理員應該建立指派，以在要用於多應用程式 Kiosk 案例的專用裝置上安裝此應用程式。
 
 >[!NOTE]
@@ -183,7 +183,7 @@ ms.locfileid: "79341447"
 
 ## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices"></a>將受控 Google Play 應用程式指派給 Android Enterprise 工作設定檔裝置
 
-當此應用程式顯示在 [應用程式]  工作負載窗格的 [應用程式授權]  節點中時，您便可以透過將應用程式指派給使用者群組，來以[和指派任何其他應用程式相同的方式來指派它](/intune-azure/manage-apps/deploy-apps)。
+當此應用程式顯示在 [應用程式]  工作負載窗格的 [應用程式授權]  節點中時，您便可以透過將應用程式指派給使用者群組，來以[和指派任何其他應用程式相同的方式來指派它](/mem/intune/apps/apps-deploy)。
 
 在您指派應用程式之後，它就會安裝 (或可供安裝) 在目標使用者的裝置上。 並且不會經過裝置使用者的核准。 如需 Android Enterprise 工作設定檔裝置的詳細資訊，請參閱[設定 Android Enterprise 工作設定檔裝置的註冊](../enrollment/android-work-profile-enroll.md)。 
 
@@ -197,7 +197,7 @@ ms.locfileid: "79341447"
 根據預設，Android Enterprise 完全受控裝置將不允許員工安裝組織未核准的任何應用程式。 此外，員工也無法移除任何已安裝的應用程式，因為這違反原則。 如果您想讓使用者存取完整的 Google Play 商店來安裝應用程式，而非只能存取受控 Google Play 商店中已核准的應用程式，您可以將 [允許存取 Google Play 商店中的所有應用程式]  設定為 [允許]  。 透過此設定，使用者便可使用其公司帳戶來存取 Google Play 商店中的所有應用程式，不過，購買可能會受限。 您可以透過允許使用者將帳戶新增至裝置，來移除受限的購買限制。 這麼做將讓終端使用者能夠使用個人帳戶從 Google Play 商店購買應用程式，以及進行應用程式內購買。 如需詳細資訊，請參閱[使用 Intune 來允許或限制功能的 Android Enterprise 裝置設定](../configuration/device-restrictions-android-for-work.md)。 
 
 > [!NOTE]
-> Microsoft Intune 應用程式與 Microsoft Authenticator 應用程式將於上線期間，在所有完全受控裝置上安裝為必要的應用程式。 自動安裝這些應用程式將提供條件式存取支援，而 Microsoft Intune 應用程式使用者可以查看並解決合規性問題。 
+> Microsoft Intune 應用程式、Microsoft Authenticator 應用程式及公司入口網站應用程式將於上線期間，在所有完全受控裝置上安裝為必要的應用程式。 自動安裝這些應用程式將提供條件式存取支援，而 Microsoft Intune 應用程式使用者可以查看並解決合規性問題。 
 
 ## <a name="manage-android-enterprise-app-permissions"></a>管理 Android Enterprise 應用程式權限
 Android Enterprise 會要求您先在受控 Google Play Web 主控台中核准應用程式，然後才能利用 Intune 同步它們，並將它們指派給使用者。 由於 Android Enterprise 可讓您以無訊息模式自動將應用程式推送到使用者的裝置，因此，您必須代表您的所有使用者接受應用程式權限。 使用者在安裝應用程式時不會看到任何應用程式權限，因此請務必了解這些權限。

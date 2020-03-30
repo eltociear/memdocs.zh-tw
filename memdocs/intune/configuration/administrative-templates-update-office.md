@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/17/2019
+ms.date: 03/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ba140f9d49cbdfbada0cb992b333a690cbb4a85
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fcf2139019b1f4d764b55ee31f5961711a71834c
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350248"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219872"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>使用更新通道和目標版本設定，以 Microsoft Intune 來更新 Office 365 系統管理範本
 
@@ -39,13 +39,15 @@ ms.locfileid: "79350248"
 
 請務必針對您的 Office 應用程式[啟用 Office 365 專業增強版自動更新](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus) \(部分機器翻譯\)。 您可以使用群組原則或 Intune Office 2016 ADMX 範本來執行此動作：
 
-![在 Intune 系統管理範本中，設定 Office 的 [啟用自動更新] 設定](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
+> [!div class="mx-imgBorder"]
+> ![在 Intune 系統管理範本中，設定 Office 的 [啟用自動更新] 設定](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
 
 ## <a name="set-the-update-channel-in-the-intune-administrative-template"></a>在 Intune 系統管理範本中設定更新通道
 
-1. 在 [Intune 系統管理範本](administrative-templates-windows.md#create-a-template)中，移至 [更新通道]  設定，然後輸入您想要的通道。 例如，選擇 `Semi-Annual Channel`：
+1. 在 [Intune 系統管理範本](administrative-templates-windows.md#create-the-template)中，移至 [更新通道]  設定，然後輸入您想要的通道。 例如，選擇 `Semi-Annual Channel`：
 
-    ![在 Intune 系統管理範本中，設定 Office 的 [更新通道] 設定](./media/administrative-templates-update-office/admx-enable-update-channel-setting.png)
+    > [!div class="mx-imgBorder"]
+    > ![在 Intune 系統管理範本中，設定 Office 的 [更新通道] 設定](./media/administrative-templates-update-office/admx-enable-update-channel-setting.png)
 
     > [!NOTE]
     > 建議您更頻繁地更新。 半年僅作為範例使用。
@@ -53,7 +55,7 @@ ms.locfileid: "79350248"
 2. 請務必[指派原則](device-profile-assign.md)給您的 Windows 10 裝置。 若要更快測試原則，您也可以同步處理原則：
 
     - [在 Intune 中同步處理原則](../remote-actions/device-sync.md)
-    - [以手動方式同步處理裝置上的原則](https://docs.microsoft.com/user-help/sync-your-device-manually-windows#sync-from-settings-app)
+    - [以手動方式同步處理裝置上的原則](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows#sync-from-settings-app)
 
 ## <a name="check-the-intune-registry-keys"></a>檢查 Intune 登錄機碼
 
@@ -72,7 +74,8 @@ ms.locfileid: "79350248"
 
     查看下列範例時，您會看到 `L_UpdateBranch` 具有類似 `<enabled /><data id="L_UpdateBranchID" value="Deferred" />` 的值。 此值表示它會設定為 [半年通道]：
 
-    ![系統管理範本 L_Updatebranch 登錄機碼範例](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
+    > [!div class="mx-imgBorder"]
+    > ![系統管理範本 L_Updatebranch 登錄機碼範例](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
     > [使用 Configuration Manager 管理 Office 365 專業增強版](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) \(部份機器翻譯\) 會列出值及其意義。 登錄值是以選取的散發通道為基礎：
@@ -99,7 +102,8 @@ ms.locfileid: "79350248"
 
     查看下列範例時，您會看到 `UpdateChannel` 設定為 `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`，即 [每月]  ：
 
-    ![系統管理範本 Office UpdateChannel 登錄機碼範例](./media/administrative-templates-update-office/admx-update-channel-office-registry-key.png)
+    > [!div class="mx-imgBorder"]
+    > ![系統管理範本 Office UpdateChannel 登錄機碼範例](./media/administrative-templates-update-office/admx-update-channel-office-registry-key.png)
 
     這個範例表示尚未套用原則，因為它仍然設定為 [每月]  ，而不是 [半年]  。
 
@@ -120,7 +124,8 @@ ms.locfileid: "79350248"
     2. 展開 [工作排程器程式庫]   > [Microsoft]   > [Office]  。
     3. 選取 [Office 自動更新 2.0]   > [執行]  ：
 
-        ![開啟 [工作排程]，然後執行 [Office 自動更新]](./media/administrative-templates-update-office/admx-task-scheduler-office-automatic-updates.png)
+        > [!div class="mx-imgBorder"]
+        > ![開啟 [工作排程]，然後執行 [Office 自動更新]](./media/administrative-templates-update-office/admx-task-scheduler-office-automatic-updates.png)
 
         等待工作完成，這可能需要幾分鐘的時間。
 
@@ -138,11 +143,12 @@ ms.locfileid: "79350248"
 
 1. 確認 Office 版本支援您所選擇的更新通道。 [Office 365 專業增強版的更新歷程記錄](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date)會列出支援不同更新通道的組建編號。
 
-2. 在您的 [Intune 系統管理範本](administrative-templates-windows.md#create-a-template)中，移至 [目標版本]  設定，然後輸入您想要的版本。
+2. 在您的 [Intune 系統管理範本](administrative-templates-windows.md#create-the-template)中，移至 [目標版本]  設定，然後輸入您想要的版本。
 
     您的 [目標版本]  設定看起來類似下列設定：
 
-    ![在 Intune 系統管理範本中，設定 Office 的 [目標版本] 設定](./media/administrative-templates-update-office/admx-enable-target-version-setting.png)
+    > [!div class="mx-imgBorder"]
+    > ![在 Intune 系統管理範本中，設定 Office 的 [目標版本] 設定](./media/administrative-templates-update-office/admx-enable-target-version-setting.png)
 
 > [!IMPORTANT]
 >
@@ -167,7 +173,8 @@ ms.locfileid: "79350248"
       1. 在裝置上，移至 `C:\Program Files (x86)\Microsoft Office\Updates\Detection\Version`。
       2. 開啟 `VersionDescriptor.xml` 檔案，然後移至 `<Version>` 區段。 可用的版本應該與您在 Intune 原則中輸入的版本相同，例如：
 
-          ![檢查版本描述項 Office XML 檔案中的版本區段](./media/administrative-templates-update-office/office-version-descriptor-xml-example.png)
+          > [!div class="mx-imgBorder"]
+          > ![檢查版本描述項 Office XML 檔案中的版本區段](./media/administrative-templates-update-office/office-version-descriptor-xml-example.png)
 
 4. 安裝更新之後，Office 應用程式應該會顯示新版本 (例如，在 [帳戶]  功能表上)
 

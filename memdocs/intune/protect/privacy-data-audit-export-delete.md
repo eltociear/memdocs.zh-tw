@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db3146bbaae3362e97c8c076823b58dbcd57c4af
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6aa9195e8d0559a106be323108487579eb068b91
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339068"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084801"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>在 Intune 中稽核、匯出或刪除個人資料
 
@@ -45,7 +45,7 @@ Intune 管理員可以使用稽核記錄來追蹤與個人資料相關的活動�
 
 ## <a name="export-personal-data"></a>匯出個人資料
 
-管理員可以匯出終端使用者的個人資料 (包括帳戶、服務資料和相關聯記錄)，以符合資料主體權限要求。 您及您的組織會決定是否要為資料主體提供個人資料複本，或您是否有正當商業理由要保留它。 如果您決定提供，您可以為其提供實際文件複本、適當修訂的版本，或您認定適合共用之部分的螢幕擷取畫面。
+管理員可以匯出終端使用者的個人資料 (包括帳戶、服務資料和相關聯記錄)，以符合資料主體權限要求。 您及您的組織會決定是否要為資料主體提供個人資料複本，或您是否有正當商業理由要保留該複本。 如果您決定提供，您可以為其提供實際文件複本、適當修訂的版本，或您認定適合共用之部分的螢幕擷取畫面。
 
 若要匯出使用者的個人資料，您可以使用： 
 - [Intune MDM 裝置] 刀鋒視窗來匯出裝置清單。 您也可以直接複製裝置資料。
@@ -60,13 +60,13 @@ Intune 管理員可以使用稽核記錄來追蹤與個人資料相關的活動�
 
 ### <a name="delete-a-user-from-intune"></a>從 Intune 中刪除使用者
 
-若要從 Intune 中刪除終端使用者的個人資料，管理員必須[從 Azure Active Directory (AAD) 中刪除使用者](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user)。 從 AAD 中刪除 (實刪除) 使用者時，Intune 會從 AAD 收到刪除訊號，然後自動開始從 Intune 服務中清除該使用者的所有個人資料。 使用者的資訊會在移除動作的 30 天內，從 Intune 服務中刪除。
+若要從 Intune 中刪除終端使用者的個人資料，管理員必須[從 Azure Active Directory (AAD) 中刪除使用者](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user) \(部分機器翻譯\)。 從 AAD 中刪除 (實刪除) 使用者時，Intune 會從 AAD 收到刪除訊號，然後自動開始從 Intune 服務中清除該使用者的所有個人資料。 使用者的資訊會在移除動作的 30 天內，從 Intune 服務中刪除。
 
 ### <a name="reset-device-to-factory-settings"></a>將裝置重設為原廠設定
 重設為原廠設定會將所有的公司和個人資料與設定還原為原廠設定。 這有助於提供裝置給下一個員工。 使用者檔案、使用者安裝的應用程式和非預設設定都會遭到移除，而且此資料會在移除動作的 30 天內，從 Intune 服務中刪除。
 
 ### <a name="user-self-removal-from-intune-management"></a>使用者自行從 Intune 管理中移除
-使用者可在沒有管理員協助的情況下，從 Intune 管理中移除其 [Android、Apple 或 Windows](https://docs.microsoft.com/user-help/unenroll-your-device-from-intune-android) 個人裝置。   
+使用者可在沒有管理員協助的情況下，從 Intune 管理中移除其 [Android、Apple 或 Windows](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-android) 個人裝置。   
 
 ### <a name="retire"></a>淘汰
 **淘汰**動作會移除 Intune 佈建的資料 (例如公司應用程式)、Intune 正在管理的應用程式相關資料、原則設定，以及透過 Intune 佈建的電子郵件設定檔。 此動作會將使用者的個人資料保留在裝置上。

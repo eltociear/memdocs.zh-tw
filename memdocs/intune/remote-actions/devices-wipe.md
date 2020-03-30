@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 227d18a73ac33cfc277ec4c91935002e159da553
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2219dae6de9814e7eacebe507095c46c598f932f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348922"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084711"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>使用抹除、淘汰或手動取消註冊裝置來移除裝置
 
@@ -188,7 +188,7 @@ ms.locfileid: "79348922"
 1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選擇 [裝置]   > [所有裝置]  > 選擇裝置 > [淘汰]  。
 ![淘汰的螢幕擷取畫面](./media/devices-wipe/retire.png)
-3. 請瀏覽 [deploy.apple.com](http://deploy.apple.com) 並依序號搜尋裝置。
+3. 請瀏覽 [business.apple.com](http://business.apple.com) 並依裝置序號搜尋裝置。
 4. 在 [指派至]  功能表上，選擇 [未指派]  。
 
 5. 選擇 [重新指派]  。

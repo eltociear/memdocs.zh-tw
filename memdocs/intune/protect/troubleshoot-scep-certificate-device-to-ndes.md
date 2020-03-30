@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72e8f8a19ef27eee039090f146c46488ed1e1205
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 55660497751f1961c9c579ba1d800900189db782
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350573"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526456"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>在 Microsoft Intune 中針對 SCEP 憑證設定檔的裝置對 NDES 伺服器通訊進行疑難排解
 
@@ -55,7 +55,7 @@ IIS 記錄針對所有平台皆包含相同類型的項目。
 
      - 請參閱 [IIS 7 和更新版本中的 HTTP 狀態碼](https://support.microsoft.com/help/943891)以取得較不常見錯誤碼的詳細資訊。
 
-   如果系統完全沒有記錄連線，裝置和 NDES 伺服器之間的網路可能已封鎖來自該裝置的連絡。
+   如果系統完全沒有記錄連線要求，裝置與 NDES 伺服器之間的網路可能已封鎖來自該裝置的連絡。
 
 ## <a name="review-device-logs-for-connections-to-ndes"></a>檢閱裝置記錄中針對 NDES 的連線
 
@@ -137,7 +137,7 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 ### <a name="status-code-500"></a>狀態碼 500
 
-類似下列範例並具有狀態碼 500 的連線，表示 [在驗證後模擬用戶端]  使用者權限並未指派給 NDES 伺服器上的 IIS_IURS 群組。 狀態值 **500** 會出現在結尾：
+類似下列範例且狀態碼為 500 的連線，表示 [在驗證後模擬用戶端]  使用者權限並未指派給 NDES 伺服器上的 IIS_IURS 群組。 狀態值 **500** 會出現在結尾：
 
 ```
 2017-08-08 20:22:16 IP_address GET /certsrv/mscep/mscep.dll operation=GetCACert&message=SCEP%20Authority 443 - 10.5.14.22 profiled/1.0+CFNetwork/811.5.4+Darwin/16.6.0 - 500 0 1346 31
@@ -165,7 +165,7 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 2. 開啟網頁瀏覽器，然後瀏覽到該 SCEP 伺服器 URL。 結果應該如下：「HTTP 錯誤 403.0 – 禁止」  。 此結果指出 URL 正常運作。
 
-   如果您沒有接收到該錯誤，請選取類似您所看到錯誤的連結，以檢視問題特定的指引：
+   如果您沒有接收到該錯誤，請選取類似您所看到錯誤的連結，以檢視問題特定的指導方針：
    - [我接收到一般網路裝置註冊服務訊息](#general-ndes-message)
    - [我接收到「HTTP 錯誤 503。服務無法使用」](#http-error-503)
    - [我接收到 "GatewayTimeout" 錯誤](#gatewaytimeout)
@@ -243,6 +243,19 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
   ![IIS 權限](../protect/media/troubleshoot-scep-certificate-device-to-ndes/iis-permissions.png)
 
+- **原因 4**：NDESPolicy 模組憑證已過期。
+
+  CAPI2 記錄 (請參閱原因 2 的解決方案) 將會顯示與 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy\NDESCertThumbprint' 所參考的憑證超出憑證有效期間相關的錯誤。
+
+  **解決方案**：以有效憑證的指紋更新參考。
+  1. 識別取代憑證：
+     - 更新現有的憑證
+     - 選取屬性 (主體、EKU、金鑰類型與長度等等) 類似的其他憑證
+     - 註冊新的憑證
+  2. 匯出 `NDESPolicy` 登錄機碼以備份目前的值。
+  3. 以新憑證的指紋取代 `NDESCertThumbprint` 登錄值的資料，以移除所有空白字元，並將文字轉換成小寫。
+  4. 重新啟動 NDES IIS 應用程式集區，或從提高權限的命令提示字元執行 `iisreset`。
+
 #### <a name="gatewaytimeout"></a>GatewayTimeout
 
 當您瀏覽至 SCEP 伺服器 URL 時，您接收到下列錯誤：
@@ -289,7 +302,7 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
   **解決方案**：在應用程式 Proxy 設定中，針對 SCEP 外部 URL 使用預設網域 *yourtenant.msappproxy.net*。
 
-#### <a name="internal-server-error"></a>500 - 內部伺服器錯誤
+#### <a name="500---internal-server-error"></a><a name="internal-server-error"></a>500 - 內部伺服器錯誤
 
 當您瀏覽至 SCEP 伺服器 URL 時，您接收到下列錯誤：
 

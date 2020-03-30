@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bdb45edb1bcd518b4e55da40f179fb87cefb07c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7a49c71705755f82dcf33c63971ed6f11ffc849f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353667"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084976"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>透過 Intune 設定並使用匯入的 PKCS 憑證
 
@@ -45,8 +45,8 @@ S/MIME 加密很具挑戰性，因為電子郵件是以特定憑證加密：
 - Android - 裝置系統管理員
 - Android Enterprise - 完全受控
 - Android Enterprise - 工作設定檔
-- iOS
-- Mac
+- iOS/iPadOS
+- macOS
 - Windows 10
 
 ## <a name="requirements"></a>需求
@@ -213,29 +213,54 @@ PowerShell 模組提供了使用 Windows 密碼編譯建立金鑰的方法。 �
 
 1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取並移至 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 
 3. 輸入下列內容：
+   - **平台**：選擇您的裝置平台。
+   - **設定檔**：選取 [PKCS 匯入憑證] 
 
-   - 設定檔的 [名稱] 
-   - 可選擇性地設定說明
-   - 要部署設定檔的目標 [平台] 
-   - 將 [設定檔類型]  設定為 [PKCS 匯入憑證] 
+4. 選取 [建立]  。
 
-4. 選取 [設定]  ，然後輸入下列內容：
+5. 在 [基本資訊]  中，輸入下列內容：
+   - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，良好設定檔名稱為*適用於整家公司的 PKCS 匯入憑證設定檔*。
+   - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
+
+6. 選取 [下一步]  。
+
+7. 在 [組態設定]  中，輸入下列內容：
 
    - **使用目的**：指定此設定檔匯入之憑證的使用目的。 系統管理員可以匯入使用目的不同 (例如 S/MIME 簽署或 S/MIME 加密) 的憑證。 憑證設定檔中選取的使用目的符合含有正確匯入憑證的憑證設定檔。 使用目的是將匯入的憑證分組的標記，並不保證使用該標記匯入的憑證會符合使用目的。  
-   - **憑證有效期間**：除非已在憑證範本中變更有效期間，否則此選項預設為一年。
+
+   <!-- Not in new UI:
+   - **Certificate validity period**: Unless the validity period was changed in the certificate template, this option defaults to one year.
+   -->
    - **金鑰儲存提供者 (KSP)** ：針對 Windows，選取要在裝置上儲存金鑰的位置。
 
-5. 選取 [確定]   > [建立]  儲存您的設定檔。
+8. 選取 [下一步]  。
+
+9. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+
+   選取 [下一步]  。
+
+10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
+
+    選取 [下一步]  。
+
+11. (*僅適用於 Windows 10*) 在 [適用性規則]  中，指定適用性規則以精簡此設定檔的指派。 您可以根據作業系統版本或裝置版本，選擇指派或不指派設定檔。
+
+    如需詳細資訊，請參閱*在 Microsoft Intune 中建立裝置設定檔*中的[適用性規則](../configuration/device-profile-create.md#applicability-rules)。
+
+    選取 [下一步]  。
+
+12. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 ## <a name="support-for-third-party-partners"></a>協力廠商合作夥伴的支援
 
 下列合作夥伴提供支援的方法或工具，可供用來將 PFX 憑證匯入至 Intune。
 
 ### <a name="digicert"></a>DigiCert
-如果使用 DigiCert PKI 平台服務，則可使用**適用於 Intune S/MIME 憑證的 DigiCert 匯入工具**，將 PFX 憑證匯入至 Intune。 使用此工具，將不需要遵循本文稍早所述[將 PFX 憑證匯入至 Intune](#import-pfx-certificates-to-intune)一節中的指示。
+
+如果使用 DigiCert PKI 平台服務，則可使用**適用於 Intune S/MIME 憑證的 DigiCert 匯入工具**，將 PFX 憑證匯入至 Intune。 使用此工具，將不需要遵循此文章稍早所述[將 PFX 憑證匯入至 Intune](#import-pfx-certificates-to-intune) 一節中的指示。
 
 若要深入了解 DigiCert 匯入工具，包括如何取得工具，請參閱 DigiCert 知識庫中的 https://knowledge.digicert.com/tutorials/microsoft-intune.html 。
 

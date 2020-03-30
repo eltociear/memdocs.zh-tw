@@ -17,12 +17,12 @@ ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ec804aa200e35391c5b283d6e26ba87002e271f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 07aceda512163513632d124d3e17d1041069b229
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359023"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085804"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>使用疑難排解入口網站協助您公司的使用者
 
@@ -65,7 +65,7 @@ ms.locfileid: "79359023"
 | ---  | ---  | ---         |
 | 1.   | 帳戶狀態  | 顯示目前 Intune 租用戶的狀態是 [使用中]  或 [非使用中]  。       |
 | 2.   | 使用者選取  | 目前所選使用者的名稱。 按一下 [變更使用者]  選擇新的使用者。       |
-| 3.   | 使用者狀態  | 顯示使用者的 Intune 授權狀態、裝置數目、每部裝置的合規性、應用程式數目，以及應用程式合規性。       |
+| 3.   | 使用者狀態  | 顯示使用者的 Intune 授權狀態、裝置數目，以及每部裝置的合規性。       |
 | 4.   | 使用者資訊  | 使用清單來選取要在窗格中檢閱的詳細資料。 <br>您可以選取： <ul><li>用戶端應用程式<li>相容性原則<li> 設定原則<li>應用程式防護原則 <li>註冊限制</ul>      |
 | 5.   | 群組成員資格  | 顯示所選使用者所屬的目前群組。       |
 

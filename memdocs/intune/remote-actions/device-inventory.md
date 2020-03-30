@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df00db079a7e6b73ba24dc612b5cb6b2250c3898
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 50c56cff5f6b58894ff1abb24dad397d7e6c2c1e
+ms.sourcegitcommit: cd2cbc23b8909df3a000d8ad4140e87052d6de5a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338184"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79508469"
 ---
 # <a name="see-device-details-in-intune"></a>在 Intune 中查看裝置詳細資料
 
@@ -36,7 +36,7 @@ ms.locfileid: "79338184"
 1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 3. 選取 [裝置]   > [所有裝置]  > 選取其中一個列出的裝置以開啟其詳細資料：
 
-   - [概觀]  會顯示裝置名稱，並列出該裝置的一些重要屬性，包括它是否為「攜帶您自己的裝置」(BYOD) 裝置、簽入時間等。 您可以在裝置上執行下列動作：
+   - [概觀]  會顯示裝置名稱，並列出該裝置的一些重要屬性，包括其為個人裝置或公司裝置、序號、主要使用者等。 您可以在裝置上執行下列動作：
       - [淘汰](devices-wipe.md#retire)
       - [抹除](devices-wipe.md#wipe)
       - [刪除](devices-wipe.md#delete-devices-from-the-intune-portal)

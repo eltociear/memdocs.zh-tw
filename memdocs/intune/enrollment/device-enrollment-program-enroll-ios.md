@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d40c4f352d3e7b94ef6e6c2f16a28d188c4e9ad1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: af4dce0d2bb7ef150d5332a9c58357513425cf50
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339380"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220195"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>使用 Apple 的裝置註冊計劃來自動註冊 iOS/iPadOS 裝置
 
@@ -195,6 +195,9 @@ iOS/iPadOS 11 中對非監督式 DEP 裝置的支援已淘汰。 在 iOS/iPadOS 
 
 11. 選擇您是否想要讓使用此設定檔的裝置**與電腦同步**。 若選擇 [依據憑證允許 Apple Configurator]  ，則必須在 [Apple Configurator 憑證]  下選擇憑證。
 
+     > [!NOTE]
+     > 如果 [與電腦同步]  設定為 [全部拒絕]  ，則連接埠將會在 iOS 和 iPadOS 裝置上受到限制。 連接埠只能用於充電，而沒有其他用途。 連接埠將遭到封鎖，而無法使用 iTunes 或 Apple Configurator。
+
 12. 若您在前一個步驟中選擇 [依據憑證允許 Apple Configurator]  ，則請選擇要匯入的 Apple Configurator 憑證。
 
 13. 您可以指定裝置的命名格式，以在其註冊時和每次後續簽入時自動套用。 若要建立命名範本，請在 [套用裝置名稱範本]  下選取 [是]  。 然後，在 [裝置名稱範本]  方塊中，輸入要用於使用此設定檔之名稱的範本。 您可以指定包括裝置類型與序號的範本格式。 
@@ -278,6 +281,10 @@ iOS/iPadOS 11 中對非監督式 DEP 裝置的支援已淘汰。 在 iOS/iPadOS 
 請參閱[以裝置註冊計劃在 Intune 註冊 iOS/iPadOS 裝置](../user-help/enroll-your-device-dep-ios.md)。
 
 ## <a name="renew-a-dep-token"></a>更新 DEP 權杖  
+
+> [!NOTE]
+> 除了每年更新您的 DEP 權杖之外，當在 Apple Business Manager 中設定權杖的使用者變更 Managed Apple ID 密碼時，或該使用者離開您的 Apple Business Manager 組織時，您也必須在 Intune 和 Apple Business Manager 中更新您的註冊計畫權杖。
+
 1. 前往 deploy.apple.com。  
 2. 在 [管理伺服器]  下，選擇與您所欲更新之權杖檔案相關的 MDM 伺服器。
 3. 選擇 [產生新權杖]  。

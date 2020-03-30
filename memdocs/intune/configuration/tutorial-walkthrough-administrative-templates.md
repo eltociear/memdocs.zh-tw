@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/23/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 936634a26dee315c7ad452ac408f9cc0eac00dfe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5988da854eecd528119a7e2591fc083dcdbc29bf
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343267"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220215"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>教學課程：使用雲端為具有 ADMX 範本及 Microsoft Intune 的 Windows 10 裝置上設定群組原則
 
@@ -49,7 +49,7 @@ ADMX 範本適用於下列服務：
 > * 比較 Intune 的設定與內部部署的 ADMX 的設定。
 > * 建立不同的系統管理範本，並設定不同群組所應使用的設定。
 
-當此實驗室結束時，您將具備開始使用 Intune 及 Microsoft 365 管理您的使用者，以及部署系統管理範本的技能。
+當此實驗結束時，您將具備開始使用 Intune 和 Microsoft 365 來管理使用者，以及部署系統管理範本的技能。
 
 本功能適用於：
 
@@ -101,7 +101,7 @@ ADMX 範本適用於下列服務：
 ## <a name="open-the-endpoint-manager-admin-center"></a>Microsoft 端點管理員系統管理中心
 
 1. 開啟 Chromium 網頁瀏覽器，例如 Microsoft Edge 77 版及更新版本。
-2. 前往 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) (https://devicemanagement.microsoft.com) )。 使用下列帳戶登入：
+2. 前往 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 使用下列帳戶登入：
 
     **使用者**：輸入您 Microsoft 365 租用戶訂閱的系統管理員帳戶。  
     **密碼**：輸入密碼。
@@ -111,7 +111,7 @@ ADMX 範本適用於下列服務：
 您也可以從 [Microsoft 365 系統管理中心](https://admin.microsoft.com)開啟端點管理員系統管理中心：
 
 1. 移至 [https://admin.microsoft.com](https://admin.microsoft.com)。
-2. 使用您 Microsoft 365 租用戶訂閱的系統管理員帳戶登入。
+2. 使用您 Microsoft 365 租用戶訂用帳戶的系統管理員帳戶登入。
 3. 在**系統管理中心**中，選取 [所有系統管理中心]   >  [端點管理]  。 Microsoft 端點管理員系統管理中心會隨即開啟。
 
     > [!div class="mx-imgBorder"]
@@ -123,7 +123,7 @@ ADMX 範本適用於下列服務：
 
 在 Intune 中，原則會套用到您所建立的使用者及群組。 此處沒有階層。 若兩項原則更新同一項設定，該設定會顯示為衝突。 當兩項合規性原則發生衝突時，將會套用限制最嚴格的原則。 若是兩個設定檔發生衝突，將不會套用設定。 如需詳細資訊，請參閱[裝置原則與設定檔常見的問題、疑問與解決方法](device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied)。
 
-在接下來的步驟中，您將建立安全性群組，以及將使用者新增至群組。 您可以將使用者新增至多個群組。 例如，使用者通常會有多部裝置，例如工作用 Surface Pro，以及私人用的 Android 行動裝置。 而且使用者通常也能從這些裝置存取組織資源。
+在接下來的步驟中，您將建立安全性群組，以及將使用者新增至群組。 您可以將使用者新增至多個群組。 例如，使用者通常會有多部裝置，例如工作用的 Surface Pro，以及個人使用的 Android 行動裝置。 而且使用者通常也能從這些裝置存取組織資源。
 
 1. 在 Microsoft 端點管理員系統管理中心中，選取 [群組]   >  [新增群組]  。
 
@@ -146,7 +146,7 @@ ADMX 範本適用於下列服務：
     - **群組類型**：選取 [安全性]  。
     - **群組名稱**：輸入**所有 Windows 裝置**。
     - **成員資格類型**：選取 [動態裝置]  。
-    - **動態裝置成員**：設定您的查詢：
+    - **動態裝置成員**：選取 [新增動態查詢]  ，然後設定您的查詢：
 
         - **屬性**：選取 [deviceOSType]  。
         - **運算子**：選取 [等於]  。
@@ -166,7 +166,7 @@ ADMX 範本適用於下列服務：
     - **群組類型**：選取 [安全性]  。
     - **群組名稱**：輸入**所有老師**。
     - **成員資格類型**：選取 [動態使用者]  。
-    - **動態使用者成員**：設定您的查詢：
+    - **動態使用者成員**：選取 [新增動態查詢]  ，然後設定您的查詢：
 
       - **屬性**：選取 [部門]  。
       - **運算子**：選取 [等於]  。
@@ -216,7 +216,7 @@ ADMX 範本適用於下列服務：
 
 ### <a name="what-did-i-just-do"></a>我剛剛做了些什麼？
 
-您在端點管理員系統管理中心中，建立了新的安全性群組，並將現有的使用者與裝置新增至這些群組。 我們將在本教學課程之後的步驟中，使用這些群組。
+您在端點管理員系統管理中心中，建立了新的安全性群組，並將現有的使用者與裝置新增至這些群組。 我們將在此教學課程的後續步驟中使用這些群組。
 
 ## <a name="create-a-template-in-intune"></a>在 Intune 中建立範本
 
@@ -225,12 +225,17 @@ ADMX 範本適用於下列服務：
 1. 在**端點管理員系統管理中心**中，選取 [裝置] >   [組態設定檔]  >  [建立設定檔]  。
 2. 輸入下列內容：
 
+    - **平台**：選取 [Windows 10 及更新版本]  。
+    - **設定檔**：選取 [系統管理範本]  。
+
+3. 選取 [建立]  。
+4. 在 [基本資訊]  中，輸入下列內容：
+
     - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，輸入**系統管理範本 - Windows 10 學生版裝置**。
     - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
-    - **平台**：選取 [Windows 10 及更新版本]  。
-    - **設定檔類型**：選取 [系統管理範本]  。
 
-3. 選取 [建立]  。 在 [選取類別]  下拉式清單中，選取 [所有產品]  。 顯示所有設定。 在這些設定中，請注意下列屬性：
+5. 選取 [下一步]  。
+6. 在 [組態設定]  的下拉式清單中，選取 [所有產品]  。 顯示所有設定。 在這些設定中，請注意下列屬性：
 
     - 原則的**路徑**與群組原則管理或 GPEdit 相同。
     - 此設定適用於使用者或裝置。
@@ -263,7 +268,7 @@ ADMX 範本適用於下列服務：
     > [!div class="mx-imgBorder"]
     > ![請參閱群組原則中的電腦組態設定](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
 
-5. 在裝置管理系統管理中心，移至您的**系統管理範本 - Windows 10 學生版裝置**範本。
+5. 在端點管理員系統管理中心，移至您的**系統管理範本 - Windows 10 學生版裝置**範本。
 6. 從下拉式清單中選取 [所有產品]  ，然後搜尋 [個人化]  ：
 
     > [!div class="mx-imgBorder"]
@@ -290,7 +295,7 @@ ADMX 範本適用於下列服務：
 
 #### <a name="compare-an-edge-policy"></a>比較 Edge 原則
 
-1. 在裝置管理系統管理中心，移至您的**系統管理範本 - Windows 10 學生版裝置**範本。
+1. 在端點管理員系統管理中心，移至您的**系統管理範本 - Windows 10 學生版裝置**範本。
 2. 從下拉式清單中選取 [Edge 77 版和更新版本]  。
 3. 搜尋 [啟動]  。 請注意您可以使用的設定。
 4. 在群組原則管理編輯器中，尋找下列設定：
@@ -338,17 +343,16 @@ ADMX 範本適用於下列服務：
 
 ### <a name="assign-your-template"></a>指派您的範本
 
-1. 在您的範本中，選取 [指派]  。 您可能必須關閉您的範本，然後從**組態設定檔裝置**清單中選取：
+1. 在您的範本中，選取 [指派]   > [選取要包含的群組]  ：
 
     > [!div class="mx-imgBorder"]
     > ![從 Microsoft Intune 的組態設定檔裝置清單中，選取您的系統管理範本設定檔](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
 
-2. 選擇 [選取您要包括的群組]  。 現有使用者與群組清單會隨即顯示。
-3. 選取您稍早建立的**所有 Windows 10 學生版裝置** > [選取]  。
+2. 現有使用者與群組清單會隨即顯示。 選取您稍早建立的**所有 Windows 10 學生版裝置** > [選取]  。
 
     若您在生產環境中使用此教學課程，請考慮新增空白群組。 此課程的目的在練習指派您的範本。
 
-4. [儲存]  變更。
+3. 選取 [下一步]  到 [檢閱 + 建立]  索引標籤。選取 [建立]  以儲存您的變更。
 
 設定檔一經儲存，便會在裝置簽入 Intune 時套用。 若裝置已連線至網際網路，將會立即執行。 如需原則重新整理次數的詳細資訊，請參閱[為裝置指派原則、設定檔或應用程式之後，需要多久時間才能套用這些原則、設定檔或應用程式](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)
 
@@ -366,14 +370,17 @@ ADMX 範本適用於下列服務：
 
 2. 輸入下列內容：
 
-    - **名稱**：輸入**適用於所有 Windows 10 使用者之 OneDrive 原則的系統管理範本**。
-    - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
     - **平台**：選取 [Windows 10 及更新版本]  。
-    - **設定檔類型**：選取 [系統管理範本]  。
+    - **設定檔**：選取 [系統管理範本]  。
 
 3. 選取 [建立]  。
-4. 從下拉式清單中選取 [Office]  。
-5. **啟用**下列設定。 請務必選取 [確定]  ，以儲存您的變更。
+4. 在 [基本資訊]  中，輸入下列內容：
+
+    - **名稱**：輸入**適用於所有 Windows 10 使用者之 OneDrive 原則的系統管理範本**。
+    - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
+
+5. 選取 [下一步]  。
+6. 在 [組態設定]  中，從下拉式清單中選取 [Office]  。 **啟用**下列設定。 請務必選取 [確定]  ，以儲存您的變更。
 
     - **使用使用者的 Windows 認證，無訊息地將使用者登入 OneDrive 同步用戶端**
     - **隨需使用 OneDrive 檔案**
@@ -388,13 +395,12 @@ ADMX 範本適用於下列服務：
 
 ### <a name="assign-your-template"></a>指派您的範本
 
-1. 在您的範本中，選取 [指派]  。
-2. 選擇 [選取您要包括的群組]  。 現有使用者與群組清單會隨即顯示。
-3. 選取您稍早建立的**所有 Windows 裝置** > [選取]  。
+1. 在您的範本中，選取 [指派]   > [選取要包含的群組]  。
+2. 現有使用者與群組清單會隨即顯示。 選取您稍早建立的**所有 Windows 裝置** > [選取]  。
 
     若您在生產環境中使用此教學課程，請考慮新增空白群組。 此課程的目的在練習指派您的範本。
 
-4. [儲存]  變更。
+3. 選取 [下一步]  到 [檢閱 + 建立]  索引標籤。選取 [建立]  以儲存您的變更。
 
 至此您已建立一些系統管理範本，並已將這些範本指派給您所建立的群組。 接下來將要為使用 Windows PowerShell 建立系統管理範本，以及使用 Microsoft Graph API 建立 Intune。
 

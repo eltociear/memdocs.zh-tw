@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 03/05/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 767d3671d796299d802fe950d443a152d8e2d645
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ba2b8e407b4c81f74df7c86e7101461b30a0d8e0
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354564"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087176"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune 終端使用者應用程式的 UI 更新
 
@@ -32,10 +32,19 @@ ms.locfileid: "79354564"
 * 對學生和員工發出關於應用程式和註冊變更的警示。
 * 更新您組織的文件或技術服務人員程序。  
 
-如果您是員工或學生，請務必查看公司入口網站說明文件的螢幕擷取畫面和連結。 如需如何使用公司入口網站應用程式的詳細資訊，請參閱[公司入口網站使用者說明文件](https://docs.microsoft.com/user-help/)。  
+如果您是員工或學生，請務必查看公司入口網站說明文件的螢幕擷取畫面和連結。 如需如何使用公司入口網站應用程式的詳細資訊，請參閱[公司入口網站使用者說明文件](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done)。  
 
-<!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/whats-new-app-ui/account-move-rom-iwp-user-1712.png)--->
 
+
+## <a name="week-of-march-2-2020"></a>2020 年 3 月 2 日當週   
+### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>改善了 Android 公司入口網站登入體驗   
+我們已更新 Android 公司入口網站應用程式中數個登入畫面的版面配置，讓使用者獲得更加現代化且簡潔的體驗。 若要查看所有 Android 公司入口網站註冊指示，請移至[註冊您的 Android 裝置](../user-help/enroll-device-android-company-portal.md)或[使用 Android 工作設定檔註冊](../user-help/enroll-device-android-work-profile.md)。   
+
+
+|已更新|上一步|   
+|---|---|   
+|![新公司入口網站登入畫面的範例影像：[登入] 按鈕。](./media/whats-new-app-ui/intune-company-portal-sign-in-2003.png)|![前一個公司入口網站登入頁面的範例影像：顯示更忙碌的設計。](./media/whats-new-app-ui/intune-company-portal-sign-in-2002.png)| 
+|![新登入進度畫面的範例影像：顯示一個進度列。](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![前一個登入進度畫面的範例影像：顯示更忙碌的設計。](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|  
 ## <a name="week-of-february-3-2020"></a>2020 年 2 月 3 日當週
 
 ### <a name="screen-removed-from-company-portal-android-work-profile-enrollment---6103987---"></a>已從公司入口網站 Android 工作設定檔註冊移除畫面 <!--6103987 -->
@@ -142,7 +151,7 @@ iOS 版公司入口網站註冊畫面和步驟，為了配合 Apple iOS 12.2 中
 * 開啟設定應用程式以在其裝置上安裝管理設定檔。  
 * 返回公司入口網站應用程式以完成註冊。  
 
-如需更新的註冊步驟和畫面，請參閱 [Enroll iOS device in Intune](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios) (在 Intune 中註冊 iOS 裝置)。  
+如需更新的註冊步驟和畫面，請參閱 [Enroll iOS device in Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios) (在 Intune 中註冊 iOS 裝置)。  
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>iOS 版公司入口網站應用程式的使用者體驗更新 <!-- 2536024 -->
 適用於 iOS 裝置的公司入口網站應用程式首頁已經過重新設計。 透過這項變更，首頁將會改善採用 iOS UI 模式的能力，也會改善探索應用程式和電子書的能力。  
@@ -166,7 +175,7 @@ iOS 版公司入口網站註冊畫面和步驟，為了配合 Apple iOS 12.2 中
 ## <a name="week-of-august-27-2018"></a>2018 年 8 月 27 日當週  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>對於公司入口網站的新使用者體驗更新 <!--2000968 -->  
-我們已依據客戶的意見反應，將新功能新增至公司入口網站。 您將能於裝置上體驗現有功能和可用性等方面的重大改善。 網站的特定區域 (例如裝置詳細資料、意見反應和支援以及裝置概觀) 現在有全新現代化回應式設計。 已更新 [Intune 公司入口網站文件](https://docs.microsoft.com/user-help/using-the-intune-company-portal-website)，以反映這些變更。   
+我們已依據客戶的意見反應，將新功能新增至公司入口網站。 您將能於裝置上體驗現有功能和可用性等方面的重大改善。 網站的特定區域 (例如裝置詳細資料、意見反應和支援以及裝置概觀) 現在有全新現代化回應式設計。 已更新 [Intune 公司入口網站文件](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website)，以反映這些變更。   
 
 您會看到的更新包括：  
 

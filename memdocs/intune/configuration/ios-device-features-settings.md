@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune 中的 iOS/iPadOS 裝置功能設定 - Azure | Microsoft Docs
-description: 查看 Microsoft Intune 中，設定 iOS 與 iPadOS 裝置的 AirPrint、主畫面配置、應用程式通知、共用裝置、單一登入與網路內容篩選器設定的所有設定。 在裝置組態設定檔中使用這些設定，以設定 iOS/iPadOS 裝置來在貴組織中使用這些 Apple 功能。
+description: 查看 Microsoft Intune 中，設定適用於 AirPrint 的 iOS 與 iPadOS 裝置、主畫面配置、應用程式通知、共用裝置、單一登入與網路內容篩選設定的所有設定。 在裝置組態設定檔中使用這些設定，以設定 iOS/iPadOS 裝置來在貴組織中使用這些 Apple 功能。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 351c6ade59d98ce620b939c5ff6238e650390a5f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fafca25fb0e374d281f8ef593cb5fa7f35d82979
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361077"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086954"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>要在 Intune 中使用常見 iOS/iPadOS 功能用的 iOS 與 iPadOS 裝置設定
 
-Intune 包含一些內建設定，可讓 iOS/iPadOS 使用者在其裝置上使用不同的 Apple 功能。 例如，系統管理員可以控制 iOS/iPadOS 使用者如何使用 AirPrint 印表機、將應用程式與資料夾新增至 Dock 與主畫面上的頁面、顯示應用程式通知、在鎖定畫面上顯示資產標籤詳細資料、使用單一登入驗證，以及使用憑證來對使用者進行驗證。
+Intune 包含一些內建設定，可讓 iOS/iPadOS 使用者在其裝置上使用不同的 Apple 功能。 例如，您可以控制 AirPrint 印表機、將應用程式和資料夾新增至 Dock 和主畫面頁面、顯示應用程式通知、在鎖定畫面上顯示資產標籤詳細資料、使用單一登入驗證，以及使用憑證驗證。
 
 使用這些功能來控制 iOS/iPadOS 裝置，作為行動裝置管理 (MDM) 解決方案的一部分。
 
@@ -48,7 +48,7 @@ Intune 包含一些內建設定，可讓 iOS/iPadOS 使用者在其裝置上使�
 - **IP 位址**：輸入印表機的 IPv4 或 IPv6 位址。 如果您是使用主機名稱來識別印表機，則可以透過在終端機偵測該印表機來取得 IP 位址。 本文中的取得 IP 位址和路徑會提供更多詳細資料。
 - **路徑**：您網路上印表機的路徑通常是 `ipp/print`。 本文中的取得 IP 位址和路徑會提供更多詳細資料。
 - **連接埠**：輸入 AirPrint 目的地的接聽連接埠。 如果將此屬性留白，AirPrint 就會使用預設連接埠。 可以在 iOS 11.0+ 與 iPadOS 13.0+ 上使用。
-- **TLS**：選擇 [啟用]  以保護 AirPrint 與傳輸層安全性 (TLS) 的連線。 可以在 iOS 11.0+ 與 iPadOS 13.0+ 上使用。
+- **TLS**：[啟用]  可使用傳輸層安全性 (TLS) 保護 AirPrint 連線。 可以在 iOS 11.0+ 與 iPadOS 13.0+ 上使用。
 
 若要新增 AirPrint 伺服器，您可以：
 
@@ -81,7 +81,7 @@ Intune 包含一些內建設定，可讓 iOS/iPadOS 使用者在其裝置上使�
 
 ### <a name="dock"></a>Dock
 
-使用 [Dock]  設定將最多六個項目或資料夾新增到 iOS/iPadOS 畫面的 Dock。 許多裝置支援的項目數較少。 例如，iPhone 裝置最多支援 4 個項目。 在此情況下，裝置上只會顯示您新增的前四個項目。
+使用 [Dock]  設定將最多 6 個項目或資料夾新增到畫面上的 Dock 中。 許多裝置支援的項目數較少。 例如，iPhone 裝置最多支援 4 個項目。 在此情況下，裝置上只會顯示您新增的前四個項目。
 
 您最多可以為裝置 Dock 新增**六個**項目 (應用程式和資料夾合併)。
 
@@ -283,8 +283,32 @@ Intune 包含一些內建設定，可讓 iOS/iPadOS 使用者在其裝置上使�
 - **SSO 應用程式延伸模組類型**：選擇 SSO 應用程式延伸模組的類型。 選項包括：
 
   - **未設定**：不使用應用程式延伸模組。 若要停用應用程式延伸模組，您可以將 SSO 應用程式延伸模組類型切換為 [未設定]  。
-  - **重新導向**：使用一般且可自訂的重新導向應用程式延伸模組，搭配新式驗證流程執行 SSO。 請確定您知道組織應用程式延伸模組的延伸模組識別碼。
-  - **認證**：使用一般且可自訂的認證應用程式延伸模組，搭配查問與回應驗證流程執行 SSO。 請確定您知道組織應用程式延伸模組的延伸模組識別碼。
+  - **重新導向**：使用一般且可自訂的重新導向應用程式延伸模組，以搭配新式驗證流程使用 SSO。 請確定您知道組織應用程式延伸模組的延伸模組識別碼。
+
+    在 iOS/iPadOS 13.0+ 裝置上，您可以使用此重新導向 SSO 應用程式延伸模組類型，設定 **Microsoft Azure AD SSO 應用程式延伸模組**。 Microsoft Azure AD 延伸模組可在使用 Azure AD 進行驗證的 Microsoft 應用程式和組織應用程式之間啟用單一登入。 Azure AD 延伸模組可充當進階驗證代理程式，提供安全性和使用者體驗改善。 先前搭配 Microsoft Authenticator 應用程式使用代理驗證的所有應用程式，都將繼續透過 SSO 延伸模組取得 SSO。 Azure AD SSO 延伸模組尚不支援瀏覽器 SSO。 如需有關 SSO 和 iOS/iPadOS 驗證代理程式的詳細資訊，請參閱[在 macOS 和 iOS/iPadOS 上設定 SSO](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios) \(機器翻譯\)。  
+
+    **設定 iOS Microsoft Azure AD 延伸模組：**
+
+    1. 將 [SSO 應用程式延伸模組類型]  設定為 [重新導向]  。
+    2. 將 [延伸模組識別碼]  設為 `com.microsoft.azureauthenticator.ssoextension`。
+    3. 將 [小組識別碼]  設為 `SGGM6D27TK`。
+    4. 在 [RUL]  設定中，輸入下列 URL：
+
+        - `https://login.microsoftonline.com`
+        - `https://login.windows.net`
+        - `https://login.microsoft.com`
+        - `https://sts.windows.net`
+        - `https://login.partner.microsoftonline.cn`
+        - `https://login.chinacloudapi.cn`
+        - `https://login.microsoftonline.de`
+        - `https://login.microsoftonline.us`
+        - `https://login.usgovcloudapi.net`
+        - `https://login-us.microsoftonline.com`
+
+    > [!IMPORTANT]
+    > 若要使用 iOS/iPadOS Microsoft Azure AD 延伸模組實現 SSO，請先在裝置上安裝 iOS/iPadOS Microsoft Authenticator 應用程式。 Authenticator 會將 Azure AD 延伸模組傳遞至裝置，而 MDM SSO 應用程式延伸模組設定則會啟用 Azure AD 延伸模組。 一旦 Authenticator 和 SSO 應用程式延伸模組設定檔安裝在裝置上之後，使用者就必須輸入其認證，才能登入並建立工作階段。 此工作階段之後會用於不同的應用程式，而不需要使用者再次進行驗證。
+
+  - **認證**：使用一般且可自訂的認證應用程式延伸模組，以搭配查問與回應驗證流程使用 SSO。 請確定您知道組織應用程式延伸模組的延伸模組識別碼。
   - **Kerberos**：使用 Apple 的內建 Kerberos 延伸模組，其包含在 iOS 13.0+ 與 iPadOS 13.0+ 中。 此選項為 [認證]  應用程式延伸模組的 Kerberos 特定版本。
 
   > [!TIP]
@@ -303,7 +327,7 @@ Intune 包含一些內建設定，可讓 iOS/iPadOS 使用者在其裝置上使�
   - 您單一登入應用程式延伸模組 Intune 設定檔中的所有網域都不能重複。 您不能在任何單一登入應用程式延伸模組設定檔中重複使用網域，即使您是使用不同類型的 SSO 應用程式延伸模組也一樣。
   - 這些網域不會區分大小寫。
 
-- **URL** (僅限重新導向)：輸入重新導向應用程式延伸模組會代為執行 SSO 的識別提供者其 URL 前置詞。 當系統將使用者重新導向到這些 URL 時，SSO 應用程式延伸模組將會介入並提示進行 SSO。
+- **URL** (僅限重新導向)：輸入識別提供者的 URL 前置詞，重新導向應用程式延伸模組會代為使用 SSO。 當系統將使用者重新導向到這些 URL 時，SSO 應用程式延伸模組將會介入並提示進行 SSO。
 
   - 您的 Intune 單一登入應用程式延伸模組設定檔中的所有 URL 都不能重複。 您不能在任何 SSO 應用程式延伸模組設定檔中重複使用網域，即使您是使用不同類型的 SSO 應用程式延伸模組也一樣。
   - URL 的開頭必須是 http:// 或 https://。
@@ -320,7 +344,7 @@ Intune 包含一些內建設定，可讓 iOS/iPadOS 使用者在其裝置上使�
 
   - **新增**：選取以新增設定金鑰。
 
-- **鑰匙串使用方式** (僅限 Kerberos)：選擇 [封鎖]  來防止將密碼儲存並保存在鑰匙串中。 如果選擇封鎖，則系統不會提示使用者儲存密碼，且需要在 Kerberos 票證到期時重新輸入密碼。 [未設定]  \(預設\) 允許將密碼儲存並保存在鑰匙串中。 當票證到期時，系統不會提示使用者重新輸入密碼。
+- **鑰匙串使用方式** (僅限 Kerberos)：選擇 [封鎖]  來防止將密碼儲存並保存在鑰匙串中。 如果選擇封鎖，則系統不會提示使用者儲存其密碼，且需要在 Kerberos 票證到期時重新輸入該密碼。 [未設定]  \(預設\) 允許將密碼儲存並保存在鑰匙串中。 當票證到期時，系統不會提示使用者重新輸入其密碼。
 - **Face ID、Touch ID 或密碼** (僅限 Kerberos)：[必要]  ，強制使用者在需要認證以更新 Kerberos 票證時，輸入 Face ID、Touch ID 或裝置密碼。 [未設定]  (預設)，不會要求使用者使用生物特徵辨識技術或密碼來更新 Kerberos 票證。 如果封鎖 [鑰匙串使用方式]  ，則不會套用此設定。
 - **預設領域** (僅限 Kerberos)：選擇 [啟用]  以將所輸入的 [領域]  值設定為預設領域。 [未設定]  \(預設\) 不會設定預設領域。
 

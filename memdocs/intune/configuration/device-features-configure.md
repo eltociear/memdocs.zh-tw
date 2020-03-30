@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48f890888d9bdb9d1df67596fb9125534e90a4d2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c0f1552d2edc6bfa5f6bdb255f156bcfb77a4990
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350131"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084103"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>在 Intune 中新增 iOS、iPadOS 或 macOS 裝置功能設定
 
@@ -149,16 +149,16 @@ AirPrint 是可讓裝置透過無線網路列印到檔案的 Apple 功能。 在
 
 ## <a name="single-sign-on-app-extension"></a>單一登入應用程式擴充功能
 
-這些設定會設定應用程式擴充功能，以便為您的 iOS、iPadOS 和 macOS 裝置啟用單一登入 (SSO)。 大部分的企業營運 (LOB) 應用程式和組織網站都需要某種程度的安全使用者驗證。 在許多情況下，驗證都會要求使用者重複輸入相同認證。 SSO 讓使用者在輸入其認證一次之後，就能存取應用程式和網站。 當使用者登入之後，即可自動存取應用程式和網站，或使用 Face ID、Touch ID 或 Apple 密碼來獲得存取權。
+這些設定會設定應用程式擴充功能，以便為您的 iOS、iPadOS 和 macOS 裝置啟用單一登入 (SSO)。 大部分的企業營運 (LOB) 應用程式和組織網站都需要某種程度的安全使用者驗證。 在許多情況下，驗證都會要求使用者重複輸入相同認證。 SSO 讓使用者在輸入其認證一次之後，就能存取應用程式和網站。 SSO 也會為使用者提供更好的驗證體驗，並減少重複提示認證的次數。
 
-在 Intune 中，使用這些設定來設定組織、識別提供者或 Apple 所建立的 SSO 應用程式延伸模組。 SSO 應用程式擴充功能會為您的使用者處理驗證。 這些設定會設定重新導向類型和認證類型的 SSO 應用程式延伸模組。
+在 Intune 中，使用這些設定來設定貴組織、您的識別提供者、Microsoft 或 Apple 所建立的 SSO 應用程式延伸模組。 SSO 應用程式擴充功能會為您的使用者處理驗證。 這些設定會設定重新導向類型和認證類型的 SSO 應用程式延伸模組。
 
-- 重新導向類型是專為 OAuth 和 SAML2 等新式驗證通訊協定所設計。
-- 認證類型是專為挑戰和回應驗證流程所設計。 您可以在 Apple 所提供的 Kerberos 特定認證擴充功能和一般認證擴充功能之間進行選擇。
+- 重新導向類型是專為 OAuth 和 SAML2 等新式驗證通訊協定設計的。 Microsoft 具有 iOS/iPadOS Azure AD 重新導向類型的 SSO 應用程式延伸模組，可以使用單一登入應用程式延伸模組設定來啟用。
+- 認證類型是專為挑戰和回應驗證流程所設計。 您可以在 Apple 所提供的 Kerberos 特定認證延伸模組或一般認證延伸模組之間進行選擇。
 
 如需可在 Intune 中設定的設定清單，請參閱 [iOS/iPadOS SSO 應用程式延伸模組](ios-device-features-settings.md#single-sign-on-app-extension)和 [macOS SSO 應用程式延伸模組](macos-device-features-settings.md#single-sign-on-app-extension)。
 
-如需開發 SSO 應用程式擴充功能的詳細資訊，請觀賞 Apple 網站上的[可擴充的企業 SSO](https://developer.apple.com/videos/play/tech-talks/301) \(英文\)。 若要閱讀 Apple 的功能描述，請瀏覽[「單一登入延伸功能」承載資料設定](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web)。 
+如需開發 SSO 應用程式延伸模組的詳細資訊，請觀賞 Apple 網站上的[可擴充的企業 SSO](https://developer.apple.com/videos/play/tech-talks/301) \(英文\)。 若要閱讀 Apple 的功能描述，請瀏覽[「單一登入延伸功能」承載資料設定](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web)。 
 
 > [!NOTE]
 > **單一登入應用程式擴充功能**與**單一登入**功能不同：
@@ -194,7 +194,7 @@ AirPrint 是可讓裝置透過無線網路列印到檔案的 Apple 功能。 在
 
 ## <a name="web-content-filter"></a>Web 內容篩選
 
-這些設定可以使用 Apple 的內建自動篩選演算法來評估網頁，並封鎖成人內容和成人語言。 您也可以建立已允許的網頁連結及受限制之網頁連結的清單。 例如，您可以允許僅開啟 `contoso` 網站。
+這些設定會使用 Apple 的內建自動篩選演算法來評估網頁，並封鎖成人內容和成人語言。 您也可以建立已允許的網頁連結及受限制之網頁連結的清單。 例如，您可以允許僅開啟 `contoso` 網站。
 
 如需可在 Intune 中設定的設定清單，請參閱 [iOS/iPadOS 上的內容篩選](ios-device-features-settings.md#web-content-filter)。
 

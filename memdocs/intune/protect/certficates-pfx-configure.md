@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/25/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: caeeb332f4a7c8c124e40537041b8aef8d219240
-ms.sourcegitcommit: b5a9ce31de743879d2a6306cea76be3a093976bb
+ms.openlocfilehash: 94e170e01a1ede01a94b2ca3f09d8530f97335a3
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79372614"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085018"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>透過 Intune 設定並使用 PKCS 憑證
 
@@ -175,27 +175,42 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
 
 1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
-
-   ![巡覽至 Intune 並建立受信任憑證的新設定檔](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
+2. 選取並移至 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 
 3. 輸入下列內容：
+   - **平台**：選擇將接收此設定檔之裝置的平台。
+   - **設定檔**：選取 [信任的憑證] 
+  
+4. 選取 [建立]  。
 
-    - 設定檔的 [名稱] 
-    - 可選擇性地設定說明
-    - 要部署設定檔的目標 [平台] 
-    - 將 [設定檔類型]  設為 [信任的憑證] 
+5. 在 [基本資訊]  中，輸入下列內容：
+   - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，良好設定檔名稱為*適用於整家公司的受信任憑證設定檔*。
+   - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
 
-4. 選取 [設定]  ，並指定先前匯出的根 CA 憑證 .cer 檔案。
+6. 選取 [下一步]  。
+
+7. 在 [組態設定]  中，指定先前匯出的根 CA 憑證 .cer 檔案。
 
    > [!NOTE]
-   > 視您在**步驟 2** 中選擇的平台而定，您可能會有選擇憑證 [目的地存放區]  的選項。
+   > 視您在**步驟 3** 中選擇的平台而定，您可能會有選擇憑證 [目的地存放區]  的選項。
 
    ![建立設定檔並上傳受信任的憑證](./media/certficates-pfx-configure/certificates-pfx-configure-profile-fill.png)
 
-5. 選取 [確定]   > [建立]  儲存您的設定檔。
+8. 選取 [下一步]  。
 
-6. 若要將新的設定檔指派給一或多部裝置，請參閱[指派 Microsoft Intune 裝置設定檔](../configuration/device-profile-assign.md)。
+9. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+
+   選取 [下一步]  。
+
+10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
+
+    選取 [下一步]  。
+
+11. (*僅適用於 Windows 10*) 在 [適用性規則]  中，指定適用性規則以精簡此設定檔的指派。 您可以根據作業系統版本或裝置版本，選擇指派或不指派設定檔。
+
+  如需詳細資訊，請參閱*在 Microsoft Intune 中建立裝置設定檔*中的[適用性規則](../configuration/device-profile-create.md#applicability-rules)。
+
+12. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 ## <a name="create-a-pkcs-certificate-profile"></a>建立 PKCS 憑證設定檔
 
@@ -204,13 +219,25 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
 2. 選取並移至 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 
 3. 輸入下列內容：
+   - **平台**：選擇您的裝置平台。 選項包括：
+     - Android 裝置管理員
+     - Android 企業 > 僅限裝置擁有者
+     - Android 企業 > 僅限工作設定檔
+     - iOS/iPadOS
+     - macOS
+     - Windows 10 及更新版本
+   - **設定檔**：選取 [PKCS 憑證] 
 
-    - 設定檔的 [名稱] 
-    - 可選擇性地設定說明
-    - 要部署設定檔的目標 [平台] 
-    - 將 [設定檔類型]  設為 [PKCS 憑證] 
+   > [!NOTE]
+   > 在具有 Android 企業設定檔的裝置上，使用 PKCS 憑證設定檔安裝的憑證不會顯示在裝置上。 若要確認憑證部署成功，請在 Intune 主控台中檢查設定檔的狀態。
+4. 選取 [建立]  。
 
-4. 選取 [設定]  ，並設定適用於所選平台的屬性：
+5. 在 [基本資訊]  中，輸入下列內容：
+   - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，良好的設定檔名稱為*適用於整家公司的 PKCS 設定檔*。
+   - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
+
+6. 選取 [下一步]  。
+7. 在 [組態設定]  中，您可進行的設定會根據您選擇的平台而不同。 選取您的平台以進行詳細設定：-Android 裝置系統管理員 -Android 企業 -iOS/iPadOS -Windows 10
    
    |設定     | 平台     | 詳細資料   |
    |------------|------------|------------|
@@ -227,12 +254,18 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
    |**允許所有應用程式存取私密金鑰** |<ul><li>macOS  |設定為 [啟用]  ，將 PKCS 憑證私密金鑰的存取權，授與為相關聯 Mac 裝置設定的應用程式。 <br><br> 如需此設定的詳細資訊，請參閱 Apple 開發人員文件中[組態設定檔參考](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) \(英文\) 的 *AllowAllAppsAccess* 憑證承載一節。 |
    |**根憑證**             |<ul><li>Android 裝置管理員 </li><li>Android Enterprise (裝置擁有者  、工作設定檔  ) |選取先前指派的根 CA 憑證設定檔。 |
 
-5. 選取 [確定]   > [建立]  儲存您的設定檔。
+8. 選取 [下一步]  。
 
-6. 若要將新的設定檔指派給一或多部裝置，請參閱[指派 Microsoft Intune 裝置設定檔](../configuration/device-profile-assign.md)。
+9. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
 
-   > [!NOTE]
-   > 在具有 Android 企業設定檔的裝置上，使用 PKCS 憑證設定檔安裝的憑證不會顯示在裝置上。 若要確認憑證部署成功，請在 Intune 主控台中檢查設定檔的狀態。
+   選取 [下一步]  。
+
+10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
+
+    選取 [下一步]  。
+
+11. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
+
 
 ### <a name="subject-name-format"></a>主體名稱格式
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/10/2020
+ms.date: 03/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8586e5c25ec3db4a736d84381e691ecebe6fae32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 71e8b874e50fc1300124d748dfb70963acae089b
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361675"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220093"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>使用 Intune 來允許或限制功能的 Windows 10 (和更新版本) 裝置設定
 
@@ -86,7 +86,7 @@ ms.locfileid: "79361675"
   - **未設定** (預設值)：Intune 不會變更或更新此設定。 根據預設，OS 可能會允許使用者從 Microsoft Store 以外的位置安裝應用程式，包括其他原則設定中定義的應用程式。  
   - **任何位置**：關閉應用程式建議，並允許使用者從任何位置安裝應用程式。  
   - **僅限 Store**：強制終端使用者只從 Microsoft Store 安裝應用程式。
-  - **建議**：從 Microsoft Store 中提供的網頁安裝應用程式時，使用者會看到一則訊息，建議其從市集下載。  
+  - **建議**：從 Microsoft Store 中提供的網頁安裝應用程式時，使用者會看到一則訊息，建議其從市集下載該應用程式。  
   - **優先使用 Store**：當使用者從 Microsoft Store 以外位置安裝應用程式時，會發出警告。
 
   [SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
@@ -376,8 +376,8 @@ GDI DPI 縮放比例會讓非 DPI 感知的應用程式變成依監視器 DPI �
 - **儲存瀏覽歷程記錄**：[是]  (預設) 允許儲存 Microsoft Edge 的瀏覽歷程記錄。 [否]  防止儲存瀏覽歷程記錄。
 - **在結束時清除瀏覽資料** (僅限桌面版)：[是]  會在使用者結束 Microsoft Edge 時，清除歷程記錄和瀏覽資料。 [否]  (預設) 會使用作業系統預設值，這可能會快取瀏覽資料。
 - **在使用者裝置之間同步瀏覽器設定**：選擇在裝置之間同步瀏覽器設定的方式。 選項包括：
-  - **允許**：允許在使用者裝置之間同步 Microsoft Edge 瀏覽器設定
-  - **封鎖並啟用使用者覆寫**：防止在使用者裝置之間同步 Microsoft Edge 瀏覽器設定。 使用者可以覆寫此設定。
+  - **允許**：允許在使用者的裝置之間同步 Microsoft Edge 瀏覽器設定
+  - **封鎖並啟用使用者覆寫**：禁止在使用者的裝置之間同步 Microsoft Edge 瀏覽器設定。 使用者可以覆寫此設定。
   - **封鎖**：封鎖在使用者裝置之間同步處理 Microsoft Edge 瀏覽器設定。 使用者無法覆寫此設定。
 
 選取 [禁止並允許使用者覆寫] 後，使用者可以覆寫管理員指定。
@@ -898,6 +898,11 @@ GDI DPI 縮放比例會讓非 DPI 感知的應用程式變成依監視器 DPI �
   [Defender/ThreatSeverityDefaultAction CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
 ### <a name="microsoft-defender-antivirus-exclusions"></a>Microsoft Defender 防毒軟體排除
+
+您可以透過修改排除清單，從 Microsoft Defender 防毒軟體掃描中排除特定檔案。 **一般來說，您應該不需要套用排除項**。 Microsoft Defender 防毒軟體會包含一些以已知 OS 行為和一般管理檔案為基礎的自動排除項，例如，用於企業管理、資料庫管理，以及其他企業案例和情況的那些檔案。
+
+> [!WARNING]
+> **定義排除項會減弱 Microsoft Defender 防毒軟體所提供的保護**。 一律評估與實作排除項相關聯的風險。 僅排除您已知不是惡意的檔案。
 
 - **不進行掃描和即時保護的檔案和資料夾**：將一或多個 **C:\Path** 或 **%ProgramFiles%\Path\filename.exe** 等檔案和資料夾新增至排除清單。 這些檔案和資料夾不會包含在即時或排程的掃描中。
 - **不進行掃描和即時保護的副檔名**：將一個或多個 **jpg** 或 **txt** 等副檔名新增至排除清單。 任何即時掃描或排定的掃描，都不會包含有這些副檔名的任何檔案。

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 387817dfcf929b985c0836779510e3d6c0f9795a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 10accc0c59dc0d97e2f3ac4739335dd1e2cd4cba
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353615"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084954"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>在 Intune 中建立並指派 SCEP 憑證設定檔
 
@@ -35,28 +35,31 @@ ms.locfileid: "79353615"
 
 1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取並移至 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 
 3. 輸入下列內容：
+   - **平台**：選擇您的裝置平台。
+   - **設定檔**：選取 [SCEP 憑證] 
 
-4. 輸入 SCEP 憑證設定檔的 [名稱]  與 [描述]  。
+     針對 **Android Enterprise** 平台，「設定檔類型」  會分為兩個類別：「僅限裝置擁有者」  和「僅限工作設定檔」  。 請務必為您管理的裝置選取正確的 SCEP 憑證設定檔。  
 
-5. 從 [平台]  下拉式清單中，選取此 SCEP 憑證[受支援的裝置平台](certificates-configure.md#supported-platforms-and-certificate-profiles)。
+     適用於「僅限裝置擁有者」  設定檔的 SCEP 憑證設定檔具有下列限制：
 
-6. 從 [設定檔類型]  下拉式清單中，選取 [SCEP 憑證]  。  
+      1. 在 [監視] 下方，憑證報告不適用於「裝置擁有者」SCEP 憑證設定檔。
 
-   針對 **Android Enterprise** 平台，「設定檔類型」  會分為兩個類別：「僅限裝置擁有者」  和「僅限工作設定檔」  。 請務必為您管理的裝置選取正確的 SCEP 憑證設定檔。  
+      2. 您無法使用 Intune 撤銷由 SCEP 憑證設定檔為裝置擁有者所佈建的憑證。 您可以透過外部程序或直接使用憑證授權單位單位來管理撤銷。
 
-   適用於「僅限裝置擁有者」  設定檔的 SCEP 憑證設定檔具有下列限制：
+      3. 針對 Android Enterprise 專用裝置，SCEP 憑證設定檔僅支援 Wi-Fi 網路設定和驗證。  Android Enterprise 專用裝置上的 SCEP 憑證設定檔並不支援 VPN 或應用程式驗證。
 
-   1. 在 [監視] 下方，憑證報告不適用於「裝置擁有者」SCEP 憑證設定檔。
+4. 選取 [建立]  。
 
-   2. 您無法使用 Intune 撤銷由 SCEP 憑證設定檔為裝置擁有者所佈建的憑證。 您可以透過外部程序或直接使用憑證授權單位單位來管理撤銷。 
+5. 在 [基本資訊]  中，輸入下列內容：
+   - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，良好的設定檔名稱為*適用於整家公司的 SCEP 設定檔*。
+   - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
 
-   4. 針對 Android Enterprise 專用裝置，SCEP 憑證設定檔僅支援 Wi-Fi 網路設定和驗證。  Android Enterprise 專用裝置上的 SCEP 憑證設定檔並不支援 VPN 或應用程式驗證。   
+6. 選取 [下一步]  。
 
-   
-7. 選取 [設定]  ，然後完成下列設定：
+7. 在 [組態設定]  中，完成下列設定：
 
    - **憑證類型**：
 
@@ -209,7 +212,7 @@ ms.locfileid: "79353615"
 
    - **根憑證**：
 
-     選取您先前設定並指派給此 SCEP 憑證設定檔所適用使用者和裝置的「受信任憑證設定檔」  。 受信任憑證設定檔用於使用受信任的根 CA 憑證來佈建使用者和裝置。 如需受信任憑證設定檔的資訊，請參閱＜在 Intune 中使用憑證以進行驗證＞  中的[＜匯出受信任的根 CA 憑證＞](certificates-configure.md#export-the-trusted-root-ca-certificate)和[＜建立受信任的憑證設定檔＞](certificates-configure.md#create-trusted-certificate-profiles)。 如果您有根憑證授權單位與發行憑證授權單位，請選取與發行憑證授權單位建立關聯的受信任根憑證設定檔。
+     選取您先前設定並指派給此 SCEP 憑證設定檔所適用使用者和裝置的「受信任憑證設定檔」  。 受信任憑證設定檔用於使用受信任的根 CA 憑證來佈建使用者和裝置。 如需受信任憑證設定檔的資訊，請參閱＜在 Intune 中使用憑證以進行驗證＞  中的[＜匯出受信任的根 CA 憑證＞](certificates-configure.md#export-the-trusted-root-ca-certificate)和[＜建立受信任的憑證設定檔＞](certificates-configure.md#create-trusted-certificate-profiles)。 如果您有根憑證授權單位與發行憑證授權單位，請選取驗證發行憑證授權單位的受信任根憑證設定檔。
 
    - **擴充金鑰使用方法**：
 
@@ -223,7 +226,21 @@ ms.locfileid: "79353615"
 
      輸入一或多個透過 SCEP 發行憑證的 NDES 伺服器 URL。 例如，輸入類似 *https://ndes.contoso.com/certsrv/mscep/mscep.dll* 的內容。 您可以視需要新增額外的 SCEP URL 來進行負載平衡，因為 URL 會隨機推送至具有設定檔的裝置。 如果其中一個 SCEP 伺服器不可用，則 SCEP 要求將會失敗，且可能會在稍後的裝置簽入中對已關閉的相同伺服器提出憑證要求。
 
-8. 選取 [確定]  ，然後選取 [建立]  。 設定檔隨即建立，並會出現在 [裝置設定 - 設定檔]  清單上。
+8. 選取 [下一步]  。
+
+9. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+
+   選取 [下一步]  。
+
+10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
+
+    選取 [下一步]  。
+
+11. (*僅適用於 Windows 10*) 在 [適用性規則]  中，指定適用性規則以精簡此設定檔的指派。 您可以根據作業系統版本或裝置版本，選擇指派或不指派設定檔。
+
+   如需詳細資訊，請參閱*在 Microsoft Intune 中建立裝置設定檔*中的[適用性規則](../configuration/device-profile-create.md#applicability-rules)。
+
+12. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 ### <a name="avoid-certificate-signing-requests-with-escaped-special-characters"></a>避免使用具有已逸出之特殊字元的憑證簽署要求
 

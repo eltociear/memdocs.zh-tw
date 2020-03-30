@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b706ea076ebcc239904a9ae918389ccafa287ec
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 462f9ca9618d16c0291792f86d00c46f641c6cc8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339952"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084069"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>在 Microsoft Intune 中建立裝置設定檔
 
@@ -52,7 +52,7 @@ ms.locfileid: "79339952"
    - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
    - **平台**：選擇您的裝置平台。 選項包括：  
 
-       - **Android**
+       - **Android 裝置系統管理員**
        - **Android 企業**
        - **iOS/iPadOS**
        - **macOS**
@@ -68,12 +68,14 @@ ms.locfileid: "79339952"
        - [傳遞最佳化](delivery-optimization-windows.md)
        - [裝置功能](device-features-configure.md)
        - [裝置限制](device-restrictions-configure.md)
+       - [網域加入](domain-join-configure.md)
        - [版本升級和模式切換](edition-upgrade-configure-windows-10.md)
        - [教育](education-settings-configure.md)
        - [電子郵件](email-settings-configure.md)
        - [端點保護](../protect/endpoint-protection-configure.md)
        - [Identity Protection](../protect/identity-protection-configure.md)  
        - [Kiosk](kiosk-settings.md)
+       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
        - [PKCS 憑證](../protect/certficates-pfx-configure.md)
        - [PKCS 匯入憑證](../protect/certificates-imported-pfx-configure.md)
        - [喜好設定檔案](preference-file-settings-macos.md)
@@ -82,12 +84,12 @@ ms.locfileid: "79339952"
        - [更新原則](../protect/software-updates-ios.md)
        - [VPN](vpn-settings-configure.md)
        - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
        - [Windows 資訊保護](../protect/windows-information-protection-configure.md)
 
      例如，如果針對平台選取 [iOS/iPadOS]  ，您的設定檔類型選項會看起來類似下列設定檔：
 
-     ![在 Intune 中建立 iOS/iPadOS 設定檔](./media/device-profile-create/create-device-profile.png)
+     > [!div class="mx-imgBorder"]
+     > ![在 Intune 中建立 iOS/iPadOS 設定檔](./media/device-profile-create/create-device-profile.png)
 
 4. 完成後，請選取 [確定]   > [建立]  以儲存變更。 就會建立設定檔，並顯示在清單中。
 
@@ -138,7 +140,8 @@ ms.locfileid: "79339952"
 
 1. 選取 [適用性規則]  。 您可以選擇 [規則]  、[屬性]  和 [OS 版本]  ：
 
-    ![在 Microsoft Intune 中新增裝置組態設定檔的適用性規則](./media/device-profile-create/applicability-rules.png)
+    > [!div class="mx-imgBorder"]
+    > ![在 Microsoft Intune 中新增裝置組態設定檔的適用性規則](./media/device-profile-create/applicability-rules.png)
 
 2. 在 [規則]  中，選擇您是否要包含或排除使用者或群組。 選項包括：
 
@@ -184,7 +187,8 @@ Intune 會使用各種重新整理循環來檢查組態設定檔是否有更新�
 
   下列影像顯示可套用至使用者及/或套用至裝置的設定範例：
 
-  ![適用於使用者和裝置的 Intune 系統管理範本](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  > [!div class="mx-imgBorder"]
+  > ![適用於使用者與裝置的 Intune 系統管理範本](./media/device-profile-create/setting-applies-to-user-and-device.png)
 
 - 當您每次建立受限的原則時，請將此變更傳達給使用者。 例如，如果要將密碼需求從 4 個字元變更為 6 個字元，請在指派原則之前，讓您的使用者知道。
 

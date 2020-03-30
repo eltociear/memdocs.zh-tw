@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f49d1e419eb7199d2a7cf20f03959689a5f5fa44
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 691da0c74ceddb34a48bfdf01e19dadaed444e45
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342487"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233464"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>為受控的 Android Enterprise 裝置新增應用程式設定原則
 
@@ -103,15 +103,18 @@ Microsoft Intune 中的應用程式設定原則能為受控 Android Enterprise �
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>在多重身分識別應用程式中只允許設定的組織帳戶 
 
-針對 Android 裝置，請使用下列索引鍵/值組：
+身為 Microsoft Intune 管理員，您可以控制要新增至受控裝置上 Microsoft 應用程式的使用者帳戶。 您可以僅允許組織使用者帳戶進行存取，並封鎖已註冊裝置上的個人帳戶。 針對 Android 裝置，請使用下列索引鍵/值組：
 
 | **Key** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|
 | **值** | <ul><li>一或多個以 <code>;</code> 分隔的 UPN。</li><li>只有允許的帳戶才是這個索引鍵所定義受控使用者帳戶。</li><li> 若為 Intune 註冊的裝置，<code>{{userprincipalname}}</code> 權杖可用來代表註冊的使用者帳戶。</li></ul> |
 
    > [!NOTE]
-   > 只允許搭配多身分識別使用已設定的組織帳戶時，您必須使用 Android 版 Outlook 2.2.222 與更新版本、Android 版 Word、Excel、PowerPoint 16.0.9327.1000 與更新版本，或 Android 版 OneDrive 5.28 與更新版本。<p></p>
-   > 身為 Microsoft Intune 管理員，您可以控制要新增至受控裝置上 Microsoft Office 應用程式的使用者帳戶。 您可以僅允許組織使用者帳戶進行存取，並封鎖已註冊裝置上的個人帳戶。 支援的應用程式會處理應用程式設定和移除，並封鎖未經核准的帳戶。<p></p>
+   > 下列應用程式會處理上述應用程式設定，而且只允許組織帳戶：
+   > - 適用於 Android 的 Edge (42.0.4.4048 和更新版本)
+   > - 適用於 Android 的 Office、Word、Excel、PowerPoint (16.0.9327.1000 和更新版本)
+   > - 適用於 Android 的 OneDrive (5.28 和更新版本)
+   > - 適用於 Android 的 Outlook (2.2.222 和更新版本)
 
 ## <a name="enter-json-data"></a>輸入 JSON 資料
 

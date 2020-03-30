@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 03/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d3fbfa5ebd8e9ba54d5725cd650cba9c31b3537
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9b8ffa656aa468b50569518aaff503fec1d21027
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360284"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086229"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune 資料倉儲集合
 
@@ -222,6 +222,7 @@ ms.locfileid: "79360284"
 | DeviceRegistrationState    | 此裝置的用戶端註冊狀態屬性索引鍵。                                                                                                                      |
 | OwnerTypeKey               | 此裝置的擁有者類型屬性索引鍵：公司、個人或未知。                                                                                                    |
 | EnrolledDateTime           | 裝置註冊的日期與時間。                                                                                                                                         |
+| EthernetMacAddress           | 此裝置的唯一網路識別碼。                                                                                                                                        |
 | LastSyncDateTime           | 使用 Intune 簽入的最後一部已知裝置。                                                                                                                                              |
 | ManagementAgentKey         | 與此裝置相關聯的管理代理程式索引鍵。                                                                                                                             |
 | ManagementStateKey         | 與此裝置相關聯的管理狀態索引鍵，指出遠端動作的最新狀態，或是否已 JB 破解/刷機。                                                |
@@ -243,13 +244,16 @@ ms.locfileid: "79360284"
 | MEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | 裝置的受監督狀態                                                                                                                                                               |
 | FreeStorageSpaceInBytes    | 可用的儲存體 (以位元組為單位)。                                                                                                                                                                 |
-| TotalStorageSpaceInBytes   | 總儲存體 (以位元組為單位)。                                                                                                                                                                |
+| TotalStorageSpaceInBytes   | 儲存體容量總計 (以位元組為單位)。                                                                                                                                                                |
 | EncryptionState            | 裝置的加密狀態。                                                                                                                                                      |
 | SubscriberCarrier          | 裝置的用戶載波                                                                                                                                                       |
 | PhoneNumber                | 裝置的電話號碼                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | 裝置的行動電話通訊技術                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
+| 型號                      | 裝置型號。                                                                                                                                                                      |
+| Office365Version           | 安裝於裝置上的 Office 365 版本。                                                                                                                             |
+| PhysicalMemoryInBytes      | 實體記憶體 (以位元組為單位)。                                                                                                                                                          |
 
 
 ## <a name="devicetypes"></a>deviceTypes

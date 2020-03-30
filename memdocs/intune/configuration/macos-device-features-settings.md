@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8efa125b78e1265861f55b258cd264d7640154b2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e143530c5e9965a3717c632c1af7fcbc28a664f
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360791"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526286"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Intune 中的 macOS 裝置功能設定
 
@@ -55,7 +55,7 @@ Intune 包含一些內建設定，用來自訂您 macOS 裝置上的功能。 �
 
 若要新增 AirPrinter 伺服器，您需要有印表機的 IP 位址、資源路徑及連接埠。 下列步驟說明如何取得此資訊。
 
-1. 在連線到與 AirPrint 印表機相同之區域網路 (子網路) 的 Mac 上，開啟 [終端機]  (從 **/Applications/Utilities**)。
+1. 在連線到與 AirPrint 印表機相同區域網路 (子網路) 的 Mac 上，開啟 [終端機]  (從 **/Applications/Utilities**)。
 2. 在 [終端機] 應用程式中，輸入 `ippfind`，然後選取 Enter 鍵。
 
     記下印表機資訊。 例如，可能會傳回類似 `ipp://myprinter.local.:631/ipp/port1` 的內容。 第一個部分是印表機的名稱。 最後一個部分 (`ipp/port1`) 是資源路徑。
@@ -130,9 +130,9 @@ Intune 包含一些內建設定，用來自訂您 macOS 裝置上的功能。 �
 - **SSO 應用程式延伸模組類型**：選擇認證 SSO 應用程式延伸模組的類型。 選項包括：
 
   - **未設定**：不使用應用程式延伸模組。 若要停用應用程式延伸模組，請將 SSO 應用程式延伸模組類型切換成 [未設定]  。
-  - **重新導向**：使用一般且可自訂的重新導向應用程式延伸模組，以搭配新式驗證流程來執行 SSO。 請確定您知道您組織應用程式延伸模組的延伸模組與小組識別碼。
-  - **認證**：使用一般且可自訂的認證應用程式延伸模組，以搭配查問與回應驗證流程來執行 SSO。 請確定您知道您組織 SSO 應用程式延伸模組的延伸模組識別碼與小組識別碼。  
-  - **Kerberos**：使用 Apple 的內建 Kerberos 延伸模組，其已包含在 macOS Catalina 10.15 與更新版本上。 此選項為 [認證]  應用程式延伸模組的 Kerberos 特定版本。
+  - **重新導向**：使用一般且可自訂的重新導向應用程式延伸模組，以搭配新式驗證流程來執行 SSO。 請確定您知道組織應用程式延伸模組的延伸模組與小組識別碼。
+  - **認證**：使用一般且可自訂的認證應用程式延伸模組，以搭配查問與回應驗證流程來執行 SSO。 請確定您知道組織 SSO 應用程式延伸模組的延伸模組識別碼與小組識別碼。  
+  - **Kerberos**：使用 Apple 的內建 Kerberos 延伸模組，其隨附於 macOS Catalina 10.15 與更新版本中。 此選項為 [認證]  應用程式延伸模組的 Kerberos 特定版本。
 
   > [!TIP]
   > 使用 [重新導向]  與 [認證]  類型時，您會新增自己的設定值來透過延伸模組傳遞。 如果您是使用 [認證]  ，請考慮使用由 Apple 在 [Kerberos]  類型中所提供的內建組態設定。
@@ -140,7 +140,7 @@ Intune 包含一些內建設定，用來自訂您 macOS 裝置上的功能。 �
 - **延伸模組識別碼** (重新導向與認證)：輸入能識別 SSO 應用程式延伸模組的套件組合識別碼，例如 `com.apple.ssoexample`。
 - **小組識別碼** (重新導向與認證)：輸入 SSO 應用程式延伸模組的小組識別碼。 小組識別碼是由 Apple 產生之 10 個字元的英數 (數字與字母) 字串，例如 `ABCDE12345`。 
 
-  [尋找您的小組識別碼](https://help.apple.com/developer-account/#/dev55c3c710c) (會開啟 Apple 的網站) 提供詳細資訊。
+  [尋找小組識別碼](https://help.apple.com/developer-account/#/dev55c3c710c) (會開啟 Apple 的網站) 會提供詳細資訊。
 
 - **領域** (認證與 Kerberos)：輸入驗證領域的名稱。 領域名稱應為大寫，例如 `CONTOSO.COM`。 您的領域名稱通常會與您的 DNS 網域名稱相同，但全部都是大寫。
 
@@ -177,9 +177,9 @@ Intune 包含一些內建設定，用來自訂您 macOS 裝置上的功能。 �
 
 - **自動探索** (僅限 Kerberos)：設為 [封鎖]  時，Kerberos 延伸模組不會自動使用 LDAP 及 DNS 來判斷其 Active Directory 網站名稱。 [未設定]  \(預設\) 會允許延伸模組自動找出 Active Directory 網站名稱。
 - **密碼變更** (僅限 Kerberos)：[封鎖]  會防止使用者變更其用來登入所輸入網域的密碼。 [未設定]  \(預設\) 會允許密碼變更。  
-- **密碼同步** (僅限 Kerberos)：選擇 [啟用]  將使用者的本機密碼同步至 Azure AD。 [未設定]  \(預設\) 會停用針對 Azure AD 的密碼同步。 請使用此設定作為 SSO 的替代方案或備案。 如果使用者是使用 Apple 行動帳戶來登入，此設定無法運作。
-- **Windows Server Active Directory 密碼複雜度** (僅限 Kerberos)：選擇 [要求]  強制使用者密碼符合 Active Directory 的密碼複雜性需求。 請參閱[密碼必須符合複雜性需求](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements) \(部分機器翻譯\) 以取得詳細資訊。 [未設定]  \(預設\) 不會要求使用者符合 Active Directory 的密碼需求。
-- **最小密碼長度** (僅限 Kerberos)：輸入使用者帳戶密碼的最少字元數。 [未設定]  \(預設\) 不會對使用者強制密碼長度下限。
+- **密碼同步** (僅限 Kerberos)：選擇 [啟用]  ，以將使用者的本機密碼同步到 Azure AD。 [未設定]  \(預設\) 會停用針對 Azure AD 的密碼同步。 請使用此設定作為 SSO 的替代方案或備案。 如果使用者是使用 Apple 行動帳戶來登入，此設定無法運作。
+- **Windows Server Active Directory 密碼複雜度** (僅限 Kerberos)：選擇 [需要]  ，以強制使用者密碼符合 Active Directory 的密碼複雜性需求。 請參閱[密碼必須符合複雜性需求](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements) \(部分機器翻譯\) 以取得詳細資訊。 [未設定]  \(預設\) 不會要求使用者符合 Active Directory 的密碼需求。
+- **最小密碼長度** (僅限 Kerberos)：輸入組成使用者密碼的最少字元數。 [未設定]  \(預設\) 不會對使用者強制密碼長度下限。
 - **密碼重複使用限制** (僅限 Kerberos)：輸入可以在網域上重新使用先前密碼之前，必須使用的新密碼數目 (從 1 到 24)。 [未設定]  \(預設\) 不會強制密碼重複使用限制。
 - **密碼最短存留期** (僅限 Kerberos)：輸入在使用者可以變更密碼之前，該密碼必須先在網域上使用的天數。 [未設定]  \(預設\) 不會在密碼可以變更之前強制密碼最短存留期。
 - **密碼到期通知** (僅限 Kerberos)：輸入系統會在密碼到期的幾天之前通知使用者其密碼即將到期。 [未設定]  \(預設\) 會使用 `15` 天。
@@ -193,9 +193,9 @@ Intune 包含一些內建設定，用來自訂您 macOS 裝置上的功能。 �
   
 - **Active Directory 網站代碼** (僅限 Kerberos)：輸入 Kerberos 延伸模組應使用的 Active Directory 網站名稱。 您可能不需要變更此值，因為 Kerberos 延伸模組可能會自動尋找 Active Directory 站台碼。
 - **快取名稱** (僅限 Kerberos)：輸入 Kerberos 快取的一般安全性服務 (GSS) 名稱。 您通常不會需要設定此值。  
-- **密碼需求訊息** (僅限 Kerberos)：輸入要向使用者顯示的組織密碼需求文字版本。 如果您不要求 Active Directory 的密碼複雜度需求，或不輸入密碼長度下限，便會顯示此訊息。  
+- **密碼需求訊息** (僅限 Kerberos)：輸入要向使用者顯示的組織密碼需求文字版本。 如果您不要求 Active Directory 的密碼複雜性需求，或未輸入密碼長度下限，便會顯示此訊息。  
 - **應用程式套件組合識別碼** (僅限 Kerberos)：[新增]  應在裝置上使用單一登入的應用程式套件組合識別碼。 系統會將 Kerberos 票證授權票證 (驗證票證) 的存取權授與這些應用程式，使應用程式能夠將使用者驗證至其具有存取權的服務。
-- **網域領域對應** (僅限 Kerberos)：[新增]  應對應至領域的網域 DNS 尾碼。 在主機的 DNS 名稱不符合領域名稱的情況下使用此設定。 您通常不會需要建立此自訂網域對領域對應。
+- **網域領域對應** (僅限 Kerberos)：[新增]  應對應至領域的網域 DNS 尾碼。 在主機 DNS 名稱不符合領域名稱的情況下使用此設定。 您通常不會需要建立此自訂網域對領域對應。
 - **PKINIT 憑證** (僅限 Kerberos)：[選取]  可用於 Kerberos 驗證的初始驗證公開金鑰加密 (PKINIT) 憑證。 您可以從自己已在 Intune 中新增的 [PKCS](../protect/certficates-pfx-configure.md) 或 [SCEP](../protect/certificates-scep-configure.md) 憑證中選擇。 如需憑證的詳細資訊，請參閱[在 Microsoft Intune 中使用憑證進行驗證](../protect/certificates-configure.md)。
 
 ## <a name="associated-domains"></a>相關網域
@@ -219,7 +219,7 @@ Intune 包含一些內建設定，用來自訂您 macOS 裝置上的功能。 �
 
   `osascript -e 'id of app "ExampleApp"'`
 
-- **網域**：輸入要與應用程式建立關聯的網站網域。 網域包含服務類型與完整主機名稱，例如 `webcredentials:www.contoso.com`。
+- **網域**：輸入要與應用程式建立關聯的網站網域。 網域包含服務類型與完整主機名稱，例如 `webcredentials: www.contoso.com`。
 
   您可以在網域開頭的前方輸入 `*.` (星號萬用字元與句號) 來表示相關聯網域的所有子網域。 句號為必要。 與萬用字元網域相比，確切的網域具有較高的優先順序。 因此，來自父網域的模式「只會在」  於完整子網域中找不到相符項目時進行比對。
 

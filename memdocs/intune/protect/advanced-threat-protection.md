@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 398737a89c302031cfbed87709d031077f90fb6a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: edc3bb23097a26753a9e54b0b520e6fc22be3a69
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354265"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085204"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>在 Intune 中使用條件式存取強制執行 Microsoft Defender ATP 的合規性
 
@@ -100,7 +100,7 @@ Microsoft Defender ATP 有助於解決此類安全性事件。
 > - 由 Intune MTD 用於要求裝置必須在 Azure AD 中註冊，以便它們與 MTD 合作夥伴通訊之前擁有裝置識別碼。 此識別碼為必要，以便裝置成功向 Intune 報告其狀態。
 > - 不會影響任何其他雲端應用程式或資源。
 > - 不同於您可能會建立用來協助管理 MTD 的條件式存取原則。
-> - 根據預設，不會與您用於評估的其他條件式存取原則互動。
+> - 根據預設，不會與用於評估的其他條件式存取原則互動。
 >
 > 若要檢視傳統條件式存取原則，請前往 [Azure](https://portal.azure.com/#home) 中的 [Azure Active Directory]   > [條件式存取]   > [傳統原則]  。
 
@@ -136,24 +136,26 @@ Microsoft Defender ATP 有助於解決此類安全性事件。
 
 合規性政策會決定您視為可接受的裝置風險層級。
 
-### <a name="create-the-compliance-policy"></a>建立合規性原則
+如果您不熟悉如何建立合規性政策，請參閱*在 Microsoft Intune 中建立合規性政策*一文中的[建立政策](../protect/create-compliance-policy.md#create-the-policy)程序。 下列資訊專用於設定 Defender ATP 作為合規性政策的一部分。
 
 1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置]   > [合規性原則]   > [建立原則]  。
-3. 輸入 [名稱]  和 [描述]  。
-4. 在 [平台]  中，選取 [Windows 10 及更新版本]  。
-5. 在 [設定]  底下，選取 [Microsoft Defender ATP]  。
-6. 將 [要求裝置不高於電腦風險分數]  設定為您偏好的層級。
+
+2. 選取 [裝置]   > [合規性政策]   > [政策]   > [建立政策]  。
+
+3. 針對 [平台]  選取 [Windows 10 與更新版本]  ，然後選取 [建立]  以開啟 [建立政策]  設定視窗。
+
+4. 在 [基本]  索引標籤上，指定可協助您之後識別的 [名稱]  。 您也可以選擇指定 [描述]  。
+  
+5. 在 [合規性設定]  索引標籤上，展開 [Microsoft Defender ATP]  群組，並將 [裝置必須等於或低於電腦風險分數]  設定為您偏好的層級。
 
    威脅等級分類是[由 Windows Defender ATP 所決定的](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue) \(部分機器翻譯\)。
 
-   - **清除**：這個層級最安全。 裝置不能在具有任何現有威脅的情況下，繼續存取公司資源。 發現任何威脅時，即會將裝置評估為不相容。 (Microsoft Defender ATP 使用值「安全」  。)
+   - **清除**：這個層級最安全。 裝置不能在具有任何現有威脅的情況下，繼續存取公司資源。 發現任何威脅時，即會將裝置評估為不相容。 (Microsoft Defender ATP 使用值*安全*)。
    - **低**：裝置只有在僅存在低層級威脅的情況下才能符合規範。 具有中或高威脅等級的裝置不符合規範。
    - **中等**：如果在裝置上發現的威脅為低或中層級，則會將裝置評估為符合規範。 如果偵測到高層級的威脅，則會將裝置判斷為不相容。
    - **高**：這個層級最不安全，且會允許所有威脅層級。 因此具有高、中或低威脅層級的裝置都會被評估為符合規範。
 
-7. 選取 [確定]  ，然後選取 [建立]  以儲存您的變更 (並建立原則)。
-8. [指派裝置合規性政策](create-compliance-policy.md#assign-the-policy)給適用的群組。
+6. 完成原則的設定，包括將原則指派給適用的群組。
 
 ## <a name="create-a-conditional-access-policy"></a>建立條件式存取原則
 

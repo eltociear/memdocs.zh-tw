@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
-ms.openlocfilehash: cba46d5b4b203cdbb67fb5f6b6b116a21ebacb32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b6303d7d98e718c2a4f54b199bf90a3bd0684bf8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338925"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084753"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>在 Microsoft Intune 中移除 SCEP 和 PKCS 憑證
 
@@ -91,7 +91,6 @@ ms.locfileid: "79338925"
 - 系統管理員從 Azure AD 移除使用者或群組。
 - 系統管理員變更或更新 PKCS 設定檔。
 - 從群組指派中移除憑證設定檔。
-
 
 ## <a name="ios-devices"></a>iOS 裝置
 
@@ -190,8 +189,8 @@ ms.locfileid: "79338925"
 - 系統管理員執行[淘汰](../remote-actions/devices-wipe.md#retire)動作。
 
 在下列情況中，PKCS 憑證會*保留*在裝置上 (未撤銷或移除憑證)：
-- 使用者遺失 Intune 授權。
 
+- 使用者遺失 Intune 授權。
 - 系統管理員撤銷 Intune 授權。
 - 系統管理員從 Azure AD 移除使用者或群組。
 - 系統管理員變更或更新 PKCS 設定檔。
@@ -228,7 +227,23 @@ ms.locfileid: "79338925"
 
 ### <a name="pkcs-certificates"></a>PKCS 憑證
 
-macOS 不支援 PKCS 憑證。
+在下列情況中，系統會撤銷「並」  移除 PKCS 憑證：
+
+- 使用者取消註冊。
+- 系統管理員執行[淘汰](../remote-actions/devices-wipe.md#retire)動作。
+
+在下列情況中，系統會移除根憑證：
+
+- 使用者取消註冊。
+- 系統管理員執行[淘汰](../remote-actions/devices-wipe.md#retire)動作。
+
+在下列情況中，PKCS 憑證會保留在裝置上 (未撤銷或移除憑證)：
+
+- 使用者遺失 Intune 授權。
+- 系統管理員撤銷 Intune 授權。
+- 從群組指派中移除憑證設定檔。 (設定檔遭移除)。
+- 系統管理員從 Azure AD 移除使用者或群組。
+- 系統管理員變更或更新 PKCS 設定檔。
 
 ## <a name="next-steps"></a>後續步驟
 

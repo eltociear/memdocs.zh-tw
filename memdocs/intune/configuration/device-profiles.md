@@ -5,28 +5,28 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: karthib
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ade4842564188c457af94a22fe49d3d18d791ebb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 420340e18eb4e638ed7bde049e6b548037c54f87
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361870"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087091"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>在 Microsoft Intune 中使用裝置設定檔將功能和設定套用至您的裝置
 
-Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設定和功能。 這些設定和功能會新增至「組態設定檔」。 您可以為不同的裝置和平台 (包括 iOS/iPadOS、Android 和 Windows) 建立設定檔。 然後，使用 Intune 套用或「指派」設定檔至裝置。
+Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設定和功能。 這些設定和功能會新增至「組態設定檔」。 您可以為不同的裝置和平台 (包括 iOS/iPadOS、Android 裝置系統管理員、Android Enterprise 和 Windows) 建立設定檔。 然後，使用 Intune 套用或「指派」設定檔至裝置。
 
 作為行動裝置管理 (MDM) 解決方案的一部分，請使用這些組態設定檔完成不同的工作。 一些設定檔範例包括：
 
@@ -55,7 +55,7 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 
 這項功能支援： 
 
-- Android
+- Android 裝置管理員
 - Android 企業
 - iOS/iPadOS
 - macOS
@@ -69,7 +69,7 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 
 這項功能支援：
 
-- Android
+- Android 裝置管理員
 - Android 企業
 - iOS/iPadOS
 - macOS
@@ -108,8 +108,8 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 
 這項功能支援：
 
-- Android
-- Android Enterprise
+- Android 裝置管理員
+- Android 企業
 - iOS/iPadOS
 - macOS
 - Windows 10 及更新版本
@@ -143,7 +143,7 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 
 這項功能支援： 
 
-- Android
+- Android 裝置管理員
 - Android 企業
 - iOS/iPadOS
 - Windows Phone 8.1
@@ -241,7 +241,7 @@ Kiosk 設定也透過 [Android](device-restrictions-android.md#kiosk)、[Android
 
 這項功能支援： 
 
-- Android
+- Android 裝置管理員
 - Android 企業
 - iOS/iPadOS
 - macOS
@@ -255,7 +255,7 @@ Kiosk 設定也透過 [Android](device-restrictions-android.md#kiosk)、[Android
 
 這項功能支援： 
 
-- Android
+- Android 裝置管理員
 - Android 企業
 - iOS/iPadOS
 - macOS
@@ -276,7 +276,7 @@ Kiosk 設定也透過 [Android](device-restrictions-android.md#kiosk)、[Android
 
 這項功能支援：
 
-- Android (行動性延伸模組)
+- Android 裝置系統管理員 (Mobility Extensions)
 
 ## <a name="manage-and-troubleshoot"></a>管理及疑難排解
 

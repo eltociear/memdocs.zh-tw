@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8c7c60b4d9d1831aaabb9886345865234ce6351
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 607e2303cbec9ec7fc069db602d51684b71e6575
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364613"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083836"
 ---
 # <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>在 Microsoft Intune 中查看 Android Zebra 裝置上的潛在問題並進行疑難排解
 
@@ -57,7 +57,7 @@ ms.locfileid: "79364613"
 記錄儲存在裝置上的 `/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`
 
 ### <a name="get-logs-from-email"></a>從電子郵件取得記錄
-若要在使用 Intune 部署設定檔後取得記錄，終端使用者可以使用裝置上的電子郵件應用程式，以透過電子郵件傳送記錄給您。 在 Zebra 裝置上開啟公司入口網站應用程式，然後[傳送記錄](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android)。 使用傳送記錄功能也會建立 PowerLift 事件識別碼，如果您要連絡 Microsoft 支援服務，就可以參考此識別碼。
+若要在使用 Intune 部署設定檔後取得記錄，終端使用者可以使用裝置上的電子郵件應用程式，以透過電子郵件傳送記錄給您。 在 Zebra 裝置上開啟公司入口網站應用程式，然後[傳送記錄](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android)。 使用傳送記錄功能也會建立 PowerLift 事件識別碼，如果您要連絡 Microsoft 支援服務，就可以參考此識別碼。
 
 ## <a name="read-the-logs"></a>讀取記錄
 

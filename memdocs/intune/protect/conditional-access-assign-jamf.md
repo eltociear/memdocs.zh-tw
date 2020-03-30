@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 3/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
-ms.reviewer: elocholi
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9760029effc873b510bf37b779c054c9a0574a20
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6ab840653d7090ed925af0db08f410e236392234
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353147"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219838"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>在使用 Jamf Pro 管理的 Mac 上強制執行合規性
 
@@ -41,7 +41,10 @@ ms.locfileid: "79353147"
 
 2. 選取 [裝置]   > [合規性政策]  。 如果您是使用先前建立的原則，請在主控台中選取該原則，然後移至此程序的下一個步驟。 若要建立新原則，請選取 [建立原則]  ，然後指定 [平台]  為 [macOS]  的原則詳細資料。 設定 [設定]  和 [因不符合規範而採取的動作]  ，以符合您的組織需求，然後選取 [建立]  以儲存原則。
 
-3. 在原則的 [概觀]  窗格上，選取 [指派]  。 使用可用的選項來設定會收到此原則的 Azure Active Directory (Azure AD) 使用者與安全性群組。 Jamf 與 Intune 的整合不支援以裝置群組為目標的合規性政策。
+3. 在原則的 [概觀]  窗格上，選取 [指派]  。 使用可用的選項來設定會收到此原則的 Azure Active Directory (Azure AD) 使用者與安全性群組。 **Jamf 與 Intune 的整合不支援以裝置群組為目標的合規性政策。**
+
+> [!NOTE]
+> Jamf 與 Intune 的整合僅支援 AAD 使用者群組。 以裝置群組為目標的裝置合規性原則將不適用。
 
 4. 當您選取 [儲存]  時，原則就會部署至使用者。  
 
