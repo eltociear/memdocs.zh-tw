@@ -96,6 +96,8 @@
               href: apps-advanced-threat-protection-macos.md
         - name: PowerShell 指令碼
           href: intune-management-extension.md
+        - name: macOS shell 指令碼
+          href: macos-shell-scripts.md
     - name: 指派應用程式
       items:
         - name: 將應用程式指派給群組
