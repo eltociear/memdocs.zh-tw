@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e0115fcdf823e3881ef80edbe44c1762ac6cbf1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2538a8c9755efe9ecec80358b7d90f10d5f2c33a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342383"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323816"
 ---
 # <a name="intune-discovered-apps"></a>Intune 探索到的應用程式
 
@@ -33,7 +33,7 @@ Intune **探索到的應用程式**是 Intune 在您租用戶中已註冊裝置�
 
 Intune 提供在您的租用戶中已註冊 Intune 之裝置上偵測到之應用程式的彙總清單。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [監視]   > [探索到的應用程式]  。
 
 >[!NOTE]
@@ -43,7 +43,7 @@ Intune 提供在您的租用戶中已註冊 Intune 之裝置上偵測到之應�
 
 Intune 也會提供在您的租用戶中個別裝置上探索到的應用程式清單。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [裝置]   > [所有裝置]  。
 3. 選取一個裝置。
 4. 若要檢視針對此裝置探索到的應用程式，請在 [監視器]  區段中選取 [探索到的應用程式]  。

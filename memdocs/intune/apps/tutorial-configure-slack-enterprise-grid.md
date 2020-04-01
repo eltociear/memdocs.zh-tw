@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f5b0505e5ceaccdb8df5a9a5eb53fe950ea8e14
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 556381337b225640f25d2e3adf86dde5ed428273
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343735"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325674"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>教學課程：設定 Slack 以針對 EMM 和應用程式設定使用 Intune
 

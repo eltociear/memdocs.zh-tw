@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b833e5265387637a35bfcdf79f4ae5f37558de61
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dc536d4c2c0d06a768d42d4a796ec56cf80c0d66
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343956"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401430"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Intune 引導式案例概觀 
 
@@ -46,7 +46,7 @@ ms.locfileid: "79343956"
 
 ### <a name="launching"></a>啟動  
 
-您可以在 **[裝置管理入口網站](https://devicemanagement.microsoft.com)**  > [疑難排解 + 支援]   > [引導式案例]  中找到所有引導式案例。 
+您可以在 **[裝置管理入口網站](https://endpoint.microsoft.com)**  > [疑難排解 + 支援]   > [引導式案例]  中找到所有引導式案例。 
 
 引導式案例會以說明該案例用途的簡介，以及完成設定所需的任何必要條件作為開始。 此時，系統會檢查您的系統管理員權限，以確認您具備完成該案例所需的所有必要權限。  
 

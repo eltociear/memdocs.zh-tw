@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06d5e2163303b9766d41bcb0bd7581dc41bf6980
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: dc4580c1debec3f8583a68305438443a211f9243
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80219821"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326186"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>尋找 Intune 裝置的主要使用者
 
@@ -30,7 +30,7 @@ ms.locfileid: "80219821"
 
 ## <a name="find-a-devices-primary-user"></a>尋找裝置的主要使用者
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選擇 [裝置]  > 選擇裝置。
 3. 在 [概觀]  頁面中，您可以看到列出的主要使用者。
 
@@ -38,7 +38,7 @@ ms.locfileid: "80219821"
 
 您可以更新已加入 Azure AD 或混合式 Azure AD 之 Windows 10 裝置的主要使用者。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選擇 [裝置]   > [所有裝置]  > 選擇裝置 > [屬性]   > [變更主要使用者]  。
 3. 選取新的使用者，然後選擇 [選取]  。
 

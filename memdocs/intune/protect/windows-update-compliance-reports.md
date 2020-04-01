@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64caae99a05c6bbf99cd74ded17074414b53f6a9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7ad666f21b2ff271b99675486835357dfd071773
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338444"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326510"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>更新的 Intune 合規性報表
 
@@ -31,7 +31,7 @@ ms.locfileid: "79338444"
 
 若要針對您已設定之 Windows 10 更新通道的部署狀態檢閱其原則報表：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [裝置]   > [概觀]   > [軟體更新狀態]  。 您可以看到所指派任何更新通道的狀態一般資訊。
 

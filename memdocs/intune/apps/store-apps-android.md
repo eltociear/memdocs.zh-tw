@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 754ca7d6b97b528ada692fcb8386118a2888c127
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a0e46e0578205c57c91680154112c917876fba4a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79334219"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325953"
 ---
 # <a name="add-android-store-apps-to-microsoft-intune"></a>將 Android 市集應用程式新增至 Microsoft Intune
 
@@ -35,7 +35,7 @@ ms.locfileid: "79334219"
 
 您可以採取下列步驟，透過 Azure 入口網站，將 Android 市集應用程式新增至 Intune：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [所有應用程式]   > [新增]  。
 3. 在 [選取應用程式類型]  窗格中，在可用的 [市集應用程式]  類型下，選取 [Android Store 應用程式]  。
 4. 按一下 [選取]  。<br>

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d78cfe25b28ef95d84ec7e618c4f73caffc214b0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c10f2356e740036bbc779f03253eebec6fd7d05e
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352055"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327489"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>安裝內部部署 Intune Exchange 連接器
 
@@ -83,7 +83,7 @@ Intune 支援針對每個訂閱安裝多個 Intune Exchange 連接器。 如果�
 
 在可支援 Intune Exchange 連接器的 Windows 伺服器上：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。  使用在內部部署 Exchange Server 中擔任系統管理員，並且具備 Exchange Server 使用授權的帳戶。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。  使用在內部部署 Exchange Server 中擔任系統管理員，並且具備 Exchange Server 使用授權的帳戶。
 
 2. 選取 [租用戶系統管理]   > [Exchange 存取]  。
 
@@ -214,7 +214,7 @@ Intune 支援每個訂閱可以有多個 Intune Exchange 連接器。 針對具�
 
 順利設定 Exchange 連接器之後，您可以檢視連線狀態與上次成功的同步處理嘗試：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [租用戶系統管理]   > [Exchange 存取]  。
 
@@ -234,7 +234,7 @@ Intune Exchange 連接器會定期自動同步處理 EAS 和 Intune 的裝置記
 
 您可以透過使用 Intune 儀表板上的 [快速同步處理]  或 [完整同步處理]  選項，強制連接器執行同步處理：
 
-   1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+   1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
    2. 選取 [租用戶系統管理]   > [Exchange 存取]   >  [Exchange ActiveSync 內部部署連接器]  。
 

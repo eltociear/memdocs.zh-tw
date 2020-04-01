@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4cf4948500d8b664d24c6766ad45d909dda541c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8707b938231e682fe1cd165c207cca8e575950d4
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341044"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324665"
 ---
 # <a name="add-microsoft-defender-atp-to-macos-devices-using-microsoft-intune"></a>使用 Microsoft Intune 將 Microsoft Defender ATP 新增至 macOS 裝置
 
@@ -39,7 +39,7 @@ ms.locfileid: "79341044"
 ## <a name="add-microsoft-defender-atp-to-intune"></a>將 Microsoft Defender ATP 新增至 Intune
 您可以使用下列步驟，將 Microsoft Defender ATP 新增至 Intune：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [所有應用程式]   > [新增]  。
 3. 在 [應用程式類型]  清單中的 [Microsoft Defender ATP]  下方，選取 [macOS]  。
 

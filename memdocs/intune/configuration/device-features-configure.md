@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0f1552d2edc6bfa5f6bdb255f156bcfb77a4990
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 30bf5ba078029e35988d3531ee510d9db6c6cdb8
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084103"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359485"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>在 Intune 中新增 iOS、iPadOS 或 macOS 裝置功能設定
 
@@ -203,30 +203,45 @@ AirPrint 是可讓裝置透過無線網路列印到檔案的 Apple 功能。 在
 - iOS 7.0 和更新版本
 - iPadOS 13.0 和更新版本
 
-## <a name="create-a-device-profile"></a>建立裝置設定檔
+## <a name="create-the-profile"></a>建立設定檔
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 3. 輸入下列內容：
 
-    - **名稱**：輸入政策的描述性名稱。 為您的設定檔命名，以方便之後能夠輕鬆識別。 例如，良好的原則名稱是 **macOS：設定登入畫面**。
-    - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
     - **平台**：選擇您的裝置平台。 選項包括：  
+
         - **iOS/iPadOS**
         - **macOS**
-    - **設定檔類型**：選取 [裝置功能]  。
 
-4. 您可設定的設定會視您選擇的平台而不同。 選擇您平台來進行詳細設定：
+    - **設定檔**：選取 [裝置功能]  。
+
+4. 選取 [建立]  。
+5. 在 [基本資訊]  中，輸入下列內容：
+
+    - **名稱**：輸入政策的描述性名稱。 為您的設定檔命名，以方便之後能夠輕鬆識別。 例如，良好的原則名稱是 **macOS：設定登入畫面**。
+    - **描述**：輸入政策的描述。 這是選擇性設定，但建議執行。
+
+6. 選取 [下一步]  。
+
+7. 在 [組態設定]  中，您可進行的設定會根據您選擇的平台而不同。 選擇您平台來進行詳細設定：
 
     - [iOS/iPadOS](ios-device-features-settings.md)
     - [macOS](macos-device-features-settings.md)
 
-5. 當您完成時，請選取 [確定]   > [建立]  儲存變更。
+8. 選取 [下一步]  。
+9. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
 
-設定檔隨即建立，並顯示在設定檔清單中。 請確認會[指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
+    選取 [下一步]  。
+
+10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
+
+    選取 [下一步]  。
+
+11. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立]  時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 ## <a name="next-steps"></a>後續步驟
 
-建立設定檔之後即可加以指派。 接下來，[指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
+雖然設定檔已建立，但它可能還不會執行任何動作。 接下來，[指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
 
 檢視適用於 [iOS/iPadOS](ios-device-features-settings.md) 和 [macOS](macos-device-features-settings.md) 裝置的所有裝置功能設定。

@@ -1,5 +1,5 @@
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [所有應用程式]  。
 3. 從應用程式清單中，尋找並選取您的應用程式。  
 4. 從應用程式窗格，選取 [管理]  下的 [內容]  。

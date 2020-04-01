@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4acb2317ea2147f25ef5b19c7d92ae795df36629
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 98451e7ffd6aef9e5fb298af96b91074f39c383e
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338106"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325276"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>什麼是 Microsoft Intune 裝置管理？
 
@@ -33,7 +33,7 @@ ms.locfileid: "79338106"
 
 ## <a name="get-to-your-devices"></a>移至您的裝置
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 3. 選取 [裝置]  。 此檢視會顯示有關個別裝置的詳細資訊，以及它們各有哪些功能，包括：
 
    - [概觀]  會顯示已註冊裝置的視覺化快照集、有多少裝置使用不同的平台等。

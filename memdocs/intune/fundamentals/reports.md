@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63034080c883452edadb3ae7812d936b841910e7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d4e377e0cd9ad15d1d3a0ac9fb5c088dc1366d48
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79356579"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326755"
 ---
 # <a name="intune-reports"></a>Intune 報告
 Microsoft Intune 報表可讓您更有效率且主動地監視組織中端點的健康情況和活動，同時也提供 Intune 中的其他報表資料。 例如，您將能夠看到關於裝置合規性、裝置健康情況和裝置趨勢的報表。 此外，您還可以建立自訂報表來取得更特定的資料。 
@@ -53,7 +53,7 @@ Microsoft Intune 報表可讓您更有效率且主動地監視組織中端點的
 
 您可以使用下列步驟來檢視**不合規的裝置**報表：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [裝置]   > [監視]   > [不合規的裝置]  。
 
     ![不合規的裝置報表](./media/intune-reports/intune-reports-02.png)
@@ -67,7 +67,7 @@ Microsoft Intune 報表可讓您更有效率且主動地監視組織中端點的
 
 若要查看產生的裝置狀態報表，您可以使用下列步驟：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [報表]  來檢視報表摘要。
 3. 選取 [裝置合規性]  。
 4. 選取 [合規性狀態]  、[OS]  和 [擁有權]  篩選條件，來讓您的報表更精簡。
@@ -84,7 +84,7 @@ Microsoft Intune 報表可讓您更有效率且主動地監視組織中端點的
 
 裝置合規性報表是以 [報告]  工作負載中的摘要報告提供。 使用下列步驟來檢視裝置合規性報表：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [報表]  來檢視報表摘要。
 
     ![Intune 報表摘要](./media/intune-reports/intune-reports-01.png)
@@ -97,7 +97,7 @@ Microsoft Intune 報表可讓您更有效率且主動地監視組織中端點的
 
 您可以使用下列步驟來檢視**趨勢**報表：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [報表]   > [趨勢]  ，來檢視裝置合規性在 60 天內的趨勢。
 
     ![Intune 趨勢報表](./media/intune-reports/intune-reports-03.png)
@@ -112,7 +112,7 @@ Microsoft Intune 報表可讓您更有效率且主動地監視組織中端點的
 
 您可以使用下列步驟來建立和檢視自訂報表：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [報表]   > [診斷設定]  ，新增[診斷設定](reports.md#diagnostic-settings)。
 
     ![Intune 報表摘要](./media/intune-reports/intune-reports-04.png)

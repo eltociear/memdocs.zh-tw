@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62069ff0ca3bf8938f65dcd7ffa3c1ac75559ca5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 02f90fc0cd249062f878b5a18481f6a6a73228af
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79334115"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323390"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>如何使用 Microsoft Intune 從商務用 Microsoft Store 管理大量購買的應用程式
 
@@ -70,7 +70,7 @@ ms.locfileid: "79334115"
 
 ## <a name="configure-synchronization"></a>設定同步處理
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [租用戶系統管理]   > [連接器與權杖]   > [商務用 Microsoft Store]  。
 3. 按一下 [啟用]  。
 4. 若還未執行此動作，請遵循前文所述按一下連結來註冊商務用 Microsoft 網上商店並關聯您的帳戶。

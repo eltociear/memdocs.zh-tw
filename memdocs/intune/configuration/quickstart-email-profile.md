@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bc170c5260dc099d0a2b4109ed119572e0dbaff
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: af7657eb89df14e8429a81616e76d81a5a9ac5c1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086862"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327432"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-iosipados"></a>快速入門：建立 iOS/iPadOS 的電子郵件裝置設定檔
 
@@ -37,7 +37,7 @@ ms.locfileid: "80086862"
 
 ## <a name="create-an-iosipados-email-profile"></a>建立 iOS/iPadOS 電子郵件設定檔
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取並移至 [裝置]   > [組態設定檔]   > [建立設定檔]  。
    ![在 Intune 中建立 iOS/iPadOS 的電子郵件設定檔](./media/quickstart-email-profile/ios-create-profile.png)

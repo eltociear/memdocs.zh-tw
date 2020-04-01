@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcd6a49c0960bc38215123536e520bc89bcaeca1
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 84e77a894e207d5dfb2ffe9247ef449050d46036
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083474"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324953"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>使用 Microsoft Intune 將 Office 365 應用程式新增至 Windows 10 裝置
 
@@ -49,7 +49,7 @@ ms.locfileid: "80083474"
 
 ## <a name="select-the-office-365-suite-app-type"></a>選取 Office 365 套件應用程式類型
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [所有應用程式]   > [新增]  。
 3. 選取 [選取應用程式類型]  窗格 [Office 365 套件]  區段中的 [Windows 10]  。
 4. 按一下 [選取]  。 [新增 Office 365 套件]  步驟隨即顯示。

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6dab926a59e69f5afb6c2f40ea7e315afed49f8
-ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
+ms.openlocfilehash: ba5aebca04a93198e7694d52085225284c88027c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2020
-ms.locfileid: "80117282"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325022"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>使用 Intune 將受控 Google Play 應用程式新增至 Android Enterprise 裝置
 
@@ -61,7 +61,7 @@ ms.locfileid: "80117282"
 
 ### <a name="add-a-managed-google-play-store-app-directly-in-the-intune-console"></a>在 Intune 主控台中直接新增受控 Google Play 商店應用程式
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [所有應用程式]   > [新增]  。
 3. 在 [選取應用程式類型]  窗格中，在可用的 [市集應用程式]  類型下，選取 [受控 Google Play 應用程式]  。
 4. 按一下 [選取]  。 [受控的 Google Play]  應用程式市集隨即顯示。
@@ -115,7 +115,7 @@ ms.locfileid: "80117282"
 
 ### <a name="managed-google-play-private-lob-app-publishing-directly-in-the-intune-console"></a>直接在 Intune 主控台中發佈受控 Google Play 私人 (LOB) 應用程式
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [所有應用程式]   > [新增]  。
 3. 在 [選取應用程式類型]  窗格中，在可用的 [市集應用程式]  類型下，選取 [受控 Google Play 應用程式]  。
 4. 按一下 [選取]  。 [受控的 Google Play]  應用程式市集隨即在 Intune 內顯示。
@@ -156,7 +156,7 @@ ms.locfileid: "80117282"
 
 網頁連結將透過 Microsoft Edge 或您選擇部署的任何其他瀏覽器應用程式來開啟。 務必至少將一個瀏覽器應用程式部署至裝置，讓網頁連結能夠正確開啟。 不過，網頁連結可用的所有 [顯示]  選項 (全螢幕、獨立及最基本的 UI) 都只能搭配 Chrome 瀏覽器運作。 
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [所有應用程式]   > [新增]  。
 3. 在 [選取應用程式類型]  窗格中，在可用的 [市集應用程式]  類型下，選取 [受控 Google Play 應用程式]  。
 4. 按一下 [選取]  。 [受控的 Google Play]  應用程式市集隨即在 Intune 內顯示。
@@ -174,7 +174,7 @@ ms.locfileid: "80117282"
 
 如果您已核准商店中的某個應用程式，但它並未出現在 [應用程式]  工作負載中，請以下列方式強制立即同步處理：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 3. 選取 [應用程式]   > [租用戶系統管理]   > [連接器與權杖]   > [受控的 Google Play]  。
 5. 在 [受控 Google Play]  窗格中，選擇 [重新整理]  。  
     此頁面會更新最近一次同步的時間和狀態。

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd5090e8c0afb8e8a3e6c989561c36acae5d5d0d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a0a9f4d9195c68664f42570746ade6d924c8da62
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352926"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323016"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>將 Jamf Pro 與 Intune 整合以取得合規性
 
@@ -113,7 +113,7 @@ Jamf 和 Intune 必須能夠存取下列連接埠，才能正確整合：
 
 ### <a name="enable-intune-to-integrate-with-jamf-pro"></a>使 Intune 與 Jamf Pro 整合
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [租用戶系統管理]   > [連接器與權杖]   > [夥伴裝置管理]  。
 
@@ -162,7 +162,7 @@ Jamf 和 Intune 必須能夠存取下列連接埠，才能正確整合：
 
 3. 選取 [儲存]  。 Jamf Pro 會將您的設定傳送至 Intune，並終止整合。
 
-4. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+4. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 5. 選取 [租用戶系統管理]   > [連接器與權杖]   > [夥伴裝置管理]  ，以驗證狀態現為 [已終止]  。
 

@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3c52261051000e7af1580f8213e5d348857a128c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 796e95b09193228fdc4612a370658e532fbbd2c6
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340225"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324360"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>在 S 模式裝置上啟用 Win32 應用程式
 
-[Windows 10 S 模式](https://docs.microsoft.com/windows/deployment/s-mode) \(部分機器翻譯\) 是鎖定的作業系統，只會執行 Store 應用程式。 根據預設，Windows S 模式的裝置不允許安裝及執行 Win32 應用程式。 這些裝置包括單一 *Win 10S 基本原則*，此原則會鎖定 S 模式裝置，使所有 Win32 應用程式都無法在其上執行。 不過，在 Intune 中建立及使用 **S 模式補充原則**，您就可以在 Windows 10 S 模式受控裝置上安裝及執行 Win32 應用程式。 透過使用 [Microsoft Defender 應用程式控制 (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) PowerShell 工具，您可以為 Windows S 模式建立一或多個補充原則。 您必須使用 [Device Guard 簽署服務 (DGSS)](https://go.microsoft.com/fwlink/?linkid=2095629) 或 [SignTool.exe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/signing-policies-with-signtool) 簽署補充原則，然後透過 Intune 上傳並散發這些原則。 或者，您可以使用組織中的程式碼簽署憑證簽署補充原則，不過，慣用的方法是使用 DGSS。 在您使用組織中的程式碼簽署憑證的執行個體中，程式碼簽署憑證所鏈結的根憑證必須存在於裝置上。
+[Windows 10 S 模式](https://docs.microsoft.com/windows/deployment/s-mode) \(部分機器翻譯\) 是鎖定的作業系統，只會執行 Store 應用程式。 根據預設，Windows S 模式的裝置不允許安裝及執行 Win32 應用程式。 這些裝置包括單一 *Win 10S 基本原則*，此原則會鎖定 S 模式裝置，使所有 Win32 應用程式都無法在其上執行。 不過，在 Intune 中建立及使用 **S 模式補充原則**，您就可以在 Windows 10 S 模式受控裝置上安裝及執行 Win32 應用程式。 透過使用 [Microsoft Defender 應用程式控制 (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) PowerShell 工具，您可以為 Windows S 模式建立一或多個補充原則。 您必須使用 [Device Guard 簽署服務 (DGSS)](https://go.microsoft.com/fwlink/?linkid=2095629) 或 [SignTool.exe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/use-signed-policies-to-protect-windows-defender-application-control-against-tampering) 簽署補充原則，然後透過 Intune 上傳並散發這些原則。 或者，您可以使用組織中的程式碼簽署憑證簽署補充原則，不過，慣用的方法是使用 DGSS。 在您使用組織中的程式碼簽署憑證的執行個體中，程式碼簽署憑證所鏈結的根憑證必須存在於裝置上。
 
 透過在 Intune 中指派 S 模式補充原則，您可以讓裝置成為裝置現有 S 模式原則的例外，以允許上傳對應的已簽署應用程式目錄。 該原則會設定可在 S 模式裝置上使用的應用程式允許清單 (應用程式目錄)。
 
@@ -57,7 +57,7 @@ ms.locfileid: "79340225"
 
 若要建立 Windows 10 S 模式補充原則，請使用下列步驟：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [S 模式補充原則]   > [建立原則]  。
 3. 在新增**原則檔案**之前，您必須先建立並簽署它。 如需詳細資訊，請參閱：
     - [使用 PowerShell 工具建立 WDAC 原則，並將它轉換成二進位格式](https://go.microsoft.com/fwlink/?linkid=2095387)

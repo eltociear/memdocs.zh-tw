@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7817a747a01a137fd29ee8aae117cd604da233a5
-ms.sourcegitcommit: 4815f07c8c0399c077b71721c6e6b61047c75ae6
+ms.openlocfilehash: aaec456a5ff9864fedf5e95f317bc484ddfc4d82
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79437110"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80275062"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>使用 Intune 保護裝置的 Windows 10 (及更新版本) 設定
 
@@ -798,7 +798,7 @@ Microsoft Intune 包含許多設定，可協助保護您的裝置。 本文描�
 
 - **標記對 Windows 本機安全性授權子系統進行的認證竊取**  
   **預設**：尚未設定  
-  規則：[從 Windows 規則：封鎖竊取自 Windows 本機安全性授權子系統 (lsass.exe) 的認證](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem-lsassexe)
+  規則：[從 Windows 規則：封鎖竊取自 Windows 本機安全性授權子系統 (lsass.exe) 的認證](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
   協助預防搜尋惡意程式碼探索通常用來感染電腦的動作與應用程式。  
 

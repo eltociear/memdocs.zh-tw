@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c04423f79855f4c28121dad11fa21ccb05216de
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: b25d5439aa9d0842cbbee24b5e8759d00f371d4b
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084163"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407709"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>透過搭配 Microsoft Intune 使用 Microsoft Edge 來管理 Web 存取
 
@@ -64,7 +64,7 @@ ms.locfileid: "80084163"
 > 需要在受保護的瀏覽器中開啟時，iOS 裝置上新的 Web 剪輯 (釘選的 Web 應用程式) 將會在 Microsoft Edge (而不是 Intune Managed Browser) 中開啟。 針對較舊的 iOS Web 剪輯，您必須為這些 Web 剪輯重定目標，以確保其會在 Microsoft Edge (而非 Managed Browser) 中開啟。
 
 若要限制已連線至 Azure AD 的 Web 應用程式在 iOS 和 Android 上只能使用 Microsoft Edge：
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 在 Intune 節點下，選取 [條件式存取]   > [新原則]  。
 3. 選取窗格之 [存取控制]  區段中的 [授與]  。
 4. 選取 [需要經過核准的用戶端應用程式]  。
@@ -103,7 +103,7 @@ SSO 要求裝置必須註冊 iOS 裝置的 Microsoft Authenticator 應用程式�
 
 針對 Microsoft Edge 建立應用程式設定：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [應用程式設定原則]   > [新增]  。
 3. 在 [新增設定原則]  窗格上，輸入應用程式組態設定的 [名稱]  和選擇性 [描述]  。
 4. 針對 [裝置註冊]  類型請選擇 [受管理的應用程式]  。
@@ -343,7 +343,7 @@ Microsoft Edge 及 [Azure AD 應用程式 Proxy](https://docs.microsoft.com/azur
 
 |    機碼    |    值    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     `com.microsoft.intune.man.managedbrowser.disableShareBrowsingHistory`    |     **True** 會停用此提示，使其無法向使用者顯示。     |
+|     `com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory`    |     **True** 會停用此提示，使其無法向使用者顯示。     |
 
 ### <a name="disable-prompts-that-offer-to-save-passwords"></a>停用儲存密碼的提示
 

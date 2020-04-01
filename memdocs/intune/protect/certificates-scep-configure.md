@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc939b1719e214e93f06ddf13d1cc05f4d26560b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4698c0bf286fab855b0067899c5347b643ee6ce9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353537"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325748"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>設定基礎結構以支援 SCEP 與 Intune
 
@@ -359,7 +359,7 @@ Microsoft Intune 憑證連接器會安裝在執行 NDES 服務的伺服器上。
 
 ### <a name="to-install-the-certificate-connector"></a>安裝憑證連接器
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [租用戶系統管理]   > [連接器與權杖]   > [憑證連接器]   > [新增]  。
 

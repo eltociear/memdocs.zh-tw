@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b8de67a77b2122c5db4dddbb82a4966c20e1936
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.openlocfilehash: 379ceb4bf99081e5544be15d338aade0eb5a7a60
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233498"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323601"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>如何建立及部署應用程式保護原則
 
@@ -45,7 +45,7 @@ ms.locfileid: "80233498"
 
 ### <a name="create-an-iosipados-or-android-app-protection-policy"></a>建立 iOS/iPadOS 或 Android 應用程式保護原則
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 在 Intune 入口網站中，選擇 [應用程式]   > [應用程式保護原則]  。 此選取項目會開啟 [應用程式原則]  的詳細資料，讓您從中建立新的原則及編輯現有的原則。
 3. 選取 [建立原則]  然後選取 [iOS/iPadOS]  或 [Android]  。 隨即顯示 [建立原則]  窗格。
 4. 在 [基本]  頁面上，新增下列值：

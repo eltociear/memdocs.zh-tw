@@ -16,12 +16,12 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df5656e4cfbd6311c4bfb96e2845091911d975fe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5f4b50ac8df811a3e71070ebec979139b3ebbe62
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341525"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325119"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>簽署企業營運應用程式以使用 Intune 將它們部署到 Windows 裝置
 
@@ -52,7 +52,7 @@ ms.locfileid: "79341525"
 
 如果您的 Windows 10 裝置尚未信任憑證授權單位，則在您簽署 appx 套件並將它上傳至 Intune 服務之後，您需要將程式碼簽署憑證上傳至 Intune 入口網站：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 按一下 [租用戶系統管理]   > [連接器與權杖]   > [Windows Enterprise 憑證]  。
 3. 選取 [程式碼簽署憑證檔案]  底下的檔案。
 4. 選取您的 *.cer* 檔案，然後按一下 [開啟]  。

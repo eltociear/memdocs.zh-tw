@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5011e24064c4c546107f950925d12489ed9113c9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6095c079c6b5cb6f132d9963e3e7413e97180d70
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340602"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324592"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Microsoft Intune 的包含與排除應用程式指派
 
@@ -57,7 +57,7 @@ ms.locfileid: "79340602"
 
 若要使用包含和排除指派將應用程式指派給群組：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [所有應用程式]  。 已新增應用程式清單隨即顯示。
 3. 選取您要指派的應用程式。 儀表板會顯示應用程式的相關資訊。
 4. 在功能表的 [管理]  區段中，選取 [指派]  。
@@ -90,7 +90,7 @@ ms.locfileid: "79340602"
 
 若要編輯指派，請在應用程式 [指派]  清單中，選取包含您要變更之特定指派的列。 您也可以藉由選取位在列結尾的省略符號 ( **...** )，然後選取 [移除]  來移除指派。 若要變更 [指派]  清單的檢視，可依 [指派類型]  或 [包含/排除]  分組。
 
-![Intune 應用程式指派 - 完成](/media/apps-inc-exl-assignments/apps-inc-exl-05.png)
+![Intune 應用程式指派 - 完成](./media/apps-inc-exl-assignments/apps-inc-exl-05.png)
 
 ## <a name="next-steps"></a>後續步驟
 

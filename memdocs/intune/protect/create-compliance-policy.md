@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f84df30204f866e5498e97b8d64ed3fc6fd4ba28
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 67a26a42efb56c75d9538d9e7fcd2d726327d26d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084913"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322997"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>在 Microsoft Intune 中建立合規性政策
 
@@ -61,7 +61,7 @@ ms.locfileid: "80084913"
 
 ## <a name="create-the-policy"></a>建立政策
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [裝置]   > [合規性政策]   > [政策]   > [建立政策]  。
 

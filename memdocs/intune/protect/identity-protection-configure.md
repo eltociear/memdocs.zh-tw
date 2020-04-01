@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c64a860a8d132fafac575545c16573c5fa0c940b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ded5572d5b20ee1c9f59d3f4b253c71e34ef497f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352003"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322854"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>搭配 Microsoft Intune 在 Windows 10 裝置上使用 Windows Hello 企業版
 
@@ -42,7 +42,7 @@ Intune 會使用「組態設定檔」來依據貴組織的需求建立和自訂�
 
 ## <a name="create-the-device-profile"></a>建立裝置設定檔
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 

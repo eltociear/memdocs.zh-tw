@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e6d06bade82dcebd170d7594ce25033382a2634
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c505b73b37daefac7027ff6b18f209583db99f0a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340576"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324493"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>使用 Microsoft Intune 監視應用程式資訊和指派
 
@@ -31,7 +31,7 @@ ms.locfileid: "79340576"
 
 Intune 提供數種方式，可讓您監視您所管理應用程式的內容，以及管理它們的指派狀態。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [所有應用程式]  。
 3. 在應用程式清單中，選取要監視的應用程式。 您接著會看到內含裝置狀態和使用者狀態概觀的應用程式窗格。
 

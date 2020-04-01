@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b2bb9a6220a599cc0e403e6c71f3b8907bbab0e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c047c0f54e64dbe17b6bd9e9082272e80fe7566c
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085821"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401464"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune 的新功能 - 前幾個月
 
@@ -229,7 +229,7 @@ Intune 支援下列衍生認證提供者：
 ### <a name="microsoft-365-device-management"></a>Microsoft 365 裝置管理
 
 #### <a name="improved-administration-experience-in-microsoft-365-device-management---5551239---"></a>已改善 Microsoft 365 裝置管理中的管理體驗<!-- 5551239 -->
-現已在 Microsoft 365 裝置管理專家工作區 ([https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com)) 中推出重新整理且簡化的管理體驗，包括：
+現已在 Microsoft 365 裝置管理專家工作區 ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) 中推出重新整理且簡化的管理體驗，包括：
 
 - **已更新的導覽**：您會發現第一層導覽已簡化，並以邏輯方式將功能分組。
 - **新的平台篩選器**：您可以在 [裝置及應用程式] 頁面上選取單一平台，只顯示所選平台的原則與應用程式。
@@ -238,7 +238,7 @@ Intune 支援下列衍生認證提供者：
 
 #### <a name="introducing-endpoint-security-node-in-microsoft-365-device-management---5630102---"></a>推出 Microsoft 365 裝置管理中的端點安全性節點<!-- 5630102 -->
 
-**端點安全性**節點現已在 Microsoft 365 裝置管理專家工作區 (https://devicemanagement.microsoft.com ) 中公開推出，它將各功能分組在一起，以保護端點，例如：
+**端點安全性**節點現已在 Microsoft 365 裝置管理專家工作區 (https://endpoint.microsoft.com ) 中公開推出，它將各功能分組在一起，以保護端點，例如：
 
 - 安全性基準：預先設定的設定群組，有助套用 Microsoft 所建議的已知設定群組與預設值。
 - 安全性工作：利用 Microsoft Defender ATP 威脅與弱點管理 (TVM)，並使用 Intune 來修復端點弱點。
@@ -527,7 +527,7 @@ Intune 現在支援同時管理 iPadOS 與 iOS 13.1 裝置。 如需詳細資訊
 - [專用裝置]   > [多個應用程式]  ：[媒體音量控制]  可讓使用者使用滑桿來控制裝置的媒體音量。 
 - [專用裝置]   > [多個應用程式]  ：**啟用螢幕保護裝置**、上傳自訂影像，並控制何時顯示螢幕保護裝置程式。
 
-若要查看目前的設定，請前往[使用 Intune 允許或限制功能的 Android Enterprise 裝置設定](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings)。
+若要查看目前的設定，請前往[使用 Intune 允許或限制功能的 Android Enterprise 裝置設定](../configuration/device-restrictions-android-for-work.md#dedicated-devices)。
 
 適用於：
 
@@ -1461,7 +1461,7 @@ macOS
 #### <a name="kiosk-devices-are-now-called-dedicated-devices-on-android-enterprise-devices---3598402-----"></a>"Kiosk" 裝置現在稱為 Android Enterprise 裝置的「專用裝置」<!-- 3598402   -->
 為了配合 Android 術語，**kiosk** 已變更為 Android Enterprise 裝置的**專用裝置** ([裝置設定]   > [設定檔]   > [建立設定檔]  > [Android Enterprise] 平台 > [僅限裝置擁有者]   > [裝置限制]   > [專用裝置]  )。
 
-若要查看可用的設定，請前往[允許或限制功能的裝置設定](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings)。
+若要查看可用的設定，請前往[允許或限制功能的裝置設定](../configuration/device-restrictions-android-for-work.md#dedicated-devices)。
 
 適用於：  
 Android 企業
@@ -2106,7 +2106,7 @@ Intune 會將企業營運 (LOB) 應用程式的最大套件大小增加為 8 GB�
 ### <a name="monitor-and-troubleshoot"></a>監視及疑難排解
 
 #### <a name="new-intune-support-experience-in-the-microsoft-365-device-management-portal---3076965---"></a>Microsoft 365 裝置管理入口網站中的新 Intune 支援體驗<!-- 3076965 -->
-我們正於 [Microsoft 365 裝置管理入口網站]( https://devicemanagement.microsoft.com)中，為 Intune 推出新的說明及支援體驗。 新體驗可讓您用自己的文字描述問題，並收到疑難排解深入解析和網站型修復內容。 這些解決方案透過規則型的機器學習演算法提供，由使用者查詢所驅動。  
+我們正於 [Microsoft 365 裝置管理入口網站]( https://endpoint.microsoft.com)中，為 Intune 推出新的說明及支援體驗。 新體驗可讓您用自己的文字描述問題，並收到疑難排解深入解析和網站型修復內容。 這些解決方案透過規則型的機器學習演算法提供，由使用者查詢所驅動。  
 
 除了特定問題的指導之外，您也可以使用新的案例建立工作流程，透過電子郵件或電話來開啟支援案例。  
 
@@ -2148,7 +2148,7 @@ Intune 註冊、公司入口網站及受控瀏覽器現在只支援執行 iOS 10
 ### <a name="device-management"></a>裝置管理
 
 #### <a name="microsoft-365-device-management-administration-center---3078424---"></a>Microsoft 365 裝置管理的系統管理中心<!-- 3078424 -->
-Microsoft 365 的承諾之一是簡化管理，多年來我們已整合後端的 Microsoft 365 服務來提供端對端案例，例如 Intune 和 Azure AD 條件式存取。 新的 [Microsoft 365 系統管理中心](https://devicemanagement.microsoft.com)可用來合併、簡化及整合管理體驗。 [裝置管理] 的專家工作區可讓您輕鬆地存取所有裝置和應用程式管理資訊，以及您組織需要的工作。 我們預期這會成為企業終端使用者運算小組的主要雲端工作區。
+Microsoft 365 的承諾之一是簡化管理，多年來我們已整合後端的 Microsoft 365 服務來提供端對端案例，例如 Intune 和 Azure AD 條件式存取。 新的 [Microsoft 365 系統管理中心](https://endpoint.microsoft.com)可用來合併、簡化及整合管理體驗。 [裝置管理] 的專家工作區可讓您輕鬆地存取所有裝置和應用程式管理資訊，以及您組織需要的工作。 我們預期這會成為企業終端使用者運算小組的主要雲端工作區。
 
 
 <!-- ########################## -->

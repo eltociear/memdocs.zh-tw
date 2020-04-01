@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83107121b05b2126e4c6b2b377baf57ee069f917
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 893981700ede9587a980faa0e4d6b0384c24e3d4
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343982"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401493"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>快速入門：免費試用 Microsoft Intune
 
@@ -64,7 +64,7 @@ Intune 從透過 Microsoft 端點管理員系統管理中心管理的安全雲�
 
 如果您還沒有登入入口網站，請完成下列步驟：
 
-1. 開啟新的瀏覽器視窗，然後在網址列中輸入 **https://devicemanagement.microsoft.com** 。 
+1. 開啟新的瀏覽器視窗，然後在網址列中輸入 **https://endpoint.microsoft.com** 。 
 2. 使用在上述步驟中取得的使用者識別碼來登入 ( *yourID@yourdomain* .onmicrosoft.com)。
 
     ![入口網站登入頁面的影像](./media/free-trial-sign-up/azure-portal-signin.png)
@@ -126,7 +126,7 @@ Intune 從透過 Microsoft 端點管理員系統管理中心管理的安全雲�
 ## <a name="admin-experiences"></a>管理體驗
 
 您會最常使用的入口網站有兩個：
-- Microsoft 端點管理員系統管理中心 ([https://devicemanagement.microsoft.com/](https://devicemanagement.microsoft.com/)) 可讓您探索 [Intune 的功能](what-is-intune.md)。 這是系統管理員使用 Intune 的地方。
+- Microsoft 端點管理員系統管理中心 ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) 可讓您探索 [Intune 的功能](what-is-intune.md)。 這是系統管理員使用 Intune 的地方。
 - Microsoft 365 系統管理中心 ([https://admin.microsoft.com](https://admin.microsoft.com)) 是您可以新增及管理使用者的位置，前提是您未使用 Azure Active Directory 進行此工作。 您也可以管理您帳戶的其他事宜，包括計費及支援。
 
 ## <a name="next-steps"></a>後續步驟

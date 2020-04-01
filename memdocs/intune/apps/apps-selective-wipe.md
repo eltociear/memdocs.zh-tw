@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45c51496b515a526a2c1ea7756dbc3e32fa36892
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8a063baf405c9f9886718242f48a47e1e5fe68f5
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340823"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324512"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>如何只抹除 Intune 管理之應用程式中的公司資料
 
@@ -44,7 +44,7 @@ ms.locfileid: "79340823"
 
 ## <a name="create-a-wipe-request"></a>建立抹除要求
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [應用程式選擇性抹除]   > [建立抹除要求]  。<br>
    即會顯示 [Create wipe request] \(建立抹除要求\)  窗格。
 3. 按一下 [選取使用者]  ，選擇想要抹除其應用程式資料的使用者，然後按一下 [選取使用者]  窗格底部的 [選取]  。

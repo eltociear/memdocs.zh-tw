@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2219dae6de9814e7eacebe507095c46c598f932f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 2eae55477ef62c408ff886499f4668c81c799fc8
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084711"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326294"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>使用抹除、淘汰或手動取消註冊裝置來移除裝置
 
@@ -53,7 +53,7 @@ ms.locfileid: "80084711"
 
 ### <a name="wiping-a-device"></a>抹除裝置
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 3. 選取 [裝置]   > [所有裝置]  。
 4. 選取您要抹除的裝置名稱。
 5. 在顯示裝置名稱的窗格中，選取 [抹除]  。
@@ -146,7 +146,7 @@ ms.locfileid: "80084711"
 
 ### <a name="retire"></a>淘汰
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 在 [裝置]  窗格中，選取 [所有裝置]  。
 3. 選取您要淘汰的裝置名稱。
 4. 在顯示裝置名稱的窗格中，選取 [淘汰]  。 選取 [是]  確認。
@@ -157,7 +157,7 @@ ms.locfileid: "80084711"
 
 如果您想要從 Intune 入口網站移除裝置，則可以從特定的裝置窗格來刪除裝置。 下一次裝置簽入時，會移除裝置上所有的公司資料。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選擇 [裝置]   > [所有裝置]  > 選擇您要刪除的裝置 > [刪除]  。
 
 ### <a name="automatically-delete-devices-with-cleanup-rules"></a>使用清除規則自動刪除裝置
@@ -185,7 +185,7 @@ ms.locfileid: "80084711"
 
 如果您想要完全移除由 Intune 管理的 Apple DEP 裝置，請遵循下列步驟：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選擇 [裝置]   > [所有裝置]  > 選擇裝置 > [淘汰]  。
 ![淘汰的螢幕擷取畫面](./media/devices-wipe/retire.png)
 3. 請瀏覽 [business.apple.com](http://business.apple.com) 並依裝置序號搜尋裝置。

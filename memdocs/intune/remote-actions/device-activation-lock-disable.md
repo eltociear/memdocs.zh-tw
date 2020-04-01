@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2a6833001b73678557d0c9a911005cf6c80faed5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b23fbed8f12c4df90ff2136434e21f3eba369c9e
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349130"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322559"
 ---
 # <a name="disable-activation-lock-on-supervised-iosipados-devices-with-intune"></a>使用 Intune 在受監督的 iOS/iPadOS 裝置上停用啟用鎖定
 
@@ -74,7 +74,7 @@ Intune 可以要求執行 iOS/iPadOS 8.0 和更新版本之受監督裝置的啟
 
 Intune 的**停用啟用鎖定**遠端裝置動作無需使用者的 Apple ID 與密碼，就能移除 iOS/iPadOS 裝置的啟用鎖定。 當您停用啟用鎖定之後，裝置會在 [尋找我的 iPhone] 應用程式啟動時，再次開啟啟用鎖定。 您必須能夠在裝置上實機操作，才能停用啟用鎖定。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 3. 在 [Intune]  刀鋒視窗中，選取 [裝置]  。
 4. 在 [裝置]  刀鋒視窗中，選取 [所有裝置]  。
 5. 在您管理的裝置清單中，選取 [停用啟用鎖定]  裝置遠端動作。

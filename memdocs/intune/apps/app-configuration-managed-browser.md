@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 936dc5d4167252fcb2280ca3c9aa8b450a924a98
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 7b62a717217daaffeca5480ac55d0ccef3b10136
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083644"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323397"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>使用 Microsoft Intune 的受原則保護瀏覽器來管理 Web 存取
 
@@ -97,7 +97,7 @@ Managed Browser 現在是進行條件式存取的經過核准用戶端應用程�
 > [!TIP]  
 > 條件式存取是一項 Azure Active Directory (Azure AD) 技術。 從 *Intune* 存取的條件式存取節點，與從 *Azure AD* 存取的節點相同。  
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [裝置]   > [條件式存取]   > [新增原則]  。
 3. 新增原則的 [名稱]  。 
 4. 在 [指派]  區段中，選取 [條件]   > [用戶端應用程式]  。 隨即顯示 [用戶端應用程式]  窗格。
@@ -138,7 +138,7 @@ SSO 要求您的裝置必須由 iOS/iPadOS 上的 Microsoft Authenticator 應用
 >[!IMPORTANT]
 >如要套用應用程式設定，使用者的受保護瀏覽器或裝置上的另一個應用程式必須已受 [Intune 應用程式防護原則](app-protection-policy.md)管理
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [應用程式設定原則]   > [新增]   > [受管理的應用程式]  。
 3. 在 [建立應用程式設定原則]  窗格的 [基本]  頁面上，輸入應用程式組態設定的 [名稱]  和選擇性 [描述]  。
 4. 選擇 [選取公用應用程式]  ，然後選擇適用於 iOS/iPadOS、Android 或兩者的 [Managed Browser]  和/或 [Edge]  。

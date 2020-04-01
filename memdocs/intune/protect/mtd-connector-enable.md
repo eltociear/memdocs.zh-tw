@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee2d88e444941f2b75e6dcc716748c442de459a6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8c70cdabf412c4c9a57473c5ad11f16288eb7cdc
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351509"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322525"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>在 Intune 中啟用 Mobile Threat Defense 連接器
 
@@ -52,7 +52,7 @@ ms.locfileid: "79351509"
 
 ## <a name="to-enable-the-mobile-threat-defense-connector"></a>啟用 Mobile Threat Defense 連接器
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [租用戶系統管理]   > [連接器與權杖]   > [Mobile Threat Defense]  。
 

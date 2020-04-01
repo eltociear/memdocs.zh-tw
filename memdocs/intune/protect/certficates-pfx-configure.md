@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94e170e01a1ede01a94b2ca3f09d8530f97335a3
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: b2ef5656c2608cee825dc294d87e661c7ad63634
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085018"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322791"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>透過 Intune 設定並使用 PKCS 憑證
 
@@ -144,7 +144,7 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
 > [!IMPORTANT]  
 > Microsoft Intune 憑證連接器無法安裝在發行憑證授權單位 (CA) 上，而必須安裝在不同的 Windows 伺服器上。  
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [租用戶系統管理]   > [連接器與權杖]   > [憑證連接器]   > [+ 新增]  。
 
@@ -173,7 +173,7 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
 
 ## <a name="create-a-trusted-certificate-profile"></a>建立受信任的憑證設定檔
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取並移至 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 
@@ -214,7 +214,7 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
 
 ## <a name="create-a-pkcs-certificate-profile"></a>建立 PKCS 憑證設定檔
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取並移至 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 

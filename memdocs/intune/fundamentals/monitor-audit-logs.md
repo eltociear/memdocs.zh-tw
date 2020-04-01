@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a9d3ed650f9c366778427cee2f525dc6d9d90f9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5b271c05f71cdd166533d837e46c1396bf66c06c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79357944"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326739"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>使用稽核記錄追蹤與監視 Microsoft Intune 中的事件
 
@@ -40,7 +40,7 @@ ms.locfileid: "79357944"
 
 您可以檢閱每個 Intune 工作負載監視群組中的稽核記錄：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [租用戶管理]   > [稽核記錄]  。
 3. 若要篩選結果，請選取 [篩選]  並使用下列選項來精簡結果。
     - **類別**：例如 [合規性]  、[裝置]  和 [角色]  。

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3620f59fbc7f7ea992f132d545af2842ac64207e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9729fa1fb89f31606c35d61773c224693e7da3c1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342682"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323461"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>在不註冊裝置的情況下新增受管理應用程式的應用程式設定原則
 
@@ -31,7 +31,7 @@ ms.locfileid: "79342682"
 
 即使在未註冊的裝置上，您仍然可以透過支援 Intune App SDK 的受管理應用程式使用應用程式設定原則。 
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選擇 [應用程式]   > [應用程式設定原則]   > [新增]   > [受管理的應用程式]  。
 3. 在 [基本]  頁面上，設定下列詳細資料：
     - **名稱**：將在 Azure 入口網站中顯示的設定檔名稱。

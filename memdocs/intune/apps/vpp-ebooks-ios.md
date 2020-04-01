@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b02e7fe5d2f2812f42a049b65d6162998e8af7c2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 548174cfa891e832f9392604cca8347493db3dab
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79345828"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323577"
 ---
 # <a name="how-to-manage-iosipados-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>如何使用 Microsoft Intune 管理透過大量採購方案購買的 iOS/iPadOS 電子書
 
@@ -57,7 +57,7 @@ Microsoft Intune 可協助您同步、管理及指派透過此方案購買的書
 
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>取得並上傳 Apple VPP 權杖
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [租用戶系統管理]   > [連接器與權杖]   > [Apple VPP 權杖]  。
 3. 在 VPP 權杖清單窗格中，按一下 [建立]  。
 5. 在 [新的 VPP 權杖]  窗格中，指定下列資訊：

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1598be8f5f54f1f509194aed0232730bd821624b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8583c625277735d653143f5cf87c56c350bdc1ff
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79357112"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326713"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>使用原則集合將管理物件集合組成群組
 
@@ -57,13 +57,13 @@ ms.locfileid: "79357112"
 
 ## <a name="how-to-create-a-policy-set"></a>如何建立原則集合
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [裝置]   > [原則集]   > [原則集]   > [建立]  。
 3. 在 [基本]  頁面上，新增下列值：
     - **原則集合名稱**：為此原則集合提供名稱。
     - **描述**：選擇性地為原則集合提供描述。
    <p>
-   <img alt="Create policy set - Basics" src="/media/policy-sets/policy-sets-01.png">
+      <img alt="Create policy set - Basics" src="./media/policy-sets/policy-sets-01.png">
 
 4. 按一下 [下一步:  應用程式管理]。<br>
    在 [應用程式管理]  頁面上，您可以選擇性地將[應用程式](../apps/apps-add.md)、[應用程式設定原則](../apps/app-configuration-policies-overview.md)，以及[應用程式防護原則](../apps/app-protection-policy.md)新增至您的原則集合。 如需應用程式管理的詳細資訊，請參閱[什麼是 Microsoft Intune 應用程式管理？](../apps/app-management.md)。

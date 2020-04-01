@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e14713ef97896fd73dd0b7f8e819005f67dca492
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5862793180efa2184f620920aad7decf3935e1ae
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339211"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322438"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>在 Intune 中針對尚未註冊的裝置啟用 Mobile Threat Defense 連接器
 
@@ -56,7 +56,7 @@ ms.locfileid: "79339211"
 
 ## <a name="to-enable-the-mtd-connector"></a>啟用 MTD 連接器
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [租用戶系統管理]   > [連接器與權杖]   > [Mobile Threat Defense]  。
 

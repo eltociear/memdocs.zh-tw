@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9f13125fb3c9f0b75ea83d94309f40d18f1b93c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 345c2d3824a6bd22f224429717e6c44a3941b0cf
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340888"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324613"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>使用 Microsoft Intune 將應用程式指派給群組
 
@@ -55,7 +55,7 @@ ms.locfileid: "79340888"
 
 ## <a name="assign-an-app"></a>指派應用程式
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [所有應用程式]  。
 3. 在 [應用程式]  窗格中，選取您想要指派的應用程式。
 4. 在功能表的 [管理]  區段中，選取 [指派]  。

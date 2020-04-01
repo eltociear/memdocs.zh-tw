@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1633900e77eedce0bcca477173e647f5d35b1ee8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 007d5929c6d1b0dd953d4910b31c872582e817cc
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341369"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324860"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>使用 Microsoft Intune 將 Office 365 指派到 macOS 裝置
 
@@ -40,7 +40,7 @@ ms.locfileid: "79341369"
 
 ## <a name="select-the-office-365-suite-app-type"></a>選取 Office 365 套件應用程式類型
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [所有應用程式]   > [新增]  。
 3. 選取 [選取應用程式類型]  窗格 [Office 365 套件]  區段中的 [macOS]  。
 4. 按一下 [選取]  。 [新增 Office 365 套件]  步驟隨即顯示。

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a98b57fe8cc2d9d2af3c0095297eb676796029f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 64b71c17a14ff77f828d4be69ed820b21bd7a246
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085214"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323340"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>在 Intune 中將電子郵件自動化，並為不符合規範的裝置新增動作
 
@@ -71,7 +71,7 @@ ms.locfileid: "80085214"
 
 若要傳送電子郵件給您的使用者，請建立通知訊息範本。 裝置不符合規範時，您在範本中輸入的詳細資料會顯示在傳送給您使用者的電子郵件裡。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [裝置]   > [合規性原則]   > [通知]   > [建立通知]  。
 3. 在 [基本]  底下，指定下列資訊：
 
@@ -102,7 +102,7 @@ ms.locfileid: "80085214"
 
 除了將裝置標示為不符合規範的預設動作之外，您可以在建立合規性原則，或是更新現有原則時新增選擇性的動作。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [裝置]   > [合規性原則]   > [原則]  ，選取其中一個原則，然後選取 [內容]  。
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db50f50917e417beadcef0b171f6b2aea5031d2a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 002d8e8826fbc1420bf9deca6fb88a3468e8a2ad
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340875"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324518"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>使用 Microsoft Intune 將 Microsoft Edge 新增至 macOS 裝置
 
@@ -42,7 +42,7 @@ ms.locfileid: "79340875"
 
 您可以使用下列步驟，將 Microsoft Edge 77 版和更新版本新增至 Intune：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [所有應用程式]   > [新增]  。
 3. 在 [應用程式類型]  清單中的 [Microsoft Edge 77 版和更新版本]  底下，選取 [macOS]  。
 

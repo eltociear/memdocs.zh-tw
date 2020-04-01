@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73173d599c3d19bb39090b34e0c5f6ffec5753fe
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 633adc8fa28f422c4b21958675efb53cb2571d39
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083856"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324739"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>將應用程式新增至 Microsoft Intune 
 
@@ -161,7 +161,7 @@ Intune 受控應用程式也可以在無需註冊之下啟用應用程式保護�
 
 當您將應用程式新增到 Intune 時，可以自由選取所需的類別。 使用平台特定的主題來新增應用程式及指派類別。 若要建立及編輯您自己的類別，請使用下列程序︰
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 3. 選取 [應用程式]   > [應用程式類別]  。  
     [應用程式類別]  窗格會顯示目前類別的清單。 
 5. 請執行下列其中一個動作：

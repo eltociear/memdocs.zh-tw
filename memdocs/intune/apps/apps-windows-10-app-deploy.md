@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2168833715bb1148adcb3e158e58c9f54bcd3fc4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 58203c09784f0d4a50472ff4ae9cd06957025a1c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340147"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324326"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>使用 Microsoft Intune 進行 Windows 10 應用程式部署 
 
@@ -74,7 +74,7 @@ Microsoft Intune 支援 Windows 10 裝置上的各種應用程式類型和部署
 ### <a name="categorize-microsoft-store-for-business-apps"></a>分類商務用 Microsoft 網上商店應用程式 
 若要分類商務用 Microsoft Store 應用程式： 
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [所有應用程式]  。 
 3. 選取商務用 Microsoft Store 應用程式。 然後選取 [屬性]   > [應用程式資訊]   > [類別]  。 
 4. 選取一個類別。

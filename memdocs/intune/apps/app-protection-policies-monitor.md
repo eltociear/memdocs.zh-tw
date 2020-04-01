@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39551ec60e41a7bc3d6c7f63e16f622b64a5669c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 831bc368553f4806c6bc734ac5697d2b81de38fe
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342136"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323725"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>如何監視應用程式保護原則
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "79342136"
 
 ## <a name="summary-view"></a>摘要檢視
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 3. 選取 [應用程式]   > [監視]   > [應用程式保護狀態]  。
 
    ![[Intune 行動應用程式管理] 窗格的 [摘要] 圖格螢幕擷取畫面](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)

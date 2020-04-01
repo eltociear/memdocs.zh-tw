@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50c56cff5f6b58894ff1abb24dad397d7e6c2c1e
-ms.sourcegitcommit: cd2cbc23b8909df3a000d8ad4140e87052d6de5a
+ms.openlocfilehash: f5f32ffb864f40d8cb5402f7d4488b3870686d1a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79508469"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322511"
 ---
 # <a name="see-device-details-in-intune"></a>在 Intune 中查看裝置詳細資料
 
@@ -33,7 +33,7 @@ ms.locfileid: "79508469"
 
 ## <a name="view-the-device-details"></a>檢視裝置詳細資料
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 3. 選取 [裝置]   > [所有裝置]  > 選取其中一個列出的裝置以開啟其詳細資料：
 
    - [概觀]  會顯示裝置名稱，並列出該裝置的一些重要屬性，包括其為個人裝置或公司裝置、序號、主要使用者等。 您可以在裝置上執行下列動作：

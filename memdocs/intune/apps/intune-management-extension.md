@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8235f094298e33f0855fa08b65b1e068d45a56d1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d424163df07dbe6add74bbdab9ec36a7b220b655
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361324"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324236"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>在 Intune 的 Windows 10 裝置上使用 PowerShell 指令碼
 
@@ -73,7 +73,7 @@ Intune 管理延伸模組具有下列必要條件。 一旦符合這些必要條
 
 ## <a name="create-a-script-policy-and-assign-it"></a>建立並指派指令碼原則
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [裝置]   > [PowerShell 指令碼]   > [新增]  。
 
     ![在 Microsoft Intune 中新增和使用 PowerShell 指令碼](./media/intune-management-extension/mgmt-extension-add-script.png)

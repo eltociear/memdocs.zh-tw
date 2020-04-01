@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d817c7e8fc10fe95040fbf48f5d807504ca44a2
-ms.sourcegitcommit: b5a9ce31de743879d2a6306cea76be3a093976bb
+ms.openlocfilehash: 4c08e0a967d18aaa7defb8e7b180a60f68c1b92c
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79372631"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407780"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune Standalone - Win32 應用程式管理
 
@@ -57,7 +57,7 @@ ms.locfileid: "79372631"
 
 ### <a name="process-flow-to-create-intunewin-file"></a>建立 .intunewin 檔案的程序流程
 
-   <img alt="Process flow to create a .intunewin file" src="./media/apps-win32-app-management/prepare-win32-app.svg" width="700">
+   <img alt="Process flow to create a .intunewin file" src="./media/apps-win32-app-management/prepare-win32-app.png" width="700">
 
 ### <a name="run-the-microsoft-win32-content-prep-tool"></a>執行 Microsoft Win32 內容準備工具
 
@@ -99,7 +99,7 @@ ms.locfileid: "79372631"
 
 下列步驟可提供指導，協助您將 Windows 應用程式新增至 Intune。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [所有應用程式]   > [新增]  。
 3. 在 [選取應用程式類型]  窗格中，在 [其他]  應用程式類型底下，選取 [Windows 應用程式 (Win32)]  。
 
@@ -359,7 +359,7 @@ Windows 10 1709 與更新版本的用戶端將會使用 Windows 10 用戶端上�
 
 使用下列步驟來針對所需應用程式設定以日期和時間為基礎的應用程式可用性：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [所有應用程式]  。
 3. 從清單中選取現有的 [Windows 應用程式 (Win32)]  。 
 4. 從應用程式窗格，選取 [屬性]   > [指派]  區段旁邊的 [編輯]  > [需要]  指派類型底下的 [新增群組]  。 

@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad7f3f2afca711750128b75b387ddffaeb6afe79
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 18fc3a70a89451deebe074ad8b5b8dc3a4a837f7
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343813"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325820"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>針對應用程式安裝問題進行疑難排解
 
@@ -35,7 +35,7 @@ ms.locfileid: "79343813"
 
 Intune 會根據特定使用者裝置上安裝的應用程式，提供應用程式疑難排解的詳細資料。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [疑難排解 + 支援]  。
 3. 按一下 [選取使用者]  來選取使用者以進行疑難排解。 [選取使用者]  窗格隨即顯示。
 4. 鍵入名稱或電子郵件地址來選取使用者。 按一下窗格底部的 [選取]  。 在 [疑難排解]  窗格中，會顯示使用者的疑難排解資訊。 

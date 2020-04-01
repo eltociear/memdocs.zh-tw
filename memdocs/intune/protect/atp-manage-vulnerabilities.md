@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f57f4c31d0293997088db972cc4f370b77336567
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a3d0335274604519da82146cab8837459e190801
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354148"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322846"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>使用 Intune 來補救 Microsoft Defender ATP 識別出的弱點
 
@@ -79,7 +79,7 @@ ms.locfileid: "79354148"
 
 ## <a name="work-with-security-tasks"></a>使用安全性工作
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [端點安全性]   > [安全性工作]  。
 

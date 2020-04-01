@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e1e3db367d7e8e9044201c8f5e02a9225305495
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7d193e067a752e89377b4bec903ff4f890add230
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338600"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325629"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>針對 Microsoft Intune 中的 BitLocker 原則進行疑難排解
 
@@ -66,7 +66,7 @@ BitLocker 設定也可能可以透過其他方式 (例如群組原則) 來管理
 
 當您使用裝置設定原則來設定 BitLocker 時，您可以在 Intune 入口網站中檢查原則的狀態。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [裝置]   > [組態設定檔]  ，然後選取包含 BitLocker 設定的設定檔。
 

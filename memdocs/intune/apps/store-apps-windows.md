@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 47156186b7ab4c9297dc1963d4a709d1da1c9670
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 23bb882c7dbf06264b3c8e5aa29947f8e4cb712c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343800"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325761"
 ---
 # <a name="add-microsoft-store-apps-to-microsoft-intune"></a>將 Microsoft Store 應用程式新增至 Microsoft Intune
 
@@ -34,7 +34,7 @@ ms.locfileid: "79343800"
 ## <a name="add-an-app-to-intune"></a>將應用程式新增至 Intune
 您可以採取下列步驟，將 Microsoft 市集應用程式新增至 Intune：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [所有應用程式]   > [新增]  。
 3. 在 [選取應用程式類型]  窗格中，在可用的 [市集應用程式]  類型下，選取 [Windows 市集應用程式]  。
 4. 按一下 [選取]  。 [新增應用程式]  步驟隨即顯示。

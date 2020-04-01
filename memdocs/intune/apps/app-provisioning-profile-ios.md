@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3cf008c708ce42611a842ff7f8720d48d57ac91
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a1ce95391e8dbfa9fd8f5a8e2347f9c4249ee79f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341616"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323426"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>使用 iOS 應用程式佈建設定檔以避免應用程式過期
 
@@ -44,7 +44,7 @@ ms.locfileid: "79341616"
 
 ## <a name="how-to-create-an-ios-mobile-app-provisioning-profile"></a>如何建立 iOS 行動應用程式佈建設定檔
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [iOS 應用程式佈建設定檔]   > [建立設定檔]  。
 3. 在 [基本]  頁面上，新增下列值：
     - **名稱** - 提供此行動佈建設定檔的名稱。
@@ -53,7 +53,7 @@ ms.locfileid: "79341616"
 
    [到期日]  將會填入您在上面新增的 Apple 行動組態設定檔檔案中的值。<br>
 
-   <img alt="Create profile - Basics" src="/media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
+   <img alt="Create profile - Basics" src="./media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
 
 4. 按一下 [下一步:  範圍標籤]。<br>
    在 [範圍標籤]  頁面上，您可以選擇性地設定範圍標籤，以決定誰可以在 Intune 中查看 iOS/iPadOS 應用程式佈建設定檔。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用角色型存取控制和範圍標籤](../fundamentals/scope-tags.md)。

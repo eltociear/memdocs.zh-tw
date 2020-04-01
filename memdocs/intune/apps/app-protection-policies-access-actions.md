@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4e3f058e1edef4833959868201c120de93ff85c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b877587e8eb50019086e2296d7cc5b7e900da62a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342253"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323792"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>在 Intune 中使用應用程式防護原則的條件式啟動動作來選擇性地抹除資料
 
@@ -33,7 +33,7 @@ ms.locfileid: "79342253"
 
 ## <a name="create-an-app-protection-policy-using-conditional-launch-actions"></a>使用條件式啟動動作建立應用程式保護原則
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [應用程式保護原則]  。
 3. 按一下 [建立原則]  然後選取原則的裝置平台。 
 4. 按一下 [設定必要設定]  ，以查看可針對原則設定的設定清單。 
