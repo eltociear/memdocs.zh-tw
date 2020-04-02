@@ -12,6 +12,7 @@
 
 ## 使用您的 Android 裝置
 ### [為什麼註冊您的 Android 裝置](why-enroll-android-device.md)
+### [在中國安裝公司入口網站應用程式](install-company-portal-android-china.md)
 ### 註冊您的裝置
 #### [註冊您的 Android 裝置](enroll-device-android-company-portal.md)  
 #### [使用 Android 工作設定檔註冊](enroll-device-android-work-profile.md)
