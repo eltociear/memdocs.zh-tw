@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2814c1a7cc4dcb111e3454a6d359679df09c57b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 53f95c83cecbfce68b2370c0c0d4f8e98f856e12
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354759"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326700"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>新增使用者並授與 Intune 系統管理權限
 
@@ -57,7 +57,7 @@ ms.locfileid: "79354759"
 
 ### <a name="add-intune-users-in-the-azure-portal"></a>在 Azure 入口網站中新增 Intune 使用者
 
-1. 在 [Microsoft Endpoint Manager 系統管理中心中](https://go.microsoft.com/fwlink/?linkid=2109431)，選擇 [使用者]   > [所有使用者]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [使用者]   > [所有使用者]  。
 2. 在系統管理中心，選取 [新增使用者]  。
 3. 指定下列使用者詳細資訊：
    - **Name**

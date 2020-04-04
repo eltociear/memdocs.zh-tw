@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e7d7f35d6d6b11875c722d4969f5776040ca0dfc
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086122"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256448"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>在 Intune 中註冊 iOS/iPadOS 裝置
 
@@ -52,23 +52,23 @@ Intune 啟用 iPad 和 iPhone 的行動裝置管理 (MDM)，讓使用者安全�
 
 針對為使用者購買裝置的組織來說，Intune 可支援下列 iOS/iPadOS 屬公司擁有裝置的註冊方法：
 
-- Apple 的裝置註冊計劃 (DEP)
+- Apple 的自動裝置註冊 (ADE)
 - Apple School Manager
 - Apple Configurator 設定助理註冊
 - Apple Configurator 直接註冊
 
 您也可以使用[裝置註冊管理員](device-enrollment-manager-enroll.md)帳戶，來註冊屬公司擁有的 iOS/iPadOS 裝置。
 
-## <a name="device-enrollment-program"></a>裝置註冊方案
+## <a name="automated-device-enrollment"></a>自動的裝置註冊
 
-組織可以透過 Apple 的裝置註冊計劃 (DEP) 購買 iOS/iPadOS 裝置。 DEP 可供在「線上」部署註冊設定檔，將裝置納入管理。 如需詳細資訊，請參閱[裝置註冊計劃](device-enrollment-program-enroll-ios.md)。
+組織可以透過 Apple 的自動裝置註冊 (ADE) 購買 iOS/iPadOS 裝置。 ADE 可供在「線上」部署註冊設定檔，將裝置納入管理。 如需詳細資訊，請參閱[裝置註冊計劃](device-enrollment-program-enroll-ios.md)。
 
 ## <a name="user-enrollment"></a>使用者註冊
 相較於其他註冊方法，使用者註冊會提供一組管理選項子集給管理員。 如需詳細資訊，請參閱[使用者註冊支援的動作、密碼和其他選項](ios-user-enrollment-supported-actions.md)，以及[設定 iOS/iPadOS 與 iPadOS 使用者註冊](ios-user-enrollment.md)。
 
 ## <a name="apple-school-manager"></a>Apple School Manager
 
-Apple School Manager 是針對學校提供的裝置採購暨註冊方案。 就像 DEP，您可以部署設定檔以註冊管理的裝置。 深入了解 [Apple School Manager](apple-school-manager-set-up-ios.md)。
+Apple School Manager 是針對學校提供的裝置採購暨註冊方案。 如同 ADE，您可部署設定檔以註冊管理的裝置。 深入了解 [Apple School Manager](apple-school-manager-set-up-ios.md)。
 
 ## <a name="apple-configurator"></a>Apple Configurator
 
@@ -79,7 +79,7 @@ Apple School Manager 是針對學校提供的裝置採購暨註冊方案。 就�
 
 深入了解 [Apple Configurator 註冊](apple-configurator-enroll-ios.md)。
 
-## <a name="use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices"></a>在已註冊 DEP 或 Apple Configurator 的裝置上使用公司入口網站
+## <a name="use-the-company-portal-on-ade-enrolled-or-apple-configurator-enrolled-devices"></a>在已註冊 ADE 或 Apple Configurator 的裝置上使用公司入口網站
 
 已設定使用者親和性的裝置可以安裝並執行公司入口網站應用程式，以下載應用程式及管理裝置。 使用者收到裝置之後，他們必須完成一些額外步驟，以完成設定助理並安裝公司入口網站 App。
 

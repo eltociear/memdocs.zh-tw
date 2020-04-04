@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 462f9ca9618d16c0291792f86d00c46f641c6cc8
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c2031ba23b49bda4890d2638272e3b808b4bf5a9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084069"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327443"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>在 Microsoft Intune 中建立裝置設定檔
 
@@ -37,73 +37,64 @@ ms.locfileid: "80084069"
 
 ## <a name="create-the-profile"></a>建立設定檔
 
-1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+設定檔是在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內建立。 在此系統管理中心內，選取 [裝置]  。 下列選項可供您選擇：
 
-2. 選取 [裝置]   > [組態設定檔]  。 下列選項可供您選擇：
+- **概觀**：列出您的設定檔狀態，並在您指派給使用者和裝置的設定檔中提供其他詳細資料。
+- **監視**：檢查設定檔的狀態為成功或失敗，另檢視設定檔中的記錄。
+- **依平台**：依平台建立及檢視原則和設定檔。 此檢視也會顯示平台特定的功能。 例如，選取 [Windows]  。 您會看到 Windows 特定的功能，例如 **Windows 10 更新通道**和 **PowerShell 指令碼**。
+- **原則**：建立裝置設定檔，上傳要在設定檔中執行的自訂 [PowerShell 指令碼](../apps/intune-management-extension.md)，並使用 [eSIM](esim-device-configuration.md) 將行動數據方案新增至裝置。
 
-    - **概觀**：列出您的設定檔狀態，並在您指派給使用者和裝置的設定檔中提供其他詳細資料。
-    - **管理**：建立裝置設定檔，上傳自訂 [PowerShell 指令碼](../apps/intune-management-extension.md)以在設定檔中執行，並使用 [eSIM](esim-device-configuration.md) 將行動數據方案新增至裝置。
-    - **監視**：檢查設定檔的狀態為成功或失敗，另檢視您設定檔中的記錄。
-    - **安裝**：新增 SCEP 或 PFX 憑證授權單位，或是在設定檔中啟用[電信費用管理](telecom-expenses-monitor.md)。
+當建立設定檔 ([組態設定檔]   > [建立設定檔]  ) 時，請選擇平台：
 
-3. 選取 [建立設定檔]  。 輸入下列內容：
+- **Android 裝置系統管理員**
+- **Android Enterprise**
+- **iOS/iPadOS**
+- **macOS**
+- **Windows 10 及以上版本**
+- **Windows 8.1 及更新版本**
+- **Windows Phone 8.1**
 
-   - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，良好的設定檔名稱為**整個公司的 WP 電子郵件設定檔**。
-   - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
-   - **平台**：選擇您的裝置平台。 選項包括：  
+然後，選擇設定檔類型。 您可設定的設定會視您選擇的平台而不同。 下列文章會描述不同設定檔類型的設定︰
 
-       - **Android 裝置系統管理員**
-       - **Android 企業**
-       - **iOS/iPadOS**
-       - **macOS**
-       - **Windows Phone 8.1**
-       - **Windows 8.1 及更新版本**
-       - **Windows 10 及以上版本**
+- [系統管理範本 (Windows)](administrative-templates-windows.md)
+- [自訂](custom-settings-configure.md)
+- [傳遞最佳化 (Windows)](delivery-optimization-windows.md)
+- [衍生認證 (Android Enterprise、iOS、iPadOS)](../protect/derived-credentials.md)
+- [裝置功能 (macOS、iOS、iPadOS)](device-features-configure.md)
+- [裝置韌體 (Windows)](device-firmware-configuration-interface-windows.md)
+- [裝置限制](device-restrictions-configure.md)
+- [網域加入 (Windows)](domain-join-configure.md)
+- [版本升級及模式切換 (Windows)](edition-upgrade-configure-windows-10.md)
+- [教育 (iOS、iPadOS)](../fundamentals/education-settings-configure-ios.md)
+- [電子郵件](email-settings-configure.md)
+- [端點保護 (macOS、Windows)](../protect/endpoint-protection-configure.md)
+- [延伸模組 (macOS)](kernel-extensions-overview-macos.md)
+- [Identity Protection (Windows)](../protect/identity-protection-configure.md)
+- [Kiosk](kiosk-settings.md)
+- [Microsoft Defender ATP (Windows)](../protect/advanced-threat-protection.md)
+- [行動延伸模組 (MX) 設定檔 (Android 裝置系統管理員)](android-zebra-mx-overview.md)
+- [OEMConfig (Android Enterprise)](android-oem-configuration-overview.md)
+- [PKCS 憑證](../protect/certficates-pfx-configure.md)
+- [PKCS 匯入憑證](../protect/certificates-imported-pfx-configure.md)
+- [喜好設定檔案 (macOS)](preference-file-settings-macos.md)
+- [SCEP 憑證](../protect/certificates-scep-configure.md)
+- [安全性評定 (教育) (Windows)](education-settings-configure.md)
+- [共用的多重使用者裝置 (Windows)](shared-user-device-settings.md)
+- [電信費用 (Android 裝置系統管理員、iOS、iPadOS)](telecom-expenses-monitor.md)
+- [信任的憑證](../protect/certificates-configure.md)
+- [VPN](vpn-settings-configure.md)
+- [Wi-Fi](wi-fi-settings-configure.md)
 
-   - **設定檔類型**：選取您要建立的設定類型。 顯示的清單取決於您選擇的**平台**。
-   - **設定**：下列文章會描述每個設定檔類型的設定︰
+例如，如果針對平台選取 [iOS/iPadOS]  ，您的設定檔類型選項會看起來類似下列設定檔：
 
-       - [系統管理範本](administrative-templates-windows.md)
-       - [自訂](custom-settings-configure.md)
-       - [傳遞最佳化](delivery-optimization-windows.md)
-       - [裝置功能](device-features-configure.md)
-       - [裝置限制](device-restrictions-configure.md)
-       - [網域加入](domain-join-configure.md)
-       - [版本升級和模式切換](edition-upgrade-configure-windows-10.md)
-       - [教育](education-settings-configure.md)
-       - [電子郵件](email-settings-configure.md)
-       - [端點保護](../protect/endpoint-protection-configure.md)
-       - [Identity Protection](../protect/identity-protection-configure.md)  
-       - [Kiosk](kiosk-settings.md)
-       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
-       - [PKCS 憑證](../protect/certficates-pfx-configure.md)
-       - [PKCS 匯入憑證](../protect/certificates-imported-pfx-configure.md)
-       - [喜好設定檔案](preference-file-settings-macos.md)
-       - [SCEP 憑證](../protect/certificates-scep-configure.md)
-       - [信任的憑證](../protect/certificates-configure.md)
-       - [更新原則](../protect/software-updates-ios.md)
-       - [VPN](vpn-settings-configure.md)
-       - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Windows 資訊保護](../protect/windows-information-protection-configure.md)
-
-     例如，如果針對平台選取 [iOS/iPadOS]  ，您的設定檔類型選項會看起來類似下列設定檔：
-
-     > [!div class="mx-imgBorder"]
-     > ![在 Intune 中建立 iOS/iPadOS 設定檔](./media/device-profile-create/create-device-profile.png)
-
-4. 完成後，請選取 [確定]   > [建立]  以儲存變更。 就會建立設定檔，並顯示在清單中。
+> [!div class="mx-imgBorder"]
+> ![在 Intune 中建立 iOS/iPadOS 設定檔](./media/device-profile-create/create-device-profile.png)
 
 ## <a name="scope-tags"></a>範圍標籤
 
-新增設定之後，您也可以新增範圍標籤至設定檔。 範圍標籤會將設定檔篩選到特定 IT 群組 (例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`)。
+新增設定之後，您也可以新增範圍標籤至設定檔。 範圍標籤會將設定檔篩選到特定 IT 群組 (例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`)。 以及用於分散式 IT。
 
 如需範圍標籤和可執行哪些作業的相關詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
-
-### <a name="add-a-scope-tag"></a>新增範圍標籤
-
-1. 選取 [範圍 (標籤)]  。
-2. 選取 [新增]  以建立新的範圍標籤。 或是，從清單中選取現有的範圍標籤。
-3. 按一下 [確定]  以儲存您的變更。
 
 ## <a name="applicability-rules"></a>適用性規則
 

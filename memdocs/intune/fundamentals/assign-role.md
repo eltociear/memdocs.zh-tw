@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4ea84b0b378030a02c73da20b4a59d0b65ca288
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a679df157a2623012d19fab2370792cac73f6f2b
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363144"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326808"
 ---
 # <a name="assign-a-role-to-an-intune-user"></a>將角色指派給 Intune 使用者
 
@@ -32,7 +32,7 @@ ms.locfileid: "79363144"
 - **全域管理員**
 - **Intune 服務管理員**
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [租用戶系統管理]   > [角色]   > [所有角色]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [租用戶系統管理]   > [角色]   > [所有角色]  。
 
 2. 在 [Intune 角色 - 所有角色]  刀鋒視窗中，選擇您要指派的內建角色 > [指派]   > [指派]  。
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ab840653d7090ed925af0db08f410e236392234
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: ba902cca39db44c20c79ae7b960b13966c1a09d9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80219838"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323097"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>在使用 Jamf Pro 管理的 Mac 上強制執行合規性
 
@@ -37,7 +37,7 @@ ms.locfileid: "80219838"
 
 ## <a name="set-up-device-compliance-policies-in-intune"></a>在 Intune 中設定裝置合規性原則
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [裝置]   > [合規性政策]  。 如果您是使用先前建立的原則，請在主控台中選取該原則，然後移至此程序的下一個步驟。 若要建立新原則，請選取 [建立原則]  ，然後指定 [平台]  為 [macOS]  的原則詳細資料。 設定 [設定]  和 [因不符合規範而採取的動作]  ，以符合您的組織需求，然後選取 [建立]  以儲存原則。
 
@@ -114,7 +114,7 @@ ms.locfileid: "80219838"
 
 ## <a name="removing-a-jamf-managed-device-from-intune"></a>從 Intune 移除受控於 Jamf 的裝置
 
-若要移除 Jamf 受控裝置，請開啟 Microsoft Endpoint Manager 系統管理中心，然後選取 [裝置]   > [所有裝置]  選取該裝置，然後選取 [刪除]  。  選取多個裝置，並按一下 [刪除]  ，即可啟用刪除大量裝置。
+若要移除 Jamf 受控裝置，請開啟 Microsoft 端點管理員系統管理中心，然後選取 [裝置]   > [所有裝置]  選取該裝置，然後選取 [刪除]  。  選取多個裝置，並按一下 [刪除]  ，即可啟用刪除大量裝置。
 
 在 Jamf Pro 文件中取得如何[移除 Jamf 受控裝置](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information)的相關資訊。您也可以透過 [Jamf 支援](https://www.jamf.com/support/)提出支援票證，以取得其他支援。 
 

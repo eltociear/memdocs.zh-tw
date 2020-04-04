@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f8a15199f599cf0fd4f90ea965bcc3e668f3b27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 44cae6e1e7fdd310a6053cbcb6f19371263d0161
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354408"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326627"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>使用 Intune 在 Windows 全像攝影版和 HoloLens 上管理及使用不同的裝置管理功能
 
@@ -58,7 +58,7 @@ Intune 提供的公司入口網站應用程式，可讓使用者存取公司資�
 
 **[建立裝置合規性原則](../protect/compliance-policy-create-windows.md)**
 
-合規性原則係指裝置必須符合才能符合規範的規則和設定。 搭配條件式存取使用這些原則，讓不符合規範的裝置無法存取公司資源。 在 Intune 中，建立合規性政策來允許或封鎖執行 Windows Holographic for Business 的裝置存取權。 例如，您可以建立要求啟用 Bitlocker 的原則。
+合規性原則係指裝置必須符合才能符合規範的規則和設定。 搭配條件式存取使用這些原則，讓不符合規範的裝置無法存取公司資源。 在 Intune 中，建立合規性政策來允許或封鎖執行 Windows Holographic for Business 的裝置存取權。 例如，您可建立要求啟用 BitLocker 的原則。
 
 另請參閱 **[開始使用合規性原則](../protect/device-compliance-get-started.md)** 。
 
@@ -107,7 +107,7 @@ Intune 具有一些內建動作，可讓 IT 系統管理員執行不同的工作
 
 ## <a name="device-configuration-profiles"></a>裝置組態設定檔
 
-**[開始使用組態設定檔](../configuration/device-profiles.md)和[建立您自己的設定檔](../configuration/device-profile-create.md)**
+**[開始使用組態設定檔](../configuration/device-profiles.md)以及[設定檔概觀](../configuration/device-profile-create.md)**
 
 Intune 包含您可以在組織內不同裝置上啟用或停用的設定及功能。 可使用設定檔來管理這些設定和功能。 例如，您可以在執行 Windows Holographic for Business 的裝置上，建立啟用 Cortana 或使用 Microsoft Defender SmartScreen 的設定檔。
 

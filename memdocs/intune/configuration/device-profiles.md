@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 420340e18eb4e638ed7bde049e6b548037c54f87
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80087091"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359301"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>在 Microsoft Intune 中使用裝置設定檔將功能和設定套用至您的裝置
 
@@ -53,7 +53,7 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 
 [憑證](../protect/certificates-configure.md)可設定指派給裝置的信任的憑證、SCEP 憑證及 PKCS 憑證。 而這些憑證可驗證 Wi-fi、VPN 和電子郵件設定檔。
 
-這項功能支援： 
+這項功能支援：
 
 - Android 裝置管理員
 - Android 企業
@@ -84,6 +84,15 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 這項功能支援：
 
 - Windows 10 及更新版本
+
+## <a name="derived-credential"></a>衍生認證
+
+[衍生認證](../protect/derived-credentials.md)是智慧卡上的憑證，可以驗證、簽署及加密。 在 Intune 中，您可使用這些認證來建立設定檔，以用於應用程式、電子郵件設定檔、連線至 VPN、S/MIME 以及 Wi-Fi。
+
+這項功能支援：
+
+- Android 企業
+- iOS/iPadOS
 
 ## <a name="device-features"></a>裝置功能
 
@@ -133,7 +142,7 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 
 ## <a name="education"></a>Education
 
-[教育設定 - Windows 10](education-settings-configure.md) 設定 [Windows「進行測驗」應用程式](https://education.microsoft.com/gettrained/win10takeatest)的選項。 當您設定這些選項時，裝置將無法執行其他應用程式，直到測驗結束為止。
+[教育設定 - Windows 10](education-settings-configure.md) 設定 [Windows「進行測驗」應用程式](https://docs.microsoft.com/education/windows/take-tests-in-windows-10)的選項。 當您設定這些選項時，裝置將無法執行其他應用程式，直到測驗結束為止。
 
 [教育設定 - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) 使用 iOS Classroom 應用程式，可在課堂中引導學習並控制學生的裝置。 您可以設定 iPad 裝置，讓多個學生可以共用單一裝置。
 
@@ -141,7 +150,7 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 
 [電子郵件設定](email-settings-configure.md)會建立、指派、監視裝置上的 Exchange ActiveSync 電子郵件設定。 電子郵件設定檔有助於達成一致性、減少支援來電，以及讓終端使用者無須任何設定，就能從其個人裝置存取公司的電子郵件。 
 
-這項功能支援： 
+這項功能支援：
 
 - Android 裝置管理員
 - Android 企業
@@ -151,12 +160,13 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
 
-[適用於 Windows 10 的 Endpoint Protection 設定](../protect/endpoint-protection-windows-10.md)可設定適用於 Windows 10 裝置的 BitLocker 及 Windows Defender 設定。
+[Endpoint Protection](../protect/endpoint-protection-configure.md) 可用於設定針對 Windows 10 裝置的 BitLocker 及 Windows Defender 設定。 並可設定 macOS 裝置上的防火牆、閘道和其他資源。
 
 若要使用 Microsoft Intune 來將 Microsoft Defender 進階威脅防護 (WDATP) 上線，請參閱[使用行動裝置管理 (MDM) 工具設定端點](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm) \(部分機器翻譯\)。
 
 這項功能支援：
 
+- macOS
 - Windows 10 及更新版本
 
 ## <a name="esim-cellular---public-preview"></a>eSIM 行動數據 - 公開預覽
@@ -192,7 +202,15 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 
 - Windows 10 及更新版本
 
-Kiosk 設定也透過 [Android](device-restrictions-android.md#kiosk)、[Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings) 與 [ios/iPadOS](device-restrictions-ios.md#kiosk) 裝置限制的形式提供。
+Kiosk 設定也透過 [Android](device-restrictions-android.md#kiosk)、[Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) 與 [ios/iPadOS](device-restrictions-ios.md#kiosk) 裝置限制的形式提供。
+
+## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
+
+[Microsoft Defender 進階威脅防護 (ATP)](../protect/advanced-threat-protection.md) 與 Intune 整合，以監視及協助保護裝置。 您可設定風險層級，並判斷裝置超過該層級時要採取的行動。 您可結合條件式存取，以協助防止組織中的惡意活動。
+
+這項功能支援：
+
+- Windows 10 及更新版本
 
 ## <a name="oemconfig"></a>OEMConfig
 
@@ -206,11 +224,18 @@ Kiosk 設定也透過 [Android](device-restrictions-android.md#kiosk)、[Android
 
 [Windows 10 裝置上的 PowerShell 指令碼](../apps/intune-management-extension.md)會使用 Intune 管理延伸模組，在 Intune 中上傳 PowerShell 指令碼，然後在裝置上執行這些指令碼。 另請參閱使用延伸模組所需的項目、如何將其新增至 Intune，以及其他重要資訊。
 
-
 這項功能支援：
 
 - Windows 10 及更新版本
 - Windows Holographic for Business
+
+## <a name="preference-file"></a>喜好設定檔案
+
+MacOS 裝置上的[喜好設定檔案](preference-file-settings-macos.md)包含應用程式的資訊。 例如，您可使用喜好設定檔案來控制網頁瀏覽器設定、自訂應用程式等。
+
+這項功能支援：
+
+- macOS
 
 ## <a name="shared-multi-user-device"></a>共用的多重使用者裝置
 
@@ -260,14 +285,6 @@ Kiosk 設定也透過 [Android](device-restrictions-android.md#kiosk)、[Android
 - iOS/iPadOS
 - macOS
 - Windows 8.1 (僅匯入)
-- Windows 10 及更新版本
-
-## <a name="windows-information-protection-profile"></a>Windows 資訊保護設定檔
-
-[Windows 資訊保護](../protect/windows-information-protection-configure.md)可協助防範資料流失，但不會干擾員工的操作。 其也能協助保護企業應用程式與資料，防止企業擁有的裝置和員工在工作中使用的個人裝置意外外洩資料。 使用 Windows 資訊保護不需要變更您的環境或其他應用程式。
-
-這項功能支援：
-
 - Windows 10 及更新版本
 
 ## <a name="zebra-mobility-extensions-mx"></a>Zebra 行動性延伸模組 (MX)

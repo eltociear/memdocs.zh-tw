@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f566361eab24ee93e8b332eeb3e005c8555ece0d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b6512aa01a55a3a1ed949b634b97eb891e9459a9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363742"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327118"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>使用 Windows Autopilot 在 Intune 中註冊 Windows 裝置  
 Windows Autopilot 簡化了在 Intune 中註冊裝置的程序。 建置和維護自訂的作業系統映像需要許多時間。 您也可能會花時間將這些自訂的作業系統映像套用至新的裝置，以在送交使用者之前，先將它們做好使用的準備。 使用 Microsoft Intune 和 Autopilot，您可以將新的裝置提供給使用者而不需要建置、維護及套用自訂作業系統映像至裝置。 當您使用 Intune 來管理 Autopilot 裝置時，可以在裝置註冊之後管理原則、設定檔、應用程式等。 如需優點、案例和必要條件的概觀，請參閱 [Windows Autopilot 概觀](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot)。
@@ -51,7 +51,7 @@ Autopilot 部署類型有四種：
 
 您可以藉由匯入含 Windows Autopilot 裝置資訊的 CSV 檔案來新增它們。
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [Windows]   > [Windows 註冊]   > [裝置]  (在 [Windows AutoPilot Deployment Program]   > [匯入]  底下)。
+1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [Windows]   > [Windows 註冊]   > [裝置]  (在 [Windows AutoPilot Deployment Program]   > [匯入]  底下)。
 
     ![Windows Autopilot 裝置的螢幕擷取畫面](./media/enrollment-autopilot/autopilot-import-device.png)
 
@@ -73,7 +73,7 @@ Autopilot 部署類型有四種：
 
 ## <a name="create-an-autopilot-device-group"></a>建立 Autopilot 裝置群組
 
-1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [群組]   > [新增群組]  。
+1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [群組]   > [新增群組]  。
 2. 在 [群組]  刀鋒視窗中：
     1. 針對 [群組類型]  ，請選擇 [安全性]  。
     2. 輸入**群組名稱**與**群組描述**。
@@ -90,7 +90,7 @@ Autopilot 部署類型有四種：
 
 ## <a name="create-an-autopilot-deployment-profile"></a>建立 Autopilot 部署設定檔
 Autopilot 部署設定檔會用來設定 Autopilot 裝置。 您可以為每個租用戶建立最多 350 個設定檔。
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [Windows]   > [Windows 註冊]   > [部署設定檔]   > [建立設定檔]  。
+1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [Windows]   > [Windows 註冊]   > [部署設定檔]   > [建立設定檔]  。
 2. 在 [基本]  頁面上，輸入**名稱**和選擇性的**描述**。
 
     ![[基本] 頁面的螢幕擷取畫面](./media/enrollment-autopilot/create-profile-basics.png)
@@ -139,7 +139,7 @@ Autopilot 部署設定檔會用來設定 Autopilot 裝置。 您可以為每個�
 ## <a name="edit-an-autopilot-deployment-profile"></a>編輯 Autopilot 部署設定檔
 建立 Autopilot 部署設定檔之後，您可以編輯部署設定檔的某些部分。   
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [Windows]   > [Windows 註冊]   > [部署設定檔]  。
+1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [Windows]   > [Windows 註冊]   > [部署設定檔]  。
 2. 選取您想要編輯的設定檔。
 3. 選取左邊的 [屬性]  ，變更部署設定檔的名稱或描述。 進行變更之後請按一下 [儲存]  。
 5. 按一下 [設定]  以變更 OOBE 設定。 進行變更之後請按一下 [儲存]  。
@@ -150,7 +150,7 @@ Autopilot 部署設定檔會用來設定 Autopilot 裝置。 您可以為每個�
 ## <a name="edit-autopilot-device-attributes"></a>編輯 Autopilot 裝置屬性
 上傳 Autopilot 裝置之後，您可以編輯裝置的特定屬性。
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選取 [裝置]   > [Windows]   > [Windows 註冊]   > [裝置]  \(在 [Windows AutoPilot Deployment Program]  底下\)。
+1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選取 [裝置]   > [Windows]   > [Windows 註冊]   > [裝置]  (在 [Windows AutoPilot Deployment Program]  底下)。
 2. 選取您要編輯的裝置。
 3. 在畫面右邊的窗格中，您可以編輯裝置名稱、群組標籤或使用者易記名稱 (如果您已指派使用者)。
 4. 選取 [儲存]  。
@@ -162,11 +162,11 @@ Autopilot 部署設定檔會用來設定 Autopilot 裝置。 您可以為每個�
 
 警示會顯示有多少 Autopilot 程式裝置沒有 Autopilot 部署設定檔。 您可以使用警示中的資訊來建立設定檔，並加以指派至未指派的裝置。 當您按一下警示時，會看到 Windows Autopilot 裝置的完整清單，以及這些裝置的詳細資訊。
 
-若要查看未指派裝置的警示，請在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [概觀]   > [註冊警示]   > [未指派的裝置]  。  
+若要查看未指派裝置的警示，請在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [概觀]   > [註冊警示]   > [未指派的裝置]  。  
 
 ## <a name="autopilot-deployments-report"></a>Autopilot 部署報告
 您可以查看透過 Windows Autopilot 部署之每個裝置的詳細資料。
-若要查看報告，請移至 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，選擇 [裝置]   > [監視器]   > [Autopilot 部署]  。
+若要查看報告，請移至 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，選擇 [裝置]   > [監視器]   > [Autopilot 部署]  。
 該資料會在部署後的 30 天內提供使用。
 
 此報告為預覽狀態。 目前只有新的 Intune 註冊事件才會觸發裝置部署記錄。 這表示此報告不會選擇任何不會觸發新的 Intune 註冊的部署。 這包括維護註冊的任何一種重設，以及 Autopilot 服務周全方式的使用者部分。
@@ -180,7 +180,7 @@ Autopilot 部署設定檔會用來設定 Autopilot 裝置。 您可以為每個�
 > [!NOTE]
 > 如果您使用 ADFS，則無法將使用者指派給特定的 Autopilot 裝置。
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [Windows]   > [Windows 註冊]   > [裝置]  \(在 [Windows AutoPilot Deployment Program]  底下\) > 選擇裝置 > [指派使用者]  。
+1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [Windows]   > [Windows 註冊]   > [裝置]  (在 [Windows AutoPilot Deployment Program]  底下) > 選擇裝置 > [指派使用者]  。
 
     ![指派使用者的螢幕擷取畫面](./media/enrollment-autopilot/assign-user.png)
 
@@ -224,9 +224,9 @@ Autopilot 部署設定檔會用來設定 Autopilot 裝置。 您可以為每個�
 。 交互識別碼是 Autopilot 設定檔的參數。 [Azure AD 裝置屬性 enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) 會自動設為相等的 "OfflineAutopilotprofile-\<correlator ID\>"。 這會允許使用 enrollmentprofileName 屬性，根據交互識別碼建立任意 Azure AD 動態群組。
 
 >[!WARNING] 
-> 因為交互識別碼並未在 Intune 中預先列出，裝置可能會回報任何其希望的交互識別碼。 若使用者建立與 Autopilot 或 Apple DEP 設定檔名稱相符的交互識別碼，則裝置會新增至任何根據 enrollmentProfileName 屬性的動態 Azure AD 裝置群組。 若要避免此衝突：
+> 因為交互識別碼並未在 Intune 中預先列出，裝置可能會回報任何其希望的交互識別碼。 若使用者建立與 Autopilot 或 Apple ADE 設定檔名稱相符的交互識別碼，則裝置會新增至任何根據 enrollmentProfileName 屬性的動態 Azure AD 裝置群組。 若要避免此衝突：
 > - 一律建立與「整個」  enrollmentProfileName 值比對的動態群組規則
-> - 永遠不要將 Autopilot 或 Apple DEP 設定檔命名為開頭是 "OfflineAutopilotprofile-" 的名稱。
+> - 永遠不要將 Autopilot 或 Apple ADE 設定檔命名為開頭是 "OfflineAutopilotprofile-" 的名稱。
 
 ## <a name="next-steps"></a>後續步驟
 您為已註冊的 Windows 10 裝置設定 Windows Autopilot 之後，請了解如何管理這些裝置。 如需詳細資訊，請參閱[什麼是 Microsoft Intune 裝置管理？](../remote-actions/device-management.md)

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d391bf08d963e26dd91607d7dad0347e77d130ed
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 52d69b851b67d0a230e71d8aaa6b60b5cb7b2b8d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361935"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325697"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>如何使用 Microsoft Intune 管理透過 Apple 大量採購方案購買的 iOS 與 macOS 應用程式
 
@@ -88,11 +88,11 @@ Microsoft Intune 可藉由下列方式協助您管理透過此方案所購買的
 2. 在繼續之前，請確定組織內的所有 VPP 購買者都已完成步驟 1。
 3. 確認所有已購買的應用程式和授權都已經移轉至 Apple Business Manager 或 Apple School Manager 中的 [App 及書籍]。
 4. 透過移至 [Apple Business (或 School) Manager]   > [設定]   > [App 及書籍]   > [我的伺服器權杖]  來下載新的位置權杖。
-5. 透過移至 Microsoft 端點管理員系統管理中心中的 [租用戶系統管理]   > [連接器與權杖]   > [Apple VPP 權杖]  並同步權杖來更新位置權杖。
+5. 透過移至 [租用戶系統管理]   > [連接器與權杖]   > [Apple VPP 權杖]  並同步權杖，更新 Microsoft 端點管理員系統管理中心中的位置權杖。
 
 ## <a name="upload-an-apple-vpp-or-location-token"></a>上傳 Apple VPP 或位置權杖
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [租用戶系統管理]   > [連接器與權杖]   > [Apple VPP 權杖]  。
 3. 在 VPP 權杖清單窗格上，選取 [建立]  。
 4. 在 [建立 VPP 權杖]  窗格上，指定下列資訊：

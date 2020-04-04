@@ -1,12 +1,12 @@
 ---
 title: Windows 資訊保護 (WIP) 應用程式保護原則
 titleSuffix: Microsoft Intune
-description: 使用 Microsoft Intune 建立及部署 Windows 資訊保護 (WIP) 應用程式保護原則
+description: 使用 Microsoft Intune 建立及部署 Windows 資訊保護 (WIP) 原則
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ea664594744facd36f3f92900a1e80c48053904
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6e7305d33b1c40c2624c5c860f59922a5817c818
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79345685"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326095"
 ---
-# <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>使用 Intune 建立及部署 Windows 資訊保護 (WIP) 應用程式保護原則
+# <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>使用 Intune 建立及部署 Windows 資訊保護 (WIP) 原則
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-您可以搭配 Windows 10 應用程式使用應用程式保護原則，不用註冊裝置即可保護應用程式。
+您可搭配 Windows 10 應用程式使用 Windows 資訊保護 (WIP) 原則，不用註冊裝置即可保護應用程式。
 
 ## <a name="before-you-begin"></a>開始之前
 
@@ -49,10 +49,10 @@ ms.locfileid: "79345685"
 
 ## <a name="prerequisites"></a>先決條件
 
-您必須先設定 MAM 提供者，才能建立 WIP 應用程式保護原則。 深入了解[如何設定搭配 Intune 的 MAM 提供者 (英文)](app-protection-policies-configure-windows-10.md)。  
+您必須先設定 MAM 提供者，才能建立 WIP 原則。 深入了解[如何設定搭配 Intune 的 MAM 提供者 (英文)](app-protection-policies-configure-windows-10.md)。  
 
 > [!IMPORTANT]
-> WIP 不支援多重身分識別，一次只能存在一個受管理的身分識別。
+> WIP 不支援多重身分識別，一次只能存在一個受管理的身分識別。 如需 WIP 功能與使用限制的詳細資訊，請參閱[使用 Windows 資訊保護 (WIP) 保護企業資料](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip) (機器翻譯)。
 
 此外，您也需要下列授權和更新：
 
@@ -63,7 +63,7 @@ ms.locfileid: "79345685"
 
 
 
-## <a name="to-add-a-wip-app-protection-policy"></a>新增 WIP 應用程式保護原則
+## <a name="to-add-a-wip-policy"></a>新增 WIP 原則
 
 當您在組織中設定 Intune 之後，就可以建立 WIP 特定原則。
 
@@ -71,18 +71,18 @@ ms.locfileid: "79345685"
 > 如需建立 Intune 的 WIP 原則相關資訊 (包含可用設定和其設定方式)，請參閱 Windows Security 文件庫中的[使用 Microsoft Intune 的 Azure 入口網站建立附帶 MAM 的 Windows 資訊保護 (WIP) 原則](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure)。 
 
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [應用程式保護原則]   > [建立原則]  。
 3. 新增下列值：
     - **名稱**：鍵入新原則的名稱 (必要)。
     - **描述：** (選擇性) 鍵入描述。
-    - **平台：** 選擇 [Windows 10]  作為應用程式防護原則的支援平台。
+    - **平台：** 選擇 [Windows 10]  作為 WIP 原則支援平台。
     - **註冊狀態：** 選擇 [沒有註冊]  作為原則的註冊狀態。
 4. 選擇 **[建立]** 。 原則會建立並顯示在 [應用程式保護原則]  窗格的表格中。
 
 ## <a name="to-add-recommended-apps-to-your-protected-apps-list"></a>將建議的應用程式新增到受保護的應用程式清單
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [應用程式保護原則]  。
 3. 在 [應用程式保護原則]  窗格上，選擇您想要修改的原則。 [Intune 應用程式防護]  窗格隨即出現。
 4. 從 [Intune 應用程式防護]  窗格中，選擇 [受保護的應用程式]  。 [受保護的應用程式]  窗格隨即開啟，顯示此應用程式保護原則清單中已包含的所有應用程式。
@@ -95,7 +95,7 @@ ms.locfileid: "79345685"
 
 **新增市集應用程式**
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [應用程式保護原則]  。
 3. 在 [應用程式保護原則]  窗格上，選擇您想要修改的原則。 [Intune 應用程式防護]  窗格隨即出現。
 4. 從 [Intune 應用程式防護]  窗格中，選擇 [受保護的應用程式]  。 [受保護的應用程式]  窗格隨即開啟，顯示此應用程式保護原則清單中已包含的所有應用程式。
@@ -108,7 +108,7 @@ ms.locfileid: "79345685"
 ## <a name="add-a-desktop-app-to-your-protected-apps-list"></a>將桌面應用程式新增到受保護的應用程式清單
 
 **新增傳統型應用程式**
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [應用程式保護原則]  。
 3. 在 [應用程式保護原則]  窗格上，選擇您想要修改的原則。 [Intune 應用程式防護]  窗格隨即出現。
 4. 從 [Intune 應用程式防護]  窗格中，選擇 [受保護的應用程式]  。 [受保護的應用程式]  窗格隨即開啟，顯示此應用程式保護原則清單中已包含的所有應用程式。

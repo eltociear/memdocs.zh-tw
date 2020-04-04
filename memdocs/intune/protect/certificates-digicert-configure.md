@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 958acb7c8e5342d4c85c94a8e6f99cd9f1fee7e9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 716a69690c46e301354012272fc7d1f8be564df9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353758"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322675"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>針對 DigiCert PKI 平台設定 Intune 憑證連接器
 
@@ -168,7 +168,7 @@ ms.locfileid: "79353758"
 
 從 Intune 管理入口網站下載最新的 Intune 憑證連接器版本，並遵循下列指示。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [租用戶系統管理]   > [連接器與權杖]   > [憑證連接器]   > [+ 新增]  。
 
@@ -239,7 +239,7 @@ ms.locfileid: "79353758"
 
 2. 在 Intune 入口網站中，建立受信任的憑證設定檔：
 
-   a. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+   a. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
    b. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 
@@ -278,7 +278,7 @@ ms.locfileid: "79353758"
 
 ## <a name="create-a-pkcs-certificate-profile"></a>建立 PKCS 憑證設定檔
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 
@@ -321,7 +321,7 @@ ms.locfileid: "79353758"
 
 | 問題/錯誤訊息 | 解決步驟 |
 | --- | --- |
-| 無法在 NDES 連接器 UI 上使用 Intune 租用戶管理帳戶登入。 | 若未在 Microsoft Endpoint Manager 系統管理中心內啟用內部部署憑證連接器，就可能發生此情況。 解決此問題： <br><br> 1.登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 <br> 2.選取 [租用戶系統管理]   > [連接器與權杖]   > [憑證連接器]  。 <br> 3.找出憑證連接器，並確定其已啟用。 <br><br> 完成上述步驟之後，請嘗試在 NDES 連接器 UI 中使用相同的 Intune 租用戶管理帳戶登入。 |
+| 無法在 NDES 連接器 UI 上使用 Intune 租用戶管理帳戶登入。 | 若未在 Microsoft Endpoint Manager 系統管理中心內啟用內部部署憑證連接器，就可能發生此情況。 解決此問題： <br><br> 1.登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 <br> 2.選取 [租用戶系統管理]   > [連接器與權杖]   > [憑證連接器]  。 <br> 3.找出憑證連接器，並確定其已啟用。 <br><br> 完成上述步驟之後，請嘗試在 NDES 連接器 UI 中使用相同的 Intune 租用戶管理帳戶登入。 |
 | 找不到 NDES 連接器憑證。 <br><br> System.ArgumentNullException:值不能是 Null。 | 如果 Intune 租用戶系統管理員帳戶從未登入 NDES 連接器 UI，Intune 憑證連接器便會顯示此錯誤。 <br><br> 如果此錯誤持續發生，請重新啟動 Intune 服務連接器。 <br><br> 1.開啟 **services.msc**。 <br> 2.選取 [Intune 連接器服務]  。 <br> 3.以滑鼠右鍵按一下並選取 [重新啟動]  。|
 | NDES 連接器 - IssuePfx - 一般例外狀況： <br> System.NullReferenceException：物件參考未設定成物件的執行個體。 | 這是暫時性的錯誤。 請重新啟動 Intune 服務連接器。 <br><br> 1.開啟 **services.msc**。 <br> 2.選取 [Intune 連接器服務]  。 <br> 3.以滑鼠右鍵按一下並選取 [重新啟動]  。 |
 | DigiCert 提供者 - 無法取得 DigiCert 原則。 <br><br>「作業已逾時。」 | Intune 憑證連接器在與 DigiCert CA 通訊期間，接收到作業逾時錯誤。 如果此錯誤持續發生，請提高連線逾時值，然後再試一次。 <br><br> 提高連線逾時： <br> 1.移至 NDES 連接器電腦。 <br>2.在 [記事本] 中開啟 **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config** 檔案。 <br> 3.提高下列參數的逾時值： <br><br> `CloudCAConnTimeoutInMilliseconds` <br><br> 4.重新啟動 Intune 憑證連接器服務。 <br><br> 如果此問題持續發生，請連絡 DigiCert 客戶支援。 |

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84d14943a37cf29a224c94364317d899b65ffef0
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 81e5dc772ca85bf124af3da33a263b683ea0885b
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526321"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326973"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>使用 Intune 和 Windows Autopilot 部署混合式 Azure AD 聯結裝置
 您可以使用 Intune 和 Windows Autopilot 來設定混合式 Azure Active Directory (Azure AD) 聯結裝置。 若要這樣做，請遵循本文中的步驟。
@@ -109,7 +109,7 @@ ms.locfileid: "79526321"
 
 適用於 Active Directory 的 Intune 連接器必須安裝在執行 Windows Server 2016 或更新版本的電腦上。 該電腦也必須能夠存取網際網路和您的 Active Directory。 若要增加規模和可用性，或支援多個 Active Directory 網域，您可以在您的環境中安裝多個連接器。 建議在未執行任何其他 Intune 連接器的伺服器上安裝連接器。
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選取 [裝置]   > [Windows]   > [Windows 註冊]   > [適用於 Active Directory 的 Intune 連接器]   > [新增]  。 
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選取 [裝置]   > [Windows]   > [Windows 註冊]   > [適用於 Active Directory 的 Intune 連接器]   > [新增]  。 
 2. 遵循指示下載連接器。
 3. 開啟下載的連接器安裝程式檔案 *ODJConnectorBootstrapper.exe* 以安裝連接器。
 4. 在安裝結束時，選取 [設定]  。
@@ -119,7 +119,7 @@ ms.locfileid: "79526321"
 7. 移至 [裝置]   > [Windows]   > [Windows 註冊]   > [適用於 Active Directory 的 Intune 連接器]  ，然後確認連線狀態為 [使用中]  。
 
 > [!NOTE]
-> 登入連接器之後，該連接器可能需要數分鐘的時間才會顯示在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內。 只有在順利與 Intune 服務通訊時才會顯示。
+> 登入連接器之後，[Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)可能需要幾分鐘才會顯示連接器。 只有在順利與 Intune 服務通訊時才會顯示。
 
 ### <a name="turn-off-ie-enhanced-security-configuration"></a>關閉 IE 增強式安全性設定
 根據預設，Windows Server 已開啟 Internet Explorer 增強式安全性設定。 如果您無法登入適用於 Active Directory 的 Intune 連接器，則需針對管理員關閉 IE 增強式安全性設定。 [如何關閉 Internet Explorer 增強式安全性設定](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration) \(英文\)
@@ -130,7 +130,7 @@ ms.locfileid: "79526321"
 
 
 ## <a name="create-a-device-group"></a>建立裝置群組
-1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選取 [群組]   > [新增群組]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選取 [群組]   > [新增群組]  。
 
 1. 在 [群組]  窗格中，執行下列動作：
 
@@ -185,7 +185,7 @@ ms.locfileid: "79526321"
 ## <a name="create-and-assign-an-autopilot-deployment-profile"></a>建立並指派 AutoPilot 部署設定檔
 Autopilot 部署設定檔會用來設定 Autopilot 裝置。
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選取 [裝置]   > [Windows]   > [Windows 註冊]   > [部署設定檔]   > [建立設定檔]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選取 [裝置]   > [Windows]   > [Windows 註冊]   > [部署設定檔]   > [建立設定檔]  。
 2. 在 [基本]  頁面上，輸入**名稱**和選擇性的**描述**。
 3. 若您想指派群組中所有的裝置自動轉換至 Autopilot，請將 [將所有目標裝置轉換至 Autopilot]  設為 [是]  。 指派群組中所有屬公司擁有的非 Autopilot 裝置都會向 Autopilot 部署服務註冊。 個人擁有的裝置將不會轉換成 Autopilot。 等候 48 小時讓註冊處理完畢。 當裝置取消註冊並重設時，Autopilot 將會自動註冊它。 在裝置使用此方式註冊完畢後，停用此選項或是移除設定檔指派也不會從 Autopilot 部署服務移除裝置。 您必須改為[直接移除裝置](enrollment-autopilot.md#delete-autopilot-devices)。
 4. 選取 [下一步]  。
@@ -202,7 +202,7 @@ Autopilot 部署設定檔會用來設定 Autopilot 裝置。
 
 ## <a name="optional-turn-on-the-enrollment-status-page"></a>(選擇性) 開啟註冊狀態頁面
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選取 [裝置]   > [Windows]   > [Windows 註冊]   > [註冊狀態頁面]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選取 [裝置]   > [Windows]   > [Windows 註冊]   > [註冊狀態頁面]  。
 1. 在 [註冊狀態頁面]  窗格中，選取 [預設]   > [設定]  。
 1. 在 [顯示應用程式和設定檔安裝進度]  方塊中，選取 [是]  。
 1. 視需要設定其他選項。
@@ -210,7 +210,7 @@ Autopilot 部署設定檔會用來設定 Autopilot 裝置。
 
 ## <a name="create-and-assign-a-domain-join-profile"></a>建立並指派網域加入設定檔
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 2. 輸入下列內容：
    - **名稱**：為新的設定檔輸入描述性名稱。
    - **描述**：輸入設定檔的描述。

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03f3e89b8fe1872b323459e3c0da34f3029a7e9c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ad0964eafccc5bf007b1569762e4cea4d0ee691a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79358789"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326782"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>將授權指派給使用者，讓使用者可以在 Intune 中註冊裝置
 
@@ -30,11 +30,11 @@ ms.locfileid: "79358789"
 > [!NOTE]
 > 已指派 Intune 應用程式保護原則但未向 Microsoft Intune 註冊其裝置的使用者，也需要 Intune 授權才能接收原則。
 
-## <a name="assign-an-intune-license-microsoft-endpoint-manager-admin-center"></a>指派 Intune 授權 Microsoft Endpoint Manager 系統管理中心
+## <a name="assign-an-intune-license-microsoft-endpoint-manager-admin-center"></a>指派 Intune 授權 Microsoft 端點管理員系統管理中心
 
-您可以使用 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)手動新增雲端式使用者，並將授權指派給雲端式使用者帳戶，以及從您的內部部署 Active Directory 同步處理至 Azure AD 的帳戶。
+您可使用 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)手動新增雲端式使用者，並將授權指派給雲端式使用者帳戶，以及從內部部署 Active Directory 同步處理至 Azure AD 的帳戶。
 
-1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [使用者]   > [所有使用者]  > 選擇使用者 > [授權]   > [指派]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，選取 [使用者]   > [所有使用者]  > 選擇使用者 > [授權]   > [指派]  。
 
 2. 選擇 [Intune]   > [儲存]  的方塊。
 

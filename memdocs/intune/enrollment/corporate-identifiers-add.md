@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26f3ec6871784a019ffcf117d17b863b05354848
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 483f82e67c3f5d8ad3b4e55fba73e21eba85d49d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526303"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327155"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>識別公司所擁有的裝置
 
@@ -54,7 +54,7 @@ ms.locfileid: "79526303"
 | 裝置管理受控 Android OS v10 | 不支援 | 不支援 |
 | 其他 Android | 不支援 | 支援 |
 
-<!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's device enrollment program (DEP) or Apple Configurator to have them appear as corporate-owned. -->
+<!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 
 [了解如何尋找 Apple 裝置序號](https://support.apple.com/HT204308)。<br>
 [了解如何尋找您的 Android 裝置序號](https://support.google.com/store/answer/3333000)。

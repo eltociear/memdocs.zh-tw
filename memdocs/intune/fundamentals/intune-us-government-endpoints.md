@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 149a1dba78b32f2d59884fbb5b69ed58f4c0fccd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 97298bba752f4af29c9dc7c2483c324cbd77a6bc
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79358763"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438777"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Microsoft Intune 的美國政府端點
 
@@ -51,6 +51,7 @@ ms.locfileid: "79358763"
 - Azure 入口網站：https:\//portal.azure.us/ 
 - Office 365：https:\//portal.office365.us/ 
 - Intune 公司入口網站：https:\//portal.manage.microsoft.us/ 
+- Microsoft 端點管理員系統管理中心：https:\//endpoint.microsoft.us/
 
 ## <a name="partner-service-endpoints-that-intune-depends-on"></a>Intune 依賴的合作夥伴服務端點：
 - AAD Sync 服務：https:\//syncservice.gov.us.microsoftonline.com/DirectoryService.svc

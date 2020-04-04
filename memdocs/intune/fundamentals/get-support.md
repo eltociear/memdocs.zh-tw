@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf732907b9123dfe8cbd72970556ecfbb5380733
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 2fbb82123f28c5049a60d60572aadcb3d03777b7
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086038"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326949"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>如何取得 Microsoft Intune 支援
 
@@ -66,7 +66,7 @@ Intune 的說明及支援體驗可以從 [Microsoft 端點管理員系統管理�
 
 - **從 Microsoft 端點管理員系統管理中心**
 
-  - 從 Microsoft 端點管理員系統管理中心的任何節點中，選取 [?]  圖示 (位於入口網站右上角)，然後使用下拉式清單來選取您需要協助的管理類型。 Microsoft 端點管理員系統管理中心支援下列管理類型，而您必須選取您需要協助的管理類型 (例如 Intune)：
+  - 從 Microsoft 端點管理員系統管理中心的任何節點內，選取 [?]  圖示 (位於入口網站右上角)，然後使用下拉式清單來選取您需要協助的管理類型。 Microsoft 端點管理員系統管理中心支援下列管理類型，而您必須選取所需要協助的管理類型 (例如 Intune)：
 
     - Configuration Manager (包含電腦分析)
     - Intune

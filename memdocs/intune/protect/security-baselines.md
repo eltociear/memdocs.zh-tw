@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a62b87861bbe2f1d9e498756aedb0acd28bbff5a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c810b6caa47596967cf9e1f2ad4cb3f772064f30
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349988"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488046"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>在 Intune 中使用安全性基準來設定 Windows 10 裝置
 
@@ -31,7 +31,7 @@ ms.locfileid: "79349988"
 
 - Windows 10 1809 版和更新版本
 
-您在 Intune 中將安全性基準部署到使用者或裝置群組，而那些設定會套用到執行 Windows 10 或更新版本的裝置。 例如， *MDM 安全性基準*會自動針對抽取式磁碟機啟用 BitLocker、自動要求輸入密碼以將裝置解鎖，以及自動停用基本驗證等。 當預設值不適用於您的環境時，自訂基準以套用您所需的設定。
+您在 Intune 中將安全性基準部署到使用者或裝置群組，而那些設定會套用到執行 Windows 10 或更新版本的裝置。 例如， *MDM 安全性基準*會自動針對抽取式磁碟機啟用 BitLocker、自動要求輸入密碼以將裝置解鎖，以及自動停用基本驗證等。 當預設值不適用於環境時，請自訂基準以套用所需的設定。
 
 個別的基準類型可包括相同的設定，但會為那些設定使用不同的預設值。 了解您選擇使用之基準中的預設值非常重要，因為稍後您必須根據您的組織需求修改每個基準。
 
@@ -60,7 +60,7 @@ ms.locfileid: "79349988"
 
 當您建立安全性基準設定檔  時，設定會自動使用最新的已發行安全性基準執行個體。  您可以繼續使用及編輯先前建立且使用較早基準版本執行個體的設定檔，包括使用預覽版本建立的基準。
 
-您可以選擇[變更搭配給定設定檔使用的基準版本](#change-the-baseline-version-for-a-profile)。 這表示當新版本推出時，您不需要建立新的基準設定檔就能發揮其功能。 當您就緒時，您可以改為選取基準設定檔並使用內建選項將該設定檔的執行個體版本變更為新版本。
+您可選擇[變更搭配指定設定檔使用的基準版本](#change-the-baseline-version-for-a-profile)。 這表示當新版本推出時，您不必建立新的基準設定檔就能發揮其功能。 當就緒時，您可改為選取基準設定檔並使用內建選項將該設定檔的執行個體版本變更為新版本。
 
 ## <a name="available-security-baselines"></a>可用的安全性基準
 
@@ -76,7 +76,7 @@ ms.locfileid: "79349988"
 
 - **Microsoft Defender ATP 基準**
   (若要使用此基準，您的環境必須滿足使用 [Microsoft Defender 進階威脅防護的先決條件](advanced-threat-protection.md#prerequisites))  。
-  - [Microsoft Defender ATP 基準](security-baseline-settings-defender-atp.md)
+  - [Microsoft Defender ATP 基準版本 3](security-baseline-settings-defender-atp.md)
 
   > [!NOTE]
   > Microsoft Defender ATP 安全性基準已針對實體裝置最佳化，目前不建議用於虛擬機器 (VM) 或 VDI 端點。 特定基準設定可能會影響虛擬化環境上的遠端互動式工作階段。  如需詳細資訊，請參閱 Windows 文件中的[提高 Microsoft Defender ATP 安全性基準的合規性](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) \(英文\)。
@@ -146,7 +146,7 @@ ms.locfileid: "79349988"
 
 ### <a name="change-the-baseline-version-for-a-profile"></a>變更設定檔的基準版本
 
-您可以變更搭配設定檔使用之基準執行個體的版本。  當您變更版本時，您是選取相同基準的可用執行個體。 您無法在兩個不同的基準類型之間變更，例如將設定檔從使用 Defender ATP 的基準變更為使用 MDM 安全性基準。
+您可以變更搭配設定檔使用之基準執行個體的版本。  當您變更版本時，您是選取相同基準的可用執行個體。 您無法在兩個不同的基準類型之間變更，例如將設定檔從使用 Defender ATP 基準變更為使用 MDM 安全性基準。
 
 在設定基準版本的變更時，您可以下載列出所涉及兩個基準版本間之變更的 CSV 檔案。 您也可以選擇保留原始基準版本的所有自訂項目，或使用其所有預設值來實作新版本。 當您在變更設定檔的基準版本時，您無法選擇變更個別設定。
 
@@ -158,7 +158,7 @@ ms.locfileid: "79349988"
 
 - 系統會移除不存於您選取之新基準版本中的設定，而且那些設定再也不會由此安全性基準設定檔強制套用。
 
-  當設定不再由基準設定檔管理時，該設定不會在裝置上重設。 裝置上的該設定會維持設定為其上次設定，直到一些其他程序管理那些設定並變更設定值。 可在您停止管理設定之後變更設定的程序範例包括不同的基準設定檔、群組原則設定，或在裝置上進行的手動設定。
+  當設定不再由基準設定檔管理後，該設定就不會在裝置上重設。 裝置上的該設定會維持設定為其上次設定，直到一些其他程序管理那些設定並變更設定值。 可在停止管理設定之後變更設定的程序範例包括不同基準設定檔、群組原則設定，或在裝置上進行的手動設定。
 
 #### <a name="to-change-the-baseline-version-for-a-profile"></a>變更設定檔的基準版本
 
@@ -174,7 +174,7 @@ ms.locfileid: "79349988"
 
    ![選取版本](./media/security-baselines/select-instance.png)
 
-5. 選取 [檢閱更新]  以下載 CSV 檔案，此檔案顯示設定檔目前執行個體版本與您選取之新版本之間的差異。 檢閱此檔案，以便您了解那些設定是新的，或移除了哪些設定，以及這些設定在已更新之設定檔中的預設值為何。
+5. 選取 [檢閱更新]  以下載 CSV 檔案，此檔案會顯示設定檔目前執行個體版本與所選新版本之間的差異。 檢閱此檔案，以便您了解那些設定是新的，或移除了哪些設定，以及這些設定在已更新之設定檔中的預設值為何。
 
    當您就緒時，繼續到下一個步驟。
 
@@ -186,7 +186,7 @@ ms.locfileid: "79349988"
 
 ### <a name="remove-a-security-baseline-assignment"></a>移除安全性基準指派
 
-當安全性基準設定不再套用到裝置時，或基準中的設定設定為 [尚未設定]  時，裝置上的那些設定不會還原為預先管理的設定。 裝置上先前的受控設定會保留其上次從基準所接收的設定，直到一些其他程序更新裝置上的那些設定。
+當安全性基準設定不再適用裝置，或基準中的設定設定為 [未設定]  時，裝置上的那些設定不會還原為預先受控設定。 裝置上先前的受控設定會保留其上次從基準所接收的設定，直到一些其他程序更新裝置上的那些設定。
 
 稍後可能變更裝置上那些設定的其他程序包括不同或新的安全性基準、裝置設定檔、群組原則設定，或在裝置上手動編輯設定。
 

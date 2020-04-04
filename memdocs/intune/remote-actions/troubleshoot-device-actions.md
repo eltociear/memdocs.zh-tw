@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6eefc9f07a6c0cf442468b14d6d74567b8c15861
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 78dec649f5486e0dcf56f92b8ac16d176d119653
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348818"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322331"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>針對 Intune 中的裝置動作進行疑難排解
 
@@ -54,7 +54,7 @@ Microsoft Intune 有許多動作可協助您管理裝置。 此文章提供一�
 ## <a name="remove-devices-action"></a>[移除裝置] 動作
 
 ### <a name="how-do-i-tell-who-started-a-retirewipe"></a>我要如何知道誰啟動 [淘汰/抹除]？
-在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，移至 [租用戶系統管理]   > [稽核記錄]  > 檢查 [起始者]  欄。
+在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，移至 [租用戶系統管理]   > [稽核記錄]  > 檢查 [起始者]  欄。
 如果您沒有看到某個項目，則起始該動作的最有可能的人是裝置的使用者。 他們可能會使用公司入口網站應用程式或 portal.manage.microsoft.com。
 
 ### <a name="why-wasnt-my-application-uninstalled-after-using-retire"></a>為什麼我的應用程式在使用 [淘汰] 之後才解除安裝？
@@ -69,7 +69,7 @@ Microsoft Intune 有許多動作可協助您管理裝置。 此文章提供一�
 因為淘汰裝置並不會撤銷存取權杖。 您可以使用條件式存取原則來減少這種情況。
 
 ### <a name="how-can-i-monitor-a-retirewipe-action-after-it-was-issued"></a>如何在發出後監視 [淘汰/抹除] 動作？
-在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，移至 [租用戶系統管理]   > [稽核記錄]  。
+在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)禸，移至 [租用戶系統管理]   > [稽核記錄]  。
 
 ### <a name="why-do-wipes-sometimes-show-as-pending-indefinitely"></a>為什麼抹除有時會無限期地顯示為 [擱置中]？
 在重設啟動之前，裝置不一定會將其狀態回報給 Intune 服務。 因此，此動作會顯示為 [擱置中]。 如果您確認動作已成功，請從服務中刪除裝置。

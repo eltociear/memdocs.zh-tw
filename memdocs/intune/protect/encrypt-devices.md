@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ac81ceced473eacc32a3fca566f7c36eb7a262e2
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: d79f97da88a939d95b68a9ef747da87cf3844598
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084884"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322482"
 ---
 # <a name="use-device-encryption-with-intune"></a>搭配 Intune 使用裝置加密
 
@@ -43,7 +43,7 @@ Intune 也提供內建的[加密報告](encryption-monitor.md)，該報告會提
 
 FileVault 是隨附於 macOS 的完整磁碟加密程式。 您可以使用 Intune，在執行 **macOS 10.13 或更新版本**的裝置上設定 FileVault。
 
-若要設定 FileVault，請針對 macOS 平台建立 Endpoint Protection 的[裝置組態設定檔](../configuration/device-profile-create.md)。 FileVault 設定是 macOS Endpoint Protection 其中一項可用的設定類別。
+若要設定 FileVault，請針對 macOS 平台建立 Endpoint Protection 的[裝置組態設定檔](endpoint-protection-configure.md)。 FileVault 設定是 macOS Endpoint Protection 其中一項可用的設定類別。
 
 當您使用 FileVault 建立加密裝置的原則後，原則會以兩階段套用至裝置。 首先，裝置已準備好讓 Intune 擷取和備份修復金鑰。 此動作稱為委付。 委付金鑰之後，磁碟加密就可以啟動。
 
@@ -66,7 +66,7 @@ FileVault 是隨附於 macOS 的完整磁碟加密程式。 您可以使用 Intu
 
 ### <a name="how-to-configure-macos-filevault"></a>如何設定 macOS FileVault
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 
@@ -105,13 +105,13 @@ FileVault 是隨附於 macOS 的完整磁碟加密程式。 您可以使用 Intu
 
 BitLocker 適用於執行 **Windows 10 或更新版本**的裝置。
 
-當您針對 Windows 10 或更新版本平台建立 Endpoint Protection 的[裝置組態設定檔](../configuration/device-profile-create.md)時，請設定 BitLocker。 BitLocker 設定位於 Windows 10 Endpoint Protection 的 Windows 加密設定類別中。
+當您針對 Windows 10 或更新版本平台建立 Endpoint Protection 的[裝置組態設定檔](endpoint-protection-configure.md)時，請設定 BitLocker。 BitLocker 設定位於 Windows 10 Endpoint Protection 的 Windows 加密設定類別中。
 
 ![Bitlocker 設定](./media/encrypt-devices/bitlocker-settings.png)
 
 ### <a name="how-to-configure-windows-10-bitlocker"></a>如何設定 Windows 10 BitLocker
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 
@@ -174,7 +174,7 @@ BitLocker 原則**不得要求**使用啟動 PIN 或啟動金鑰。 當 TPM 啟�
   
 #### <a name="to-rotate-the-bitlocker-recovery-key"></a>輪替 BitLocker 修復金鑰
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [裝置]   > [所有裝置]  。
 

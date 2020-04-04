@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 216cf1a4d84adf717ebf914732eab3d6a169508f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 04ee6fea411c0ee231f4a7e9e00cdea45d206943
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350417"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326616"
 ---
 # <a name="troubleshoot-deployment-of-a-scep-certificate-profile-to-devices-in-microsoft-intune"></a>針對 Microsoft Intune 中的 SCEP 憑證設定檔部署至裝置進行疑難排解
 
@@ -63,7 +63,7 @@ Time    VERB    Event     com.microsoft.omadm.syncml.SyncmlSession     9595     
 
 ### <a name="validate-that-the-iosipados-device-was-sent-the-policy"></a>驗證是否已向 iOS/iPadOS 裝置傳送原則
 
-若要驗證是否已將設定檔傳送至您預期的裝置，請在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中移至 [疑難排解 + 支援]   > [疑難排解]  。  在 [疑難排解]  視窗中，將 [指派]  設定為 [組態設定檔]  然後驗證下列設定：
+若要驗證是否已將設定檔傳送至預期的裝置，請在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中移至 [疑難排解 + 支援]   > [疑難排解]  。  在 [疑難排解]  視窗中，將 [指派]  設定為 [組態設定檔]  然後驗證下列設定：
 
 1. 指定應該接收 SCEP 憑證設定檔的使用者。
 
@@ -90,7 +90,7 @@ debug    18:30:54.638009 -0500    profiled    Adding dependent ModelName=AC_51ba
 
 ### <a name="validate-that-the-windows-device-was-sent-the-policy"></a>驗證是否已向 Windows 裝置傳送原則
 
-若要驗證是否已將設定檔傳送至您預期的裝置，請在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)[Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)移至 [疑難排解 + 支援]   > [疑難排解]  。  在 [疑難排解]  視窗中，將 [指派]  設定為 [組態設定檔]  然後驗證下列設定：
+若要驗證是否已將設定檔傳送至預期的裝置，請在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)[Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)移至 [疑難排解 + 支援]   > [疑難排解]  。  在 [疑難排解]  視窗中，將 [指派]  設定為 [組態設定檔]  然後驗證下列設定：
 
 1. 指定應該接收 SCEP 憑證設定檔的使用者。
 

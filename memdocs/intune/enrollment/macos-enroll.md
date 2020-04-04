@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7538cce4b116098db21e89d491476e8e0cd7f4e5
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 410911a44ca84230c30ccbea394c24b539b77c4f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086084"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327043"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>在 Intune 中設定 macOS 裝置的註冊
 
@@ -60,7 +60,7 @@ Intune 可讓您管理 macOS 裝置，以為使用者提供公司電子郵件與
 
 ## <a name="company-owned-macos-devices"></a>公司擁有的 macOS 裝置
 針對為使用者購買裝置的組織來說，Intune 可支援下列 macOS 公司擁有裝置的註冊方法：
-- [Apple 的裝置註冊計劃 (DEP)](device-enrollment-program-enroll-macos.md)：組織可以透過 Apple 的裝置註冊計劃 (DEP) 購買 macOS 裝置。 DEP 可以讓您在「線上」部署註冊設定檔，將裝置納入管理。
+- [Apple 的自動裝置註冊 (ADE)](device-enrollment-program-enroll-macos.md)：組織可以透過 ADE 購買 macOS 裝置。 ADE 可供在「線上」部署註冊設定檔，將裝置納入管理。
 - [裝置註冊管理員 (DEM)](device-enrollment-manager-enroll.md)：您可以使用 DEM 帳戶來註冊最多 1,000 部裝置。
 
 ## <a name="block-macos-enrollment"></a>封鎖 macOS 註冊
@@ -83,7 +83,7 @@ Intune 可讓您管理 macOS 裝置，以為使用者提供公司電子郵件與
 在 BYOD 註冊程序期間，系統會要求使用者手動核准 Apple 管理設定檔。 適用於 macOS 的公司入口網站應用程式中會提供指示。 雖然完成註冊不需要核准管理設定檔，但 Intune 會建議使用者核准的註冊。 如果使用者未在註冊期間核准設定檔，使用者可以前往 [系統偏好設定]   > [設定檔]  ，選擇管理設定檔，然後選取 [核准]  。    
 
 ### <a name="find-out-if-a-device-is-user-approved"></a>找出裝置是否為「經使用者核准」
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選擇 [裝置]   > [所有裝置]  > 選擇裝置 > [硬體]  。
 3. 勾選 [使用者核准的註冊]  欄位。
 

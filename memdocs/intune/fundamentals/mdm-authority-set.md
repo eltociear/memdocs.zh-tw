@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 651ab8488503594a9e6cf82af1731ca31c8035ed
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c8545f7d1ef48cc426f4b8e48aa1832ce3328bf0
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79362182"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326758"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>設定行動裝置管理授權單位
 
@@ -44,7 +44,7 @@ ms.locfileid: "79362182"
 
 如果您尚未設定 MDM 授權單位，請遵循下列步驟。
 
-1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選取橙色橫幅以開啟 [行動裝置管理授權單位]  設定。 只有在您尚未設定 MDM 授權單位時，才會顯示橙色橫幅。
+1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選取橙色橫幅以開啟 [行動裝置管理授權單位]  設定。 只有在您尚未設定 MDM 授權單位時，才會顯示橙色橫幅。
 2. 在 [行動裝置管理授權單位]  下，從下列選項中選擇您的 MDM 授權單位：
    - **Intune MDM 授權單位**
    - **無**

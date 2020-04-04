@@ -17,18 +17,18 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c07fc8102504a9ca3ee5694e8cb9b1d5f8b568bc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 81864c207cec560ca8b42041f9248560ebcf3b04
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352237"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322445"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>搭配 Intune 監視裝置加密
 
 Microsoft Intune 加密報表是一個集中式位置，用於檢視有關裝置加密狀態的詳細資料，並尋找管理裝置修復金鑰的選項。 修復金鑰可用選項取決於您所檢視的裝置類型。
 
-若要尋找報表，請登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 選取 [裝置]   > [監視器]  ，然後在 [設定]  下，選取 [加密報表]  。
+若要尋找報表，請登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 選取 [裝置]   > [監視器]  ，然後在 [設定]  下，選取 [加密報表]  。
 
 ## <a name="view-encryption-details"></a>檢視加密詳細資料
 
@@ -188,7 +188,7 @@ Intune 支援輪替和復原個人修復金鑰的多個選項。 輪替金鑰的
 
   若要輪替修復金鑰：
 
-  1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+  1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
   
   2. 選取 [裝置]   > [所有裝置]  。
   
@@ -216,7 +216,7 @@ Intune 支援輪替和復原個人修復金鑰的多個選項。 輪替金鑰的
 
 Intune 可讓您從 Intune 入口網站內存取 Azure AD 刀鋒視窗中的 BitLocker，以便檢視您 Windows 10 裝置的 BitLocker 金鑰識別碼與修復金鑰。 為了能夠存取，裝置必須將其金鑰委付給 Azure AD。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [裝置]   > [所有裝置]  。
 

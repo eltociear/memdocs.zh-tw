@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ff94f0b628fb20c063ef77ccb061f33eb0199195
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b10d56e9eb915273d5be9a5b14ca4528a64a2057
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363677"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327113"
 ---
 # <a name="categorize-devices-into-groups"></a>將裝置分類成群組
 

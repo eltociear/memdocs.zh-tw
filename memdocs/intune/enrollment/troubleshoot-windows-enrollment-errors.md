@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 04bc86ff697ed7083cacd552cbf9ebe5096a228c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526269"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326875"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>針對 Microsoft Intune 中的 Windows 裝置註冊問題進行疑難排解
 
@@ -41,7 +41,7 @@ ms.locfileid: "79526269"
 - 有多少使用者受到影響？ 所有使用者都受到影響，還是只有部分使用者受到影響？
 - 有多少裝置受到影響？ 所有裝置都受到影響，還是只有部分裝置受到影響？
 - 什麼是 MDM 授權單位？
-- 如何執行註冊？ 是「攜帶您自己的裝置」(BYOD)，還是使用註冊設定檔的 Apple 裝置註冊計劃 (DEP)？
+- 如何執行註冊？ 是「攜帶您自己的裝置」(BYOD)，還是使用註冊設定檔的 Apple 自動裝置註冊 (ADE)？
 
 ## <a name="error-messages"></a>錯誤訊息
 
@@ -60,7 +60,7 @@ ms.locfileid: "79526269"
 此問題有幾種可能的解決方式：
 
 ##### <a name="remove-devices-that-were-enrolled"></a>移除已註冊的裝置
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。    
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。    
 2. 前往 [使用者]   > [所有使用者]  。    
 3. 選取受影響的使用者帳戶，然後按一下 [裝置]  。    
 4. 選取任何未使用或不想要的裝置，然後按一下 [刪除]  。 
@@ -70,7 +70,7 @@ ms.locfileid: "79526269"
 > [!NOTE]
 > 這個方法會提高所有使用者的裝置註冊限制，而不只是受影響的使用者。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 移至 [裝置]   > [註冊限制]   > [預設值]  \(在 [裝置限制]  下\) > [屬性]   > [編輯]  \([裝置限制]  旁\) > 提高 [裝置限制]  \(最高 15\) > [檢閱並儲存]  。    
  
 
@@ -141,7 +141,7 @@ ms.locfileid: "79526269"
 若要修正此問題，請使用下列任一種方法： 
  
 ##### <a name="assign-a-valid-license-to-the-user"></a>指派有效的授權給使用者
-移至 [Microsoft 365 系統管理中心](https://portal.office.com/adminportal/home)，然後將 Intune 或 Office 365 授權指派給使用者。
+移至 [Microsoft 365 系統管理中心](https://admin.microsoft.com)，然後將 Intune 或 Office 365 授權指派給使用者。
 
 ##### <a name="correct-the-mdm-terms-of-use-url"></a>更正 MDM 使用規定 URL
   1. 登入 [Azure 入口網站](https://portal.azure.com/)，然後選取 [Azure Active Directory]  。    
@@ -201,7 +201,7 @@ ms.locfileid: "79526269"
 #### <a name="resolution"></a>解決方案
 若要在獨立的 Intune 環境中修正此問題，請遵循下列步驟： 
  
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [註冊限制]  > 選擇裝置類型限制。    
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [註冊限制]  > 選擇裝置類型限制。    
 2. 針對 [Windows (MDM)]  ，選擇 [屬性]   > [編輯]  \(在 [平台設定]  旁\) > [允許]  。    
 3. 按一下 [檢閱並儲存]  。    
 
@@ -326,7 +326,7 @@ Registering your device for mobile management (Previous step failed)
 
 #### <a name="resolution"></a>解決方案
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 > [裝置]   > [Windows]   > [Windows 裝置]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 > [裝置]   > [Windows]   > [Windows 裝置]  。
 2. 選取發生問題的裝置 > 按一下最右側的省略符號。
 3. 選取 [取消指派使用者]  ，並等候程序完成。
 4. 請先確認已指派混合式 Azure AD Autopilot 設定檔，再重新嘗試 OOBE。

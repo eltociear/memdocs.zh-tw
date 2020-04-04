@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3ceb5c08e443bad42a0983b2b8257b997ca537c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ae24c8cad5ccee06444ffec6a4cd8b39b3371b49
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359699"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327296"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>設定 Android Enterprise 專用裝置的 Intune 註冊
 
@@ -69,7 +69,7 @@ Intune 可協助您將應用程式和設定部署至 Android Enterprise 專用�
 
 您可以將應用程式和原則的目標設為指派的裝置群組或動態裝置群組。 透過遵循下列步驟，即可設定動態 AAD 裝置群組，以自動填入使用特定註冊設定檔註冊的裝置：
 
-1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，然後選擇 [群組]   > [所有群組]   > [新增群組]  。
+1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，然後選擇 [群組]   > [所有群組]   > [新增群組]  。
 2. 在 [群組]  刀鋒視窗中填寫必要的欄位，如下所示：
     - **群組類型**：安全性
     - **群組名稱**：輸入直覺式名稱 (例如 Factory 1 裝置)

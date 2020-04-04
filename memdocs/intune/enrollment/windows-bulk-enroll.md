@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f102daeab975bbbf0a618d1a5d642c84f52edba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 077d7c4dd345b9b16677d61269b9f331dedb4dbb
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344489"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488086"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Windows 裝置的大量註冊
 
@@ -61,11 +61,13 @@ Azure AD 使用者是這些裝置上的標準使用者，並且會接收指派�
 7. 提供您的 Azure AD 認證以取得大量權杖。
    ![登入 Windows 設定設計工具應用程式的螢幕擷取畫面](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
-8. 成功擷取「大量權杖」  之後，按一下 [Next (下一步)]  。
+8. 在 [在此裝置的任何位置使用此帳戶]  頁面上，選取 [僅限此應用程式]  。
 
-9. 您可以選擇 [Add applications (新增應用程式)]  和 [Add certificates (新增憑證)]  。 這些應用程式和憑證都佈建在該裝置上。
+9. 成功擷取「大量權杖」  之後，按一下 [Next (下一步)]  。
 
-10. 您可以選擇以密碼保護佈建套件。  按一下 [建立]  。
+10. 您可以選擇 [Add applications (新增應用程式)]  和 [Add certificates (新增憑證)]  。 這些應用程式和憑證都佈建在該裝置上。
+
+11. 您可以選擇以密碼保護佈建套件。  按一下 [建立]  。
     ![Windows 設定設計工具應用程式中套件保護的螢幕擷取畫面](./media/windows-bulk-enroll/bulk-enroll-create.png)
 
 ## <a name="provision-devices"></a>佈建裝置

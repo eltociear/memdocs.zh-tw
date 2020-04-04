@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c9a2e8a2fd66eaa4c0d80b4001b2f7fb1fefc7b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 61ca3d5ecc614cee70c1d8a834f29b9db7ad21d2
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79362572"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326825"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>新增群組來組織使用者和裝置
 
@@ -40,7 +40,7 @@ Intune 使用 Azure Active Directory (Azure AD) 群組來管理裝置和使用�
 
 使用下列步驟建立新的群組。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [群組]   > [新增群組]  ：
 
    ![已選取 [新增群組] 的 Azure 入口網站螢幕擷取畫面](./media/groups-add/groups-add-new.png)
@@ -52,7 +52,7 @@ Intune 使用 Azure Active Directory (Azure AD) 群組來管理裝置和使用�
         > [!TIP]
         > 所建立的使用者和群組也會顯示在 [Microsoft 365 系統管理中心](https://admin.microsoft.com)、Azure Active Directory 管理中心，以及 [Azure 入口網站中的 Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2090973) 之中。 在您的組織租用戶中，您可以在所有這些區域中建立及管理群組。
         >
-        > 如果您的主要角色是裝置管理，我們建議您使用 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+        > 如果主要角色是裝置管理，則建議使用 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
     - **Office 365**：透過授與成員存取共用信箱、行事曆、檔案、SharePoint 網站等，來提供共同作業的機會。 此選項也可讓您將群組的存取權授與組織外的人員。 如需詳細資訊，請參閱[了解 Office 365 群組](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2)。
 

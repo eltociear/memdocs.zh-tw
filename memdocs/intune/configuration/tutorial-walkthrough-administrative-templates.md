@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/31/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5988da854eecd528119a7e2591fc083dcdbc29bf
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 26576212f4df86681210956669320ed4b124025d
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220215"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488130"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>教學課程：使用雲端為具有 ADMX 範本及 Microsoft Intune 的 Windows 10 裝置上設定群組原則
 
@@ -39,7 +39,7 @@ ADMX 範本適用於下列服務：
 
 如需 ADMX 原則的詳細資訊，請參閱[了解支援 ADMX 的原則](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies)。
 
-在 Microsoft Intune 中，這些範本內建在 Intune 服務中，並以**系統管理範本**設定檔的形式提供。 在此設定檔中，您可以設定您想要加入的設定，然後再將此設定檔「指派」給您的裝置。
+這些範本內建在 Microsoft Intune 中，並以**系統管理範本**設定檔的形式提供。 在此設定檔中，您可以設定您想要加入的設定，然後再將此設定檔「指派」給您的裝置。
 
 在本教學課程中，您將：
 
@@ -68,7 +68,7 @@ ADMX 範本適用於下列服務：
 
 - 在內部部署 Active Directory 網域控制站 (DC) 上：
 
-  1. 將下列 Office 及 Microsoft Edge 範本複製到[中央存放區 (SYSVOL 資料夾)](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra)：
+  1. 將下列 Office 及 Microsoft Edge 範本複製到[中央存放區 (sysvol 資料夾)](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra)：
 
       - [Office 系統管理範本](https://www.microsoft.com/download/details.aspx?id=49030)
       - [Microsoft Edge 系統管理範本 > 原則檔案](https://www.microsoftedgeinsider.com/en-us/enterprise)
@@ -78,7 +78,9 @@ ADMX 範本適用於下列服務：
       - 使用這些範本建立的群組原則，稱為 **OfficeandEdge**。 您將會在影像中看到此名稱。
       - 我們使用的 Windows 10 企業版系統管理員電腦，稱為**系統管理員電腦**。
 
-      在有一些組織中，網域系統管理員有兩個帳戶：一般網域公司帳戶，以及另一個網域系統管理員帳戶，只用於網域系統管理員工作 (例如群組原則)。
+      在某些組織中，網域系統管理員有兩個帳戶：  
+        - 一般的網域工作帳戶
+        - 不同的網域系統管理員帳戶，僅用於網域系統管理員工作，例如群組原則
 
       此**系統管理員電腦**的用途，在讓系統管理員能夠使用其網域系統管理員帳戶登入，以及存取專為管理群組原則所設計的工具。
 
@@ -123,7 +125,7 @@ ADMX 範本適用於下列服務：
 
 在 Intune 中，原則會套用到您所建立的使用者及群組。 此處沒有階層。 若兩項原則更新同一項設定，該設定會顯示為衝突。 當兩項合規性原則發生衝突時，將會套用限制最嚴格的原則。 若是兩個設定檔發生衝突，將不會套用設定。 如需詳細資訊，請參閱[裝置原則與設定檔常見的問題、疑問與解決方法](device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied)。
 
-在接下來的步驟中，您將建立安全性群組，以及將使用者新增至群組。 您可以將使用者新增至多個群組。 例如，使用者通常會有多部裝置，例如工作用的 Surface Pro，以及個人使用的 Android 行動裝置。 而且使用者通常也能從這些裝置存取組織資源。
+在接下來的步驟中，您將建立安全性群組，並將使用者新增至這些群組。 您可以將使用者新增至多個群組。 例如，使用者通常會有多部裝置，例如工作用的 Surface Pro，以及個人使用的 Android 行動裝置。 而且使用者通常也能從這些裝置存取組織資源。
 
 1. 在 Microsoft 端點管理員系統管理中心中，選取 [群組]   >  [新增群組]  。
 
@@ -235,10 +237,20 @@ ADMX 範本適用於下列服務：
     - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
 
 5. 選取 [下一步]  。
-6. 在 [組態設定]  的下拉式清單中，選取 [所有產品]  。 顯示所有設定。 在這些設定中，請注意下列屬性：
+6. 在 [組態設定]  中，設定適用於裝置 ([電腦設定]  )，且設定適用於使用者 ([使用者設定]  )：
 
-    - 原則的**路徑**與群組原則管理或 GPEdit 相同。
-    - 此設定適用於使用者或裝置。
+    > [!div class="mx-imgBorder"]
+    > ![將 ADMX 範本設定套用到 Microsoft Intune 端點管理員中的使用者和裝置](./media/tutorial-walkthrough-administrative-templates/administrative-templates-choose-computer-user-configuration.png)
+
+7. 展開 [電腦設定]   > [Microsoft Edge]  > 選取 [SmartScreen 設定]  。 請注意原則的路徑，以及所有可用的設定：
+
+    > [!div class="mx-imgBorder"]
+    > ![請參閱 Microsoft Intune ADMX 範本中的 Microsoft Edge SmartScreen 原則設定](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-path.png)
+
+8. 在 [搜尋] 中，輸入**下載**。 請注意，原則設定已經過篩選：
+
+    > [!div class="mx-imgBorder"]
+    > ![篩選 Microsoft Intune ADMX 範本中的 Microsoft Edge SmartScreen 原則設定](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-search-download.png)
 
 ### <a name="open-group-policy-management"></a>開啟群組原則管理
 
@@ -251,10 +263,10 @@ ADMX 範本適用於下列服務：
     此應用程式會隨 **RSAT 一起安裝：群組原則管理工具**：您可以選擇是否要在 Windows 上安裝此功能。 [必要條件](#prerequisites) (本文所列) 會列出安裝的步驟。
 
 2. 展開 [網域]  > 選取您的網域。 例如選取 [contoso.net]  。
-3. 以滑鼠右鍵按一下 [OfficeandEdge]  原則 > [編輯]  。 這會開啟群組原則管理編輯器。
+3. 以滑鼠右鍵按一下 [OfficeandEdge]  原則 > [編輯]  。 [群組原則管理編輯器] 應用程式隨即開啟。
 
     > [!div class="mx-imgBorder"]
-    > ![以滑鼠右鍵按一下 Office 與 Edge ADMX 群組原則，然後選取 [編輯]](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management.png)
+    > ![以滑鼠右鍵按一下 Office 與 Microsoft Edge ADMX 群組原則，然後選取 [編輯]](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management.png)
 
     **OfficeandEdge** 是包含 Office 及 Microsoft Edge ADMX 範本的群組原則。 此原則列在[必要條件](#prerequisites) (本文中)。
 
@@ -269,18 +281,18 @@ ADMX 範本適用於下列服務：
     > ![請參閱群組原則中的電腦組態設定](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
 
 5. 在端點管理員系統管理中心，移至您的**系統管理範本 - Windows 10 學生版裝置**範本。
-6. 從下拉式清單中選取 [所有產品]  ，然後搜尋 [個人化]  ：
+6. 選取 [電腦設定]   > [控制台]   > [個人化]  。 請注意可用的設定：
 
     > [!div class="mx-imgBorder"]
-    > ![在 Microsoft Intune 中，搜尋系統管理範本中的個人化](./media/tutorial-walkthrough-administrative-templates/search-personalization-administrative-template.png)
+    > ![Microsoft Intune 中的個人化原則設定路徑](./media/tutorial-walkthrough-administrative-templates/computer-configuration-control-panel-personalization-path.png)
 
-    請注意您可以使用的設定。
-
-    此設定類型為**裝置**，路徑為 **\Control Panel\Personalization**。 此路徑類似於您在群組原則管理編輯器中所見。 若開啟此設定，將會在群組原則管理編輯器中，看到 [未設定]  、[啟用]  和 [停用]  等相同的選項。
+    設定類型為 [裝置]  ，路徑為 **/Control Panel/Personalization**。 此路徑類似於您在群組原則管理編輯器中所見。 若開啟 [防止啟用鎖定畫面相機]  設定，則會在群組原則管理編輯器中，看到 [未設定]  、[啟用]  和 [停用]  等相同的選項。
 
 #### <a name="compare-a-user-policy"></a>比較使用者原則
 
-1. 在您的系統管理員範本中，搜尋 [InPrivate 瀏覽]  。 請注意路徑，以及套用至使用者與裝置的設定。
+1. 在系統管理員範本內，選取 [電腦設定]   > [所有設定]  ，然後搜尋 [InPrivate 瀏覽]  。 請注意路徑。
+
+    針對 [使用者設定]  執行相同的動作。 選取 [所有設定]  ，然後搜尋 [InPrivate 瀏覽]  。
 
 2. 在**群組原則管理編輯器**中，尋找相符的使用者與裝置設定：
 
@@ -296,9 +308,11 @@ ADMX 範本適用於下列服務：
 #### <a name="compare-an-edge-policy"></a>比較 Edge 原則
 
 1. 在端點管理員系統管理中心，移至您的**系統管理範本 - Windows 10 學生版裝置**範本。
-2. 從下拉式清單中選取 [Edge 77 版和更新版本]  。
-3. 搜尋 [啟動]  。 請注意您可以使用的設定。
-4. 在群組原則管理編輯器中，尋找下列設定：
+2. 展開 [電腦設定]   > [Microsoft Edge]   > [Startup, homepage and new tab page] \(安裝程式、首頁及新索引標籤頁\)  。 請注意您可以使用的設定。
+
+    針對 [使用者設定]  執行相同的動作。
+
+3. 在群組原則管理編輯器中，尋找下列設定：
 
     - 裝置：展開 [電腦設定]   >  [原則]   >  [系統管理範本]   >  [Microsoft Edge]   >  [安裝程式、首頁及新索引標籤頁]  。
     - 使用者:展開 [使用者設定]   >  [原則]   >  [系統管理範本]   >  [Microsoft Edge]   >  [安裝程式、首頁及新索引標籤頁]  。
@@ -311,12 +325,12 @@ ADMX 範本適用於下列服務：
 
 在此範本中，我們會設定一些 Internet Explorer 設定，以鎖定多位學生共用的裝置。
 
-1. 在您的 **系統管理範本 - Windows 10 學生版裝置**中，搜尋 [關閉 InPrivate 瀏覽]  ，然後選取裝置原則：
+1. 在 [Admin template - Windows 10 student devices] \(系統管理範本 - Windows 10 學生版裝置\)  中，展開 [電腦設定]  、選取 [所有設定]  ，然後搜尋 [關閉 InPrivate 瀏覽]  ：
 
     > [!div class="mx-imgBorder"]
     > ![在 Microsoft Intune 中關閉系統管理範本中的 InPrivate 瀏覽裝置原則](./media/tutorial-walkthrough-administrative-templates/turn-off-inprivate-browsing-administrative-template.png)
 
-2. 在此視窗中，請注意您可以設定的描述和值。 這些選項類似於您在群組原則中所見。
+2. 選取 [關閉 InPrivate 瀏覽]  設定。 在此視窗中，請注意您可以設定的描述和值。 這些選項類似於您在群組原則中所見。
 3. 選取 [啟用]   >  [確定]  ，以儲存您的變更。
 4. 另請設定下列 Internet Explorer 設定。 請務必選取 [確定]  ，以儲存您的變更。
 
@@ -343,7 +357,7 @@ ADMX 範本適用於下列服務：
 
 ### <a name="assign-your-template"></a>指派您的範本
 
-1. 在您的範本中，選取 [指派]   > [選取要包含的群組]  ：
+1. 在範本內，選取 [下一個]  直到到達 [指派]  。 選擇 [選取要包含的群組]  ：
 
     > [!div class="mx-imgBorder"]
     > ![從 Microsoft Intune 的組態設定檔裝置清單中，選取您的系統管理範本設定檔](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
@@ -352,7 +366,7 @@ ADMX 範本適用於下列服務：
 
     若您在生產環境中使用此教學課程，請考慮新增空白群組。 此課程的目的在練習指派您的範本。
 
-3. 選取 [下一步]  到 [檢閱 + 建立]  索引標籤。選取 [建立]  以儲存您的變更。
+3. 選取 [下一步]  。 在 [檢閱 + 建立]  中，選取 [建立]  以儲存變更。
 
 設定檔一經儲存，便會在裝置簽入 Intune 時套用。 若裝置已連線至網際網路，將會立即執行。 如需原則重新整理次數的詳細資訊，請參閱[為裝置指派原則、設定檔或應用程式之後，需要多久時間才能套用這些原則、設定檔或應用程式](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)
 
@@ -364,7 +378,7 @@ ADMX 範本適用於下列服務：
 
 ## <a name="create-a-onedrive-template"></a>建立 OneDrive 範本
 
-在本節中，您會在 Intune 中建立 OneDrive 管理範本，以控制一些設定。 因為組織常會使用這些特定設定，所以選擇這些設定。
+在本節中，您會在 Intune 中建立 OneDrive 系統管理範本，以控制一些設定。 因為組織常會使用這些特定設定，所以選擇這些設定。
 
 1. 建立其他設定檔 ([裝置]   >  [組態設定檔]   >  [建立設定檔]  )。
 
@@ -380,11 +394,20 @@ ADMX 範本適用於下列服務：
     - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
 
 5. 選取 [下一步]  。
-6. 在 [組態設定]  中，從下拉式清單中選取 [Office]  。 **啟用**下列設定。 請務必選取 [確定]  ，以儲存您的變更。
+6. 在 [組態設定]  中，進行下列設定。 請務必選取 [確定]  ，以儲存變更：
 
-    - **使用使用者的 Windows 認證，無訊息地將使用者登入 OneDrive 同步用戶端**
-    - **隨需使用 OneDrive 檔案**
-    - **防止使用者同步個人 OneDrive 帳戶**
+    - [電腦設定]   > [所有設定]  ：
+      - **使用使用者的 Windows 認證，無訊息地將使用者登入 OneDrive 同步用戶端**
+        - **類型**：裝置
+        - **值**：已啟用
+      - **隨需使用 OneDrive 檔案**
+        - **類型**：裝置
+        - **值**：已啟用
+
+    - [使用者設定]   > [所有設定]  ：
+      - **防止使用者同步個人 OneDrive 帳戶**
+        - **類型**：User
+        - **值**：已啟用
 
 您的設定會看起來類似下列設定：
 
@@ -395,12 +418,12 @@ ADMX 範本適用於下列服務：
 
 ### <a name="assign-your-template"></a>指派您的範本
 
-1. 在您的範本中，選取 [指派]   > [選取要包含的群組]  。
+1. 在範本內，選取 [下一個]  直到到達 [指派]  。 選擇 [選取要包含的群組]  ：
 2. 現有使用者與群組清單會隨即顯示。 選取您稍早建立的**所有 Windows 裝置** > [選取]  。
 
     若您在生產環境中使用此教學課程，請考慮新增空白群組。 此課程的目的在練習指派您的範本。
 
-3. 選取 [下一步]  到 [檢閱 + 建立]  索引標籤。選取 [建立]  以儲存您的變更。
+3. 選取 [下一步]  。 在 [檢閱 + 建立]  中，選取 [建立]  以儲存變更。
 
 至此您已建立一些系統管理範本，並已將這些範本指派給您所建立的群組。 接下來將要為使用 Windows PowerShell 建立系統管理範本，以及使用 Microsoft Graph API 建立 Intune。
 

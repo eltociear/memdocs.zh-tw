@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec131df32e06c1c43b8904dde732b4e6a17a91aa
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3daf758ed93fb03ac63b062f604a457d033637dc
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79334193"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438751"
 ---
 # <a name="add-and-assign-the-windows-10-company-portal-app-for-autopilot-provisioned-devices"></a>為 Autopilot 佈建裝置新增並指派 Windows 10 公司入口網站應用程式
 
@@ -52,9 +52,9 @@ ms.locfileid: "79334193"
 ## <a name="assign-the-company-portal-app"></a>指派公司入口網站應用程式
 
 1. 使用您的系統管理員帳戶登入  [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) 。 
-2. 在右側窗格中，選取 [應用程式] ****   索引標籤。
-3. 在 [依平台] **** 底下，選取 [Windows]  。
-4. 選取 [公司入口網站 (離線)] **** 。
+2. 在右側窗格內，選取 [應用程式]  索引標籤。
+3. 在 [依平台]  底下，選取 [Windows]  。
+4. 選取 [公司入口網站 (離線)]  。
 5. 您必須等候同步排程完成，或從 Microsoft 端點管理員系統管理中心進行手動同步。
 6. 針對您所選的 Autopilot 裝置群組，將公司入口網站應用程式指派為必要的應用程式。
 

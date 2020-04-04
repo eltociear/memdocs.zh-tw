@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cec45dae7e0596428b2d7ab5c925889c183d465
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8ac931bf20140865e1185c4f401de0141273cdb3
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364587"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359404"
 ---
 # <a name="use-custom-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>在 Microsoft Intune 中使用適用於 iOS 與 iPadOS 裝置的自訂設定
 
@@ -38,7 +38,7 @@ ms.locfileid: "79364587"
 
 ## <a name="before-you-begin"></a>開始之前
 
-[建立設定檔](device-profile-create.md)。
+[建立設定檔](custom-settings-configure.md)。
 
 ## <a name="what-you-need-to-know"></a>您必須知道的事項
 
@@ -57,14 +57,12 @@ ms.locfileid: "79364587"
 ## <a name="custom-configuration-profile-settings"></a>自訂組態設定檔設定
 
 - **自訂組態設定檔名稱**：輸入原則的名稱。 此名稱會在裝置上和 Intune 狀態中顯示。
-- **組態設定檔**：瀏覽至您使用 Apple Configurator 或 Apple Profile Manager 建立的組態設定檔。 檔案大小上限為 1000000 位元組 (接近但小於 1MB)。 您匯入的檔案會顯示在 [檔案內容]  區域中。
+- **組態設定檔**：瀏覽至您使用 Apple Configurator 或 Apple Profile Manager 建立的組態設定檔。 檔案大小上限為 `1000000` 位元組 (接近但小於 1 MB)。 您匯入的檔案會顯示在 [檔案內容]  區域中。
 
   您也可以將裝置權杖新增至自訂組態設定檔。 裝置權杖是用來新增裝置特定資訊。 例如，若要顯示序號，請輸入 `{{serialnumber}}`。 在裝置上，會顯示類似 `123456789ABC` 的文字，而且每部裝置都不重複。 輸入變數時，請務必使用大括弧 `{{ }}`。 [應用程式設定權杖](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list)包含可以使用的變數清單。 您也可以使用 `deviceid` 或任何其他的裝置特定值。
 
   > [!NOTE]
-  > 變數不會在 UI 中驗證，而且會區分大小寫。 因此，您可能會看到儲存之設定檔含有不正確的輸入。 例如，如果您輸入 `{{DeviceID}}` 而不是 `{{deviceid}}`，則會顯示常值字串而不是裝置的唯一識別碼。 請務必輸入正確的資訊。
-
-選取 [確定]   > [建立]  儲存您的變更。 設定檔隨即建立，並顯示在設定檔清單中。
+  > 變數不會在 UI 中驗證，而且會區分大小寫。 因此，您可能會看到儲存之設定檔含有不正確的輸入。 例如，如果輸入 `{{DeviceID}}` 而非 `{{deviceid}}`，則會顯示常值字串而非裝置的唯一識別碼。 請務必輸入正確的資訊。
 
 ## <a name="next-steps"></a>後續步驟
 

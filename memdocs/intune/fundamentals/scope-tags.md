@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d0ffd06d86106b07224edc40aefc7407673a0391
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: eea973ec936ce41578754cb1a68d1b9128895b76
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526252"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326675"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>針對分散式 IT 使用角色型存取控制 (RBAC) 和範圍標籤
 
@@ -50,7 +50,7 @@ ms.locfileid: "79526252"
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>將範圍標籤指派給角色
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [租用戶系統管理]   > [角色]   > [所有角色]  > 選擇角色 > [指派]   > [指派]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [租用戶系統管理]   > [角色]   > [所有角色]  > 選擇角色 > [指派]   > [指派]  。
 2. 在 [基本]  頁面中，提供**指派名稱**與**描述**。 選擇 [下一步]  。
 3. 在 [管理群組]  頁面中，選擇 [選取要納入的群組]  ，然後選取您想要包含在此指派中的群組。 這些群組中使用者都有權管理 [範圍 (群組)] 中的使用者/裝置。 選擇 [下一步]  。
 
@@ -70,7 +70,7 @@ ms.locfileid: "79526252"
 
 針對支援範圍標籤的那些物件，範圍標籤通常會出現在 [屬性]  下。 例如，若要將範圍標籤指派給組態設定檔，請遵循下列步驟：
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [組態設定檔]  > 選擇設定檔。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [組態設定檔]  > 選擇設定檔。
 
 2. 選擇 [屬性]   > [範圍 (標籤)]   > [編輯]   > [選取範圍標籤]  > 選擇您希望新增至設定檔的標籤。 您最多可以將 100 個範圍標籤指派給物件。
 4. 選擇 [選取]   >  **[檢閱並儲存]** 。

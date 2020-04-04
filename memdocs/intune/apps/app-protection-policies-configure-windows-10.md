@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75b988572a5c22e49547a7ba1521cfc3485f4f03
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e7dcad93f836ee564e973555bebe1a1f5d7ba3c3
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342201"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323681"
 ---
-# <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>準備好設定適用於 Windows 10 的應用程式保護原則 
+# <a name="get-ready-for-windows-information-protection-in-windows-10"></a>準備使用 Windows 10 中的 Windows 資訊保護 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "79342201"
 
 ## <a name="to-configure-the-mam-provider"></a>設定 MAM 提供者
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [所有服務]  ，然後選擇 [M365 Azure Active Directory]  來切換儀表板。
 3. 選取 [Azure Active Directory]  。
 4. 選擇 [管理]  群組中的 [行動性 (MDM 與 MAM)]  。
@@ -56,4 +56,4 @@ ms.locfileid: "79342201"
 
 ## <a name="next-steps"></a>後續步驟
 
-[建立 WIP 應用程式保護原則 (英文)](windows-information-protection-policy-create.md)
+[建立 WIP 原則](windows-information-protection-policy-create.md)

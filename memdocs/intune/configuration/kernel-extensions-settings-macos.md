@@ -6,26 +6,25 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa471beb5929a6c5b39267871518f560fe6978f6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e18fad8f1112681a62bcdacd63c652cfd4ad3ac
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343423"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359288"
 ---
 # <a name="macos-device-settings-to-configure-and-use-kernel-extensions-in-intune"></a>在 Intune 中設定和使用核心延伸模組的 macOS 裝置設定
-
-
 
 此文章列出並描述您可以在 macOS 裝置上控制的各種不同核心擴充功能設定。 作為行動裝置管理 (MDM) 解決方案的一部分，請使用這些設定在裝置上新增和管理核心延伸模組。
 
@@ -44,7 +43,7 @@ ms.locfileid: "79343423"
 
 ### <a name="settings-apply-to-user-approved-automated-device-enrollment"></a>設定適用於：使用者核准的自動裝置註冊
 
-- **允許使用者覆寫**：[允許]  可讓使用者核准未包含在組態設定檔中的核心延伸模組。 [未設定]  (預設) 可防止使用者允許未包含在組態設定檔中的延伸模組。 換句話說，只允許包含在組態設定檔中的延伸模組。
+- **允許使用者覆寫**：[允許]  可讓使用者核准未包含在組態設定檔中的核心延伸模組。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可防止使用者允許未包含在組態設定檔中的延伸模組。 換句話說，只允許包含在組態設定檔中的延伸模組。
 
   如需這項功能的詳細資訊，請參閱 [User-Approved Kernel Extension Loading](https://developer.apple.com/library/archive/technotes/tn2459/_index.html) (使用者核准的核心延伸模組載入)。
 

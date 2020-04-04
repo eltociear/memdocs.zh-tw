@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b63dbf983872dbbb1c792e1f5d00bb136da973a1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f9dc309cb373d9f06fd68810531d5634eb4c0b7d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348844"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325047"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>使用 TeamViewer 來遠端管理 Intune 裝置
 
@@ -47,7 +47,7 @@ ms.locfileid: "79348844"
 
 若要為裝置提供遠端協助，請使用下列步驟來設定 Intune TeamViewer 連接器：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [租用戶管理]   > [連接器與權杖]   > [TeamViewer 連接器]  。
 3. 選取 [連線]  並接受授權合約。
 4. 選取 [登入 TeamViewer 進行授權]  。
@@ -57,7 +57,7 @@ ms.locfileid: "79348844"
 
 設定連接器後，您可以從遠端管理裝置。 請使用下列步驟： 
 
-1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，
 2. 選取 [裝置]  ，然後選取 [所有裝置]  。
 3. 從清單中，選取想要遠端管理的裝置 > [...]   > [新增遠端協助工作階段]  。
 4. 當 Intune 連線至 TeamViewer 服務之後，您將會看到一些裝置的相關資訊。 [連線]  以啟動遠端工作階段。

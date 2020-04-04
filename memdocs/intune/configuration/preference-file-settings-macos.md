@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 03/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d226888c3d710a7b80357ebb92130b34ab2fef94
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e83077561ec4492feaf14789cf339e0b3ee86e2
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360752"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359327"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>使用 Microsoft Intune 將屬性清單檔新增至 macOS 裝置
 
@@ -29,17 +29,13 @@ ms.locfileid: "79360752"
 
 本功能適用於：
 
-- 執行 10.7 和更新版本的 macOS 裝置
+- macOS 10.7 和更新版本
 
-屬性清單檔通常包含 macOS 應用程式資訊。 如需詳細資訊，請參閱 [About Information Property List Files](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) (屬性清單檔的資訊) (Apple 的網站) 和 [Custom payload settings](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1) (自訂承載設定)。
+屬性清單檔包含 macOS 應用程式的資訊。 如需詳細資訊，請參閱 [About Information Property List Files](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) (屬性清單檔的資訊) (Apple 的網站) 和 [Custom payload settings](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1) (自訂承載設定)。
 
-本文列出並描述可新增到 macOS 裝置的不同屬性清單檔。 作為行動裝置管理 (MDM) 解決方案的一部分，請使用這些設定以新增應用程式套件組合識別碼 (`com.company.application`)，並新增其 .plist 檔。
+本文列出並描述可新增到 macOS 裝置的不同屬性清單檔。 請使用屬於行動裝置管理 (MDM) 解決方案的這些設定，新增應用程式的配套識別碼 (`com.company.application`)，並新增應用程式的 .plist 檔。
 
 這些設定會新增至 Intune 裝置組態設定檔，然後指派或部署到您的 macOS 裝置。
-
-## <a name="before-you-begin"></a>開始之前
-
-[建立設定檔](device-profile-create.md)。
 
 ## <a name="what-you-need-to-know"></a>您必須知道的事項
 
@@ -48,23 +44,49 @@ ms.locfileid: "79360752"
 - 只有部分應用程式能使用受控喜好設定，而這些應用程式可能不允許管理所有設定。
 - 請務必上傳以裝置通道設定為目標的屬性清單檔，而不是以使用者通道設定為目標的屬性清單檔。 以整個裝置為目標的屬性清單檔。
 
-## <a name="preference-file"></a>喜好設定檔案
+## <a name="create-the-profile"></a>建立設定檔
 
-- **喜好設定網域名稱**：屬性清單檔通常用於網頁瀏覽器 (Microsoft Edge)、[Microsoft Defender 進階威脅防護](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (機器翻譯) 和自訂應用程式。 當建立喜好設定網域時，也會建立套件組合識別碼。 輸入套件組合識別碼，例如 `com.company.application`。 例如，輸入 `com.Contoso.applicationName`、`com.Microsoft.Edge` 或 `com.microsoft.wdav`。
-- **屬性清單檔**：選取與應用程式建立關聯的屬性清單檔。 請確定它是 `.plist` 或 `.xml` 檔案。 例如，上傳 `YourApp-Manifest.plist` 或 `YourApp-Manifest.xml` 檔案。
-- **檔案內容**：會顯示屬性清單檔中的索引鍵資訊。 如果需要變更索引鍵資訊，請在另一個編輯器中開啟清單檔，然後在 Intune 中重新上傳該檔案。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+3. 輸入下列內容：
 
-請確定檔案格式正確。 檔案應該只有索引鍵值組，且不應包裝在 `<dict>`、`<plist>`或 `<xml>` 標籤中。 例如，屬性清單檔應該類似下列檔案：
+    - **平台**：選取 [macOS] 
+    - **設定檔**：選取 [喜好設定檔案]  。
 
-```xml
-<key>SomeKey</key>
-<string>someString</string>
-<key>AnotherKey</key>
-<false/>
-...
-```
+4. 選取 [建立]  。
+5. 在 [基本資訊]  中，輸入下列內容：
 
-選取 [確定]   > [建立]  儲存您的變更。 設定檔隨即建立，並顯示在設定檔清單中。
+    - **名稱**：輸入政策的描述性名稱。 為您的設定檔命名，以方便之後能夠輕鬆識別。 例如，良好的原則名稱是 **macOS：新增喜好設定檔案，以在裝置上設定 Microsoft Defender ATP**。
+    - **描述**：輸入政策的描述。 這是選擇性設定，但建議執行。
+
+6. 選取 [下一步]  。
+
+7. 在 [組態設定]  中進行設定：
+
+    - **喜好設定網域名稱**：屬性清單檔通常用於網頁瀏覽器 (Microsoft Edge)、[Microsoft Defender 進階威脅防護](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (機器翻譯) 和自訂應用程式。 當建立喜好設定網域時，也會建立套件組合識別碼。 輸入套件組合識別碼，例如 `com.company.application`。 例如，輸入 `com.Contoso.applicationName`、`com.Microsoft.Edge` 或 `com.microsoft.wdav`。
+    - **屬性清單檔**：選取與應用程式建立關聯的屬性清單檔。 請確定它是 `.plist` 或 `.xml` 檔案。 例如，上傳 `YourApp-Manifest.plist` 或 `YourApp-Manifest.xml` 檔案。
+    - **檔案內容**：會顯示屬性清單檔中的索引鍵資訊。 如果需要變更索引鍵資訊，請在另一個編輯器中開啟清單檔，然後在 Intune 中重新上傳該檔案。
+
+    請確定檔案格式正確。 檔案應該只有索引鍵值組，且不應包裝在 `<dict>`、`<plist>`或 `<xml>` 標籤中。 例如，屬性清單檔應該類似下列檔案：
+
+    ```xml
+    <key>SomeKey</key>
+    <string>someString</string>
+    <key>AnotherKey</key>
+    <false/>
+    ...
+    ```
+
+8. 選取 [下一步]  。
+9. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+
+    選取 [下一步]  。
+
+10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
+
+    選取 [下一步]  。
+
+11. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立]  時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 ## <a name="next-steps"></a>後續步驟
 

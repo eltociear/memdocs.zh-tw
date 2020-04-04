@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 969dbcbe3fe1b1a155769bec6403b889b3d326bc
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c3b66c0fd88910dc192af10a1b5ad701304c885e
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086108"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327065"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>設定 iOS/iPadOS 與 iPadOS 使用者註冊 (預覽)
 
@@ -43,7 +43,7 @@ ms.locfileid: "80086108"
 
 註冊設定檔會定義要在註冊期間套用至裝置群組的設定。 
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊類型 (預覽)]   > [建立設定檔]   > [iOS/iPadOS]  。 您可以使用此設定檔指出 iOS/iPadOS 與 iPadOS 終端使用者將會在非透過公司 Apple 方法註冊的裝置上擁有什麼註冊體驗。 如果您想要變更，可以在建立設定檔之後加以編輯。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊類型 (預覽)]   > [建立設定檔]   > [iOS/iPadOS]  。 您可以使用此設定檔指出 iOS/iPadOS 與 iPadOS 終端使用者將會在非透過公司 Apple 方法註冊的裝置上擁有什麼註冊體驗。 如果您想要變更，可以在建立設定檔之後加以編輯。
 
     ![建立 Apple 註冊設定檔](./media/ios-user-enrollment/create-profile.png)
 
@@ -78,7 +78,7 @@ ms.locfileid: "80086108"
 
 當您建立了多個註冊類型設定檔之後，可以變更它們在套用時的優先順序。
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊類型 (預覽)]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊類型 (預覽)]  。
 2. 以您想要套用的順序，用拖放方式調整設定檔在清單中的位置。
 
 如果任一使用者的設定檔之間產生衝突，系統會為他們套用優先順序較高的設定檔。

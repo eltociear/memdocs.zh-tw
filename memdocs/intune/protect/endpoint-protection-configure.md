@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 64a11cf9dca110a4a802ddff3e9176ec1ce88345
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4071614c7cb93194eef00f49aa2e1759ba1028f6
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352172"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359257"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>在 Intune 中新增 Endpoint Protection 設定
 
@@ -41,27 +41,42 @@ ms.locfileid: "79352172"
 
 ## <a name="create-a-device-profile-containing-endpoint-protection-settings"></a>建立包含 Endpoint Protection 設定的裝置設定檔
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 
-3. 輸入 Endpoint Protection 設定檔的 [名稱]  和 [描述]  。
+3. 輸入下列內容：
 
-4. 從 [平台]  下拉式清單中，選取要套用自訂設定的裝置平台。 您目前可選擇下列平台之一，進行裝置限制設定︰
+    - **平台**：選擇您的裝置平台。 選項包括：
 
-   - **macOS**
-   - **Windows 10 及以上版本**
+        - **macOS**
+        - **Windows 10 及以上版本**
 
-5. 從 [設定檔類型]  下拉式清單中，選擇 [Endpoint Protection]  。
+    - **設定檔**：選取 [Endpoint Protection]  。
 
-6. 您可設定的設定會視您選擇的平台而不同。 請參閱：
+4. 選取 [建立]  。
+5. 在 [基本資訊]  中，輸入下列內容：
+
+    - **名稱**：輸入政策的描述性名稱。 為您的設定檔命名，以方便之後能夠輕鬆識別。 例如，良好的原則名稱是 **macOS：Endpoint Protection 設定檔，為所有 macOS 裝置設定防火牆**。
+    - **描述**：輸入政策的描述。 這是選擇性設定，但建議執行。
+
+6. 選取 [下一步]  。
+
+7. 在 [組態設定]  中，您可進行的設定會根據您選擇的平台而不同。 選擇您平台來進行詳細設定：
 
    - [macOS 設定](endpoint-protection-macos.md)
    - [Windows 10 設定](endpoint-protection-windows-10.md)
 
-7. 設定適用的設定之後，選取 [建立設定檔]  頁面上的 [建立]  。
+8. 選取 [下一步]  。
+9. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
 
-   設定檔隨即建立，並出現在 [設定檔清單] 頁面上。 若要將此設定檔指派給群組，請參閱[指派裝置設定檔](../configuration/device-profile-assign.md)。
+    選取 [下一步]  。
+
+10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
+
+    選取 [下一步]  。
+
+11. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立]  時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 ## <a name="add-custom-firewall-rules-for-windows-10-devices"></a>新增適用於 Windows 10 裝置的自訂防火牆規則
 
@@ -75,28 +90,30 @@ ms.locfileid: "79352172"
 
 - 當某規則無法套用時，設定檔中的所有規則都會回報為失敗。 Intune 無法識別哪一個個別規則失敗。  
 
-Intune 可以管理的防火牆規則詳述於 Windows [防火牆設定服務提供者]( https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) (CSP)。 若要檢閱 Intune 所支援 Windows 10 裝置的自訂防火牆設定清單，請參閱[自訂防火牆規則](endpoint-protection-windows-10.md#firewall-rules)。
+Intune 可以管理的防火牆規則詳述於 Windows [防火牆設定服務提供者](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) (CSP)。 若要檢閱 Intune 所支援 Windows 10 裝置的自訂防火牆設定清單，請參閱[自訂防火牆規則](endpoint-protection-windows-10.md#firewall-rules)。
 
 ### <a name="to-add-custom-firewall-rules-to-an-endpoint-protection-profile"></a>將自訂防火牆規則新增至 Endpoint Protection 設定檔
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 
-3. 針對「平台」  選取 [Windows10 及更新版本]  ，然後針對「設定檔類型」  選取 [Endpoint Protection]  。
+3. 針對「平台」  選取 [Windows10 及更新版本]  ，然後針對「設定檔」  選取 [Endpoint Protection]  。
 
-4. 選取 [Microsoft Defender 防火牆]  以開啟設定頁面，然後針對 [防火牆規則]  選取 [新增]  以開啟 [建立規則]  頁面。
+    選取 [建立]  。
 
-5. 指定防火牆規則的設定，然後選取 [確定]  以儲存。 若要在文件中檢閱可用的自訂防火牆規則選項，請參閱[自訂防火牆規則](endpoint-protection-windows-10.md#firewall-rules)。
+4. 輸入設定檔的**名稱** > [下一步]  。
+5. 在 [組態設定]  中，選取 [Microsoft Defender 防火牆]  。 針對「防火牆規則」  ，請選取 [新增]  以開啟 [建立規則]  頁面。
 
-6. 儲存規則之後，該規則即會顯示在規則清單的 [Microsoft Defender 防火牆]  頁面中。
+6. 指定防火牆規則的設定，然後選取 [確定]  以儲存。 若要在文件中檢閱可用的自訂防火牆規則選項，請參閱[自訂防火牆規則](endpoint-protection-windows-10.md#firewall-rules)。
 
-7. 若要修改規則，請從清單中選取規則以開啟 [編輯規則] 頁面  。
+    1. 規則會顯示在規則清單的 [Microsoft Defender 防火牆]  頁面中。
+    2. 若要修改規則，請從清單中選取規則以開啟 [編輯規則] 頁面  。
+    3. 若要從設定檔刪除規則，請選取規則的省略符號 [...]  ，然後選取 [刪除]  。
+    4. 若要變更規則顯示的順序，請選取規則清單頂端的「向上和向下箭號」  圖示。
 
-8. 若要從設定檔刪除規則，請選取規則的省略符號 [...]  ，然後選取 [刪除]  。
-
-9. 若要變更規則顯示的順序，請選取規則清單頂端的「向上和向下箭號」  圖示。
+7. 選取 [下一步]  直到看見 [檢閱 + 建立]  。 當選取 [建立]  時，系統會儲存變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 ## <a name="next-steps"></a>後續步驟
 
-若要將設定檔指派給群組，請參閱[指派裝置設定檔](../configuration/device-profile-assign.md)。
+雖然設定檔已建立，但它可能還不會執行任何動作。 接下來，[指派設定檔](../configuration/device-profile-assign.md)並[監視其狀態](../configuration/device-profile-monitor.md)。

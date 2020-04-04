@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d201bb3b15c0debb724f974d519a77994aae8e7f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 19660a8b2dc6b804a1ee1a1eaf407261ca9af2b1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359543"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327245"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>使用 Apple School Manager 來設定 iOS/iPadOS 裝置註冊
 
@@ -31,7 +31,7 @@ ms.locfileid: "79359543"
 
 您可以將 Intune 設定為可註冊透過 [Apple School Manager](https://school.apple.com/) 計劃所購買的 iOS/iPadOS 裝置。 使用 Intune 與 Apple School Manager，您甚至不用碰到裝置即可註冊大量的 iOS/iPadOS 裝置。 當學生或老師啟動裝置時，會以預先設定的設定來執行設定助理，並註冊裝置以接受管理。
 
-若要啟用 Apple School Manager 註冊，您可以使用 Intune 和 Apple School Manager 入口網站。 需要序號或採購單編號的清單，以將裝置指派給 Intune 進行管理。 您可以建立 DEP 註冊設定檔，其中包含已在註冊期間套用至裝置的設定。
+若要啟用 Apple School Manager 註冊，您可以使用 Intune 和 Apple School Manager 入口網站。 需要序號或採購單編號的清單，以將裝置指派給 Intune 進行管理。 您要建立自動裝置註冊 (ADE) 註冊設定檔，包含在註冊期間套用至裝置的設定。
 
 Apple School Manager 註冊無法搭配 [Apple 的裝置註冊計劃](device-enrollment-program-enroll-ios.md)或[裝置註冊管理員](device-enrollment-manager-enroll.md)使用。
 
@@ -48,7 +48,7 @@ Apple School Manager 註冊無法搭配 [Apple 的裝置註冊計劃](device-enr
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-an-apple-token"></a>步驟 1： 下載建立 Apple 權杖所需的 Intune 公開金鑰憑證
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊方案權杖]   > [新增]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊方案權杖]   > [新增]  。
 
    ![取得註冊計劃權杖。](./media/device-enrollment-program-enroll-ios/image01.png)
 
@@ -71,7 +71,7 @@ Apple School Manager 註冊無法搭配 [Apple 的裝置註冊計劃](device-enr
 
 ### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>步驟 3： 儲存用以建立此權杖的 Apple ID
 
-在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，提供 Apple ID 供日後參考。
+在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，提供 Apple ID 供日後參考。
 
 ![指定要用於建立註冊計劃權杖的 Apple 識別碼，並瀏覽至註冊計劃權杖的螢幕擷取畫面。](./media/apple-school-manager-set-up-ios/image03.png)
 
@@ -81,7 +81,7 @@ Apple School Manager 註冊無法搭配 [Apple 的裝置註冊計劃](device-enr
 ## <a name="create-an-apple-enrollment-profile"></a>建立 Apple 註冊設定檔
 安裝權杖之後，您可以為 Apple School 裝置建立註冊設定檔。 裝置註冊設定檔會定義要在註冊期間套用至裝置群組的設定。
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊方案權杖]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊方案權杖]  。
 2. 選取權杖，選擇 [設定檔]  ，然後選擇 [建立設定檔]  。
 
 3. 在 [建立設定檔]  下，為設定檔輸入系統管理用的**名稱**以及**描述**。 使用者看不到這些詳細資料。 您可以使用此 [名稱]  欄位，在 Azure Active Directory 中建立動態群組。 設定檔名稱可用來定義 enrollmentProfileName 參數，以註冊具備此註冊設定檔的裝置。 深入了解 [Azure Active Directory 動態群組](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices)。
@@ -106,7 +106,7 @@ Apple School Manager 註冊無法搭配 [Apple 的裝置註冊計劃](device-enr
     > 使用 Apple 設定輔助程式進行驗證時，不支援這些功能。
 
 6. 選擇 [裝置管理設定]  ，並選擇您是否想要監督使用此設定檔的裝置。
-    **受監督**裝置可提供您更多管理選項，並且預設會停用 [啟用鎖定]。 Microsoft 建議使用 DEP 作為啟用受監管模式的機制，特別是針對將部署大量 iOS/iPadOS 裝置的組織。
+    **受監督**裝置可提供您更多管理選項，並且預設會停用 [啟用鎖定]。 Microsoft 建議使用 ADE 作為啟用受監管模式的機制，特別是針對將部署大量 iOS/iPadOS 裝置的組織。
 
     有兩種方式可通知使用者其裝置收到監督：
 
@@ -155,7 +155,7 @@ Apple School Manager 註冊無法搭配 [Apple 的裝置註冊計劃](device-enr
 ## <a name="connect-school-data-sync"></a>連線 School Data Sync
 (選用) Apple School Manager 支援使用 Microsoft School Data Sync (SDS) 將類別名冊資料同步處理到 Azure Active Directory (AD)。 您僅可透過 SDS 同步處理一個權杖。 如果您透過 School Data Sync 設定另一個權杖，SDS 將會從之前擁有它的權杖中移除。 新的連線將取代目前的權杖。 請完成下列步驟以使用 SDS 同步學校資料。
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊方案權杖]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊方案權杖]  。
 2. 選取 Apple School Manager 權杖，然後選擇 [School Data Sync]  。
 3. 在 [School Data Sync]  下，選擇 [允許]  。 此設定會允許 Intune 和 Office 365 中的 SDS 連線。
 4. 若要啟用 Apple School Manager 與 Azure AD 之間的連線，請選擇 [設定 Microsoft School Data Sync]  。深入了解[如何設定 School Data Sync](https://support.office.com/article/Install-the-School-Data-Sync-Toolkit-8e27426c-8c46-416e-b0df-c29b5f3f62e1)。
@@ -165,7 +165,7 @@ Apple School Manager 註冊無法搭配 [Apple 的裝置註冊計劃](device-enr
 
 指派 Intune 權限以管理您的 Apple School Manager 裝置之後，就可以同步處理 Intune 與 Apple 服務，以便在 Intune 中查看受控裝置。
 
-在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊方案權杖]  > 在清單中選擇權杖 > [裝置]   > [同步處理]  。![[註冊計劃裝置] 節點與 [同步] 連結的螢幕擷取畫面。](./media/apple-school-manager-set-up-ios/image06.png)
+在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊方案權杖]  > 選擇清單中的權杖 > [裝置]   > [同步]  。![[註冊計劃裝置] 節點與 [同步] 連結的螢幕擷取畫面。](./media/apple-school-manager-set-up-ios/image06.png)
 
 為了遵循 Apple 規定的可接受註冊計劃流量，Intune 具有下列限制︰
 - 完整同步處理每 7 天只能執行一次。 完整同步期間，每當 Apple 序號指派至 Intune 時，Intune 都會重新整理一次。 如果在上一次完整同步處理過後的七天內嘗試進行完整同步處理，Intune 只會重新整理尚未列在 Intune 中的序號。
@@ -178,7 +178,7 @@ Apple School Manager 註冊無法搭配 [Apple 的裝置註冊計劃](device-enr
 ## <a name="assign-a-profile-to-devices"></a>將設定檔指派給裝置
 在註冊由 Intune 管理的 Apple School Manager 裝置之前，必須將註冊設定檔指派給它們。
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊方案權杖]  > 在清單中選擇權杖。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊方案權杖]  > 在清單中選擇權杖。
 2. 選擇 [裝置]  > 選擇清單中的裝置 > [指派設定檔]  。
 3. 在 [指派設定檔]  下，選擇裝置的設定檔，然後選擇 [指派]  。
 

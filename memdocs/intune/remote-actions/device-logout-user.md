@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d42e532f02d74ff776d392d634d60fd0b4d0ebba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a731769a7fa3118170119ae935478eb7dd67e06b
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338158"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326569"
 ---
 # <a name="logout-the-current-user-on-intune-managed-iosipados-devices"></a>在 Intune 受控 iOS/iPadOS 裝置上登出目前的使用者
 

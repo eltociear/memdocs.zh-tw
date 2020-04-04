@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81bfa4d593f723aae46c2af63d550662e35b4017
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c156e0d1b627d285c6654994d6114920f86b2bab
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349208"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488057"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>在 Intune 中管理 Windows 10 軟體更新
 
@@ -77,7 +77,7 @@ Windows 10 更新通道支援[範圍標籤](../fundamentals/scope-tags.md)。 �
 
 ### <a name="create-and-assign-update-rings"></a>建立及指派更新通道
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [裝置]   > [Windows]   > [Windows 10 更新通道]   > [建立]  。
 
@@ -209,7 +209,7 @@ Intune 系統管理員可以使用 [解除安裝]  ，針對作用中或已暫�
 
 若要在 Intune 中使用 Windows 10 功能更新，必須符合下列先決條件。
 
-- 裝置必須已在 Intune MDM 中註冊，而且必須已加入 Azure AD 或已註冊 Azure AD。
+- 裝置必須已在 Intune MDM 中註冊，且必須已加入混合式 AD、已加入 Azure AD 或已註冊 Azure AD。
 - 若要搭配 Intune 使用「功能更新」原則，裝置必須開啟遙測，並具有[「基本」  ](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry)的最低設定。 遙測是作為[裝置限制原則](../configuration/device-restrictions-configure.md)的一部分，在 [報告和遙測]  底下設定。
   
   接收「功能更新」原則，且將遙測設定為 [未設定]  (代表它已關閉) 的裝置，可能會安裝比在「功能更新」原則中所定義 Windows 版本還要新的版本。 隨著此功能即將正式推出，我們也正在檢閱要求遙測的必要條件。
@@ -224,7 +224,7 @@ Intune 系統管理員可以使用 [解除安裝]  ，針對作用中或已暫�
 
 ### <a name="create-and-assign-windows-10-feature-updates"></a>建立並指派 Windows 10 功能更新
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [裝置]   > [Windows]   > [Windows 10 功能更新]   > [建立]  。
 

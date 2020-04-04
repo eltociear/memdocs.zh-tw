@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edc3bb23097a26753a9e54b0b520e6fc22be3a69
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: d7398ec523796dbbff5f01aee6ce69fe6e8ce13a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085204"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323295"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>在 Intune 中使用條件式存取強制執行 Microsoft Defender ATP 的合規性
 
@@ -72,7 +72,7 @@ Microsoft Defender ATP 有助於解決此類安全性事件。
 
 您只需要為每個租用戶啟用 Defender ATP 一次。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [端點安全性]   > [Microsoft Defender ATP]  ，然後選取 [開啟 Microsoft Defender 資訊安全中心]  。
 
@@ -86,7 +86,7 @@ Microsoft Defender ATP 有助於解決此類安全性事件。
 
     3. 選取 [儲存喜好設定]  。
 
-4. 回到 Microsoft Endpoint Manager 系統管理中心內的 [Microsoft Defender ATP]  。 在 [MDM 合規性原則設定]  底下，將 [將 10.0.15063 版及更新版本的 Windows 裝置連線到 Microsoft Defender ATP]  設定為 [開啟]  。
+4. 返回 Microsoft 端點管理員系統管理中心內的 [Microsoft Defender ATP]  。 在 [MDM 合規性原則設定]  底下，將 [將 10.0.15063 版及更新版本的 Windows 裝置連線到 Microsoft Defender ATP]  設定為 [開啟]  。
 
 5. 選取 [儲存]  。
 
@@ -112,7 +112,7 @@ Microsoft Defender ATP 有助於解決此類安全性事件。
 
 ### <a name="create-the-device-configuration-profile"></a>建立裝置組態設定檔
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 3. 輸入 [名稱]  和 [描述]  。
 4. 針對 [平台]  ，選取 [Windows 10 及更新版本] 
@@ -138,7 +138,7 @@ Microsoft Defender ATP 有助於解決此類安全性事件。
 
 如果您不熟悉如何建立合規性政策，請參閱*在 Microsoft Intune 中建立合規性政策*一文中的[建立政策](../protect/create-compliance-policy.md#create-the-policy)程序。 下列資訊專用於設定 Defender ATP 作為合規性政策的一部分。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [裝置]   > [合規性政策]   > [政策]   > [建立政策]  。
 
@@ -162,9 +162,9 @@ Microsoft Defender ATP 有助於解決此類安全性事件。
 條件式存取原則會封鎖超出您在合規性政策中設定之威脅層級的裝置，使其無法存取資源。 您可以封鎖裝置，使其無法存取公司資源，例如 SharePoint 或 Exchange Online。
 
 > [!TIP]
-> 條件式存取是一項 Azure Active Directory (Azure AD) 技術。 從 Microsoft Endpoint Manager 系統管理中心所存取條件式存取節點與從 *Azure AD* 存取的節點相同。
+> 條件式存取是一項 Azure Active Directory (Azure AD) 技術。 從 Microsoft 端點管理員系統管理中心所存取條件式存取節點與從 *Azure AD* 存取的節點相同。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [端點安全性]   > [條件式存取]   > [新增原則]  。
 
@@ -188,7 +188,7 @@ Microsoft Defender ATP 有助於解決此類安全性事件。
 
 接下來，監視具有 Microsoft Defender ATP 合規性政策之裝置的狀態。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [裝置]   > [監視]   > [原則合規性]  。
 

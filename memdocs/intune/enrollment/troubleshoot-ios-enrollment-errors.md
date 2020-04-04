@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad456ef7cc88ccb24079010479bd8f27292eb73d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 07612080f170c5f2bef448aa616a4422508218d1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363261"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326928"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>針對 Microsoft Intune 中的 iOS/iPadOS 裝置註冊問題進行疑難排解
 
@@ -41,7 +41,7 @@ ms.locfileid: "79363261"
 - 有多少使用者受到影響？ 所有使用者都受到影響，還是只有部分使用者受到影響？
 - 有多少裝置受到影響？ 所有裝置都受到影響，還是只有部分裝置受到影響？
 - 什麼是 MDM 授權單位？
-- 如何執行註冊？ 是「攜帶您自己的裝置」(BYOD)，還是使用註冊設定檔的 Apple 裝置註冊計劃 (DEP)？
+- 如何執行註冊？ 使用「攜帶您自己的裝置」(BYOD)，或使用註冊設定檔的 Apple 自動裝置註冊 (ADE)？
 
 ## <a name="error-messages"></a>錯誤訊息
 
@@ -106,7 +106,7 @@ ms.locfileid: "79363261"
 **原因：** 嘗試註冊裝置的使用者沒有 Microsoft Intune 授權。
 
 #### <a name="resolution"></a>解決方案
-1. 移至 [Office 365 系統管理中心](https://portal.office.com/adminportal/home#/homepage)，然後選擇 [使用者] > [作用中使用者]  。
+1. 移至 [Office 365 系統管理中心](https://admin.microsoft.com)，然後選擇 [使用者] > [作用中使用者]  。
 2. 選取您想要指派 Intune 使用者授權的使用者帳戶，然後選擇 [產品授權] > [編輯]  。
 3. 針對您要指派給此使用者的授權，將切換開關切換至 [開啟]  位置，然後選擇 [儲存]  。
 4. 重新註冊裝置。
@@ -136,10 +136,10 @@ ms.locfileid: "79363261"
 **原因：** 使用者嘗試註冊的裝置數目超過裝置註冊限制。
 
 #### <a name="resolution"></a>解決方案
-1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [所有裝置]  ，並檢查使用者已註冊的裝置數目。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [所有裝置]  ，並檢查使用者已註冊的裝置數目。
     > [!NOTE]
     > 您也應該讓受影響的使用者登入 [Intune 使用者入口網站](https://portal.manage.microsoft.com/)，並檢查已註冊的裝置。 有些裝置可能出現在 [Intune 使用者入口網站](https://portal.manage.microsoft.com/)中，但不在 [Intune 系統管理入口網站](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview)中，這類裝置也會計入裝置註冊限制。
-2. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [註冊限制]  > 檢查裝置註冊限制。 根據預設，此限制數目為 15。 
+2. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [註冊限制]  > 檢查裝置註冊限制。 根據預設，此限制數目為 15。 
 3. 如果註冊的裝置數目已達到限制，請移除不必要的裝置，或增加裝置註冊限制。 因為每個已註冊的裝置都會耗用 Intune 授權，所以建議您一律先移除不必要的裝置。
 4. 重新註冊裝置。
 
@@ -157,7 +157,7 @@ ms.locfileid: "79363261"
 **原因：** 嘗試註冊裝置的使用者沒有有效 Intune 授權。
 
 #### <a name="resolution"></a>解決方案
-1. 移至 [Microsoft 365 系統管理中心](https://portal.office.com/adminportal/home#/homepage)，然後選擇 [使用者]   > [作用中使用者]  。
+1. 移至 [Microsoft 365 系統管理中心](https://admin.microsoft.com)，然後選擇 [使用者]   > [作用中使用者]  。
 2. 選取受影響的使用者帳戶 > [產品授權]   > [編輯]  。
 3. 確認已將有效的 Intune 授權指派給此使用者。
 4. 重新註冊裝置。
@@ -166,7 +166,7 @@ ms.locfileid: "79363261"
 
 **原因：** 嘗試註冊裝置的使用者沒有有效 Intune 授權。
 
-1. 移至 [Microsoft 365 系統管理中心](https://portal.office.com/adminportal/home#/homepage)，然後選擇 [使用者]   > [作用中使用者]  。
+1. 移至 [Microsoft 365 系統管理中心](https://admin.microsoft.com)，然後選擇 [使用者]   > [作用中使用者]  。
 2. 選取受影響的使用者帳戶，然後選擇 [產品授權]   > [編輯]  。
 3. 確認已將有效的 Intune 授權指派給此使用者。
 4. 重新註冊裝置。
@@ -203,7 +203,7 @@ ms.locfileid: "79363261"
 
 ### <a name="xpc_type_error-connection-invalid"></a>XPC_TYPE_ERROR 連線無效
 
-當您開啟已指派註冊設定檔的 DEP 管理裝置時，註冊會失敗，而且您會收到下列錯誤訊息：
+當開啟已指派註冊設定檔的 ADE 管理裝置時，註冊會失敗，且會收到下列錯誤訊息：
 
 ```
 asciidoc
@@ -213,7 +213,7 @@ iPhone com.apple.accessibility.AccessibilityUIServer(MobileAsset)[288] <Notice>:
 iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" }
 ```
 
-**原因：** 裝置與 Apple DEP 服務之間有連線問題。
+**原因：** 裝置與 Apple ADE 服務之間有連線問題。
 
 #### <a name="resolution"></a>解決方案
 修正連線問題，或使用不同的網路連線來註冊裝置。 如果問題持續發生，您可能也必須連絡 Apple。
@@ -221,20 +221,20 @@ iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR 
 
 ## <a name="other-issues"></a>其他問題
 
-### <a name="dep-enrollment-doesnt-start"></a>DEP 註冊未啟動
-當您開啟已指派註冊設定檔的 DEP 管理裝置時，不會起始 Intune 註冊程序。
+### <a name="ade-enrollment-doesnt-start"></a>ADE 註冊未啟動
+當開啟已指派註冊設定檔的 ADE 管理裝置時，不會開始 Intune 註冊程序。
 
-**原因：** 註冊設定檔在 DEP 權杖上傳至 Intune 之前建立。
+**原因：** 註冊設定檔在 ADE 權杖上傳至 Intune 之前建立。
 
 #### <a name="resolution"></a>解決方案
 
 1. 編輯註冊設定檔。 您可以對設定檔進行任何變更。 目的是要更新設定檔的修改時間。
-2. 同步處理 DEP 管理的裝置：在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊方案權杖]  > 選擇權杖 > [立即同步]  。 同步處理要求會傳送至 Apple。
+2. 同步處理 ADE 管理的裝置：在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊方案權杖]  > 選擇權杖 > [立即同步]  。 同步處理要求會傳送至 Apple。
 
-### <a name="dep-enrollment-stuck-at-user-login"></a>DEP 註冊卡在使用者登入
-當您開啟已指派註冊設定檔的 DEP 管理裝置時，您輸入認證後會停在初始設定。
+### <a name="ade-enrollment-stuck-at-user-login"></a>ADE 註冊在使用者登入時停止運作
+當開啟已指派註冊設定檔的 ADE 管理裝置時，在輸入認證後會停在初始設定。
 
-**原因：** 已啟用 Multi-Factor Authentication (MFA)。 目前，在 DEP 裝置上註冊期間無法使用 MFA。
+**原因：** 已啟用 Multi-Factor Authentication (MFA)。 目前，在 ADE 裝置上註冊期間無法使用 MFA。
 
 #### <a name="resolution"></a>解決方案
 停用 MFA，然後重新註冊裝置。

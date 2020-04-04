@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93fba17973571a9981269eb0b9fc98dae20cb920
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: af60c91e52bcee643166729f3a3ac57ae232c4d9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085868"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327001"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>針對 Microsoft Intune 中的裝置註冊進行疑難排解
 
@@ -63,7 +63,7 @@ ms.locfileid: "80085868"
 
 請遵循以下步驟，檢查指派至使用者的裝置是否超過上限：
 
-1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [註冊限制]   > [裝置限制]  。 請記下 [裝置限制]  欄中的值。
+1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [註冊限制]   > [裝置限制]  。 請記下 [裝置限制]  欄中的值。
 
 2. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [使用者]   > [所有使用者]  > 選取該使用者 > [裝置]  。 請記下裝置數目。
 
@@ -286,9 +286,9 @@ Samsung Smart Manager 軟體 (隨附於某些 Samsung 裝置上) 可能會停用
 註冊完成後，裝置會回復到正常狀態，並重新取得公司資源的存取權。
 
 ### <a name="verify-ws-trust-13-is-enabled"></a>確認已啟用 WS-Trust 1.3
-**問題**：無法註冊裝置註冊計劃 (DEP) iOS/iPadOS 裝置
+**問題**：無法註冊自動裝置註冊 (ADE) iOS/iPadOS 裝置
 
-若要使用使用者親和性註冊 ，DEP 裝置必須啟用 WS-Trust 1.3 使用者名稱/混合端點，才能要求使用者權杖。 Active Directory 預設會啟用此端點。 若要取得已啟用的端點清單，請使用 Get-AdfsEndpoint PowerShell Cmdlet 並尋找 trust/13/UsernameMixed 端點。 例如：
+若要以使用者親和性來註冊 ADE 裝置，則必須啟用 WS-Trust 1.3 使用者名稱/混合端點，才能要求使用者權杖。 Active Directory 預設會啟用此端點。 若要取得已啟用的端點清單，請使用 Get-AdfsEndpoint PowerShell Cmdlet 並尋找 trust/13/UsernameMixed 端點。 例如：
 
       Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 
@@ -339,7 +339,7 @@ Samsung Smart Manager 軟體 (隨附於某些 Samsung 裝置上) 可能會停用
 4. 通知使用者重新開始註冊程序。
 
 #### <a name="determine-if-theres-something-wrong-with-the-vpp-token"></a>判斷 VPP 權杖是否有問題
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊方案權杖]  > [權杖名稱] > [設定檔]  > [設定檔名稱] > [管理]   > [屬性]  。
+1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊方案權杖]  > [權杖名稱] > [設定檔]  > [設定檔名稱] > [管理]   > [屬性]  。
 2. 檢閱內容，查看是否有任何類似如下的錯誤：
     - 此權杖已過期。
     - 此權杖不在公司入口網站授權範圍。
@@ -349,13 +349,13 @@ Samsung Smart Manager 軟體 (隨附於某些 Samsung 裝置上) 可能會停用
 3. 修正權杖的問題。
 
 #### <a name="identify-which-devices-are-blocked-by-the-vpp-token"></a>識別被 VPP 權杖封鎖的裝置
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [iOS]  > [iOS 註冊]   > [註冊方案權杖]  > [權杖名稱] > [裝置]  。
+1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [iOS]  > [iOS 註冊]   > [註冊方案權杖]  > [權杖名稱] > [裝置]  。
 2. 依 [已封鎖]  篩選 [設定檔狀態]  資料行。
 3. 記下所有**已封鎖**裝置的序號。
 
 #### <a name="remotely-wipe-the-blocked-devices"></a>從遠端抹除已封鎖的裝置
 修正 VPP 權杖的問題之後，您必須抹除已封鎖的裝置。
-1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [所有裝置]   > [資料行]   > [序號]   > [套用]  。 
+1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [所有裝置]   > [資料行]   > [序號]   > [套用]  。 
 2. 針對每部已封鎖的裝置，在 [所有裝置]  清單中選擇它，然後選擇 [抹除]   > [是]  。
 
 #### <a name="tell-the-users-to-restart-the-enrollment-process"></a>通知使用者重新開始註冊程序
@@ -379,7 +379,7 @@ Samsung Smart Manager 軟體 (隨附於某些 Samsung 裝置上) 可能會停用
 - 如果您的組織開啟封鎖個人 macOS 裝置的註冊限制，您必須手動[新增個人裝置的序號](corporate-identifiers-add.md#manually-enter-corporate-identifiers)至 Intune。  
 - 如果裝置仍指派給 Intune 中的其他使用者，其先前的擁有者並未使用公司入口網站應用程式將它移除或重設。 若要從 Intune 清除過時的裝置記錄：  
 
-    1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，使用您的系統管理認證登入。
+    1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，使用系統管理認證登入。
     2. 選擇 [裝置]   > [所有裝置]  。  
     3. 找到有註冊問題的裝置。 依裝置名稱或 MAC/硬體位址進行搜尋，以縮小結果的範圍。
     4. 選取裝置 > [刪除]  。 刪除與裝置建立關聯的所有其他項目。  

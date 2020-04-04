@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,16 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ef60333b53e03b3a6a8d736817ef27df9a182f1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5e857cdd7028851f14f607739ba7e37c744fa2f1
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352068"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359459"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Intune 中的 macOS Endpoint Protection 設定  
 
 此文章說明您可以為執行 macOS 的裝置設定的 Endpoint Protection 設定。 您可以使用 macOS 裝置設定檔來設定這些設定，以在 Intune 中進行[端點保護](endpoint-protection-configure.md)。  
+
+## <a name="before-you-begin"></a>開始之前
+
+[建立 macOS Endpoint Protection 設定檔](endpoint-protection-configure.md)。
 
 ## <a name="gatekeeper"></a>閘道管理員  
 
@@ -97,7 +101,7 @@ ms.locfileid: "79352068"
     將會為裝置建立「個人金鑰」  修復金鑰。 請設定個人金鑰的下列設定。  
 
     - **個人修復金鑰的位置** - 指定簡短的訊息給使用者，其說明如何以及在何處可以擷取其個人修復金鑰。 系統在使用者忘記密碼而提示其輸入個人修復金鑰時，會將此文字插入至使用者在其登入畫面上看到的訊息中。  
-      
+
     - **個人修復金鑰輪替** - 指定此裝置上個人修復金鑰的輪替頻率。 您可以選取預設的 [未設定]  ，或 **1** 到 **12** 個月的值。  
 
   - **停用登出時的提示**  
@@ -118,3 +122,8 @@ ms.locfileid: "79352068"
 
 如需使用 FileVault 搭配 Intune 的詳細資訊，請參閱 [FileVault 修復金鑰](encryption-monitor.md#filevault-recovery-keys)。
 
+## <a name="next-steps"></a>後續步驟
+
+[指派設定檔](../configuration/device-profile-assign.md)並[監視其狀態](../configuration/device-profile-monitor.md)。
+
+您也可以在 [Windows 10 和更新版本的裝置](endpoint-protection-windows-10.md)上設定 Endpoint Protection。

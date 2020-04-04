@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,21 +15,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3821017b0fe15df8a0329000aa74272e4d9477e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 60a4ac793500cd4d31df2188344e2b5f4e1094a4
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086891"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359149"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>使用 Intune 以專用 Kiosk 執行的 Windows 10 和 Windows Holographic for Business 裝置設定
 
 在 Windows 10 裝置上，使用 Intune 執行裝置作為 kiosk，有時也稱為專用裝置。 Kiosk 模式中的裝置可以執行一或多個應用程式。 您可以顯示和自訂 [開始] 功能表、新增不同的應用程式 (包括 Win32 應用程式)、將特定首頁新增至網頁瀏覽器，以及執行更多作業。 
 
-此功能適用於執行下列版本的裝置：
+本功能適用於：
 
 - Windows 10 及更新版本
 - Windows Holographic for Business
+
+若要建立其他平台的 kiosk 設定檔，請參閱 [Android 裝置系統管理員](device-restrictions-android.md#kiosk)、[Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) 和 [iOS/iPadOS](device-restrictions-ios.md#kiosk)。
 
 Intune 針對每部裝置支援一個 kiosk 設定檔。 如果您需要在單一裝置上有多個 kiosk 設定檔，則可以使用[自訂 OMA-URI](custom-settings-windows-10.md)。
 
@@ -69,7 +71,8 @@ Intune 會使用「組態設定檔」，依據貴組織的需求來建立和自�
 [指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
 
 您可以針對執行下列平台的裝置建立 kiosk 設定檔：
+
 - [Android 裝置系統管理員](device-restrictions-android.md#kiosk)
-- [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)
+- [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices)
 - [Windows 10 及以上版本](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)

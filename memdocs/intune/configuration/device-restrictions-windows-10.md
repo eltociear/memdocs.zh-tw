@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71e8b874e50fc1300124d748dfb70963acae089b
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 237e281b88492ff7b7e1b5614600662e15761935
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220093"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407833"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>使用 Intune 來允許或限制功能的 Windows 10 (和更新版本) 裝置設定
 
@@ -208,7 +208,9 @@ GDI DPI 縮放比例會讓非 DPI 感知的應用程式變成依監視器 DPI �
   如果電腦已加入 Azure AD，且啟用自動註冊，則不會套用此原則設定。
 
 - **手動安裝根憑證** (僅限行動裝置版)：[封鎖]  防止終端使用者手動安裝根憑證及中繼 CAP 憑證。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。
-- **相機**：[封鎖]  防止終端使用者在裝置上使用相機。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。
+- **相機**：[封鎖]  防止終端使用者在裝置上使用相機。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 會允許存取裝置相機。
+
+  Intune 只管理裝置相機的存取權。 其無權存取圖片或影片。
 
   [相機 CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
 

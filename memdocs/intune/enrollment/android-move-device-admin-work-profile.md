@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b66777e9c108ab4a6b84e4d4fa0942532685912f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 2c8c521dc0899b3429de85e95116a6277d724771
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086724"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327283"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>將 Android 裝置從裝置系統管理員移至工作設定檔管理
 
@@ -40,12 +40,12 @@ ms.locfileid: "80086724"
 - 透過[將 Intune 租用戶帳戶連線到 Android Enterprise 帳戶](connect-intune-android-enterprise.md)，以設定 Android 公司設定檔管理。
 - 針對要移至 Android 工作設定檔的使用者群組，[設定 Android Enterprise 工作設定檔註冊](android-work-profile-enroll.md)。
 - 考慮增加您的使用者裝置限制。 從裝置系統管理員管理取消註冊裝置時，可能不會立即移除裝置記錄。 若要在這段期間提供緩衝，您可能需要增加裝置限制容量，讓使用者可以在工作設定檔管理中註冊。
-  - 針對每位使用者的裝置數目上限，[設定 Azure Active Directory 裝置設定](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings) \(部分機器翻譯\)。
+  - 針對每位使用者的裝置數目上限，[設定 Azure Active Directory 裝置設定](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) \(部分機器翻譯\)。
   - 藉由設定裝置限制來調整 [Intune 裝置限制](enrollment-restrictions-set.md#create-a-device-limit-restriction)。 
 
 ## <a name="create-device-compliance-policy"></a>建立裝置合規性原則
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，選取 [裝置]   > [合規性政策]   > [原則]   > [建立原則]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選取 [裝置]   > [合規性政策]   > [原則]   > [建立原則]  。
 
     ![建立原則](./media/android-move-device-admin-work-profile/create-policy.png)
 
@@ -71,6 +71,7 @@ ms.locfileid: "80086724"
     > [!NOTE]
     > - 當然，您可以在與使用者通訊的連結中，使用使用者易記的超文字。 但是，不要使用 URL 短網址，因為若該方式變更，連結可能無法正常作用。
     > - 如果 Android 公司入口網站已開啟且在背景中，則當使用者點選連結時，可能會改為前往其已開啟的最後一個頁面。
+    > - 使用者必須在 Android 裝置上點選連結。 如果改為貼入瀏覽器，就不會啟動 Android 公司入口網站。 
 
     選擇 [下一步]  。
 
@@ -80,13 +81,13 @@ ms.locfileid: "80086724"
 
 ## <a name="troubleshooting"></a>疑難排解
 
-[移至新裝置管理設定的終端使用者流程](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md) \(英文\) 會引導使用者從裝置系統管理員管理取消註冊，然後開始設定工作設定檔管理。 使用者必須擁有 [Android 裝置系統管理員註冊的裝置](android-enroll-device-administrator.md)，其中具備 Android 公司入口網站 5.0.4720.0 版或更新版本。
+[移至新裝置管理設定的終端使用者流程](../user-help/move-to-new-device-management-setup.md) \(英文\) 會引導使用者從裝置系統管理員管理取消註冊，然後開始設定工作設定檔管理。 使用者必須擁有 [Android 裝置系統管理員註冊的裝置](android-enroll-device-administrator.md)，其中具備 Android 公司入口網站 5.0.4720.0 版或更新版本。
 
 ### <a name="user-sees-an-error-after-tapping-resolve"></a>使用者在點擊 [解決] 之後看到錯誤
 如果使用者在點擊 [解決]  按鈕之後看到錯誤，可能是因為下列其中一個原因：
 - 工作設定檔註冊未正確設定 (可能是 Android Enterprise 帳戶未連線，或已將註冊限制設定為禁止工作設定檔註冊)。
-- 裝置正在執行 Android 4.4 或更早版本，而其不支援工作設定檔註冊。 
-- 裝置製造商不支援在此裝置型號上進行工作設定檔註冊。
+- 裝置正在執行不支援工作設定檔註冊的 Android 4.4 或更舊版本。 
+- 裝置製造商不支援此裝置型號的工作設定檔註冊。
 
 ### <a name="resolve-button-doesnt-appear-on-the-users-device"></a>[解決] 按鈕未出現在使用者的裝置上
 如果使用者在按照上述裝置合規性政策設定目標之後，於裝置系統管理員管理中註冊，則 [解決]  按鈕將不會出現在使用者的裝置上。
@@ -103,8 +104,5 @@ ms.locfileid: "80086724"
 - Android 裝置使用 Android 6 或更早版本。 
 
 ## <a name="next-steps"></a>後續步驟
-[查看終端使用者流程](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md)
-
+[查看終端使用者流程](../user-help/move-to-new-device-management-setup.md)
 [使用 Intune 管理 Android 工作設定檔裝置](android-enterprise-overview.md)
-
-

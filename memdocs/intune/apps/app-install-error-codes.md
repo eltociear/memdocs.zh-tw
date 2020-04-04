@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98567612b31604f79339a550275e274a2c90c3a4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 431d2753b04269e9aacd7ef951ef3f45a076df60
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342409"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407908"
 ---
 # <a name="intune-app-installation-error-reference"></a>Intune 應用程式安裝錯誤參考
 
@@ -92,6 +92,8 @@ ms.locfileid: "79342409"
 | 0x87D13B77 | -2016330889 | 安全連線失敗。  | 由於網路連線問題 (安全連線失敗)，導致應用程式資訊清單驗證失敗 |
 | 0x87D13B80 | -2016330880 | 錯誤：無法連線至 iTunes Store | 應用程式安裝失敗，因為無法連線至 iTunes Store |
 | 0x87D13B9F  | -2016330849 | VPP 應用程式有可用的更新 | 當 VPP 應用程式已安裝，但有較新的版本可用時，就會傳回此代碼。 |
+| 0x87D13B9E | 2016330850 | 無法強制應用程式解除安裝設定。 重試安裝應用程式。 | 應用程式已安裝在裝置上，但是「淘汰時解除安裝」設定不符合所設定的值。 建議使用者要求從公司入口網站安裝應用程式，以嘗試再次套用「淘汰時解除安裝」設定。 |
+
 
 ## <a name="other-installation-errors"></a>其他安裝錯誤
 

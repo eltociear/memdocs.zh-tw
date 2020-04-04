@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1ef0c2c4b7fdd7bb25fcb0237eb68485f1be701
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 687ef14791d1ae0df60d28802d27b99dd9547423
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340173"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401343"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>將適用於 Windows 10 的 Microsoft Edge 新增至 Microsoft Intune
 
@@ -38,14 +38,14 @@ ms.locfileid: "79340173"
 
 ## <a name="prerequisites"></a>先決條件
 
-- 需要 Windows 10 RS2 和更新版本。
+- Windows 10 1703 版或更新版本。
 - 在使用者內容中為所有通道提供的 Microsoft Edge *77 版和更新版本*的任何預先安裝版本，將被在系統內容中安裝的 Edge 覆寫。
 
 ## <a name="configure-the-app-in-intune"></a>在 Intune 中設定應用程式
 
 您可以使用下列步驟，將 Microsoft Edge 77 版和更新版本新增至 Intune：
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [所有應用程式]   > [新增]  。
 3. 在 [應用程式類型]  清單中的 [Microsoft Edge 77 版和更新版本]  底下，選取 [Windows 10]  。
 
@@ -100,7 +100,7 @@ ms.locfileid: "79340173"
 
 當您需要將 Microsoft Edge 從使用者的裝置解除安裝時，請使用下列步驟。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [所有應用程式]   > [Microsoft Edge]  應用程式 > [指派]   > [新增群組]  。
 3. 在 [新增群組]  窗格中，選取 [解除安裝]  。
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a49c71705755f82dcf33c63971ed6f11ffc849f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: b808e34e6b44641902daddcee3a47f7273756b2d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084976"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323283"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>透過 Intune 設定並使用匯入的 PKCS 憑證
 
@@ -87,7 +87,7 @@ S/MIME 加密很具挑戰性，因為電子郵件是以特定憑證加密：
 
 ## <a name="download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune"></a>為 Microsoft Intune 下載、安裝並設定 PFX 憑證連接器
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [租用戶系統管理]   > [連接器與權杖]   > [憑證連接器]   > [新增]  。
 
@@ -106,7 +106,7 @@ S/MIME 加密很具挑戰性，因為電子郵件是以特定憑證加密：
 
 6. 關閉視窗。
 
-7. 在 Microsoft Endpoint Manager 系統管理中心內，返回 [租用戶系統管理]   > [連接器與權杖]   > [憑證連接器]  。 在幾分鐘後會出現綠色的核取記號，且連線狀態會更新。 連接器伺服器現在可以與 Intune 通訊。
+7. 在 Microsoft 端點管理員系統管理中心內，返回 [租用戶系統管理]   > [連接器與權杖]   > [憑證連接器]  。 在幾分鐘後會出現綠色的核取記號，且連線狀態會更新。 連接器伺服器現在可以與 Intune 通訊。
 
 ## <a name="import-pfx-certificates-to-intune"></a>將 PFX 憑證匯入至 Intune
 
@@ -211,7 +211,7 @@ PowerShell 模組提供了使用 Windows 密碼編譯建立金鑰的方法。 �
 
 將憑證匯入至 Intune 之後，請建立 **PKCS 匯入憑證**設定檔，並將它指派給 Azure Active Directory 群組。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取並移至 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 

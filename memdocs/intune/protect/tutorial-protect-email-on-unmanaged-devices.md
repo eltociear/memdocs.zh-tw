@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1e6731e41ccc7c687cf6fa68dc06b8c6ee4e1e2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f8be97edbbba9a998dd223a5a0e9c8982c1a16a1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349676"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326589"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>教學課程：保護非受控裝置上的 Exchange Online 電子郵件
 
@@ -48,7 +48,7 @@ ms.locfileid: "79349676"
 
 在本教學課程中，我們將針對 Outlook 應用程式設定適用於 iOS 的 Intune 應用程式保護原則，以在應用程式層級設置適當的保護。 我們將需要有 PIN 碼才能在工作環境中開啟應用程式。 我們也會限制應用程式間的資料共用，以及防止公司資料被儲存到個人位置。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [應用程式]   > [應用程式保護原則]   > [建立原則]  ，然後針對平台選取 [iOS/iPadOS]  。
 
@@ -113,7 +113,7 @@ ms.locfileid: "79349676"
 
 ### <a name="create-an-mfa-policy-for-modern-authentication-clients"></a>建立適用於新式驗證用戶端的 MFA 原則  
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [端點安全性]   >  [條件式存取]   > [新增原則]  。  
 
@@ -163,7 +163,7 @@ ms.locfileid: "79349676"
 
 ### <a name="create-a-policy-for-exchange-active-sync-clients"></a>建立適用於 Exchange Active Sync 用戶端的原則
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [端點安全性]   > [條件式存取]   > [新增原則]  。
 
@@ -229,7 +229,7 @@ ms.locfileid: "79349676"
 
 當不再需要測試原則時，您可以將它們移除。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [裝置]  [合規性政策]  。
 

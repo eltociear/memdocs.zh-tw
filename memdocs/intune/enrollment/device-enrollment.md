@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4aaa8bcee3684c73fa5ec3d488fd3107585dfc61
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 8f91b71d96c936e9808973df145862654f0e516a
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086162"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256635"
 ---
 # <a name="what-is-device-enrollment"></a>什麼是裝置註冊？
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -40,7 +40,7 @@ Intune 可供管理員工的裝置與應用程式，以及員工存取公司資�
 | | 裝置會在註冊期間抹除。 | 建立每部裝置與使用者的關聯。| 如果會，使用者就無法取消註冊裝置。 | |
 |**[BYOD](#bring-your-own-device)** | 否| 是 | 否 | [詳細資訊](apple-mdm-push-certificate-get.md)|
 |**[DEM](#device-enrollment-manager)**| 否 |否 |否 | [詳細資訊](device-enrollment-manager-enroll.md)|
-|**[DEP](#apple-device-enrollment-program)**| 是 | 選用 | 選用|[詳細資訊](device-enrollment-program-enroll-ios.md)|
+|**[ADE](#apple-automated-device-enrollment)**| 是 | 選用 | 選用|[詳細資訊](device-enrollment-program-enroll-ios.md)|
 |**[USB-SA](#usb-sa)**| 是 | 選用 | 否| [詳細資訊](apple-configurator-enroll-ios.md)|
 |**[USB-Direct](#usb-direct)**| 否 | 否 | 否|[詳細資訊](apple-configurator-enroll-ios.md)|
 
@@ -49,7 +49,7 @@ Intune 可供管理員工的裝置與應用程式，以及員工存取公司資�
 |:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | 否| 是 | 否 | [詳細資訊](macos-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| 否 |否 |否  | [詳細資訊](device-enrollment-manager-enroll.md)|
-|**[DEP](#apple-device-enrollment-program)**| 是 | 選用 | 選用|[詳細資訊](device-enrollment-program-enroll-macos.md)|
+|**[ADE](#apple-automated-device-enrollment)**| 是 | 選用 | 選用|[詳細資訊](device-enrollment-program-enroll-macos.md)|
 
 ## <a name="windows-enrollment-methods"></a>Windows 註冊方法
 
@@ -84,15 +84,15 @@ Intune 可供管理員工的裝置與應用程式，以及員工存取公司資�
 攜帶您自己的裝置 (BYOD) 包括個人擁有的手機、平板電腦及電腦。 使用者必須安裝並執行公司入口網站應用程式以註冊 BYOD。 此程式可讓使用者存取公司資源，例如電子郵件。
 
 ## <a name="corporate-owned-device"></a>公司擁有的裝置
-[公司擁有的裝置 (COD)](corporate-identifiers-add.md) 包括手機、平板電腦及電腦，由組織擁有並分配給員工。 COD 註冊支援自動註冊、共用裝置或授權前註冊需求等案例。 常見的 COD 註冊方式是由系統管理員或主管使用裝置註冊管理員 (DEM)。 iOS/iPadOS 裝置可直接透過 Apple 提供的裝置註冊計劃 (DEP) 工具進行註冊。 具備 IMEI 編號的裝置也可被識別並標記為公司所擁有。
+[公司擁有的裝置 (COD)](corporate-identifiers-add.md) 包括手機、平板電腦及電腦，由組織擁有並分配給員工。 COD 註冊支援自動註冊、共用裝置或授權前註冊需求等案例。 常見的 COD 註冊方式是由系統管理員或主管使用裝置註冊管理員 (DEM)。 iOS/iPadOS 裝置可直接透過 Apple 提供的 ADE 工具進行註冊。 具備 IMEI 編號的裝置也可被識別並標記為公司所擁有。
 
 ### <a name="device-enrollment-manager"></a>裝置註冊管理員
 裝置註冊管理員 (DEM) 是特殊的使用者帳戶，可用於註冊及管理公司擁有的多部裝置。 管理員可以安裝公司入口網站，並註冊多部尚無使用者的裝置。 比方說，這些類型的裝置適合銷售點或公用程式應用程式，但對於需要存取電子郵件或公司資源的使用者而言則不適合。 深入了解 [DEM](device-enrollment-manager-enroll.md)。
 
-### <a name="apple-device-enrollment-program"></a>Apple 裝置註冊方案
-Apple 裝置註冊計劃 (DEP) 管理功能可供建立原則，並將原則在「線上」部署至透過 DEP 購買及管理的 iOS/iPadOS 與 macOS 裝置。 當使用者第一次開啟裝置並執行「設定輔助程式」時，即會註冊裝置。 此方法支援 iOS/iPadOS 受監管模式，這樣能讓您使用特定功能來設定裝置。
+### <a name="apple-automated-device-enrollment"></a>Apple 自動裝置註冊
+Apple 自動裝置註冊 (ADE) 管理功能可供建立原則，並將原則在「線上」部署至透過 ADE 購買及管理的 iOS/iPadOS 與 macOS 裝置。 當使用者第一次開啟裝置並執行「設定輔助程式」時，即會註冊裝置。 此方法支援 iOS/iPadOS 受監管模式，這樣能讓您使用特定功能來設定裝置。
 
-深入了解 iOS/iPadOS DEP 註冊：
+深入了解 iOS/iPadOS ADE 註冊：
 
 - [選擇註冊 iOS/iPadOS 裝置的方式](ios-enroll.md)
 - [使用裝置註冊計劃來註冊 iOS/iPadOS 裝置](device-enrollment-program-enroll-ios.md)

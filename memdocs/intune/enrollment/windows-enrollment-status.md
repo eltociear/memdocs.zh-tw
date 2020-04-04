@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bbb8738acbfdfa2317d754797dbb171c6a5d8ac
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0efaaf94f969e0b1b27582027a68b9e59c944b0c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344385"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326858"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>設定註冊狀態頁面
  
@@ -64,14 +64,14 @@ ms.locfileid: "79344385"
 
 若要開啟註冊狀態頁面，請遵循下列步驟。
  
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [Windows]   > [Windows 註冊]   > [註冊狀態頁面]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [Windows]   > [Windows 註冊]   > [註冊狀態頁面]  。
 2. 在 [註冊狀態頁面]  刀鋒視窗中，選擇 [預設]   > [設定]  。
 3. 針對 [顯示應用程式和設定檔安裝進度]  ，選擇 [是]  。
 4. 選擇您想要開啟的其他設定，然後選擇 [儲存]  。
 
 ## <a name="create-enrollment-status-page-profile-and-assign-to-a-group"></a>建立註冊狀態頁面設定檔並指派給群組
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [Windows]   > [Windows 註冊]   > [註冊狀態頁面]   > [建立設定檔]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [Windows]   > [Windows 註冊]   > [註冊狀態頁面]   > [建立設定檔]  。
 2. 提供 [名稱]  和 [描述]  。
 3. 選擇 **[建立]** 。
 4. 在 [註冊狀態頁面]  清單選擇新的設定檔。
@@ -82,7 +82,7 @@ ms.locfileid: "79344385"
 
 使用者可以處於多個群組中，並具有多個註冊狀態頁面設定檔。 為了處理這類衝突，您可以設定每個設定檔的優先順序。 在註冊過程中，如果某人具有多個註冊狀態頁面設定檔，則僅將最高優先順序的設定檔套用至該註冊裝置。
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [Windows]   > [Windows 註冊]   > [註冊狀態頁面]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [Windows]   > [Windows 註冊]   > [註冊狀態頁面]  。
 2. 將滑鼠移到清單中的設定檔上方。
 3. 使用三個垂直點，將設定檔拖曳到所要的清單位置。
 
@@ -90,7 +90,7 @@ ms.locfileid: "79344385"
 
 您可以指定需要先安裝哪些應用程式，使用者才能存取桌面。
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置]   > [Windows]   > [Windows 註冊]   > [註冊狀態頁面]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [Windows]   > [Windows 註冊]   > [註冊狀態頁面]  。
 2. 選擇定檔 > [設定]  。
 3. 對於 [顯示應用程式與設定檔的安裝進度]  ，選擇 [是]  。
 4. 對於 [所有應用程式與設定檔未完成安裝之前，禁止使用裝置]  ，選擇 [是]  。

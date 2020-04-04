@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: kakyker
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16c6f57bd12713135244b2096f9eda4d8a802f32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e900252392f1e6f057561d8d07f6e764dc0aafc
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361129"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359361"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>在 Microsoft Intune 中使用 macOS 裝置的自訂設定
 
@@ -38,7 +39,7 @@ ms.locfileid: "79361129"
 
 ## <a name="before-you-begin"></a>開始之前
 
-[建立設定檔](device-profile-create.md)。
+[建立設定檔](custom-settings-configure.md)。
 
 ## <a name="what-you-need-to-know"></a>您必須知道的事項
 
@@ -64,10 +65,8 @@ ms.locfileid: "79361129"
   > [!NOTE]
   > 變數不會在 UI 中驗證，而且會區分大小寫。 因此，您可能會看到儲存之設定檔含有不正確的輸入。 例如，如果輸入 `{{DeviceID}}` 而非 `{{deviceid}}`，則會顯示常值字串而非裝置的唯一識別碼。 請務必輸入正確的資訊。
 
-選取 [確定]   > [建立]  儲存您的變更。 設定檔隨即建立，並顯示在設定檔清單中。
-
 ## <a name="next-steps"></a>後續步驟
 
-設定檔已建立，但還不會執行任何動作。 接下來，請[指派此設定檔](device-profile-assign.md)。
+雖然設定檔已建立，但它可能還不會執行任何動作。 接下來，[指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
 
-了解如何[在 iOS/iPadOS 裝置上建立設定檔](custom-settings-ios.md)。
+[在 iOS/iPadOS 裝置上建立自訂設定檔](custom-settings-ios.md)。
