@@ -5,623 +5,861 @@ description: 由 Intune 支援、用於管理 Microsoft Defender 進階威脅防
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 03/31/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: shpate
+ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ebea853ac536b182a9cfe35e8b291aea3a776f0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 897b232e841c59fd85d132d1fa9b720c24ac1c9a
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351197"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488038"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Intune 的 Microsoft Defender 進階威脅防護基準設定
 
-檢視 Microsoft Intune 支援的 Microsoft Defender 進階威脅防護 (先前稱為 Windows Defender 進階威脅防護) 基準設定。 進階威脅防護 (ATP) 基準預設值代表 ATP 建議的設定，可能不符合其他安全性基準的基準預設值。  
+檢視 Microsoft Intune 支援的 Microsoft Defender 進階威脅防護基準設定。 進階威脅防護 (ATP) 基準預設值代表 ATP 建議的設定，可能不符合其他安全性基準的基準預設值。
 
-當您的環境符合使用 [Microsoft Defender 進階威脅防護](advanced-threat-protection.md#prerequisites)的必要條件時，即可使用 Microsoft Defender 進階威脅防護基準。 
+本文中詳細資料適用於 2020 年 3 月 1 日發行的第 3 版 Microsoft Defender ATP 基準。
+
+當您的環境符合使用 [Microsoft Defender 進階威脅防護](advanced-threat-protection.md#prerequisites)的必要條件時，即可使用 Microsoft Defender 進階威脅防護基準。
 
 此基準會針對實體裝置最佳化，目前不建議用於虛擬機器 (VM) 或 VDI 端點。 特定基準設定可能會影響虛擬化環境上的遠端互動式工作階段。 如需詳細資訊，請參閱 Windows 文件中的[提高 Microsoft Defender ATP 安全性基準的合規性](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) \(英文\)。
 
-## <a name="application-guard"></a>應用程式防護  
+## <a name="application-guard"></a>應用程式防護
+
 如需詳細資訊，請參閱 Windows 文件中的 [WindowsDefenderApplicationGuard CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp) \(英文\)。  
 
 使用 Microsoft Edge 時，Microsoft Defender 應用程式防護可保護您的環境免受組織不信任之網站的影響。 當使用者瀏覽未列在隔離之網路界限中的網站時，這些網站將在 Hyper-V 虛擬瀏覽工作階段中開啟。 信任的網站是由網路界限定義的。  
 
-- **應用程式防護** - *Settings/AllowWindowsDefenderApplicationGuard*  
-  選取 [是]  表示開啟此功能，這會在 Hyper-V 虛擬化瀏覽容器中開啟未受信任的網站。 當設定為 [尚未設定]  時，所有網站 (受信任與未受信任) 都會在裝置上開啟，而非在虛擬化容器中開啟。  
-
-  **預設**：是
- 
-  - **企業網站上的外部內容** - *Settings/BlockNonEnterpriseContent*  
-    選取 [是]  以封鎖從未經核准的網站載入內容。 當設定為 [尚未設定]  時，非企業網站可在裝置上開啟。 
- 
-    **預設**：是
-
-  - **剪貼簿行為** - *Settings/ClipboardSettings*  
-    選擇要在本機電腦和應用程式防護虛擬瀏覽器之間允許的複製與貼上動作。  這些選項包括：
-    - 尚未設定  
-    - 禁止電腦和瀏覽器之間的複製並貼上 - 封鎖這兩者。 資料無法在電腦與虛擬瀏覽器之間傳輸。  
-    - 僅允許從瀏覽器到電腦的複製並貼上 - 資料無法從電腦傳輸到虛擬瀏覽器。
-    - 僅允許從電腦到瀏覽器的複製並貼上 - 資料無法從虛擬瀏覽器傳輸到電腦。
-    - 允許電腦和瀏覽器之間的複製並貼上 - 不封鎖內容。  
-
-    **預設**：禁止電腦和瀏覽器之間的複製並貼上  
-
-- **Windows 網路隔離原則 – 企業網路網域名稱**  
-  如需詳細資訊，請參閱 Windows 文件中的[原則 CSP - NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation) \(英文\)。
+- **為 Edge 開啟應用程式防護 (選項)**  
+  CSP：[Settings/AllowWindowsDefenderApplicationGuard](https://go.microsoft.com/fwlink/?linkid=872350)
   
-  以網域、IP 位址範圍與網路界限的方式指定企業資源清單，這些資源裝載在「應用程式防護」將其視為企業站台的雲端。  
-
-  **預設值**：securitycenter.windows.com
-
-## <a name="application-reputation"></a>應用程式信譽  
-
-如需詳細資訊，請參閱 Windows 文件中的 [Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) (原則 CSP - SmartScreen)。
-
-- **封鎖未經驗證檔案的執行**  
-    防止使用者執行未經驗證的檔案。 當設定為 [尚未設定]  時，員工可以忽略 SmartScreen 警告並執行惡意檔案。 設定為 [是]  ，以便員工不可忽略 SmartScreen 警告並執行惡意檔案。  
+  - **為 Edge 啟用** (預設  ) - 應用程式防護會在 Hyper-V 虛擬化瀏覽容器中開啟未核准的網站。
+  - **未設定** - 所有網站 (受信任與未受信任) 都會在裝置上開啟，而非在虛擬化容器中開啟。  
   
-    **預設**：是
+  設定為 [為 Edge 啟用]  時，即可設定 [禁止未經企業所核准網站的外部內容]  和 [剪貼簿行為]  。
 
-- **應用程式和檔案需要 SmartScreen**  
-  設定為 [是]  以啟用適用於 Windows 的 SmartScreen。  
+  - **禁止未經企業所核准網站的外部內容**  
+    CSP：[Settings/BlockNonEnterpriseContent](https://go.microsoft.com/fwlink/?linkid=872352)
 
-  **預設**：是
+    - **是** (預設  ) - 禁止來自未核准網站的內容載入。
+    - **未設定** - 非企業網站可在裝置上開啟
 
-## <a name="attack-surface-reduction"></a>攻擊表面縮減  
+  - **剪貼簿行為**  
+    CSP：[Settings/ClipboardSettings](https://go.microsoft.com/fwlink/?linkid=872351)
 
-- **Office 應用程式啟動子處理序**  
-  [受攻擊面縮小規則](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – 當設定為 [封鎖]  時，Office 應用程式將無法建立子處理序。 Office 應用程式包括 Word、Excel、PowerPoint、OneNote 與 Access。 建立子處理序是典型的惡意程式碼行為，特別是針對試圖使用 Office 應用程式啟動或下載惡意可執行檔的巨集型攻擊。  
+    選擇要在本機電腦和應用程式防護虛擬瀏覽器之間允許的複製與貼上動作。 這些選項包括：
+    - **尚未設定**  
+    - **禁止電腦和瀏覽器之間的複製並貼上** (預設  ) - 封鎖這兩者。 資料無法在電腦與虛擬瀏覽器之間傳輸。
+    - **僅允許從瀏覽器到電腦的複製並貼上** - 資料無法從電腦傳輸到虛擬瀏覽器。
+    - **僅允許從電腦到瀏覽器的複製並貼上** - 資料無法從虛擬瀏覽器傳輸到電腦。
+    - **允許電腦和瀏覽器之間的複製並貼上** - 不封鎖內容。
 
-  **預設**：封鎖
+- **Windows 網路隔離原則**  
+  CSP：[原則 CSP - NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation) (機器翻譯)
 
-- **指令碼下載的承載執行類型**  
-  [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection) – 指定下載或嘗試安裝之潛在垃圾應用程式的偵測層級。  
+  指定 [網路網域]  清單，這是裝載於雲端的企業資源，應用程式防護會將其視為企業網站
+  - **設定** (預設  )
+  - **未設定**
 
-  **預設**：封鎖 
+  設定為 [設定]  時，即可接著定義 [網路網域]  。
 
-- **防止認證竊取類型**  
-  設定為 [啟用]  以[使用 Credential Guard 保護衍生的網域認證](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard) \(部分機器翻譯\)。 Microsoft Defender Credential Guard 使用以虛擬化為基礎的安全性來隔離祕密，只有具特殊權限的系統軟體才能進行存取。 未經授權存取這些祕密，可能會引起認證竊取攻擊，例如雜湊傳遞或票證傳遞。 Microsoft Defender Credential Guard 會保護 NTLM 密碼雜湊、Kerberos 票證授權票證及應用程式儲存為網域認證的認證，以防止這些攻擊。  
+  - **網路網域**  
+    選取 [新增]  ，然後指定網域、IP 位址範圍和網路界限。 預設會設定 *securitycenter.windows.com*。
 
-  **預設**：啟用
+## <a name="bitlocker"></a>BitLocker
 
-- [電子郵件內容執行]   
-  [受攻擊免縮小規則](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – 當設定為 [封鎖]  時，此規則可防止從 Microsoft Outlook 或網路郵件 (例如 Gmail.com 或 Outlook.com) 中出現的電子郵件，執行或啟動下列檔案類型：  
+如需詳細資訊，請參閱 Windows 文件中的 [BitLocke 群組原則設定](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) \(部分機器翻譯\)。
 
-  - 可執行檔 (例如 .exe、.dll 或 .scr)  
-  - 指令碼檔案 (例如 PowerShell .ps、VisualBasic .vbs 或 JavaScript .js 檔案)  
-  - 指令碼封存檔案  
+- **需要加密儲存卡 (僅限行動裝置)**  
+  CSP：[RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)
 
-  **預設**：封鎖
+  此設定僅適用於 Windows 行動裝置版和行動裝置企業版 SKU 裝置。
+  - **是** (預設  ) - 行動裝置需要加密儲存卡。
+  - **未設定** - 此設定會還原為 OS 預設值，也就是不需要加密儲存卡。
 
-- **Adobe Reader 在子處理序中啟動**  
-  [受攻擊面縮小規則](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – *啟用*此規則以封鎖 Adobe Reader，使其無法建立子處理序。 惡意程式碼可以透過社交工程或惡意探索來下載並啟動額外的承載並以 Adobe Reader 為跳板發動攻擊。  
+- **為 OS 及固定資料磁碟機啟用完整的磁碟加密**  
+  CSP：[RequireDeviceEncryption](https://go.microsoft.com/fwlink/?linkid=872523)
 
-  **預設**：啟用
+  如果磁碟機在套用此原則之前已加密，則不會採取任何額外的動作。 如果加密方法和選項符合此原則，則設定應該會傳回成功。 如果現有的 BitLocker 設定選項不符合此原則，則設定可能會傳回錯誤。
+  
+  若要將此原則套用至已加密的磁碟，請將磁碟機解密，再重新套用 MDM 原則。 Windows 預設值為不需要 BitLocker 磁碟機加密，但在 Azure AD Join 和 Microsoft 帳戶 (MSA) 註冊/登入時，自動加密可能會在 XTS-AES 128 位元加密啟用 BitLocker。
 
-- [遭混淆的指令碼巨集程式碼]   
-  [受攻擊面縮小規則](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – 惡意程式碼與其他威脅可能會在某些指令檔中，嘗試混淆或隱藏其惡意程式碼。 此規則可防止看似混淆的指令碼執行。  
-    
-  **預設**：封鎖
-
-- [不信任的 USB 處理序]   
-  [受攻擊面縮小規則](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – 當設定為 [封鎖]  時，來自 USB 抽取式磁碟機與 SD 卡且未經簽署或未受信任的可執行檔將無法執行。
-
-  可執行檔包括：
-  - 可執行檔 (例如 .exe、.dll 或 .scr)
-  - 指令碼檔案 (例如 PowerShell .ps、VisualBasic .vbs 或 JavaScript .js 檔案)  
-
-  **預設**：封鎖
-
-- [Office 應用程式其他處理序插入]   
-  [受攻擊面縮小規則](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - 當設定為 [封鎖]  時，Office 應用程式 (包括 Word、Excel、PowerPoint 與 OneNote) 無法將程式碼插入到其他處理序中。 程式碼插入通常會利用這點來執行惡意程式碼，試圖隱藏活動不讓防毒掃描引擎發現。  
-
-  **預設**：封鎖
-
-- [Office 巨集程式碼允許 Win32 匯入]   
-  [受攻擊面縮小規則](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - 當設定為 [封鎖]  時，此規則會嘗試封鎖包含可匯入 Win32 DLL 之巨集程式碼的 Office 檔案。 Office 應用程式包括 Word、Excel、PowerPoint 與 OneNote。 惡意軟體可能會利用 Office 檔案中的巨集程式碼來匯入和載入 Win32 DLL，這些 DLL 接著可用來進行 API 呼叫，以便允許進一步感染整個系統。  
-
-  **預設**：封鎖
-
-- **Office 通訊應用程式在子處理序中啟動**  
-  [受攻擊面縮小規則](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – 當設定為 [啟用]  時，此規則會防止 Outlook 建立子處理序。 透過封鎖建立子程序的動作，此規則可保護您免於社交功能攻擊並防止惡意探索程式碼濫用 Outlook 中的弱點。  
-
-  **預設**：啟用
-
-- [Office 應用程式可執行檔內容建立或啟動]   
-  [受攻擊面縮小規則](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – 當設定為 [封鎖]  時，Office 應用程式將無法建立可執行的內容。 Office 應用程式包括 Word、Excel、PowerPoint、OneNote 與 Access。  
-
-  此規則會將目標鎖定在可疑且惡意附加元件和指令碼 (延伸模組) 為建立或啟動可執行檔所使用的典型行為。 這是典型的惡意軟體手段。 延伸模組會被封鎖而無法供 Office 應用程式使用。 一般而言，這些延伸模組會使用 Windows Scripting Host (.wsh 檔案) 執行指令碼，來將特定工作自動化或提供使用者建立的附加元件功能。
-
-  **預設**：封鎖
-
-## <a name="bitlocker"></a>BitLocker  
-
-如需詳細資訊，請參閱 Windows 文件中的 [BitLocke 群組原則設定](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) \(部分機器翻譯\)。  
-
-- **加密裝置**  
-  選取 [是]  以啟用 BitLocker 裝置加密。 視裝置硬體與 Windows 版本而定，系統可能會要求裝置使用者確認裝置上沒有第三方加密。 在第三方加密作用中的情況下開啟 Windows 加密會造成裝置不穩定。  
-
-   **預設**：是
-
-- **BitLocker 抽取式磁碟機原則**  
-  此原則的值決定 BitLocker 用於抽取式磁碟機加密的加密強度。 企業可控制加密層級以提高安全性 (AES-256 強於 AES-128)。 如果您選取 [是]  以啟用此設定，則能夠為固定資料磁碟機、作業系統磁碟機和抽取式資料磁碟機個別設定加密演算法和金鑰加密強度。 如果是固定磁碟機和作業系統磁碟機，建議您使用 XTS-AES 演算法。 如果是抽取式磁碟機，若在其他未執行 Windows 10 1511 版或更新版本的裝置上使用該磁碟機，您應該使用 AES-CBC 128 位元或 AES-CBC 256 位元。 如果磁碟機已加密或加密正在進行中，變更加密方法就沒有任何作用。 在這些情況下，會忽略這個原則設定。 
-
-  針對 BitLocker 抽取式磁碟機原則，請設定下列設定：
-
-  - **寫入存取需要加密**  
-    **預設**：是
-
-  - **加密方法**  
-    **預設**：AES 128 位元 CBC
-
-- **加密儲存卡 (僅行動裝置)** 選取 [是]  會將行動裝置的儲存卡加密。  
-
-   **預設**：是
-
-- **BitLocker 固定磁碟機原則**  
-  此原則的值決定 BitLocker 用於固定式磁碟機加密的加密強度。 企業可控制加密層級以提高安全性 (AES-256 強於 AES-128)。 如果您啟用此設定，則能夠為固定資料磁碟機、作業系統磁碟機和抽取式資料磁碟機個別設定加密演算法和金鑰加密強度。 如果是固定磁碟機和作業系統磁碟機，建議您使用 XTS-AES 演算法。 如果是抽取式磁碟機，若在其他未執行 Windows 10 1511 版或更新版本的裝置上使用該磁碟機，您應該使用 AES-CBC 128 位元或 AES-CBC 256 位元。 如果磁碟機已加密或加密正在進行中，變更加密方法就沒有任何作用。 在這些情況下，會忽略這個原則設定。
-
-  針對 BitLocker 抽取式磁碟機原則，請設定下列設定：
-
-  - **寫入存取需要加密**  
-    **預設**：是
-
-  - **加密方法**  
-    **預設**：AES 128 位元 XTS
+  - **是** (預設  ) - 強制使用 BitLocker。
+  - **未設定** - 不強制使用 BitLocker。
 
 - **BitLocker 系統磁碟機原則**  
-  此原則的值決定 BitLocker 用於檔案系統磁碟機加密的加密強度。 企業可能想要控制加密層級以提高安全性 (AES-256 強於 AES-128)。 如果您啟用此設定，則能夠為固定資料磁碟機、作業系統磁碟機和抽取式資料磁碟機個別設定加密演算法和金鑰加密強度。 如果是固定磁碟機和作業系統磁碟機，建議您使用 XTS-AES 演算法。 如果是抽取式磁碟機，若在其他未執行 Windows 10 1511 版或更新版本的裝置上使用該磁碟機，您應該使用 AES-CBC 128 位元或 AES-CBC 256 位元。 如果磁碟機已加密或加密正在進行中，變更加密方法就沒有任何作用。 在這些情況下，會忽略這個原則設定。  
+  [BitLocker 群組原則設定](https://go.microsoft.com/fwlink/?linkid=2067025) (機器翻譯)
 
-  針對 BitLocker 系統磁碟機原則，請設定下列設定：  
+  - **設定** (預設  )
+  - **未設定**
 
-  - **加密方法**  
-    **預設**：AES 128 位元 XTS
+  設定為 [設定]  時，即可接著設定 [設定作業系統磁碟機的加密方法]  。
 
-## <a name="device-control"></a>裝置控制  
+  - **設定作業系統磁碟機的加密方法**  
+    CSP：[EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
+    當 [BitLocker 系統磁碟機原則]  設定為 [設定]  時，即可使用此設定。  
 
-- **在完整掃描期間掃描抽取式磁碟機**  
-  [Defender/AllowFullScanRemovableDriveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning) - 當設定為 [是]  時，Defender 會在執行完整掃描期間在抽取式磁碟機 (例如快閃磁碟機) 中掃描惡意軟體與垃圾軟體。 Defender 防毒軟體會掃描 USB 裝置上的所有檔案，再執行 USB 裝置。
+    設定系統磁碟機的加密方法和加密強度。  「XTS-AES 128 位元」  是 Windows 預設加密方法和建議值。
 
-  此清單中的相關設定：*Defender/AllowFullScanOnMappedNetworkDrives*  
+    - [未設定]  (預設  )
+    - **AES 128 位元 CBC**
+    - **AES 256 位元 CBC**
+    - **AES 128 位元 XTS**
+    - **AES 256 位元 XTS**
 
-  **預設**：是
+- **BitLocker 固定磁碟機原則**  
+  [BitLocker 群組原則設定](https://go.microsoft.com/fwlink/?linkid=2067018)
 
-- **列舉與 Kernel DMA Protection 不相容的外部裝置**  
-   請參閱[原則 CSP - DmaGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy) 中的 *DmaGuard/DeviceEnumerationPolicy* \(英文\)
+  - **設定** (預設  )
+  - **未設定**
 
-  此原則提供外部 DMA 裝置的額外安全性。 它可讓您更有效地控制與 DMA 裝置記憶體隔離和沙箱處理不相容之外部 DMA 裝置的列舉。
+  設定為 [設定]  時，即可接著設定 [禁止寫入未受 BitLocker 保護的固定資料磁碟機]  和 [設定固定資料磁碟機的加密方法]  。
 
-  只有當支援 Kernel DMA Protection 並由系統韌體啟用它時，此原則才會生效。 Kernel DMA Protection 是無法由原則或由裝置使用者控制的平台功能。 系統製造時即必須支援此功能。 
+  - **禁止寫入未受 BitLocker 保護的固定資料磁碟機**  
+    CSP：[FixedDrivesRequireEncryption](https://go.microsoft.com/fwlink/?linkid=872534)  
+    當 [BitLocker 固定磁碟機原則]  設定為 [設定]  時，即可使用此設定。
 
-  若要檢查系統是否支援 Kernel DMA Protection，請再系統上執行 MSINFO32.exe，然後檢閱 [摘要] 頁面上的 [Kernel DMA Protection]  欄位。  
+    - **未設定** (預設  ) - 可將資料寫入未加密的固定磁碟機。
+    - **是** - Windows 不允許將任何資料寫入未受 BitLocker 保護的固定磁碟機。 若固定磁碟機未加密，則使用者必須先為磁碟機完成 BitLocker 安裝精靈，才能授與寫入權限。
 
-  這些選項包括： 
-  -  - 登入或螢幕解除鎖定之後，允許隨時列舉具有 DMA 重新對應相容驅動程式的裝置。 具有 DMA 重新對應不相容驅動程式的裝置只有在使用者將畫面解除鎖定之後才會列舉
-  -  - 將隨時列舉所有外部具 DMA 功能的 PCIe 裝置
-  - *全部封鎖* - 登入或螢幕解除鎖定之後，允許隨時列舉具有 DMA 重新對應相容驅動程式的裝置。 具有 DMA 重新對應不相容驅動程式的裝置將無法隨時啟動並執行 DMA。
+  - **設定固定資料磁碟機的加密方法**  
+    CSP：[EncryptionMethodByDriveType](hhttps://go.microsoft.com/fwlink/?linkid=872526)  
+    當 [BitLocker 固定磁碟機原則]  設定為 [設定]  時，即可使用此設定。
 
-  **預設**：裝置預設
+    設定固定資料磁碟機磁碟的加密方法和加密強度。 「XTS-AES 128 位元」  是 Windows 預設加密方法和建議值。
 
-- **依裝置識別碼的硬體裝置安裝**  
-  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdeviceids) - 使用此原則時，您可以針對 Windows 防止安裝的裝置，指定隨插即用硬體識別碼與相容識別碼的清單。 此原則設定優先於任何其他允許 Windows 安裝裝置的原則設定。 如果您啟用此原則設定 (設定為 [封鎖硬體裝置安裝]  )，Windows 會防止安裝其硬體識別碼或相容識別碼出現在您所建立清單中的裝置。 如果您在遠端桌面伺服器上啟用此原則設定，此原則會影響指定裝置從遠端桌面用戶端到遠端桌面伺服器的重新導向。 如果您停用或未設定此原則設定 (設定為 [允許硬體裝置安裝]  )，裝置可以按照其他原則設定的允許或防止來進行安裝及更新。  
+    - [未設定]  (預設  )
+    - **AES 128 位元 CBC**
+    - **AES 256 位元 CBC**
+    - **AES 128 位元 XTS**
+    - **AES 256 位元 XTS**
 
-  **預設**：Block hardware device installation \(封鎖硬體裝置安裝\)  
+- **BitLocker 抽取式磁碟機原則**  
+  [BitLocker 群組原則設定](https://go.microsoft.com/fwlink/?linkid=2067140)
 
-  選取 [封鎖硬體裝置安裝]  時，有下列設定可用。
-  - **移除相符的硬體裝置**  
-    只有在 [依裝置識別碼的硬體裝置安裝]  設定為 [封鎖硬體裝置安裝]  時，才能使用此設定。  
+  - **設定** (預設  )
+  - **未設定**
 
-    **預設**：是
+  設定為 [設定]  時，即可接著設定 [設定抽取式資料磁碟機的加密方法]  和 [禁止寫入未受 BitLocker 保護的抽取式資料磁碟機]  。
 
-  - **已封鎖的硬體裝置識別碼**  
-    只有在 [依裝置識別碼的硬體裝置安裝]  設定為 [封鎖硬體裝置安裝]  時，才能使用此設定。 若要設定此設定，請展開該選項並選取 [+ 新增]  ，然後指定您要封鎖的硬體裝置識別碼。  
+  - **設定抽取式資料磁碟機的加密方法**  
+    CSP：[EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
+    當 [BitLocker 抽取式磁碟機原則]  設定為 [設定]  時，即可使用此設定。
 
-    **預設**：PCI\CC_0C0A
+    設定抽取式資料磁碟機磁碟的加密方法和加密強度。 「XTS-AES 128 位元」  是 Windows 預設加密方法和建議值。
+
+    - **未設定**
+    - **AES 128 位元 CBC**
+    - **AES 256 位元 CBC** (預設  )
+    - **AES 128 位元 XTS**
+    - **AES 256 位元 XTS**
+
+  - **禁止寫入未受 BitLocker 保護的抽取式資料磁碟機**  
+    CSP：[RemovableDrivesRequireEncryption](https://go.microsoft.com/fwlink/?linkid=872540)  
+    當 [BitLocker 抽取式磁碟機原則]  設定為 [設定]  時，即可使用此設定。
+
+    - **未設定** (預設  ) - 可將資料寫入未加密的抽取式磁碟機。  
+    - **是** - Windows 不允許將任何資料寫入未受 BitLocker 保護的抽取式磁碟機。 若抽取式磁碟機未加密，則使用者必須先為磁碟機完成 BitLocker 安裝精靈，才能授與寫入權限。
+
+## <a name="browser"></a>瀏覽器
+
+- **Microsoft Edge 需要 SmartScreen**  
+  CSP：[Browser/AllowSmartScreen](https://go.microsoft.com/fwlink/?linkid=2067029)
+
+  - **是** (預設  ) - 使用 SmartScreen 保護使用者免於潛在的網路釣魚詐騙和惡意軟體攻擊。
+  - **未設定**
+
+- **封鎖惡意網站存取**  
+  CSP：[Browser/PreventSmartScreenPromptOverride](https://go.microsoft.com/fwlink/?linkid=2067040)  
+
+  - **是** (預設  ) - 禁止使用者略過 Microsoft Defender SmartScreen 篩選工具警告，並防止其進入網站。
+  - **未設定**
+
+- **封鎖未經驗證的檔案下載**  
+  CSP：[Browser/PreventSmartScreenPromptOverrideForFiles](https://go.microsoft.com/fwlink/?linkid=2067023)  
+
+  - **是** (預設  ) - 禁止使用者略過 Microsoft Defender SmartScreen 篩選工具警告，並防止其下載未經驗證的檔案。
+  - **未設定**
+
+## <a name="data-protection"></a>資料保護
 
 - **封鎖直接記憶體存取**  
-  [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess) - 使用此原則設定來針對裝置上所有可熱插拔的 PCI 下游連接埠封鎖直接記憶體存取 (DMA)，直到使用者登入 Windows。 使用者登入後，Windows 就會列舉連接至隨插即用 PCI 連接埠的 PCI 裝置。 只要使用者鎖定電腦，在使用者再次登入之前，將會在沒有子裝置的隨插即用 PCI 連接埠上封鎖 DMA。 電腦解除鎖定時已列舉的裝置將繼續運作，直到遭拔除為止。 
+  CSP：[DataProtection/AllowDirectMemoryAccess](https://go.microsoft.com/fwlink/?linkid=2067031) \(英文\)  
 
-  只有在啟用 BitLocker 或裝置加密時，才會強制執行此原則設定。  
+  只有在啟用 BitLocker 或裝置加密時，才會強制執行此原則設定。
 
-  **預設**：是
+  - **是** (預設  ) - 禁止所有隨插即用 PCI 下游連接埠的直接記憶體存取 (DMA)，直到使用者登入 Windows 為止。 使用者登入後，Windows 就會列舉連接至隨插即用 PCI 連接埠的 PCI 裝置。 只要使用者鎖定電腦，在使用者再次登入之前，將會在沒有子裝置的隨插即用 PCI 連接埠上封鎖 DMA。 電腦解除鎖定時已列舉的裝置將繼續運作，直到遭拔除為止。
+  - **未設定**
 
+## <a name="device-guard"></a>Device Guard  
 
-- **依安裝類別的硬體裝置安裝**  
-  [DeviceInstallation/AllowInstallationOfMatchingDeviceSetupClasses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-allowinstallationofmatchingdevicesetupclasses) - 使用此原則時，您可以針對 Windows 防止安裝的裝置驅動程式，指定裝置安裝類別全域唯一識別碼 (GUID) 的清單。 此原則設定優先於任何其他允許 Windows 安裝裝置的原則設定。 如果您啟用此原則設定 (設定為 [封鎖要體裝置安裝]  )，Windows 會防止安裝或更新其裝置安裝類別 GUID 出現在您所建立清單中的裝置驅動程式。 如果您在遠端桌面伺服器上啟用此原則設定，此原則設定會影響指定裝置從遠端桌面用戶端到遠端桌面伺服器的重新導向。 如果您停用或未設定此原則設定 (設定為 [允許硬體裝置安裝]  )，Windows 可以按照其他原則設定的允許或防止來進行安裝及更新裝置。  
+- **開啟 Credential Guard**  
+  CSP：[DeviceGuard/ConfigureSystemGuardLaunch](https://go.microsoft.com/fwlink/?linkid=872424)
 
-  **預設**：Block hardware device installation \(封鎖硬體裝置安裝\)
+  Credential Guard 使用 Windows Hypervisor 來提供保護，這需要安全開機和 DMA 保護運作正常，因此必須符合硬體需求。
 
-  選取 [封鎖硬體裝置安裝]  時，有下列設定可用。  
+  - **未設定** - 停用 Credential Guard (Windows 預設值為啟用)。
+  - **啟用且具備 UEFI 鎖定** (預設  ) - 啟用 Credential Guard，且不允許從遠端將其停用，因為必須手動清除 UEFI 保存的設定。
+  - **啟用但不具備 UEFI 鎖定** - 啟用 Credential Guard，且允許在不實際存取電腦的情況下將其關閉。
 
-  - **移除相符的硬體裝置**  
-    只有在 [Hardware device installation by setup classes]  \(依安裝類別安裝硬體裝置\) 設定為 [Block hardware device installation]  \(封鎖硬體裝置安裝\) 時，才能使用此設定。  
- 
-    **預設**：是  
+## <a name="device-installation"></a>裝置安裝
+
+- **依裝置識別碼的硬體裝置安裝**  
+  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](hhttps://go.microsoft.com/fwlink/?linkid=2066794)  
+  
+  此原則設定可讓您針對 Windows 防止安裝的裝置，指定隨插即用硬體識別碼與相容識別碼的清單。 此原則設定優先於任何其他允許 Windows 安裝裝置的原則設定。  如果您在遠端桌面伺服器上啟用此原則設定，此原則設定會影響指定裝置從遠端桌面用戶端到遠端桌面伺服器的重新導向。
+
+  - **未設定**
+  - **允許硬體裝置安裝** - 其他原則設定可允許或防止安裝及更新裝置。
+  - **禁止硬體裝置安裝** (預設  ) - 防止 Windows 安裝其硬體識別碼或相容識別碼出現在所定義清單中的裝置。
+
+  設定為 [禁止硬體裝置安裝]  時，即可設定 [移除相符的硬體裝置]  和 [封鎖的硬體裝置識別碼]  。
+
+  - **移除相符的硬體裝置**
+
+    只有在 [依裝置識別碼的硬體裝置安裝]  設定為 [封鎖硬體裝置安裝]  時，才能使用此設定。
+    - **是**
+    - **未設定**
 
   - **已封鎖的硬體裝置識別碼**  
-    只有在 [Hardware device installation by setup classes] \(依安裝類別的硬體裝置安裝\) 設定為 [Block hardware device installation] \(封鎖硬體裝置安裝\) 時，才能使用此設定。 若要設定此設定，請展開該選項並選取 [+ 新增]  ，然後指定您要封鎖的硬體裝置識別碼。  
- 
-    **預設**：{d48179be-ec20-11d1-b6b8-00c04fa372a7}
+    
+    只有在 [依裝置識別碼的硬體裝置安裝]  設定為 [封鎖硬體裝置安裝]  時，才能使用此設定。
 
-## <a name="endpoint-detection-and-response"></a>端點偵測與回應  
-如需詳細資訊，請參閱 Windows 文件中的 [WindowsAdvancedThreatProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) \(英文\)。  
+    選取 [新增]  ，然後指定所要封鎖的硬體裝置識別碼。
 
-- **加快遙測回報頻率** - *Configuration/TelemetryReportingFrequency*
+- **依安裝類別的硬體裝置安裝**  
+  CSP：[DeviceInstallation/AllowInstallationOfMatchingDeviceSetupClasses](https://go.microsoft.com/fwlink/?linkid=2067048)  
+  
+  此原則設定可讓您針對 Windows 防止安裝的裝置驅動程式，指定裝置安裝類別全域唯一識別碼 (GUID) 的清單。 此原則設定優先於任何其他允許 Windows 安裝裝置的原則設定。 如果您在遠端桌面伺服器上啟用此原則設定，此原則設定會影響指定裝置從遠端桌面用戶端到遠端桌面伺服器的重新導向。
+
+  - **未設定**
+  - **允許硬體裝置安裝** - 其他原則設定可允許或防止 Windows 安裝及更新裝置。
+  - **禁止硬體裝置安裝** (預設  ) - 防止 Windows 安裝其安裝類別 GUID 出現在所定義清單中的裝置。
+
+  設定為 [禁止硬體裝置安裝]  時，即可設定 [移除相符的硬體裝置]  和 [封鎖的硬體裝置識別碼]  。
+
+  - **移除相符的硬體裝置**
+
+    只有在 [依裝置識別碼的硬體裝置安裝]  設定為 [封鎖硬體裝置安裝]  時，才能使用此設定。
+    - **是**
+    - **未設定**
+
+  - **已封鎖的硬體裝置識別碼**
+
+    只有在 [依裝置識別碼的硬體裝置安裝]  設定為 [封鎖硬體裝置安裝]  時，才能使用此設定。
+
+    選取 [新增]  ，然後指定所要封鎖的硬體裝置識別碼。
+
+## <a name="dma-guard"></a>DMA 保護
+
+- **列舉與 Kernel DMA Protection 不相容的外部裝置**  
+  CSP：[DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+
+  此原則可以提供外部 DMA 裝置的額外安全性。 它可讓您更有效地控制與 DMA 重新對應/裝置記憶體隔離和沙箱處理不相容之外部 DMA 裝置的列舉。
+  
+  只有當支援 Kernel DMA Protection 並由系統韌體啟用它時，此原則才會生效。 Kernel DMA Protection 是系統製造時必須支援的平台功能。 若要檢查系統是否支援 Kernel DMA Protection，請檢查 MSINFO32.exe [摘要] 頁面中的 [Kernel DMA Protection] 欄位。
+
+  - **未設定** - (*預設*)
+  - **全部封鎖**
+  - **全部允許**
+
+## <a name="endpoint-detection-and-response"></a>端點偵測與回應
+
+如需下列設定的詳細資訊，請參閱 Windows 文件中的 [WindowsAdvancedThreatProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) (機器翻譯)。
+
+- **所有檔案的範例共用**  
+  CSP：[Configuration/SampleSharing](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+
+  傳回或設定 Microsoft Defender 進階威脅防護範例共用設定參數。  
+  
+  - **是** (預設  )
+  - **未設定**
+
+- **加快遙測回報頻率**  
+  CSP：[Configuration/TelemetryReportingFrequency](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   加快 Microsoft Defender 進階威脅防護遙測回報頻率。  
 
-  **預設**：是
+  - **是** (預設  )
+  - **未設定**
 
-- **所有檔案的範例共用** - *Configuration/SampleSharing* 
+## <a name="firewall"></a>防火牆
 
-  傳回或設定 Microsoft Defender 進階威脅防護範例共用設定參數。  
-
-  **預設**：是
-
-## <a name="exploit-protection"></a>惡意探索保護  
-
-- **惡意探索保護 XML**  
-  如需詳細資訊，請參閱 Windows 文件中的[匯入、匯出及部署惡意探索保護設定](/windows/security/threat-protection/microsoft-defender-atp/import-export-exploit-protection-emet-xml) \(部分機器翻譯\)。  
-
-  讓 IT 系統管理員得以將代表想要的系統及應用程式風險降低選項設定，推送至組織中的所有裝置。 此設定是以 XML 表示。 
-
-  套用惡意探索保護可協助保護裝置，以防惡意程式碼利用惡意探索散播和感染。 您可以使用 Windows 安全性應用程式或 PowerShell 建立風險降低集合 (稱為設定)。 然後，您可以將此設定匯出為 XML 檔案，並在您網路上的多部電腦之間共用，以便所有檔案都有相同的風險降低設定集合。
- 
-  您也可以將現有的 EMET 設定 XML 檔案轉換並匯入到惡意探索保護設定 XML。
-
-- **封鎖惡意探索保護覆寫**  
-  [WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride) \(部分機器翻譯\) - 設定為 [是]  以防止使用者變更 Microsoft Defender 資訊安全中心中的惡意探索保護設定區域。 若您停用或未設定此設定，本機使用者可以變更惡意探索保護設定區域。  
-  **預設**：是  
-
-## <a name="microsoft-defender-antivirus"></a>Microsoft Defender 防毒軟體  
-
-如需詳細資訊，請參閱 Windows 文件中的 [Policy CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) (原則 CSP - Defender)。
-
-- **掃描 Microsoft 網頁瀏覽器中所載入的指令碼**  
-  [Defender/AllowScriptScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning) \(部分機器翻譯\) - 設定為 [是]  以允許 Microsoft Defender「指令碼掃描」功能。  
-
-  **預設**：是
-
-- **掃描內送郵件訊息**  
-  [Defender/AllowEmailScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning) \(部分機器翻譯\) - 設定為 [是]  以允許 Microsoft Defender 掃描電子郵件。  
-
-  **預設**：是
-
-- [Defender 範例提交同意]   
-  [Defender/SubmitSamplesConsent](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) \(部分機器翻譯\) - 檢查 Microsoft Defender 中針對傳送資料的使用者同意層級。 如果已獲得必要的同意，Microsoft Defender 將會提交同意。 如果沒有 (而且指定了一律不再詢問使用者)，您可以啟動 UI，要求使用者同意 (當 [雲端提供的保護]  設定為 [是]*Yes* 時) 再傳送資料。  
-
-  **預設**：自動傳送安全的範例
-
-- **網路檢查系統 (NIS)**  
-  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection) - 透過網路檢測系統 (NIS) 中的特徵碼封鎖偵測到的惡意流量。  
- 
-  **預設**：是
-
-- **特徵碼更新間隔 (小時)**  
-  [Defender/SignatureUpdateInterval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval) – 以小時為單位指定裝置檢查新 Defender 特徵碼更新的頻率。  
- 
-  **預設**：4
-
-- **設定已排定之掃描的低 CPU 優先順序**  
-  [Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority) – 當設定為 [是]  時，掃描的 CPU 優先順序會設定為低。 當 [尚未設定]  時，不會對已排定之掃描的 CPU 優先順序進行變更。  
-
-    **預設**：是
-
-- **Defender 封鎖即時監視保護**  
-  [Defender/AllowOnAccessProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection) \(部分機器翻譯\) - 當設定為 [是]  時，會啟用 Microsoft Defender「即時監視保護」。  
-
-  **預設**：是
-
-- **要執行的系統掃描類型**  
-  [Defender/ScanParameter](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-scanparameter) - Defender 掃描類型。  
-
-  **預設**：快速掃描
-
-- **掃描所有下載**  
-  [Defender/AllowIOAVProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection) - 當設定為 [是]  時，Defender 會掃描所有已下載的檔案與附件。  
-
-  **預設**：是
-
-- **多少天之後刪除隔離的惡意程式碼**  
-  [Defender/DaysToRetainCleanedMalware](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware) - 指定系統自動刪除隔離項目之前要保留隔離項目的天數。 當設定為零時，一律不會自動刪除隔離區中的項目。  
-
-  **預設**：0
-
-- **排定的掃描開始時間**  
-  [Defender/ScheduleScanTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime) – 排定要讓 Defender 掃描裝置的當日時間。 
-  
-  此清單中的相關選項：*Defender/ScheduleScanDay*   
-
-  **預設**：上午 2 點
-
-- **雲端提供的保護**  
-  [Defender/AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection) \(部分機器翻譯\) - 當設定為 [是]  時，Microsoft Defender 會將它所發現任何問題的相關資訊傳送給 Microsoft。 Microsoft 將分析該資訊、深入了解影響您與其他客戶的問題，並提供改善的解決方案。
-
-  當此原則設定為 [是]  時，您可以使用 [Defender sample submission consent type]  \(Defender 樣本提交同意類型\) 讓使用者可以控制是否從其裝置傳送資訊。  
-
-  **預設**：是
-
-- **Defender 潛在的垃圾應用程式動作**  
-  [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection) \(部分機器翻譯\) - Microsoft Defender 防毒軟體可以識別並封鎖「潛在的垃圾應用程式 (PUA)」  ，防止將它下載並安裝到您網路中的端點。 
- 
-  - 當設定為 [封鎖]  時，Microsoft Defender 會封鎖 PUA，而且會隨著其他威脅將它們列在歷程記錄中。
-  - 當設定為 [稽核]  時，Microsoft Defender 會偵測 PUA，但不會封鎖它們。 搜尋 [事件檢視器] 中由 Microsoft Defender 建立的事件，即可找到那些應用程式 (Microsoft Defender 會採取動作) 的相關資訊。  
-  - 當設定為 [裝置預設值]  時，會關閉 PUA 保護。  
- 
-  **預設**：封鎖
-
-- **Defender 雲端延長逾時**  
-  [Defender/CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout) \(部分機器翻譯\) - 指定 Microsoft Defender 防毒軟體在封鎖檔案前應等候雲端結果的額外時間上限。 Microsoft Defender 會等候的基底時間量是 10 秒。 您在這裡指定的任何額外時間 (最長 50 秒) 會加到那 10 秒。 在大部分情況下，掃描時間會少於時間上限。 延長的時間可讓雲端徹底調查可疑的檔案。  
-
-  根據預設，延長時間值是 0 (停用)。 Intune 建議您啟用此設定，並至少多指定 20 秒。  
- 
-  **預設**：0
-
-- **掃描封存檔**  
-  [Defender/AllowArchiveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning) \(部分機器翻譯\) - 設定為 [是]  以讓 Microsoft Defender 掃描封存檔案。  
-
-  **預設**：是
-
-- **Defender 系統掃描排程**  
-  [Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday) - 排定 Defender 將在哪天掃描裝置。 
- 
-  此清單中的相關選項：*Defender/ScheduleScanTime*
-
-  **預設**：使用者定義
-
-- **行為監視**  
-  [Defender/AllowBehaviorMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring) \(部分機器翻譯\) - 設定為 [是]  以開啟 Microsoft Defender「行為監視」功能。 Microsoft Defender 行為監視感應器內嵌於 Windows 10 中，這些感應器可以收集並處理作業系統的行為訊號，並將此感應器資料傳送至您私人獨立的 Microsoft Defender ATP 雲端執行個體。  
-
-  **預設**：是
-
-- **掃描從網路資料夾中開啟的檔案**  
-  [Defender/AllowScanningNetworkFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles) \(部分機器翻譯\) - 設定為 [是]  以讓 Microsoft Defender 掃描網路上的檔案。 使用者將無法從唯讀檔案移除偵測到的惡意程式碼。  
-
-  **預設**：是
-
-- **Defender 雲端封鎖層級**  
-  [Defender/CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel) \(部分機器翻譯\) - 使用此原則來決定 Microsoft Defender 防毒軟體封鎖及掃描可疑檔案的積極程度。 這些選項包括：
-
-  - 高 - 積極地封鎖未知的檔案，同時最佳化最佳化用戶端效能 (極可能發生誤判)
-  - 極高 - 積極地封鎖未知的檔案，並套用額外的保護措施 (可能會影響用戶端效能)
-  - 零容錯 - 會封鎖所有未知的可執行檔
-
-  **預設**：尚未設定
-
-- **即時監視**  
-  [Defender/AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring) \(部分機器翻譯\) - 設定為 [是]  以允許 Microsoft Defender「即時監視」。  
-
-  **預設**：是
-
-- **掃描期間的 CPU 使用率限制**  
-  [Defender/AvgCPULoadFactor](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-avgcpuloadfactor) \(部分機器翻譯\) - 指定 Microsoft Defender 在掃描期間可以使用的最大平均 CPU 使用率百分比。  
-
-  **預設**：50
-
-- **在完整掃描期間掃描對應的網路磁碟機**  
-  [Defender/AllowFullScanOnMappedNetworkDrives](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives) \(部分機器翻譯\) - 設定為 [是]  以讓 Microsoft Defender 掃描網路上的檔案。 使用者無法從唯讀檔案移除偵測到的惡意程式碼，
-
-  此清單中的相關設定：*Defender/AllowScanningNetworkFiles*
-
-  **預設**：是
-
-- **禁止終端使用者存取 Defender**  
-  [Defender/AllowUserUIAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess) \(部分機器翻譯\) - 設定為 [是]  以禁止終端使用者在其裝置上存取 Microsoft Defender UI。  
-
-  **預設**：是
-
-- **快速掃描開始時間**  
-  [Defender/ScheduleQuickScanTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime) - 排定要讓 Defender 執行快速掃描的當日時間。  
-
-  **預設**：上午 2 點
-
-## <a name="microsoft-defender-firewall"></a>Microsoft Defender 防火牆
 如需詳細資訊，請參閱 Windows 文件中的[防火牆 CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) \(英文\)。
 
-- **刪除前的安全性關聯閒置時間** - *MdmStore/Global/SaIdleTime*   
-  在指定秒數過後偵測不到任何網路流量時，即刪除安全性關聯。  
-  **預設**：300
+- **停用具狀態檔案傳輸通訊協定 (FTP)**  
+  CSP：[MdmStore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)  
 
-- **檔案傳輸通訊協定** - *MdmStore/Global/DisableStatefulFtp*   
-  封鎖具狀態檔案傳輸通訊協定 (FTP)。  
-  **預設**：是
+  - **是** (預設  )
+  - **未設定** - 防火牆將會使用 FTP 來檢查及篩選次要網路連線，但可能會因此而略過防火牆規則。
 
--   - *MdmStore/Global/EnablePacketQueue*    
-  指定如何啟用接收端軟體的規模調整，處理 IPsec 通道閘道案例中加密的接收和純文字轉送。 這可確定保留封包順序。  
-  **預設**：裝置預設
+- **刪除安全性關聯前的閒置秒數**  
+CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
 
--   - *FirewallRules/FirewallRuleName/Profiles*  
-  指定規則所屬設定檔：網域、私人、公用。 此值代表連結到網域之網路的設定檔。  
+  指定保留安全性關聯的時間長度，之後將不會再看到網路流量。 若未設定，則系統會在閒置 *300* 秒 (預設值) 後刪除安全性關聯。
+  
+  此數值必須介於 **300** 到 **3600** 秒之間。
 
-  可用的設定：  
-  - **需要多點傳送廣播的單點傳播回應**  
-    **預設**：是
+- **預先共用金鑰編碼**  
+  CSP：[MdmStore/Global/PresharedKeyEncoding](https://go.microsoft.com/fwlink/?linkid=872541)
 
-  - **來自群組原則的授權應用程式規則已合併**  
-    **預設**：是
+   若不需要 UTF-8，則預先共用金鑰一開始將會使用 UTF-8 編碼。 在此之後，裝置使用者可以選擇其他編碼方法。
 
-  - **已封鎖輸入通知**  
-    **預設**：是
+  - **未設定**
+  - **無**
+  - **UTF8** (預設  )
 
-  - <bpt id="p1">**</bpt>Global port rules from group policy merged<ept id="p1">**</ept>  
-    **預設**：是
+- **憑證撤銷清單 (CRL) 驗證**  
+  CSP：[MdmStore/Global/CRLcheck](https://go.microsoft.com/fwlink/?linkid=872548)
 
-  - **已封鎖隱形模式**  
-    **預設**：是
+  指定憑證撤銷清單 (CRL) 驗證的強制執行方式。  
 
-  - **已啟用防火牆**  
-    **預設**：允許
+  - **未設定** (預設  ) - 停用 CRL 驗證。
+  - **無**
+  - **嘗試**
+  - **需要**
 
-  - **來自群組原則的連線安全性規則已合併**  
-    **預設**：是
+- **封包佇列**  
+  CSP：[MdmStore/Global/EnablePacketQueue](https://go.microsoft.com/fwlink/?linkid=872551)
 
-  - **來自群組原則的原則規則已合併**  
-    **預設**：是
+  指定如何啟用接收端軟體的規模調整，處理 IPsec 通道閘道案例中加密的接收和純文字轉送。 此設定可確保保留封包順序。
 
-- **防火牆設定檔公用** - *FirewallRules/FirewallRuleName/Profiles*  
-  指定規則所屬設定檔：網域、私人、公用。 此值代表公用網路的設定檔。 這些網路是由系統管理員在伺服器主機中分類為公用。 主機第一次連線到網路時即會進行分類。 這些網路通常位於機場、咖啡廳與其他公共場所，其中網路中的同儕節點或網路系統管理員不受信任。  
+  - **未設定** (預設  ) - 封包佇列會還原為用戶端預設值，也就是停用。
+  - **停用**
+  - **輸入佇列**
+  - **輸出佇列**
+  - **將兩者放入佇列**
 
-  可用的設定：
+- **私人的防火牆設定檔**  
+  [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2067041)
 
-  - **已封鎖輸入連線**  
-    **預設**：是 
+  - **設定** (預設  )
+  - **未設定**
 
-  - **需要多點傳送廣播的單點傳播回應**  
-    **預設**：是  
-
-  - **需要隱形模式**  
-    **預設**：是 
- 
-  - **需要輸出連線**  
-    **預設**：是  
-
-  - **來自群組原則的授權應用程式規則已合併**  
-    **預設**：是  
-
-  - **已封鎖輸入通知**  
-    **預設**：是  
-
-  - <bpt id="p1">**</bpt>Global port rules from group policy merged<ept id="p1">**</ept>  
-    **預設**：是
-
-  - **已封鎖隱形模式**  
-    **預設**：是
-
-  - **已啟用防火牆**  
-    **預設**：允許  
-
-  - **來自群組原則的連線安全性規則已合併**  
-    **預設**：是  
-
-  - **需要連入流量**  
-    **預設**：是
-
-  - **來自群組原則的原則規則已合併**  
-    **預設**：是  
-
-- **防火牆設定檔私人** - *FirewallRules/FirewallRuleName/Profiles*  
-  指定規則所屬設定檔：網域、私人、公用。 此值代表私人網路的設定檔。  
-
-  可用的設定： 
+  設定為 [設定]  時，即可進行下列其他設定。
 
   - **已封鎖輸入連線**  
-    **預設**：是
+    CSP：[/DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
+
+    - **是** (預設  )
+    - **未設定**
 
   - **需要多點傳送廣播的單點傳播回應**  
-    **預設**：是
+    CSP：[/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+    - **是** (預設  )
+    - **未設定**
 
   - **需要隱形模式**  
-    **預設**：是
+    CSP：[/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **是** (預設  )
+    - **未設定**
 
   - **需要輸出連線**  
-    **預設**：是
+    CSP：[/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
+
+    - **是** (預設  )
+    - **未設定**
 
   - **已封鎖輸入通知**  
-    **預設**：是
+    CSP：[/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+
+    - **是** (預設  )
+    - **未設定**
 
   - <bpt id="p1">**</bpt>Global port rules from group policy merged<ept id="p1">**</ept>  
-    **預設**：是
+    CSP：[/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **是** (預設  )
+    - **未設定**
 
   - **已封鎖隱形模式**  
-    **預設**：是  
+    CSP：[/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **是** (預設  )
+    - **未設定**
 
   - **已啟用防火牆**  
-    **預設**：允許
+    CSP：[/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
+
+    - **未設定**
+    - **封鎖**
+    - **允許** (預設  )
 
   - **來自群組原則的授權應用程式規則未合併**  
-    **預設**：是
+    CSP：[/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **是** (預設  )
+    - **未設定**
 
   - **來自群組原則的連線安全性規則已合併**  
-    **預設**：是
+    CSP：[/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **是** (預設  )
+    - **未設定**
 
   - **需要連入流量**  
-    **預設**：是
+    CSP：[/Shielded](https://go.microsoft.com/fwlink/?linkid=872561)
+
+    - **是** (預設  )
+    - **未設定**
 
   - **來自群組原則的原則規則已合併**  
-    **預設**：是  
+    CSP：[/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
 
-- **防火牆預先共用金鑰編碼方法**  
-  **預設**：UTF8
+    - **是** (預設  )
+    - **未設定**
 
-- **憑證撤銷清單驗證**  
-  **預設**：裝置預設
+- **公用的防火牆設定檔**  
+  [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2067143)
 
-## <a name="web--network-protection"></a>Web 與網路保護  
+  - **設定** (預設  )
+  - **未設定**
 
-- **網路保護類型**  
-  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection) \(部分機器翻譯\) - 此原則允許您開啟 Microsoft Defender「惡意探索防護」中的網路保護。 網路保護是 Microsoft Defender 惡意探索防護的一個功能，可防止使用任何應用程式的員工存取網路釣魚詐騙、裝載入侵程式網站及網際網路上的惡意內容。 這包括防止第三方瀏覽器連線到危險的網站。  
+  設定為 [設定]  時，即可進行下列其他設定。
 
-  當設定為 [啟用]  或 [稽核模式]  時，使用者無法關閉網路保護，而且您可以使用 Microsoft Defender 資訊安全中心來檢視連線嘗試的相關資訊。  
- 
-  - [啟用]  將會封鎖使用者與應用程式，使其無法連線到危險網域。  
-  - [稽核模式]  不會封鎖使用者與應用程式，使其無法連線到危險網域。  
+  - **已封鎖輸入連線**  
+    CSP：[/DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
 
-  當設定為 [使用者定義]  時，系統不會封鎖使用者與應用程式，使其無法連線到危險網域，而且 Microsoft Defender 資訊安全中心不會有連線相關資訊。  
+    - **是** (預設  )
+    - **未設定**
 
-  **預設**：稽核模式
+  - **需要多點傳送廣播的單點傳播回應**  
+    CSP：[/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
 
-- **Microsoft Edge 需要 SmartScreen**  
-  [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) \(部分機器翻譯\) - Microsoft Edge 預設會使用 Microsoft Defender SmartScreen (已開啟)，以保護使用者免於遭受潛在的網路釣魚詐騙和惡意軟體攻擊。 根據預設，會啟用此原則 (設定為 [是]  )，而且當啟用時，可以防止使用者關閉 Microsoft Defender SmartScreen。  當裝置的有效原則等於 [未設定] 時，使用者可以關閉 Microsoft Defender SmartScreen，這會讓裝置處於未受保護狀態。  
+    - **是** (預設  )
+    - **未設定**
 
-  **預設**：是
+  - **需要隱形模式**  
+    CSP：[/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **是** (預設  )
+    - **未設定**
+
+  - **需要輸出連線**  
+    CSP：[/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
+
+    - **是** (預設  )
+    - **未設定**
+
+  - **來自群組原則的授權應用程式規則未合併**  
+    CSP：[/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **是** (預設  )
+    - **未設定**
+
+  - **已封鎖輸入通知**  
+    CSP：[/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+
+    - **是** (預設  )
+    - **未設定**
+
+  - <bpt id="p1">**</bpt>Global port rules from group policy merged<ept id="p1">**</ept>  
+    CSP：[/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **是** (預設  )
+    - **未設定**
+
+  - **已封鎖隱形模式**  
+    CSP：[/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **是** (預設  )
+    - **未設定**
+
+  - **已啟用防火牆**  
+    CSP：[/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
+
+    - **未設定**
+    - **封鎖**
+    - **允許** (預設  )
+
+  - **來自群組原則的連線安全性規則已合併**  
+    CSP：[/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **是** (預設  )
+    - **未設定**
+
+  - **需要連入流量**  
+    CSP：[/Shielded](https://go.microsoft.com/fwlink/?linkid=872561)
+
+    - **是** (預設  )
+    - **未設定**
+
+  - **來自群組原則的原則規則已合併**  
+    CSP：[/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **是** (預設  )
+    - **未設定**
+
+- **防火牆設定檔網域**  
+  CSP：[2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2066796)
+
+  - **需要多點傳送廣播的單點傳播回應**  
+    CSP：[/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+  - **來自群組原則的授權應用程式規則未合併**  
+    CSP：[/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **是** (預設  )
+    - **未設定**  
+
+  - **已封鎖輸入通知**  
+    CSP：[/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+
+    - **是** (預設  )
+    - **未設定**
+
+  - <bpt id="p1">**</bpt>Global port rules from group policy merged<ept id="p1">**</ept>  
+    CSP：[/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **是** (預設  )
+    - **未設定**
+
+  - **已封鎖隱形模式**  
+    CSP：[/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **是** (預設  )
+    - **未設定**
+
+  - **已啟用防火牆**  
+    CSP：[/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
+
+    - **未設定**
+    - **封鎖**
+    - **允許** (預設  )
+
+  - **來自群組原則的連線安全性規則已合併**  
+    CSP：[/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **是** (預設  )
+    - **未設定**
+
+  - **來自群組原則的原則規則已合併**  
+    CSP：[/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **是** (預設  )
+    - **未設定**
+
+## <a name="microsoft-defender"></a>Microsoft Defender
+
+- **每日快速掃描的執行時間**  
+  CSP：[Defender/ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053&clcid=0x409)
   
-- **封鎖惡意網站存取**  
-  [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride) \(部分機器翻譯\) - 根據預設，Microsoft Edge 可讓使用者略過 (忽略) 有關潛在惡意網站的 Microsoft Defender SmartScreen 警告，讓使用者可以繼續前往該網站。 在啟用此原則的情況下 (設定為 [是]  )，Microsoft Edge 會防止使用者跳過該警告，而且會封鎖他們，使他們無法繼續瀏覽該網站。  
+   設定每日快速掃描的執行時間。 根據預設，掃描執行設定為 [上午 2 點]  。
 
-  **預設**：是
+- **排定的掃描開始時間**  
+  
+  根據預設，這會設定為 [上午 2 點]  。
 
-- **封鎖未經驗證的檔案下載**  
-  [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles) \(部分機器翻譯\)- 根據預設，Microsoft Edge 可讓使用者略過 (忽略) 有關潛在惡意檔案的 Microsoft Defender SmartScreen 警告，讓他們可以繼續下載未經驗證的檔案。 在啟用此原則的情況下 (設定為 [是]  )，使用者無法略過警告，而且無法下載未經驗證的檔案。  
+- **設定已排定之掃描的低 CPU 優先順序**  
+  CSP：[Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
 
-  **預設**：是
+  -**是** (預設  )
+  - **未設定**
 
-## <a name="windows-hello-for-business"></a>Windows Hello 企業版  
+- **禁止 Office 通訊應用程式建立子處理序**  
+  [防止裝置遭到入侵](https://go.microsoft.com/fwlink/?linkid=874499) (機器翻譯)  
+
+  這項 ASR 規則是透過下列 GUID 來控制：26190899-1602-49e8-8b27-eb1d0a1ce869。
+  - **未設定** - 已還原 Windows 預設值，也就是不禁止建立子處理序。
+  - **使用者定義**
+  - **啟用** (預設  ) - 禁止 Office 通訊應用程式建立子處理序。
+  - **稽核模式** - 引發 Windows 事件，而不是封鎖子處理序。
+
+- **禁止 Adobe Reader 建立子處理序**  
+  [使用受攻擊面縮小規則來縮小受攻擊面](https://go.microsoft.com/fwlink/?linkid=853979)  
+
+  - **未設定** - 已還原 Windows 預設值，也就是不禁止建立子處理序。
+  - **使用者定義**
+  - **啟用** (預設  ) - 禁止 Adobe Reader 建立子處理序。
+  - **稽核模式** - 引發 Windows 事件，而不是封鎖子處理序。
+
+- **掃描內送電子郵件訊息**  
+  CSP：[Defender/AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052&clcid=0x409)
+
+  - **是** (預設  ) - 掃描電子郵件信箱與郵件檔案，例如 PST、DBX、MNX、MIME 及 BINHEX。
+  - **未設定** - 此設定會還原為用戶端預設值，也就是不掃描電子郵件檔案。
+
+- **開啟即時保護**  
+  CSP：[Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050&clcid=0x409)
+
+  - **是** (預設  ) - 強制執行即時監視，且使用者無法將其停用。
+  - **未設定** - 此設定會還原為用戶端預設值，也就是開啟，但使用者可予以變更。 若要停用即時監視，請使用自訂 URI。
+
+- **隔離惡意程式碼後的保留天數 (0-90)**  
+  CSP：[Defender/DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055&clcid=0x409)
+
+  設定項目從隔離資料夾中移除前應保留的天數。 預設值為零 (**0**)，這會導致絕不移除隔離的檔案。
+
+- **Defender 系統掃描排程**  
+  CSP：[Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
+
+  排定 Defender 將在哪天掃描裝置。 根據預設，掃描為 [使用者定義]  ，但可設定為 [每天]  、一週中的任何一天或 [未排程任何掃描]  。
+
+- **加上額外的時間 (0-50 秒)，以延長雲端保護逾時**  
+  CSP：[Defender/CloudExtendedTimeout](https://go.microsoft.com/fwlink/?linkid=2113940&clcid=0x409)
+
+  Defender 防毒軟體會自動封鎖可疑的檔案 10 秒，使其可以掃描雲端的檔案，以確保其安全無虞。 使用此設定時，您最多可以對此逾時額外加上 50 秒。  根據預設，逾時設定為零 (**0**)。
+
+- **在完整掃描期間掃描對應的網路磁碟機**  
+  CSP：[Defender/AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945&clcid=0x409)
+
+  - **是** (預設  ) - 在完整掃描期間，包含對應的網路磁碟機。
+  - **未設定** - 用戶端會還原為其預設值，也就是停用對應網路磁碟機的掃描。
+
+- **開啟網路保護**  
+  CSP：[Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939&clcid=0x409)
+  
+  - **是** (預設  ) - 封鎖網路檢查系統 (NIS) 中簽章所偵測到的惡意流量。
+  - **未設定**
+
+- **掃描所有已下載的檔案和附件**  
+  CSP：[Defender/AllowIOAVProtection](https://go.microsoft.com/fwlink/?linkid=2113934&clcid=0x409)
+
+  - **是** (預設  ) - 掃描所有已下載的檔案和附件。 此設定會還原為用戶端預設值，也就是開啟，但使用者可予以變更。 若要停用此設定，請使用自訂 URI。
+  - **未設定** - 此設定會還原為用戶端預設值，也就是開啟，但使用者可予以變更。 若要停用此設定，請使用自訂 URI。
+
+- **封鎖即時監視保護**  
+  CSP：[Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+
+  - **是** (預設  )
+  - **未設定**
+
+- **掃描瀏覽器指令碼**  
+  CSP：[Defender/AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
+
+  - **是** (預設  ) - 強制執行 Microsoft Defender 指令碼掃描功能，且使用者無法將其關閉。
+  - **未設定** - 此設定會還原為用戶端預設值，也就是啟用指令碼掃描，但使用者可予以關閉。
+
+- **禁止使用者存取 Microsoft Defender 應用程式**  
+  CSP：[Defender/AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043&clcid=0x409)
+
+  - **是** (預設  ) - 無法存取 Microsoft Defender 使用者介面 (UI)，且會隱藏通知
+  - **未設定** - 設定為 [是] 時，無法存取 Microsoft Defender 使用者介面 (UI)，且會隱藏通知。 設定為 [未設定] 時，此設定會還原為用戶端預設值，其中允許 UI 與通知
+
+- **每次掃描允許的最大 CPU 使用量 (0-100%)**  
+  CSP：[Defender/AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046&clcid=0x409)
+
+  以百分比指定要用於掃描的最大 CPU 數量。 預設值為 **50**。
+
+- **掃描類型**  
+  CSP：[Defender/ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045&clcid=0x409)
+
+  - **使用者定義**
+  - **停用**
+  - **快速掃描** (預設  )
+  - **完整掃描**
+
+- **輸入檢查安全性情報更新的頻率 (0-24 小時)**  
+  CSP：[Defender/SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936&clcid=0x409)
+
+  指定檢查是否有已更新簽章的頻率 (以小時為單位)。 例如，值為 1 將會每小時檢查一次。 值為 2 時，將會每隔兩小時檢查一次，依此類推。
+
+  若未定義任何值，則裝置會使用 **8** 小時。
+
+- [Defender 範例提交同意]   
+  CSP：[Defender/SubmitSamplesConsent](https://go.microsoft.com/fwlink/?linkid=2067131)
+
+  檢查 Microsoft Defender 中針對傳送資料的使用者同意層級。 如果已獲得必要的同意，Microsoft Defender 將會提交同意。 如果沒有 (而且指定了一律不再詢問使用者)，您可以啟動 UI，要求使用者同意 (當 [雲端提供的保護]  設定為 [是]*Yes* 時) 再傳送資料。
+
+  - **自動傳送安全範例** (預設  )
+  - **一律提示**
+  - **一律不傳送**
+  - **自動傳送所有樣本**
+
+- **雲端提供的保護層級**  
+  CSP：[CloudBlockLevel](https://go.microsoft.com/fwlink/?linkid=2113942)
+
+  設定 Defender 防毒軟體在封鎖及掃描可疑檔案方面的主動性。
+  - **未設定** (*預設*) - 預設的 Defender 封鎖層級。
+  - **高** - 主動地封鎖未知的檔案，同時最佳化用戶端效能 (極可能發生誤判)。
+  - **極高** - 主動地封鎖未知的檔案，並套用可能會影響用戶端效能的額外保護措施。
+  - **零容錯** - 封鎖所有未知的可執行檔。
+
+- **掃描封存檔**  
+  CSP：[Defender/AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047&clcid=0x409)
+
+  - **是** (預設  ) - 強制掃描封存檔案 (例如 ZIP 或 CAB 檔案)。
+  - **未設定** - 此設定會還原為用戶端預設值，也就是掃描封存檔案，但使用者可以停用掃描。
+
+- **開啟行為監視**  
+  CSP：[Defender/AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048&clcid=0x409)
+
+  - **是** (預設  ) - 強制執行行為監視，且使用者無法予以停用。
+  - **未設定** - 此設定會還原為用戶端預設值，也就是開啟，但使用者可予以變更。 若要停用即時監視，請使用自訂 URI。
+  
+- **在完整掃描期間掃描抽取式磁碟機**  
+  CSP：[Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946&clcid=0x409)
+
+  - **是** (預設  ) - 在完整掃描期間，掃描抽取式磁碟機 (例如 USB 快閃磁碟機)。
+  - **未設定** - 此設定會還原為用戶端預設值，也就是掃描抽取式磁碟機，但使用者可以停用此掃描。
+  
+- **掃描網路檔案**  
+  CSP：[Defender/AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&clcid=0x409)
+
+  - **是** (預設  ) - Microsoft Defender 會掃描網路檔案。
+  - **未設定** - 用戶端會還原為其預設值，也就是停用網路檔案的掃描。
+  
+- **Defender 潛在的垃圾應用程式動作**  
+  CSP：[Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+
+  指定潛在垃圾應用程式 (PUA) 的偵測層級。 Defender 會在下載潛在垃圾軟體或嘗試安裝在裝置上時，對使用者發出警示。
+  - **裝置預設**
+  - **封鎖** (預設  ) - 封鎖偵測到的項目，並與其他威脅一起顯示在歷程記錄中。
+  - **稽核** - Defender 偵測到潛在垃圾應用程式，但不採取任何動作。 您可以搜尋 [事件檢視器] 中由 Defender 建立的事件，以檢閱 Defender 會對其採取動作之應用程式的相關資訊。
+
+- **開啟雲端提供的保護**  
+  CSP：[AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+
+  根據預設，Windows 10 Desktop 裝置上的 Defender 會將所發現的任何問題的相關資訊傳送給 Microsoft。 Microsoft 會分析該資訊，以深入了解影響您與其他客戶的問題，並提供改善的解決方案。
+
+  - **是** (預設  ) - 開啟雲端提供的保護。  裝置使用者無法變更此設定。
+  - **未設定** - 此設定會還原為系統預設值。
+
+- **禁止 Office 應用程式將程式碼插入其他處理序**  
+  [防止裝置遭到入侵](https://go.microsoft.com/fwlink/?linkid=872974) (機器翻譯)
+
+  這項 ASR 規則是透過下列 GUID 來控制：75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
+  - **未設定** - 此設定會還原為 Windows 預設值，也就是關閉。
+  - **封鎖** (預設  ) - 禁止 Office 應用程式將程式碼插入其他處理序。
+  - **稽核模式** - 引發 Windows 事件，而不是封鎖。
+
+- **禁止 Office 應用程式建立可執行的內容**  
+  [防止裝置遭到入侵](https://go.microsoft.com/fwlink/?linkid=872975) (機器翻譯)
+
+  這項 ASR 規則是透過下列 GUID 來控制：3B576869-A4EC-4529-8536-B80A7769E899
+  - **未設定** - 此設定會還原為 Windows 預設值，也就是關閉。
+  - **封鎖** (預設  ) - 禁止 Office 應用程式建立可執行的內容。
+  - **稽核模式** - 引發 Windows 事件，而不是封鎖。
+  
+- **禁止 JavaScript 與 VBScript 啟動下載的可執行內容**  
+  [防止裝置遭到入侵](https://go.microsoft.com/fwlink/?linkid=872979) (機器翻譯)
+
+   這項 ASR 規則是透過下列 GUID 來控制：D3E037E1-3EB8-44C8-A917-57927947596D
+  - **未設定** - 此設定會還原為 Windows 預設值，也就是關閉。
+  - **封鎖** (預設  ) - Defender 禁止執行從網際網路下載的 JavaScript 或 VBScript 檔案。
+  - **稽核模式** - 引發 Windows 事件，而不是封鎖。
+  
+- **啟用網路保護**  
+  CSP：[Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
+
+  - **未設定** - 此設定會還原為 Windows 預設值，也就是停用。
+  - **使用者定義**
+  - **啟用** - 為系統上的所有使用者啟用網路保護。
+  - **稽核模式** (預設  ) - 不會禁止使用者存取危險網域，而是引發 Windows 事件。
+
+- **封鎖從 USB 執行的不受信任和未簽署處理序**  
+  [防止裝置遭到入侵](https://go.microsoft.com/fwlink/?linkid=874502) (機器翻譯)
+
+  這項 ASR 規則是透過下列 GUID 來控制：b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4
+  - **未設定** - 此設定會還原為 Windows 預設值，也就是關閉。
+  - **封鎖** (預設  ) - 封鎖從 USB 磁碟機執行的未受信任與未簽署處理序。
+  - **稽核模式** - 引發 Windows 事件，而不是封鎖。
+
+- **從 Windows 規則：封鎖竊取自 Windows 本機安全性授權子系統 (lsass.exe) 的認證**  
+  [防止裝置遭到入侵](https://go.microsoft.com/fwlink/?linkid=874499) (機器翻譯)
+
+  這項 ASR 規則是透過下列 GUID 來控制：9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
+  - **未設定** - 此設定會還原為 Windows 預設值，也就是關閉。
+  - **使用者定義**
+  - **啟用** (預設  ) - 禁止嘗試透過 lsass.exe 竊取認證。
+  - **稽核模式** - 不會禁止使用者存取危險網域，而是引發 Windows 事件。
+
+- **封鎖從電子郵件及網路郵件用戶端下載的可執行內容**  
+  [防止裝置遭到入侵](https://go.microsoft.com/fwlink/?linkid=872980) (機器翻譯)
+
+  - **未設定** - 此設定會還原為 Windows 預設值，也就是關閉。
+  - **封鎖** (預設  ) - 封鎖從電子郵件及網路郵件用戶端下載的可執行內容。
+  - **稽核模式** - 引發 Windows 事件，而不是封鎖。
+
+- **禁止所有 Office 應用程式建立子處理序**  
+  [防止裝置遭到入侵](https://go.microsoft.com/fwlink/?linkid=872976) (機器翻譯)
+
+  這項 ASR 規則是透過下列 GUID 來控制：D4F940AB-401B-4EFC-AADC-AD5F3C50688A
+  - **未設定** - 此設定會還原為 Windows 預設值，也就是關閉。
+  - **封鎖** (預設  )
+  - **稽核模式** - 引發 Windows 事件，而不是封鎖。
+
+- **禁止執行可能經過混淆處理的指令碼 (js/vbs/ps)**  
+  [防止裝置遭到入侵](https://go.microsoft.com/fwlink/?linkid=872978) (機器翻譯)
+
+  這項 ASR 規則是透過下列 GUID 來控制：5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
+  - **未設定** - 此設定會還原為 Windows 預設值，也就是關閉。
+  - **封鎖** (預設  ) - Defender 將會禁止執行經過混淆處理的指令碼。
+  - **稽核模式** - 引發 Windows 事件，而不是封鎖。
+
+- **封鎖來自 Office 巨集的 Win32 API 呼叫**  
+  [防止裝置遭到入侵](https://go.microsoft.com/fwlink/?linkid=872977) (機器翻譯)
+
+  這項 ASR 規則是透過下列 GUID 來控制：92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
+  - **未設定** - 此設定會還原為 Windows 預設值，也就是關閉。
+  - **封鎖** (預設  ) - 禁止 Office 巨集使用 Win32 API 呼叫。
+  - **稽核模式** - 引發 Windows 事件，而不是封鎖。
+
+## <a name="microsoft-defender-security-center"></a>Microsoft Defender 資訊安全中心
+
+- **禁止使用者編輯惡意探索防護保護介面**  
+  CSP：[WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://go.microsoft.com/fwlink/?linkid=2067239)
+
+  - **是** (預設  ) - 防止使用者對 Microsoft Defender 資訊安全中心的惡意探索保護設定區域進行變更。
+  - **未設定** - 本機使用者可以在惡意探索保護設定區域中進行變更。
+
+## <a name="smart-screen"></a>Smart Screen
+
+- **禁止使用者略過 SmartScreen 警告**  
+  CSP：[SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+
+   此設定需要啟用 [Enforce SmartScreen for apps and files' setting] \(施行應用程式及檔案適用的 SmartScreen\) 設定。
+  - **是** (預設  ) - SmartScreen 不會顯示讓使用者略過警告並執行應用程式的選項。 警告會顯示，但使用者無法將其略過。
+  - **未設定** - 此設定會還原為 Windows 預設值，也就是允許使用者覆寫。
+
+- **要求僅限市集中的應用程式**  
+
+  - **是** (預設  )
+  - **未設定**
+
+- **開啟 Windows SmartScreen**  
+  CSP：[SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
+
+  - **是** (預設  ) - 強制所有使用者使用 SmartScreen。
+  - **未設定** - 此設定會還原為 Windows 預設值，也就是啟用 SmartScreen，但使用者可以變更此設定。 若要停用 SmartScreen，請使用自訂 URI。
+
+## <a name="windows-hello-for-business"></a>Windows Hello 企業版
 
 如需詳細資訊，請參閱 Windows 文件中的 [PassportForWork CSP](https://docs.microsoft.com/windows/client-management/mdm/passportforwork-csp) \(英文\)。
 
-- **設定 Windows Hello 企業版** - *TenantId/Policies/UsePassportForWork*    
-  Windows Hello 企業版是一種能取代密碼、智慧卡及虛擬智慧卡來登入 Windows 的方法。  
+- **封鎖 Windows Hello 企業版**  
 
+   Windows Hello 企業版是一種能取代密碼、智慧卡及虛擬智慧卡來登入 Windows 的方法。
 
-  > [!IMPORTANT]
-  > 此設定的選項會反轉其隱含意義。 反轉時，值為 [是]  不會啟用 Windows Hello，而會視為 [未設定]  。 當此設定設為 [未設定]  時，Windows Hello 會在接收此基準的裝置上啟用。
-  >
-  > 我們已修訂下列描述以反映此行為。 此安全性基準在未來更新中將會修正設定的反轉。
+  - **未設定** - 裝置會佈建 Windows Hello 企業版，這是 Windows 預設值。
+  - **停用** (預設  ) - 裝置會佈建 Windows Hello 企業版。
+  - **啟用** - 裝置不會為任何使用者佈建 Windows Hello 企業版。
 
-  - 當設定為 [未設定]  時，將會啟用 Windows Hello，且裝置會佈建 Windows Hello 企業版。
-  - 設定為 [是]  時，基準不會影響裝置的原則設定。 這表示如果裝置上的 Windows Hello 企業版已停用，將會保持停用。 如果已啟用，則會保持啟用。
-  <!-- expected behavior 
-  - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
-  - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
-  -->
+  設定為 [停用]  時，即可進行下列設定：
 
-  您無法透過此基準來停用 Windows Hello 企業版。 您可以在設定 [indows 註冊](windows-hello.md)時停用 Windows Hello 企業版，或作為[身分識別保護](identity-protection-configure.md)裝置設定檔的一部分來停用。  
+  - **PIN 中的小寫字母**  
+    - **不允許**
+    - **必要**
+    - **允許** (預設  )
 
-Windows Hello 企業版是一種能取代密碼、智慧卡及虛擬智慧卡來登入 Windows 的方法。  
+  - **PIN 中的特殊字元**
+    - **不允許**
+    - **必要**
+    - **允許** (預設  )
 
-  若您啟用或未設定此原則設定，裝置會佈建 Windows Hello 企業版。 若停用此原則設定，裝置不會為任何使用者佈建 Windows Hello 企業版。
-
-  Intune 不支援停用 Windows Hello。 您可以改為設定原則以啟用 Windows Hello 企業版 ([是])，或不直接設定 Windows Hello directly ([尚未設定])。 若選項為尚未設定，裝置可以透過其他原則接收設定，進而啟用或停用此功能。  
-
-  **預設**：是  
-
-- **PIN 中需要有小寫字母** - *TenantId/Policies/PINComplexity/LowercaseLetters*  
-  **預設**：允許  
-
-- **PIN 中需要有特殊字元** - *TenantId/Policies/PINComplexity/SpecialCharacters*  
-  **預設**：允許  
-
-- **PIN 中需要有大寫字母** - *TenantId/Policies/PINComplexity/UppercaseLetters*   
-  **預設**：允許  
-
+  - **PIN 中的大寫字母**
+    - **不允許**
+    - **必要**
+    - **允許** (預設  )
