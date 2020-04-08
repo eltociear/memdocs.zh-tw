@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e088af5687b5708754869614a431e80f9497b3c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 97d3c4ee2e1ad173b8fff238f072b1b36c3ed1cb
+ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086831"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80536925"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-iosipados-devices-in-intune"></a>在 Intune 中設定 iOS/iPadOS 裝置的個別應用程式虛擬私人網路 (VPN)
 

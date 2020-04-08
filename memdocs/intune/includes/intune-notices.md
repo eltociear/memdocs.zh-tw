@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/30/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 0b3af293ebc83c14f85abeb0dbaa38ca5187b267
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.openlocfilehash: 7fe4f5241fe0cea70bd77fcdd559cfca909598a8
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438728"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808173"
 ---
 這些注意事項提供可協助您針對未來的 Intune 變更與功能進行準備的重要資訊。
 
@@ -67,3 +67,26 @@ https://helpx.adobe.com/acrobat/kb/intune-app-end-of-life.html
 [深入了解](https://go.microsoft.com/fwlink/?linkid=2107122)
 
 
+### <a name="decreasing-support-for-android-device-administrator--5857738--"></a>減少 Android 裝置系統管理員的支援<!--5857738-->
+Android 裝置系統管理員 (有時稱為「舊版」Android 管理，隨 Android 2.2 發行)，是一種管理 Android 裝置的方式。 不過，您現在可以在 [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) \(隨 Android 5.0 發行\) 中找到已改善的管理功能。 為了要移到現代化、更豐富且更安全的裝置管理，Google 在新的 Android 版本中減少了裝置系統管理員的支援。
+
+#### <a name="how-does-this-affect-me"></a>此變更會對我造成什麼影響？
+由於 Google 的這些變更，Intune 使用者會受到下列方面的影響：  
+- Intune 只能為執行 Android 10 和更新版本之裝置系統管理員受控的 Android 裝置提供完整支援，且支援僅提供至 2020 年度第 2 季。 在此期間過後，執行 Android 10 或更新版本之裝置系統管理員受控的裝置將無法再完全受控。 尤其受影響的裝置不會再收到新的密碼要求。
+    - 在此期間內，Samsung Knox 裝置不會受到影響，因為其透過 Intune 與 Knox 平台的整合來獲得延伸支援。 讓您有更多時間規劃裝置系統管理員管理的轉換。    
+- 在 Android 10 以下的 Android 版本上，仍由裝置系統管理員管理的 Android 裝置不會受到影響，並可繼續由裝置系統管理員全權管理。    
+- 針對所有執行 Android 10 與更新版本的裝置，Google 已限制裝置系統管理員管理代理程式 (例如公司入口網站) 存取裝置識別碼資訊的能力。 當裝置更新為 Android 10 或更新版本之後，此限制會影響下列 Intune 功能：  
+    - VPN 的網路存取控制將不再有效。   
+    - 透過 IMEI 或序號識別為公司擁有的裝置將不會自動將裝置標示為公司擁有。  
+    - 在 Intune 中，IT 系統管理員再也看不到 IMEI 與序號。 
+        > [!NOTE]
+        > 這只會影響 Android 10 與更新版本的裝置系統管理員受控裝置，且不會影響受 Android Enterprise 管理的裝置。 
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>我需要為這項變更做什麼準備？
+若要避免功能在 2020 年度第 3 季減少，建議您執行下列動作:
+- 不要在裝置系統管理員管理中上架新裝置。
+- 若裝置預期會收到 Android 10 的更新，請將它從裝置系統管理員管理移轉到 Android Enterprise 管理和/或應用程式保護原則。
+
+#### <a name="additional-information"></a>其他資訊
+- [Google's guidance for migration from device administrator to Android Enterprise](http://static.googleusercontent.com/media/android.com/en/enterprise/static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf) (Google 指南：從裝置系統管理員移轉到 Android Enterprise)
+- [Google's documentation on the plan to deprecate the device administrator API](https://developers.google.com/android/work/device-admin-deprecation) (Google 文件：裝置系統管理員 API 淘汰因應措施)

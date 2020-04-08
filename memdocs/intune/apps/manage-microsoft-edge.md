@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b25d5439aa9d0842cbbee24b5e8759d00f371d4b
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 58e651849632fd06f962edfc90649ad14eeaeda0
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407709"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696549"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>透過搭配 Microsoft Intune 使用 Microsoft Edge 來管理 Web 存取
 
@@ -367,14 +367,14 @@ Microsoft Edge 及 [Azure AD 應用程式 Proxy](https://docs.microsoft.com/azur
 
 |    機碼    |    值    |
 |-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **inprivate** 會停用 InPrivate 瀏覽。   |
+|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    **inprivate** 會停用 InPrivate 瀏覽。   |
 
 ### <a name="restrict-microsoft-edge-use-to-allowed-accounts-only"></a>將 Microsoft Edge 限制為僅限允許的帳戶使用
 
 除了封鎖 InPrivate 與 MSA 瀏覽之外，您也可以在使用者透過 AAD 帳戶登入時，只允許其使用 Microsoft Edge。 這項功能僅適用於已註冊 MDM 的使用者。 您可以在此處深入了解如何進行這項設定：
 
 >[!NOTE]
-> `com.microsoft.intune.mam.managedbrowser.disableFeatures` 可以用來同時停用多個功能。 例如，若要停用 InPrivate 和密碼，請使用 `inprivate| password`。
+> `com.microsoft.intune.mam.managedbrowser.disabledFeatures` 可以用來同時停用多個功能。 例如，若要停用 InPrivate 和密碼，請使用 `inprivate|password`。
 
 ## <a name="configure-microsoft-edge-as-a-kiosk-app-on-android-devices"></a>在 Android 裝置上將 Microsoft Edge 設定為 Kiosk 應用程式
 

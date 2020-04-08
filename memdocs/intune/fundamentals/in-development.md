@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2a807a90cdca18d79e7b92b4efeb56d341da2596
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.openlocfilehash: 3f53096f25b4bb05b80d11246ac2fa01486f6e42
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438709"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808182"
 ---
 # <a name="in-development-for-microsoft-intune---april-2020"></a>Microsoft Intune 正在開發的項目 - 2020 年 4 月
 
@@ -87,16 +87,6 @@ ms.locfileid: "80438709"
 
 適用於：
 - macOS
-
-### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984----"></a>已改善在 iOS/iPadOS 和 macOS 裝置上建立設定檔時的使用者介面體驗<!-- 5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984  -->
-當您建立 iOS/iPadOS 或 macOS 裝置的設定檔時，將會更新端點管理員系統管理中心中的體驗。 此變更會影響下列裝置設定檔 ([裝置]   > [設定檔]   > [建立設定檔]   > [iOS]  或 [macOS]  平台)：
-
-- 自訂：iOS/iPadOS、macOS
-- 裝置功能：iOS/iPadOS、macOS
-- 裝置限制：iOS/iPadOS、macOS
-- 端點保護：macOS
-- 擴充功能：macOS
-- 喜好設定檔案：macOS
 
 ### <a name="device-configuration-profile-settings-and-values-will-be-updated-for-windows-platforms---4091122---"></a>即將更新 Windows 平台的裝置組態設定檔設定和值<!-- 4091122 -->
 當您建立 Windows 平台的裝置組態設定檔時 ([裝置]   > [組態設定檔]   > [建立設定檔]  > 任意 [Windows]  平台選項)，部分設定和其值與 CSP 不相同，而可能造成混淆。 即將更新設定名稱和其值，以便更加清楚地表示。

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 211db029b681a933b1ac018a070ca3c3d55d67a9
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 0810205e1b1e8b349d074560ec589b10e85443f1
+ms.sourcegitcommit: 012947b2095979ceb4e9c9f698e9c32f46baa7d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526490"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80525228"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>設定 Symantec Endpoint Protection Mobile 與 Intune 整合
 
@@ -40,7 +40,7 @@ ms.locfileid: "79526490"
 - Azure AD 帳戶必須是全域系統管理員帳戶才能執行整合。
 ### <a name="network-setup"></a>網路設定
 
-您可以參閱 Symantec 文章[在安裝後設定 SEP 管理員](http://techdocs.broadcom.com/content/broadcom/techdocs/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/14-2-x/Getting_Started_with_Symantec_Endpoint_Protection__1/installing-with-a-custom-configuration-v116874998-d3814e1541.html) \(英文\)，確定您的網路是否已正確設定，以便與 SEP Mobile 設定整合。
+您可以參閱 Symantec 文章[在安裝後設定 SEP 管理員](http://techdocs.broadcom.com/content/broadcom/techdocs/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/Managing_a_Custom_Installation_3/Planning_the_Installation_0/network-architecture-considerations-v19543152-d23e65.html) \(英文\)，確定您的網路是否已正確設定，以便與 SEP Mobile 設定整合。
 
 ### <a name="full-integration-vs-read-only"></a>完整整合與唯讀
 

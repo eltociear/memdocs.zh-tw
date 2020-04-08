@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8a38ad4cf8aa9186bfbd061c5463d36e93c116c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1d08b058303d70188c89d3ded989d4d3864b318f
+ms.sourcegitcommit: 012947b2095979ceb4e9c9f698e9c32f46baa7d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351457"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80525200"
 ---
 # <a name="integrate-pradeo-mobile-threat-defense-with-intune"></a>將 Pradeo Mobile Threat Defense 與 Intune 整合
 
@@ -64,7 +64,7 @@ Pradeo 應用程式授權程序如下：
 
 ## <a name="to-set-up-pradeo-integration"></a>設定 Pradeo 整合
 
-1. 請前往 [Pradeo Security 主控台](https://www.apps-security.com)，並使用您的認證登入。
+1. 請前往 [Pradeo Security 主控台](https://www.pradeo-security.com)，並使用您的認證登入。
 
 2. 從功能表選擇 [Administration - Enterprise Mobility Management] \(管理 - Enterprise Mobility 管理\)  。
 
