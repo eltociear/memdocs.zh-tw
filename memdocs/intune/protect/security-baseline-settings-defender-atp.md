@@ -5,7 +5,7 @@ description: 由 Intune 支援、用於管理 Microsoft Defender 進階威脅防
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 04/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 897b232e841c59fd85d132d1fa9b720c24ac1c9a
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: 9a431ad92c285e1a2912e0f387ee5ea514e876ef
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488038"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551759"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Intune 的 Microsoft Defender 進階威脅防護基準設定
 
@@ -863,3 +863,9 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
     - **不允許**
     - **必要**
     - **允許** (預設  )
+
+## <a name="next-steps"></a>後續步驟
+
+- [深入了解安全性基準](security-baselines.md)
+- [避免衝突](security-baselines.md#avoid-conflicts)
+- [針對 Intune 中的原則和設定檔進行疑難排解](../configuration/troubleshoot-policies-in-microsoft-intune.md)

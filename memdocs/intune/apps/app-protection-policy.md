@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c57a201d71d3a8278499636c6ca794b437e11e9a
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 672c978a7e590e8e26f676733bd2903d3684e978
+ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083813"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80611745"
 ---
 # <a name="app-protection-policies-overview"></a>應用程式保護原則概觀
 
@@ -135,7 +135,7 @@ MDM 解決方案會藉由提供下列各項來增加價值：
 
 與 [Intune SDK](../developer/app-sdk.md) 整合或由 [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md) 包裝的應用程式，都可以使用 Intune 應用程式防護原則加以管理。 查看已使用這些工具建置並可供公開使用的 [Microsoft Intune 受保護應用程式](apps-supported-intune-apps.md)官方清單。
 
-Intune SDK 開發小組會針對用原生 Android、iOS/iPadOS (Obj-C、Swift)、Xamarin、Xamarin.Forms 及 Cordova 平台所建置的應用程式，主動地進行測試並維護支援。 雖然有部分客戶成功搭配其他平台 (例如 React Native 和 NativeScript) 整合 Intune SDK，我們並沒有針對使用我們所不支援之平台的應用程式開發人員提供明確的指引或外掛程式。
+Intune SDK 開發小組會針對使用原生 Android、iOS/iPadOS (Obj-C、Swift)、Xamarin 與 Xamarin.Forms 平台所建置的應用程式，主動地進行測試並維護支援。 雖然有部分客戶成功搭配其他平台 (例如 React Native 和 NativeScript) 整合 Intune SDK，我們並沒有針對使用我們所不支援之平台的應用程式開發人員提供明確的指引或外掛程式。
 
 [Intune SDK](../developer/app-sdk.md) 會針對第 1 方和第 3 方版本的 SDK，使用 [Azure Active Directory 驗證程式庫](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) \(部分機器翻譯\) (ADAL) 中一些先進的新式驗證功能。 因此，[Microsoft 驗證程式庫](https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries) \(部分機器翻譯\) (MSAL) 並不適用於我們許多的核心案例，例如向 Intune 應用程式防護服務進行驗證，以及條件式啟動。 Microsoft 身分識別小組的整體指示是要將所有 Microsoft Office 應用程式切換至 MSAL，因此 [Intune SDK](../developer/app-sdk.md) 未來遲早會需要支援它，但目前尚未有確切計畫。
 
