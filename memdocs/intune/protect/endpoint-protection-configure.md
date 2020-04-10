@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 4071614c7cb93194eef00f49aa2e1759ba1028f6
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 6b5d0f88222c8d48da4f91ff3cf8d4628ccb179d
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359257"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551583"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>在 Intune 中新增 Endpoint Protection 設定
 
@@ -38,6 +38,9 @@ ms.locfileid: "80359257"
 
 - [macOS 設定](endpoint-protection-macos.md)
 - [Windows 10 設定](endpoint-protection-windows-10.md)
+
+> [!NOTE]
+> Intune 使用者介面 (UI) 正在更新為全螢幕體驗，而且可能需要數週的時間。 在您的租用戶收到此更新之前，當您建立或編輯此文章中所述的設定時，您的工作流程將略有不同。
 
 ## <a name="create-a-device-profile-containing-endpoint-protection-settings"></a>建立包含 Endpoint Protection 設定的裝置設定檔
 

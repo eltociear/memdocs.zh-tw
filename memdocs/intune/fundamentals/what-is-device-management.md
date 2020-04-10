@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 756d835a54a9b020be50a83d95d1925334fda8f1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 32e5d053b6dd579aad25a268604248d4fb5a6072
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326653"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696481"
 ---
 # <a name="device-management-overview"></a>裝置管理概觀
 
@@ -76,7 +76,7 @@ Microsoft 等許多組織使用 Intune 來保護使用者有權從其公司擁�
 
 有兩種方法可用來進行裝置管理。 首先，您可以使用 Intune 內建的功能，來管理裝置的不同層面。 這個方法稱為**行動裝置管理 (MDM)** 。 使用者會「註冊」其裝置，並使用憑證與 Intune 通訊。 身為 IT 系統管理員，您會在裝置上推送應用程式、將裝置限制在特定作業系統、封鎖個人裝置及執行其他工作。 如果裝置遺失或遭竊，您也可以從裝置移除所有資料。
 
-在第二個方法中，您可以管理裝置上的應用程式。 這個方法稱為**行動應用程式管理 (MAM)** 。 使用者可以使用其個人裝置存取組織資源。 開啟應用程式時 (例如電子郵件或 SharePoint)，系統會提示使用者進行額外驗證。 如果裝置遺失或遭竊，您可以從裝置移除所有組織資料。
+在第二個方法中，您可以管理裝置上的應用程式。 這個方法稱為**行動應用程式管理 (MAM)** 。 使用者可以使用其個人裝置存取組織資源。 開啟應用程式時 (例如電子郵件或 SharePoint)，系統會提示使用者進行額外驗證。 如果裝置遺失或遭竊，您可以從 Intune 受控應用程式移除所有組織資料。
 
 您也可以使用 [MDM 與 MAM](byod-technology-decisions.md) 的組合。
 

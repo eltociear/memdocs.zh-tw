@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6b0c901cd52edcd674a2d787bc703c371dcf519
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 27ec9e4c407dd8ef1a94e9c443f62ea5456866dc
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327146"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808146"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>使用裝置註冊管理員帳戶在 Intune 中註冊裝置
 
@@ -42,7 +42,7 @@ DEM 使用者帳戶及以 DEM 使用者帳戶註冊的裝置具有下列限制�
 - 裝置已針對條件式存取封鎖，但 indows 10 1803+ 除外
 - 使用 DEM 帳戶註冊的每部裝置都必須獲得正確授權，才能由 Intune 進行管理。 授權可能是 Intune 使用者授權或 Intune 裝置授權。
 - 若要使用 DEM 帳戶[註冊 Android Enterprise 工作設定檔裝置](android-work-profile-enroll.md)，每個帳戶只能註冊 10 部裝置。
-
+- [不支援使用 DEM 帳戶註冊 Android Enterprise 完全受控裝置](android-fully-managed-enroll.md)。
 
 ## <a name="add-a-device-enrollment-manager"></a>新增裝置註冊管理員
 

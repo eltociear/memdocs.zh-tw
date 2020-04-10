@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c8c521dc0899b3429de85e95116a6277d724771
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
+ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327283"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80624920"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>將 Android 裝置從裝置系統管理員移至工作設定檔管理
 
@@ -65,8 +65,8 @@ ms.locfileid: "80327283"
 
 
     在電子郵件中，您可以在給使用者的訊息中包含下列 URL。 此 URL 將啟動 Android 公司入口網站，並移至 [更新裝置設定]  頁面。 此頁面會啟動其流程以移至工作設定檔管理。
-    - [https://portal.manage.microsoft.com/UpdateSettings.aspx](https://portal.manage.microsoft.com/UpdateSettings.aspx)。
-    - 若為美國政府，您可以改用此連結：[https://portal.manage.microsoft.us/UpdateSettings.aspx](https://portal.manage.microsoft.us/UpdateSettings.aspx)。
+    - `https://portal.manage.microsoft.com/UpdateSettings.aspx`。
+    - 針對美國政府，您可以改為使用此連結：`https://portal.manage.microsoft.us/UpdateSettings.aspx`。
   
     > [!NOTE]
     > - 當然，您可以在與使用者通訊的連結中，使用使用者易記的超文字。 但是，不要使用 URL 短網址，因為若該方式變更，連結可能無法正常作用。

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 691da0c74ceddb34a48bfdf01e19dadaed444e45
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.openlocfilehash: 2e5a9db094163bcf4f987b881c83d98be655acfd
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233464"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808081"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>為受控的 Android Enterprise 裝置新增應用程式設定原則
 
@@ -47,7 +47,7 @@ Microsoft Intune 中的應用程式設定原則能為受控 Android Enterprise �
 8. 按一下 [新增]  以顯示 [新增權限]  窗格。
 9. 按一下您覆寫的權限。 所授與權限將會覆寫所選應用程式的 [預設應用程式權限] 原則。
 10. 針對每個權限設定 [權限狀態]  。 您可以選擇 [提示]  、[自動授與]  或 [自動拒絕]  。 如需權限的詳細資訊，請參閱[使用 Intune，透過 Android Enterprise 設定將裝置標示為相容或不相容](../protect/compliance-policy-create-android-for-work.md)。
-11. 在下拉式方塊中，選取 [組態設定格式]  。 選取下列其中一種方法來新增設定資訊：
+11. 如果受控應用程式支援組態設定，請在下拉式方塊中選取 [組態設定格式]  。 選取下列其中一種方法來新增設定資訊：
     - **使用設定設計工具**
     - **輸入 JSON 資料**<br><br>
     如需使用設定設計工具的詳細資料，請參閱[使用設定設計工具](#use-the-configuration-designer)。 如需輸入 XML 資料的詳細資料，請參閱[輸入 JSON 資料](#enter-json-data)。

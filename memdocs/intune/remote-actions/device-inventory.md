@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5f32ffb864f40d8cb5402f7d4488b3870686d1a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ed5ff548d28a5bc973c43c84861b9b256b41a203
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322511"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696278"
 ---
 # <a name="see-device-details-in-intune"></a>在 Intune 中查看裝置詳細資料
 
@@ -41,20 +41,26 @@ ms.locfileid: "80322511"
       - [抹除](devices-wipe.md#wipe)
       - [刪除](devices-wipe.md#delete-devices-from-the-intune-portal)
       - [遠端鎖定](device-remote-lock.md)
-      - [同步處理](device-sync.md)
+      - [同步](device-sync.md)
       - [重設密碼](device-passcode-reset.md)
       - [重新啟動](device-restart.md) (僅限 Windows)
       - [全新開始](device-fresh-start.md) (僅限 Windows)
       - [Autopilot 重設](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (僅限 Windows)
       - [快速掃描](../configuration/device-restrictions-windows-10.md) (僅限 Windows 10)
       - [完整掃描](../configuration/device-restrictions-windows-10.md) (僅限 Windows 10)
-       - [重新命名裝置](device-rename.md)
-      - 啟動遠端協助工作階段
+      - 更新 Windows Defender 安全情報
+      - [BitLocker 金鑰輪替](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
+      - [重新命名裝置](device-rename.md)
+      - [新的遠端協助工作階段](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
    - 使用 [內容]  來指派[您所建立的類別](../enrollment/device-group-mapping.md)，以及將裝置的擁有權變更為個人裝置或公司裝置。
    - [硬體]  會包括許多裝置相關的詳細資料，例如裝置識別碼、作業系統與版本、儲存空間，以及更多詳細資料。
    - [探索到的應用程式]  會列出 Intune 找到已安裝在裝置上的所有應用程式，以及應用程式版本。 如需詳細資訊，請參閱 [Intune 探索到的應用程式](../apps/app-discovered-apps.md)。
    - [裝置合規性]  會列出所有已指派的合規性原則，以及裝置是否符合規範。
    - [裝置設定]  會顯示已指派給裝置的所有裝置設定原則，以及原則是否成功。
+   - **應用程式設定** 
+   - **端點安全性設定**
+   - **修復金鑰**會顯示針對裝置找到的可用 BitLocker 金鑰
+   - **受控應用程式**會列出 Intune 已設定且已部署至裝置的所有受控應用程式。 
 
 ## <a name="hardware-device-details"></a>硬體裝置詳細資料
 視裝置使用的電訊廠商而定，可能不會收集所有詳細資料

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67a26a42efb56c75d9538d9e7fcd2d726327d26d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322997"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551374"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>在 Microsoft Intune 中建立合規性政策
 
@@ -58,6 +58,9 @@ ms.locfileid: "80322997"
 - 在 Intune 中註冊裝置 (查看合規性狀態所必需)
 
 - 向一位使用者註冊裝置，或者在沒有主要使用者的情況下進行註冊。 不支援向多位使用者註冊裝置。
+
+> [!NOTE]
+> Intune 使用者介面 (UI) 正在更新為全螢幕體驗，而且可能需要數週的時間。 在您的租用戶收到此更新之前，當您建立或編輯此文章中所述的設定時，您的工作流程將略有不同。
 
 ## <a name="create-the-policy"></a>建立政策
 

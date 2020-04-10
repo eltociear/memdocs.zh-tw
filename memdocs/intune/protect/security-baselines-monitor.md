@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f7118fbbf05c7793d93faf2aa4c9a4bb1af821c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 53187f7795eee07a62a83c1fb17a289451b32ee2
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322620"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551677"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>在 Microsoft Intune 中監視安全性基準和設定檔
 
@@ -153,4 +153,8 @@ Intune 提供數個用來監視安全性基準的選項。 您可以監視適用
 
 ## <a name="next-steps"></a>後續步驟
 
-[監視裝置設定檔](../configuration/device-profile-monitor.md)及[查看一些常見的問題和解決方式](../configuration/device-profile-troubleshoot.md)。
+- [深入了解安全性基準](security-baselines.md)
+- [避免衝突](security-baselines.md#avoid-conflicts)
+- [監視裝置設定檔](../configuration/device-profile-monitor.md) 
+- [常見問題和解決方式](../configuration/device-profile-troubleshoot.md)。
+- [針對 Intune 中的原則和設定檔進行疑難排解](../configuration/troubleshoot-policies-in-microsoft-intune.md)

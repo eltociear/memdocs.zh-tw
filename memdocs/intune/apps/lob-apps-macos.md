@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e798d579341a841d25bea9abb416367fac15c2b
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6dad4dffba0efadcca0ea5eb7d61960bec1b3f8e
+ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324038"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80536826"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>如何將 macOS 企業營運 (LOB) 應用程式新增至 Microsoft Intune
 
@@ -65,8 +65,8 @@ ms.locfileid: "80324038"
     - `IntuneAppUtil -h`<br>
     此命令會顯示工具的使用方式資訊。
     
-    - `IntuneAppUtil -c <source_file> -o <output_file> [-v]`<br>
-    此命令會將 *.pkg* LOB 應用程式檔案包裝成 *.intunemac* 檔案。
+    - `IntuneAppUtil -c <source_file> -o <output_directory_path> [-v]`<br>
+    此命令會將 `<source_file>` 中提供的 *.pkg* LOB 應用程式檔案換成相同名稱的 *.intunemac* 檔案，並將其放在 `<output_directory_path>` 所指向的資料夾中。
     
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
     此命令會擷取在所建立 *.intunemac* 檔案偵測到的參數和版本。

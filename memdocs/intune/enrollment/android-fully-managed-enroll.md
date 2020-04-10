@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89d299edfb9542591eaabcf42d0b2069bbde4331
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: d768859d65fff18d6ce94a26b48bb28f57417af6
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327301"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808074"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>設定 Android Enterprise 完全受控裝置的 Intune 註冊 
 
@@ -65,7 +65,7 @@ Intune 可協助您將應用程式及設定部署至 Android Enterprise 裝置�
 當此項設定為 [是]  時，會提供您 Intune 租用戶的註冊權杖 (隨機字串) 及 QR 代碼。 此單一註冊權杖對您所有的使用者都有效，而且不會到期。 視裝置的 Android OS 和版本而定，您可以使用權杖或 QR 代碼來註冊裝置。
 
 ## <a name="enroll-the-fully-managed-devices"></a>註冊完全受控裝置
-您現在可以[註冊您的完全受控裝置](android-dedicated-devices-fully-managed-enroll.md)。
+您現在可以[註冊完全受控的裝置](android-dedicated-devices-fully-managed-enroll.md) (但不是使用 DEM 帳戶時)。
 
 ## <a name="next-steps"></a>後續步驟
 - [新增 Android Enterprise 完全受控裝置設定原則](../configuration/device-restrictions-android-for-work.md#device-owner-only)

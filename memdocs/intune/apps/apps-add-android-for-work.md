@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba5aebca04a93198e7694d52085225284c88027c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: a6855abaf09a89303bfadd1a973dd1e1761346af
+ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325022"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80624896"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>使用 Intune 將受控 Google Play 應用程式新增至 Android Enterprise 裝置
 
@@ -224,6 +224,8 @@ Android Enterprise 會要求您先在受控 Google Play Web 主控台中核准�
 
 > [!NOTE]
 > 如果應用程式未獲核准，或已從受控 Google Play 商店中刪除，則該應用程式不會從 Intune 客戶端應用程式清單中移除。 如此一來，即使該應用程式未獲核准，您仍然可以將解除安裝原則套用到使用者。
+> 
+> 若要關閉 Android Enterprise 註冊和管理，請參閱[中斷與 Android Enterprise 系統管理帳戶的連線](../enrollment/connect-intune-android-enterprise.md#disconnect-your-android-enterprise-administrative-account)。
 
 ## <a name="android-enterprise-system-apps"></a>Android Enterprise 系統應用程式
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f91b71d96c936e9808973df145862654f0e516a
-ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
+ms.openlocfilehash: e3636314ee21823b76a09120f92aca45965437d3
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80256635"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808187"
 ---
 # <a name="what-is-device-enrollment"></a>什麼是裝置註冊？
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -77,7 +77,7 @@ Intune 可供管理員工的裝置與應用程式，以及員工存取公司資�
 |**Android 裝置系統管理員**|**透過公司入口網站起始 (預先宣告的 IMEI 或 SN) 使用者**| 否 | 是 | 否 | [詳細資訊](corporate-identifiers-add.md)|
 |**使用 Zebra Mobility Extensions 的 Android 裝置系統管理員**|**透過公司入口網站起始使用者或 [DEM](#device-enrollment-manager)**| 否 | 如果起始使用者，則為是；如果起始 [DEM](#device-enrollment-manager)，則為否。 | 否 | [詳細資訊](../configuration/android-zebra-mx-overview.md)|
 |**Android Enterprise 專用**|**NFC、權杖或 QR 代碼、零觸式**| 是 | 否 | 可透過政策設定 | [詳細資訊](android-kiosk-enroll.md)|
-|**Android Enterprise 完全受控**|**NFC、權杖或 QR 代碼、零觸式**| 是 | 是 | 可透過原則設定 | [詳細資訊](android-dedicated-devices-fully-managed-enroll.md)|
+|**Android Enterprise 完全受控**|**NFC、權杖或 QR 代碼、零觸式**| 是 | 是；如果起始了 [DEM](device-enrollment.md#device-enrollment-manager)，則為否 | 可透過原則設定 | [詳細資訊](android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>攜帶您自己的裝置

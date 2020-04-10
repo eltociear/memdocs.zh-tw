@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/19/2020
+ms.date: 04/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,17 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 367a632b082ad5d58221f33ca9a191fb229f8f66
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 71d5efbf8b61c08e9a2edbc5312c61279571339e
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086340"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620553"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK for Android 開發人員指南
 
 > [!NOTE]
 > 您可能想要先閱讀 [Intune App SDK 概觀](app-sdk.md)，其中涵蓋 SDK 目前的功能，並說明如何在每個支援的平台上進行整合準備。
+>
+> 若要下載 SDK，請參閱[下載 SDK 檔案](../developer/app-sdk-get-started.md#download-the-sdk-files)。
 
 Microsoft Intune App SDK for Android 可讓您將 Intune 應用程式保護原則 (也稱為 **APP** 或 MAM 原則) 併入原生 Android 應用程式中。 Intune 的受控應用程式是與 Intune App SDK 整合的應用程式。 Intune 系統管理員可在 Intune 主動管理應用程式時，輕鬆地將應用程式保護原則部署至 Intune 的受控應用程式。
 

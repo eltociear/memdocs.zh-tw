@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b877587e8eb50019086e2296d7cc5b7e900da62a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: f77fb3b93c2600bf422aa95af267abc3e64ae7ee
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323792"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551339"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>在 Intune 中使用應用程式防護原則的條件式啟動動作來選擇性地抹除資料
 
@@ -59,7 +59,7 @@ ms.locfileid: "80323792"
 - 裝置型號
 - 允許的裝置威脅等級上限
 
-若要使用 [裝置型號]  設定，請輸入以分號分隔的 iOS/iPadOS 型號識別碼清單。 這些值不會區分大小寫。 除了在 Intune 報告內使用 [裝置型號] 輸入，您也可以在 [HockeyApp 的支援文件](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) \(英文\) 或此[第三方 GitHub 存放庫](https://gist.github.com/adamawolf/3048717) \(英文\) 中的 [Device Type] \(裝置類型\) 欄底下找到 iOS/iPadOS 型號識別碼。<br>
+若要使用 [裝置型號]  設定，請輸入以分號分隔的 iOS/iPadOS 型號識別碼清單。 這些值不會區分大小寫。 除了在 Intune 報告內使用 [裝置型號] 輸入，您也可以在此[第 3 方 GitHub 存放庫](https://gist.github.com/adamawolf/3048717) \(英文\) 中找到 iOS/iPadOS 型號識別碼。<br>
 範例輸入：*iPhone5,2; iPhone5,3*
 
 在使用者裝置上，Intune 用戶端將會根據應用程式防護原則在 Intune 中指定的裝置型號字串來進行簡單比對，藉以採取動作。 比對完全取決於裝置所報告的型號。 建議您 (即 IT 系統管理員) 根據各種不同的裝置製造商和型號，並以少數的使用者群組為目標測試此設定，以確保會出現預期的行為。 預設值是**未設定**。<br>

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c810b6caa47596967cf9e1f2ad4cb3f772064f30
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: 618ed802d33f2c50a567f1e18da4689855bbf016
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488046"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551681"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>在 Intune 中使用安全性基準來設定 Windows 10 裝置
 
@@ -62,11 +62,20 @@ ms.locfileid: "80488046"
 
 您可選擇[變更搭配指定設定檔使用的基準版本](#change-the-baseline-version-for-a-profile)。 這表示當新版本推出時，您不必建立新的基準設定檔就能發揮其功能。 當就緒時，您可改為選取基準設定檔並使用內建選項將該設定檔的執行個體版本變更為新版本。
 
+## <a name="avoid-conflicts"></a>避免衝突
+
+您可以同時在 Intune 環境中使用一或多個可用的基準。 您也可以使用具有不同自訂項目之相同安全性基準的多個執行個體。
+
+當您使用多個安全性基準時，請檢閱各項設定，以識別不同的基準設定何時會引進相同設定的衝突值。 因為您可以部署專為不同意圖而設計的安全性基準，並部署包含自訂設定之相同基準的多個執行個體，所以您可能會針對必須調查並解決的裝置建立設定衝突。
+
+此外，安全性基準通常會管理您可能使用[裝置組態設定檔](../configuration/device-profiles.md)或其他類型的原則所設定的相同設定。 因此，在尋求避免或解決衝突時，請留意並考慮設定的其他原則和設定檔。
+
+使用下列連結中的資訊來協助識別並解決衝突：
+
+- [針對 Intune 中的原則和設定檔進行疑難排解](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [監視您的安全性基準](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
+
 ## <a name="available-security-baselines"></a>可用的安全性基準
-
- 您可以同時在 Intune 環境中使用一或多個可用的基準。 您也可以使用具有不同自訂項目之相同安全性基準的多個執行個體。
-
-當您使用多個安全性基準時，請檢閱各項設定，以識別不同的基準何時會引進相同設定的衝突值。 因為您可以部署專為不同意圖而設計的安全性基準，並部署包含自訂設定的相同基準的多個執行個體，所以您可能會[針對必須調查和解決的裝置建立設定衝突](security-baselines-monitor.md#troubleshoot-using-per-setting-status)。  也請留意您的[裝置組態設定檔](../configuration/device-profiles.md)，它可設定許多與安全性基準相同的設定。
 
 下列安全性基準執行個體可以搭欸 Intune 使用。 使用連結來檢視每個基準最近執行個體的設定。
 

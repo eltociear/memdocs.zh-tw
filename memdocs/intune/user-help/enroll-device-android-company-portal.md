@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 04/01/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0f6efa6d026879a3231c21662e799bf8ba7ada09
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0c9bf96188e27afeaf66e7b2897f8cda19f9df37
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337742"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551645"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>使用公司入口網站來註冊您的裝置  
 註冊您個人或公司擁有的 Android 裝置，以安全地存取公司電子郵件、應用程式和資料。 公司入口網站支援執行 Android 4.4 及更新版本的 Android 裝置 (包括 Samsung Knox)。  
@@ -35,7 +35,7 @@ ms.locfileid: "79337742"
 > Samsung Knox 是某種類型的安全性，可供特定 Samsung 裝置使用，以提供原生 Android 所提供項目之外的額外保護。 若要查看裝置是否為 Samsung Knox 裝置，請移至 [設定]   > [關於裝置]  。 若該處未列出 **Knox 版本**，表示您的裝置是原生 Android 裝置。
 
 ## <a name="enroll-device"></a>註冊裝置  
-請務必[從 Google Play 安裝免費 Intune 公司入口網站應用程式](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)。 
+請務必從 [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) 安裝 Intune 公司入口網站應用程式。 請參閱[在中國大陸安裝公司入口網站應用程式](install-company-portal-android-china.md)，以取得在中國大陸提供該應用程式的商店清單。    
 
 在註冊期間，系統可能會要求您選擇最能描述您裝置使用方式的類別。 公司支援人員會使用您的答案來檢查您可以存取的應用程式。  
 

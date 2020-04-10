@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5937cd09a5224933004233b8d4efe8a0e47155f3
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 8f9212d275b17db6a40e3133b5363cd13c9d13d6
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359373"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551436"
 ---
 # <a name="add-macos-kernel-extensions-in-intune"></a>在 Intune 中新增 macOS 核心延伸模組
 
@@ -68,6 +68,9 @@ Intune 會使用「組態設定檔」來依據貴組織的需求建立和自訂�
 >
 > - [散發前公證應用程式](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) (開啟 Apple 的網站) 
 > - [針對 macOS High Sierra 中核心延伸模組的變更做準備](https://support.apple.com/en-us/HT208019) (開啟 Apple 的網站)
+
+> [!NOTE]
+> Intune 使用者介面 (UI) 正在更新為全螢幕體驗，而且可能需要數週的時間。 在您的租用戶收到此更新之前，當您建立或編輯此文章中所述的設定時，您的工作流程將略有不同。
 
 ## <a name="create-the-profile"></a>建立設定檔
 

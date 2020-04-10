@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7d7f35d6d6b11875c722d4969f5776040ca0dfc
-ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
+ms.openlocfilehash: 1f3964ec67c9c78e5aedc70ff4f328a66c59c04b
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80256448"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696517"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>在 Intune 中註冊 iOS/iPadOS 裝置
 
@@ -37,7 +37,7 @@ Intune 啟用 iPad 和 iPhone 的行動裝置管理 (MDM)，讓使用者安全�
 
 - [確定您的裝置符合 Apple 裝置註冊資格](https://support.apple.com/en-us/HT204142#eligibility)。
 - [設定 Intune](../fundamentals/setup-steps.md) - 這些步驟會設定您的 Intune 基礎結構。 裝置註冊特別要求您[設定 MDM 授權單位](../fundamentals/mdm-authority-set.md)。
-- [取得 Apple MDM Push Certificate](apple-mdm-push-certificate-get.md) - Apple 需要憑證才能管理 iOS/iPadOS 與 macOS 裝置。
+- [取得 Apple MDM Push Certificate](apple-mdm-push-certificate-get.md) - Apple 需要憑證才能啟用 iOS/iPadOS 與 macOS 裝置管理。
 
 ## <a name="user-owned-iosipados-and-ipados-devices-byod"></a>使用者擁有的 iOS/iPadOS 與 iPadOS 裝置 (BYOD)
 

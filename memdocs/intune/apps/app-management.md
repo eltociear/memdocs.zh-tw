@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 185cfbf49c9a6623559a2b50f0184980286e03eb
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 9e97322fa8a126203bf6e4d1e7a3703b92ded339
+ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80358712"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80536840"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>什麼是 Microsoft Intune 應用程式管理？
 
@@ -119,6 +119,8 @@ Intune 提供各種功能，可協助您在所要的裝置上取得所需的應�
 - **Apple VPP 權杖**：套用並檢視您的 iOS/iPadOS 大量採購方案 (VPP) 授權。 如需詳細資訊，請參閱 [iOS/iPadOS 大量採購應用程式](vpp-apps-ios.md)。
 - **受控的 Google Play**：受控 Google Play 是 Google 的企業應用程式商店，也是適用於 Android Enterprise 之應用程式的唯一來源。 如需詳細資訊，請參閱[使用 Intune 將受控 Google Play 應用程式新增至 Android Enterprise 裝置](apps-add-android-for-work.md)。
 - **自訂**：自訂公司入口網站以顯示您公司的品牌。 如需詳細資訊，請參閱[公司入口網站設定](company-portal-app.md)。
+
+如需應用程式的詳細資訊，請參閱[將應用程式新增至 Microsoft Intune](../apps/apps-add.md)。
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd6956a9bdb19f25e39dd8cfb8e7e685d60f7b8c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 635804a9ad5cd76d104f16bcd204df1daa28b114
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083544"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696490"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>使用應用程式防護原則的資料保護架構 
 
@@ -62,6 +62,9 @@ Microsoft 建議 APP 資料保護架構使用下列部署更新步調方法：
 您應該針對適用的應用程式啟用下列應用程式防護原則設定，並將其指派給所有行動使用者。 如需每項原則設定的詳細資訊，請參閱 [iOS 應用程式防護原則設定](app-protection-policy-settings-ios.md)和 [Android 應用程式防護原則設定](app-protection-policy-settings-android.md)。
 
 Microsoft 建議先檢閱和分類使用案例，再使用該層級的規範方針來設定使用者。 如同任何架構，對應層級內的設定可能需要根據組織的需求進行調整，因為資料保護必須評估威脅環境、風險偏好，以及對可用性的影響。  
+
+### <a name="conditional-access-policies"></a>條件式存取原則
+為確保只有支援應用程式保護原則的應用程式可存取公司或學校帳戶資料，需要 Azure Active Directory 條件式存取原則。 請參閱**案例 1：Office 365 應用程式需要具有應用程式保護原則的已核准應用程式** ([針對使用條件式存取的雲端應用程式存取，需要應用程式保護原則](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access) \(部分機器翻譯\) 中)，以取得實作特定原則的步驟。
 
 ### <a name="apps-to-include-in-the-app-protection-policies"></a>要包含在應用程式防護原則中的應用程式  
 

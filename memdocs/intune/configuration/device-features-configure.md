@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30bf5ba078029e35988d3531ee510d9db6c6cdb8
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: cb8d5b53e136ea22d1edbad7755e198fd4155285
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359485"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551395"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>在 Intune 中新增 iOS、iPadOS 或 macOS 裝置功能設定
 
@@ -37,6 +37,9 @@ Intune 包含許多可協助系統管理員控制 iOS、iPadOS 和 macOS 裝置�
 Intune 會使用「組態設定檔」來依據貴組織的需求建立和自訂這些設定。 在設定檔中新增這些功能之後，接著將該設定檔推送或部署至組織中的 iOS/iPadOS 和 macOS 裝置。
 
 本文描述您可以設定的各種功能，並示範如何建立裝置組態設定檔。 您也可以查看適用於 [iOS/iPadOS](ios-device-features-settings.md) 和 [macOS](macos-device-features-settings.md) 裝置的所有可用設定。
+
+> [!NOTE]
+> Intune 使用者介面 (UI) 正在更新為全螢幕體驗，而且可能需要數週的時間。 在您的租用戶收到此更新之前，當您建立或編輯此文章中所述的設定時，您的工作流程將略有不同。
 
 ## <a name="airprint"></a>AirPrint
 

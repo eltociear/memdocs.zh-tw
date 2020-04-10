@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36936976528b5ea9c3fff1f77ec11223a4e4e63d
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: ba099e3614c11e10ce4cd9ae94668a1648bfc150
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401780"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808048"
 ---
 # <a name="use-shell-scripts-on-macos-devices-in-intune-public-preview"></a>在 Intune 的 macOS 裝置上使用 Shell 指令碼 (公開預覽)
 
@@ -55,6 +55,9 @@ ms.locfileid: "80401780"
 4. 在 [指令碼設定]  中，輸入下列內容，然後選取 [下一步]  ：
    - **上傳指令碼**：瀏覽至 Shell 指令碼。 指令碼檔案的大小必須小於 200 KB。
    - **以登入使用者身分執行指令碼**：選取 [是]  以使用裝置上的使用者認證來執行指令碼。 選擇 [否]  (預設) 以根使用者身分執行指令碼。 
+   - **在裝置上隱藏指令碼通知：** 根據預設，會針對每個執行的指令碼顯示指令碼通知。 終端使用者會在 MacOS 裝置上從 Intune 看到「IT 正在設定您的電腦」  通知。
+   - **指令碼頻率：** 選取指令碼的執行頻率。 選擇 [未設定]  \(預設\)，只執行一次指令碼。
+   - **指令碼失敗時可重試的最大次數：** 選取指令碼傳回非零結束代碼 (零表示成功) 時，應該執行的次數。 選擇 [未設定]  \(預設\) 以在指令碼失敗時不重試。
 5. 在 [範圍標籤]  中，選擇性地為指令碼新增範圍標籤，然後選取 [下一步]  。 您可使用範圍標籤來決定可在 Intune 中看見指令碼的人員。 如需範圍標籤的完整詳細資料，請參閱[針對分散式 IT 使用角色型存取控制和範圍標籤](../fundamentals/scope-tags.md)。
 6. 選取 [指派]   > [選取要包含的群組]  。 Azure AD 群組的現有清單會隨即顯示。 選取一或多個裝置群組，其包含 macOS 裝置要接收指令碼的使用者。 選擇 [選取]  。 選擇的群組會顯示在清單中，且會接收指令碼原則。
    > [!NOTE]
@@ -103,9 +106,17 @@ ms.locfileid: "80401780"
  - 代理程式會在簽入以接收 macOS 裝置的已指派 Shell 指令碼之前，以無訊息方式向 Intune 服務進行驗證。
  - 代理程式會接收已指派 Shell 指令碼，並根據系統管理員所設定的設定排程、重試嘗試、通知設定和其他設定來執行指令碼。
  - 代理程式通常每 8 小時會使用 Intune 服務來檢查新的或已更新指令碼。 此簽入程序與 MDM 簽入無關。 
+ 
+ ### <a name="how-can-i-manually-initiate-an-agent-check-in-from-a-mac"></a>如何從 Mac 手動起始代理程式簽入？
+在已安裝代理程式的受控 Mac 上，開啟**終端機**，執行 `sudo killall IntuneMdmAgent` 命令以終止 `IntuneMdmAgent` 處理序。 `IntuneMdmAgent` 處理序會立即重新啟動，這將會起始 Intune 的簽入。
 
- >[!NOTE]
- > 公司入口網站中的 [檢查設定]  動作只會強制執行 MDM 簽入。 代理程式簽入沒有任何手動動作。
+或者，您可以執行下列動作：
+1. 開啟 [活動監視器]   > [檢視]   > 選取 [所有處理序]  。  
+2. 搜尋名為 `IntuneMdmAgent` 的處理序。 
+3. 結束為 **root** 使用者執行的處理序。 
+
+> [!NOTE]
+> 公司入口網站中的**檢查設定**動作，以及 Microsoft 端點管理員管理主控台中裝置的**同步處理**動作，會起始 MDM 簽入，而不會強制代理程式簽入。
 
  ### <a name="when-is-the-agent-removed"></a>何時會移除代理程式？
  有幾個情況可能會導致代理程式從裝置中移除，例如：

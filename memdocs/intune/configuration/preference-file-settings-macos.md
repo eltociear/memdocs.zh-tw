@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e83077561ec4492feaf14789cf339e0b3ee86e2
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 9cb8cea30b53c5619580b289f73529668d71e909
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359327"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551499"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>使用 Microsoft Intune 將屬性清單檔新增至 macOS 裝置
 
@@ -43,6 +43,9 @@ ms.locfileid: "80359327"
 - 如果不確定如何輸入應用程式金鑰，請在應用程式內變更設定。 然後，使用 [Xcode](https://developer.apple.com/xcode/) 檢查應用程式的喜好設定檔案，以查看設定的進行方式。 Apple 建議在匯入檔案之前，先使用 Xcode 移除無法管理的設定。
 - 只有部分應用程式能使用受控喜好設定，而這些應用程式可能不允許管理所有設定。
 - 請務必上傳以裝置通道設定為目標的屬性清單檔，而不是以使用者通道設定為目標的屬性清單檔。 以整個裝置為目標的屬性清單檔。
+
+> [!NOTE]
+> Intune 使用者介面 (UI) 正在更新為全螢幕體驗，而且可能需要數週的時間。 在您的租用戶收到此更新之前，當您建立或編輯此文章中所述的設定時，您的工作流程將略有不同。
 
 ## <a name="create-the-profile"></a>建立設定檔
 

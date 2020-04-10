@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 388630712b398ef82e78e55efa63418e95187681
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5b40ed9dff0d83639015e70889bf7008e8e68173
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351184"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696503"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>適用於 Intune 的 Windows MDM 安全性基準設定
 
@@ -1583,6 +1583,9 @@ ms.locfileid: "79351184"
 ::: zone pivot="mdm-may-2019"
 
 - **Adobe Reader 在子處理序中啟動**：  
+此規則會阻止 Adobe Reader 建立額外的處理序，以防止攻擊。 惡意程式碼可以透過社交工程或惡意探索來下載並啟動額外的承載並以 Adobe Reader 為跳板發動攻擊。 透過封鎖 Adobe Reader，使其無法產生子處理序，可以阻止試圖將其作為向量的惡意程式碼傳播。
+[深入了解](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+
   **預設**：啟用
 
 ::: zone-end
@@ -2162,3 +2165,9 @@ ms.locfileid: "79351184"
 - **PIN 中需要有大寫字母**
 
 ::: zone-end
+
+## <a name="next-steps"></a>後續步驟
+
+- [深入了解安全性基準](security-baselines.md)
+- [避免衝突](security-baselines.md#avoid-conflicts)
+- [針對 Intune 中的原則和設定檔進行疑難排解](../configuration/troubleshoot-policies-in-microsoft-intune.md)

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19660a8b2dc6b804a1ee1a1eaf407261ca9af2b1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1bbca477b389b568d2aca1ab0f9394ec09fe2b24
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327245"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696562"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>使用 Apple School Manager 來設定 iOS/iPadOS 裝置註冊
 
@@ -38,7 +38,6 @@ Apple School Manager 註冊無法搭配 [Apple 的裝置註冊計劃](device-enr
 **先決條件**
 - [Apple 行動裝置管理 (MDM) 推送憑證](apple-mdm-push-certificate-get.md)
 - [MDM 授權單位](../fundamentals/mdm-authority-set.md)
-- [Apple MDM Push Certificate](apple-mdm-push-certificate-get.md)
 - 若使用 ADFS，則使用者親和性需要 [WS-Trust 1.3 使用者名稱/混合端點](https://technet.microsoft.com/library/adfs2-help-endpoints)。 [深入了解](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。
 - 從 [Apple School Management](http://school.apple.com) 方案購買的裝置
 
@@ -120,7 +119,7 @@ Apple School Manager 註冊無法搭配 [Apple 的裝置註冊計劃](device-enr
 
 8. 您可以使用受控 Apple ID 來允許多個使用者登入註冊的 iPad。 若要這麼做，請在 [共用的 iPad]  底下選擇 [是]  (此選項需要將 [不搭配使用者親和性進行註冊]  和 [受監督]  模式設定為 [是]  )。受管理 Apple ID 是在 Apple School Manager 入口網站中建立的。 深入了解[共用的 iPad](../fundamentals/education-settings-configure-ios-shared.md) 與 [Apple 共用的 iPad 需求](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56) \(英文\)。
 
-9. 選擇您是否想要讓使用此設定檔的裝置**與電腦同步**。 若選擇 [依據憑證允許 Apple Configurator]  ，則必須在 [Apple Configurator 憑證]  下選擇憑證。
+9. 選擇您是否想要讓使用此設定檔的裝置**與電腦同步**。 [全部拒絕]  表示使用此設定檔的所有裝置將無法與任何電腦上的任何資料同步。 若選擇 [依據憑證允許 Apple Configurator]  ，則必須在 [Apple Configurator 憑證]  下選擇憑證。
 
 10. 若您在前一個步驟中選擇 [依據憑證允許 Apple Configurator]  ，則請選擇要匯入的 Apple Configurator 憑證。
 

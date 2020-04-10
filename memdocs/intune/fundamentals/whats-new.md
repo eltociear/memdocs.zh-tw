@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 677f85874ddf206b716e70a0cc6c659e10b99fef
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.openlocfilehash: 00faad5cccf8b2ed3198542868a36cb4699299b8
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438818"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808204"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune 的新功能
 
@@ -55,14 +55,29 @@ ms.locfileid: "80438818"
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-april-6-2020"></a>2020 年 4 月 6 日當週
+
+#### <a name="new-shell-script-settings-for-macos-devices---6884363---"></a>macOS 裝置的新殼層指令碼設定<!-- 6884363 -->
+設定 macOS 裝置的殼層指令碼時，您現在可以進行下列新設定： 
+- 在裝置上隱藏指令碼通知
+- 指令碼頻率
+- 指令碼失敗時可重試的次數上限
+
+如需詳細資訊，請參閱[在 macOS 裝置上的 Intune 中使用 Shell 指令碼](../apps/macos-shell-scripts.md)。
+
+<!-- ########################## -->
 ## <a name="week-of-march-30-2020"></a>2020 年 3 月 30 日當週
 
 ### <a name="new-url-for-the-microsoft-endpoint-manager-admin-center---3704810---"></a>Microsoft 端點管理員系統管理中心的新網址<!-- 3704810 -->
 為了與去年 Ignite 的 Microsoft 端點管理員公告保持一致，我們已將 Microsoft 端點管理員系統管理中心 (先前稱為 Microsoft 365 裝置管理) 的網址變更為 [https://endpoint.microsoft.com](https://endpoint.microsoft.com)。 舊的系統管理中心網址 ([https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com)) 將會繼續運作，但建議開始使用新的網址來存取 Microsoft 端點管理員系統管理中心。
 
-如需詳細資訊，請參閱[使用 Microsoft 端點管理員系統管理中心簡化 IT 工作](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center)。
+如需詳細資訊，請參閱[使用 Microsoft 端點管理員系統管理中心簡化 IT 工作](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center)。  
 
-### <a name="app-management"></a>應用程式管理
+
+### <a name="app-management"></a>應用程式管理  
+
+#### <a name="company-portal-for-ios-supports-landscape-mode--6048329-wnready---"></a>iOS 公司入口網站支援橫向模式<!--6048329 wnready -->   
+使用者現在可以自由選擇螢幕方向來註冊其裝置、尋找應用程式，以及取得 IT 支援。 除非使用者將螢幕鎖定在直向模式，否則應用程式會自動偵測並將螢幕調整為直向或橫向模式。  
 
 #### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>macOS 裝置的指令碼支援 (公開預覽)<!-- 4280361 wnready -->
 您可新增指令碼並將其部署至 macOS 裝置。 這項支援可讓您使用 macOS 裝置上的原生 MDM 功能，大幅延伸您能對 macOS 裝置所做的設定。 如需詳細資訊，請參閱[在 macOS 裝置上的 Intune 中使用 Shell 指令碼](../apps/macos-shell-scripts.md)。
@@ -71,6 +86,9 @@ ms.locfileid: "80438818"
 ## <a name="week-of-march-24-2020"></a>2020 年 3 月 24 日當週
 
 ### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>改善了在 Android 與 Android 企業裝置上建立裝置限制設定檔時的使用者介面體驗<!-- 5841361 -->
+
+> [!NOTE] 
+> Intune 使用者介面正在更新為全螢幕體驗，可能需要數週的時間。 在您的租用戶收到此更新之前，當您建立或編輯設定時，您的工作流程將略有不同。
 
 當建立 Android 或 Android 企業裝置的設定檔時，端點管理系統管理中心的體驗已有所更新。 此變更會影響下列裝置組態設定檔 ([裝置]   > [組態設定檔]   > [建立設定檔]   > 選取 [Android 裝置管理員]  或 [Android 企業]  作為平台)：
 
@@ -82,6 +100,9 @@ ms.locfileid: "80438818"
 
 ### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>已改善在 iOS/iPadOS 和 macOS 裝置上建立設定檔時的使用者介面體驗<!-- 5569002 5568997 -->
 
+> [!NOTE]
+> Intune 使用者介面正在更新為全螢幕體驗，可能需要數週的時間。 在您的租用戶收到此更新之前，當您建立或編輯設定時，您的工作流程將略有不同。
+
 當建立 iOS 或 macOS 裝置的設定檔時，端點管理系統管理中心的體驗已有所更新。 此變更會影響下列裝置組態設定檔 ([裝置]   > [組態設定檔]   > [建立設定檔]   > [iOS/iPadOS]  或 [macOS]  作為平台)：
 
 - 自訂：iOS/iPadOS、macOS
@@ -92,6 +113,9 @@ ms.locfileid: "80438818"
 - 喜好設定檔案：macOS
 
 ### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>macOS 裝置上 [裝置功能] 中的 [從使用者設定隱藏] 設定<!-- 6524869 -->
+
+> [!NOTE]
+> 此變更將會在接下來幾週內向所有客戶推出。
 
 當在 macOS 裝置上建立裝置功能組態設定檔時，有一項新的 [從使用者設定隱藏]  設定 ([裝置]   > [組態設定檔]   > [建立設定檔]   > [macOS]  作為平台 > [裝置功能]  設定檔 > [登入項目]  )。
 
@@ -187,6 +211,10 @@ Microsoft Azure AD 小組已建立重新導向的單一登入 (SSO) 應用程式
 [疑難排解] 刀鋒視窗上暫止 MAM 原則的通知圖示已變更為資訊圖示。
 
 ####  <a name="ui-update-when-configuring-compliance-policy---3961639------"></a>設定合規性政策時的 UI 更新<!-- 3961639    -->
+
+> [!NOTE]
+> Intune 使用者介面正在更新為全螢幕體驗，可能需要數週的時間。 在您的租用戶收到此更新之前，當您建立或編輯設定時，您的工作流程將略有不同。
+
 我們已在 Microsoft 端點管理員中更新[建立合規性政策](../protect/create-compliance-policy.md#create-the-policy)的 UI ([裝置]   > [合規性政策]   > [原則]   > [建立原則]  )。 我們提供一個新的使用者體驗，其中包含您先前使用的相同設定和詳細資料。 新體驗會遵循類似精靈的流程來建立合規性政策，並包含可讓您在其中為原則新增「指派」  的新頁面和 [檢閱 + 建立]  頁面，而您可以在建立原則之前，於此頁面檢閱設定。
 
 #### <a name="retire-noncompliant-devices---1827291---------"></a>淘汰不符合規範的裝置<!-- 1827291       -->

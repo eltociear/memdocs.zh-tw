@@ -6,31 +6,32 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.assetid: 7954a686-25dc-4fce-b395-324816f46d3b
+ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99a34167f8616c6bbf2e441628de0d73aba080c3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79355890"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696467"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>使用 Intune [租用戶狀態] 頁面
 Microsoft Intune [租用戶狀態] 頁面是您可以檢視最新租用戶重要詳細資料的集中式中樞。 這些詳細資料包括授權可用性和使用、連接器狀態，以及 Intune 服務的相關重要通訊。  
 
-若要檢視儀表板，請登入 [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)，然後選取 [租用戶狀態]  。  [租用戶狀態]  會顯示於 [說明及支援]  下方。  
+若要檢視儀表板，請登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，移至 [租用戶管理]  ，然後選取 [租用戶狀態]  。
 
 此頁面分成三個索引標籤：
 
 ## <a name="tenant-details"></a>租用戶詳細資料
-租用戶詳細資料提供您租用戶的相關概覽資訊。 您可以檢視租用戶名稱和位置、MDM 授權單位，以及租用戶服務版本號碼。 服務版本號碼是一個連結，它會開啟 Microsoft Docs 上＜Intune 的新功能＞  一文。您可在＜新功能＞  中，閱讀 Intune 服務的最新功能和更新資訊。  
+租用戶詳細資料提供您租用戶的相關概覽資訊。 您可以檢視租用戶名稱和位置、MDM 授權單位，以及租用戶服務版本號碼。 服務版本號碼是一個連結，其會開啟 Microsoft Docs 上＜Intune 的新功能＞  一文。您可在＜新功能＞  中，閱讀 Intune 服務的最新功能和更新資訊。  
 
 在此索引標籤上，您也會找到可用授權及指派給使用者的數目等基本資訊。 但不會顯示裝置的授權。
 

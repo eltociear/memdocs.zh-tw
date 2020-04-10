@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 03/31/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,63 +15,79 @@ ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: arnab
+ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ee2d220e308b406251f049e1c17422f89ee36534
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d9e074def368927504c3f3c1761ec21b3ab62d22
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348779"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696268"
 ---
 # <a name="encrypting-your-android-device"></a>加密 Android 裝置
 
-裝置加密可以保護檔案及資料夾，使其在裝置遺失或遭竊時免於未經授權的存取。 在開啟裝置加密後，只有擁有正確密碼或 PIN 的人員才能登入裝置。 
+裝置加密可以保護檔案及資料夾，使其在裝置遺失或遭竊時免於未經授權的存取。 其會使沒有密碼的人無法存取裝置上的資料，也無法讀取資料。 
 
-組織可能會先要求您加密 Android 裝置，之後才可以存取學校或公司資源。 有些較新的 Android 裝置根據預設會立即加密。  
+您的組織可能會要求您執行下列動作，才能存取學校或公司資源：
 
-## <a name="turn-on-encryption"></a>開啟加密
-
-若公司入口網站或 Microsoft Intune 應用程式提示加密裝置，請完成下列步驟。 
+* [加密您的裝置](#encrypt-device)
+* [啟用安全啟動](#enable-secure-startup)
+* [設定啟動密碼、PIN 或其他驗證方法](#set-startup-passcode)  
 
 > [!Note]
-> 某些華為、Vivo 和 OPPO 的 Android 裝置無法進行加密。 如需詳細資訊，請參閱[這裡](your-device-appears-encrypted-but-cp-says-otherwise-android.md)。  
+> 某些華為、Vivo 和 OPPO 的 Android 裝置無法進行加密。 如需詳細資訊，請參閱[裝置已加密，但應用程式表示裝置未加密 ](your-device-appears-encrypted-but-cp-says-otherwise-android.md)。  
 
-1. 設定裝置螢幕鎖定。  
-    a. 移至 [設定]   > [Lock screen and security] \(鎖定螢幕和安全性)   > [Screen lock type] \(螢幕鎖定類型\)  。  
-    b. 選取 [PIN]  、[密碼]  或 [模式]  。  
-    c. 請遵循畫面上的指示來設定螢幕鎖定。  
+## <a name="encrypt-device"></a>加密裝置
 
-2. 返回 [鎖定螢幕和安全性]  ，然後選取 [安全啟動]  。
-3. 選擇 [在裝置開啟時要求 PIN]   > [確定]  。
-4. 輸入 PIN 碼來確認並加密裝置。
-5. 開啟公司入口網站或 Microsoft Intune 應用程式。
+請遵循下列步驟來加密您的裝置。 您的裝置可能會重新啟動數次。 
+
+加密選項的名稱與位置，會根據您的裝置製造商與 Android 版本而有所不同。 
+
+1. 開啟 [設定]  應用程式。
+2. 在應用程式的搜尋列中輸入**安全性**或**加密**，以尋找相關的設定。
+3. 點選選項來加密您的裝置。 遵循螢幕上的指示操作。  
+4. 出現提示時，請設定鎖定畫面密碼、PIN 或其他驗證方法 (如果您的組織允許)。 
+5. 若要重新檢查設定，請開啟公司入口網站或 Microsoft Intune 應用程式。
+    * 公司入口網站使用者：選取您的裝置並點選 [檢查裝置設定]  。 
+    * Microsoft Intune 使用者：您必須等到頁面更新為止，但當其更新時，加密狀態應該就會變更為符合規範。 
+
+## <a name="enable-secure-startup"></a>啟用安全啟動
+
+您的組織可能會要求您啟用安全啟動，作為其加密原則的一部分。 此功能可在手機啟動之前，要求輸入密碼或 PIN，以進一步保護您的裝置。 您有許多其他驗證選項，但會根據您的組織允許的內容而有所不同。 
+
+安全啟動選項的名稱與位置，會根據您的裝置製造商與 Android 版本而有所不同。 在某些裝置上，此設定可能稱為**增強式保護**。 
+
+1. 開啟 [設定]  應用程式。
+2. 在應用程式的搜尋列中，輸入**安全啟動**。
+3. 點選 [安全啟動]   > [在裝置開啟時要求 PIN]  。
+4. 出現提示時，請輸入您的裝置 PIN。   
+5. 若要重新檢查設定，請開啟公司入口網站或 Microsoft Intune 應用程式。
     * 公司入口網站使用者：選取您的裝置並點選 [檢查裝置設定]  。 
     * Microsoft Intune 使用者：您必須等到頁面更新為止，但當其更新時，加密狀態應該就會變更為符合規範。  
 
-執行 Android 4.4 及更早版本的裝置可能會沒有 [安全啟動]  選項。 在此情況下，請完成下列步驟來加密裝置。
 
-1. 前往 [設定]   > [安全性]   > [加密裝置]  。 畫面上的標籤會因 Android 裝置而不同。 若沒有看到 [加密裝置]  選項，請查看下列位置：
-    * [儲存體]   > [儲存體加密] 
-    * 儲存體   > 螢幕鎖定和安全性   > 其他安全性設定  
+## <a name="set-startup-passcode"></a>設定啟動密碼   
+當您[加密您的裝置](#encrypt-device)並[啟用安全啟動](#enable-secure-startup)時，系統會提示您設定裝置 PIN、密碼或其他驗證方法 (如果您的組織允許)。 不需要進一步的步驟。 
 
-2. 遵循螢幕上的指示操作。 在加密期間，您的裝置可能會重新啟動數次。
-3. 開啟公司入口網站或 Microsoft Intune 應用程式。
-    * 公司入口網站使用者：選取您的裝置並點選 [檢查裝置設定]  。  
-    * Microsoft Intune 使用者：您必須等到頁面更新為止，但當其更新時，加密狀態應該就會變更為符合規範。
+選擇或變更鎖定畫面類型：
 
-## <a name="troubleshoot"></a>疑難排解  
-**問題**：您已加密裝置且
+1. 開啟 [設定]  應用程式。
+2. 在應用程式的搜尋列中，輸入**畫面鎖定**。
+3. 點選 [畫面鎖定類型]  。
+4. 點選您要使用的畫面鎖定類型，並遵循螢幕上的指示來確認。  
 
-- 已停用 [加密] 按鈕。
-- 您會看到仍需加密的訊息。
-- 您在嘗試使用公司入口網站或 Microsoft Intune 應用程式時發生錯誤。
+## <a name="troubleshoot"></a>疑難排解    
+**問題**：已停用 [加密] 按鈕。   
 
-**可以嘗試的動作**
+**可以嘗試的方法**： 
+* 確定您的裝置已完全充電並連接電源線。 加密可能需要一些時間，而且需要滿電電池。   
 
-- 請確定您的裝置已連接電源線且正在充電。  
-- 請確定您已在裝置上設定 PIN 或密碼。  
+**問題**：您看到裝置仍需加密的訊息。  
+
+**可以嘗試的方法**：
+   *  [在您的裝置上設定鎖定畫面](#set-startup-passcode)。 
+   * [啟用安全啟動](#enable-secure-startup)。
 
 是否仍需要協助？ 請連絡公司支援人員 (可查看[公司入口網站](https://go.microsoft.com/fwlink/?linkid=2010980)以取得連絡資訊)，或是撰寫電子郵件給 <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">Microsoft Android 小組</a>。  

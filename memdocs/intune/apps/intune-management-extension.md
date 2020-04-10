@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d424163df07dbe6add74bbdab9ec36a7b220b655
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6c8e1551b49fce5074bd2e88d1d8802f62cca2bb
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324236"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808114"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>在 Intune 的 Windows 10 裝置上使用 PowerShell 指令碼
 
@@ -31,6 +31,9 @@ ms.locfileid: "80324236"
 本功能適用於：
 
 - Windows 10 及更新版本
+
+> [!NOTE]
+> 一旦符合 Intune 管理延伸模組先決條件，就會在 PowerShell 指令碼或 Win32 應用程式指派至使用者或裝置時，自動安裝 Intune 管理延伸模組。 如需詳細資訊，請參閱 Intune 管理延伸模組[先決條件](../apps/intune-management-extension.md#prerequisites)。
 
 ## <a name="move-to-modern-management"></a>移至新式管理
 
@@ -121,7 +124,34 @@ Intune 管理延伸模組具有下列必要條件。 一旦符合這些必要條
 
 - 終端使用者不需要登入裝置來執行 PowerShell 指令碼。
 
-- Intune 管理延伸模組用戶端會每小時及在每次重新啟動後檢查 Intune 一次，查看其中是否有任何新的指令碼或變更。 將原則指派給 Azure AD 群組之後，即會執行 PowerShell 指令碼，並報告執行結果。 指令碼執行之後，除非指令碼或原則中發生變更，否則不會再次執行。
+- Intune 管理延伸模組代理程式會每小時及在每次重新開機後聯繫 Intune 一次，查看其中是否有任何新的指令碼或變更。 將原則指派給 Azure AD 群組之後，即會執行 PowerShell 指令碼，並報告執行結果。 指令碼執行之後，除非指令碼或原則中發生變更，否則不會再次執行。 如果指令碼失敗，Intune 管理延伸模組代理程式將會嘗試針對接下來 3 個連續的 Intune 管理延伸模組代理程式簽入，重試指令碼三次。
+
+### <a name="failure-to-run-script-example"></a>無法執行指令碼範例
+上午 8 點
+  -  簽入
+  -  執行指令碼 **ConfigScript01**
+  -  指令碼失敗
+
+上午 9 點
+  -  簽入
+  -  執行指令碼 **ConfigScript01**
+  -  指令碼失敗 (重試計數 = 1)
+
+上午 10 點
+  -  簽入
+  -  執行指令碼 **ConfigScript01**
+  -  指令碼失敗 (重試計數 = 2)
+  
+上午 11 點
+  -  簽入
+  -  執行指令碼 **ConfigScript01**
+  -  指令碼失敗 (重試計數 = 3)
+
+下午 12 點
+  -  簽入
+  - 不會再嘗試執行 **ConfigScript01** 指令碼。
+  - 接下來，如果沒有對指令碼進行任何其他變更，則不會再嘗試執行指令碼。
+
 
 ## <a name="monitor-run-status"></a>監視執行狀態
 
