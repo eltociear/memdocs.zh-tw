@@ -77,7 +77,7 @@ ms.locfileid: "79350651"
    Verify that you are connected to the Internet, check the Microsoft Intune Service Status, and try to connect again.  
    Error code: 0x00000006  
 ```  
-如果使用 Proxy 伺服器來連線到網際網路，並封鎖傳給 Intune 服務的流量，可能會發生此錯誤。 若要判斷 proxy 是否正在使用中，請移至 [**控制台**] ** > ** -1 [**網際網路選項**]，選取 [連線] 索引標籤，然後按一下 [**區域網路設定**]。
+如果使用 Proxy 伺服器來連線到網際網路，並封鎖傳給 Intune 服務的流量，可能會發生此錯誤。 若要判斷 proxy 是否正在使用中，請移至 [**控制台**]  >  **-1**[**網際網路選項**]，選取 [連線] 索引標籤，然後按一下 [**區域網路設定**]。
 
 **解決方案**：  
 
