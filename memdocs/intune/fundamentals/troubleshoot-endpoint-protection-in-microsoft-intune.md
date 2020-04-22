@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 16b7cc65ae043fb48b7f500bfcd65195c7ff7561
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79355695"
 ---
 # <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Microsoft Intune 中的 Endpoint Protection 問題和可能的解決方案
@@ -37,7 +37,7 @@ ms.locfileid: "79355695"
 
 ### <a name="endpoint-protection-engine-unavailable"></a>Endpoint Protection 引擎無法使用
 
-**可能原因**：Intune Endpoint Protection 引擎已損毀或刪除。
+**可能的原因**：Intune Endpoint Protection 引擎已損毀或刪除。
 
 **可能的解決方案**：
 
@@ -62,7 +62,7 @@ ms.locfileid: "79355695"
 
 - [新增 Endpoint Protection 設定](../protect/endpoint-protection-configure.md)
 - [Microsoft Defender 防毒軟體](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)
-- [終端使用者：開啟即時保護來存取公司資源](../user-help/turn-on-defender-windows.md)
+- [終端使用者：開啟即時保護以存取公司資源](../user-help/turn-on-defender-windows.md)
 
 ### <a name="malware-definitions-out-of-date"></a>惡意程式碼定義已過期
 
@@ -74,7 +74,7 @@ ms.locfileid: "79355695"
 
 已有 14 天未曾完成完整掃描或快速掃描。 如果在完整掃描期間重新啟動裝置，就會發生此情況。
 
-**可能的解決方案**：如果掃描已逾期，則可執行一次性掃描或排程週期性掃描。 請參閱 [Microsoft Defender 防毒軟體](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)。
+**可能的解決方案**：如果掃描已逾期，您可以執行一次性掃描或排程週期性掃描。 請參閱 [Microsoft Defender 防毒軟體](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)。
 
 ### <a name="another-endpoint-protection-application-running"></a>其他 Endpoint Protection 應用程式正在執行
 

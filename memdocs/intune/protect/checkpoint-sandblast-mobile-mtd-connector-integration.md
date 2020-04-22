@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed468bfd9a16bb231d29f21c545cd27f121d22e7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79353368"
 ---
 # <a name="integrate-check-point-sandblast-mobile-with-intune"></a>整合 Check Point SandBlast Mobile 與 Intune
@@ -72,7 +72,7 @@ Check Point SandBlast 應用程式授權程序是由下列項目所組成：
 
 3. 依序選擇 [裝置管理]  和 [設定]  。
 
-4. 從 [MDM Service] \(MDM 服務)  下拉式清單中選擇 [Microsoft Intune]  。
+4. 從 [MDM Service] (MDM 服務)  下拉式清單中選擇 [Microsoft Intune]  。
 
 5. 一旦將 Microsoft Intune 設為 MDM 服務，[Microsoft Intune 設定]  視窗就會出現。請針對下列每個裝置平台選擇 [新增至我的組織]  ：iOS/iPadOS、 Android 和 Windows，以授權 Check Point SandBlast Mobile 可與 Intune 和 Azure AD 進行通訊。
 

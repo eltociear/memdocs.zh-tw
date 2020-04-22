@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 275939c4c97b25f7e9b2ab179a7491d47801e48e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79355058"
 ---
 # <a name="use-policies-to-simplify-windows-pc-management"></a>使用原則來簡化 Windows 電腦管理
@@ -48,12 +48,12 @@ Microsoft Intune Center 會安裝在所有受管理電腦上。 您可以在 Int
 
 |原則設定|詳細資料|
 |------------------|--------------------|
-|**Name**|管理電腦的系統管理員名稱。<br />長度上限：40 個字元|
-|**電話號碼**|管理電腦之系統管理員的電話號碼。<br />長度上限：20 個字元|
-|**電子郵件地址**|管理電腦之系統管理員的電子郵件地址。<br />長度上限：40 個字元|
-|**網站名稱**|使用者支援網站的名稱。<br />>長度上限：40 個字元|
-|**網站 URL**|您的支援網站的 URL。<br />長度上限：150 個字元|
-|**附註**|使用者看到的附註。<br />長度上限：120 個字元|
+|**Name**|管理電腦的系統管理員名稱。<br />最大長度：40 個字元|
+|**電話號碼**|管理電腦之系統管理員的電話號碼。<br />最大長度：20 個字元|
+|**電子郵件地址**|管理電腦之系統管理員的電子郵件地址。<br />最大長度：40 個字元|
+|**網站名稱**|使用者支援網站的名稱。<br />最大長度：40 個字元|
+|**網站 URL**|您的支援網站的 URL。<br />最大長度：150 個字元|
+|**附註**|使用者看到的附註。<br />最大長度：120 個字元|
 
 請參閱下列資源以取得您可以為 Windows 電腦設定之原則和設定的相關資訊︰
 

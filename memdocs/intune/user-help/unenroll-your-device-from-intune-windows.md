@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1392530643b4846c871b942d8265a7b43ace3124
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79347115"
 ---
 # <a name="remove-your-windows-device-from-management"></a>從管理移除您的 Windows 裝置
@@ -61,7 +61,7 @@ ms.locfileid: "79347115"
 
 3. 選取 [移除]  。  
 
-    ![Windows 版公司入口網站應用程式的範例螢幕擷取畫面，首頁。 裝置操作功能表會顯示頁面的 [我的裝置] 區段，並顯示 [重新命名]、[移除] 和 [檢查存取權] 等動作。](./media/1809_DeviceContextMenu_Windows_CP.png)  
+    ![Windows 版公司入口網站應用程式的範例螢幕擷取畫面，首頁。 裝置操作功能表會顯示頁面的 [我的裝置]**** 區段，並顯示 [重新命名]、[移除] 和 [檢查存取權] 等動作。](./media/1809_DeviceContextMenu_Windows_CP.png)  
 
 5. 在確認中，按一下 [深入了解]  閱讀您的公司和學校資源存取權可能會有什麼變更。 若要確認裝置移除，請選取 [移除]  。   
 
@@ -77,7 +77,7 @@ ms.locfileid: "79347115"
 ## <a name="remove-your-windows-81-computer"></a>移除 Windows 8.1 電腦
 完成下列步驟，以從 Intune 中移除 Windows 8.1 的電腦。
 
-1. 移至 [電腦設定]   > [網路]   > [工作場所]  。
+1. 移至 [電腦設定]   >  [網路]   >  [工作場所]  。
 2. 選取 [工作場所聯結]  下的 [離開]  。
 3. 選取 **「Turn on device management」** \(開啟裝置管理) 下的 **[關閉]** 。
 4. 在開啟的快顯視窗上，選取 [關閉]  。
@@ -85,7 +85,7 @@ ms.locfileid: "79347115"
 ## <a name="remove-your-windows-81-phone"></a>移除 Windows 8.1 手機
 完成下列步驟，以從 Intune 移除 Windows 8.1 手機。
 
-1. 移至 [設定]   > [工作區]  。
+1. 移至 [設定]   >  [工作場所]  。
 2. 點選您要取消註冊的工作場所帳戶。
 3. 點選畫面底部的 [刪除]  。
 4. 在 [刪除帳戶]  對話方塊上，點選 [刪除]  。  
@@ -93,8 +93,8 @@ ms.locfileid: "79347115"
 
 公司入口網站會將兩種資料儲存在您的 Windows 裝置上：
 
-- **診斷記錄**：Microsoft 所收集的標準應用程式活動資料。 這會在您解除安裝公司入口網站應用程式時自動清除。 例如，應用程式活動資料是關於應用程式開啟或應用程式當機時間長度的資料。
-- **應用程式快取**：應用程式運作所需的支援檔案，例如圖示和設定。
+- **診斷記錄檔**：Microsoft 收集的標準應用程式活動資料。 這會在您解除安裝公司入口網站應用程式時自動清除。 例如，應用程式活動資料是關於應用程式開啟或應用程式當機時間長度的資料。
+- **應用程式快取**：應用程式運作所需的特定支援檔案，例如圖示和設定。
 
 若要刪除已儲存的記錄檔和快取，請完成下列其中一個步驟：
 

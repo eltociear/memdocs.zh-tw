@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c658176046fca5dfc8cda1a3c655e32150a7d9c7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79343839"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>使用 Microsoft Intune 新增 Windows 10 公司入口網站應用程式
@@ -95,7 +95,7 @@ ms.locfileid: "79343839"
 3. 若要簽署 Windows 10 公司入口網站應用程式，請使用輸入參數來執行指令碼，這些參數詳載於指令碼標頭內，如下表所示。  
     相依性不需要傳遞至指令碼。 只有在將應用程式上傳至 Intune 管理主控台時，才需要這些項目。
 
-| 參數 |  說明  |
+| 參數 |  Description  |
 |---|---|
 | InputWin10AppxBundle  |  來源 appxbundle 檔案的路徑。 |
 | OutputWin10AppxBundle | 已簽署之 appxbundle 檔案的輸出路徑。 

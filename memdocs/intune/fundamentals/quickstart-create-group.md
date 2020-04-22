@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d7adb23f4709bf3ead07a01cb00d1b38fcb23c40
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79356904"
 ---
 # <a name="quickstart-create-a-group-to-manage-users"></a>快速入門：建立群組來管理使用者
@@ -34,14 +34,14 @@ ms.locfileid: "79356904"
 >[!NOTE]
 >Intune 會在主控台中提供預先建立的 [所有使用者]  和 [所有裝置]  群組，附有內建的最佳化方便您使用。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - Microsoft Intune 訂用帳戶 - [註冊免費試用帳戶](../fundamentals/free-trial-sign-up.md)。
 - 若要完成此快速入門，您必須[建立使用者](quickstart-create-user.md)。
 
 ## <a name="sign-in-to-intune-in-the-microsoft-endpoint-manager"></a>在 Microsoft 端點管理員中登入 Intune
 
-以[全域管理員或 Intune 服務管理員身分](users-add.md#types-of-administrators)登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 如果您已建立 Intune 試用版訂閱，則用來建立訂閱的帳戶是全域管理員。
+以[全域管理員或 Intune 服務管理員身分](https://go.microsoft.com/fwlink/?linkid=2109431)登入 [Microsoft 端點管理員系統管理中心](users-add.md#types-of-administrators)。 如果您已建立 Intune 試用版訂閱，則用來建立訂閱的帳戶是全域管理員。
 
 ## <a name="create-a-group"></a>建立群組
 
@@ -64,7 +64,7 @@ ms.locfileid: "79356904"
 
 在此快速入門中，您已使用 Intune 根據現有的使用者建立群組。 如需將群組新增至 Intune 的詳細資訊，請參閱[新增群組來組織使用者和裝置](groups-add.md)。
 
-若要繼續參閱此 Intune 快速入門系列，請前往下一個快速入門。
+若要遵循此 Intune 快速入門系列，請繼續前往下一個快速入門。
 
 > [!div class="nextstepaction"]
 > [快速入門：設定 Windows 10 裝置的自動註冊](../enrollment/quickstart-setup-auto-enrollment.md)

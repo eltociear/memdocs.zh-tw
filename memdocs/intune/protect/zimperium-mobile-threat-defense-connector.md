@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed623abeb602e599866af7b7249756edd87d5a29
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79349195"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>搭配 Intune 使用的 Zimperium Mobile Threat Defense 連接器
@@ -37,7 +37,7 @@ ms.locfileid: "79349195"
 
 - **iOS 8 和更新版本**
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - Azure Active Directory Premium
 
@@ -53,7 +53,7 @@ ms.locfileid: "79349195"
 
 - **支援已註冊的裝置** - Intune 裝置相容性原則包含行動防禦 (MTD) 規則，可使用 Zimperium 的風險評定資訊。 啟用 MTD 規則時，Intune 會評估裝置是否符合所啟用的原則。 如果發現裝置不相容，則會封鎖使用者對 Exchange Online 和 SharePoint Online 這類公司資源的存取。 使用者也會從安裝在其裝置內的 Zimperium 應用程式收到指導方針，以解決問題並重新取得公司資源的存取權。 支援搭配已註冊的裝置使用 Zimperium：
   - [將 MTD 應用程式新增至裝置](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md)
-  - [建立支援 MTD 的裝置相容性原則](../protect/mtd-device-compliance-policy-create.md)
+  - [建立支援 MTD 的裝置合規性政策](../protect/mtd-device-compliance-policy-create.md)
   - [在 Intune 中啟用 MTD 連接器](../protect/mtd-connector-enable.md)
 
 - **支援未註冊的裝置** - 當使用 Intune 應用程式保護原則時，Intune 可以在未註冊的裝置上使用 Zimperium 應用程式中風險評定資料。 系統管理員可以使用此組合來協助保護[受 Microsoft Intune 保護應用程式](../apps/apps-supported-intune-apps.md)中的公司資料，也可以針對未註冊裝置上的公司資料發出封鎖或選擇性抹除。 支援搭配未註冊的裝置使用 Zimperium：
@@ -99,7 +99,7 @@ ms.locfileid: "79349195"
 > [!div class="mx-imgBorder"]
 > ![補救後授與存取權](./media/zimperium-mobile-threat-defense-connector/network-wifi-unblocked-zimperium.png)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>依據對網路的威脅來控制對 SharePoint Online 的存取
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>根據網路威脅來控制 SharePoint Online 的存取權
 
 偵測網路中的「攔截式攻擊」  等威脅，並根據裝置風險防止對公司檔案進行同步處理。
 

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b6306f89f1e8ed2aefadd2691df4b3b21e2edafe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79345152"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>如何在 Microsoft Graph 中使用 Azure AD 存取 Intune API
@@ -160,7 +160,7 @@ __讀取 Microsoft Intune 設定__ | DeviceManagementServiceConfig.Read.All
 
 此時，所有 Intune 權限範圍都需要系統管理員存取權。  這表示執行存取 Intune API 資源的應用程式或指令碼時，需要對應的認證。
 
-### <a name="app-ro"></a>DeviceManagementApps.Read.All
+### <a name="devicemanagementappsreadall"></a><a name="app-ro"></a>DeviceManagementApps.Read.All
 
 - **啟用存取**設定：__讀取 Microsoft Intune 應用程式__
 
@@ -170,7 +170,7 @@ __讀取 Microsoft Intune 設定__ | DeviceManagementServiceConfig.Read.All
   - 應用程式保護原則
   - 應用程式設定
 
-### <a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
+### <a name="devicemanagementappsreadwriteall"></a><a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
 
 - **啟用存取**設定：__讀取和寫入 Microsoft Intune 應用程式__
 
@@ -183,18 +183,18 @@ __讀取 Microsoft Intune 設定__ | DeviceManagementServiceConfig.Read.All
   - 應用程式保護原則
   - 應用程式設定
 
-### <a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
+### <a name="devicemanagementconfigurationreadall"></a><a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
 
-- **啟用存取**設定：__讀取 Microsoft Intune 裝置設定及原則__
+- **啟用存取**設定：__讀取 Microsoft Intune 裝置設定和原則__
 
 - 允許下列實體內容和狀態的讀取存取權：
   - 裝置設定
   - 裝置合規性原則
   - 通知訊息
 
-### <a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
+### <a name="devicemanagementconfigurationreadwriteall"></a><a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
 
-- **啟用存取**設定：__讀取及寫入 Microsoft Intune 裝置設定和原則__
+- **啟用存取**設定：__讀取和寫入 Microsoft Intune 裝置設定和原則__
 
 - 可允許與 __DeviceManagementConfiguration.Read.All__ 相同的作業
 
@@ -203,7 +203,7 @@ __讀取 Microsoft Intune 設定__ | DeviceManagementServiceConfig.Read.All
   - 裝置合規性原則
   - 通知訊息
 
-### <a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
+### <a name="devicemanagementmanageddevicesprivilegedoperationsall"></a><a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
 
 - **啟用存取**設定：__在 Microsoft Intune 裝置上執行受使用者影響的遠端動作__
 
@@ -217,7 +217,7 @@ __讀取 Microsoft Intune 設定__ | DeviceManagementServiceConfig.Read.All
   - 重新開機
   - 從共用的裝置刪除使用者
 
-### <a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
+### <a name="devicemanagementmanageddevicesreadall"></a><a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
 
 - **啟用存取**設定：__讀取 Microsoft Intune 裝置__
 
@@ -228,7 +228,7 @@ __讀取 Microsoft Intune 設定__ | DeviceManagementServiceConfig.Read.All
   - 遠端動作
   - 惡意程式碼資訊
 
-### <a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
+### <a name="devicemanagementmanageddevicesreadwriteall"></a><a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
 
 - **啟用存取**設定：__讀取和寫入 Microsoft Intune 裝置__
 
@@ -243,7 +243,7 @@ __讀取 Microsoft Intune 設定__ | DeviceManagementServiceConfig.Read.All
   - 停用啟用鎖定
   - 要求遠端協助
 
-### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All
+### <a name="devicemanagementrbacreadall"></a><a name="rac-ro"></a>DeviceManagementRBAC.Read.All
 
 - **啟用存取**設定：__讀取 Microsoft Intune RBAC 設定__
 
@@ -252,7 +252,7 @@ __讀取 Microsoft Intune 設定__ | DeviceManagementServiceConfig.Read.All
   - 角色定義
   - 資源作業
 
-### <a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
+### <a name="devicemanagementrbacreadwriteall"></a><a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
 
 - **啟用存取**設定：__讀取和寫入 Microsoft Intune RBAC 設定__
 
@@ -262,7 +262,7 @@ __讀取 Microsoft Intune 設定__ | DeviceManagementServiceConfig.Read.All
   - 角色指派
   - 角色定義
 
-### <a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
+### <a name="devicemanagementserviceconfigreadall"></a><a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
 
 - **啟用存取**設定：__讀取 Microsoft Intune 設定__
 
@@ -278,7 +278,7 @@ __讀取 Microsoft Intune 設定__ | DeviceManagementServiceConfig.Read.All
   - 商標
   - Mobile Threat Defense
 
-### <a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
+### <a name="devicemanagementserviceconfigreadwriteall"></a><a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
 
 - **啟用存取**設定：__讀取和寫入 Microsoft Intune 設定__
 

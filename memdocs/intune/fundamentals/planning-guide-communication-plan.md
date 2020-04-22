@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d82121fbd3d02c5eef9f45a4e67a897277da9334
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357762"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>開發推出通訊計畫
@@ -73,7 +73,7 @@ ms.locfileid: "79357762"
 
   | **通訊計畫** | **7 月** | **8 月** | **9 月** | **10 月** |
 |:---:|:---:|:---:|:---:|:---:|
-| 階段 1  | 全部 |  |  |  |
+| 階段 1  | 全部： |  |  |  |
 | 啟動會議 | 第一週 |  |  |  |
 | 階段 2 | IT | 銷售與行銷 | 零售 | 人力資源、財務和主管 |
 | 推出前電子郵件 1 | 第一週 | 第一週 | 第一週 | 第一週 |

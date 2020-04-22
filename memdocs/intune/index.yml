@@ -10,10 +10,10 @@ metadata:
   manager: mtillman
   ms.date: 03/09/2020
   ms.openlocfilehash: 6ff2467ec2ee267bfd7b9ec6d003701c7b772952
-  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 03/13/2020
+  ms.lasthandoff: 04/21/2020
   ms.locfileid: "79333765"
 highlightedContent:
   items:
@@ -61,7 +61,7 @@ conceptualContent:
       text: 支援的作業系統與瀏覽器
     - url: ./fundamentals/role-based-access-control.md
       itemType: reference
-      text: 角色型存取控制
+      text: 以角色為基礎的存取控制
     - url: ./fundamentals/licenses.md
       itemType: concept
       text: Intune 授權
@@ -167,7 +167,7 @@ conceptualContent:
     footerLink:
       text: 查看更多
       url: ./apps/index.yml
-  - title: 應用程式防護原則
+  - title: 應用程式保護原則
     links:
     - url: ./apps/app-protection-policy.md
       itemType: concept
@@ -249,7 +249,7 @@ additionalContent:
         url: https://docs.microsoft.com/microsoft-365/enterprise/
       - text: Microsoft 365 企業版基礎結構
         url: https://docs.microsoft.com/microsoft-365/enterprise/deploy-foundation-infrastructure
-    - title: Azure Active Directory
+    - title: 裝置註冊
       links:
       - text: 使用者管理文件
         url: https://docs.microsoft.com/azure/active-directory/users-groups-roles/

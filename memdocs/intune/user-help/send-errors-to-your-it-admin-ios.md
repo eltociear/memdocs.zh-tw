@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 542a49e53e8d95a1f0290001151e175a0bbd7eab
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79347466"
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>針對 iOS 裝置問題將錯誤傳送給公司支援人員
@@ -37,6 +37,6 @@ ms.locfileid: "79347466"
 
 - 在公司入口網站應用程式的 [更多]  索引標籤中，點選 [取得說明]  。
 
-- 在公司入口網站應用程式中，搖晃裝置，然後在診斷警示出現時，點選 [傳送診斷報告]  。 如果在您搖晃裝置時未出現警示，請開啟 [設定]   > [公司入口網站]  ，並確定開啟 [搖晃手勢]  選項。
+- 在公司入口網站應用程式中，搖晃裝置，然後在診斷警示出現時，點選 [傳送診斷報告]  。 如果在您搖晃裝置時未出現警示，請開啟 [設定]   >  [公司入口網站]  ，並確定開啟 [搖晃手勢]  選項。
 
 是否仍需要協助？ 請連絡您公司的支援人員。 如需連絡資訊，請查看[公司入口網站](https://go.microsoft.com/fwlink/?linkid=2010980)。

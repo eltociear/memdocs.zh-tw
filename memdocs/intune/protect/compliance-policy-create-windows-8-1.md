@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 0189fea7f73b70286a6daf844a10806d4c1e8a5d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79353199"
 ---
 # <a name="windows-81-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>使用 Intune，透過 Windows 8.1 設定將裝置標示為相容或不相容
@@ -28,7 +28,7 @@ ms.locfileid: "79353199"
 
 本功能適用於：
 
-- Windows Phone 8.1
+- Windows Phone 8。1
 - Windows 8.1 及更新版本
 
 身為 Intune 管理員，請使用這些相容性設定來協助保護您的組織資源。 若要深入了解相容性原則及其執行的操作，請參閱[開始使用裝置相容性](device-compliance-get-started.md)。
@@ -88,7 +88,7 @@ Windows 8.1 電腦會傳回版本 **3**。 若針對 Windows 將 OS 版本規則
     - 小寫字母
     - 大寫字母
     - 符號
-    - Numbers
+    - 數字
 
     若設定較高的數目，使用者就必須建立較複雜的密碼。 對於使用 Microsoft 帳戶存取的裝置，若符合下列任一條件，將無法正確評估合規性政策：
 
@@ -104,7 +104,7 @@ Windows 8.1 電腦會傳回版本 **3**。 若針對 Windows 將 OS 版本規則
 - **避免重複使用以前用過的密碼次數**：  
   輸入不得重複使用的舊密碼數。
 
-### <a name="encryption"></a>加密
+### <a name="encryption"></a>Encryption
 
 - **裝置上的資料儲存區加密**：  
   - [未設定]  (預設  )

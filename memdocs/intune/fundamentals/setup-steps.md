@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 53a6d38212433b786719379c0916129ea5304c21
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79356241"
 ---
 # <a name="set-up-intune"></a>設定 Intune
@@ -35,7 +35,7 @@ ms.locfileid: "79356241"
 >[!TIP]
 >凡在符合條件方案中購買至少 150 套 Intune 授權，即可享有「FastTrack Center 服務權益」  。 這項服務讓您和 Microsoft 專家一起整備 Intune 環境。 請參閱[適用於 Enterprise Mobility + Security (EMS) 的 FastTrack Center 權益](https://docs.microsoft.com/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program)。
 
-| 步驟 | 狀態  |
+| 步驟 | Status  |
 |---|---|
 |   1   | [支援的設定](supported-devices-browsers.md) - 開始之前需要知道的資訊。 這包含支援的設定和網路需求。|
 |   2   |  [登入 Intune](account-sign-up.md) - 登入試用訂用帳戶，或建立新的 Intune 訂用帳戶。 |

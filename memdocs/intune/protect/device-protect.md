@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c9ee00d13b32e1f52937489b86d29f075e5f580a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79352302"
 ---
 # <a name="protect-devices-with-microsoft-intune"></a>使用 Microsoft Intune 保護裝置
@@ -41,7 +41,7 @@ Intune [設定原則](../configuration/device-profiles.md)藉由控制多項設�
 ## <a name="retire-devices-and-remove-data"></a>淘汰裝置並移除資料
 當裝置必須[從 Intune 管理中移除](../remote-actions/devices-wipe.md)時 (例如使用者離開，或裝置遺失或遭竊)，您可能會想從該裝置移除資料。 Intune 提供多種方法，來確保您的公司資料時時安全無虞。
 
-## <a name="require-devices-to-be-compliant"></a>要求裝置符合規定
+## <a name="require-devices-to-be-compliant"></a>要求裝置符合規範
 Intune 提供[裝置法務遵循政策](device-compliance-get-started.md)，可讓您評估 (在某些情況下則為補救) 不符合您指定規則之規範的裝置。 例如，您可取得以下項目的報告：
 - 已越獄的 iOS/iPadOS 裝置
 - 加密或未加密的裝置

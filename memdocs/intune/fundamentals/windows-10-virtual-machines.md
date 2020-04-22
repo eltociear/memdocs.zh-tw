@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f09ffc2bc1d0c1850f20121c869186018cf9ae31
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79354421"
 ---
 # <a name="using-windows-10-virtual-machines-with-intune"></a>搭配 Intune 使用 Windows 10 虛擬機器
@@ -38,7 +38,7 @@ Intune 支援搭配特定限制管理執行 Windows 10 企業版的虛擬機器�
     - 不支援 Windows Autopilot 和商業 OOBE。
     - 不支援裝置內容原則的 [註冊狀態頁面] 選項。
 
-## <a name="configuration"></a>設定
+## <a name="configuration"></a>組態
 Intune 不支援任何利用信賴平台模組或硬體管理的設定，包括：
 - [BitLocker 設定](../configuration/device-profiles.md#endpoint-protection)
 - [裝置韌體設定介面設定](../configuration/device-profiles.md#device-firmware-configuration-interface)

@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1c3b448726d52a838299e7be7a68611f460c4929
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79335454"
 ---
 # <a name="remove-your-device-from-management-if-you-declined-terms-of-use"></a>如果您已拒絕「使用條款」，請從 Intune 移除您的裝置
@@ -38,7 +38,7 @@ ms.locfileid: "79335454"
 
 從 Intune 移除裝置並將公司入口網站應用程式解除安裝：
 
-1. 移至 [設定]  &gt; [Security &amp; Screen Lock] \(安全性與螢幕鎖定\)  &gt; [裝置系統管理員]  。
+1. 移至 [設定]  &gt; [Security  **Screen Lock] \(安全性與螢幕鎖定\)&amp;** &gt; [裝置系統管理員]  。
 
     完成這個步驟後會立即取消註冊您的裝置。
 
@@ -54,4 +54,4 @@ ms.locfileid: "79335454"
 - 刪除 '\storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal' 資料夾
 
 
-是否仍需要協助？ 請連絡公司支援人員 (可查看[公司入口網站](https://go.microsoft.com/fwlink/?linkid=2010980)以取得連絡資訊)，或是撰寫電子郵件給 <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having unenrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android 小組</a>。
+是否仍需要協助？ 請連絡公司支援人員 (請查看[公司入口網站](https://go.microsoft.com/fwlink/?linkid=2010980)以取得連絡資訊)，或是將電子郵件傳送給 <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having unenrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android 小組</a>。

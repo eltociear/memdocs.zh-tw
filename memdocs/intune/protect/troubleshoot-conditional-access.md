@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6dc2c1d4f07e601d98bc2f26ec4766e21a8f1bc7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79350664"
 ---
 # <a name="troubleshoot-conditional-access"></a>條件式存取的疑難排解
@@ -105,12 +105,12 @@ ms.locfileid: "79350664"
 
 如果裝置不符合規範，但仍可繼續存取，請採取下列動作。
 
-- 檢閱您的目標和排除群組。 如果使用者不在正確的目標群組，或不在排除群組中，即不會遭到封鎖。 只會檢查目標群組中使用者的裝置相容性。
+- 檢閱您的目標和排除群組。 如果使用者不在正確的目標群組，或不在排除群組中，即不會遭到封鎖。 只會檢查目標群組中使用者的裝置合規性。
 
 - 確定已探索到該裝置。 Exchange Connector 指向 Exchange 2010 CAS，但使用者卻在 Exchange 2013 伺服器上？ 在此情況下，如果預設 Exchange 規則為 [允許]，即使是目標群組中的使用者，Intune 仍無法知道該裝置的 Exchange 連線。
 
 - 檢查 Exchange 中的裝置存在/存取狀態︰
-  - 使用這個 PowerShell Cmdlet，取得信箱的所有行動裝置清單：'Get-ActiveSyncDeviceStatistics -mailbox mbx'。 如果裝置未列在其中，表示它並未存取 Exchange。
+  - 使用這個 PowerShell Cmdlet 取得信箱的所有行動裝置清單："Get-ActiveSyncDeviceStatistics -mailbox mbx'。 如果裝置未列在其中，表示它並未存取 Exchange。
   
   - 如果列出裝置，請使用 'Get-CASmailbox -identity:’upn’ | fl' Cmdlet 取得其存取狀態的詳細資訊，並將該資訊提供給 Microsoft 支援服務。
 

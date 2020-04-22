@@ -21,10 +21,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 4e2c16a4002d807ba7665e53eea7347d498f8981
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79347089"
 ---
 # <a name="you-need-to-update-your-ios-device-to-install-the-outlook-app"></a>您需要更新 iOS 裝置才能安裝 Outlook 應用程式
@@ -32,7 +32,7 @@ ms.locfileid: "79347089"
 Outlook 應用程式可協助數百萬名使用者在 [iOS](https://itunes.apple.com/app/microsoft-outlook-email-calendar/id951937596) 裝置的一個方便位置來連線所有電子郵件帳戶、行事曆和檔案。
 
 >[!NOTE]
-> 在尋找 Android 裝置的指示嗎？ [深入了解](update-device-outlook-android.md)。
+> 在尋找 Android 裝置的指示嗎？ [進一步瞭解](update-device-outlook-android.md)。
 
 有時候安裝應用程式會失敗，特別是如果裝置不是保持在最新狀態。 
 

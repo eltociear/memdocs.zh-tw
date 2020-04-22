@@ -14,6 +14,6 @@
               tocHref: /mem/intune/
               topicHref: /mem/intune/
               items:
-                - name: 設定
+                - name: 組態
                   tocHref: /mem/intune/protect/
                   topicHref: /mem/intune/configuration/

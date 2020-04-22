@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 851fea24f101d313dba3426e5d65c60c5f31fdb5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79355578"
 ---
 # <a name="troubleshoot-software-updates-in-microsoft-intune"></a>Microsoft Intune 的軟體更新疑難排解
@@ -48,7 +48,7 @@ Microsoft Intune 用戶端可能會遇到一或多個下列徵兆：
 3. 拒絕所有可能套用至 Windows 7 或受影響用戶端上所安裝之應用程式 (例如 Microsoft Office) 的已取代更新。
 4. 重新啟動受影響的用戶端。
 
-如果您正在執行 Windows 7，請確定已安裝下列更新︰[3050265 適用於 Windows 7 的 Windows Update 用戶端：2015 年 6 月](https://support.microsoft.com/kb/3050265) (機器翻譯)。
+如果您執行 Windows 7，請確定已安裝下列更新︰[3050265 適用於 Windows 7 的 Windows Update 用戶端：2015 年 6 月](https://support.microsoft.com/kb/3050265) \(機器翻譯\)。
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f9bf88dd3a30caeb57b10e0c88c6954d1479d4f2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79349403"
 ---
 # <a name="wandera-mobile-threat-defense-connector-with-intune"></a>Wandera Mobile Threat Defense 與 Intune 的連接器  
@@ -52,10 +52,10 @@ Intune 中的合規性政策包括以 Wandera 風險評定為基礎的 MTD 規�
 
 如需有關平台與裝置的詳細資訊，請參閱 [Wandera 網站](https://www.wandera.com/mobile-threat-defense/) \(英文\)。
 
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
 
 - Microsoft Intune 訂閱  
-- Azure Active Directory  
+- 裝置註冊  
 - Wandera Mobile Threat Defense (先前稱為 Wandera Secure)  
 
 如需詳細資訊，請參閱 [Wandera Mobile Security](https://www.wandera.com/mobile-security/) \(英文\)。
@@ -90,11 +90,11 @@ Intune 中的合規性政策包括以 Wandera 風險評定為基礎的 MTD 規�
 
 *補救後授與存取權*：  
 
-![修復後授與存取權](./media/wandera-mtd-connector/wandera-network-wifi-unblocked.png)  
+![補救後授與存取](./media/wandera-mtd-connector/wandera-network-wifi-unblocked.png)  
 
-## <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>依據對網路的威脅來控制對 SharePoint Online 的存取
+## <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>根據網路威脅來控制 SharePoint Online 的存取權
 
-偵測您的網路威脅 (例如攔截式攻擊)，並依據裝置風險來防止同步處理公司的檔案。
+偵測到攔截式攻擊等網路威脅，並根據裝置風險防止同步處理公司檔案。
 
 *偵測到網路威脅時封鎖 SharePoint Online*：  
 

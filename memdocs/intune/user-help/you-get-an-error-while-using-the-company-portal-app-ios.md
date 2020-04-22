@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 0a5d9c378e42b56c8d13f42877cca889726b7579
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79346452"
 ---
 # <a name="you-get-an-error-while-using-the-company-portal-app"></a>您在使用公司入口網站應用程式時收到錯誤
@@ -34,6 +34,6 @@ ms.locfileid: "79346452"
 
 - 在公司入口網站應用程式的 [關於]  畫面上，點選 [傳送診斷報告]  。
 
-- 進入公司入口網站應用程式後，請搖晃裝置，然後在出現診斷警示時，點選 [電子郵件]  。 如果在您搖晃裝置時未出現警示，請開啟 [設定]   > [公司入口網站]  ，並確定開啟 [搖晃手勢]  選項。
+- 進入公司入口網站應用程式後，請搖晃裝置，然後在出現診斷警示時，點選 [電子郵件]  。 如果在您搖晃裝置時未出現警示，請開啟 [設定]   >  [公司入口網站]  ，並確定開啟 [搖晃手勢]  選項。
 
 是否仍需要協助？ 請連絡您公司的支援人員。 如需連絡資訊，請查看[公司入口網站](https://go.microsoft.com/fwlink/?linkid=2010980)。

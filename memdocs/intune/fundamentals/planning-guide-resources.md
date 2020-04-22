@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e50d518c3709d71085a57ad9a430444564c24cb9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357554"
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>規劃 Intune 部署的其他資源
@@ -46,7 +46,7 @@ ms.locfileid: "79357554"
 | | 相容性原則 | |
 | | 條件式存取原則|-|
 
-## <a name="further-reading"></a>延伸閱讀
+## <a name="further-reading"></a>進階閱讀
 
 請參閱 Intune 部署規劃、設計和實作程序期間可能有用之其他資訊的這些資源。
 

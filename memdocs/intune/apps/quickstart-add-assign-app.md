@@ -19,25 +19,25 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c5b6762669e4d816010982c63a119bffdec2f055
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79334271"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>快速入門：新增並指派用戶端應用程式
 
-在此快速入門中，您將使用 Intune 新增用戶端應用程式，並將其指派給您公司的員工。 系統管理員最優先的事項之一，是確保終端使用者能夠存取工作所需的應用程式。
+在此快速入門中，您將使用 Intune 新增用戶端應用程式，並將其指派給您公司的員工。 系統管理員最優先的事項之一，是確保使用者能夠存取工作所需的應用程式。
 
-如果您沒有 Intune 訂用帳戶，請[註冊免費試用帳戶](../fundamentals/free-trial-sign-up.md)。
+如果沒有 Intune 訂用帳戶，請[註冊免費試用帳戶](../fundamentals/free-trial-sign-up.md)。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 若要完成此快速入門，您必須[建立使用者](../fundamentals/quickstart-create-user.md)、[建立群組](../fundamentals/quickstart-create-group.md)並[註冊裝置](../enrollment/quickstart-setup-auto-enrollment.md)。
 
 ## <a name="sign-in-to-intune"></a>登入 Intune
 
-請以[全域管理員或 Intune 服務管理員](../fundamentals/users-add.md#types-of-administrators)身分登入 [Intune](https://aka.ms/intuneportal)。 如果您已建立 Intune 試用版訂閱，則用來建立訂閱的帳戶是全域管理員。
+請以[全域管理員或 Intune 服務管理員](https://aka.ms/intuneportal)身分登入 [Intune](../fundamentals/users-add.md#types-of-administrators)。 如果您已建立 Intune 試用版訂閱，則用來建立訂閱的帳戶是全域管理員。
 
 ## <a name="add-the-client-app-to-intune"></a>將用戶端應用程式新增至 Intune
 
@@ -91,7 +91,7 @@ ms.locfileid: "79334271"
 4. 按一下您使用 Intune 新增的應用程式。 在此快速入門中，您已新增 **Microsoft Office 365 應用程式套件**應用程式。
 
     > [!NOTE]
-    > 如果您未成功指派任何應用程式給 Intune 使用者，您將會看到下列訊息：「您的 IT 系統管理員並未提供任何應用程式給您。」 
+    > 如果您未成功指派任何應用程式給 Intune 使用者，您會看到下列訊息：您的 IT 系統管理員並未提供任何應用程式給您  。
 
 5. 按一下 [安裝]  。
 
@@ -101,7 +101,7 @@ ms.locfileid: "79334271"
 
 在此快速入門中，您已將應用程式新增至 Intune、將應用程式指派給群組，並在已註冊的 Windows 10 Desktop 裝置上安裝應用程式。 如需在 Intune 中管理應用程式的詳細資訊，請參閱[什麼是 Microsoft Intune 應用程式管理？](app-management.md)
 
-若要繼續參閱此 Intune 快速入門系列，請前往下一個快速入門。
+若要遵循此 Intune 快速入門系列，請繼續前往下一個快速入門。
 
 > [!div class="nextstepaction"]
-> [快速入門：建立並指派應用程式保護原則](quickstart-create-assign-app-policy.md)
+> [快速入門：建立並指派應用程式防護原則](quickstart-create-assign-app-policy.md)

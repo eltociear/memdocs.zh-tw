@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d9da6870caed61917d8093e2dd25882cec72d987
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79353251"
 ---
 # <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>使用 Intune 用來將裝置標示為符合規範或不符合規範的 iOS/iPadOS 設定
@@ -61,7 +61,7 @@ ms.locfileid: "79353251"
   使用此設定以採用風險評定作為合規性的條件。 選擇允許的威脅等級：  
   - [未設定]  (預設  ) - 不會評估此設定是否符合規範。
   - [安全]  - 此選項最安全，意味著裝置不能有任何威脅。 若在裝置上偵測到任何等級的威脅，便會評估為不相容。
-  - [低]  - 若只有低等級的威脅，會將裝置評估為符合規範。 任何較高等級的威脅會使裝置變成不符合規範的狀態。
+  - [低]  - 若只有低等級的威脅，會將裝置評估為符合規範。 任何更高等級的威脅都會使裝置處於不相容狀態。
   - [中]  - 若裝置有低等級或中等級的威脅，會將裝置評估為符合規範。 若在裝置上偵測到高等級的威脅，便會判斷為不相容。
   - [高]  - 此選項最不安全，因為它允許所有威脅等級。 如果此解決方案只用於報告用途，則此設定可能很實用。
 

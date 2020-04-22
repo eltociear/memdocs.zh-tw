@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 26204a36000b8c49b65effbfdb5f629fc092df64
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79345542"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>使用 Intune App Wrapping Tool 準備應用程式保護原則的 iOS 應用程式
@@ -103,7 +103,7 @@ ms.locfileid: "79345542"
 
 5. 按一下 [裝置] ![Apple Developer 入口網站加號](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) (右上角) 來新增 iOS 憑證。
 
-6. 選擇在 [Production] \(生產)  下建立 [In-House and Ad Hoc] \(內部和特定)  憑證。
+6. 選擇在 [Production] (生產)  下建立 [In-House and Ad Hoc] (內部和特定)  憑證。
 
    ![選取內部和特定憑證](./media/app-wrapper-prepare-ios/iOS-signing-cert-3.png)
 
@@ -134,7 +134,7 @@ ms.locfileid: "79345542"
 
 14. 按兩下您剛剛下載的憑證，以將憑證新增至金鑰鏈。
 
-15. 再次開啟**金鑰鏈存取**。 在右上方搜尋列中搜尋憑證的名稱，以找到憑證。 以滑鼠右鍵按一下項目來顯示功能表，然後按一下 [Get Info]\(取得資訊)  。 在範例畫面中，我們會使用開發憑證，而不是生產環境憑證。
+15. 再次開啟**金鑰鏈存取**。 在右上方搜尋列中搜尋憑證的名稱，以找到憑證。 以滑鼠右鍵按一下項目來顯示功能表，然後按一下 [Get Info] (取得資訊)  。 在範例畫面中，我們會使用開發憑證，而不是生產環境憑證。
 
     ![將憑證新增至金鑰鏈](./media/app-wrapper-prepare-ios/iOS-signing-cert-8.png)
 
@@ -191,7 +191,7 @@ ms.locfileid: "79345542"
 
 使用 App Wrapping Tool 時，可以搭配下列命令列參數：
 
-|屬性|用法|
+|屬性|使用方法|
 |---------------|--------------------------------|
 |**-i**|`<Path of the input native iOS application file>`。 檔案結尾必須是 .app 或 .ipa。 |
 |**-o**|`<Path of the wrapped output application>` |
@@ -213,7 +213,7 @@ ms.locfileid: "79345542"
 
 您可將所有命令引數放入 [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) 檔案，即可輕鬆執行應用程式包裝工具。 Plist 是一種類似於 XML 的檔案格式，可讓您透過表單介面輸入命令列引數。
 
-在 IntuneMAMPackager/Contents/MacOS 資料夾中，使用文字編輯器或 Xcode 開啟 `Parameters.plist` {空白的 plist 範本)。 為下列金鑰輸入您的引數︰
+在 IntuneMAMPackager/Contents/MacOS 資料夾中，使用文字編輯器或 Xcode 開啟 `Parameters.plist` {空白的 plist 範本)。 針對下列金鑰輸入您的引數︰
 
 | Plist 金鑰 | 類型 |  預設值 | 備忘錄 |
 |------------------|-----|--------------|-----|
@@ -225,7 +225,7 @@ ms.locfileid: "79345542"
 | ADAL 用戶端識別碼 |字串|empty| 與 -ac 相同|
 | ADAL 回覆 URI |字串|empty| 與 -ar 相同|
 | 啟用詳細資訊 |布林值|false| 與 -v 相同|
-| 移除缺少的權利 |布林值|false| 與 -c 相同|
+| 移除遺失的權利 |布林值|false| 與 -c 相同|
 | 防止預設的組建更新 |布林值|false| 相當於只使用 -b 而不使用引數|
 | 組建字串覆寫 |字串|empty| 已包裝的輸出應用程式的自訂 CFBundleVersion|
 | 包含 Citrix XenMobile App SDK (僅限網路的變化)|布林值|false| 與 -citrix 相同|
@@ -287,7 +287,7 @@ ms.locfileid: "79345542"
 |您指定的輸入應用程式未簽署。 請指定有效的已簽署應用程式。|應用程式包裝工具需要已簽署的應用程式。 請參閱您的開發人員文件，了解如何簽署已包裝的應用程式。|
 |您指定的輸入應用程式必須為 .ipa 或 .app 格式。|應用程式包裝工具只接受 .app 和 .ipa 副檔名。 請確定您的輸入檔副檔名有效，且已經編譯為 .app 或 .ipa 檔案。|
 |您指定的輸入應用程式已包裝，且是最新的原則範本版本。|App Wrapping Tool 不會使用最新的原則範本版本重新包裝現有已經包裝的應用程式。|
-|WARNING：未指定 SHA1 憑證雜湊。 請確定您的已包裝應用程式已經簽署，然後再部署。|請務必在 –c 命令列旗標後指定有效的 SHA1 雜湊。 |
+|警告：未指定 SHA1 憑證雜湊。 請確定您的已包裝應用程式已經簽署，然後再部署。|請務必在 –c 命令列旗標後指定有效的 SHA1 雜湊。 |
 
 ### <a name="collecting-logs-for-your-wrapped-applications-from-the-device"></a>從裝置收集已包裝應用程式的記錄檔
 使用下列步驟，在疑難排解期間取得已包裝應用程式的記錄檔。
@@ -327,7 +327,7 @@ App Wrapping Tool for iOS 必須滿足此工具的一些需求，才能發揮全
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>App Wrapping Tool for iOS 的支援功能
 
-|功能|說明|建議的指引|
+|功能|Description|建議的指引|
 |--------------|---------------|------------------------|
 |應用程式群組|使用 [應用程式群組] 可以讓多個應用程式同時存取共用容器，並允許應用程式之間進行其他處理序之間的通訊。<br /><br />若要啟用應用程式群組，請開啟 [功能]  窗格，然後按一下 [應用程式群組]  中的 [開啟]  。 您可以新增應用程式群組或選取現有的應用程式群組。|使用應用程式群組時，請使用反向 DNS 標記法：<br /><br />*group.com.companyName.AppGroup*|
 |背景模式|啟用 [背景模式] 可讓您的 iOS 應用程式繼續在背景中執行。||
@@ -366,7 +366,7 @@ App Wrapping Tool for iOS 必須滿足此工具的一些需求，才能發揮全
 
 若 App Wrapping Tool for iOS 顯示權利錯誤，請嘗試下列疑難排解步驟。
 
-|問題|原因|解決方案|
+|問題|原因|解決方法|
 |---------|---------|--------------|
 |無法剖析從輸入應用程式產生的權利。|App Wrapping Tool 無法讀取從應用程式解壓縮的權利檔案。 權利檔案的格式可能不正確。|檢查您應用程式的權利檔案。 下列指示說明其作法。 檢查權利檔案時，請檢查是否有任何格式不正確的語法。 檔案格式應該是 XML。|
 |佈建設定檔中遺失權利 (會列出遺失的權利)。 使用具有這些權利的佈建設定檔重新封裝應用程式。|在佈建設定檔中啟用的權利與在應用程式中啟用的功能不符。 與特定功能 (例如 [應用程式群組]、[金鑰鏈共用] 等等) 相關聯的識別碼也會不符。|一般而言，您可以建立新的佈建設定檔，並啟用與應用程式相同的功能。 當設定檔與應用程式之間的識別碼不符時，App Wrapping Tool 會更換識別碼 (如果可以)。 若在建立新的佈建設定檔之後繼續收到此錯誤，您可以嘗試使用 -e 參數移除應用程式的權利 (請參閱＜使用 -e 參數移除應用程式的權利＞一節)。|

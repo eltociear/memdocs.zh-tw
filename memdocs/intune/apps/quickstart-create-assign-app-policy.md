@@ -19,25 +19,25 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: fb8b5eae3c88664caff76da597fc3ab9111f989c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79343852"
 ---
-# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>快速入門：建立並指派應用程式保護原則
+# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>快速入門：建立並指派應用程式防護原則
 
 在此快速入門中，您將使用 Intune 建立應用程式防護原則，並將其指派給終端使用者裝置上的用戶端應用程式。 Intune 使用應用程式防護原則，以確認應用程式符合組織的資料保護需求。
 
 如果沒有 Intune 訂用帳戶，請[註冊免費試用帳戶](../fundamentals/free-trial-sign-up.md)。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 若要完成此快速入門，您必須[建立使用者](../fundamentals/quickstart-create-user.md)、[建立群組](../fundamentals/quickstart-create-group.md)、[註冊裝置](../enrollment/quickstart-setup-auto-enrollment.md)，然後[新增並指派應用程式](quickstart-add-assign-app.md)。
 
 ## <a name="sign-in-to-intune"></a>登入 Intune
 
-請以[全域管理員或 Intune 服務管理員](../fundamentals/users-add.md#types-of-administrators)身分登入 [Intune](https://aka.ms/intuneportal)。 如果您已建立 Intune 試用版訂閱，則用來建立訂閱的帳戶是全域管理員。
+請以[全域管理員或 Intune 服務管理員](https://aka.ms/intuneportal)身分登入 [Intune](../fundamentals/users-add.md#types-of-administrators)。 如果您已建立 Intune 試用版訂閱，則用來建立訂閱的帳戶是全域管理員。
 
 ## <a name="create-an-app-protection-policy"></a>建立應用程式保護原則
 
@@ -47,9 +47,9 @@ ms.locfileid: "79343852"
 2. 輸入下列詳細資料：
 
     - **名稱**：Windows 10 內容保護 
-    - **描述**：與此原則建立關聯的使用者將無法在已指派應用程式與裝置上其他非受控應用程式之間剪下、複製或貼上任何內容。 
+    - **描述**：與此原則建立關聯的使用者將無法在已指派應用程式與裝置上其他非受控應用程式之間剪下、複製或貼上任何內容  。
     - **平台**：*Windows 10*
-    - [註冊狀態]  ：已註冊 
+    - **註冊狀態**：使用註冊 
 
 3. 選取 [受保護的應用程式]  以選擇必須遵守此原則的應用程式。
 4. 按一下 [新增應用程式]  。
@@ -83,7 +83,7 @@ ms.locfileid: "79343852"
 
 在此快速入門中，您已建立並指派應用程式防護原則。 已指派此原則的應用程式使用者將無法在已指派應用程式與裝置上其他非受控應用程式之間剪下、複製或貼上任何內容。 此保護類型將協助保護組織的資料。 如需 Intune 應用程式防護原則的詳細資訊，請參閱[什麼是應用程式防護原則？](app-protection-policy.md)
 
-若要繼續參閱此 Intune 快速入門系列，請前往下一個快速入門。
+若要遵循此 Intune 快速入門系列，請繼續前往下一個快速入門。
 
 > [!div class="nextstepaction"]
 > [快速入門：建立並指派自訂角色](../fundamentals/create-custom-role.md)

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b855628807861651cb641a976870c841089ff13b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357775"
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>比較作為電腦或行動裝置來管理 Windows 電腦
@@ -35,7 +35,7 @@ ms.locfileid: "79357775"
 |--------------|-------------------------------|-------------------------------|
 |**作業系統** |Windows 10、Windows 8+、Windows 7、Windows Vista | Windows 10+ |
 |**Intune 入口網站支援** |[Silverlight 主控台](https://manage.microsoft.com)|[Azure 入口網站](https://portal.azure.com) |
-|**條件式存取**|無法使用|可用 <br>[什麼是條件式存取？](../protect/conditional-access.md)|
+|**條件存取**|無法使用|可用 <br>[什麼是條件式存取？](../protect/conditional-access.md)|
 |**大量註冊**|無法使用|可用 <br>[Windows 裝置的大量註冊](../enrollment/windows-bulk-enroll.md)|
 |**裝置設定檔**|無法使用|可用 <br>[什麼是 Microsoft Intune 裝置設定檔？](../configuration/device-profiles.md)|
 |**無代理程式註冊**|無法使用 |可用<br>[註冊 Windows 裝置](../enrollment/windows-enroll.md)|

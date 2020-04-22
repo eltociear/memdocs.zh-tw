@@ -1,5 +1,5 @@
 ---
-title: 我的 Intune 功能移到 Azure 中的哪個位置？
+title: 我的 Intune 功能已移至 Azure 中的哪個位置？
 titleSuffix: Microsoft Intune
 description: 協助您在 Azure 入口網站中尋找 Microsoft Intune 功能。
 keywords: ''
@@ -19,13 +19,13 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9fbf58b7ae035bbd7da15814787f283c7b80e13e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79355110"
 ---
-# <a name="where-did-my-intune-feature-go-in-azure"></a>我的 Intune 功能移到 Azure 中的哪個位置？
+# <a name="where-did-my-intune-feature-go-in-azure"></a>我的 Intune 功能已移至 Azure 中的哪個位置？
 當我們將 Intune 移到 Azure 入口網站時，我們藉此機會以更邏輯的方式來組織一些工作。 但每項改進都需要您學習新的組織。 此參考指南適用於已經十分熟悉傳統入口網站中 Intune，但是想知道 Azure 入口網站中 Intune 操作步驟的使用者。 如果本文未涵蓋您嘗試尋找的功能，請在本文結尾留下意見，以便我們可以進行更新。
 ## <a name="quick-reference-guide"></a>快速參考指南
 
@@ -52,7 +52,7 @@ Azure 入口網站中的 Intune 使用 [Azure Active Directory (AD)](https://doc
 
 ![傳統行動裝置註冊規則的影像](./media/ui-changes/01-classic-rules.png)
 
-這些規則會套用到您的 Intune 帳戶中的所有使用者，無一例外。 在 Azure 入口網站中，這些規則現在會出現在兩個不同的原則類型中：裝置類型限制和裝置限制。
+這些規則會套用到您的 Intune 帳戶中的所有使用者，無一例外。 在 Azure 入口網站中，這些規則現在會顯示在兩種不同的原則類型中：[裝置類型限制] 和 [裝置限制]。
 
 ![Azure 行動裝置註冊限制的影像](./media/ui-changes/02-azure-enroll-restrictions.png)
 

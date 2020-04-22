@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e4e917ca63bb671e8dfa46b280a4130051e75ef0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79342903"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>透過 Intune 軟體用戶端將 Windows 電腦做為電腦管理
@@ -51,7 +51,7 @@ Intune 使用軟體用戶端最多可支援將 7,000 部 Windows 電腦做為電
 
 |需求|更多資訊|
 |---------------|--------------------|
-|Network (網路)|用戶端要求電腦必須具有網際網路連線。|
+|網路|用戶端要求電腦必須具有網際網路連線。|
 |處理器和記憶體|請參考電腦作業系統的處理器和 RAM 需求。|
 |磁碟空間|安裝用戶端軟體之前需有 200 MB 的可用磁碟空間。|
 

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9a915ffc908c985b38533a362f2a17ec561ddf6f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79351236"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>使用 API 以針對 SCEP 將協力廠商 CA 新增至 Intune
@@ -100,7 +100,7 @@ SCEP 管理解決方案也包含報告。 系統管理員可以取得有關 SCEP
 
 ### <a name="java-library-api"></a>Java 程式庫 API
 
-Java 程式庫會實作為 Maven 專案，它會在建立時提取其相依性。 API 由 `IntuneScepServiceClient` 類別實作在 `com.microsoft.intune.scepvalidation` 命名空間下。
+Java 程式庫會實作為 Maven 專案，它會在建立時提取其相依性。 API 由 `com.microsoft.intune.scepvalidation` 類別實作在 `IntuneScepServiceClient` 命名空間下。
 
 #### <a name="intunescepserviceclient-class"></a>IntuneScepServiceClient 類別
 
@@ -115,7 +115,7 @@ IntuneScepServiceClient(
     Properties configProperties)
 ```
 
-描述:
+描述：
 
 具現化並設定 `IntuneScepServiceClient` 物件。
 
@@ -157,7 +157,7 @@ void ValidateRequest(
     String certificateRequest)
 ```
 
-描述:
+描述：
 
 驗證 SCEP 憑證要求。
 
@@ -194,7 +194,7 @@ void SendSuccessNotification(
     String certIssuingAuthority)
 ```
 
-描述:
+描述：
 
 通知 Intune 在處理 SCEP 要求的過程中建立了憑證。
 
@@ -233,7 +233,7 @@ void SendFailureNotification(
     String errorDescription)
 ```
 
-描述:
+描述：
 
 通知 Intune 在處理 SCEP 要求時發生錯誤。 不應該針對此類別的方法所擲回的例外狀況叫用這個方法。
 
@@ -267,7 +267,7 @@ void SetSslSocketFactory(
     SSLSocketFactory factory)
 ```
 
-描述:
+描述：
 
 使用這個方法來通知用戶端，它必須在與 Intune 通訊時，使用指定的 SSL 通訊端 Factory (而不是預設值)。
 
