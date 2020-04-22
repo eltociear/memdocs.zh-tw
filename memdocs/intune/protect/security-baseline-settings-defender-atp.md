@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a431ad92c285e1a2912e0f387ee5ea514e876ef
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 67f4d3c08cbad08464d488073c574babcc77dc61
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551759"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397504"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Intune 的 Microsoft Defender 進階威脅防護基準設定
 
@@ -133,7 +133,7 @@ ms.locfileid: "80551759"
     - **是** - Windows 不允許將任何資料寫入未受 BitLocker 保護的固定磁碟機。 若固定磁碟機未加密，則使用者必須先為磁碟機完成 BitLocker 安裝精靈，才能授與寫入權限。
 
   - **設定固定資料磁碟機的加密方法**  
-    CSP：[EncryptionMethodByDriveType](hhttps://go.microsoft.com/fwlink/?linkid=872526)  
+    CSP：[EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
     當 [BitLocker 固定磁碟機原則]  設定為 [設定]  時，即可使用此設定。
 
     設定固定資料磁碟機磁碟的加密方法和加密強度。 「XTS-AES 128 位元」  是 Windows 預設加密方法和建議值。
@@ -215,7 +215,7 @@ ms.locfileid: "80551759"
 ## <a name="device-installation"></a>裝置安裝
 
 - **依裝置識別碼的硬體裝置安裝**  
-  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](hhttps://go.microsoft.com/fwlink/?linkid=2066794)  
+  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](https://go.microsoft.com/fwlink/?linkid=2066794)  
   
   此原則設定可讓您針對 Windows 防止安裝的裝置，指定隨插即用硬體識別碼與相容識別碼的清單。 此原則設定優先於任何其他允許 Windows 安裝裝置的原則設定。  如果您在遠端桌面伺服器上啟用此原則設定，此原則設定會影響指定裝置從遠端桌面用戶端到遠端桌面伺服器的重新導向。
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/25/2020
+ms.date: 04/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c6c8b9d964355b1c08756fc2026a87e30bc7297
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 63ffda60d00c1a386eb65d851563c911957c0acd
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551519"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615710"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Intune 中的 macOS 裝置功能設定
 
@@ -82,9 +82,6 @@ Intune 包含的內建設定可在 macOS 裝置上自訂功能。 例如，系�
   新增任何應用程式、資料夾或檔案時，請務必輸入正確的路徑。 並非所有項目都位於 `Applications` 資料夾。 如果使用者將項目從某個位置移至另一個位置，則路徑會變更。 這個已移動的項目並不會在使用者登入時開啟。
 
 - **對使用者設定隱藏**：[隱藏]  不顯示使用者和群組登入項目清單中的應用程式。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 會顯示在登入使用者和群組登入項目清單時所啟動，但核取了隱藏選項的項目。
-
-  > [!NOTE]
-  > 此設定會在接下來幾週內向所有客戶推出。
 
 ## <a name="login-window"></a>登入視窗
 

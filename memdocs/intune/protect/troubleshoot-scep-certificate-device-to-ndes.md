@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55660497751f1961c9c579ba1d800900189db782
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 934e2283fec0cd68ea5b72f092fb6dcac6f3fe4c
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526456"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81379641"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>在 Microsoft Intune 中針對 SCEP 憑證設定檔的裝置對 NDES 伺服器通訊進行疑難排解
 
@@ -298,7 +298,7 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 `This page can't be displayed`
 
-- **原因**：此問題會在應用程式 Proxy 設定中的 SCEP 外部 URL 不正確時發生。 此 URL 的範例為 https://contoso.com/certsrv/mscep/mscep.dll 。
+- **原因**：此問題會在應用程式 Proxy 設定中的 SCEP 外部 URL 不正確時發生。 此 URL 的範例為 `https://contoso.com/certsrv/mscep/mscep.dll`。
 
   **解決方案**：在應用程式 Proxy 設定中，針對 SCEP 外部 URL 使用預設網域 *yourtenant.msappproxy.net*。
 

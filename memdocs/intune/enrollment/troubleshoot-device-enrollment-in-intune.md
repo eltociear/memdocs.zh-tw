@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af60c91e52bcee643166729f3a3ac57ae232c4d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ac29e27c85ad43ccc078c54dd9d5b8b659206f57
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327001"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397759"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>針對 Microsoft Intune 中的裝置註冊進行疑難排解
 
@@ -237,7 +237,7 @@ Samsung Smart Manager 軟體 (隨附於某些 Samsung 裝置上) 可能會停用
 
 下列步驟僅描述數種可用來驗證憑證是否正確安裝之方法和工具的其中一種。
 
-1. 移至[免費的 Digicert 工具](ttps://www.digicert.com/help/)。
+1. 移至[免費的 Digicert 工具](https://www.digicert.com/help/)。
 2. 輸入 AD FS 伺服器的完整網域名稱 (例如，sts.contoso.com) 並選取 [檢查伺服器]  。
 
 如果伺服器憑證已正確安裝，您就會在結果中看到所有核取記號。 如果上述問題存在，則會看到報告的 "Certificate Name Matches" 和 "SSL Certificate is correctly Installed" 區段中有紅色的 X。
