@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 285144e42f2a029bf2d24b96493c54922727d6dc
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80407653"
 ---
 # <a name="microsoft-intune-windows-phone-81-device-restriction-settings"></a>Microsoft Intune Windows Phone 8.1 裝置限制設定
@@ -52,7 +52,7 @@ ms.locfileid: "80407653"
   - **簡單密碼**：[封鎖]  會防止使用者建立簡單密碼，例如 `1234` 或 `1111`。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。
   - **登入失敗幾次後即抹除裝置**：輸入抹除裝置前允許的密碼錯誤次數。
   - **停止活動最多幾分鐘後鎖定螢幕**：輸入裝置必須閒置多久，螢幕才會自動鎖定。 例如，輸入 `5` 會在閒置 5 分鐘後鎖定裝置。 當設定為 [未設定]  或保留空白時，Intune 不會變更或更新此設定。
-  - **密碼到期 (天數)** ：輸入裝置必須變更密碼的天數，從 1 到 255。 例如，輸入 `90`，密碼會在 90 天後到期。 當此值為空白時，Intune 不會變更或更新此設定。
+  - **密碼到期 (天數)** ：輸入裝置密碼的有效期限，從 1 到 255 天。 例如，輸入 `90`，密碼會在 90 天後到期。 當此值為空白時，Intune 則不會變更或更新此設定。
   - **避免重複使用以前用過的密碼**：輸入不得重複使用的舊密碼，從 1 到 24。 列如，輸入 `5` 讓使用者無法將新密碼設定為其目前密碼或之前使用過的四個密碼之一。 當此值為空白時，Intune 不會變更或更新此設定。
 - **加密**：[需要]  會要求裝置必須加密，包括檔案。 並非所有裝置都支援加密。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 若要設定此設定並正確報告合規性，也請設定：
   - **需要密碼**：設定為 [需要]  。

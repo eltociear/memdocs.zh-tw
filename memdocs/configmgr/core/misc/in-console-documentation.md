@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2bf2ceae88ed775ff53324f007567a4677832805
-ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
+ms.openlocfilehash: 39331a7ab4a512e449770179af4b04f4c52bec73
+ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80658122"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81668238"
 ---
 <!-- 
 - Feature 1357546
@@ -113,4 +113,4 @@ ms.locfileid: "80658122"
 - [KB 4552181 Configuration Manager 最新分支 (1910 版) 中的內容發佈延遲](https://support.microsoft.com/help/4552181) \(英文\)
 - [KB 4550023 在 Windows 10 就地升級復原之後，Configuration Manager 就地升級工作順序未繼續](https://support.microsoft.com/help/4550023) \(部分機器翻譯\)
 
-若要訂閱新的 Configuration Manager 支援文章的 Atom 或 RSS 通知，請參閱[支援的內容更新](https://support.microsoft.com/help/4089498/)並選取 [Microsoft Endpoint Configuration Manager]  。
+若要訂閱新的 Configuration Manager 支援文章的 Atom 或 RSS 通知，請參閱[支援的內容更新](https://support.microsoft.com/help/4089498/)並選取 [Microsoft Endpoint Configuration Manager]  。  

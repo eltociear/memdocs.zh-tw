@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 36e17dc12622b3bb95c35a4472556f1c4f31ccd0
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80087019"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>在 Intune 中設定電子郵件、驗證及同步處理的 Android 裝置設定
@@ -45,7 +45,7 @@ ms.locfileid: "80087019"
     - **使用者網域名稱來源**：選擇 [AAD]  (Azure Active Directory) 或 [自訂]  。
 
       選擇要從 [AAD]  取得屬性時，請輸入：
-      - **AAD 中的使用者網域名稱屬性**：選擇以取得使用者的 [完整網域名稱]  或 [NetBIOS 名稱]  屬性。
+      - **AAD 中的使用者網域名稱屬性**：選擇取得使用者的 [完整網域名稱]  或 [NetBIOS 名稱]  屬性。
 
       選擇使用 [自訂]  屬性時，請輸入：
       - **要使用的自訂網域名稱**：輸入 Intune 用於網域名稱的值，例如 `contoso.com` 或 `contoso`。

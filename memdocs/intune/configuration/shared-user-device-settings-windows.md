@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c76045413324deef395f546033d37ec47405a28f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79361584"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>使用 Intune 管理共用裝置的 Windows 10 及更新版本設定

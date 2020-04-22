@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 04bc86ff697ed7083cacd552cbf9ebe5096a228c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326875"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>針對 Microsoft Intune 中的 Windows 裝置註冊問題進行疑難排解
@@ -41,7 +41,7 @@ ms.locfileid: "80326875"
 - 有多少使用者受到影響？ 所有使用者都受到影響，還是只有部分使用者受到影響？
 - 有多少裝置受到影響？ 所有裝置都受到影響，還是只有部分裝置受到影響？
 - 什麼是 MDM 授權單位？
-- 如何執行註冊？ 是「攜帶您自己的裝置」(BYOD)，還是使用註冊設定檔的 Apple 自動裝置註冊 (ADE)？
+- 如何執行註冊？ 使用「攜帶您自己的裝置」(BYOD)，或使用註冊設定檔的 Apple 自動裝置註冊 (ADE)？
 
 ## <a name="error-messages"></a>錯誤訊息
 

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4afc27680c464f67756340ebcb0958887ae6f795
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80407863"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Intune 中的 Android 與 Samsung Knox Standard 裝置限制設定
@@ -36,7 +36,7 @@ ms.locfileid: "80407863"
 
 ## <a name="general"></a>一般
 
-- **相機**：[封鎖]  可防止存取裝置相機。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 會允許存取裝置相機。
+- **相機**：[封鎖]  會防止存取裝置相機。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 會允許存取裝置相機。
 
   Intune 只管理裝置相機的存取權。 無權存取圖片或影片。
 
@@ -58,7 +58,7 @@ ms.locfileid: "80407863"
 
 ## <a name="password"></a>密碼
 
-- **密碼**：使用者**必須**輸入密碼，才能存取裝置。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 會允許使用者不用輸入密碼即可存取裝置。
+- **密碼**：[需要]  會要求使用者必須輸入密碼，才能存取裝置。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 會允許使用者不用輸入密碼即可存取裝置。
 
     > [!NOTE]
     > Samsung Knox 裝置在 MDM 註冊期間會自動要求 4 位數的 PIN。 原生 Android 裝置可能會自動要求 PIN，以符合條件式存取。
@@ -69,7 +69,7 @@ ms.locfileid: "80407863"
   在裝置上，使用者無法在設定檔中設定大於已設定時間的時間值。 使用者可以設定較低的時間值。 例如，如果設定檔設定為 `15` 分鐘，則使用者可以將值設定為 5 分鐘。 使用者無法將值設定為 30 分鐘。
 
 - **登入失敗幾次後即抹除裝置**：輸入抹除裝置的密碼錯誤次數：4-11。 `0` (零) 可停用裝置抹除功能。 當此值為空白時，Intune 不會變更或更新此設定。
-- **密碼到期 (天數)** ：輸入裝置密碼必須變更的天數，介於 1-365 之間。 例如，輸入 `90`，密碼會在 90 天後到期。 密碼到期時，系統會提示使用者建立新的密碼。 當此值為空白時，Intune 不會變更或更新此設定。
+- **密碼到期 (天數)** ：輸入裝置密碼必須在多少天後變更，介於 1-365 之間。 例如，輸入 `90`，密碼會在 90 天後到期。 密碼到期時，系統會提示使用者建立新的密碼。 當此值為空白時，Intune 不會變更或更新此設定。
 - **必要的密碼類型**：輸入所需的密碼複雜性等級，以及是否可以使用生物識別裝置。 選項包括：
   - **裝置預設**
   - **低安全性生物識別**：[比較強式與弱式生物特徵辨識](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) \(英文\) (開啟 Android 的網站)

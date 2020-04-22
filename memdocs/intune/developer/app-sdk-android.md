@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 71d5efbf8b61c08e9a2edbc5312c61279571339e
-ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80620553"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK for Android 開發人員指南
@@ -1315,7 +1315,7 @@ public static void setUIPolicyIdentity(final Context context, final String ident
 
 應用程式應先確保身分識別順利切換，再顯示或使用公司資料。 目前，處理序和執行緒身分識別切換在啟用多身分識別的應用程式上一直都很成功，但我們保留新增失敗狀況的權利。 UI 身分識別切換如果與執行緒身分識別發生衝突，或是使用者將條件式啟動需求取消 (例如按下 PIN 畫面的 [上一步] 按鈕)，則 UI 身分識別切換可能會因無效引數而失敗。 當活動切換 UI 身分識別失敗時，預設行為是完成該項活動 (請參閱下方的 `onSwitchMAMIdentityComplete`)。
 
-若是透過 `setUIPolicyIdentity` 設定 `Context` 身分識別，則會以非同步方式報告結果。 如果 `Context` 是 `Activity`，在執行條件式啟動之前 (可能需要使用者輸入 PIN 或公司認證)，SDK 將無法得知身分識別變更是否成功。 應用程式可能會實作 `MAMSetUIIdentityCallback` 以接收此結果，也可能會為回呼物件傳遞 null。 請注意，若是呼叫 `setUIPolicyIdentity`，而前一次呼叫相同內容中之 `setUIPolicyIdentity`  的結果尚未傳遞，新的回呼將會取代舊的回呼，而且原始回呼將永遠不會收到結果。
+若是透過 `setUIPolicyIdentity` 設定 `Context` 身分識別，則會以非同步方式報告結果。 如果 `Context` 是 `Activity`，在執行條件式啟動之前 (可能需要使用者輸入 PIN 或公司認證)，SDK 將無法得知身分識別變更是否成功。 應用程式可能會實作 `MAMSetUIIdentityCallback` 以接收此結果，也可能會為回呼物件傳遞 null。 請注意，若是呼叫 `setUIPolicyIdentity`，而前一次呼叫相同內容中之 `setUIPolicyIdentity` 的結果尚未傳遞，新的回呼將會取代舊的回呼，而且原始回呼將永遠不會收到結果。
 
 ```java
     public interface MAMSetUIIdentityCallback {

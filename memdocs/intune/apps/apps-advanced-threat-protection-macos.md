@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8707b938231e682fe1cd165c207cca8e575950d4
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324665"
 ---
 # <a name="add-microsoft-defender-atp-to-macos-devices-using-microsoft-intune"></a>使用 Microsoft Intune 將 Microsoft Defender ATP 新增至 macOS 裝置

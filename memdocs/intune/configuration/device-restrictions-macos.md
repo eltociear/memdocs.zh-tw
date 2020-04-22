@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 50dd3d245b9a89836e3858d71a7ad124189e0973
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80407856"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>使用 Intune 來允許或限制功能的 macOS 裝置設定
@@ -116,7 +116,7 @@ ms.locfileid: "80407856"
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>設定適用於：裝置註冊與自動裝置註冊
 
 - **封鎖 Safari 自動填滿**：[封鎖]  會停用裝置上 Safari 中的 [自動填滿] 功能。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會允許使用者變更網頁瀏覽器中的自動完成設定。
-- **封鎖相機**：[封鎖]  會防止存取裝置上的相機。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會允許存取裝置相機。
+- **封鎖相機**：[封鎖]  會防止存取裝置上的相機。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 會允許存取裝置相機。
 
   Intune 只管理裝置相機的存取權。 無權存取圖片或影片。
 

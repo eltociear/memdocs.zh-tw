@@ -16,10 +16,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c156e0d1b627d285c6654994d6114920f86b2bab
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80488057"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>在 Intune 中管理 Windows 10 軟體更新
