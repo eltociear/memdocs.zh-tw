@@ -1,0 +1,68 @@
+### YamlMime:Landing
+title: 應用程式管理文件
+summary: 使用 Configuration Manager 管理及部署應用程式、指令碼與套件。 自動執行部署，或讓使用者從軟體中心安裝應用程式。
+metadata:
+  title: 應用程式管理文件
+  titleSuffix: Configuration Manager
+  description: 使用 Configuration Manager 管理及部署應用程式、指令碼與套件。 自動執行部署，或讓使用者從軟體中心安裝應用程式。
+  ms.prod: configuration-manager
+  ms.technology: configmgr-app
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 7fccbe98c6199543554b48f28325b6531d0092c3
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81740893"
+landingContent:
+- title: 關於應用程式管理
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 應用程式管理簡介
+      url: understand/introduction-to-application-management.md
+    - text: 規劃應用程式管理
+      url: plan-design/plan-for-and-configure-application-management.md
+    - text: 針對軟體中心進行規劃
+      url: plan-design/plan-for-software-center.md
+  - linkListType: tutorial
+    links:
+    - text: 建立及部署應用程式
+      url: get-started/create-and-deploy-an-application.md
+- title: 開始使用
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 建立應用程式
+      url: deploy-use/create-applications.md
+    - text: 建立並執行 PowerShell 指令碼
+      url: deploy-use/create-deploy-scripts.md
+  - linkListType: deploy
+    links:
+    - text: 部署應用程式
+      url: deploy-use/deploy-applications.md
+    - text: 部署及更新 Microsoft Edge
+      url: deploy-use/deploy-edge.md
+- title: 熱門工作
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 建立應用程式群組
+      url: deploy-use/create-app-groups.md
+    - text: 核准應用程式
+      url: deploy-use/app-approval.md
+    - text: 為裝置安裝應用程式
+      url: deploy-use/install-app-for-device.md
+    - text: 使用者裝置親和性
+      url: deploy-use/link-users-and-devices-with-user-device-affinity.md
+    - text: 使用軟體計量監視應用程式使用量
+      url: deploy-use/monitor-app-usage-with-software-metering.md
+  - linkListType: reference
+    links:
+    - text: 針對應用程式部署進行疑難排解
+      url: understand/app-deployment-technical-reference.md
+    - text: 封裝和程式
+      url: deploy-use/packages-and-programs.md

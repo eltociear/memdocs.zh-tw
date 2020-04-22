@@ -1,0 +1,54 @@
+- name: 共同管理文件
+  href: index.yml
+- name: 概觀
+  items:
+    - name: 什麼是共同管理？
+      href: overview.md
+- name: 快速入門
+  items:
+    - name: 快速入門檢視
+      href: quickstarts.md
+    - name: 立即運算值
+      items:
+        - name: 條件式存取
+          href: quickstart-conditional-access.md
+        - name: 來自 Intune 的遠端動作
+          href: quickstart-remote-actions.md
+        - name: 用戶端健康情況
+          href: quickstart-client-health.md
+        - name: 混合式 Azure AD
+          href: quickstart-hybrid-aad.md
+        - name: Windows Autopilot
+          href: quickstart-autopilot.md
+    - name: 開始使用
+      items:
+        - name: 共同管理的路徑
+          href: quickstart-paths.md
+        - name: 設定混合式 Azure AD
+          href: quickstart-setup-hybrid-aad.md
+        - name: 升級到 Windows 10
+          href: quickstart-upgrade-win10.md
+        - name: 從 FastTrack 取得協助
+          href: quickstart-fasttrack.md
+- name: 教學課程
+  items:
+    - name: 針對設定管理員用戶端啟用共同管理
+      href: tutorial-co-manage-clients.md
+    - name: 為網際網路型裝置啟用共同管理
+      href: tutorial-co-manage-new-devices.md
+- name: 概念
+  items:
+    - name: 工作負載
+      href: workloads.md
+    - name: 第三方 MDM 共存
+      href: coexistence.md
+- name: 操作指南
+  items:
+    - name: 啟用共同管理
+      href: how-to-enable.md
+    - name: 準備網際網路型裝置
+      href: how-to-prepare-Win10.md
+    - name: 將工作負載切換到 Intune
+      href: how-to-switch-workloads.md
+    - name: 監視共同管理
+      href: how-to-monitor.md

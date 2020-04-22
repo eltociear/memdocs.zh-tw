@@ -1,0 +1,56 @@
+### YamlMime:Landing
+title: 共同管理文件
+summary: 共同管理可讓您使用 Configuration Manager 與 Microsoft Intune 同時管理多部 Windows 10 裝置。
+metadata:
+  title: 共同管理文件
+  titleSuffix: Configuration Manager
+  description: 共同管理可讓您使用 Configuration Manager 與 Microsoft Intune 同時管理多部 Windows 10 裝置。
+  ms.product: configuration-manager
+  ms.technology: configmgr-comanage
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+  ms.openlocfilehash: bc1bf65ecaf77ded325fcdae19a0d318052b1cc9
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81740995"
+landingContent:
+- title: 關於共同管理
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 什麼是共同管理？
+      url: overview.md
+    - text: 共同管理的路徑
+      url: quickstart-paths.md
+  - linkListType: video
+    links:
+    - text: 搭配共同管理的條件式存取
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/The-Security-Benefits-of-Conditional-Access/player
+- title: 開始使用
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: 針對現有 Configuration Manager 用戶端啟用共同管理
+      url: tutorial-co-manage-clients.md
+    - text: 為新的網際網路型裝置啟用共同管理
+      url: tutorial-co-manage-new-devices.md
+  - linkListType: video
+    links:
+    - text: 升級為 Windows 10 以進行共同管理
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/Upgrading-to-Windows-10-to-Enable-Co-Management/player
+- title: 熱門工作
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 將 Configuration Manager 工作負載切換至 Intune
+      url: how-to-switch-workloads.md
+    - text: 在 Configuration Manager 中監視共同管理
+      url: how-to-monitor.md
+  - linkListType: video
+    links:
+    - text: 搭配共同管理的 Windows Autopilot
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/Using-Windows-Autopilot-with-Co-Management/player

@@ -1,0 +1,8 @@
+- name: 租用戶附加文件
+  href: index.yml
+- name: 部署和使用
+  items:
+    - name: 啟用租用戶附加
+      href: device-sync-actions.md
+    - name: 針對裝置動作進行疑難排解
+      href: technical-reference.md

@@ -1,0 +1,66 @@
+### YamlMime:Landing
+title: 軟體更新管理文件
+summary: Configuration Manager 可協助您管理有關追蹤及套用軟體更新至組織中用戶端的複雜工作。
+metadata:
+  title: 軟體更新管理文件
+  titleSuffix: Configuration Manager
+  description: Configuration Manager 可協助您管理有關追蹤及套用軟體更新至組織內用戶端的複雜工作。
+  ms.product: configuration-manager
+  ms.technology: configmgr-sum
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+  ms.openlocfilehash: aa421de09ee69713097a5efe78b0a9b2a1a71856
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741165"
+landingContent:
+- title: 關於軟體更新管理
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 軟體更新簡介
+      url: understand/software-updates-introduction.md
+    - text: 部署及監視每月軟體更新的範例
+      url: deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md
+  - linkListType: architecture
+    links:
+    - text: 規劃軟體更新
+      url: plan-design/plan-for-software-updates.md
+    - text: 軟體更新的最佳作法
+      url: plan-design/software-updates-best-practices.md
+- title: 開始使用
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: 安裝軟體更新點
+      url: get-started/install-a-software-update-point.md
+    - text: 設定分類和產品
+      url: get-started/configure-classifications-and-products.md
+    - text: 同步處理軟體更新
+      url: get-started/synchronize-software-updates.md
+  - linkListType: how-to-guide
+    links:
+    - text: 自動部署軟體更新
+      url: deploy-use/automatically-deploy-software-updates.md
+    - text: 監視軟體更新
+      url: deploy-use/monitor-software-updates.md
+- title: 熱門工作
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 管理 Office 365 ProPlus 更新
+      url: deploy-use/manage-office-365-proplus-updates.md
+    - text: 啟用協力廠商更新
+      url: deploy-use/third-party-software-updates.md
+    - text: 管理軟體更新的設定
+      url: get-started/manage-settings-for-software-updates.md
+  - linkListType: concept
+    links:
+    - text: 將 Windows 10 更新傳遞最佳化
+      url: deploy-use/optimize-windows-10-update-delivery.md
+    - text: 軟體更新維護
+      url: deploy-use/software-updates-maintenance.md

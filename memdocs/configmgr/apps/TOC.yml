@@ -1,0 +1,126 @@
+- name: 應用程式管理文件
+  href: index.yml
+- name: 了解及探索
+  items:
+    - name: 簡介
+      href: understand/introduction-to-application-management.md
+- name: 開始使用
+  items:
+    - name: 建立和部署應用程式
+      href: get-started/create-and-deploy-an-application.md
+- name: 規劃和設計
+  items:
+    - name: 規劃和設定應用程式管理
+      href: plan-design/plan-for-and-configure-application-management.md
+    - name: 針對軟體中心進行規劃
+      href: plan-design/plan-for-software-center.md
+    - name: 安全性和隱私權
+      href: plan-design/security-and-privacy-for-application-management.md
+- name: 部署和使用
+  items:
+    - name: 建立應用程式
+      href: deploy-use/create-applications.md
+      items:
+        - name: 建立 Mac 電腦應用程式
+          href: get-started/creating-mac-computer-applications.md
+        - name: 建立 Windows 應用程式
+          href: get-started/creating-windows-applications.md
+        - name: 建立 Linux 和 UNIX 伺服器應用程式
+          href: get-started/creating-linux-and-unix-server-applications.md
+        - name: 建立 Windows Embedded 應用程式
+          href: get-started/creating-windows-embedded-applications.md
+        - name: 建立全域條件
+          href: deploy-use/create-global-conditions.md
+        - name: 建立應用程式群組
+          href: deploy-use/create-app-groups.md
+        - name: 封裝和程式
+          href: deploy-use/packages-and-programs.md
+        - name: 套件定義檔
+          href: deploy-use/package-definition-files.md
+    - name: 部署應用程式
+      items:
+        - name: 部署應用程式
+          href: deploy-use/deploy-applications.md
+        - name: 建立階段式部署
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+        - name: 核准應用程式
+          href: deploy-use/app-approval.md
+        - name: 為裝置安裝應用程式
+          href: deploy-use/install-app-for-device.md
+        - name: 共用應用程式
+          href: deploy-use/share-applications.md
+        - name: 模擬應用程式部署
+          href: deploy-use/simulate-application-deployments.md
+        - name: 部署 Microsoft Edge 77 版與更新版本
+          href: deploy-use/deploy-edge.md
+        - name: 部署 App-V 虛擬應用程式
+          href: get-started/deploying-app-v-virtual-applications.md
+        - name: 應用程式部署的疑難排解提示
+          href: deploy-use/troubleshoot-application-deployment.md
+    - name: 監視應用程式
+      items:
+        - name: 從主控台監視應用程式
+          href: deploy-use/monitor-applications-from-the-console.md
+        - name: 管理和監視階段式部署
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+        - name: 使用軟體計量監視應用程式使用量
+          href: deploy-use/monitor-app-usage-with-software-metering.md
+    - name: 管理應用程式
+      items:
+        - name: 管理工作
+          href: deploy-use/management-tasks-applications.md
+        - name: 使用者裝置親和性
+          href: deploy-use/link-users-and-devices-with-user-device-affinity.md
+        - name: 商務用與教育用 Microsoft Store
+          href: deploy-use/manage-apps-from-the-windows-store-for-business.md
+        - name: App-V 虛擬環境
+          href: deploy-use/create-app-v-virtual-environments.md
+        - name: 匯入和匯出應用程式
+          href: deploy-use/import-export-applications.md
+    - name: 更新和淘汰應用程式
+      items:
+        - name: 更新和淘汰應用程式
+          href: deploy-use/update-and-retire-applications.md
+        - name: 修改和取代應用程式
+          href: deploy-use/revise-and-supersede-applications.md
+        - name: 解除安裝應用程式
+          href: deploy-use/uninstall-applications.md
+    - name: 執行和管理指令碼
+      href: deploy-use/create-deploy-scripts.md
+      items:
+        - name: 了解 PowerShell 指令碼安全性
+          href: deploy-use/learn-script-security.md
+    - name: Package Conversion Manager
+      items:
+        - name: 套件轉換管理員計劃
+          href: pcm/package-conversion-manager.md
+        - name: 如何分析和轉換套件
+          href: pcm/how-to-analyze-and-convert.md
+- name: 疑難排解
+  items:
+    - name: 針對應用程式部署進行疑難排解
+      items:
+        - name: 開始之前
+          href: understand/app-deployment-technical-reference.md
+        - name: 應用程式部署原則
+          href: understand/deployment-policy-technical-reference.md
+        - name: 裝置的應用程式部署
+          href: understand/device-deployment-technical-reference.md
+        - name: 使用者的應用程式部署
+          href: understand/user-deployment-technical-reference.md
+        - name: 應用程式部署用戶端元件
+          href: understand/client-components-technical-reference.md
+        - name: 應用程式評估
+          href: understand/deployment-evaluation-technical-reference.md
+        - name: 應用程式下載
+          href: understand/deployment-download-technical-reference.md
+        - name: 應用程式安裝
+          href: understand/deployment-install-technical-reference.md
+    - name: 針對商務用與教育用 Microsoft Store 整合進行疑難排解
+      href: deploy-use/troubleshoot-microsoft-store-for-business-integration.md
+    - name: 針對套件轉換管理員進行疑難排解
+      items:
+        - name: 針對套件轉換管理員進行疑難排解
+          href: pcm/troubleshoot-pcm.md
+        - name: 套件轉換管理員的錯誤訊息
+          href: pcm/error-messages.md

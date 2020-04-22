@@ -1,0 +1,7 @@
+- name: Configuration Manager
+  tocHref: /azure/azure-monitor/
+  topicHref: /sccm/index
+  items:
+    - name: 核心基礎結構
+      tocHref: /azure/azure-monitor/platform/
+      topicHref: /sccm/core/understand/introduction

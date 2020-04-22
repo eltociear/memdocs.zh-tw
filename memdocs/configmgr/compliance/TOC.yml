@@ -1,0 +1,62 @@
+- name: 裝置合規性文件
+  href: index.yml
+- name: 了解及探索
+  items:
+    - name: 確定裝置的相容性
+      href: understand/ensure-device-compliance.md
+- name: 開始使用
+  items:
+    - name: 開始使用合規性設定
+      href: get-started/get-started-with-compliance-settings.md
+- name: 規劃和設計
+  items:
+    - name: 規劃和設定合規性設定
+      href: plan-design/plan-for-and-configure-compliance-settings.md
+    - name: 管理合規性的工作
+      items:
+        - name: 管理合規性的一般工作
+          href: plan-design/common-tasks-for-managing-compliance.md
+        - name: 使用 Configuration Manager 用戶端的裝置
+          href: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
+        - name: 建立和部署設定基準
+          href: plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md
+    - name: 安全性和隱私權
+      href: plan-design/security-and-privacy-for-compliance-settings.md
+- name: 部署和使用
+  items:
+    - name: 建立設定項目
+      items:
+        - name: 建立設定項目群組概觀
+          href: deploy-use/create-configuration-items.md
+        - name: 使用 Configuration Manager 用戶端所管理的裝置
+          items:
+            - name: Windows 10
+              href: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
+            - name: Mac OS X
+              href: deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md
+            - name: Windows 桌面和伺服器 (自訂)
+              href: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
+    - name: 建立子設定項目
+      href: deploy-use/create-child-configuration-items.md
+    - name: 建立設定基準
+      href: deploy-use/create-configuration-baselines.md
+    - name: 部署設定基準
+      href: deploy-use/deploy-configuration-baselines.md
+    - name: 管理設定資料
+      items:
+        - name: 管理設定資料
+          href: deploy-use/management-tasks-for-configuration-data.md
+        - name: 匯入設定資料
+          href: deploy-use/import-configuration-data.md
+    - name: 建立使用者資料和設定檔設定項目
+      href: deploy-use/create-user-data-and-profiles-configuration-items.md
+    - name: 商務用 OneDrive 設定檔
+      href: deploy-use/onedrive-profile.md
+    - name: 建立遠端連線設定檔
+      href: deploy-use/create-remote-connection-profiles.md
+    - name: 將 Windows 裝置升級至新版本
+      href: deploy-use/upgrade-windows-version.md
+    - name: 設定 Microsoft Edge 設定
+      href: deploy-use/browser-profiles.md
+    - name: 監視合規性設定
+      href: deploy-use/monitor-compliance-settings.md

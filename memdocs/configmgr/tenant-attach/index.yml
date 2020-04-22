@@ -1,0 +1,30 @@
+### YamlMime:Landing
+title: 租用戶附加文件
+summary: 將您的 Configuration Manager 裝置上傳至雲端服務，並對其採取動作。
+metadata:
+  title: 租用戶附加文件文件
+  titleSuffix: Configuration Manager
+  description: 將您的 Configuration Manager 裝置上傳至雲端服務，並對其採取動作。
+  ms.product: configuration-manager
+  ms.technology: configmgr-core
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 04/01/2020
+  ms.openlocfilehash: 282a213e680231ad1d88323f8a4e34380e58672d
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741352"
+landingContent:
+- title: 關於租用戶附加
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 啟用租用戶附加
+      url: device-sync-actions.md
+  - linkListType: reference
+    links:
+    - text: 針對租用戶附加進行疑難排解
+      url: technical-reference.md

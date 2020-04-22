@@ -1,0 +1,879 @@
+- name: 核心基礎結構文件
+  href: index.yml
+- name: 了解及探索
+  items:
+    - name: 什麼是 Configuration Manager？
+      href: understand/introduction.md
+    - name: Microsoft Endpoint Configuration Manager 常見問題集
+      href: understand/microsoft-endpoint-manager-faq.md
+    - name: SCCM 發生什麼事了？
+      href: understand/what-happened-to-sccm.md
+    - name: 簡介
+      items:
+        - name: 尋找 Configuration Manager 的說明
+          href: understand/find-help.md
+        - name: 如何使用 Docs
+          href: understand/use-docs.md
+        - name: 如何使用主控台
+          href: servers/manage/admin-console.md
+        - name: 協助工具功能
+          href: understand/accessibility-features.md
+        - name: 軟體中心使用者指南
+          href: understand/software-center.md
+    - name: 基本概念
+      items:
+        - name: Configuration Manager 基本概念
+          href: understand/fundamentals.md
+        - name: 站台和階層
+          href: understand/fundamentals-of-sites-and-hierarchies.md
+        - name: 關於升級、更新及安裝
+          href: understand/upgrade-update-install.md
+        - name: 管理裝置
+          href: understand/fundamentals-of-managing-devices.md
+        - name: 用戶端管理
+          href: understand/fundamentals-of-client-management-tasks.md
+        - name: 安全性
+          href: understand/fundamentals-of-security.md
+        - name: 以角色為基礎的系統管理
+          href: understand/fundamentals-of-role-based-administration.md
+    - name: Configuration Manager 與 Windows 即服務
+      href: understand/configuration-manager-and-windows-as-service.md
+    - name: 使用雲端服務
+      items:
+        - name: 雲端服務概觀
+          href: understand/use-cloud-services.md
+        - name: Azure 上的 Configuration Manager
+          href: understand/configuration-manager-on-azure.md
+    - name: 站台大小與效能常見問題集
+      href: understand/site-size-performance-faq.md
+    - name: 產品與授權的常見問題集
+      href: understand/product-and-licensing-faq.md
+    - name: 我應該使用哪個 Configuration Manager 分支？
+      href: understand/which-branch-should-i-use.md
+    - name: 授權與分支
+      href: understand/learn-more-editions.md
+    - name: 延伸互通性用戶端
+      href: understand/interoperability-client.md
+    - name: 長期維護分支
+      items:
+        - name: 長期維護通道概觀
+          href: understand/introduction-to-the-ltsb.md
+        - name: LTSB 的支援設定
+          href: understand/supported-configurations-for-ltsb.md
+        - name: 安裝 LTSB
+          href: understand/install-the-ltsb.md
+        - name: 管理 LTSB
+          href: understand/manage-the-ltsb.md
+        - name: 將 LTSB 升級至最新分支
+          href: understand/convert-to-current-branch.md
+- name: 規劃和設計
+  items:
+    - name: 準備開始使用 Configuration Manager
+      href: plan-design/get-ready.md
+    - name: 產品變更
+      items:
+        - name: 特色與功能
+          href: plan-design/changes/features-and-capabilities.md
+        - name: 累加版本的新功能
+          href: plan-design/changes/whats-new-incremental-versions.md
+        - name: 2002 版有什麼新功能
+          href: plan-design/changes/whats-new-in-version-2002.md
+        - name: 1910 版的新功能
+          href: plan-design/changes/whats-new-in-version-1910.md
+        - name: 1906 版的新功能
+          href: plan-design/changes/whats-new-in-version-1906.md
+        - name: 1902 版的新功能
+          href: plan-design/changes/whats-new-in-version-1902.md
+        - name: 1810 版的新功能
+          href: plan-design/changes/whats-new-in-version-1810.md
+        - name: Configuration Manager 2012 的變更內容
+          href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
+        - name: 已移除與已過時
+          items:
+            - name: 已移除與已過時的項目
+              href: plan-design/changes/deprecated/removed-and-deprecated.md
+            - name: 已移除和已淘汰的功能
+              href: plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md
+            - name: 站台伺服器的已移除與已過時項目
+              href: plan-design/changes/deprecated/removed-and-deprecated-server.md
+            - name: 用戶端的已移除與已過時項目
+              href: plan-design/changes/deprecated/removed-and-deprecated-client.md
+    - name: 支援的設定
+      items:
+        - name: 支援的設定
+          href: plan-design/configs/supported-configurations.md
+        - name: 大小與縮放比例
+          href: plan-design/configs/size-and-scale-numbers.md
+        - name: 站台與站台系統先決條件
+          href: plan-design/configs/site-and-site-system-prerequisites.md
+        - name: 站台大小與效能指導方針
+          href: plan-design/configs/site-size-performance-guidelines.md
+        - name: 支援的站台系統伺服器作業系統
+          href: plan-design/configs/supported-operating-systems-for-site-system-servers.md
+        - name: 用戶端與裝置支援的作業系統
+          href: plan-design/configs/supported-operating-systems-for-clients-and-devices.md
+        - name: Windows 10 用戶端的支援
+          href: plan-design/configs/support-for-windows-10.md
+        - name: 支援的主控台作業系統
+          href: plan-design/configs/supported-operating-systems-consoles.md
+        - name: 建議的硬體
+          href: plan-design/configs/recommended-hardware.md
+        - name: SQL Server 版本的支援
+          href: plan-design/configs/support-for-sql-server-versions.md
+        - name: Active Directory 網域的支援
+          href: plan-design/configs/support-for-active-directory-domains.md
+        - name: Windows 功能與網路的支援
+          href: plan-design/configs/support-for-windows-features-and-networks.md
+        - name: 虛擬化環境支援
+          href: plan-design/configs/support-for-virtualization-environments.md
+    - name: 選擇裝置管理解決方案
+      href: plan-design/choose-a-device-management-solution.md
+    - name: 設計站台階層
+      items:
+        - name: 設計階層
+          href: plan-design/hierarchy/design-a-hierarchy-of-sites.md
+        - name: 規劃 SMS 提供者
+          href: plan-design/hierarchy/plan-for-the-sms-provider.md
+        - name: 規劃站台資料庫
+          href: plan-design/hierarchy/plan-for-the-site-database.md
+        - name: 規劃站台系統伺服器
+          href: plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md
+        - name: 內容管理的基本概念
+          items:
+            - name: 內容管理基本概念
+              href: plan-design/hierarchy/fundamental-concepts-for-content-management.md
+            - name: 使用雲端式發佈點
+              href: plan-design/hierarchy/use-a-cloud-based-distribution-point.md
+            - name: 使用提取發佈點
+              href: plan-design/hierarchy/use-a-pull-distribution-point.md
+            - name: 內容庫
+              href: plan-design/hierarchy/the-content-library.md
+            - name: 流程圖 - 管理內容庫
+              href: plan-design/hierarchy/manage-content-library-flowchart.md
+            - name: 內容庫清理工具
+              href: plan-design/hierarchy/content-library-cleanup-tool.md
+            - name: Configuration Manager 用戶端的對等快取
+              href: plan-design/hierarchy/client-peer-cache.md
+            - name: 封裝傳輸管理員
+              href: plan-design/hierarchy/package-transfer-manager.md
+            - name: 管理內容管理的網路頻寬
+              href: plan-design/hierarchy/manage-network-bandwidth.md
+            - name: 內容管理的安全性與隱私權
+              href: plan-design/hierarchy/security-and-privacy-for-content-management.md
+        - name: 站台間的資料傳輸
+          items:
+            - name: 資料轉送類型
+              href: plan-design/hierarchy/data-transfers-between-sites.md
+            - name: 檔案複寫
+              href: plan-design/hierarchy/file-based-replication.md
+            - name: 資料庫複寫
+              href: plan-design/hierarchy/database-replication.md
+        - name: 用戶端如何尋找資源與服務
+          href: plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md
+        - name: 網站管理的安全性和隱私權
+          href: plan-design/hierarchy/security-and-privacy-for-site-administration.md
+    - name: 規劃網路基礎結構
+      items:
+        - name: 網路基礎結構考量
+          href: plan-design/network/configure-firewalls-ports-domains.md
+        - name: 連接埠
+          href: plan-design/hierarchy/ports.md
+        - name: Proxy 伺服器支援
+          href: plan-design/network/proxy-server-support.md
+        - name: 網際網路存取需求
+          href: plan-design/network/internet-endpoints.md
+        - name: Active Directory 結構描述
+          items:
+            - name: 準備 Active Directory 架構
+              href: plan-design/network/extend-the-active-directory-schema.md
+            - name: 架構延伸模組
+              href: plan-design/network/schema-extensions.md
+        - name: 準備 Windows Server 以支援站台系統
+          href: plan-design/network/prepare-windows-servers.md
+        - name: 站台系統伺服器的網站
+          href: plan-design/network/websites-for-site-system-servers.md
+        - name: CNG 憑證概觀
+          href: plan-design/network/cng-certificates-overview.md
+        - name: PKI 憑證需求
+          href: plan-design/network/pki-certificate-requirements.md
+        - name: 範例 PKI 憑證部署
+          href: plan-design/network/example-deployment-of-pki-certificates.md
+    - name: 診斷和使用方式資料
+      items:
+        - name: 診斷與使用量資料的概觀
+          href: plan-design/diagnostics/diagnostics-and-usage-data.md
+        - name: Microsoft 如何使用診斷與使用量資料 | Microsoft Docs
+          href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md
+        - name: Configuration Manager 如何收集資料
+          href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md
+        - name: 如何檢視診斷和使用方式資料
+          href: plan-design/diagnostics/view-diagnostics-and-usage-data.md
+        - name: 診斷與使用量資料的層級
+          items:
+            - name: 層級概觀
+              href: plan-design/diagnostics/levels-overview.md
+            - name: 2002 版的資料
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2002.md
+            - name: 1910 版的資料
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1910.md
+            - name: 1906 版的資料
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
+            - name: 1902 版的資料
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
+            - name: 1810 版的資料
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
+        - name: 常見問題集 (FAQ)
+          href: plan-design/diagnostics/frequently-asked-questions.md
+    - name: Configuration Manager 的安全性與隱私權
+      items:
+        - name: 安全性和隱私權概觀
+          href: plan-design/security/security-and-privacy.md
+        - name: 規劃安全性
+          href: plan-design/security/plan-for-security.md
+        - name: 安全性最佳作法與隱私權資訊
+          href: plan-design/security/security-best-practices-and-privacy-information.md
+        - name: 隱私權聲明 - Configuration Manager Cmdlet 程式庫
+          href: plan-design/security/privacy-statement-cmdlet-library.md
+        - name: 其他隱私權資訊
+          href: plan-design/security/additional-privacy.md
+        - name: 設定安全性
+          href: plan-design/security/configure-security.md
+        - name: 密碼編譯控制項技術參考
+          href: plan-design/security/cryptographic-controls-technical-reference.md
+        - name: 啟用 TLS 1.2
+          items:
+            - name: 關於如何啟用 TLS 1.2
+              href: plan-design/security/enable-tls-1-2.md
+            - name: 在用戶端啟用 TLS 1.2
+              href: plan-design/security/enable-tls-1-2-client.md
+            - name: 在站台伺服器與遠端站台系統啟用 TLS 1.2
+              href: plan-design/security/enable-tls-1-2-server.md
+            - name: 啟用 TLS 1.2 時的常見問題
+              href: plan-design/security/enable-tls-1-2-troubleshoot.md
+- name: 開始使用
+  items:
+    - name: 在實驗室中評估 Configuration Manager
+      items:
+        - name: 實驗室概觀
+          href: get-started/evaluate-with-lab-environment.md
+        - name: 設定實驗室
+          href: get-started/set-up-your-lab.md
+        - name: 在 Azure 中建立實驗室
+          href: get-started/azure-template.md
+    - name: Technical Preview
+      items:
+        - name: Technical Preview 概觀
+          href: get-started/technical-preview.md
+        - name: 2003 功能
+          href: get-started/2020/technical-preview-2003.md
+        - name: 2002.2 功能
+          href: get-started/2020/technical-preview-2002-2.md
+        - name: 2002 功能
+          href: get-started/2020/technical-preview-2002.md
+        - name: 2001.2 功能
+          href: get-started/2020/technical-preview-2001-2.md
+        - name: 2001 功能
+          href: get-started/2020/technical-preview-2001.md
+        - name: 1912 功能
+          href: get-started/2019/technical-preview-1912.md
+    - name: 在階層間移轉資料
+      items:
+        - name: 移轉概觀
+          href: migration/migrate-data-between-hierarchies.md
+        - name: 規劃移轉
+          items:
+            - name: 規劃移轉
+              href: migration/planning-for-migration.md
+            - name: 進行移轉的必要條件
+              href: migration/prerequisites-for-migration.md
+            - name: 移轉檢查清單
+              href: migration/administrator-checklists-for-migration-planning.md
+            - name: 判斷是否移轉資料
+              href: migration/determine-whether-to-migrate-data.md
+            - name: 規劃來源階層
+              href: migration/planning-a-source-hierarchy-strategy.md
+            - name: 規劃移轉作業
+              href: migration/planning-a-migration-job-strategy.md
+            - name: 規劃用戶端移轉
+              href: migration/planning-a-client-migration-strategy.md
+            - name: 規劃內容部署
+              href: migration/planning-a-content-deployment-migration-strategy.md
+            - name: 規劃移轉物件
+              href: migration/planning-for-the-migration-of-objects.md
+            - name: 規劃監視移轉
+              href: migration/planning-to-monitor-migration-activity.md
+            - name: 規劃完成移轉
+              href: migration/planning-to-complete-migration.md
+        - name: 設定來源階層與來源站台
+          href: migration/configuring-source-hierarchies-and-source-sites-for-migration.md
+        - name: 移轉的作業
+          href: migration/operations-for-migration.md
+        - name: 移轉的安全性和隱私權
+          href: migration/security-and-privacy-for-migration.md
+- name: 部署伺服器與角色
+  items:
+    - name: 部署伺服器與角色
+      href: servers/deploy/start-using.md
+    - name: 安裝基礎結構
+      items:
+        - name: 取得安裝媒體
+          href: servers/deploy/install/get-install-media.md
+        - name: 執行安裝程式之前
+          items:
+            - name: 設定參考
+              href: servers/deploy/install/setup-reference.md
+            - name: 安裝程式下載程式
+              href: servers/deploy/install/setup-downloader.md
+            - name: 先決條件檢查程式
+              href: servers/deploy/install/prerequisite-checker.md
+            - name: 先決條件檢查
+              href: servers/deploy/install/list-of-prerequisite-checks.md
+        - name: 安裝站台
+          items:
+            - name: 準備安裝站台概觀
+              href: servers/deploy/install/installing-sites.md
+            - name: 準備安裝站台
+              href: servers/deploy/install/prepare-to-install-sites.md
+            - name: 安裝站台的先決條件
+              href: servers/deploy/install/prerequisites-for-installing-sites.md
+            - name: 使用安裝程式精靈
+              href: servers/deploy/install/use-the-setup-wizard-to-install-sites.md
+            - name: 使用命令列
+              items:
+                - name: 命令列概觀
+                  href: servers/deploy/install/use-a-command-line-to-install-sites.md
+                - name: 命令列選項
+                  href: servers/deploy/install/command-line-options-for-setup.md
+            - name: 安裝主控台
+              href: servers/deploy/install/install-consoles.md
+            - name: 升級評估安裝
+              href: servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md
+            - name: 升級至 Configuration Manager
+              href: servers/deploy/install/upgrade-to-configuration-manager.md
+            - name: 安裝簡化案例
+              href: servers/deploy/install/scenarios-to-streamline-your-installation.md
+    - name: 設定站台和階層
+      items:
+        - name: 設定站台和階層概觀
+          href: servers/deploy/configure/configure-sites-and-hierarchies.md
+        - name: 新增站台系統角色
+          items:
+            - name: 新增站台系統角色概觀
+              href: servers/deploy/configure/add-site-system-roles.md
+            - name: 安裝站台系統角色
+              href: servers/deploy/configure/install-site-system-roles.md
+            - name: 安裝雲端發佈點
+              href: servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md
+            - name: 關於服務連接點
+              href: servers/deploy/configure/about-the-service-connection-point.md
+            - name: 站台系統角色的設定選項
+              href: servers/deploy/configure/configuration-options-for-site-system-roles.md
+            - name: 管理點的資料庫複本
+              href: servers/deploy/configure/database-replicas-for-management-points.md
+        - name: 站台元件
+          href: servers/deploy/configure/site-components.md
+        - name: 發佈站台資料
+          href: servers/deploy/configure/publish-site-data.md
+        - name: Manage content and content infrastructure
+          items:
+            - name: 內容基礎結構概觀
+              href: servers/deploy/configure/manage-content-and-content-infrastructure.md
+            - name: 安裝及設定發佈點
+              href: servers/deploy/configure/install-and-configure-distribution-points.md
+            - name: 部署及管理內容
+              href: servers/deploy/configure/deploy-and-manage-content.md
+            - name: 監視內容
+              href: servers/deploy/configure/monitor-content-you-have-distributed.md
+            - name: Microsoft 連線快取
+              href: plan-design/hierarchy/microsoft-connected-cache.md
+            - name: 針對 Microsoft 連線快取進行疑難排解
+              href: servers/deploy/configure/troubleshoot-microsoft-connected-cache.md
+        - name: 執行探索工作
+          items:
+            - name: 探索方法概觀
+              href: servers/deploy/configure/run-discovery.md
+            - name: 關於探索方法
+              href: servers/deploy/configure/about-discovery-methods.md
+            - name: 選取探索方法
+              href: servers/deploy/configure/select-discovery-methods-to-use.md
+            - name: 設定探索方法
+              href: servers/deploy/configure/configure-discovery-methods.md
+        - name: 站台界限與界限群組
+          items:
+            - name: 站台界限與界限群組概觀
+              href: servers/deploy/configure/define-site-boundaries-and-boundary-groups.md
+            - name: 界限
+              href: servers/deploy/configure/boundaries.md
+            - name: 界限群組
+              href: servers/deploy/configure/boundary-groups.md
+            - name: 界限群組的程序
+              href: servers/deploy/configure/boundary-group-procedures.md
+        - name: 高可用性
+          items:
+            - name: 高可用性選項
+              href: servers/deploy/configure/high-availability-options.md
+            - name: 站台伺服器的高可用性
+              href: servers/deploy/configure/site-server-high-availability.md
+            - name: 流程圖 - 被動站台伺服器設定
+              href: servers/deploy/configure/passive-site-server-flowchart.md
+            - name: 流程圖 - 將站台伺服器升階 (已規劃)
+              href: servers/deploy/configure/promote-site-server-flowchart.md
+            - name: 流程圖 - 將站台伺服器升級 (未規劃)
+              href: servers/deploy/configure/promote-site-server-unplanned-flowchart.md
+            - name: 準備使用 SQL Server Always On
+              href: servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md
+            - name: 設定 SQL Server Always On
+              href: servers/deploy/configure/configure-aoag.md
+            - name: 使用 SQL Server 叢集
+              href: servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md
+        - name: 自訂資料庫檔案的位置
+          href: servers/deploy/configure/custom-locations-for-site-database-files.md
+        - name: 設定以角色為基礎的系統管理
+          href: servers/deploy/configure/configure-role-based-administration.md
+        - name: 設定 Azure 服務
+          href: servers/deploy/configure/azure-services-wizard.md
+    - name: 解除安裝及移除
+      items:
+        - name: 解除安裝角色、站台與階層
+          href: servers/deploy/install/uninstall-sites-and-hierarchies.md
+        - name: 移除 CAS
+          href: servers/deploy/install/remove-central-administration-site.md
+    - name: 技術參考
+      items:
+        - name: 帳戶
+          href: plan-design/hierarchy/accounts.md
+        - name: 端點之間的通訊
+          href: plan-design/hierarchy/communications-between-endpoints.md
+        - name: 增強的 HTTP 站台系統
+          href: plan-design/hierarchy/enhanced-http.md
+        - name: 階層維護工具
+          href: servers/manage/hierarchy-maintenance-tool-preinst.exe.md
+        - name: 多語系支援
+          href: plan-design/hierarchy/international-support.md
+        - name: 不同版本之間的互通性
+          href: plan-design/hierarchy/interoperability-between-different-versions.md
+        - name: 語言套件
+          href: servers/deploy/install/language-packs.md
+        - name: 關於檢視記錄檔
+          href: plan-design/hierarchy/about-log-files.md
+        - name: 記錄檔參考
+          href: plan-design/hierarchy/log-files.md
+        - name: 版本資訊
+          href: servers/deploy/install/release-notes.md
+        - name: 狀況訊息
+          href: plan-design/hierarchy/state-messaging-system-center-configuration-manager.md
+        - name: Unicode 與 ASCII 支援
+          href: plan-design/hierarchy/unicode-and-ascii-support.md
+- name: 管理基礎結構
+  items:
+    - name: Management Insights
+      href: servers/manage/management-insights.md
+    - name: CMPivot
+      items:
+        - name: 使用 CMPivot
+          href: servers/manage/cmpivot.md
+        - name: 針對 CMPivot 進行疑難排解
+          href: servers/manage/cmpivot-tsg.md
+    - name: 維護工作
+      items:
+        - name: 維護工作概觀
+          href: servers/manage/maintenance-tasks.md
+        - name: 維護工作的參考
+          href: servers/manage/reference-for-maintenance-tasks.md
+    - name: 修改您的基礎結構
+      items:
+        - name: 修改基礎結構
+          href: servers/manage/modify-your-infrastructure.md
+        - name: CD.Latest 資料夾
+          href: servers/manage/the-cd.latest-folder.md
+    - name: 升級內部部署基礎結構
+      href: servers/manage/upgrade-on-premises-infrastructure.md
+    - name: Configuration Manager 的更新概觀
+      items:
+        - name: Configuration Manager 的更新
+          href: servers/manage/updates.md
+        - name: 主控台內更新
+          items:
+            - name: 安裝主控台內更新
+              href: servers/manage/install-in-console-updates.md
+            - name: 更新重設工具
+              href: servers/manage/update-reset-tool.md
+            - name: 測試資料庫升級
+              href: servers/manage/test-database-upgrade.md
+            - name: 流程圖 - 下載更新
+              href: servers/manage/download-updates-flowchart.md
+            - name: 流程圖 - 更新複寫
+              href: servers/manage/update-replication-flowchart.md
+        - name: 發行前版本功能
+          href: servers/manage/pre-release-features.md
+        - name: 站台伺服器的服務保留時間
+          href: servers/manage/service-windows.md
+        - name: 使用服務連接工具
+          href: servers/manage/use-the-service-connection-tool.md
+        - name: 使用更新註冊工具
+          href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
+        - name: 使用 Hotfix 安裝程式
+          href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+        - name: 安裝更新 2002 的檢查清單
+          href: servers/manage/checklist-for-installing-update-2002.md
+        - name: 安裝更新 1910 的檢查清單
+          href: servers/manage/checklist-for-installing-update-1910.md
+        - name: 安裝更新 1906 的檢查清單
+          href: servers/manage/checklist-for-installing-update-1906.md
+        - name: 安裝更新 1902 的檢查清單
+          href: servers/manage/checklist-for-installing-update-1902.md
+        - name: 安裝更新 1810 的檢查清單
+          href: servers/manage/checklist-for-installing-update-1810.md
+        - name: 最新分支版本支援
+          href: servers/manage/current-branch-versions-supported.md
+    - name: 備份與復原
+      items:
+        - name: 備份站台
+          href: servers/manage/backup-and-recovery.md
+        - name: 復原站台
+          href: servers/manage/recover-sites.md
+        - name: 自動站台復原
+          href: servers/manage/unattended-recovery.md
+    - name: 站台失敗影響
+      href: servers/manage/site-failure-impacts.md
+    - name: 監視基礎結構
+      items:
+        - name: 監視階層
+          href: servers/manage/monitor-hierarchy.md
+        - name: 使用警示和狀態系統
+          href: servers/manage/use-alerts-and-the-status-system.md
+        - name: 健康情況證明
+          href: servers/manage/health-attestation.md
+        - name: 複寫基礎結構
+          items:
+            - name: 監視複寫
+              href: servers/manage/monitor-replication.md
+            - name: 對 SQL 複寫進行疑難排解
+              items:
+                - name: 對 SQL 複寫進行疑難排解
+                  href: servers/manage/replication/overview.md
+                - name: SQL 複寫
+                  href: servers/manage/replication/sql-replication.md
+                - name: SQL 設定
+                  href: servers/manage/replication/sql-configuration.md
+                - name: SQL 效能
+                  href: servers/manage/replication/sql-performance.md
+                - name: SQL 複寫重新初始化 (reinit)
+                  href: servers/manage/replication/sql-replication-reinit.md
+                - name: 全域資料重新初始化
+                  href: servers/manage/replication/global-data-reinit.md
+                - name: 網站資料重新初始化
+                  href: servers/manage/replication/site-data-reinit.md
+                - name: 將遺失的訊息重新初始化
+                  href: servers/manage/replication/reinit-missing-message.md
+        - name: 查詢
+          items:
+            - name: 查詢簡介
+              href: servers/manage/introduction-to-queries.md
+            - name: 如何管理查詢
+              href: servers/manage/manage-queries.md
+            - name: 如何建立查詢
+              href: servers/manage/create-queries.md
+            - name: 查詢的安全性和隱私權
+              href: servers/manage/security-and-privacy-for-queries.md
+        - name: 報告
+          items:
+            - name: 報告的簡介
+              href: servers/manage/introduction-to-reporting.md
+            - name: 與 Power BI 報表伺服器整合
+              href: servers/manage/powerbi-report-server.md
+            - name: 針對報告進行規劃
+              items:
+                - name: 針對報告進行規劃
+                  href: servers/manage/planning-for-reporting.md
+                - name: 報告的必要條件
+                  href: servers/manage/prerequisites-for-reporting.md
+                - name: 報告清單
+                  href: servers/manage/list-of-reports.md
+            - name: 設定報告
+              href: servers/manage/configuring-reporting.md
+            - name: 報告作業和維護
+              href: servers/manage/operations-and-maintenance-for-reporting.md
+            - name: 建立自訂報告模型
+              href: servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md
+        - name: 資料倉儲
+          href: servers/manage/data-warehouse.md
+    - name: 支援中心
+      href: support/support-center.md
+      items:
+        - name: 支援中心概觀
+          href: support/support-center.md
+        - name: 快速入門指南
+          href: support/support-center-quickstart.md
+        - name: Accessibility
+          href: support/support-center-accessibility.md
+        - name: 使用者介面參考
+          href: support/support-center-ui-reference.md
+        - name: 自訂
+          href: support/support-center-customize.md
+        - name: 支援中心 OneTrace (預覽)
+          href: support/support-center-onetrace.md
+    - name: Configuration Manager 工具
+      items:
+        - name: 工具概觀
+          href: support/tools.md
+        - name: CMTrace
+          href: support/cmtrace.md
+        - name: Client Spy
+          href: support/clispy.md
+        - name: 部署監視工具
+          href: support/deployment-monitoring-tool.md
+        - name: Policy Spy
+          href: support/policy-spy.md
+        - name: Power Viewer 工具
+          href: support/power-viewer-tool.md
+        - name: 傳送排程工具
+          href: support/send-schedule-tool.md
+        - name: DP 作業佇列管理員
+          href: support/dp-job-manager.md
+        - name: 集合評估檢視器
+          href: support/ceviewer.md
+        - name: 內容庫總管
+          href: support/content-library-explorer.md
+        - name: 內容庫傳輸
+          href: support/content-library-transfer.md
+        - name: 內容擁有權工具
+          href: support/content-ownership-tool.md
+        - name: 延伸及移轉到 Microsoft Azure
+          href: support/azure-migration-tool.md
+        - name: 以角色為基礎的管理與稽核工具
+          href: support/rbaviewer.md
+        - name: 執行計量摘要工具
+          href: support/run-meter-summ.md
+    - name: 管理高風險部署
+      href: servers/manage/settings-to-manage-high-risk-deployments.md
+- name: 部署用戶端
+  items:
+    - name: 規劃用戶端部署
+      items:
+        - name: 用戶端安裝方法
+          href: clients/deploy/plan/client-installation-methods.md
+        - name: 將用戶端部署到 Windows 電腦的必要條件
+          items:
+            - name: 部署用戶端的先決條件
+              href: clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md
+            - name: 用戶端適用的 Windows 防火牆和連接埠設定
+              href: clients/deploy/windows-firewall-and-port-settings-for-clients.md
+        - name: 判斷用戶端的站台系統角色
+          href: clients/deploy/plan/determine-the-site-system-roles-for-clients.md
+        - name: 用戶端的安全性和隱私權
+          href: clients/deploy/plan/security-and-privacy-for-clients.md
+        - name: 用戶端部署的最佳做法
+          href: clients/deploy/plan/best-practices-for-client-deployment.md
+        - name: 判斷是否要封鎖用戶端
+          href: clients/deploy/plan/determine-whether-to-block-clients.md
+        - name: 規劃將用戶端部署至 Linux 和 UNIX 電腦
+          href: clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md
+        - name: 將用戶端部署至 Mac 電腦的規劃
+          href: clients/deploy/plan/planning-for-client-deployment-to-mac-computers.md
+        - name: 將用戶端部署至 Windows Embedded 裝置
+          items:
+            - name: Windows Embedded 裝置的用戶端部署規劃
+              href: clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md
+            - name: 範例案例
+              href: clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md
+        - name: 規劃如何喚醒用戶端
+          href: clients/deploy/plan/plan-wake-up-clients.md
+        - name: 管理 VDI 用戶端
+          href: clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md
+    - name: 用戶端部署工作
+      items:
+        - name: 如何設定用戶端通訊連接埠
+          href: clients/deploy/configure-client-communication-ports.md
+        - name: 設定用戶端使用 DNS 發佈
+          href: clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md
+        - name: 設定用戶端設定
+          items:
+            - name: 如何設定用戶端設定
+              href: clients/deploy/configure-client-settings.md
+            - name: 關於用戶端設計
+              href: clients/deploy/about-client-settings.md
+        - name: 裝置重新啟動通知
+          href: clients/deploy/device-restart-notifications.md
+        - name: 如何設定網路喚醒
+          href: clients/deploy/configure-wake-on-lan.md
+        - name: 將用戶端部署至 Windows 電腦
+          items:
+            - name: 如何將用戶端部署至 Windows 電腦
+              href: clients/deploy/deploy-clients-to-windows-computers.md
+            - name: 使用 Azure AD 安裝用戶端
+              href: clients/deploy/deploy-clients-cmg-azure.md
+            - name: CMG 的權杖型驗證
+              href: clients/deploy/deploy-clients-cmg-token.md
+            - name: 用戶端安裝內容
+              href: clients/deploy/about-client-installation-properties.md
+            - name: 發佈至 AD 的用戶端安裝內容
+              href: clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md
+        - name: 將用戶端部署至 UNIX 和 Linux 伺服器
+          items:
+            - name: 如何將用戶端部署至 UNIX 和 Linux 伺服器
+              href: clients/deploy/deploy-clients-to-unix-and-linux-servers.md
+            - name: Linux 與 UNIX 的用戶端命令
+              href: clients/deploy/linux-and-unix-clients-technical-reference.md
+        - name: 準備將用戶端部署到 Mac
+          href: clients/deploy/prepare-to-deploy-mac-clients.md
+        - name: 如何將用戶端部署至 Mac
+          href: clients/deploy/deploy-clients-to-macs.md
+        - name: 如何將用戶端指派至站台
+          href: clients/deploy/assign-clients-to-a-site.md
+        - name: 如何設定用戶端狀態
+          href: clients/deploy/configure-client-status.md
+        - name: 如何監視用戶端部署狀態
+          href: clients/deploy/monitor-client-deployment-status.md
+- name: 管理用戶端
+  items:
+    - name: 管理用戶端概觀
+      href: clients/manage/monitor-and-manage-clients.md
+    - name: 監視及管理用戶端
+      items:
+        - name: 如何監視用戶端
+          href: clients/manage/monitor-clients.md
+        - name: 如何監視 Linux 與 UNIX 用戶端
+          href: clients/manage/monitor-clients-for-linux-and-unix-servers.md
+        - name: 如何管理用戶端
+          href: clients/manage/manage-clients.md
+        - name: 用戶端通知
+          href: clients/manage/client-notification.md
+        - name: 如何管理 Linux 與 UNIX 用戶端
+          href: clients/manage/manage-clients-for-linux-and-unix-servers.md
+        - name: 將資料與 Azure 監視器同步
+          href: 'https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=sccm/core/context/core-context'
+        - name: 維護 Mac 用戶端
+          href: clients/manage/maintain-mac-clients.md
+        - name: Surface 裝置儀表板
+          href: clients/manage/surface-device-dashboard.md
+    - name: 管理網際網路上的用戶端
+      items:
+        - name: 管理網際網路上的用戶端概觀
+          href: clients/manage/manage-clients-internet.md
+        - name: 雲端管理閘道
+          items:
+            - name: 規劃雲端管理閘道
+              href: clients/manage/cmg/plan-cloud-management-gateway.md
+            - name: 雲端管理閘道的安全性與隱私權
+              href: clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md
+            - name: 雲端管理閘道常見問題集
+              href: clients/manage/cmg/cloud-management-gateway-faq.md
+            - name: 雲端管理閘道的憑證
+              href: clients/manage/cmg/certificates-for-cloud-management-gateway.md
+            - name: 設定雲端管理閘道
+              href: clients/manage/cmg/setup-cloud-management-gateway.md
+            - name: 監視雲端管理閘道上的用戶端
+              href: clients/manage/cmg/monitor-clients-cloud-management-gateway.md
+        - name: 以網際網路為基礎的用戶端管理規劃
+          href: clients/manage/plan-internet-based-client-management.md
+        - name: Azure AD 驗證工作流程
+          href: clients/manage/azure-ccmsetup.md
+    - name: 集合
+      items:
+        - name: 集合簡介
+          href: clients/manage/collections/introduction-to-collections.md
+        - name: 集合的必要條件
+          href: clients/manage/collections/prerequisites-for-collections.md
+        - name: 集合的最佳做法
+          href: clients/manage/collections/best-practices-for-collections.md
+        - name: 如何建立集合
+          href: clients/manage/collections/create-collections.md
+        - name: 如何管理集合
+          href: clients/manage/collections/manage-collections.md
+        - name: 如何使用維護視窗
+          href: clients/manage/collections/use-maintenance-windows.md
+        - name: 如何自動將裝置分類為集合
+          href: clients/manage/collections/automatically-categorize-devices-into-collections.md
+        - name: 集合的安全性和隱私權
+          href: clients/manage/collections/security-and-privacy-for-collections.md
+    - name: 硬體清查
+      items:
+        - name: 硬體清查簡介
+          href: clients/manage/inventory/introduction-to-hardware-inventory.md
+        - name: 如何擴充硬體清查
+          href: clients/manage/inventory/extend-hardware-inventory.md
+        - name: How to configure hardware inventory
+          href: clients/manage/inventory/configure-hardware-inventory.md
+        - name: 如何使用資源總管檢視硬體清查
+          href: clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md
+        - name: 資源總管預設類別
+          href: clients/manage/inventory/resource-explorer-classes.md
+        - name: Linux 及 UNIX 的硬體清查
+          href: clients/manage/inventory/hardware-inventory-for-linux-and-unix.md
+        - name: 硬體清查的安全性與隱私權
+          href: clients/manage/inventory/security-and-privacy-for-hardware-inventory.md
+    - name: 軟體清查
+      items:
+        - name: 軟體清查簡介
+          href: clients/manage/inventory/introduction-to-software-inventory.md
+        - name: 如何設定軟體清查
+          href: clients/manage/inventory/configure-software-inventory.md
+        - name: 如何使用資源總管檢視軟體清查
+          href: clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md
+        - name: 軟體清查的安全性和隱私權
+          href: clients/manage/inventory/security-and-privacy-for-software-inventory.md
+    - name: Asset Intelligence
+      items:
+        - name: 簡介
+          href: clients/manage/asset-intelligence/introduction-to-asset-intelligence.md
+        - name: 先決條件
+          href: clients/manage/asset-intelligence/prerequisites-for-asset-intelligence.md
+        - name: 設定 Asset Intelligence
+          href: clients/manage/asset-intelligence/configuring-asset-intelligence.md
+        - name: 使用 Asset Intelligence
+          href: clients/manage/asset-intelligence/operations-for-asset-intelligence.md
+        - name: 安全性和隱私權
+          href: clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md
+        - name: 驗證狀態轉換範例
+          href: clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md
+        - name: 一般授權匯入檔案範例
+          href: clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md
+        - name: 使用產品生命週期儀表板
+          href: clients/manage/asset-intelligence/product-lifecycle-dashboard.md
+    - name: 遠端控制
+      items:
+        - name: 遠端控制簡介
+          href: clients/manage/remote-control/introduction-to-remote-control.md
+        - name: 遠端控制的必要條件
+          href: clients/manage/remote-control/prerequisites-for-remote-control.md
+        - name: 設定遠端控制
+          href: clients/manage/remote-control/configuring-remote-control.md
+        - name: 如何從遠端管理 Windows 用戶端電腦
+          href: clients/manage/remote-control/remotely-administer-a-windows-client-computer.md
+        - name: 如何稽核遠端控制的使用方式
+          href: clients/manage/remote-control/audit-remote-control-usage.md
+        - name: 遠端控制的安全性和隱私權
+          href: clients/manage/remote-control/security-and-privacy-for-remote-control.md
+    - name: 電源管理
+      items:
+        - name: 電源管理簡介
+          href: clients/manage/power/introduction-to-power-management.md
+        - name: 電源管理的必要條件
+          href: clients/manage/power/prerequisites-for-power-management.md
+        - name: 電源管理的最佳做法
+          href: clients/manage/power/best-practices-for-power-management.md
+        - name: 電源管理的系統管理員檢查清單
+          href: clients/manage/power/administrator-checklist-for-power-management.md
+        - name: 設定電源管理
+          href: clients/manage/power/configuring-power-management.md
+        - name: 如何建立及套用電源計劃
+          href: clients/manage/power/create-and-apply-power-plans.md
+        - name: 如何監視和規劃電源管理
+          href: clients/manage/power/monitor-and-plan-for-power-management.md
+        - name: 電源管理的安全性與隱私權
+          href: clients/manage/power/security-and-privacy-for-power-management.md
+    - name: 升級用戶端
+      items:
+        - name: 如何升級用戶端
+          href: clients/manage/upgrade/upgrade-clients.md
+        - name: 測試進入生產階段前集合的用戶端升級
+          href: clients/manage/upgrade/test-client-upgrades.md
+        - name: 讓 Windows 用戶端不要升級
+          href: clients/manage/upgrade/exclude-clients-windows.md
+        - name: 升級 Windows 用戶端
+          href: clients/manage/upgrade/upgrade-clients-for-windows-computers.md
+        - name: 升級 Linux 和 UNIX 用戶端
+          href: clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md
+        - name: 升級 Mac 用戶端
+          href: clients/manage/upgrade/upgrade-clients-on-mac-computers.md
