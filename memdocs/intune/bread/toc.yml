@@ -12,11 +12,11 @@
           items:
             - name: Intune 使用者說明
               tocHref: /intune/user-help/
-              topicHref: /intune/user-help/
+              topicHref: /intune/user-help/use-managed-devices-to-get-work-done
             - name: 應用程式
               tocHref: /intune/apps/
               topicHref: /intune/apps/
-            - name: 基本概念
+            - name: 基本要素
               tocHref: /intune/fundamentals/
               topicHref: /intune/fundamentals/
             - name: 註冊
@@ -25,7 +25,7 @@
             - name: 遠端動作
               tocHref: /intune/remote-actions/
               topicHref: /intune/remote-actions/
-            - name: 設定
+            - name: 組態
               tocHref: /intune/configuration/
               topicHref: /intune/configuration/
             - name: 保護

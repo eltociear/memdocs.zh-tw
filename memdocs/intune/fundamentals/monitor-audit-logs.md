@@ -15,10 +15,10 @@ ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5b271c05f71cdd166533d837e46c1396bf66c06c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326739"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>使用稽核記錄追蹤與監視 Microsoft Intune 中的事件

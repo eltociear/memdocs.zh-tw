@@ -17,6 +17,9 @@
 #### [註冊您的 Android 裝置](enroll-device-android-company-portal.md)  
 #### [使用 Android 工作設定檔註冊](enroll-device-android-work-profile.md)
 #### [使用 Microsoft Intune 應用程式註冊](enroll-device-android-microsoft-intune-app.md)
+#### 使用衍生的認證進行註冊
+##### [使用 Entrust Datacard 註冊](enroll-android-device-entrust-datacard.md)
+##### [使用 Intercede 註冊](enroll-android-device-intercede.md)
 ### [移至新的裝置管理設定](move-to-new-device-management-setup.md)
 ### [在裝置上使用受管理的應用程式](use-managed-apps-on-your-device-android.md)
 ### [加密您的裝置](encrypt-your-device-android.md)

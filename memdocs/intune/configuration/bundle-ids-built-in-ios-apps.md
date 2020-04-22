@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c7de0b978c24f28988c62854a249505a0598db95
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084070"
 ---
 # <a name="bundle-ids-for-built-in-ios-and-ipados-apps-you-can-use-in-intune"></a>您可以在 Intune 中使用之內建 iOS 與 iPadOS 應用程式的套件組合識別碼
@@ -46,7 +46,7 @@ ms.locfileid: "80084070"
 | com.apple.mobileme.fmip1    | 尋找 iPhone  | Apple     |
 | com.apple.gamecenter        | Game Center  | Apple     |
 | com.apple.mobilegarageband  | GarageBand   | Apple     |
-| com.apple.Health            | 健康       | Apple     |
+| com.apple.Health            | 健全狀況       | Apple     |
 | com.apple.Home              | 家庭         | Apple     |
 | com.apple.iBooks            | 書籍       | Apple     |
 | com.apple.iMovie            | iMovie       | Apple     |
@@ -56,12 +56,12 @@ ms.locfileid: "80084070"
 | com.apple.Keynote           | Keynote      | Apple     |
 | com.apple.mobilemail        | 郵件         | Apple     |
 | com.apple.Maps              | 地圖         | Apple     |
-| com.apple.measure           | 度量      | Apple     |
+| com.apple.measure           | Measure      | Apple     |
 | com.apple.MobileSMS         | 訊息     | Apple     |
 | com.apple.Music             | 音樂        | Apple     |
 | com.apple.news              | 新聞         | Apple     |
 | com.apple.mobilenotes       | 備忘錄        | Apple     |
-| com.apple.Numbers           | Numbers      | Apple     |
+| com.apple.Numbers           | 數字      | Apple     |
 | com.apple.Pages             | Pages        | Apple     |
 | com.apple.mobilephone       | 電話        | Apple     |
 | com.apple.Photo-Booth       | Photo Booth  | Apple     |
@@ -78,7 +78,7 @@ ms.locfileid: "80084070"
 | com.apple.videos            | 影片       | Apple     |
 | com.apple.VoiceMemos        | 語音備忘錄   | Apple     |
 | com.apple.Passbook          | 錢包       | Apple     |
-| com.apple.Bridge            | Watch        | Apple     |
+| com.apple.Bridge            | 觀看        | Apple     |
 | com.apple.weather           | 天氣      | Apple     |
 
 ## <a name="next-steps"></a>後續步驟

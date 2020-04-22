@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4ff0e650a3eccf057158d3faf28875e42ed90a4d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325036"
 ---
 # <a name="rename-a-device-in-intune"></a>在 Intune 中重新命名裝置
@@ -44,7 +44,7 @@ ms.locfileid: "80325036"
 
 ## <a name="windows-device-rename-rules"></a>Windows 裝置重新命名規則
 重新命名 Windows 裝置時，新名稱必須遵循這些規則：
-- 15 個字元或更少 (必須小於或等於 63 個位元組，不包括尾端的 NULL 字元)
+- 15 個字元或更少 (必須小於或等於 63 個位元組，不包括尾端的 Null 字元)
 - 非 Null 或空字串
 - 允許的 ASCII：字母 (a-z, A-Z)、數字 (0-9) 和連字號
 - 允許的 Unicode：字元 >= 0x80，必須是有效的 UTF8，必須是 IDN 可映射 (也就是繼 RtlIdnToNameprepUnicode 之後；請參閱 RFC 3492)

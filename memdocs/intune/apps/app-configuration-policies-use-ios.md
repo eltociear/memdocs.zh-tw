@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 28ce4e7d80e79f752bded8f0cdf03494aa629e1b
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80233456"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>為受控 iOS/iPadOS 裝置新增應用程式設定原則
@@ -31,7 +31,7 @@ ms.locfileid: "80233456"
 
 使用 Microsoft Intune 中的應用程式設定原則，為 iOS/iPadOS 應用程式提供自訂組態設定。 這些組態設定可讓您根據應用程式供應商指示來自訂應用程式。 您必須從應用程式的供應商取得這些組態設定 (金鑰和值)。 若要設定應用程式，請以金鑰和值的形式，或以包含金鑰和值的 XML 形式來指定設定。
 
-身為 Microsoft Intune 系統管理員，您可以控制在受控裝置上要新增至 Microsoft Office 應用程式的使用者帳戶。 您可以僅允許組織使用者帳戶進行存取，並封鎖已註冊裝置上的個人帳戶。 支援的應用程式會處理應用程式設定和移除，並封鎖未經核准的帳戶。 每當應用程式檢查是否有設定原則設定時 (通常是第一次執行時)，便會使用這些設定。
+身為 Microsoft Intune 系統管理員，您可以控制在受控裝置上要新增到 Microsoft Office 應用程式的使用者帳戶。 您可以僅允許組織使用者帳戶進行存取，並封鎖已註冊裝置上的個人帳戶。 支援的應用程式會處理應用程式設定和移除，並封鎖未經核准的帳戶。 每當應用程式檢查是否有設定原則設定時 (通常是第一次執行時)，便會使用這些設定。
 
 新增應用程式設定原則後，就可以設定指派應用程式設定原則。 當您設定原則指派時，您可以選擇包含與排除要套用原則的使用者群組。 當您選擇要包含一或多個群組時，您可以選擇選取要包含特定群組或選取內建群組。 內建群組包括 [所有使用者]  、[所有裝置]  和 [所有使用者及所有裝置]  。 
 
@@ -110,7 +110,7 @@ Microsoft Intune 提供應用程式專屬的組態設定。 您可在 Microsoft 
 
 | **Key** | **值** |
 |----|----|
-| IntuneMAMAllowedAccountsOnly | <ul><li>**啟用**：唯一允許的帳戶是 [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) 機碼所定義的受控使用者帳戶。</li><li>**Disabled** (或任何不是以不區分大小寫方式與 **Enabled** 相符的值)：允許任何帳戶。</li></ul> |
+| IntuneMAMAllowedAccountsOnly | <ul><li>**Enabled**：唯一允許的帳戶是 [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) 索引鍵所定義的受控使用者帳戶。</li><li>**Disable** (或與 **Enabled** 不區分大小寫不相符項目的任何值)：允許任何帳戶。</li></ul> |
 | IntuneMAMUPN | <ul><li>允許用於登入應用程式其帳戶的 UPN。</li><li> 若為 Intune 註冊的裝置，<code>{{userprincipalname}}</code> 權杖可用來代表註冊的使用者帳戶。</li></ul>  |
 
    > [!NOTE]
@@ -173,7 +173,7 @@ Intune 支援內容清單中的下列資料類型：
 
 ### <a name="tokens-used-in-the-property-list"></a>屬性清單中使用的權杖
 
-此外，Intune 也支援下列內容清單的權杖類型︰
+此外，Intune 支援屬性清單中的下列權杖類型︰
 - \{\{userprincipalname\}\}—例如，**John\@contoso.com**
 - \{\{mail\}\}—例如，**John\@contoso.com**
 - \{\{partialupn\}\}—例如，**John**

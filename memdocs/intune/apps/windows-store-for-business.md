@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 02f90fc0cd249062f878b5a18481f6a6a73228af
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323390"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>如何使用 Microsoft Intune 從商務用 Microsoft Store 管理大量購買的應用程式
@@ -64,7 +64,7 @@ ms.locfileid: "80323390"
 3. 如果您未特別將 **Microsoft Intune** 設定為行動裝置管理工具，請選擇 [新增管理工具]  以新增 **Microsoft Intune**。 如果您未啟用 **Microsoft Intune** 作為行動裝置管理工具，請按一下 [Microsoft Intune]  旁邊的 [啟用]  。 請注意，您應該啟用 [Microsoft Intune]  ，而不是 [Microsoft Intune 註冊]  。
 
 > [!NOTE]
-> 您先前可能只建立了某個用來指派應用程式的管理工具與商務用 Microsoft 網上商店的關聯。 現在可以建立多種管理工具與市集的關聯性，例如，Intune 和 Configuration Manager。
+> 您先前可能只建立了某個用來指派應用程式的管理工具與商務用 Microsoft 網上商店的關聯。 現在，您可以建立多個管理工具 (如 Intune 和 Configuration Manager) 與市集之間的關聯。
 
 您現在可以繼續進行，並在 Intune 主控台中設定同步處理。
 

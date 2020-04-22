@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f3aaf2bf895082f3647f0a1ad6b9997a5e97baee
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79364119"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>針對 Intune 中的原則和設定檔進行疑難排解
@@ -53,7 +53,7 @@ Microsoft Intune 包含一些內建的疑難排解功能。 使用這些功能�
 
 4. 在 [裝置]  下，尋找有問題的裝置。 檢閱不同欄位：
 
-    - **受控**：若要讓裝置接收合規性或設定原則，此屬性必須顯示 [MDM]  或 [EAS/MDM]  。
+    - **受控**：若要讓裝置接收相容性或設定原則，此屬性必須顯示 [MDM]  或 [EAS/MDM]  。
 
         - 如果未將 [受控]  設定為 [MDM]  或 [EAS/MDM]  ，則不會註冊裝置。 在註冊之前，它不會接收合規性或設定原則。
 
@@ -71,7 +71,7 @@ Microsoft Intune 包含一些內建的疑難排解功能。 使用這些功能�
 
         如需詳細資訊，請參閱[裝置合規性政策入門](../protect/device-compliance-get-started.md)。
 
-    - **上次簽入時間**：應為最近的時間和日期。 根據預設，Intune 裝置會每 8 小時檢查一次。
+    - **上次簽入**：應為最近的時間和日期。 根據預設，Intune 裝置會每 8 小時檢查一次。
 
         - 如果 [上次簽入時間]  超過 24 小時，則可能是裝置發生問題。 無法簽入的裝置將無法從 Intune 接收原則。
 
@@ -93,8 +93,8 @@ Microsoft Intune 包含一些內建的疑難排解功能。 使用這些功能�
 
         - **不適用**：此平台不支援此原則。 例如，iOS/iPadOS 原則不適用於 Android。 Samsung KNOX 原則不適用於 Windows 裝置。
         - **衝突**：裝置上有 Intune 無法覆寫的現有設定。 或者，您使用不同值部署了兩個具有相同設定的原則。
-        - **Pending**：裝置尚未簽入 Intune，因此無法取得原則。 或者，裝置已收到原則，但尚未對 Intune 回報狀態。
-        - **錯誤**：在[公司資源存取問題的疑難排解](../fundamentals/troubleshoot-company-resource-access-problems.md)中查詢錯誤和可能的解決方法。
+        - **擱置**：裝置尚未簽入 Intune，因此無法取得原則。 或者，裝置已收到原則，但尚未對 Intune 回報狀態。
+        - **錯誤**：在[針對公司資源存取問題進行疑難排解](../fundamentals/troubleshoot-company-resource-access-problems.md)中查詢錯誤和可能的解決方法。
 
         **實用的連結**： 
 
@@ -112,7 +112,7 @@ Microsoft Intune 包含一些內建的疑難排解功能。 使用這些功能�
 
     - **不適用**：該設定檔設定不適用。 例如，iOS/iPadOS 裝置的電子郵件設定不會套用至 Android 裝置。
 
-    - **Pending**：設定檔已傳送至裝置，但尚未對 Intune 回報狀態。 例如，Android 上的加密需要使用者啟用加密，因此可能顯示為擱置。
+    - **擱置**：設定檔已傳送至裝置，但尚未對 Intune 回報狀態。 例如，Android 上的加密需要使用者啟用加密，因此可能顯示為擱置。
 
 **實用的連結**：[監視裝置組態設定檔](../configuration/device-profile-monitor.md)
 
@@ -128,7 +128,7 @@ Microsoft Intune 包含一些內建的疑難排解功能。 使用這些功能�
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>警示：將存取規則儲存到 Exchange 失敗
 
-**問題**：您在管理主控台中收到警示：**將存取規則儲存到 Exchange 失敗**。
+**問題：** 您在管理主控台中收到警示「將存取規則儲存到 Exchange 失敗」   。
 
 如果您在 [Exchange 內部部署原則] 工作區 (管理主控台) 中建立原則，但使用 Office 365，則 Intune 將不會強制執行已設定的原則設定。 記下警示中的原則來源。 在 [Exchange 內部部署原則] 工作區下，刪除舊版規則。 舊版規則是 Intune 內適用於內部部署 Exchange 的全域 Exchange 規則，且與 Office 365 不相關。 接著，建立適用於 Office 365 的新原則。
 
@@ -170,7 +170,7 @@ Microsoft Intune 包含一些內建的疑難排解功能。 使用這些功能�
 
 4. 將通知滑桿移至預設設定。
 
-### <a name="error-cannot-obtain-the-value-from-the-computer-0x80041013"></a>ERROR：無法從電腦取得值，0x80041013
+### <a name="error-cannot-obtain-the-value-from-the-computer-0x80041013"></a>錯誤：無法從電腦取得值，0x80041013
 
 在本機系統時間不同步的程度超過五分鐘以上時便會發生。 如果本機電腦上的時間不同步，因為時間戳記無效，安全交易會失敗。
 

@@ -19,17 +19,17 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 89d9fce6579b0fdf89299e342969f647c457cc84
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324833"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>使用 Intune 設定適用於 Android 裝置的 Google Chrome 
 
 您可以使用 Intune 應用程式設定原則來設定適用於 Android 裝置的 Google Chrome。 應用程式的設定可以自動套用。 例如，您可以特別設定您想要封鎖或允許的書籤和 URL。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 使用者的 Android Enterprise 裝置必須在 Intune 中註冊。 如需詳細資訊，請參閱[設定 Android Enterprise 工作設定檔裝置的註冊](../enrollment/android-work-profile-enroll.md)。
 - Google Chrome 會新增為受控 Google Play 應用程式。 如需受控 Google Play 的相關詳細資訊，請參閱[將您的 Intune 帳戶連結到受控 Google Play 帳戶](../enrollment/connect-intune-android-enterprise.md)。

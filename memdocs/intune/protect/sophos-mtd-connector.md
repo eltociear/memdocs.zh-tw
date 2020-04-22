@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 285f323f55d41edab5ccd450deb0244b6fbda874
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79526439"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Sophos Mobile Threat Defense 與 Intune 的連接器
@@ -34,7 +34,7 @@ ms.locfileid: "79526439"
 - Android 5.0 及更新版本
 - iOS 11.0 和更新版本
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - Azure Active Directory Premium
 - Microsoft Intune 訂閱
@@ -77,7 +77,7 @@ Intune 裝置合規性政策包含以 Sophos Mobile 風險評定為基礎的 Sop
 *補救後授與存取權*：   
 ![補救後授與存取權](./media/sophos-mtd-connector/sophos-network-wifi-unblocked.png)  
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>依據對網路的威脅來控制對 SharePoint Online 的存取
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>根據網路威脅來控制 SharePoint Online 的存取權
 
 偵測中間人攻擊等網路威脅，並根據裝置風險防止同步公司檔案。  
 

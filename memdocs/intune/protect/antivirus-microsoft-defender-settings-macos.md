@@ -17,10 +17,10 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: samyada
 ms.openlocfilehash: 9a0687b9e3938c93cfaebe0e064fd994077a92af
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086685"
 ---
 # <a name="settings-for-microsoft-defender-atp-for-mac-in-microsoft-intune"></a>Microsoft Intune 中適用於 Mac 的 Microsoft Defender ATP 設定
@@ -34,13 +34,13 @@ ms.locfileid: "80086685"
 
   - **未設定** (*預設*) - 此設定會還原為系統預設值
   - **已啟用** - 強制使用即時監視。 裝置使用者無法變更此設定。
-  - **已停用** - 已停用此設定。 裝置使用者無法變更此設定。
+  - **已停用** - 停用此設定。 裝置使用者無法變更此設定。
 
 - **雲端提供的保護**  
   根據預設，Defender 會將所發現之任何問題的相關資訊傳送給 Microsoft。 Microsoft 會分析該資訊，以深入了解影響您與其他客戶的問題，並提供改善的解決方案。 當 [自動提交範例]  設定為開啟時，保護效果最佳。
 
   - **未設定** (*預設*) - 此設定會還原為系統預設值。
-  - **已啟用** - 已開啟雲端提供的保護。 裝置使用者無法變更此設定。
+  - **已啟用** - 開啟雲端提供的保護。 裝置使用者無法變更此設定。
   - **已停用** - 停用此設定。 裝置使用者無法變更此設定。
 
 - **自動提交範例**  

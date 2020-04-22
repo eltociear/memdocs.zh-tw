@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b9f5a560b0f44b8ff256034b51cb9057faf0ec2
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: ce61f7af7c11fb579e34890700231ca2e59fb5cd
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80576850"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81267678"
 ---
 # <a name="how-to-use-intune-in-environments-without-google-mobile-services"></a>如何在沒有 Google 行動服務的環境中使用 Intune
 
@@ -33,7 +33,7 @@ Microsoft Intune 在管理 Android 裝置時，會使用 Google 行動服務 (GM
 
 ### <a name="for-users-outside-of-mainland-china"></a>適用於中國大陸以外的使用者 
 
-如果 Google Play 無法使用，Android 裝置可以下載 [適用於 Android 的 Microsoft Intune 公司入口網站](../user-help/install-the-company-portal-app-android.md)，並側載應用程式。 以這種方式安裝時，應用程式不會自動接收更新或或修正程式。 您必須確定定期更新，並手動修補應用程式。 
+如果 Google Play 無法使用，Android 裝置可以下載 [適用於 Android 的 Microsoft Intune 公司入口網站](https://www.microsoft.com/en-us/download/details.aspx?id=49140)，並側載應用程式。 以這種方式安裝時，應用程式不會自動接收更新或或修正程式。 您必須確定定期更新，並手動修補應用程式。 
 
 ### <a name="for-users-in-mainland-china"></a>適用於中國大陸的使用者 
 
@@ -47,7 +47,7 @@ Microsoft Intune 在管理 Android 裝置時，會使用 Google 行動服務 (GM
 
 | 案例  | 功能  |
 |-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 裝置合規性原則  | 建立或編輯 Android 裝置管理員的合規性政策時，**Google Play 安全防護**下列出的所有選項都無法使用。  |
+| 裝置合規性政策  | 建立或編輯 Android 裝置管理員的合規性政策時，**Google Play 安全防護**下列出的所有選項都無法使用。  |
 | 應用程式保護原則 (條件式啟動)  | **SafetyNet 裝置證明**與**需要對應用程式進行威脅掃描**裝置條件無法用於條件式啟動。  |
 | 用戶端應用程式  | **Android** 類型的應用程式無法使用。 請改為使用**企業營運應用程式**來部署及管理應用程式。  |
 | Mobile Threat Defense  | 請與您的 MTD 廠商合作，以了解其解決方案是否與 Intune 整合、在重點區域是否可用，以及是否依賴 GMS。  |

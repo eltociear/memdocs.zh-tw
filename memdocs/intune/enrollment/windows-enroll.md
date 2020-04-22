@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: fd7483319443b7a960f8e704442d2b43b6b00c66
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326916"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>設定 Windows 裝置的註冊
@@ -39,7 +39,7 @@ ms.locfileid: "80326916"
 
 有兩個因素會決定如何簡化 Windows 裝置註冊：
 
-- **您是否有使用 Azure Active Directory Premium？** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) 包含在企業行動力 + 安全性和其他授權計劃中。
+- **您是否使用 Azure Active Directory Premium？** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) 隨附於企業行動力 + 安全性和其他授權計劃內。
 - **使用者會註冊哪些版本的 Windows 用戶端？** <br>加入工作或學校帳戶即可自動註冊 Windows 10 裝置。 較舊版本則必須使用公司入口網站應用程式進行註冊。
 
 ||**Azure AD Premium**|**其他 AD**|
@@ -64,13 +64,13 @@ Intune 在下列兩種裝置上可支援多個使用者：
 
 [!INCLUDE [AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
 
-## <a name="simplify-windows-enrollment-without-azure-ad-premium"></a>在沒有 Azure AD Premium 的情況下簡化 Windows 註冊
+## <a name="simplify-windows-enrollment-without-azure-ad-premium"></a>簡化 Windows 註冊，而不使用 Azure AD Premium
 若要簡化註冊，請建立網域名稱伺服器 (DNS) 別名 (CNAME 記錄類型)，將註冊要求重新導向至 Intune 伺服器。 否則，嘗試連線至 Intune 的使用者必須在註冊期間輸入 Intune 伺服器名稱。
 
 **步驟 1：建立 CNAME** (選用)<br>
 建立公司網域的 CNAME DNS 資源記錄。 例如，假設公司網站為 contoso.com，則必須在 DNS 中建立 CNAME，將 EnterpriseEnrollment.contoso.com 重新導向 enterpriseenrollment-s.manage.microsoft.com。
 
-雖然建立 CNAME DNS 項目並非必要，但 CNAME 記錄可以方便使用者進行註冊。 若找不到任何 CNAME 記錄，將會提示使用者手動輸入 MDM 伺服器名稱 enrollment.manage.microsoft.com。
+雖然建立 CNAME DNS 項目並非必要，但 CNAME 記錄可以方便使用者進行註冊。 若找不到任何註冊 CNAME 記錄，會提示使用者手動輸入下列 MDM 伺服器名稱：enrollment.manage.microsoft.com。
 
 |類型|主機名稱|指向|TTL|
 |----------|---------------|---------------|---|

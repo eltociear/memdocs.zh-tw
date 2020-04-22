@@ -2,7 +2,7 @@
 title: 使用 Intune 保護資料和裝置
 summary: Intune 可協助保護裝置與您的公司資料，使用的工具如安全性基準、Azure AD 條件式存取，以及行動裝置威脅防護的合作夥伴。
 metadata:
-  title: 使用 Intune 保護資料與裝置
+  title: 使用 Intune 保護資料和裝置
   description: Intune 可協助保護裝置與您的公司資料，使用的工具如安全性基準、Azure AD 條件式存取，以及行動裝置威脅防護的合作夥伴。
   services: service
   ms.service: microsoft-intune
@@ -12,12 +12,12 @@ metadata:
   author: brenduns
   ms.author: brenduns
   ms.date: 08/20/2019
-  ms.openlocfilehash: 9d5c1c95cd5247f32fd32a77c774ec787d052e16
-  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.openlocfilehash: be6460b9faa9dea44ea14c7198dbdfd8af539d46
+  ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 03/13/2020
-  ms.locfileid: "79333697"
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81525662"
 landingContent:
 - title: 設定裝置上的規則以允許存取資源
   linkLists:
@@ -27,7 +27,7 @@ landingContent:
       url: device-compliance-get-started.md
   - linkListType: quickstart
     links:
-    - text: 建立裝置合規性政策
+    - text: 建立裝置相容性原則
       url: quickstart-set-password-length-android.md
   - linkListType: tutorial
     links:
@@ -39,7 +39,7 @@ landingContent:
       url: create-compliance-policy.md
     - text: 以位置為基礎的合規性
       url: use-network-locations.md
-    - text: 處理不相容狀況的動作
+    - text: 不符合標準時所採取的動作
       url: actions-for-noncompliance.md
 - title: 管理隱私權與個人資料
   linkLists:
@@ -134,4 +134,4 @@ landingContent:
     - text: 使用條件式存取的常見方式
       url: conditional-access-intune-common-ways-use.md
     - text: 適用於 macOS 的 Jamf Pro
-      url: conditional-access-integrate-jamf.md
+      url: conditional-access-jamf-cloud-connector.md

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551374"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>在 Microsoft Intune 中建立合規性政策
@@ -52,8 +52,8 @@ ms.locfileid: "80551374"
   - iOS
   - macOS
   - Windows 10
-  - Windows 8.1
-  - Windows Phone 8.1
+  - Windows 8。1
+  - Windows Phone 8。1
 
 - 在 Intune 中註冊裝置 (查看合規性狀態所必需)
 
@@ -75,7 +75,7 @@ ms.locfileid: "80551374"
    - *macOS*
    - *Windows Phone 8.1*
    - *Windows 8.1 及更新版本*
-   - *Windows 10 及以上版本*
+   - *Windows 10 及更新版本*
 
     針對 [Android 企業]  ，您也可以選取 [原則類型]  ：
      - *Android 裝置擁有者合規性原則*
@@ -93,7 +93,7 @@ ms.locfileid: "80551374"
    - [iOS/iPadOS](compliance-policy-create-ios.md)
    - [macOS](compliance-policy-create-mac-os.md)
    - [Windows Phone 8.1，Windows 8.1 和更新版本](compliance-policy-create-windows-8-1.md)
-   - [Windows 10 及以上版本](compliance-policy-create-windows.md)  
+   - [Windows 10 及更新版本](compliance-policy-create-windows.md)  
 
 6. 在 [位置]  索引標籤上，您可以根據裝置的位置，強制執行合規性。 從現有的位置中選擇。 如果您還沒有可用的位置，請參閱[使用位置 (網路柵欄)](use-network-locations.md) 以取得指引。
    > [!TIP]
@@ -162,11 +162,11 @@ Intune 會使用各種重新整理循環來檢查合規性原則的更新。 如
 
 如果裝置有多個合規性原則，且裝置的兩個或更多個已指派的合規性原則具有不同的合規性狀態，系統就會指派單一的最終合規性狀態。 此指派會以指派至各合規性狀態的概念嚴重性等級為準。 每個合規性狀態均具下列嚴重性等級：
 
-|狀態  |嚴重性  |
+|Status  |嚴重性  |
 |---------|---------|
 |Unknown     |1|
 |NotApplicable     |2|
-|符合標準|3|
+|相容|3|
 |InGracePeriod|4|
 |NonCompliant|5|
 |錯誤|6|

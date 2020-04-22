@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 87c1a63ffdfc0b923f636159536f6d6cf6420db9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360011"
 ---
 # <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>使用 Power BI 從 OData 摘要建立 Intune 報表
@@ -47,7 +47,7 @@ ms.locfileid: "79360011"
 
 ## <a name="install-power-bi-desktop"></a>安裝 Power BI Desktop
 
-安裝最新版本的 Power BI Desktop。 您可以從下列位置下載 Power BI Desktop：[PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
+安裝最新版本的 Power BI Desktop。 您可以從 [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop) 下載 Power BI Desktop。
 
 ## <a name="connect-to-the-odata-feed-for-the-intune-data-warehouse-for-your-tenant"></a>連接到您租用戶之 Intune 資料倉儲的 OData 摘要
 
@@ -106,7 +106,7 @@ ms.locfileid: "79360011"
 
 您可以將篩選新增到矩形式樹狀結構圖，以便可以使用您的應用程式回答其他問題。
 
-1. 若要新增篩選，請選取報表畫布，然後選取 [視覺效果]  底下的**交叉分析篩選器圖示** (![具有資料模型和所支援關聯性的矩形式樹狀結構圖](./media/reports-proc-create-with-odata/reports-create-slicer.png))。 空白的 [交叉分析篩選器]  視覺效果會出現在畫布上。
+1. 若要新增篩選，請選取報表畫布，然後選取 [視覺效果]  底下的![交叉分析篩選器圖示](./media/reports-proc-create-with-odata/reports-create-slicer.png) (**具有資料模型和所支援關聯性的矩形式樹狀結構圖**)。 空白的 [交叉分析篩選器]  視覺效果會出現在畫布上。
 2. 在 [欄位]  窗格中，尋找 `ownerTypes` 資料表。
 3. 展開 `ownerTypes` 資料表，然後選取 `ownerTypeName` 資料欄位。
 4. 將 `onwerTypeName` 資料欄位從 `ownerTypes` 資料表拖曳到 [篩選條件]  窗格，並置放在 [此頁面上的篩選]  區段下標示為 [於此處新增資料欄位]  的方塊中。  

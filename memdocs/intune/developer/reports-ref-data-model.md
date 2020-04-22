@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: cf5ab63f72484ddbbf311810e232404ab643d2d2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359842"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Microsoft Intune 資料倉儲資料模型
@@ -46,10 +46,10 @@ Intune 資料倉儲會每日對資料進行抽樣，以提供行動裝置之持�
 - [Intune 管理延伸模組](reports-ref-intunemanagementextension.md)
 - [原則](reports-ref-policy.md)
 - [行動應用程式管理 (MAM)](../apps/app-management.md)
-- [使用者](reports-ref-user.md)
+- [User](reports-ref-user.md)
 - [使用者裝置關聯](reports-ref-user-device.md)
 
-## <a name="relationships-star-schema-model"></a>關聯性：星型結構描述模型
+## <a name="relationships-star-schema-model"></a>關聯性：星狀結構描述模型
 
 針對您要詢問的問題類型，倉儲會以有意義的關聯性來組織實體。 例如，您可以檢閱內部開發之 Android 應用程式的安裝數量。 資料倉儲結構可讓您深入了解行動環境。 接著，Microsoft Power BI 這類分析工具可以使用資料倉儲資料模型來建立視覺效果和動態儀表板。
 

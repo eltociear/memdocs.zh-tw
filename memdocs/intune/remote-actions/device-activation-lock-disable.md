@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b23fbed8f12c4df90ff2136434e21f3eba369c9e
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80322559"
 ---
 # <a name="disable-activation-lock-on-supervised-iosipados-devices-with-intune"></a>使用 Intune 在受監督的 iOS/iPadOS 裝置上停用啟用鎖定
@@ -84,7 +84,7 @@ Intune 的**停用啟用鎖定**遠端裝置動作無需使用者的 Apple ID �
     >請先複製略過碼，再抹除裝置。 若未先複製略過碼，就重設裝置設定，將會從 Azure 中移除該略過碼。
 
 7. 移至裝置的 [概觀]  刀鋒視窗，然後選取 [抹除]  。
-8. 裝置重設之後，會提示您輸入 *Apple ID* 及*密碼*。 將 [識別碼]  欄位保留空白，然後在 [密碼]  中輸入**略過碼**。 這會從裝置移除帳戶。 
+8. 裝置重設之後，會提示您輸入 *Apple ID* 及*密碼*。 將 [識別碼]  欄位保留空白，然後在 [密碼]  中輸入*略過碼*。 這會從裝置移除帳戶。 
 
 
 ## <a name="next-steps"></a>後續步驟

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ad0964eafccc5bf007b1569762e4cea4d0ee691a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326782"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>將授權指派給使用者，讓使用者可以在 Intune 中註冊裝置
@@ -76,7 +76,7 @@ Intune 的購買方式決定訂用帳戶資訊：
 - 如果您使用 CC# 或 Invoice 購買 Intune，則授權會以使用者為基礎。
 
 ## <a name="use-powershell-to-selectively-manage-ems-user-licenses"></a>使用 PowerShell 來選擇性地管理 EMS 使用者授權
-使用 Microsoft Enterprise Mobility + Security (原稱為 Enterprise Mobility Suite) 的組織可能會有一些使用者只需要使用 EMS 套件中的 Azure Active Directory Premium 或 Intune 服務。 您可以使用 [Azure Active Directory PowerShell Cmdlet](https://msdn.microsoft.com/library/jj151815.aspx) 指派一項服務或其中一部分的服務。
+使用 Microsoft Enterprise Mobility + Security (原稱為 Enterprise Mobility Suite) 的組織可能會有一些使用者只需要使用 EMS 套件中的 Azure Active Directory Premium 或 Intune 服務。 您可以使用 [Azure Active Directory PowerShell Cmdlet](https://msdn.microsoft.com/library/jj151815.aspx) 指派一個服務或一個服務子集。
 
 若要選擇性地指派 EMS 服務的使用者授權，請在已安裝[適用於 Windows PowerShell 的 Windows Azure Active Directory 模組](https://msdn.microsoft.com/library/jj151815.aspx#bkmk_installmodule)的電腦上，以系統管理員身分開啟 PowerShell。 您可以在本機電腦或 ADFS 伺服器上安裝 PowerShell。
 

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a3d0335274604519da82146cab8837459e190801
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80322846"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>使用 Intune 來補救 Microsoft Defender ATP 識別出的弱點
@@ -63,7 +63,7 @@ ms.locfileid: "80322846"
 
 - 完成補救之後，Intune 管理員會開啟安全性工作並選取 [完成工作]  。  系統會針對 Intune 及在 ATP 中更新補救狀態，而安全性管理員會確認已修訂的弱點狀態。
 
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
 
 **訂閱**：
 

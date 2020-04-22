@@ -19,17 +19,17 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3daf758ed93fb03ac63b062f604a457d033637dc
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80438751"
 ---
 # <a name="add-and-assign-the-windows-10-company-portal-app-for-autopilot-provisioned-devices"></a>為 Autopilot 佈建裝置新增並指派 Windows 10 公司入口網站應用程式
 
 若要管理裝置及安裝應用程式，您的使用者可以使用公司入口網站應用程式。 您可以直接從 Intune 指派 Windows 10 公司入口網站應用程式。 
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 針對 Windows 10 Autopilot 佈建裝置，建議您將商務用 Microsoft Store 帳戶與 Intune 建立關聯。 如需詳細資訊，請參閱[如何使用 Microsoft Intune 從商務用 Microsoft Store 管理大量購買的應用程式](windows-store-for-business.md)。
 

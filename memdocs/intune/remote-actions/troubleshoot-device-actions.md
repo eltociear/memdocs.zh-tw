@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 78dec649f5486e0dcf56f92b8ac16d176d119653
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80322331"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>針對 Intune 中的裝置動作進行疑難排解
@@ -97,12 +97,12 @@ Microsoft Intune 有許多動作可協助您管理裝置。 此文章提供一�
 ## <a name="wipe-action"></a>抹除動作
 
 ### <a name="i-cant-restart-a-windows-10-device-after-using-the-wipe-action"></a>我無法在使用抹除動作之後重新啟動 Windows 10 裝置
-這可能是因為您選擇使用 [抹除裝置，即使裝置斷電，仍繼續抹除]。  若您選取了此選項，請注意，這可能會導致某些 Windows 10 裝置無法再次啟動。 在 Windows 10 裝置上。
+這可能是因為您選擇 [抹除裝置，即使裝置斷電，仍繼續抹除]  。如果您選取此選項，請注意，這可能會導致某些 Windows 10 裝置無法再次啟動。 在 Windows 10 裝置上。
 
 這可能是因為 Windows 的安裝具有重大損毀，導致作業系統無法重新安裝所致。 在這種情況下，程序會失敗，並使系統處於 [Windows 修復環境]( https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) \(部分機器翻譯\)。
 
 ### <a name="i-cant-restart-a-bitlocker-encrypted-device-after-using-the-wipe-action"></a>我無法在使用抹除動作之後重新啟動 BitLocker 加密裝置
-這可能是因為您選擇使用 [Wipe device, and continue to wipe even if devices loses power] \(抹除裝置，即使裝置斷電，仍繼續抹除\)。  若選取了此選項，請注意，這可能會導致某些 Windows 10 裝置無法再次啟動。 在 BitLocker 加密裝置上的選項。
+這可能是因為您選擇 [抹除裝置，即使裝置斷電，仍繼續抹除]  。如果您選取此選項，請注意，這可能會導致某些 Windows 10 裝置無法再次啟動。 在 BitLocker 加密裝置上的選項。
 
 若要解決此問題，請使用可開機媒體在裝置上重新安裝 Windows 10。
 

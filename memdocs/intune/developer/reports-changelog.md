@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 632f3bf16fd062acf05c7bd4e269069468df42a3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360206"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Intune 資料倉儲 API 的變更記錄檔
@@ -43,7 +43,7 @@ _發行日期：2019 年 4 月_
 |    mobileAppDeviceUserInstallStatus    |    移除    |    請改為使用 [mobileAppInstallStatusCounts](intune-data-warehouse-collections.md#mobileappinstallstatuscounts)。                                                                                                                                                                                                                                                                     |
 |    enrollmentTypes                     |    移除    |    請改為使用 [deviceEnrollmentTypes](intune-data-warehouse-collections.md#deviceenrollmenttypes)。                                                                                                                                                                                                                                                                                      |
 |    mdmStatuses                         |    移除    |    請改為使用 [complianceStates](intune-data-warehouse-collections.md#compliancestates)。                                                                                                                                                                                                                                                                                               |
-|    workPlaceJoinStateTypes             |    移除    |    請改為使用 [devices](intune-data-warehouse-collections.md#devices) 中的 `azureAdRegistered` 屬性，以及 [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) 集合。                                                                                                                                                                                                             |
+|    workPlaceJoinStateTypes             |    移除    |    請改為使用 `azureAdRegistered`devices[ 中的 ](intune-data-warehouse-collections.md#devices) 屬性，以及 [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) 集合。                                                                                                                                                                                                             |
 |    clientRegistrationStateTypes        |    移除    |    請改為使用 [deviceRegistrationStates](intune-data-warehouse-collections.md#deviceregistrationstates)。                                                                                                                                                                                                                                                                             |
 |    currentUser                         |    移除    |    請改為使用 [users](intune-data-warehouse-collections.md#users)。                                                                                                                                                                                                                                                                                                      |
 |    mdmDeviceInventoryHistories         |    移除    |    許多屬性都是冗餘的，或是現在可在 [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) 或 [devices](intune-data-warehouse-collections.md#devices) 集合中找到。 任何尚未與這兩個集合一同列出的 **mdmDeviceInventoryHistories** 屬性都不再提供使用。 請參閱下列詳細資料。    |

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7107669b3a87f0ca7488f2fdd5203c6052beffad
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326265"
 ---
 # <a name="reset-the-passcode-on-windows-devices-using-intune"></a>使用 Intune 重設 Windows 裝置的密碼
@@ -42,7 +42,7 @@ ms.locfileid: "80326265"
 若要重設 Windows 裝置上的密碼，請將 PIN 重設服務導入您的 Intune 租用戶。
 
 1. 移至 [Microsoft PIN 重設服務生產](https://login.windows.net/common/oauth2/authorize?response_type=code&client_id=b8456c59-1230-44c7-a4a2-99b085333e84&resource=https%3A%2F%2Fgraph.windows.net&redirect_uri=https%3A%2F%2Fcred.microsoft.com&state=e9191523-6c2f-4f1d-a4f9-c36f26f89df0&prompt=admin_consent)，並使用租用戶系統管理員帳戶登入。
-2. **接受**以同意 PIN 重設服務存取您的帳戶：![接受 PIN 重設伺服器的權限要求](./media/device-windows-pin-reset/pin-reset-service-home-screen.png)
+2. **接受**以同意 PIN 重設服務存取您的帳戶：![接受 PIN 重設伺服器要求權限](./media/device-windows-pin-reset/pin-reset-service-home-screen.png)
 3. 移至 [Microsoft PIN 重設客戶端生產](https://login.windows.net/common/oauth2/authorize?response_type=code&client_id=9115dd05-fad5-4f9c-acc7-305d08b1b04e&resource=https%3A%2F%2Fcred.microsoft.com%2F&redirect_uri=ms-appx-web%3A%2F%2FMicrosoft.AAD.BrokerPlugin%2F9115dd05-fad5-4f9c-acc7-305d08b1b04e&state=6765f8c5-f4a7-4029-b667-46a6776ad611&prompt=admin_consent)，並使用租用戶系統管理員帳戶登入。 **接受**以同意 PIN 重設用戶端存取您的帳戶。
 4. 在 [Azure 入口網站](https://portal.azure.com)中，確認 PIN 重設服務已列在企業應用程式 (所有應用程式) 中：![PIN 重設服務權限頁面](./media/device-windows-pin-reset/pin-reset-service-application.png)
 
@@ -55,7 +55,7 @@ ms.locfileid: "80326265"
 
 **使用裝置原則** - `./Device/Vendor/MSFT/PassportForWork/*tenant ID*/Policies/EnablePinRecovery`
 
-以您 Azure AD 目錄的識別碼取代*租用戶識別碼*，這會列在 [Azure 入口網站](https://portal.azure.com)中 Azure Active Directory 的**屬性**裡。
+以您 Azure AD 目錄的識別碼取代*租用戶識別碼*，這會列在 **Azure 入口網站**中 Azure Active Directory 的[屬性](https://portal.azure.com)裡。
 
 針對此 CSP 將值設定為 **True**。
 

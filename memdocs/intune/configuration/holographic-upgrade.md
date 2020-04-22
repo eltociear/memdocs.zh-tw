@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f4e809a888fc2696e54540ee6baa2271d7340579
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79361051"
 ---
 # <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>將執行 Windows Holographic 的裝置升級至 Windows Holographic for Business
@@ -37,7 +37,7 @@ Microsoft Intune 包含許多設定，可協助管理和保護您的裝置。 �
 
 ## <a name="edition-upgrade"></a>版本升級
 
-- **要升級的目標版本**：選取 [Windows 10 Holographic for Business]  。
+- **要升級的版本**：選取 [Windows 10 Holographic for Business]  。
 - **授權檔案**：瀏覽至提供給您的 XML 授權檔案並加以選取。
 
   ![輸入包含 Holographic for Business 授權資訊的 XML 檔案名稱](./media/holographic-upgrade/Holographic-edition-upgrade.png)

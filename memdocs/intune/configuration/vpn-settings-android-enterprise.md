@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8bc627e7b9efb68e8d5cb777b5d8e659b06cab92
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086813"
 ---
 # <a name="android-enterprise-device-settings-to-configure-vpn-in-intune"></a>在 Intune 中設定 VPN 的 Android Enterprise 裝置設定
@@ -40,14 +40,14 @@ Intune 管理員可以建立 VPN 設定，並將其指派給 Android Enterprise 
 ## <a name="device-owner-only"></a>僅限裝置擁有者
 
 - **連線名稱**：輸入此連線的名稱。 終端使用者查看其裝置的可用 VPN 連線時，使用者會看到此名稱。 例如，輸入 `Contoso VPN`。
-- **IP 位址或 FQDN**：輸入裝置所連線之 VPN 伺服器的 IP 位址或完整網域名稱 (FQDN)。 例如，輸入 **192.168.1.1** 或 **vpn.contoso.com**。
+- **IP 位址或 FQDN**輸入裝置所連線 VPN 伺服器的 IP 位址或完整網域名稱 (FQDN)。 例如，輸入 **192.168.1.1** 或 **vpn.contoso.com**。
 
   - **驗證方法**：選擇裝置向 VPN 伺服器進行驗證的方式。 選項包括：
   
     - **憑證**：選取現有的 SCEP 或 PKCS 憑證設定檔來驗證連線。 [設定憑證](../protect/certificates-configure.md)列出用來建立憑證設定檔的步驟。
-    - **使用者名稱和密碼**：登入 VPN 伺服器時，系統會提示使用者輸入其使用者名稱和密碼。
+    - **使用者名稱和密碼**：登入 VPN 伺服器時，系統會提示終端使用者輸入其使用者名稱和密碼。
 
-- **連線類型**：選取 VPN 連線類型。 選項包括：
+- **連線類型**︰選取 VPN 連線類型。 選項包括：
 
   - **Cisco AnyConnect**
   - **F5 Access**
@@ -56,14 +56,14 @@ Intune 管理員可以建立 VPN 設定，並將其指派給 Android Enterprise 
 ## <a name="work-profile-only"></a>僅限工作設定檔
 
 - **連線名稱**：輸入此連線的名稱。 終端使用者查看其裝置的可用 VPN 連線時，使用者會看到此名稱。 例如，輸入 `Contoso VPN`。
-- **IP 位址或 FQDN**：輸入裝置所連線之 VPN 伺服器的 IP 位址或完整網域名稱 (FQDN)。 例如，輸入 **192.168.1.1** 或 **vpn.contoso.com**。
+- **IP 位址或 FQDN**輸入裝置所連線 VPN 伺服器的 IP 位址或完整網域名稱 (FQDN)。 例如，輸入 **192.168.1.1** 或 **vpn.contoso.com**。
 
   - **驗證方法**：選擇裝置向 VPN 伺服器進行驗證的方式。 選項包括：
   
     - **憑證**：選取現有的 SCEP 或 PKCS 憑證設定檔來驗證連線。 [設定憑證](../protect/certificates-configure.md)列出用來建立憑證設定檔的步驟。
-    - **使用者名稱和密碼**：登入 VPN 伺服器時，系統會提示使用者輸入其使用者名稱和密碼。
+    - **使用者名稱和密碼**：登入 VPN 伺服器時，系統會提示終端使用者輸入其使用者名稱和密碼。
 
-- **連線類型**：選取 VPN 連線類型。 選項包括：
+- **連線類型**︰選取 VPN 連線類型。 選項包括：
 
   - **Cisco AnyConnect**
   - **F5 Access**

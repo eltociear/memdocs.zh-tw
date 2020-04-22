@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 04521681ee6e262f4634cfc96560a5922ce1b8c0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360232"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Intune 資料倉儲 API 端點
@@ -49,7 +49,7 @@ Intune URL 使用下列格式：
 
 URL 包含下列元素：
 
-| 元素 | 範例 | 說明 |
+| 元素 | 範例 | Description |
 |-------------------|------------|--------------------------------------------------------------------------------------------------------------------|
 | 位置 | msua06 | 在 Azure 入口網站中檢視資料倉儲 API 刀鋒視窗，即可找到基底 URL。 |
 | entity-collection | devicePropertyHistories | OData 實體集合的名稱。 如需資料模型中集合和實體的詳細資訊，請參閱[資料模型](reports-ref-data-model.md)。 |
@@ -70,7 +70,7 @@ URL 包含下列元素：
 
 `DateKey` 範圍篩選條件可用來針對具有 `dateKey` 作為索引鍵屬性的部分集合，限制要下載的資料量。 `DateKey` 篩選條件可用來藉由提供下列 `$filter` 查詢參數，將服務效能最佳化：
 
-1. 在 `$filter` 中的單獨 `DateKey`，支援 `lt/le/eq/ge/gt` 運算子和使用邏輯運算子 `and` 聯結，可以對應到開始日期和/或結束日期。
+1. 在 `DateKey` 中的單獨 `$filter`，支援 `lt/le/eq/ge/gt` 運算子和使用邏輯運算子 `and` 聯結，可以對應到開始日期和/或結束日期。
 2. `maxhistorydays` 提供作為自訂查詢選項。<br>
 
 ## <a name="filter-examples"></a>篩選條件範例
@@ -78,7 +78,7 @@ URL 包含下列元素：
 > [!NOTE]
 > 篩選條件範例假設今天是 2019 年 2 月 21 日。
 
-|                             篩選器                             |           效能最佳化           |                                          說明                                          |
+|                             篩選器                             |           效能最佳化           |                                          Description                                          |
 |:--------------------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------------------------------------------------------:|
 |    `maxhistorydays=7`                                            |    完整                                      |    傳回 `DateKey` 在 20180214 和 20180221 之間的資料。                                     |
 |    `$filter=DateKey eq 20180214`                                 |    完整                                      |    傳回 `DateKey` 等於 20180214 的資料。                                                    |

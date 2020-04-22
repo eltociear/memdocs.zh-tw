@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
-ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80624920"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>將 Android 裝置從裝置系統管理員移至工作設定檔管理
@@ -34,7 +34,7 @@ ms.locfileid: "80624920"
 2. 在工作設定檔管理中註冊
 3. 解決任何合規性問題。 
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 使用者必須擁有 [Android 裝置系統管理員註冊的裝置](android-enroll-device-administrator.md)，其中具備 Android 公司入口網站 5.0.4720.0 版或更新版本。
 - 透過[將 Intune 租用戶帳戶連線到 Android Enterprise 帳戶](connect-intune-android-enterprise.md)，以設定 Android 公司設定檔管理。
@@ -73,7 +73,7 @@ ms.locfileid: "80624920"
     > - 如果 Android 公司入口網站已開啟且在背景中，則當使用者點選連結時，可能會改為前往其已開啟的最後一個頁面。
     > - 使用者必須在 Android 裝置上點選連結。 如果改為貼入瀏覽器，就不會啟動 Android 公司入口網站。 
 
-    選擇 [下一步]  。
+    選擇 **[下一步]** 。
 
 7. 在 [範圍標籤]  頁面上，選取您想要包含的任意範圍標籤。
 8. 在 [指派]  頁面上，將原則指派給含有已使用裝置系統管理員管理註冊之裝置的群組 > [下一步]  。

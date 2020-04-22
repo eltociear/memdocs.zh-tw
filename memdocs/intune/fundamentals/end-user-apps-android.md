@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e1d18a423242300b6c2b66c01c59404cef42ebd9
-ms.sourcegitcommit: b5a9ce31de743879d2a6306cea76be3a093976bb
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79372546"
 ---
 # <a name="how-your-android-users-get-their-apps"></a>Android 使用者如何取得其應用程式  
@@ -37,8 +37,8 @@ ms.locfileid: "79372546"
 
 您的終端使用者必須允許來自未知來源的安裝，才能安裝 [LOB 應用程式](../apps/lob-apps-android.md)。 這些設定通常可在兩個不同的位置中找到：
 
-* **Android 7.1.2 和更舊版本**：[設定]   > [安全性]   > [未知來源] 
-* **Android 8.0 和更新版本**：[設定]   > [應用程式與通知]   > [特殊應用程式存取]   > [安裝未知的應用程式]   > [公司入口網站]   > [允許從這個來源] 
+* **Android 7.1.2 和以下版本**：[設定]   > [安全性]   > [未知來源] 
+* **Android 8.0 和以上版本**：[設定]   > [應用程式與通知]   > [Special app access] (特殊應用程式存取)   > [Install unknown apps] (安裝未知應用程式)   > [公司入口網站]   > [Allow from this source] (允許來自此來源) 
 
 如果發生這種情況，公司入口網站應用程式將會通知，並直接引導終端使用者進行適當的設定。 
 

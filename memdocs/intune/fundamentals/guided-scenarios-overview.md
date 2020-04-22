@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dc536d4c2c0d06a768d42d4a796ec56cf80c0d66
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80401430"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Intune 引導式案例概觀 
@@ -64,7 +64,7 @@ ms.locfileid: "80401430"
 
 引導式案例無法用來編輯現有資源。 建立之後，所有的資源、群組及指派都必須使用現有工作負載來編輯。
 
-### <a name="monitoring"></a>監視 
+### <a name="monitoring"></a>monitoring 
 
 除了初始建立程序之外，引導式案例無法用來監視現有資源。 建立之後，所有的資源、群組及指派都必須使用現有工作負載來監視。 
 

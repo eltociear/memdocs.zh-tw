@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 3b3420dce8ea9d21b955e36506229817420cdbf0
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084183"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>搭配使用 Windows 裝置與 Intune 公司入口網站
@@ -42,7 +42,7 @@ ms.locfileid: "80084183"
 * Windows 10 (家用版、專業版、教育版、S 模式和企業版)
 * Windows Phone 8.1 和更新版本
 * Windows 8.1 RT
-* Windows 8.1
+* Windows 8。1
 
 公司入口網站也支援其他版本的 Windows，例如 [Windows 10 全像攝影版](https://www.microsoft.com/hololens)。 不過，本文未涵蓋這些版本，因為這些版本是針對特殊目的使用。
 
@@ -67,7 +67,7 @@ ms.locfileid: "80084183"
 * [我的 Windows 版本不受支援](your-windows-version-isnt-yet-supported.md)
 * [更新我的 Windows 裝置](you-need-to-update-your-windows-device.md)
 * [從公司入口網站應用程式傳送記錄](send-logs-to-your-it-admin-cp-windows.md)
-* [從裝置設定應用程式傳送記錄](send-logs-to-your-it-admin-settings-windows.md)
+* [從裝置應用程式傳送記錄](send-logs-to-your-it-admin-settings-windows.md)
 * [在我的 Windows 10 裝置上安裝 Office 365](install-office-windows.md)
 * [我的裝置需要加密](you-need-to-enable-windows-encryption.md)
 * [取得反惡意程式碼軟體](your-device-needs-antimalware-software.md)

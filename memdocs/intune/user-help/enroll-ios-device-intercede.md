@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,18 +19,18 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1bd216049c5dbda7c044949f9fa39c3b7bd56f9d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8caf05a2869088fd4f8206d1306d82c696f527a2
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337235"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81638217"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-intercede"></a>使用公司入口網站和 Intercede 設定 iOS 或 iPadOS 裝置
 
 使用 Intune 公司入口網站應用程式註冊您的裝置，以安全地使用行動裝置存取您組織的電子郵件、檔案和應用程式。  您的裝置註冊之後，它就變成「受控」  。 您的組織可以透過 Intune 等行動裝置管理 (MDM) 提供者將原則和應用程式指派給裝置。  
 
-在註冊期間，您也會在裝置上安裝衍生認證。 組織可能會要求在存取資源或簽署和加密電子郵件時，使用衍生認證作為驗證方法。 
+在註冊期間，您也會在裝置上安裝衍生的認證。 組織可能會要求在存取資源或簽署和加密電子郵件時，使用衍生認證作為驗證方法。 
 
 如果使用智慧卡來執行下列動作，則可能需要設定衍生認證：
 
@@ -51,9 +52,9 @@ ms.locfileid: "79337235"
 
 衍生認證是適用於衍生個人識別驗證 (PIV) 認證的國家標準暨技術研究院 (NIST) 指導方針實作，是特殊發行集 (SP) 800-157 的一部分。  
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
- 若要完成註冊，必須具備：
+ 若要完成註冊，則必須具備：
 
 * 學校或公司提供的智慧卡
 * 可使用智慧卡登入的電腦或自助 Kiosk 存取權
@@ -66,14 +67,14 @@ ms.locfileid: "79337235"
 2. 記下出現在畫面上的驗證碼。  
 
     ![公司入口網站應用程式以及畫面上的訊息和驗證碼範例影像。](./media/copy-code-intercede.png)  
-1. 切換至支援智慧卡的裝置，然後前往 https://microsoft.com/devicelogin 。 
+1. 切換至啟用智慧卡的裝置，然後前往 https://microsoft.com/devicelogin 。 
 
 1. 輸入先前記下的驗證碼。
  
 2. 插入智慧卡以進行登入。   
 
-3. 返回行動裝置上的公司入口網站應用程式，並遵循畫面上的指示來註冊裝置。  
-4. 註冊完成之後，公司入口網站會通知設定智慧卡。 點選通知。 如果您沒有收到通知，請檢查電子郵件。   
+3. 返回行動裝置上的公司入口網站應用程式，並遵循螢幕上的指示來註冊裝置。  
+4. 註冊完成之後，公司入口網站會通知設定智慧卡。 點選通知。 如果沒有收到通知，請檢查電子郵件。   
 
     ![裝置主畫面上公司入口網站推播通知的範例螢幕擷取畫面。](./media/action-required-in-app-intercede.png)  
 
@@ -86,7 +87,7 @@ ms.locfileid: "79337235"
 6. 切換至支援智慧卡的裝置或自助 Kiosk，然後開啟 MyID 應用程式。 使用公司認證登入。  
 7. 選擇要求別碼的選項。 
 8. 當系統詢問想要使用哪一個設定檔時，請選擇以行動認證啟用。 QR 代碼隨即出現。  
-9. 返回行動裝置。 在公司入口網站 > [取得 QR 代碼]  畫面上，點選 [繼續]  。  
+9. 返回行動裝置。 在 [公司入口網站] > [取得 QR 代碼]  畫面上，點選 [繼續]  。  
 
     ![公司入口網站 [取得 QR 代碼] 畫面的範例螢幕擷取畫面。](./media/get-qr-code-intercede.png) 
  

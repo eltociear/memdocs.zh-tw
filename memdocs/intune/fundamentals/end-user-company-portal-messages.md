@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 91c79ae7ca7fc70c361fba0a7ad6becf8d035b5a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79362767"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>幫助使用者了解公司入口網站應用程式訊息
@@ -106,7 +106,7 @@ ms.locfileid: "79362767"
 
 如果使用者拒絕存取，他們仍然可以透過電子郵件傳送資料記錄檔，但記錄檔無法複製到裝置的 SD 記憶卡。
 
-使用者拒絕存取後並再次登入公司入口網站應用程式時，訊息會顯示 **不要再詢問** 核取方塊，使用者可選取該核取方塊讓訊息不再顯示。 若使用者在允許之後又拒絕存取，則訊息會在使用者下一次嘗試傳送記錄檔時出現。 不過，如果使用者稍後決定允許存取，他們可以移至 [設定]   > [應用程式]   > [公司入口網站]   > [權限]   > [儲存體]  ，然後開啟權限。
+使用者拒絕存取後並再次登入公司入口網站應用程式時，訊息會顯示 [不要再詢問]  核取方塊，使用者可加以選取讓訊息不再顯示。 若使用者在允許之後又拒絕存取，則訊息會在使用者下一次嘗試傳送記錄檔時出現。 不過，如果使用者稍後決定允許存取，他們可以移至 [設定]   > [應用程式]   > [公司入口網站]   > [權限]   > [儲存體]  ，然後開啟權限。
 
 
 ### <a name="how-to-explain-this-to-your-users"></a>如何對使用者說明
@@ -117,7 +117,7 @@ ms.locfileid: "79362767"
 
 ### <a name="where-it-appears"></a>出現的位置
 
-如果您未將公司入口網站應用程式新增到**允許的應用程式**或**豁免應用程式**清單，如有使用者嘗試登入，將會登入失敗。 隨即顯示下列訊息：
+如果您未將公司入口網站應用程式新增到**允許的應用程式**或**豁免應用程式**清單，如有使用者嘗試登入，將會登入失敗。 系統會顯示下列訊息：
 
 > **您的公司支援部門必須提供您公司資源的存取權**  
 > 您的公司使用 Windows 資訊保護原則來保護裝置。 您的公司支援部門必須確認其允許公司入口網站存取那些資源。
@@ -148,7 +148,7 @@ ms.locfileid: "79362767"
 
 3. 選取 [管理設定檔]   > [企業應用程式]  。
 4. 選取開發人員名稱。
-5. 按下 [信任 _開發人員名稱_]  。
+5. 按下 [信任 **開發人員名稱 _]_** 。
 6. 在應用程式安裝快顯訊息上選取 [信任]  以確認應用程式。
 
    ![iOS 裝置 UI - 信任應用程式訊息](./media/end-user-company-portal-messages/end-user-company-portal-messages-03.png)

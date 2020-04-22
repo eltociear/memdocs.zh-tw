@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c5c2af6ce301b0a5de06cbbd4126b1661ca21fb0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359062"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>引導式案例 - 部署適用於行動裝置的 Microsoft Edge
@@ -38,7 +38,7 @@ Microsoft Edge 能讓使用者透過能協助他們合併、排列及管理工�
 - **Azure 應用程式 Proxy 整合** - 系統管理員可以控制對 SaaS 應用程式和 Web 應用程式的存取，協助確保無論使用者是從公司網路連線或從網際網路連線，瀏覽器型應用程式都只會在安全的 Microsoft Edge 瀏覽器中執行。
 - **受控我的最愛和首頁捷徑** - 為了方便存取，系統管理員可以設定 URL，以在終端使用者進入公司內容中時，顯示在 [我的最愛] 底下。 系統管理員可以設定首頁捷徑，就會在公司的使用者於 Microsoft Edge 中開啟新的頁面或新的索引標籤時，顯示為主要捷徑。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - [將 MDM 授權單位設定為 Intune](mdm-authority-set.md#set-mdm-authority-to-intune)：行動裝置管理 (MDM) 授權單位設定會決定您管理裝置的方式。 身為 IT 系統管理員，您必須在使用者可以註冊裝置以進行管理之前，設定 MDM 授權單位。
 - 所需的 Intune 系統管理權限：

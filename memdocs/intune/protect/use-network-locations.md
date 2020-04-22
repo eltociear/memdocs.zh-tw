@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4da3a8e9e59f1f6a4d1c38354f14163c4773fd7d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325311"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>使用 Intune 中的位置 (網路範圍)
@@ -40,7 +40,7 @@ ms.locfileid: "80325311"
 
 此外，您可以新增[不符合規範時所採取的動作](#configure-the-actions-for-noncompliance)。 當裝置回到內部部署且位於網路位置時，它會重新取得公司資源的存取權。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 若要建立依據位置的合規性原則，請：
 

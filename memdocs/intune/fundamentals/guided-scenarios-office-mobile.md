@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7aabc09e276c723e9aeaed4ec8eb3dd4c0332b4e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79362507"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>引導式案例 - 保護 Microsoft Office 行動應用程式
@@ -59,7 +59,7 @@ Office 行動應用程式以及適用於行動裝置的 Microsoft Edge 都支援
 
 ![Outlook 應用程式條件式存取程序流程](./media/guided-scenarios-office-mobile/guided-scenarios-office-mobile-02.png)
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 您將需要下列 Intune 系統管理員權限：
 
@@ -109,7 +109,7 @@ Office 行動應用程式以及適用於行動裝置的 Microsoft Edge 都支援
 
 在此步驟中，您必須設定在這些應用程式中存取及共用公司檔案和電子郵件的需求。 根據預設，使用者可以將資料儲存到組織的 OneDrive 與 SharePoint 帳戶。
 
-| 設定 | 說明 | 預設值 |
+| Setting | Description | 預設值 |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
 | PIN 類型 | 數字 PIN 全部由數字組成。 密碼是由英數字元和特殊字元所組成。  在 iOS/iPadOS 上，若要設定「密碼」類型，應用程式需要有 Intune SDK 版本 7.1.12 或更新版本。 數值類型沒有 Intune SDK 版本限制。 | 數字 |
 | 選取 PIN 長度下限 | 指定 PIN 序列的最小位數。 | 6 |

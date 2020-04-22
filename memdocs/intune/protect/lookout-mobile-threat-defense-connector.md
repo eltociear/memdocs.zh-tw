@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 17b120faa0021a1fc044d7831b4b81ea88f404a7
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79526575"
 ---
 # <a name="lookout-mobile-endpoint-security-connector-with-intune"></a>Lookout Mobile Endpoint Security 連接器與 Intune
@@ -43,7 +43,7 @@ ms.locfileid: "79526575"
   - [建立支援 MTD 的裝置合規性政策](../protect/mtd-device-compliance-policy-create.md)
   - [在 Intune 中啟用 MTD 連接器](../protect/mtd-connector-enable.md)
 
-- **支援未註冊的裝置** - 當使用 Intune 應用程式保護原則時，Intune 可以在未註冊裝置上使用 Lookout for Work 應用程式中的風險評定資料。 系統管理員可以使用此組合來協助保護[受 Microsoft Intune 保護的應用程式](../apps/apps-supported-intune-apps.md)中的公司資料，也可以針對未註冊裝置上的公司資料發出封鎖或選擇性抹除。 若要支援搭配使用 Lookout for Work 與未註冊的裝置，請：
+- **支援未註冊的裝置** - 當使用 Intune 應用程式保護原則時，Intune 可以在未註冊裝置上使用 Lookout for Work 應用程式中的風險評定資料。 系統管理員可以使用此組合來協助保護[受 Microsoft Intune 保護應用程式](../apps/apps-supported-intune-apps.md)中的公司資料，也可以針對未註冊裝置上的公司資料發出封鎖或選擇性抹除。 若要支援搭配使用 Lookout for Work 與未註冊的裝置，請：
   - [將 MTD 應用程式新增至未註冊的裝置](../protect/mtd-add-apps-unenrolled-devices.md)
   - [建立行動威脅防禦應用程式保護原則](../protect/mtd-app-protection-policy.md)
   - [在 Intune 中針對未註冊的裝置啟用 MTD 連接器](../protect/mtd-enable-unenrolled-devices.md)
@@ -57,7 +57,7 @@ ms.locfileid: "79526575"
 
 如需平台和語言支援的其他資訊，請前往 [Lookout 網站](https://personal.support.lookout.com/hc/articles/114094140253)。  
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - Lookout Mobile Endpoint Security 企業訂閱  
 - Microsoft Intune 訂閱
@@ -102,9 +102,9 @@ ms.locfileid: "79526575"
 > [!div class="mx-imgBorder"]
 > ![補救後允許存取的條件式存取概念影像](./media/lookout-mobile-threat-defense-connector/network-wifi-unblocked.png)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>依據對網路的威脅來控制對 SharePoint Online 的存取
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>根據網路威脅來控制 SharePoint Online 的存取權
 
-偵測您的網路威脅 (例如攔截式攻擊)，並依據裝置風險來防止同步處理公司的檔案。
+偵測到攔截式攻擊等網路威脅，並根據裝置風險防止同步處理公司檔案。
 
 *偵測到網路威脅時封鎖 SharePoint Online：*
 

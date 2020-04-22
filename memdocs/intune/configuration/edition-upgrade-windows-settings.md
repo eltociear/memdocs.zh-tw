@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2ab94c3cc8bb9009d49a6b301d9a67fa6ffc5f1a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79364301"
 ---
 # <a name="windows-10-and-newer-device-settings-to-upgrade-editions-or-enable-s-mode-in-intune"></a>升級版本或在 Intune 中啟用 S 模式的 Windows 10 (和更新版本) 裝置設定
@@ -38,15 +38,15 @@ Microsoft Intune 包含許多設定，可協助管理和保護您的裝置。 �
 
 ## <a name="edition-upgrade"></a>版本升級
 
-- **要升級的目標版本**：選取您要升級的目標 Windows 10 版本。 由此原則設為目標的裝置會升級至您選擇的版本。
+- **要升級到的版本**：選取您要升級到的 Windows 10 版本。 由此原則設為目標的裝置會升級至您選擇的版本。
 - **產品金鑰**：輸入您從 Microsoft 收到的產品金鑰。 建立包含產品金鑰的原則之後，即無法更新金鑰，且會基於安全性考量而隱藏。 若要變更產品金鑰，請再次輸入完整金鑰。
-- **授權檔案**：針對 **Windows 10 Holographic for Business** 或 **Windows 10 行動裝置版**，選擇 [瀏覽]  來選取您從 Microsoft 收到的授權檔案。 這個授權檔案包含您要升級裝置之目標版本的授權資訊。
+- **授權檔案**：針對**商務用 Windows 10 全像攝影版**或 **Windows 10 行動裝置版**，選擇 [瀏覽]  來選取您從 Microsoft 收到的授權檔案。 這個授權檔案包含您要升級裝置之目標版本的授權資訊。
 
 ## <a name="mode-switch"></a>模式切換
 
-- **未設定**：S 模式裝置會維持 S 模式。 終端使用者可以將裝置切換移出 S 模式。
-- **維持 S 模式**：防止終端使用者切換裝置以移出 S 模式。
-- **切換**：切換裝置以移出 S 模式。
+- **沒有設定**：S 模式裝置會保持在 S 模式。 終端使用者可以將裝置切換移出 S 模式。
+- **Keep in S mode** \(保持在 S 模式\)：防止終端使用者將裝置切換移出 S 模式。
+- **Switch** \(切換\)：將裝置切換移出 S 模式。
 
 ## <a name="next-steps"></a>後續步驟
 

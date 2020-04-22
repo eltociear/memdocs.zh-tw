@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a679df157a2623012d19fab2370792cac73f6f2b
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326808"
 ---
 # <a name="assign-a-role-to-an-intune-user"></a>將角色指派給 Intune 使用者
@@ -40,9 +40,9 @@ ms.locfileid: "80326808"
 
 6. 在 [系統管理群組]  頁面上，選取包含您欲授與權限使用者的群組。 選擇 [下一步] 
 
-7. 在 [範圍 (群組)]  頁面上，選擇以上成員允許進行管理，包含使用者/裝置的群組。 選擇 [下一步]  。
+7. 在 [範圍 (群組)]  頁面上，選擇以上成員允許進行管理，包含使用者/裝置的群組。 選擇 **[下一步]** 。
 
-8. 在 [範圍 (標籤)]  頁面上，選擇將套用此角色指派的標籤。 選擇 [下一步]  。
+8. 在 [範圍 (標籤)]  頁面上，選擇將套用此角色指派的標籤。 選擇 **[下一步]** 。
 
 9. 在 [檢閱 + 建立]  頁面上，當您完成操作時，請選擇 [建立]  。 新指派會隨即顯示在指派清單中。
 

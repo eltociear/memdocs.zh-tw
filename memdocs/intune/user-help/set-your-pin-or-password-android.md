@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: fa069eea0fc8dcc7b2c98c261f3f7527b802da6e
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80233443"
 ---
 # <a name="set-your-pin-or-password"></a>設定您的 PIN 或密碼
@@ -32,7 +32,7 @@ ms.locfileid: "80233443"
 
 您可以使用下列步驟來設定 PIN 或密碼。
 
-1. 點選 [設定]   > [安全性]   > [螢幕鎖定]   > [密碼]  。
+1. 點選 [設定]   >  **[安全性]**  >  [螢幕鎖定]  [密碼] >   。
 
 2. 選擇並確認新密碼。
 

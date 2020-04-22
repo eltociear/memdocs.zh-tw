@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c1c3c08a8ea50e23b9e3e59a6a6e8f04168f10e2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79362416"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>在 Microsoft Intune 中使用 Windows 防火牆原則協助保護 Windows 電腦
@@ -114,7 +114,7 @@ Windows 防火牆原則可讓您建立及部署在受管理電腦上控制 Windo
 |**檔案及印表機共用**|可讓使用者與網路上的其他使用者共用本機檔案和印表機。 這項設定使用 NetBIOS、連結本機多點傳送名稱解析 (LLMNR)、伺服器訊息區 (SMB) 通訊協定及 RPC。|
 |**HomeGroup**<br>(Windows 7 或更新版本)|可讓受管理電腦加入 HomeGroup 網路。|
 |**iSCSI 服務**|可讓受管理電腦連線到 iSCSI 伺服器和裝置。|
-|**金鑰管理服務**|可讓您計算企業環境中電腦的授權相容。|
+|**金鑰管理服務**|可讓您計算企業環境中電腦的授權合規性。|
 |**Media Center Extenders**|可讓 Media Center Extender 與執行 Windows Media Center 的電腦通訊。 這項設定使用簡易服務探索通訊協定 (SSDP) 及 qWave。|
 |**Netlogon 服務**|設定網域用戶端和網域控制站之間的安全性通道，以驗證使用者和服務。 這項設定使用 RPC。|
 |**網路探索**|可讓電腦探索其他裝置，並被網路上的其他裝置探索。 這項設定使用功能探索裝載與發佈服務，以及 SSDP、NetBIOS、LLMNR 和 UPnP 網路通訊協定。|

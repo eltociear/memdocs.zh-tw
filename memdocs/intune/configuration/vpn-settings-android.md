@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8b43b9671767a2d67bb98db6150799d266fe9fa6
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086545"
 ---
 # <a name="android-device-settings-to-configure-vpn-in-intune"></a>在 Intune 中設定 VPN 的 Android 裝置設定
@@ -37,14 +37,14 @@ ms.locfileid: "80086545"
 ## <a name="base-vpn"></a>基底 VPN
 
 - **連線名稱**：輸入此連線的名稱。 終端使用者查看其裝置的可用 VPN 連線時，使用者會看到此名稱。 例如，輸入 `Contoso VPN`。
-- **IP 位址或 FQDN**：輸入裝置所連線之 VPN 伺服器的 IP 位址或完整網域名稱 (FQDN)。 例如，輸入 **192.168.1.1** 或 **vpn.contoso.com**。
+- **IP 位址或 FQDN**輸入裝置所連線 VPN 伺服器的 IP 位址或完整網域名稱 (FQDN)。 例如，輸入 **192.168.1.1** 或 **vpn.contoso.com**。
 
   - **驗證方法**：選擇裝置向 VPN 伺服器進行驗證的方式。 選項包括：
 
     - **憑證**：選取現有的 SCEP 或 PKCS 憑證設定檔來驗證連線。 [設定憑證](../protect/certificates-configure.md)列出用來建立憑證設定檔的步驟。
-    - **使用者名稱和密碼**：登入 VPN 伺服器時，系統會提示使用者輸入其使用者名稱和密碼。
+    - **使用者名稱和密碼**：登入 VPN 伺服器時，系統會提示終端使用者輸入其使用者名稱和密碼。
 
-- **連線類型**：選取 VPN 連線類型。 選項包括：
+- **連線類型**︰選取 VPN 連線類型。 選項包括：
 
   - **Check Point Capsule VPN**
   - **Cisco AnyConnect**
@@ -53,8 +53,8 @@ ms.locfileid: "80086545"
   - **Pulse Secure**
   - **Citrix SSO**
 
-- **指紋** (僅限 Check Point Capsule VPN)：輸入 **Contoso Fingerprint Code** 之類的字串，以確認 VPN 伺服器是可信任的。 指紋會傳送至用戶端，讓用戶端知道可以信任具有相同指紋的任何伺服器。 如果裝置沒有指紋，則會提示使用者信任 VPN 伺服器，同時顯示指紋。 使用者可手動驗證指紋，然後選擇信任以連線。
-- **輸入適用於 Citrix VPN 屬性的金鑰和值組** (僅限 Citrix)：輸入 Citrix 所提供的金鑰和值組。 這些值會設定 VPN 連線的屬性。 
+- **指紋** (僅限 Check Point Capsule VPN)：輸入 **Contoso Fingerprint Code** 之類的字串，以確認 VPN 伺服器可受信任。 指紋會傳送至用戶端，讓用戶端知道可以信任具有相同指紋的任何伺服器。 如果裝置沒有指紋，則會提示使用者信任 VPN 伺服器，同時顯示指紋。 使用者可手動驗證指紋，然後選擇信任以連線。
+- **為 Citrix VPN 屬性輸入索引鍵/值組** (僅限 Citrix)：輸入 Citrix 提供的索引鍵/值組。 這些值會設定 VPN 連線的屬性。 
 
   您也可以使用機碼值組來 [匯入]  逗點分隔值檔案 (.csv)。 請務必檢閱 [我的資料有標頭]  與 [機碼]  屬性。
 

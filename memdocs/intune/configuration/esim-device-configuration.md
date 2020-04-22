@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e4e9a37e2dbb725a06d304d345fd085dabbc5e14
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086999"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>在 Intune 中設定 eSIM 行動數據設定檔 - 公開預覽
@@ -165,7 +165,7 @@ eSIM 啟用代碼會使用一次。 Intune 在裝置上安裝啟用代碼之後�
     - **ICCID**：裝置上安裝之啟用代碼內由電信業者提供的唯一代碼
     - **啟用狀態**：裝置上啟用代碼的 Intune 傳遞和安裝狀態
     - **行動數據狀態**：由電信業者提供的狀態。 若要進行疑難排解，請連絡電信業者。
-    - **上次簽入時間**：裝置上次與 Intune 通訊的日期
+    - **上次簽入**：裝置上次與 Intune 通訊的日期
 
 ### <a name="monitor-esim-profile-details-on-the-actual-device"></a>監視實際裝置上的 eSIM 設定檔詳細資料
 

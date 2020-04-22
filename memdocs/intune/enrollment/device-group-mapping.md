@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b10d56e9eb915273d5be9a5b14ca4528a64a2057
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327113"
 ---
 # <a name="categorize-devices-into-groups"></a>將裝置分類成群組

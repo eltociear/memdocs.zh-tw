@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80359301"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>在 Microsoft Intune 中使用裝置設定檔將功能和設定套用至您的裝置
@@ -59,8 +59,8 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 - Android 企業
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
-- Windows 8.1
+- Windows Phone 8。1
+- Windows 8。1
 - Windows 10 及更新版本
 
 ## <a name="custom-profile"></a>自訂設定檔
@@ -73,7 +73,7 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 - Android 企業
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
+- Windows Phone 8。1
 
 ## <a name="delivery-optimization"></a>傳遞最佳化
 
@@ -140,7 +140,7 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 
 - Windows 10 及更新版本
 
-## <a name="education"></a>Education
+## <a name="education"></a>教育
 
 [教育設定 - Windows 10](education-settings-configure.md) 設定 [Windows「進行測驗」應用程式](https://docs.microsoft.com/education/windows/take-tests-in-windows-10)的選項。 當您設定這些選項時，裝置將無法執行其他應用程式，直到測驗結束為止。
 
@@ -155,7 +155,7 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 - Android 裝置管理員
 - Android 企業
 - iOS/iPadOS
-- Windows Phone 8.1
+- Windows Phone 8。1
 - Windows 10 及更新版本
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
@@ -177,7 +177,7 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 
 - Windows 10 Fall Creators Update 和更新版本
 
-## <a name="extensions"></a>延伸模組
+## <a name="extensions"></a>擴充功能
 
 [核心延伸模組](kernel-extensions-overview-macos.md)讓管理員能夠在 macOS 裝置的核心層級上新增功能或程式。 設定這些設定，以信任特定開發人員或合作夥伴的所有延伸模組，或允許特有的核心延伸模組。
 
@@ -270,8 +270,8 @@ MacOS 裝置上的[喜好設定檔案](preference-file-settings-macos.md)包含�
 - Android 企業
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
-- Windows 8.1
+- Windows Phone 8。1
+- Windows 8。1
 - Windows 10 及更新版本
 
 ## <a name="wi-fi"></a>Wi-Fi

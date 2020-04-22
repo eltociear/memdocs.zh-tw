@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 07aceda512163513632d124d3e17d1041069b229
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80085804"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>使用疑難排解入口網站協助您公司的使用者
@@ -53,7 +53,7 @@ ms.locfileid: "80085804"
 5. 鍵入名稱或電子郵件地址來選取使用者。 按一下 [選取]  。 在 [疑難排解] 窗格中，會顯示使用者的疑難排解資訊。 下表說明該資訊。
 
 > [!Note]  
-> 您也可以將瀏覽器指向 [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting)來存取 [疑難排解]  窗格。
+> 您也可以將瀏覽器指向  [來存取 [疑難排解]https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting) 窗格。
 
 ## <a name="areas-of-troubleshooting-dashboard"></a>疑難排解儀表板的區域
 
@@ -61,12 +61,12 @@ ms.locfileid: "80085804"
 
 ![疑難排解儀表板，具有如下表所述的編號區域](./media/help-desk-operators/troubleshooting-dash.png)
 
-| 區域 | Name | 說明 |
+| 區域 | 名稱 | Description |
 | ---  | ---  | ---         |
 | 1.   | 帳戶狀態  | 顯示目前 Intune 租用戶的狀態是 [使用中]  或 [非使用中]  。       |
 | 2.   | 使用者選取  | 目前所選使用者的名稱。 按一下 [變更使用者]  選擇新的使用者。       |
 | 3.   | 使用者狀態  | 顯示使用者的 Intune 授權狀態、裝置數目，以及每部裝置的合規性。       |
-| 4.   | 使用者資訊  | 使用清單來選取要在窗格中檢閱的詳細資料。 <br>您可以選取： <ul><li>用戶端應用程式<li>相容性原則<li> 設定原則<li>應用程式防護原則 <li>註冊限制</ul>      |
+| 4.   | 使用者資訊  | 使用清單來選取要在窗格中檢閱的詳細資料。 <br>您可以選取： <ul><li>用戶端應用程式<li>合規性政策<li> 設定原則<li>應用程式保護原則 <li>註冊限制</ul>      |
 | 5.   | 群組成員資格  | 顯示所選使用者所屬的目前群組。       |
 
 <!-- this section needs to be updated
@@ -248,7 +248,7 @@ An app protection policy is available to mobile apps that integrate with EMS tec
 
 「註冊失敗」表格列出失敗的註冊嘗試。 下表列出的裝置之後可能會在另一次嘗試時成功註冊。 某些失敗的嘗試可能不會列出。 並非所有失敗都有風險降低資訊。
 
-| 表格欄位 | 說明 |
+| 表格欄位 | Description |
 |-------------|----------|
 | 註冊開始 | 使用者首次開始註冊時的開始時間。 |
 | OS | 裝置的作業系統。 |
@@ -259,7 +259,7 @@ An app protection policy is available to mobile apps that integrate with EMS tec
 
 當您選擇失敗列時，會提供更多詳細資料。
 
-| 區段 | 說明 |
+| 區段 | Description |
 |-------------|----------|
 | 失敗詳細資料 | 失敗的更詳細說明。 |
 | 可能的補救措施 | 解決錯誤的建議步驟。 某些失敗可能沒有補救措施。 |

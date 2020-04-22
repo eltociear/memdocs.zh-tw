@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 97024c641be4c61561e762751cfabfab2732e4c1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327176"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>將您的 Intune 帳戶連線到受控 Google Play 帳戶
@@ -55,7 +55,7 @@ ms.locfileid: "80327176"
     > [!Note]
     > 若您使用 Microsoft Edge 瀏覽器，請按一下右上角的 [登入]  來登入您的 Google 帳戶。
 
-6. 提供您的公司名稱作為 [組織名稱]  。 針對**企業行動管理 (EMM) 提供者**，應該顯示 **Microsoft Intune**。
+6. 提供您的公司名稱作為**組織名稱**。 針對**企業行動管理 (EMM) 提供者**，應該顯示 **Microsoft Intune**。
 
 7. 同意 Android 合約，然後選擇 [確認]  。 您的要求將會被處理。
 

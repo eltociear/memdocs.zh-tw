@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d6f8f3cf9ced5b613323093ed2baafcf65667997
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80275079"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Symantec Endpoint Protection Mobile 連接器
@@ -106,7 +106,7 @@ Intune 支援兩種與 SEP Mobile 整合的模式：
 
 ![補救後授與存取](./media/skycure-mobile-threat-defense-connector/symantec-arch-4.png)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>依據對網路的威脅來控制對 SharePoint Online 的存取
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>根據網路威脅來控制 SharePoint Online 的存取權
 
 偵測網路中的「攔截式攻擊」  等威脅，並根據裝置風險防止對公司檔案進行同步處理。
 

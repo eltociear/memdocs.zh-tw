@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f8152eb12779376e1885d0a2b2898cd602aa825d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359764"
 ---
 # <a name="reference-for-intune-management-extensions"></a>Intune 管理延伸模組的參考
@@ -36,7 +36,7 @@ ms.locfileid: "79359764"
 
 **intuneManagementExtensionVersion** 實體會列出 intuneManagementExtensions 使用的所有版本。
 
-| 屬性  | 說明 | 範例 |
+| 屬性  | Description | 範例 |
 |---------|------------|--------|
 | extensionVersionKey |intuneManagementExtensions 版本的唯一識別碼。 | 1 |
 | extensionVersion |4 位數的版本號碼。 |1.0.2.0 |
@@ -45,7 +45,7 @@ ms.locfileid: "79359764"
 
 **intuneManagementExtensionHealthState** 會列出 intuneManagementExtensions 的所有可能健康情況狀態。
 
-| 屬性  | 說明 | 範例 |
+| 屬性  | Description | 範例 |
 |---------|------------|--------|
 | extensionStateKey |健全狀況狀態的唯一識別碼。 | 2 |
 | extensionState |IntuneManagementExtension 的健全狀況狀態。 | Healthy |
@@ -56,7 +56,7 @@ ms.locfileid: "79359764"
 保留最近 60 天的資料。 
 
 
-|      屬性       |                         說明                         | 範例 |
+|      屬性       |                         Description                         | 範例 |
 |---------------------|-------------------------------------------------------------|---------|
 |       dateKey       |               日期的唯一識別碼。                |   123   |
 |      tenantKey      |              租用戶的唯一識別碼。               |   456   |

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f7490c2fffbb6e3a18da4763575b3c71867ced59
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359777"
 ---
 # <a name="reference-for-dates-entity"></a>dates 實體的參考
@@ -34,7 +34,7 @@ ms.locfileid: "79359777"
 **Date** 實體代表跨多個資料倉儲實體所參考的日期。
 
 
-|    屬性     |                      說明                       |       範例        |
+|    屬性     |                      Description                       |       範例        |
 |-----------------|--------------------------------------------------------|----------------------|
 |     dateKey     | 資料倉儲中此日期的唯一識別碼。 |       20160703       |
 |    fullDate     |    此日期以完整日期/時間格式表示。     | 7/3/2016 12:00:00 AM |

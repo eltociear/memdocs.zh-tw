@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 31457667612617bb573ddfb145ed26f70de33159
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79361649"
 ---
 # <a name="microsoft-intune-windows-10-team-device-restriction-settings"></a>Microsoft Intune Windows 10 團隊版裝置限制設定
@@ -33,7 +33,7 @@ ms.locfileid: "79361649"
 - **歡迎使用畫面上所顯示的會議資訊** - 啟用此選項可選擇顯示在 [歡迎使用] 畫面之 [會議]磚上的資訊。 您可以：
   - **僅顯示召集人和時間**
   - **顯示召集人、時間和主旨 (不會顯示私人會議的主旨)**
-- **歡迎使用畫面背景影像 URL** -啟用此設定以在 Windows 10 團隊版裝置的 [歡迎]  畫面顯示來自指定 URL 的自訂背景。<br>影像必須是 PNG 格式，而且 URL 的開頭必須是 **https://** 。
+- **歡迎使用畫面背景影像 URL** -啟用此設定以在 Windows 10 團隊版裝置的 [歡迎]  畫面顯示來自指定 URL 的自訂背景。<br>影像必須是 PNG 格式且 URL 的開頭必須是 **https://** 。
 
 ## <a name="azure-operational-insights"></a>Azure Operational Insights
 

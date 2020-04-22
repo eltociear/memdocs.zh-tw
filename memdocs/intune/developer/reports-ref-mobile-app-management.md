@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 428ee1ce93b4f6fe21c4b0180a9df222f3e23e09
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359751"
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>行動應用程式管理 (MAM) 實體的參考
@@ -41,7 +41,7 @@ ms.locfileid: "79359751"
 
 **mamApplication** 實體列出透過行動應用程式管理 (MAM) 所管理的企業營運 (LOB) 應用程式，而不需要在企業中註冊。
 
-| 屬性 | 說明 | 範例 |
+| 屬性 | Description | 範例 |
 |---------|------------|--------|
 | mamApplicationKey |MAM 應用程式的唯一識別碼。 | 432 |
 | mamApplicationName |MAM 應用程式的名稱。 |MAM 應用程式範例名稱 |
@@ -57,7 +57,7 @@ ms.locfileid: "79359751"
 **mamApplicationInstance** 實體會將受管理行動應用程式管理 (MAM) 應用程式列出每個裝置每位使用者的單一執行個體。 實體中列出的所有使用者和裝置都會受到保護，如下所示，他們至少獲指派一個 MAM 原則。
 
 
-|          屬性          |                                                                                                  說明                                                                                                  |               範例                |
+|          屬性          |                                                                                                  Description                                                                                                  |               範例                |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
 |   applicationInstanceKey   |                                                               資料倉儲中 MAM 應用程式執行個體的唯一識別碼 - Surrogate 索引鍵。                                                                |                 123                  |
 |           userId           |                                                                              已安裝此 MAM 應用程式之使用者的使用者識別碼。                                                                              | b66bc706-ffff-7437-0340-032819502773 |
@@ -84,7 +84,7 @@ ms.locfileid: "79359751"
 > [!Note]  
 > 一天簽入應用程式執行個體多次時，資料倉儲會將它儲存為單一簽入。
 
-| 屬性 | 說明 | 範例 |
+| 屬性 | Description | 範例 |
 |---------|------------|--------|
 | dateKey |將 MAM 應用程式簽入記錄在資料倉儲中的日期索引鍵。 | 20160703 |
 | applicationInstanceKey |與此 MAM 應用程式簽入建立關聯之應用程式執行個體的索引鍵。 | 123 |
@@ -100,7 +100,7 @@ ms.locfileid: "79359751"
 
 **mamDeviceHealth** 實體代表已部署行動應用程式管理 (MAM) 原則的裝置，即使它們已遭到 JB 破解也是一樣。
 
-| 屬性 | 說明 | 範例 |
+| 屬性 | Description | 範例 |
 |---------|------------|--------|
 | deviceHealthKey |資料倉儲中裝置和其關聯健康狀況的唯一識別碼 - Surrogate 索引鍵。 |123 |
 | deviceHealth |裝置的唯一識別碼和其關聯健康狀況 - 與 DeviceHealthKey 類似，但識別碼是自然索引鍵。 |b66bc706-ffff-7777-0340-032819502773 |
@@ -111,7 +111,7 @@ ms.locfileid: "79359751"
 
 **mamEffectivePolicy** 實體列出組織中套用的所有行動應用程式管理 (MAM) 有效原則。 合併所有與特定應用程式和使用者相關原則的有效已套用原則結果。
 
-| 屬性 | 說明 | 範例 |
+| 屬性 | Description | 範例 |
 |---------|------------|--------|
 | effectivePolicyKey |資料倉儲中 MAM 有效原則的唯一識別碼。 |2 |
 | realPolicyKey |IT 專業人員所撰寫之 MAM 原則的唯一識別碼。 |1 |
@@ -122,7 +122,7 @@ ms.locfileid: "79359751"
 **mamPlatform** 實體列出已安裝行動應用程式管理 (MAM) 應用程式的平台名稱和類型。
 
 
-|          屬性          |                                    說明                                    |                         範例                         |
+|          屬性          |                                    Description                                    |                         範例                         |
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
 |        platformKey         |     資料倉儲中平台的唯一識別碼 - Surrogate 索引鍵。      |                           123                           |
 |          平台          | 平台的唯一識別碼 - 與 PlatformKey 類似，但為自然索引鍵。 |                           123                           |

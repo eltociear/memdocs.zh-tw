@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b2e2d5fb2f698d7e0b544dbdbd4ab05f2b94b7ea
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325448"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>快速入門：建立 Android 裝置的密碼合規性政策
@@ -38,9 +38,9 @@ Intune 裝置合規性政策指定裝置必須符合的規則和設定，才能�
 
 ## <a name="sign-in-to-intune"></a>登入 Intune
 
-以[全域管理員](../fundamentals/users-add.md#types-of-administrators)或 Intune [服務管理員](../fundamentals/users-add.md#types-of-administrators)身分登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+以[全域管理員](https://go.microsoft.com/fwlink/?linkid=2109431)或 Intune [服務管理員](../fundamentals/users-add.md#types-of-administrators)身分登入 [Microsoft 端點管理員系統管理中心](../fundamentals/users-add.md#types-of-administrators)。
 
-## <a name="create-a-device-compliance-policy"></a>建立裝置合規性政策
+## <a name="create-a-device-compliance-policy"></a>建立裝置相容性原則
 
 建立裝置合規性原則來要求您員工中的 Android 使用者輸入特定長度的密碼，才能在其 Android 裝置上授與資訊存取權。
 
@@ -74,7 +74,7 @@ Intune 裝置合規性政策指定裝置必須符合的規則和設定，才能�
 
 您可以在本快速入門中，使用 Intune 為員工的 Android 裝置建立合規性政策，以要求長度至少為六個字元的密碼。 如需建立合規性政策的詳細資訊，請參閱[開始使用 Intune 中的裝置合規性政策](device-compliance-get-started.md)。
 
-若要繼續參閱此 Intune 快速入門系列，請前往下一個快速入門。
+若要遵循此 Intune 快速入門系列，請繼續前往下一個快速入門。
 
 > [!div class="nextstepaction"]
 > [快速入門：傳送通知到不符合規範的裝置](quickstart-send-notification.md)

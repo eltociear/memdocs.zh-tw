@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c8545f7d1ef48cc426f4b8e48aa1832ce3328bf0
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326758"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>設定行動裝置管理授權單位
@@ -97,7 +97,7 @@ MDM 授權單位無法變更回「未知」。 服務會使用 MDM 授權單位�
 
 - 使用者可以透過從裝置手動啟動服務簽入，來快速變更至新的 MDM 授權單位。 使用者可以使用公司入口網站應用程式並起始裝置合規性檢查，來輕鬆執行此變更。
 - 在變更 MDM 授權單位之後，若要在裝置簽入服務並完成同步處理後確認一切是否正常，請在新的 MDM 授權單位中尋找該裝置。
-- 從 MDM 授權單位變更到裝置簽入服務這段期間，裝置會有一段過渡時間是處於離線狀態。 為了協助確保裝置在此過度期間能獲得保護並持續運作，下列設定檔將會在裝置上保留最多 7 天 (或直到裝置與新的 MDM 授權單位連線，並接收覆寫現有設定的新設定為止)：
+- 從 MDM 授權單位變更到裝置簽入服務這段期間，裝置會有一段過渡時間是處於離線狀態。 為了協助確保裝置在此期間能獲得保護並持續運作，下列設定檔會在裝置上保留最多七天 (或直到裝置與新的 MDM 授權單位連線，並接收會覆寫現有設定的新設定為止)：
   - 電子郵件設定檔
   - VPN 設定檔
   - 憑證設定檔

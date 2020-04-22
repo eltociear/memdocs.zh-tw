@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dd1bea64bbde5c7da7579471f93f659b71dffa87
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327200"
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>取得 Apple MDM Push Certificate
@@ -55,7 +55,7 @@ ms.locfileid: "80327200"
 選取 [建立您的 MDM Push Certificate]  ，以前往 Apple Push Certificates 入口網站。 使用您的公司 Apple ID 登入，然後按一下 [建立憑證]  。 選取 [選擇檔案]  ，然後瀏覽至憑證簽署要求檔案，然後選擇 [上傳]  。 在 [確認] 頁面上，選取 [下載]  以下載憑證檔案 (.pem)，然後將檔案儲存在本機。
 
 > [!NOTE]
-> 憑證會建立與用來建立憑證之 Apple ID 的關聯。 最佳做法是使用管理工作的公司 Apple ID，並確定信箱由多人監視，例如通訊群組清單。 請不要使用個人 Apple ID。
+> 憑證會與用來建立憑證的 Apple ID 相關。 最佳做法是使用管理工作的公司 Apple ID，並確定信箱由多人監視，例如通訊群組清單。 請不要使用個人 Apple ID。
 
 ### <a name="step-4-enter-the-apple-id-used-to-create-your-apple-mdm-push-certificate"></a>步驟 4： 輸入用以建立 Apple MDM Push Certificate 的 Apple ID
 請記錄此識別碼，以在需要更新此憑證時提醒您。

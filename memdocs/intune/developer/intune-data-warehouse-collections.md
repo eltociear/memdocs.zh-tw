@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9b8ffa656aa468b50569518aaff503fec1d21027
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086229"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune 資料倉儲集合
@@ -32,11 +32,11 @@ ms.locfileid: "80086229"
 ## <a name="apprevisions"></a>appRevisions
 **AppRevision** 實體會列出應用程式的所有版本。
 
-|          屬性          |                                      說明                                      |                範例               |
+|          屬性          |                                      Description                                      |                範例               |
 |:--------------------------:|:-------------------------------------------------------------------------------------:|:------------------------------------:|
 | AppKey                     | 應用程式的唯一識別碼。                                                         | 123                                  |
 | ApplicationId              | 應用程式的唯一識別碼 - 類似 AppKey，但此金鑰是自然的。        | b66bc706-ffff-7437-0340-032819502773 |
-| 修訂版                   | 管理員在上傳二進位檔期間提及的版本。                   | 2                                    |
+| 修訂                   | 管理員在上傳二進位檔期間提及的版本。                   | 2                                    |
 | 標題                      | 應用程式的標題。                                                                     | Excel                                |
 | 發行者                  | 應用程式的發行者。                                                                 | Microsoft                            |
 | UploadState                | 應用程式的上傳狀態。                                                              | 1                                    |
@@ -53,7 +53,7 @@ ms.locfileid: "80086229"
 ## <a name="apptypes"></a>appTypes
 **appType** 實體會列出應用程式的安裝來源。
 
-|   屬性  |        說明        |
+|   屬性  |        Description        |
 |:-----------:|:-------------------------:|
 | AppTypeID   | 類型識別碼           |
 | AppTypeKey  | 索引鍵的 Surrogate 索引鍵 |
@@ -61,7 +61,7 @@ ms.locfileid: "80086229"
 
 ### <a name="example"></a>範例
 
-| AppTypeID |                Name               |                     說明                     |
+| AppTypeID |                名稱               |                     Description                     |
 |:---------:|:---------------------------------:|:---------------------------------------------------:|
 | 0         | Android 市集應用程式               | Android 市集應用程式。                             |
 | 1         | Android LOB 應用程式                 | Android 企業營運應用程式。                  |
@@ -80,12 +80,12 @@ ms.locfileid: "80086229"
 ## <a name="compliancepolicystatusdeviceactivities"></a>compliancePolicyStatusDeviceActivities
 下表摘要了裝置的合規性政策指派狀態。 其列出各合規性狀態下發現的裝置計數。
 
-|    屬性   |                                                                                      說明                                                                                     |  範例 |
+|    屬性   |                                                                                      Description                                                                                     |  範例 |
 |:-------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------:|
 | DateKey       | 日期索引鍵，時間點為建立合規性原則的摘要時。                                                                                                                   | 20161204 |
 | Unknown       | 離線或因為其他原因而無法與 Intune 或 Azure AD 通訊的裝置數目。                                                                           | 5        |
 | NotApplicable | 不適用由管理員設為目標的裝置合規性原則並不適用的裝置數目。                                                                                     | 201      |
-| 符合標準     | 已成功套用一或多個由管理員設為目標的裝置合規性原則的裝置數目。                                                                        | 4083     |
+| 相容     | 已成功套用一或多個由管理員設為目標的裝置合規性原則的裝置數目。                                                                        | 4083     |
 | InGracePeriod | 不符合規範但仍處於由管理員所定義之寬限期內的裝置數目。                                                                                  | 57       |
 | NonCompliant  | 無法套用一或多個由管理員設為目標的裝置合規性原則，或是使用者未遵循由管理員設為目標之原則的裝置數目。 | 43       |
 |    錯誤      |    無法與 Intune 或 Azure AD 通訊且傳回錯誤訊息的裝置數目。                                                                          |    3     |
@@ -93,20 +93,20 @@ ms.locfileid: "80086229"
 ## <a name="compliancepolicystatusdeviceperpolicyactivities"></a>compliancePolicyStatusDevicePerPolicyActivities
 下表摘要了裝置的合規性政策指派狀態，以各原則及各原則類型為基礎。 其列出指派的各項合規性政策各個合規性狀態下發現的裝置計數。
 
-|      屬性     |                                                                                      說明                                                                                     |  範例 |
+|      屬性     |                                                                                      Description                                                                                     |  範例 |
 |:-----------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------:|
 | DateKey           | 日期索引鍵，時間點為建立合規性原則的摘要時。                                                                                                                   | 20161219 |
 | PolicyKey         | 建立摘要之合規性原則的索引鍵。                                                                                                                   | 10178    |
 | PolicyPlatformKey | 建立摘要之合規性原則平台類型的索引鍵。                                                                                            | 5        |
 | Unknown           | 離線或因為其他原因而無法與 Intune 或 Azure AD 通訊的裝置數目。                                                                           | 13       |
 | NotApplicable     | 不適用由管理員設為目標的裝置合規性原則並不適用的裝置數目。                                                                                     | 3        |
-| 符合標準         | 已成功套用一或多個由管理員設為目標的裝置合規性原則的裝置數目。                                                                        | 45       |
+| 相容         | 已成功套用一或多個由管理員設為目標的裝置合規性原則的裝置數目。                                                                        | 45       |
 | InGracePeriod     | 不符合規範但仍處於由管理員所定義之寬限期內的裝置數目。                                                                                  | 3        |
 | NonCompliant      | 無法套用一或多個由管理員設為目標的裝置合規性原則，或是使用者未遵循由管理員設為目標之原則的裝置數目。 | 7        |
 | 錯誤             | 無法與 Intune 或 Azure AD 通訊且傳回錯誤訊息的裝置數目。                                                                             | 3        |
 ## <a name="compliancestates"></a>complianceStates
 
-|      屬性      |                       說明                      |
+|      屬性      |                       Description                      |
 |:------------------:|:------------------------------------------------------:|
 | complianceStatus   | 具有 mdmStatusKey 之裝置的合規性狀態       |
 | complianceStateKey | 比對裝置與合規性狀態的合規性金鑰 |
@@ -114,10 +114,10 @@ ms.locfileid: "80086229"
 
 ### <a name="example"></a>範例
 
-|  complianceStatus  |                       說明                      |
+|  complianceStatus  |                       Description                      |
 |:------------------:|:------------------------------------------------------:|
 |    Unknown         |    不明。                                                                        |
-|    符合標準       |    相容。                                                                      |
+|    相容       |    相容。                                                                      |
 |    不符合標準    |       裝置不符合規範且已封鎖其對公司資源的存取。             |
 |    衝突        |    與其他規則發生衝突。                                                      |
 |    錯誤           |       錯誤。                                                                       |
@@ -127,7 +127,7 @@ ms.locfileid: "80086229"
 ## <a name="dates"></a>dates
 **Date** 實體代表跨多個資料倉儲實體所參考的日期。
 
-|     屬性    |                       說明                      |    範例    |
+|     屬性    |                       Description                      |    範例    |
 |:---------------:|:------------------------------------------------------:|:-------------:|
 | DateKey         | 資料倉儲中此日期的唯一識別碼。 | 20160703      |
 | FullDate        | 此日期以完整日期/時間格式表示。        | 7/3/2016 0:00 |
@@ -150,7 +150,7 @@ ms.locfileid: "80086229"
 
 ## <a name="devicecategories"></a>deviceCategories
 
-|      屬性      |                                    說明                                   |                範例               |
+|      屬性      |                                    Description                                   |                範例               |
 |:------------------:|:--------------------------------------------------------------------------------:|:------------------------------------:|
 | deviceCategoryID   | 裝置類別的唯一識別碼。                                       | fb415ba2-7c08-41f6-a5e5-685b50da2c4c |
 | deviceCategoryKey  | 資料倉儲中裝置類別的唯一識別碼 - surrogate 索引鍵 | 1                                    |
@@ -159,28 +159,28 @@ ms.locfileid: "80086229"
 ## <a name="deviceconfigurationprofiledeviceactivities"></a>deviceConfigurationProfileDeviceActivities
 **DeviceConfigurationProfileDeviceActivity** 實體列出每日處於成功、擱置、失敗或錯誤狀態的裝置數目。 此數目會反映指派給實體的裝置組態設定檔。 例如，如果裝置的所有其指派原則都處於成功狀態，則會將該天的成功計數器往上加一。 如果裝置獲指派兩個設定檔，一個處於成功狀態，另一個則處於錯誤狀態，該實體會遞增成功計數器，並讓裝置處於錯誤狀態。 實體會列出過去 30 天的特定一天有多少裝置處於哪種狀態。
 
-|  屬性 |                                          說明                                          |  範例 |
+|  屬性 |                                          Description                                          |  範例 |
 |:---------:|:---------------------------------------------------------------------------------------------:|:--------:|
 | DateKey   | 資料倉儲中記錄裝置組態設定檔簽入的日期索引鍵。 | 20160703 |
 | Pending   | 處於擱置狀態的唯一裝置數目。                                                    | 123      |
-| 成功 | 處於成功狀態的唯一裝置數目。                                                    | 12       |
+| 已成功 | 處於成功狀態的唯一裝置數目。                                                    | 12       |
 | 錯誤     | 處於錯誤狀態的唯一裝置數目。                                                      | 10       |
-| Failed    | 處於失敗狀態的唯一裝置數目。                                                     | 2        |
+| 失敗    | 處於失敗狀態的唯一裝置數目。                                                     | 2        |
 
 ## <a name="deviceconfigurationprofileuseractivities"></a>deviceConfigurationProfileUserActivities 
 **DeviceConfigurationProfileUserActivity** 實體列出每日處於成功、暫止、失敗或錯誤狀態的使用者數目。 此數目會反映指派給實體的裝置組態設定檔。 例如，如果使用者的所有其指派原則都處於成功狀態，則會將該天的成功計數器向上加一。 如果使用者獲指派兩個設定檔，一個處於成功狀態，另一個則處於錯誤狀態，會計算處於錯誤狀態的使用者。 **DeviceConfigurationProfileUserActivity** 實體列出過去 30 天內的某一天，有多少使用者處於哪種狀態。 
 
-| 屬性  | 說明  | 範例  |
+| 屬性  | Description  | 範例  |
 |------------|----------------------------------------------------------------------------------------------|-----------|
 | DateKey  | 將裝置組態設定檔簽入記錄在資料倉儲中的日期索引鍵。  | 20160703  |
 | Pending  | 處於擱置狀態的唯一使用者數目。  | 123  |
-| 成功  | 處於成功狀態的唯一使用者數目。  | 12  |
+| 已成功  | 處於成功狀態的唯一使用者數目。  | 12  |
 | 錯誤  | 處於錯誤狀態的唯一使用者數目。  | 10  |
-| Failed  | 處於失敗狀態的唯一使用者數目。  | 2  |
+| 失敗  | 處於失敗狀態的唯一使用者數目。  | 2  |
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
-|          屬性          |                                                                                      說明                                                                                     |
+|          屬性          |                                                                                      Description                                                                                     |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | DateKey                    | 指出當日的日期資料表參考。                                                                                                                                          |
 | DeviceKey                  | 資料倉儲中裝置的唯一識別碼 - surrogate 索引鍵。 這是包含 Intune 裝置識別碼之裝置資料表的參考。                               |
@@ -196,14 +196,14 @@ ms.locfileid: "80086229"
 ## <a name="deviceregistrationstates"></a>deviceRegistrationStates
 **DeviceRegistrationState** 實體代表其他資料倉儲集合所參考的註冊類型。 
 
-|           屬性          |                                     說明                                     |
+|           屬性          |                                     Description                                     |
 |:---------------------------:|:-----------------------------------------------------------------------------------:|
 | deviceRegistrationStateID   | 註冊狀態的唯一識別碼                                            |
 | deviceRegistrationStateKey  | 資料倉儲中註冊狀態的唯一識別碼 - surrogate 索引鍵 |
 | deviceRegistrationStateName | 註冊狀態                                                                  |
 |    NotRegistered                     |    未註冊                                                                                                                                                                  |
 |    已登錄                        |       已登錄                                                                                                                                                                   |
-|    已撤銷                           |       此狀態表示 IT 系統管理員已封鎖用戶端，而且該用戶端可被解除封鎖。 裝置在被抹除或淘汰之後，也可能會處於 Revoked 狀態。        |
+|    Revoked                           |       此狀態表示 IT 系統管理員已封鎖用戶端，而且該用戶端可被解除封鎖。 裝置在被抹除或淘汰之後，也可能會處於 Revoked 狀態。        |
 |    KeyConflict                       |    索引碼衝突                                                                                                                                                                    |
 |    ApprovalPending                   |    擱置核准                                                                                                                                                                |
 |    CertificateReset                  |    重設憑證                                                                                                                                                               |
@@ -213,7 +213,7 @@ ms.locfileid: "80086229"
 ## <a name="devices"></a>devices
 **Devices** 實體會列出管理下的所有已註冊裝置及其對應的屬性。
 
-|          屬性          |                                                                                       說明                                                                                      |
+|          屬性          |                                                                                       Description                                                                                      |
 |:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | DeviceKey                  | 資料倉儲中裝置的唯一識別碼 - surrogate 索引鍵。                                                                                                               |
 | DeviceId                   | 裝置的唯一識別碼。                                                                                                                                                     |
@@ -259,7 +259,7 @@ ms.locfileid: "80086229"
 ## <a name="devicetypes"></a>deviceTypes
 **deviceType** 實體代表其他資料倉儲實體所參考的裝置類型。 裝置類型通常會描述裝置型號、製造商或兩者的組合。
 
-|    屬性    |                                  說明                                 |
+|    屬性    |                                  Description                                 |
 |:--------------:|:----------------------------------------------------------------------------:|
 | DeviceTypeID   | 裝置類型的唯一識別碼                                       |
 | DeviceTypeKey  | 資料倉儲中裝置類型的唯一識別碼 - surrogate 索引鍵 |
@@ -267,10 +267,10 @@ ms.locfileid: "80086229"
 
 ### <a name="example"></a>範例
 
-| deviceTypeID |        Name       |                      說明                      |
+| deviceTypeID |        名稱       |                      Description                      |
 |:------------:|:-----------------:|:-----------------------------------------------------:|
 | -1           | 無法使用   | 裝置類型無法使用。                     |
-| 0            | 桌面           | Windows 桌面裝置                              |
+| 0            | 桌上型電腦           | Windows 桌面裝置                              |
 | 1            | Windows           | Windows 裝置                                      |
 | 2            | WinMO6            | Windows Mobile 6.0 裝置                           |
 | 3            | Nokia             | Nokia 裝置                                        |
@@ -296,7 +296,7 @@ ms.locfileid: "80086229"
 ## <a name="deviceenrollmenttypes"></a>deviceEnrollmentTypes
 **deviceEnrollmentType** 實體會指出裝置的註冊方式。 註冊類型會擷取註冊的方法。 範例會列出不同的註冊類型及其代表的意義。
 
-|         屬性         |                                    說明                                    |
+|         屬性         |                                    Description                                    |
 |:------------------------:|:---------------------------------------------------------------------------------:|
 | deviceEnrollmentTypeID   | 註冊類型的唯一識別碼。                                       |
 | deviceEnrollmentTypeKey  | 資料倉儲中註冊類型的唯一識別碼 - surrogate 索引鍵。 |
@@ -304,7 +304,7 @@ ms.locfileid: "80086229"
 
 ### <a name="example"></a>範例
 
-| enrollmentTypeID |                Name                |                                        說明                                       |
+| enrollmentTypeID |                名稱                |                                        Description                                       |
 |:----------------:|:----------------------------------:|:----------------------------------------------------------------------------------------:|
 | 0                | Unknown                            | 未收集註冊類型                                                      |
 | 1                | UserEnrollment                     | 透過 BYOD 通道的使用者驅動註冊。                                           |
@@ -321,7 +321,7 @@ ms.locfileid: "80086229"
 ## <a name="enrollmentactivities"></a>enrollmentActivities 
 **EnrollmentActivity** 實體表示裝置註冊的活動。
 
-| 屬性                      | 說明                                                               |
+| 屬性                      | Description                                                               |
 |-------------------------------|---------------------------------------------------------------------------|
 | dateKey                       | 記錄此註冊活動的日期索引鍵。               |
 | deviceEnrollmentTypeKey       | 註冊類型的索引鍵。                                        |
@@ -335,30 +335,30 @@ ms.locfileid: "80086229"
 ## <a name="enrollmenteventstatuses"></a>enrollmentEventStatuses 
 **EnrollmentEventStatus** 實體表示裝置註冊的結果。
 
-| 屬性                   | 說明                                                                       |
+| 屬性                   | Description                                                                       |
 |----------------------------|-----------------------------------------------------------------------------------|
 | enrollmentEventStatusKey   | 資料倉儲中註冊狀態的唯一識別碼 (surrogate 索引鍵)  |
 | enrollmentEventStatusName  | 註冊狀態的名稱。 請參閱下列範例。                            |
 
 ### <a name="example"></a>範例
 
-| enrollmentEventStatusName  | 說明                            |
+| enrollmentEventStatusName  | Description                            |
 |----------------------------|----------------------------------------|
 | 成功                    | 裝置註冊成功         |
-| Failed                     | 裝置註冊失敗             |
+| 失敗                     | 裝置註冊失敗             |
 | 無法使用              | 註冊狀態為無法使用。  |
 
 ## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
 **EnrollmentFailureCategory** 實體表示裝置註冊失敗的原因。 
 
-| 屬性                       | 說明                                                                                 |
+| 屬性                       | Description                                                                                 |
 |--------------------------------|---------------------------------------------------------------------------------------------|
 | enrollmentFailureCategoryKey   | 資料倉儲中註冊失敗類別的唯一識別碼 (surrogate 索引鍵)  |
 | enrollmentFailureCategoryName  | 註冊失敗類別的名稱。 請參閱下列範例。                            |
 
 ### <a name="example"></a>範例
 
-| enrollmentFailureCategoryName   | 說明                                                                                                   |
+| enrollmentFailureCategoryName   | Description                                                                                                   |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------|
 | 不適用                  | 註冊失敗類別不適用。                                                            |
 | 無法使用                   | 註冊失敗類別無法使用。                                                             |
@@ -378,14 +378,14 @@ ms.locfileid: "80086229"
 ## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
 **EnrollmentFailureReason** 實體表示在所指定失敗類別中裝置註冊失敗的更詳細原因。  
 
-| 屬性                     | 說明                                                                               |
+| 屬性                     | Description                                                                               |
 |------------------------------|-------------------------------------------------------------------------------------------|
 | enrollmentFailureReasonKey   | 資料倉儲中註冊失敗原因的唯一識別碼 (surrogate 索引鍵)  |
 | enrollmentFailureReasonName  | 註冊失敗原因的名稱。 請參閱下列範例。                            |
 
 ### <a name="example"></a>範例
 
-| enrollmentFailureReasonName      | 說明                                                                                                                                                                                            |
+| enrollmentFailureReasonName      | Description                                                                                                                                                                                            |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 不適用                   | 註冊失敗原因不適用。                                                                                                                                                       |
 | 無法使用                    | 註冊失敗原因無法使用。                                                                                                                                                        |
@@ -408,7 +408,7 @@ ms.locfileid: "80086229"
 ## <a name="intunemanagementextensions"></a>intuneManagementExtensions
 **intuneManagementExtension** 會列出每部 Windows 10 裝置每日的 **intuneManagementExtension** 健康情況。 保留最近 60 天的資料。
 
-|       屬性      |                          說明                          | 範例 |
+|       屬性      |                          Description                          | 範例 |
 |:-------------------:|:-------------------------------------------------------------:|:-------:|
 | DateKey             | 日期的唯一識別碼。                                | 123     |
 | TenantKey           | 租用戶的唯一識別碼。                              | 456     |
@@ -419,7 +419,7 @@ ms.locfileid: "80086229"
 ## <a name="intunemanagementextensionhealthstates"></a>intuneManagementExtensionHealthStates
 **IntuneManagementExtensionHealthState** 會列出 **IntuneManagementExtension** 所有可能的健康情況狀態。
 
-|      屬性     |                   說明                  | 範例 |
+|      屬性     |                   Description                  | 範例 |
 |:-----------------:|:----------------------------------------------:|:-------:|
 | ExtensionStateKey | 健康情況狀態的唯一識別碼。           | 2       |
 | ExtensionState    | IntuneManagementExtension 的健康情況狀態。 | Healthy |
@@ -427,7 +427,7 @@ ms.locfileid: "80086229"
 ## <a name="intunemanagementextensionversions"></a>intuneManagementExtensionVersions
 **IntuneManagementExtensionVersion** 實體會列出 **IntuneManagementExtension** 使用的所有版本。
 
-|       屬性      |                          說明                          | 範例 |
+|       屬性      |                          Description                          | 範例 |
 |:-------------------:|:-------------------------------------------------------------:|:-------:|
 | ExtensionVersionKey | IntuneManagementExtension 版本的唯一識別碼。 | 1       |
 | ExtensionVersion    | 4 位數的版本號碼。                                   | 1.0.2.0 |
@@ -436,7 +436,7 @@ ms.locfileid: "80086229"
 
 **MamApplication** 實體列出透過行動應用程式管理 (MAM) 所管理的企業營運 (LOB) 應用程式，而不需要在企業中註冊。
 
-| 屬性 | 說明 | 範例 |
+| 屬性 | Description | 範例 |
 |---------|------------|--------|
 | mamApplicationKey |MAM 應用程式的唯一識別碼。 | 432 |
 | mamApplicationName |MAM 應用程式的名稱。 |MAM 應用程式範例名稱 |
@@ -452,7 +452,7 @@ ms.locfileid: "80086229"
 **MamApplicationInstance** 實體會將受管理行動應用程式管理 (MAM) 應用程式列出每個裝置每位使用者的單一執行個體。 實體中列出的所有使用者和裝置都會受到保護，如下所示，他們至少獲指派一個 MAM 原則。
 
 
-|          屬性          |                                                                                                  說明                                                                                                  |               範例                |
+|          屬性          |                                                                                                  Description                                                                                                  |               範例                |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
 |   ApplicationInstanceKey   |                                                               資料倉儲中 MAM 應用程式執行個體的唯一識別碼 - Surrogate 索引鍵。                                                                |                 123                  |
 |           UserId           |                                                                              已安裝此 MAM 應用程式之使用者的使用者識別碼。                                                                              | b66bc706-ffff-7437-0340-032819502773 |
@@ -478,7 +478,7 @@ ms.locfileid: "80086229"
 > [!Note]  
 > 一天簽入應用程式執行個體多次時，資料倉儲會將它儲存為單一簽入。
 
-| 屬性 | 說明 | 範例 |
+| 屬性 | Description | 範例 |
 |---------|------------|--------|
 | DateKey |將 MAM 應用程式簽入記錄在資料倉儲中的日期索引鍵。 | 20160703 |
 | ApplicationInstanceKey |與此 MAM 應用程式簽入建立關聯之應用程式執行個體的索引鍵。 | 123 |
@@ -492,7 +492,7 @@ ms.locfileid: "80086229"
 
 **MamDeviceHealth** 實體代表已部署行動應用程式管理 (MAM) 原則的裝置，即使它們已遭到 JB 破解也是一樣。
 
-| 屬性 | 說明 | 範例 |
+| 屬性 | Description | 範例 |
 |---------|------------|--------|
 | DeviceHealthKey |資料倉儲中裝置和其關聯健康狀況的唯一識別碼 - Surrogate 索引鍵。 |123 |
 | DeviceHealth |裝置的唯一識別碼和其關聯健康狀況 - 與 DeviceHealthKey 類似，但識別碼是自然索引鍵。 |b66bc706-ffff-7777-0340-032819502773 |
@@ -504,7 +504,7 @@ ms.locfileid: "80086229"
 **MamPlatform** 實體列出已安裝行動應用程式管理 (MAM) 應用程式的平台名稱和類型。
 
 
-|          屬性          |                                    說明                                    |                         範例                         |
+|          屬性          |                                    Description                                    |                         範例                         |
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
 |        PlatformKey         |     資料倉儲中平台的唯一識別碼 - Surrogate 索引鍵。      |                           123                           |
 |          平台          | 平台的唯一識別碼 - 與 PlatformKey 類似，但為自然索引鍵。 |                           123                           |
@@ -514,7 +514,7 @@ ms.locfileid: "80086229"
 ## <a name="managementagenttypes"></a>managementAgentTypes
 **managementAgentType** 實體代表用來管理裝置的代理程式。
 
-|         屬性        |                                       說明                                       |
+|         屬性        |                                       Description                                       |
 |:-----------------------:|:---------------------------------------------------------------------------------------:|
 | ManagementAgentTypeID   | 管理代理程式類型的唯一識別碼。                                         |
 | ManagementAgentTypeKey  | 資料倉儲中管理代理程式類型的唯一識別碼 - Surrogate 索引鍵。 |
@@ -522,7 +522,7 @@ ms.locfileid: "80086229"
 
 ### <a name="example"></a>範例
 
-| ManagementAgentTypeID |                Name               |                                  說明                                 |
+| ManagementAgentTypeID |                名稱               |                                  Description                                 |
 |:---------------------:|:---------------------------------:|:----------------------------------------------------------------------------:|
 | 1                     | EAS                               | 透過 Exchange Active Sync 管理的裝置                         |
 | 2                     | MDM                               | 使用 MDM 代理程式管理的裝置                                   |
@@ -539,7 +539,7 @@ ms.locfileid: "80086229"
 ## <a name="managementstates"></a>managementStates
 **ManagementState** 實體會提供裝置狀態的詳細資料。 在套用遠端動作的情況下，裝置如進行 JB 破解或刷機，詳細資料會很有幫助。
 
-|       屬性      |                                     說明                                    |
+|       屬性      |                                     Description                                    |
 |:-------------------:|:----------------------------------------------------------------------------------:|
 | managementStateID   | 管理狀態的唯一識別碼。                                       |
 | managementStateKey  | 資料倉儲中管理狀態的唯一識別碼 - surrogate 索引鍵。 |
@@ -547,7 +547,7 @@ ms.locfileid: "80086229"
 
 ### <a name="example"></a>範例
 
-| managementStateID |      Name      |                                                   說明                                                   |
+| managementStateID |      名稱      |                                                   Description                                                   |
 |:-----------------:|:--------------:|:---------------------------------------------------------------------------------------------------------------:|
 | 0                 | 受管理        | 受管理，且沒有擱置的遠端動作。                                                                       |
 | 1                 | RetirePending  | 該裝置有擱置的淘汰命令。                                                             |
@@ -565,7 +565,7 @@ ms.locfileid: "80086229"
 ## <a name="mobileappinstallstates"></a>mobileAppInstallStates
 MobileAppInstallState 實體代表行動應用程式在被指派至包含裝置、使用者或兩者的群組之後的安裝狀態。
 
-|       屬性      |                        說明                       |
+|       屬性      |                        Description                       |
 |:-------------------:|:--------------------------------------------------------:|
 | AppInstallStateKey  | 您帳戶之應用程式安裝狀態的唯一識別碼。 |
 | AppInstallState     | 應用程式安裝狀態的列舉值。                     |
@@ -574,7 +574,7 @@ MobileAppInstallState 實體代表行動應用程式在被指派至包含裝置�
 ## <a name="mobileappinstallstatuscounts"></a>mobileAppInstallStatusCounts
 透過 Microsoft Intune 使用行動應用程式管理表示指定目標裝置類型的行動裝置應用程式安裝狀態。
 
-|      屬性      |                                                          說明                                                          |
+|      屬性      |                                                          Description                                                          |
 |:------------------:|:-----------------------------------------------------------------------------------------------------------------------------:|
 | DateKey            | 記錄應用程式安裝狀態之日期的索引鍵。                                                                     |
 | AppKey             | 用來識別 AppRevision 執行個體之行動應用程式的索引鍵。                                                          |
@@ -586,7 +586,7 @@ MobileAppInstallState 實體代表行動應用程式在被指派至包含裝置�
 ## <a name="ownertypes"></a>ownerTypes
 **ownerType** 實體會指出裝置為公司所有、個人擁有或未知。
 
-|    屬性   |                                                                                     說明                                                                                    |           範例          |
+|    屬性   |                                                                                     Description                                                                                    |           範例          |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
 | ownerTypeID   | 擁有者類型的唯一識別碼。                                                                                                                                               |                            |
 | ownerTypeKey  | 資料倉儲中擁有者類型的唯一識別碼 - Surrogate 索引鍵。                                                                                                       |                            |
@@ -598,7 +598,7 @@ MobileAppInstallState 實體代表行動應用程式在被指派至包含裝置�
 ## <a name="policies"></a>原則
 **Policy** 實體列出裝置組態設定檔、應用程式組態設定檔和合規性原則。 您可以將具有行動裝置管理 (MDM) 的原則指派給企業中的群組。
 
-|          屬性          |                                                                       說明                                                                      |                範例               |
+|          屬性          |                                                                       Description                                                                      |                範例               |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
 | PolicyKey                  | 代表資料倉儲中原則的唯一索引鍵。                                                                                              | 123                                  |
 | PolicyId                   | 資料倉儲中原則的唯一識別碼。                                                                                                 | b66bc706-ffff-7437-0340-032819502773 |
@@ -612,18 +612,18 @@ MobileAppInstallState 實體代表行動應用程式在被指派至包含裝置�
 ## <a name="policydeviceactivities"></a>policyDeviceActivities
 下表列出每日處於成功、擱置、失敗或錯誤狀態的裝置數目。 該數目反映每個原則類型設定檔的資料。 例如，如果裝置的所有其指派原則都處於成功狀態，則會將該天的成功計數器往上加一。 如果裝置獲指派兩個設定檔，一個處於成功狀態，另一個則處於錯誤狀態，該實體會遞增成功計數器，並讓裝置處於錯誤狀態。 **policyDeviceActivity** 實體會列出過去 30 天的任何一天內有多少裝置處於哪種狀態。
 
-|  屬性 |                                           說明                                           |        範例        |
+|  屬性 |                                           Description                                           |        範例        |
 |:---------:|:-----------------------------------------------------------------------------------------------:|:---------------------:|
 | DateKey   | 資料倉儲中記錄裝置組態設定檔簽入的日期索引鍵。 | 20160703              |
 | Pending   | 處於擱置狀態的唯一裝置數目。                                                    | 123                   |
-| 成功 | 處於成功狀態的唯一裝置數目。                                                    | 12                    |
+| 已成功 | 處於成功狀態的唯一裝置數目。                                                    | 12                    |
 | PolicyKey | 原則索引鍵，可以與 Policy 聯結以取得 policyName。                                  | Windows 10 基準 |
 | 錯誤     | 處於錯誤狀態的唯一裝置數目。                                                      | 10                    |
-| Failed    | 處於失敗狀態的唯一裝置數目。                                                     | 2                     |
+| 失敗    | 處於失敗狀態的唯一裝置數目。                                                     | 2                     |
 
 ## <a name="policyplatformtypes"></a>policyPlatformTypes
 
-|        屬性        |                      說明                      |     範例    |
+|        屬性        |                      Description                      |     範例    |
 |:----------------------:|:-----------------------------------------------------:|:--------------:|
 | PolicyPlatformTypeKey  | 原則平台類型的唯一索引鍵。        | 20170519       |
 | PolicyPlatformTypeId   | 原則平台類型的唯一識別碼。 | 1              |
@@ -632,20 +632,20 @@ MobileAppInstallState 實體代表行動應用程式在被指派至包含裝置�
 ## <a name="policytypeactivities"></a>policyTypeActivities
 **PolicyTypeActivity** 實體列出處於成功、擱置、失敗或錯誤狀態的累積裝置數目。 它會列出與每日裝置組態設定檔、應用程式組態設定檔或相容性原則有關的這些狀態。
 
-|    屬性   |                                          說明                                          |           範例           |
+|    屬性   |                                          Description                                          |           範例           |
 |:-------------:|:---------------------------------------------------------------------------------------------:|:---------------------------:|
 | DateKey       | 資料倉儲中記錄裝置組態設定檔簽入的日期索引鍵。 | 20160703                    |
 | PolicyKey     | 原則索引鍵，可以與 Policy 聯結以取得 policyName。                                | Windows 10 基準         |
 | PolicyTypeKey | 原則索引鍵類型，可以與 PolicyType 聯結以取得原則類型名稱。             | Windows 10 合規性原則 |
 | Pending       | 處於擱置狀態的唯一裝置數目。                                                    | 123                         |
-| 成功     | 處於成功狀態的唯一裝置數目。                                                    | 12                          |
+| 已成功     | 處於成功狀態的唯一裝置數目。                                                    | 12                          |
 | 錯誤         | 處於錯誤狀態的唯一裝置數目。                                                      | 10                          |
-| Failed        | 處於失敗狀態的唯一裝置數目。                                                     | 2                           |
+| 失敗        | 處於失敗狀態的唯一裝置數目。                                                     | 2                           |
 
 ## <a name="policytypes"></a>policyTypes
 **PolicyType** 實體列出裝置組態設定檔、應用程式組態設定檔和合規性原則的類型。 您可以將具有行動裝置管理 (MDM) 的原則指派給企業中的群組。
 
-|    屬性    |                       說明                      |            範例            |
+|    屬性    |                       Description                      |            範例            |
 |:--------------:|:------------------------------------------------------:|:-----------------------------:|
 | PolicyTypeId   | 來源系統中原則的唯一識別碼。  | 123                           |
 | PolicyTypeKey  | 資料倉儲中原則的唯一識別碼。 | 1                             |
@@ -654,24 +654,24 @@ MobileAppInstallState 實體代表行動應用程式在被指派至包含裝置�
 ## <a name="policyuseractivities"></a>policyUserActivities
 下表列出每日處於成功、擱置、失敗或錯誤狀態的使用者數目。 該數目反映每個原則類型設定檔的資料。 例如，如果使用者的所有其指派原則都處於成功狀態，則會將該天的成功計數器向上加一。 如果使用者獲指派兩個設定檔，一個處於成功狀態，另一個則處於錯誤狀態，會計算處於錯誤狀態的使用者。 **PolicyUserActivity** 實體會列出過去 30 天的任何一天內有多少使用者處於哪種狀態。
 
-|  屬性 |                                          說明                                          |       範例       |
+|  屬性 |                                          Description                                          |       範例       |
 |:---------:|:---------------------------------------------------------------------------------------------:|:-------------------:|
 | DateKey   | 資料倉儲中記錄裝置組態設定檔簽入的日期索引鍵。 | 20160703            |
 | Pending   | 處於擱置狀態的唯一裝置數目。                                                    | 123                 |
-| 成功 | 處於成功狀態的唯一裝置數目。                                                    | 12                  |
+| 已成功 | 處於成功狀態的唯一裝置數目。                                                    | 12                  |
 | PolicyKey | 原則索引鍵，可以與 Policy 聯結以取得 policyName。                                | Windows 10 基準 |
 | 錯誤     | 處於錯誤狀態的唯一裝置數目。                                                      | 10                  |
 
 ## <a name="termsandconditions"></a>termsAndConditions
 **termsAndConditions** 實體表示指定條款及條件 (T&C) 原則的中繼資料與內容。 T&C 原則的內容會在使用者首次嘗試註冊至 Intune 時呈現給他們，之後則會在系統管理員做出編輯並要求使用者重新接受時呈現。 它們可讓系統管理員傳達佈建，而使用者必須同意才能將裝置註冊到 Intune。
 
-|    屬性        |    說明    |    範例        |
+|    屬性        |    Description    |    範例        |
 |----------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------|
 |    termsAndConditionsKey    |    與 'userTermsAndConditionsAcceptances' 集合中項目對應的索引鍵    |    123    |
 |    termsAndCondidionsId    |    此 termsAndConditions 項目的識別碼    |    276edcb7-7440-4339-b6c5-8b6fc556fee6    |
 |    termsAndConditionsVersion    |    此條款及條件項目的版本    |    1    |
 |    名稱    |    此 termsAndConditions 項目的名稱。        |    Intune 使用規定     |
-|    description    |    這些條款及條件的描述。     |         |
+|    描述    |    這些條款及條件的描述。     |         |
 |    title    |    這些條款及條件的標題。     |    裝置管理公司原則        |
 |    summaryOfTerms    |    提供給使用者的條款摘要。     |    我同意這些條款及條件。    |
 |    termsAndConditionsBodyText    |    這些條款及條件的內文。       |    「裝置加密」  強制使用 6 位數 PIN    |
@@ -682,7 +682,7 @@ MobileAppInstallState 實體代表行動應用程式在被指派至包含裝置�
 ## <a name="userdeviceassociations"></a>userDeviceAssociations
 **UserDeviceAssociation** 實體包含您組織中的使用者裝置關聯。
 
-|        Name        |                                             說明                                            |     範例     |
+|        名稱        |                                             Description                                            |     範例     |
 |:------------------:|:--------------------------------------------------------------------------------------------------:|:---------------:|
 | UserKey            | 資料倉儲中使用者的唯一識別碼。   (Surrogate 索引鍵)。                            | 123             |
 | DeviceKey          | 資料倉儲中裝置的唯一識別碼。                                             | 123             |
@@ -695,7 +695,7 @@ MobileAppInstallState 實體代表行動應用程式在被指派至包含裝置�
 
 **user** 實體集合會包含使用者資料。 這些資料列包含資料收集期間的使用者狀態，即使使用者已經被移除。 例如，某個使用者可能在上個月內被新增到 Intune 然後又被移除。 雖然此使用者在報告期間並不存在，但使用者和狀態仍會存在於上個月的資料中。 您可以建立一個報告，其中顯示使用者的歷程記錄在您資料中出現的期間。
 
-|          屬性          |                                                                                                           說明                                                                                                          |                範例               |
+|          屬性          |                                                                                                           Description                                                                                                          |                範例               |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
 | UserKey                    | 資料倉儲中使用者的唯一識別碼 - Surrogate 索引鍵。                                                                                                                                                         | 123                                  |
 | UserId                     | 使用者的唯一識別碼 - 與 UserKey 類似，但為自然索引鍵。                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
@@ -709,7 +709,7 @@ MobileAppInstallState 實體代表行動應用程式在被指派至包含裝置�
 ## <a name="usertermsandconditionsacceptances"></a>userTermsAndConditionsAcceptances
 **userTermsAndConditionsAcceptance** 實體表示指定使用者對指定條款及條件 (T&C) 原則的接受狀態。 使用者必須接受最新版本的條款，才能繼續存取公司入口網站。
 
-|    屬性    |    說明    |    範例    |
+|    屬性    |    Description    |    範例    |
 |-------------------------------|--------------------------------------------------------------------------------|----------------------------|
 |    dateKey    |    與 'dates' 集合中日期值對應的索引鍵。     |    20180823    |
 |    userKey    |    與 'users' 集合中使用者對應的使用者索引鍵。     |    20000    |
@@ -720,7 +720,7 @@ MobileAppInstallState 實體代表行動應用程式在被指派至包含裝置�
 ## <a name="vppprogramtypes"></a>vppProgramTypes 
 **vppProgramType** 實體會列出應用程式可能的 VPP 方案類型。
 
-|      屬性      |          說明         |
+|      屬性      |          Description         |
 |:------------------:|:----------------------------:|
 | VppProgramTypeID   | 類型的識別碼。           |
 | VppProgramTypeKey  | 索引鍵的 Surrogate 索引鍵。 |
@@ -728,7 +728,7 @@ MobileAppInstallState 實體代表行動應用程式在被指派至包含裝置�
 
 ### <a name="example"></a>範例
 
-|             VppProgramID             |         Name        | 說明                |
+|             VppProgramID             |         名稱        | Description                |
 |:------------------------------------:|:-------------------:|----------------------------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft           | Microsoft 的 VPP 方案。 |
 | 00000000-0000-0000-0000-000000000000 | 尚未提供 | 預設值，無 VPP。   |

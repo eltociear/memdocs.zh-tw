@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 78fce6f5f518227500b3cf42f1d935c0dd88df8c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359855"
 ---
 # <a name="reference-for-application-entities"></a>應用程式實體的參考
@@ -39,7 +39,7 @@ ms.locfileid: "79359855"
 
 **AppRevision** 實體會列出應用程式的所有版本。
 
-| 屬性  | 說明 | 範例 |
+| 屬性  | Description | 範例 |
 |---------|------------|--------|
 | appKey |應用程式的唯一識別碼。 |123 |
 | applicationId |應用程式的唯一識別碼 - 類似 AppKey，但此金鑰是自然的。 |b66bc706-ffff-7437-0340-032819502773 |
@@ -61,7 +61,7 @@ ms.locfileid: "79359855"
 
 **appType** 實體會列出應用程式的安裝來源。
 
-| 屬性  | 說明 |
+| 屬性  | Description |
 |---------|------------|
 | appTypeID |類型識別碼 |
 | appTypeKey |索引鍵的 Surrogate 索引鍵 |
@@ -69,7 +69,7 @@ ms.locfileid: "79359855"
 
 ### <a name="example"></a>範例
 
-| AppTypeID  | Name | 說明 |
+| AppTypeID  | 名稱 | Description |
 |---------|------------|--------|
 | 0 |Android 市集應用程式 | Android 市集應用程式。 |
 | 1 |Android LOB 應用程式 | Android 企業營運應用程式。 |
@@ -90,7 +90,7 @@ ms.locfileid: "79359855"
 
 **vppProgramType** 實體會列出應用程式可能的 VPP 方案類型。
 
-| 屬性  | 說明 |
+| 屬性  | Description |
 |---------|------------|
 | vppProgramTypeID | 類型識別碼。 |
 | vppProgramTypeKey | 索引鍵的 Surrogate 索引鍵。 |
@@ -98,7 +98,7 @@ ms.locfileid: "79359855"
 
 ### <a name="example"></a>範例
 
-| VppProgramID  | Name | 說明 |
+| VppProgramID  | 名稱 | Description |
 |---------|------------|--------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft | Microsoft 的 VPP 方案。 |
 | 00000000-0000-0000-0000-000000000000 | 尚未提供 | 預設值為 [無 VPP]。 |
@@ -110,7 +110,7 @@ ms.locfileid: "79359855"
 
 **applicationInventory** 實體列出清查收集期間在裝置上找到的應用程式。
 
-| 屬性  | 說明 |
+| 屬性  | Description |
 |---------|------------|
 | deviceKey | 這是包含 Intune 裝置識別碼的裝置資料表參考。 |
 | dateKey | 表示清查當日的日期資料表參考。 |
@@ -122,7 +122,7 @@ ms.locfileid: "79359855"
 
 **mobileAppInstallState** 實體代表行動應用程式在被指派至包含裝置、使用者或兩者的群組之後的安裝狀態。
 
-| 屬性 | 說明 |
+| 屬性 | Description |
 |---|---|
 | appInstallStateKey | 您帳戶之應用程式安裝狀態的唯一識別碼。 |
 | appInstallState | 應用程式安裝狀態的列舉值。 |

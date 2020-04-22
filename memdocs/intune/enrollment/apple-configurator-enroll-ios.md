@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 71563a44e991e7324b9ce258d66d288d4b5a6cdb
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327253"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-configurator"></a>使用 Apple Configurator 來設定 iOS/iPadOS 裝置註冊
@@ -35,7 +35,7 @@ Intune 支援使用在 Mac 電腦執行上的 [Apple Configurator](https://itune
 
 Apple Configurator 註冊方法不能與[裝置註冊管理員](device-enrollment-manager-enroll.md)一起使用。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - iOS/iPadOS 裝置的實體存取
 - [設定 MDM 授權單位](../fundamentals/mdm-authority-set.md)
@@ -58,7 +58,7 @@ Apple Configurator 註冊方法不能與[裝置註冊管理員](device-enrollmen
 
 3. 針對 [使用者親和性]  ，為具備此設定檔的裝置選擇需要或不需要由指派的使用者來進行註冊。
 
-    - **搭配使用者親和性進行註冊** - 針對屬於使用者的裝置，以及想要使用公司入口網站進行像是安裝應用程式等服務的裝置，選擇此選項。 裝置必須使用設定助理與使用者建立關聯，然後才能存取公司資料與電子郵件。 僅設定助理註冊提供支援。 使用者親和性需要 [WS-Trust 1.3 使用者名稱/混合端點](https://technet.microsoft.com/library/adfs2-help-endpoints)。 [深入了解](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。
+    - **搭配使用者親和性進行註冊** - 針對屬於使用者的裝置，以及想要使用公司入口網站進行像是安裝應用程式等服務的裝置，選擇此選項。 裝置必須使用設定助理與使用者建立關聯，然後才能存取公司資料與電子郵件。 僅設定助理註冊提供支援。 使用者親和性需要 [WS-Trust 1.3 使用者名稱/混合端點](https://technet.microsoft.com/library/adfs2-help-endpoints)。 [進一步瞭解](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。
 
     - **不搭配使用者親和性進行註冊** - 針對未與任何使用者相關的裝置選擇此選項。 針對執行工作而不需存取本機使用者資料的裝置使用此選項。 需要使用者關聯的應用程式 (包含用於安裝企業營運應用程式的公司入口網站應用程式) 將無法運作。 直接註冊的必要項。
 
@@ -124,8 +124,8 @@ Apple Configurator 註冊方法不能與[裝置註冊管理員](device-enrollmen
     > 在註冊過程中，裝置會重設為原廠設定。 最佳做法是將裝置重設，並加以啟動。 當您將裝置連線時，裝置應該會在 **Hello** 畫面。
     > 如果裝置已使用 Apple ID 帳戶註冊，則必須先從 Apple iCloud 中刪除裝置，然後再開始註冊程序。 錯誤提示顯示為「無法啟用 [裝置名稱]」。
 
-2. 在 [喜好設定]  窗格中，選取 [伺服器]  ，然後選擇加號 (+) 來啟動 [MDM 伺服器精靈]。 選擇 [下一步]  。
-3. 使用 Microsoft Intune，在 iOS/iPadOS 裝置的 [設定助理] 註冊下輸入 MDM 伺服器的**主機名稱或 URL** 及**註冊 URL**。 對於 [註冊 URL]，輸入從 Intune 匯出的註冊設定檔 URL。 選擇 [下一步]  。  
+2. 在 [喜好設定]  窗格中，選取 [伺服器]  ，然後選擇加號 (+) 來啟動 [MDM 伺服器精靈]。 選擇 **[下一步]** 。
+3. 使用 Microsoft Intune，在 iOS/iPadOS 裝置的 [設定助理] 註冊下輸入 MDM 伺服器的**主機名稱或 URL** 及**註冊 URL**。 對於 [註冊 URL]，輸入從 Intune 匯出的註冊設定檔 URL。 選擇 **[下一步]** 。  
     您可以放心地忽略指出「伺服器 URL 未經驗證」的警告。 請選擇 [下一步]  以繼續，直到精靈完成為止。
 4. 將 iOS/iPadOS 行動裝置連接到具有 USB 介面卡的 Mac 電腦。
 5. 選取您要管理的 iOS/iPadOS 裝置，然後選擇 [準備]  。 在 [準備 iOS/iPadOS 裝置]  窗格上，選取 [手動]  ，然後選擇 [下一步]  。

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 18fc3a70a89451deebe074ad8b5b8dc3a4a837f7
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325820"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>針對應用程式安裝問題進行疑難排解
@@ -53,7 +53,7 @@ Intune 會根據特定使用者裝置上安裝的應用程式，提供應用程�
 應用程式安裝錯誤詳細資料會指出此問題。 您可以使用這些詳細資料，以決定解決問題所要採取的最佳動作。 如需有關針對應用程式安裝問題進行疑難排解的詳細資訊，請參閱 [Android 應用程式安裝錯誤](app-install-error-codes.md#android-app-installation-errors)和 [iOS 應用程式安裝錯誤](app-install-error-codes.md#ios-and-ipados-app-installation-errors)。
 
 > [!Note]  
-> 您也可以將瀏覽器指向 [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting)來存取 [疑難排解]  窗格。
+> 您也可以將瀏覽器指向  [來存取 [疑難排解]https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting) 窗格。
 
 ## <a name="user-group-targeted-app-installation-does-not-reach-device"></a>以使用者群組為目標的應用程式安裝無法連線到裝置
 如果您在安裝應用程式時發生問題，應該考量下列動作：
