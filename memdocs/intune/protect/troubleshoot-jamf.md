@@ -118,7 +118,7 @@ Mac 裝置無法登錄有數個常見的原因。
 
 #### <a name="cause-2"></a>原因 2  
 
-**Jamf Native macOS Connector **應用程式並未在您的 Azure AD 租用戶中建立，或該連接器的同意是由不具備全域管理員權限的帳戶所簽署****  
+**Jamf Native macOS Connector  **應用程式並未在您的 Azure AD 租用戶中建立，或該連接器的同意是由不具備全域管理員權限的帳戶所簽署****  
 
   **解決方法**  
   請參閱 docs.jamf.com 上 [Integrating with Microsoft Intune](https://docs.jamf.com/10.13.0/jamf-pro/administrator-guide/Integrating_with_Microsoft_Intune.html) (與 Microsoft Intune 整合) 中的 *Configuring macOS Intune Integration* (設定 macOS Intune 整合) 一節。 
