@@ -1,0 +1,16 @@
+- name: 系統管理服務文件
+  href: index.yml
+- name: 什麼是系統管理服務？
+  href: overview.md
+- name: 操作指南
+  items:
+    - name: 如何安裝
+      href: set-up.md
+    - name: 如何使用
+      href: usage.md
+- name: 參考
+  items:
+    - name: 常見問題集
+      href: faq.md
+    - name: 版本資訊
+      href: release-notes.md

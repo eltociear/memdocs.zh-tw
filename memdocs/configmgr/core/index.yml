@@ -1,0 +1,84 @@
+### YamlMime:Landing
+title: 核心基礎結構文件
+summary: Configuration Manager 產品的相關基本資訊 (包含站台伺服器與用戶端)。
+metadata:
+  title: 核心基礎結構文件
+  titleSuffix: Configuration Manager
+  description: Configuration Manager 產品的相關基本資訊 (包含站台伺服器與用戶端)。
+  ms.prod: configuration-manager
+  ms.technology: configmgr-core
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/30/2020
+  ms.openlocfilehash: 2816bb6b4685cdd6e7ce56b981fc9e0ffbd89ac3
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741437"
+landingContent:
+- title: 關於核心基礎結構
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 什麼是 Configuration Manager？
+      url: understand/introduction.md
+    - text: Microsoft Endpoint Configuration Manager 常見問題集
+      url: understand/microsoft-endpoint-manager-faq.md
+    - text: 新增功能
+      url: plan-design/changes/whats-new-incremental-versions.md
+    - text: 技術預覽
+      url: get-started/technical-preview.md
+  - linkListType: get-started
+    links:
+    - text: 使用主控台
+      url: servers/manage/admin-console.md
+    - text: 使用軟體中心
+      url: understand/software-center.md
+    - text: 使用文件
+      url: understand/use-docs.md
+    - text: 尋找說明
+      url: understand/find-help.md
+- title: 開始使用
+  linkLists:
+  - linkListType: architecture
+    links:
+    - text: 支援的設定
+      url: plan-design/configs/supported-configurations.md
+    - text: Windows 10 的支援
+      url: plan-design/configs/support-for-windows-10.md
+    - text: 站台必要條件
+      url: plan-design/configs/site-and-site-system-prerequisites.md
+  - linkListType: deploy
+    links:
+    - text: 更新與服務
+      url: servers/manage/updates.md
+    - text: 安裝主控台內更新
+      url: servers/manage/install-in-console-updates.md
+    - text: 部署用戶端
+      url: clients/deploy/deploy-clients-to-windows-computers.md
+    - text: 在階層間移轉
+      url: migration/migrate-data-between-hierarchies.md
+- title: 熱門工作
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 啟用 TLS 1.2
+      url: plan-design/security/enable-tls-1-2.md
+    - text: CMPivot
+      url: servers/manage/cmpivot.md
+    - text: 規劃 CMG
+      url: clients/manage/cmg/plan-cloud-management-gateway.md
+    - text: 增強 HTTP
+      url: plan-design/hierarchy/enhanced-http.md
+  - linkListType: reference
+    links:
+    - text: 記錄檔
+      url: plan-design/hierarchy/about-log-files.md
+    - text: 連接埠
+      url: plan-design/hierarchy/ports.md
+    - text: 用戶端設計
+      url: clients/deploy/about-client-settings.md
+    - text: 工具
+      url: support/tools.md

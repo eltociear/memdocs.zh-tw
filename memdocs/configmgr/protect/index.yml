@@ -1,0 +1,100 @@
+### YamlMime:Landing
+title: 保護資料和基礎結構文件
+summary: 使用 Configuration Manager 保護您的基礎結構與資料，免於被暴露或遭到惡意攻擊。
+metadata:
+  title: 保護資料和基礎結構文件
+  titleSuffix: Configuration Manager
+  description: 使用 Configuration Manager 保護您的基礎結構與資料，免於被暴露或遭到惡意攻擊。
+  ms.product: configuration-manager
+  ms.technology: configmgr-protect
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+  ms.openlocfilehash: 44481f1b0fb304ed12a40d100352a9f7a6d8dd39
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741845"
+landingContent:
+- title: 管理 BitLocker 磁碟機加密 (BDE)
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: BitLocker 管理規劃
+      url: plan-design/bitlocker-management.md
+  - linkListType: deploy
+    links:
+    - text: 部署 BitLocker 管理
+      url: deploy-use/bitlocker/deploy-management-agent.md
+    - text: 設定 BitLocker 入口網站
+      url: deploy-use/bitlocker/setup-websites.md
+  - linkListType: how-to-guide
+    links:
+    - text: 檢視 BitLocker 報告
+      url: deploy-use/bitlocker/view-reports.md
+    - text: 使用 BitLocker 系統管理與監視網站
+      url: deploy-use/bitlocker/helpdesk-portal.md
+- title: 憑證設定檔
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 憑證設定檔簡介
+      url: deploy-use/introduction-to-certificate-profiles.md
+  - linkListType: get-started
+    links:
+    - text: 規劃憑證設定檔的憑證範本權限
+      url: plan-design/planning-for-certificate-template-permissions.md
+    - text: 憑證設定檔先決條件
+      url: plan-design/prerequisites-for-certificate-profiles.md
+  - linkListType: deploy
+    links:
+    - text: 設定憑證基礎結構
+      url: deploy-use/certificate-infrastructure.md
+    - text: 建立憑證設定檔
+      url: deploy-use/endpoint-configure-alerts.md
+    - text: 部署資源存取設定檔
+      url: deploy-use/endpoint-definition-updates.md
+- title: 熱門工作
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Microsoft Defender 進階威脅防護上線
+      url: deploy-use/windows-defender-advanced-threat-protection.md
+    - text: 針對 Windows Defender 或 Endpoint Protection 用戶端進行疑難排解
+      url: deploy-use/troubleshoot-endpoint-client.md
+    - text: 管理反惡意程式碼原則和防火牆設定
+      url: deploy-use/endpoint-antimalware-firewall.md
+    - text: Windows Defender 應用程式控制管理
+      url: deploy-use/use-device-guard-with-configuration-manager.md
+    - text: 建立及部署 Windows Defender 應用程式防護
+      url: deploy-use/create-deploy-application-guard-policy.md
+    - text: Windows Hello 企業版設定
+      url: deploy-use/windows-hello-for-business-settings.md
+- title: Endpoint Protection
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Endpoint Protection 概觀
+      url: deploy-use/endpoint-protection.md
+  - linkListType: get-started
+    links:
+    - text: Endpoint Protection 規劃
+      url: plan-design/planning-for-endpoint-protection.md
+  - linkListType: deploy
+    links:
+    - text: 建立 Endpoint Protection 點站台系統角色
+      url: deploy-use/endpoint-protection-site-role.md
+    - text: 設定 Endpoint Protection 的警示
+      url: deploy-use/endpoint-configure-alerts.md
+    - text: 設定 Endpoint Protection 的定義更新
+      url: deploy-use/endpoint-definition-updates.md
+  - linkListType: how-to-guide
+    links:
+    - text: 建立及部署 Endpoint Protection 的反惡意程式碼原則
+      url: deploy-use/endpoint-antimalware-policies.md
+    - text: 設定 Endpoint Protection 的自訂用戶端設定
+      url: deploy-use/endpoint-protection-configure-client.md
+    - text: 監視 Endpoint Protection 狀態
+      url: deploy-use/monitor-endpoint-protection.md

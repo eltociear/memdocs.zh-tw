@@ -1,0 +1,144 @@
+- name: 保護資料和基礎結構文件
+  href: index.yml
+- name: 了解及探索
+  items:
+    - name: 概觀
+      href: understand\protect-data-and-site-infrastructure.md
+- name: 規劃和設計
+  items:
+    - name: Endpoint Protection 規劃
+      href: plan-design/planning-for-endpoint-protection.md
+    - name: BitLocker 管理規劃
+      href: plan-design/bitlocker-management.md
+    - name: 針對憑證設定檔進行規劃
+      items:
+        - name: 憑證設定檔必要條件
+          href: plan-design/prerequisites-for-certificate-profiles.md
+        - name: 憑證設定檔的憑證範本權限
+          href: plan-design/planning-for-certificate-template-permissions.md
+    - name: Wi-Fi 和 VPN 設定檔必要條件
+      href: plan-design/prerequisites-for-wifi-vpn-profiles.md
+    - name: 安全性和隱私權
+      items:
+        - name: Wi-Fi 及 VPN 設定檔
+          href: plan-design/security-and-privacy-for-wifi-vpn-profiles.md
+        - name: 憑證設定檔
+          href: plan-design/security-and-privacy-for-certificate-profiles.md
+- name: 部署和使用
+  items:
+    - name: Endpoint Protection
+      items:
+        - name: Endpoint Protection 概觀
+          href: deploy-use/endpoint-protection.md
+        - name: 設定 Endpoint Protection
+          items:
+            - name: 如何設定 Endpoint Protection
+              href: deploy-use/endpoint-protection-configure.md
+            - name: 網站系統角色
+              href: deploy-use/endpoint-protection-site-role.md
+            - name: 警示
+              href: deploy-use/endpoint-configure-alerts.md
+            - name: 定義更新
+              items:
+                - name: 定義更新概觀
+                  href: deploy-use/endpoint-definition-updates.md
+                - name: ConfigMgr 更新
+                  href: deploy-use/endpoint-definitions-configmgr.md
+                - name: WSUS 更新
+                  href: deploy-use/endpoint-definitions-wsus.md
+                - name: Microsoft 更新
+                  href: deploy-use/endpoint-definitions-microsoft-updates.md
+                - name: 惡意程式碼防護中心
+                  href: deploy-use/endpoint-definitions-protection-center.md
+                - name: 網路共用更新
+                  href: deploy-use/endpoint-definitions-network.md
+            - name: 部署原則
+              href: deploy-use/endpoint-antimalware-policies.md
+            - name: 設定用戶端
+              href: deploy-use/endpoint-protection-configure-client.md
+        - name: Windows 防火牆原則
+          href: deploy-use/create-windows-firewall-policies.md
+        - name: Microsoft Defender 進階威脅防護
+          href: deploy-use/windows-defender-advanced-threat-protection.md
+        - name: 建立與部署惡意探索防護原則
+          href: deploy-use/create-deploy-exploit-guard-policy.md
+        - name: 建立與部署應用程式防護原則
+          href: deploy-use/create-deploy-application-guard-policy.md
+        - name: Windows Defender 應用程式控制設定
+          href: deploy-use/use-device-guard-with-configuration-manager.md
+        - name: 反惡意程式碼和防火牆工作
+          href: deploy-use/endpoint-antimalware-firewall.md
+        - name: Endpoint Protection 案例
+          href: deploy-use/scenarios-endpoint-protection.md
+        - name: Endpoint Protection 用戶端說明
+          href: deploy-use/endpoint-protection-client-help.md
+        - name: 針對用戶端進行疑難排解
+          href: deploy-use/troubleshoot-endpoint-client.md
+        - name: Windows Defender 常見問題集
+          href: deploy-use/endpoint-protection-client-faq.md
+    - name: BitLocker 管理
+      items:
+        - name: 加密復原資料
+          href: deploy-use/bitlocker/encrypt-recovery-data.md
+        - name: 部署 BitLocker 管理
+          href: deploy-use/bitlocker/deploy-management-agent.md
+        - name: 設定 BitLocker 入口網站
+          href: deploy-use/bitlocker/setup-websites.md
+        - name: 自訂自助入口網站
+          href: deploy-use/bitlocker/customize-self-service-portal.md
+        - name: 檢視 BitLocker 報告
+          href: deploy-use/bitlocker/view-reports.md
+        - name: 管理和監視網站
+          href: deploy-use/bitlocker/helpdesk-portal.md
+        - name: 自助入口網站
+          href: deploy-use/bitlocker/self-service-portal.md
+    - name: Windows Hello 企業版設定
+      href: deploy-use/windows-hello-for-business-settings.md
+    - name: 憑證設定檔
+      items:
+        - name: 憑證設定檔簡介
+          href: deploy-use/introduction-to-certificate-profiles.md
+        - name: 建立憑證設定檔
+          href: deploy-use/create-certificate-profiles.md
+        - name: 設定憑證基礎結構
+          href: deploy-use/certificate-infrastructure.md
+    - name: Wi-Fi 設定檔
+      items:
+        - name: 建立 Wi-Fi 設定檔
+          href: deploy-use/create-wifi-profiles.md
+    - name: VPN 設定檔
+      items:
+        - name: VPN 設定檔
+          href: deploy-use/vpn-profiles.md
+        - name: 建立 VPN 設定檔
+          href: deploy-use/create-vpn-profiles.md
+        - name: 尋找個別應用程式 VPN 的套件系列名稱 (PFN)
+          href: deploy-use/find-a-pfn-for-per-app-vpn.md
+    - name: 部署 Wi-Fi、VPN、電子郵件和憑證設定檔
+      href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
+    - name: 條款及條件設定
+      href: ../mdm/understand/what-happened-to-hybrid.md?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
+    - name: 監視防護
+      items:
+        - name: 監視 Wi-Fi、電子郵件和 VPN 設定檔
+          href: deploy-use/monitor-wifi-email-vpn-profiles.md
+        - name: 監視憑證設定檔
+          href: deploy-use/monitor-certificate-profiles.md
+        - name: 監視 Endpoint Protection
+          href: deploy-use/monitor-endpoint-protection.md
+- name: 技術參考
+  items:
+    - name: BitLocker 管理
+      items:
+        - name: 設定參照
+          href: tech-ref/bitlocker/settings.md
+        - name: 針對 BitLocker 進行疑難排解
+          href: tech-ref/bitlocker/troubleshoot.md
+        - name: BitLocker 事件記錄檔
+          href: tech-ref/bitlocker/about-event-logs.md
+        - name: 用戶端事件記錄檔
+          href: tech-ref/bitlocker/client-event-logs.md
+        - name: 伺服器事件記錄檔
+          href: tech-ref/bitlocker/server-event-logs.md
+        - name: 不符合規範代碼
+          href: tech-ref/bitlocker/non-compliance-codes.md

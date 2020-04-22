@@ -1,0 +1,62 @@
+### YamlMime:Landing
+title: OS 部署文件
+summary: 使用 Configuration Manager，透過多種不同的方法部署 Windows 及自動執行工作。
+metadata:
+  title: OS 部署文件
+  titleSuffix: Configuration Manager
+  description: 使用 Configuration Manager，透過多種不同的方法部署 Windows 及自動執行工作。
+  ms.prod: configuration-manager
+  ms.technology: configmgr-osd
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 5c56cef287ee16a8899c16af72d4734c9d1f4bad
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741947"
+landingContent:
+- title: 關於 OS 部署
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: OS 部署簡介
+      url: understand/introduction-to-operating-system-deployment.md
+    - text: 基礎結構需求
+      url: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+  - linkListType: concept
+    links:
+    - text: 準備 OS 部署
+      url: get-started/prepare-for-operating-system-deployment.md
+    - text: OS 部署案例
+      url: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+    - text: OS 部署方法
+      url: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+- title: 開始使用
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 管理工作順序
+      url: deploy-use/manage-task-sequences-to-automate-tasks.md
+    - text: 建立 OS 升級工作順序
+      url: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+    - text: 建立階段式部署
+      url: deploy-use/create-phased-deployment-for-task-sequence.md
+    - text: 部署工作順序
+      url: deploy-use/deploy-a-task-sequence.md
+    - text: 針對工作順序進行偵錯
+      url: deploy-use/debug-task-sequence.md
+- title: 技術參考
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: 使用工作順序編輯器
+      url: understand/task-sequence-editor.md
+    - text: 關於工作順序步驟
+      url: understand/task-sequence-steps.md
+    - text: 如何使用工作順序變數
+      url: understand/using-task-sequence-variables.md
+    - text: 工作順序變數參考
+      url: understand/task-sequence-variables.md

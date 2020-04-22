@@ -1,0 +1,54 @@
+### YamlMime:Landing
+title: 電腦分析文件
+summary: 電腦分析是整合到 Configuration Manager 中的雲端服務。 其可提供見解，協助您更新您的 Windows 用戶端。
+metadata:
+  title: 電腦分析文件
+  titleSuffix: Configuration Manager
+  description: 電腦分析是整合到 Configuration Manager 中的雲端服務。 其可提供見解，協助您更新您的 Windows 用戶端。
+  ms.prod: configuration-manager
+  ms.technology: configmgr-analytics
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 1c0aa1c481acb18fadeebbdecdcd4759568d2242
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741403"
+landingContent:
+- title: 關於電腦分析
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 什麼是電腦分析？
+      url: overview.md
+    - text: 新增功能
+      url: whats-new.md
+  - linkListType: tutorial
+    links:
+    - text: 試驗 Windows 10
+      url: tutorial-windows10.md
+- title: 開始使用
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 設定電腦分析
+      url: set-up.md
+    - text: 連線 Configuration Manager
+      url: connect-configmgr.md
+    - text: 註冊裝置
+      url: enroll-devices.md
+- title: 資源
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: 電腦分析常見問題集
+      url: faq.md
+    - text: 啟用資料共用
+      url: enable-data-sharing.md
+    - text: 監視連線健康情況
+      url: monitor-connection-health.md
+    - text: 針對電腦分析進行疑難排解
+      url: troubleshooting.md

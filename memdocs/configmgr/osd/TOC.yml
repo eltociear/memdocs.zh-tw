@@ -1,0 +1,148 @@
+- name: OS 部署文件
+  href: index.yml
+- name: 了解
+  items:
+    - name: OS 部署簡介
+      href: understand/introduction-to-operating-system-deployment.md
+- name: 規劃和設計
+  items:
+    - name: OS 部署的基礎結構需求
+      href: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+    - name: 自動化工作的規劃考量
+      href: plan-design/planning-considerations-for-automating-tasks.md
+    - name: 部署企業作業系統的案例
+      items:
+        - name: OS 部署案例概觀
+          href: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+        - name: 升級至最新版本的 Windows
+          href: deploy-use/upgrade-windows-to-the-latest-version.md
+        - name: 適用於現有裝置的 Windows Autopilot
+          href: deploy-use/windows-autopilot-for-existing-devices.md
+        - name: 使用新的 Windows 版本重新整理現有的電腦
+          href: deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md
+        - name: 在新電腦 (裸機) 上安裝新的 Windows 版本
+          href: deploy-use/install-new-windows-version-new-computer-bare-metal.md
+        - name: 取代現有的電腦和傳輸設定
+          href: deploy-use/replace-an-existing-computer-and-transfer-settings.md
+    - name: 部署企業作業系統的方法
+      items:
+        - name: OS 部署方法
+          href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+        - name: 使用 PXE 透過網路部署 Windows
+          href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
+        - name: 使用軟體中心透過網路部署 Windows
+          href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
+        - name: 透過網路使用可開機媒體部署 Windows
+          href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
+        - name: 使用獨立媒體，而不使用網路來部署 Windows
+          href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
+        - name: 使用多點傳送透過網路來部署 Windows
+          href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
+        - name: 建立 OEM 原廠或本機 Depot 的映像
+          href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
+    - name: OS 部署的安全性與隱私權
+      href: plan-design/security-and-privacy-for-operating-system-deployment.md
+    - name: 規劃 OS 部署互通性
+      href: plan-design/planning-for-operating-system-deployment-interoperability.md
+- name: 開始使用
+  items:
+    - name: 準備 OS 部署的站台系統角色
+      href: get-started/prepare-site-system-roles-for-operating-system-deployments.md
+    - name: 針對 OS 部署進行準備
+      items:
+        - name: 準備 OS 部署
+          href: get-started/prepare-for-operating-system-deployment.md
+        - name: 開機映像
+          items:
+            - name: 管理開機映像
+              href: get-started/manage-boot-images.md
+            - name: 自訂開機映像
+              href: get-started/customize-boot-images.md
+        - name: OS 映像
+          items:
+            - name: 管理 OS 映像
+              href: get-started/manage-operating-system-images.md
+            - name: 自訂 OS 映像
+              href: get-started/customize-operating-system-images.md
+        - name: 管理 OS 升級套件
+          href: get-started/manage-operating-system-upgrade-packages.md
+        - name: 管理驅動程式
+          href: get-started/manage-drivers.md
+        - name: 管理使用者狀態
+          href: get-started/manage-user-state.md
+        - name: 準備未知電腦部署
+          href: get-started/prepare-for-unknown-computer-deployments.md
+        - name: 為使用者與目的地電腦建立關聯
+          href: get-started/associate-users-with-a-destination-computer.md
+    - name: 準備 Windows PE 對等快取以減少 WAN 流量
+      href: get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md
+- name: 部署和使用
+  items:
+    - name: 管理及建立工作順序
+      href: deploy-use/manage-task-sequences-to-automate-tasks.md
+    - name: 建立工作順序以自動化工作
+      items:
+        - name: 建立工作順序以安裝 OS
+          href: deploy-use/create-a-task-sequence-to-install-an-operating-system.md
+        - name: 建立工作順序以升級 OS
+          href: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+        - name: 用於管理 BIOS 轉換到 UEFI 的工作順序步驟
+          href: deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md
+        - name: 建立工作順序以擷取 OS
+          href: deploy-use/create-a-task-sequence-to-capture-an-operating-system.md
+        - name: 建立工作順序擷取和還原使用者狀態
+          href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
+        - name: 建立自訂工作順序
+          href: deploy-use/create-a-custom-task-sequence.md
+        - name: 為非 OS 部署建立工作順序
+          href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
+    - name: 部署工作順序
+      href: deploy-use/deploy-a-task-sequence.md
+    - name: 建立階段式部署
+      href: deploy-use/create-phased-deployment-for-task-sequence.md
+    - name: 管理和監視階段式部署
+      href: deploy-use/manage-monitor-phased-deployments.md
+    - name: 將 Windows 作為服務管理
+      href: deploy-use/manage-windows-as-a-service.md
+    - name: 部署 Windows to Go
+      href: deploy-use/deploy-windows-to-go.md
+    - name: 監視 OS 部署
+      href: deploy-use/monitor-operating-system-deployments.md
+    - name: 針對工作順序進行偵錯
+      href: deploy-use/debug-task-sequence.md
+    - name: 設定預先快取內容
+      href: deploy-use/configure-precache-content.md
+    - name: 建立工作順序媒體
+      items:
+        - name: 工作順序媒體概觀
+          href: deploy-use/create-task-sequence-media.md
+        - name: 建立獨立媒體
+          href: deploy-use/create-stand-alone-media.md
+        - name: 建立預先設置的媒體
+          href: deploy-use/create-prestaged-media.md
+        - name: 建立可開機媒體
+          href: deploy-use/create-bootable-media.md
+        - name: 建立擷取媒體
+          href: deploy-use/create-capture-media.md
+- name: 技術參考
+  items:
+    - name: 使用工作順序編輯器
+      href: understand/task-sequence-editor.md
+    - name: OS 部署的使用者體驗
+      href: understand/user-experience.md
+    - name: 工作順序步驟
+      items:
+        - name: 關於工作順序步驟
+          href: understand/task-sequence-steps.md
+        - name: 安裝軟體更新
+          href: understand/install-software-updates.md
+        - name: 在 Windows PE 中預先佈建 BitLocker
+          href: deploy-use/preprovision-bitlocker-in-windows-pe.md
+    - name: 如何使用工作順序變數
+      href: understand/using-task-sequence-variables.md
+    - name: 工作順序變數
+      href: understand/task-sequence-variables.md
+    - name: 工作順序媒體的啟動前置命令
+      href: understand/prestart-commands-for-task-sequence-media.md
+    - name: 佈建模式
+      href: understand/provisioning-mode.md

@@ -1,0 +1,32 @@
+### YamlMime:Landing
+title: 系統管理服務文件
+summary: Configuration Manager REST API 的開發人員文件
+metadata:
+  title: 系統管理服務文件
+  titleSuffix: Configuration Manager
+  description: 將您的 Configuration Manager 裝置上傳至雲端服務，並對其採取動作。
+  ms.product: configuration-manager
+  ms.technology: configmgr-sdk
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 04/01/2020
+  ms.openlocfilehash: c6c2e97491982f39db4c149ac0bc38266bc2ea27
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741675"
+landingContent:
+- title: 關於系統管理服務
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 什麼是系統管理服務？
+      url: overview.md
+  - linkListType: how-to-guide
+    links:
+    - text: 如何安裝
+      url: set-up.md
+    - text: 如何使用
+      url: usage.md
