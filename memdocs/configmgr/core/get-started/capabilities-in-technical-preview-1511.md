@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 475cb4e9a4c6c3b90582210b0ebf4a7f69e9f643
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f32eaffe673324699e20fc7c579ea1ac9b38c479
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694286"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076334"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Configuration Manager Technical Preview 1511 中的功能
 
@@ -40,7 +40,7 @@ ms.locfileid: "81694286"
  請嘗試完成下列工作，然後使用本主題頂端附近的意見反應資訊，告訴我們工作的成效：  
 
 1.  如果之前已啟用 Windows Update 代理程式，請將其停用以免對 WSUS 進行掃描。   
-    您可以設定登錄機碼 **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\useWSUSServer** ，指出電腦要對 WSUS 或 Windows Update 進行掃描。  當值為 2 時，它不會對 WSUS 進行掃描。  
+    您可以設定登錄機碼 **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\useWSUSServer** ，指出電腦要對 WSUS 或 Windows Update 進行掃描。  當值為 2 時，它不會執行 WSUS 掃描。  
 
 2.  請注意 Configuration Manager 資源總管之 [Windows Update]  節點下的新屬性 **UseWUServer** 。  
 
@@ -48,7 +48,7 @@ ms.locfileid: "81694286"
 
 4.  建立用戶端代理程式設定，以停用軟體更新工作流程，並將設定部署至直接連線到 WUfB 的電腦集合。  
 
-5.  透過 WUfB 管理的電腦會在合規性狀態中顯示 [不明]  ，而且不會計入整體合規性百分比的一部分。  
+5.  透過 WUfB 管理的電腦會在相容性狀態中顯示 [不明]  ，而且不會計入整體相容性百分比的一部分。  
 
 ##  <a name="managing-office-365-proplus-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> 透過 Configuration Manager 管理 Office 365 ProPlus 用戶端更新  
  Configuration Manager 現在能夠使用 Configuration Manager 軟體更新管理工作流程，來管理 Office 365 桌面用戶端更新。    

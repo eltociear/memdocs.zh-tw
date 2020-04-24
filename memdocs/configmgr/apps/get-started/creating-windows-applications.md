@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 6b7ce4fd1ab09607f167696df35f3b5f19469b0d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3af6f2883ebf17ab19f57762b8b3bf26e3716262
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688986"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075722"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>在 Configuration Manager 中建立 Windows 應用程式
 
@@ -124,7 +124,7 @@ Configuration Manager 支援 Windows 10 應用程式套件 (.msix) 與應用程�
 
 - 定義應用程式工作順序的額外中繼資料，包括當地語系化資訊
 
-您只能將非 OS 部署工作順序作新增為應用程式上的部署類型。 不支援具強烈影響性、OS 部署或 OS 升級工作順序。 瞄準使用者的部署仍會在本機系統帳戶使用者內容中執行。
+您只能將非 OS 部署工作順序作新增為應用程式上的部署類型。 不支援具強烈影響性、OS 部署或 OS 升級工作順序。 <!--A user-targeted deployment still runs in the user context of the local System account.-->
 
 當將此部署類型新增至應用程式時，請在 [工作順序]  頁面上設定其屬性。 如需詳細資訊，請參閱[部署類型的 [工作順序]  選項](../deploy-use/create-applications.md#bkmk_dt-ts)。
 

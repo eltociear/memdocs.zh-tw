@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: 在 Microsoft Intune 中註冊裝置
-summary: 有數種方法可以註冊員工裝置。 每種方法皆會因裝置擁有權 (個人或公司)、裝置類型 (iOS、Windows、Android) 及管理需求 (重設、親和性、鎖定) 而有所不同。
+summary: 有多種方法可以註冊您的員工裝置。 每種方法皆會因裝置擁有權 (個人或公司)、裝置類型 (iOS、Windows、Android) 及管理需求 (重設、親和性、鎖定) 而有所不同。
 metadata:
   title: Microsoft Intune 中的註冊
   description: Microsoft Intune 中的註冊登陸頁面
@@ -12,12 +12,12 @@ metadata:
   ms.author: dougeby
   manager: dougeby
   ms.date: 08/07/2019
-  ms.openlocfilehash: be5cae95460064287fa347d1ca42626ab75a2809
-  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.openlocfilehash: 468bf56722f17fded75c18a722b15e5e55113eec
+  ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 03/13/2020
-  ms.locfileid: "79333935"
+  ms.lasthandoff: 04/23/2020
+  ms.locfileid: "82077949"
 landingContent:
 - title: 了解註冊
   linkLists:
@@ -87,7 +87,7 @@ landingContent:
     links:
     - text: 設定 iOS/iPadOS 註冊
       url: ios-enroll.md
-    - text: 使用 Apple 的裝置註冊計劃來自動註冊 iOS/iPadOS 裝置
+    - text: 使用 Apple 的自動裝置註冊來自動註冊 iOS/iPadOS 裝置
       url: device-enrollment-program-enroll-ios.md
     - text: 設定 iOS/iPadOS 與 iPadOS 使用者註冊
       url: ios-user-enrollment.md
@@ -111,7 +111,7 @@ landingContent:
     links:
     - text: 設定 macOS 註冊
       url: macos-enroll.md
-    - text: 使用裝置註冊計劃或 Apple School Manager 自動註冊 macOS 裝置
+    - text: 使用自動裝置註冊或 Apple School Manager 自動註冊 macOS 裝置
       url: device-enrollment-program-enroll-macos.md
     - text: 使用 Apple Configurator 來設定 iOS/iPadOS 裝置註冊
       url: apple-configurator-enroll-ios.md
