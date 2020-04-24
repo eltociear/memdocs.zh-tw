@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 934e2283fec0cd68ea5b72f092fb6dcac6f3fe4c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 53f33b659e45720dc84b7c38ca54fec0e3768a60
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81379641"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126091"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>在 Microsoft Intune 中針對 SCEP 憑證設定檔的裝置對 NDES 伺服器通訊進行疑難排解
 
@@ -161,7 +161,7 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 使用下列步驟來測試於 SCEP 憑證設定檔中指定的 URL。
 
-1. 在 Intune 中，編輯您的 SCEP 憑證設定檔並複製伺服器 URL。 URL 應該類似 *https://contoso.com/certsrv/mscep/msecp.dll* 。
+1. 在 Intune 中，編輯您的 SCEP 憑證設定檔並複製伺服器 URL。 URL 應該類似 *https://contoso.com/certsrv/mscep/mscep.dll* 。
 
 2. 開啟網頁瀏覽器，然後瀏覽到該 SCEP 伺服器 URL。 結果應該如下：「HTTP 錯誤 403.0 – 禁止」  。 此結果指出 URL 正常運作。
 

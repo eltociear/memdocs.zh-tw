@@ -15,18 +15,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f1f381d0b9f48f26c84785bb7c50434971d6c89
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6cb0080a63c14c2a2fe4acd5906980e63e6b832c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357125"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079972"
 ---
 # <a name="quickstart-create-and-assign-a-custom-role"></a>快速入門：建立並指派自訂角色
 
 在此 Intune 快速入門中，您將建立具備安全性作業部門特定權限的自訂角色。 然後，您會將角色指派給這類操作員群組。 有幾個預設角色可讓您直接使用。 藉由建立類似的自訂角色，您就可以對行動裝置管理系統的所有組件進行精確的存取控制。
 
-如果您沒有 Intune 訂用帳戶，請[註冊免費試用帳戶](free-trial-sign-up.md)。
+如果沒有 Intune 訂用帳戶，請[註冊免費試用帳戶](free-trial-sign-up.md)。
 
 ## <a name="prerequisites"></a>先決條件
 

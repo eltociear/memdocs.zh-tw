@@ -19,18 +19,18 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 26fbc0fbc8c498df67d254895e71ef9a9ae6970f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b368fa0835e8779db5214d5372d97b72f76d906e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79347141"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077541"
 ---
 # <a name="unable-to-get-macos-device-managed"></a>無法管理 macOS 裝置
 
 如果您在嘗試取得 macOS 裝置管理時收到下列任一訊息，請連絡您公司的支援人員。
 
-**訊息 1**：*我們無法管理您的裝置。如果您使用虛擬機器、擁有受限的序號，或是如果此裝置已指派給其他人，則可能發生此問題。了解如何解決這些問題或連絡您公司的支援人員。*
+**訊息 1**：*我們無法管理裝置。如果您使用虛擬機器、擁有受限的序號，或是如果此裝置已指派給其他人，則可能發生此問題。了解如何解決這些問題或連絡您公司的支援人員。*
 
 **訊息 2**：*您似乎正在使用虛擬機器。請確認您已完整設定虛擬機器，包括序號及硬體型號。若此裝置不是虛擬機器，請連絡支援人員。*  
 

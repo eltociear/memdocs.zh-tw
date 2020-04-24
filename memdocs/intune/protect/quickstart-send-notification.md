@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48ec5bf332d951fc19cb4d6ef1dee242b87d02ee
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d02329f65d7b7ecec1dbfeaf84ecbe5c8fb53013
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325465"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079479"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>快速入門：傳送通知到不符合規範的裝置
 
@@ -33,7 +33,7 @@ ms.locfileid: "80325465"
 
 當裝置不符合規範時，其中一個可以採取的動作是傳送電子郵件給裝置使用者。 您也可以先自訂電子郵件通知再傳送它。 具體來說，您可以自訂收件者、主旨與郵件內文，包括公司標誌和連絡人資訊。 Intune 也會在電子郵件通知中包含不符合規範裝置的詳細資料。
 
-如果您沒有 Intune 訂用帳戶，請[註冊免費試用帳戶](../fundamentals/free-trial-sign-up.md)。
+如果沒有 Intune 訂用帳戶，請[註冊免費試用帳戶](../fundamentals/free-trial-sign-up.md)。
 
 ## <a name="prerequisites"></a>先決條件
 

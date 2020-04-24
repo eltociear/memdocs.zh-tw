@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae1f0117f6dbf186b3a4bdddb393d053c33c914a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 31eef700f7aa38b70c5e9a2fa75fd3faee4c9713
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359790"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078051"
 ---
 # <a name="reference-for-devices-entities"></a>裝置實體的參考
 
@@ -42,7 +42,7 @@ ms.locfileid: "79359790"
 
 **deviceTypes** 實體代表其他資料倉儲實體所參考的裝置類型。 裝置類型通常會描述裝置型號、製造商或兩者的組合。
 
-| 屬性  | Description |
+| 屬性  | 說明 |
 |---------|------------|
 | deviceTypeID |裝置類別的唯一識別碼 |
 | deviceTypeKey |資料倉儲中裝置類型的唯一識別碼 - surrogate 索引鍵 |
@@ -50,9 +50,9 @@ ms.locfileid: "79359790"
 
 ### <a name="example"></a>範例
 
-| deviceTypeID  | 名稱 | Description |
+| deviceTypeID  | Name | 說明 |
 |---------|------------|--------|
-| 0 |桌上型電腦 |Windows Desktop 裝置 |
+| 0 |桌面 |Windows Desktop 裝置 |
 | 1 |WindowsRT |WindowsRT 裝置 |
 | 2 |WinMO6 |Windows Mobile 6.0 裝置 |
 | 3 |Nokia |Nokia 裝置 |
@@ -76,7 +76,7 @@ ms.locfileid: "79359790"
 ## <a name="enrollmentactivities"></a>enrollmentActivities 
 **enrollmentActivity** 實體表示裝置註冊的活動。
 
-| 屬性                      | Description                                                               |
+| 屬性                      | 說明                                                               |
 |-------------------------------|---------------------------------------------------------------------------|
 | dateKey                       | 記錄此註冊活動的日期索引鍵。               |
 | deviceEnrollmentTypeKey       | 註冊類型的索引鍵。                                        |
@@ -90,30 +90,30 @@ ms.locfileid: "79359790"
 ## <a name="enrollmenteventstatuses"></a>enrollmentEventStatuses 
 **enrollmentEventStatus** 實體表示裝置註冊的結果。
 
-| 屬性                   | Description                                                                       |
+| 屬性                   | 說明                                                                       |
 |----------------------------|-----------------------------------------------------------------------------------|
 | enrollmentEventStatusKey   | 資料倉儲中註冊狀態的唯一識別碼 (surrogate 索引鍵)  |
 | enrollmentEventStatusName  | 註冊狀態的名稱。 請參閱下列範例。                            |
 
 ### <a name="example"></a>範例
 
-| enrollmentEventStatusName  | Description                            |
+| enrollmentEventStatusName  | 說明                            |
 |----------------------------|----------------------------------------|
 | 成功                    | 裝置註冊成功         |
-| 失敗                     | 裝置註冊失敗             |
+| Failed                     | 裝置註冊失敗             |
 | 無法使用              | 註冊狀態為無法使用。  |
 
 ## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
 **EnrollmentFailureCategory** 實體表示裝置註冊失敗的原因。 
 
-| 屬性                       | Description                                                                                 |
+| 屬性                       | 說明                                                                                 |
 |--------------------------------|---------------------------------------------------------------------------------------------|
 | enrollmentFailureCategoryKey   | 資料倉儲中註冊失敗類別的唯一識別碼 (surrogate 索引鍵)  |
 | enrollmentFailureCategoryName  | 註冊失敗類別的名稱。 請參閱下列範例。                            |
 
 ### <a name="example"></a>範例
 
-| enrollmentFailureCategoryName   | Description                                                                                                   |
+| enrollmentFailureCategoryName   | 說明                                                                                                   |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------|
 | 不適用                  | 註冊失敗類別不適用。                                                            |
 | 無法使用                   | 註冊失敗類別無法使用。                                                             |
@@ -133,14 +133,14 @@ ms.locfileid: "79359790"
 ## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
 **EnrollmentFailureReason** 實體表示在所指定失敗類別中裝置註冊失敗的更詳細原因。  
 
-| 屬性                     | Description                                                                               |
+| 屬性                     | 說明                                                                               |
 |------------------------------|-------------------------------------------------------------------------------------------|
 | enrollmentFailureReasonKey   | 資料倉儲中註冊失敗原因的唯一識別碼 (surrogate 索引鍵)  |
 | enrollmentFailureReasonName  | 註冊失敗原因的名稱。 請參閱下列範例。                            |
 
 ### <a name="example"></a>範例
 
-| enrollmentFailureReasonName      | Description                                                                                                                                                                                            |
+| enrollmentFailureReasonName      | 說明                                                                                                                                                                                            |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 不適用                   | 註冊失敗原因不適用。                                                                                                                                                       |
 | 無法使用                    | 註冊失敗原因無法使用。                                                                                                                                                        |
@@ -163,7 +163,7 @@ ms.locfileid: "79359790"
 
 **enrollmentType** 實體會指出裝置為公司所有、個人擁有或未知。 unknown.
 
-| 屬性  | Description | 範例 |
+| 屬性  | 說明 | 範例 |
 |---------|------------|--------|
 | ownerTypeID |擁有者類型的唯一識別碼。 | |
 | ownerTypeKey |資料倉儲中擁有者類型的唯一識別碼 - Surrogate 索引鍵。 | |
@@ -176,7 +176,7 @@ ms.locfileid: "79359790"
 
 **managementStates** 實體會提供裝置狀態的詳細資訊。 在套用遠端動作的情況下，裝置如進行 JB 破解或刷機，詳細資料會很有幫助。
 
-| 屬性  | Description |
+| 屬性  | 說明 |
 |---------|------------|
 | managementStateID | 管理狀態的唯一識別碼。 |
 | managementStateKey | 資料倉儲中管理狀態的唯一識別碼 - surrogate 索引鍵 |
@@ -184,7 +184,7 @@ ms.locfileid: "79359790"
 
 ### <a name="example"></a>範例
 
-| managementStateID  | 名稱 | Description |
+| managementStateID  | Name | 說明 |
 |---------|------------|--------|
 | 0 |受管理 | 使用無擱置遠端動作進行管理。 |
 | 1 |RetirePending | 該裝置有擱置的淘汰命令。 |
@@ -203,7 +203,7 @@ ms.locfileid: "79359790"
 
 **ManagementAgentType** 實體代表用來管理裝置的代理程式。
 
-| 屬性  | Description |
+| 屬性  | 說明 |
 |---------|------------|
 | managementAgentTypeID | 管理代理程式類型的唯一識別碼。 |
 | managementAgentTypeKey | 資料倉儲中管理代理程式類型的唯一識別碼 - Surrogate 索引鍵。 |
@@ -211,7 +211,7 @@ ms.locfileid: "79359790"
 
 ### <a name="example"></a>範例
 
-| ManagementAgentTypeID  | 名稱 | Description |
+| ManagementAgentTypeID  | Name | 說明 |
 |---------|------------|--------|
 | 1 |EAS | 透過 Exchange Active Sync 管理的裝置 |
 | 2 |MDM | 使用 MDM 代理程式管理的裝置 |
@@ -225,7 +225,7 @@ ms.locfileid: "79359790"
 
 **devices** 實體會列出管理下的所有已註冊裝置及其對應的屬性。
 
-|          屬性          |                                                                                       Description                                                                                      |
+|          屬性          |                                                                                       說明                                                                                      |
 |:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | deviceKey                  | 資料倉儲中裝置的唯一識別碼 - surrogate 索引鍵。                                                                                                               |
 | deviceId                   | 裝置的唯一識別碼。                                                                                                                                                     |
@@ -249,7 +249,7 @@ ms.locfileid: "79359790"
 | rowLastModifiedDateTimeUTC | 在資料倉儲中最後一次修改此裝置的 UTC 日期和時間。                                                                                                       |
 | manufacturer               | 裝置製造商                                                                                                                                                             |
 | 模型                      | 裝置的型號                                                                                                                                                                    |
-| operatingSystem            | 裝置的作業系統。 Windows、iOS/iPadOS 等                                                                                                                                   |
+| operatingSystem            | 裝置的作業系統。 Windows、iOS/iPadOS 等等。                                                                                                                                   |
 | isDeleted                  | 顯示裝置是否已刪除的二進位檔。                                                                                                                                 |
 | androidSecurityPatchLevel  | Android 安全性修補程式等級                                                                                                                                                           |
 | MEID                       | MEID                                                                                                                                                                                   |
@@ -268,7 +268,7 @@ ms.locfileid: "79359790"
 
 **devicePropertyHistory** 實體與裝置資料表和每部裝置過去 90 天內每天記錄的每日快照集有相同的內容。 DateKey 資料行會指出每個資料列的日期。
 
-|          屬性          |                                                                                      Description                                                                                     |
+|          屬性          |                                                                                      說明                                                                                     |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | dateKey                    | 指出當日的日期資料表參考。                                                                                                                                          |
 | deviceKey                  | 資料倉儲中裝置的唯一識別碼 - surrogate 索引鍵。 這是包含 Intune 裝置識別碼之裝置資料表的參考。                               |
