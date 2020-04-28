@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e568a7700a6849993d24be4dd042195a95ab000
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8bb76dbb14fe2deb95c02a18ccc048fc6a4b2538
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79338418"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078952"
 ---
 # <a name="windows-update-settings-for-intune"></a>適用於 Intune 的 Windows Update 設定  
 
@@ -183,7 +183,7 @@ Update 設定可控制裝置將下載的位元和時機。 如需每個設定之
   - **封鎖** - 防止裝置使用者存取 Windows Update 掃描、下載更新以及安裝功能。  
 
 - **要求使用者需取得核准才能在非上班時間重新開機**  
-  **預設**：未設定  
+  **預設**：尚未設定  
   Windows Update CSP：[Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
   - **未設定**  
@@ -218,7 +218,7 @@ Update 設定可控制裝置將下載的位元和時機。 如需每個設定之
   - **關閉包括重新啟動警告的所有通知**  
 
 - **使用期限設定**  
-  **預設**：未設定  
+  **預設**：尚未設定  
  
   允許使用者使用期限設定。  
 
@@ -228,24 +228,24 @@ Update 設定可控制裝置將下載的位元和時機。 如需每個設定之
   設定為 [允許]  時，您可以設定下列期限設定：
 
   - **功能更新的期限**  
-    **預設值**：*未設定*  
+    **預設**：*未設定*  
     Windows Update CSP：[Update/ConfigureDeadlineForFeatureUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)  
 
     指定使用者在其裝置上自動安裝功能更新之前的天數 (2-30)。
 
   - **品質更新的期限**  
-    **預設值**：*未設定*  
+    **預設**：*未設定*  
     Windows Update CSP：[Update/ConfigureDeadlineForQualityUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
 
     指定使用者在其裝置上自動安裝品質更新之前的天數 (2-30)。
 
   - **寬限期**  
-    **預設值**：*未設定* Windows Update CSP：[Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+    **預設**：未設定  Windows Update CSP：[Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
     指定在期限之後直到自動重新啟動之間的天數下限 (2-7)。
 
   - **在期限前自動重新開機**  
-    **預設值**：是 Windows Update CSP：[Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
+    **預設**：是 Windows Update CSP：[Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
 
     指定裝置是否應在期限之前自動重新開機。
     - **是**

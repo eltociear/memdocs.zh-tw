@@ -10,12 +10,12 @@ ms.assetid: 19741d45-2d42-438e-a9f3-15bb365d63ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6e844bae40664d47a642d019b878f453ef573f7a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6a336bdf323fbb81a16082e9c308577763a7c104
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706476"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078580"
 ---
 # <a name="troubleshoot-site-data-reinit"></a>針對站台資料重新初始化進行疑難排解
 
@@ -27,7 +27,7 @@ ms.locfileid: "81706476"
 
 ## <a name="queries"></a>查詢
 
-此圖表使用下列查詢：
+此圖表會使用下列查詢：
 
 ### <a name="check-if-site-replication-hasnt-finished-reinit"></a>檢查站台複寫是否尚未完成重新初始化
 
@@ -58,7 +58,7 @@ FROM RCM_DrsInitializationTracking dt
 WHERE RequestTrackingGUID=@trackingGuid
 ```
 
-### <a name="check-primary-site-isnt-in-maintenance-mode"></a>檢查主要站台未處於維護模式
+### <a name="check-primary-site-isnt-in-maintenance-mode"></a>檢查主要站台是否未處於維護模式
 
 ```sql
 SELECT * FROM ServerData

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97024c641be4c61561e762751cfabfab2732e4c1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6027a8f193bc470c4c7ab7724f3b9736c2487980
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327176"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078017"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>將您的 Intune 帳戶連線到受控 Google Play 帳戶
 
@@ -41,7 +41,7 @@ ms.locfileid: "80327176"
 > [!NOTE]
 > 因為 Google 和 Microsoft 網域之間的互動，這個步驟可能需要調整瀏覽器設定。  請確定 "portal.azure.com" 和 "play.google.com" 位於您瀏覽器中相同的安全性區域。
 
-1. 如果尚未這麼做，請將[行動裝置管理授權單位](../fundamentals/mdm-authority-set.md)設定為 **Microsoft Intune**，以針對行動裝置管理做準備。
+1. 如果尚未這麼做，請將[行動裝置管理授權單位](../fundamentals/mdm-authority-set.md)設定為 [Microsoft Intune]  ，以針對行動裝置管理做準備。
 2. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，選擇 [裝置]   > [Android]   > [Android 註冊]   > [受控的 Google Play]  。  如果您使用自訂的 Intune 管理員角色，則存取這個會需要組織讀取和更新的權限。
    
    ![Android 企業註冊畫面](./media/connect-intune-android-enterprise/android-work-bind.png)
@@ -55,7 +55,7 @@ ms.locfileid: "80327176"
     > [!Note]
     > 若您使用 Microsoft Edge 瀏覽器，請按一下右上角的 [登入]  來登入您的 Google 帳戶。
 
-6. 提供您的公司名稱作為**組織名稱**。 針對**企業行動管理 (EMM) 提供者**，應該顯示 **Microsoft Intune**。
+6. 提供您的公司名稱作為 [組織名稱]  。 針對**企業行動管理 (EMM) 提供者**，應該顯示 **Microsoft Intune**。
 
 7. 同意 Android 合約，然後選擇 [確認]  。 您的要求將會被處理。
 

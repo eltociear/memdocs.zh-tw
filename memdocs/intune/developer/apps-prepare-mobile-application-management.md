@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a26e32d0a719df7c3982591042991ae760d9281
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 863e6e540fcb79ff18accc40142a8e50c1406943
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80611706"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078068"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>準備應用程式防護原則的企業營運應用程式
 
@@ -104,7 +104,7 @@ Intune SDK 開發小組會針對使用原生 Android、iOS (Obj-C、Swift)、Xam
 |不註冊裝置的 MAM 支援|X|X|
 |完整抹除應用程式資料|X|X|
 |在多重身分識別案例中選擇性抹除公司和學校資料 <br><br>**注意︰** 若是 iOS/iPadOS，應用程式會隨管理設定檔一併移除。|X||
-|避免「另存新檔」|X||
+|禁止「另存新檔」|X||
 |目標應用程式組態 (或透過「MAM 通道」設定應用程式)|X|X|
 |支援多重身分識別|X||
 |可自訂樣式 |X|||

@@ -18,18 +18,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f09ffc2bc1d0c1850f20121c869186018cf9ae31
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 944b3d98dc59dcae69f72fef5dfdb1793701f67a
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79354421"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126183"
 ---
 # <a name="using-windows-10-virtual-machines-with-intune"></a>搭配 Intune 使用 Windows 10 虛擬機器
 
 Intune 支援搭配特定限制管理執行 Windows 10 企業版的虛擬機器。 Intune 管理無須依賴也不會干擾相同虛擬機器上的 Windows 虛擬桌面管理。
 
 搭配 Intune 管理 Windows 10 VM 時，請留意下列幾點：
+
+- 「Windows 虛擬桌面」中使用的「Windows 10 企業版多重工作階段」(適用於虛擬裝置的企業版) 目前不支援 Intune 管理。
 
 ## <a name="enrollment"></a>註冊
 - 我們不建議搭配 Intune 管理隨選、工作階段主機虛擬機器。 必須在建立每個 VM 時註冊它。 此外，定期刪除 VM 將會在 Intune 中留下孤立的裝置記錄，直到將它們[清除](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules)為止。 
@@ -38,7 +40,8 @@ Intune 支援搭配特定限制管理執行 Windows 10 企業版的虛擬機器�
     - 不支援 Windows Autopilot 和商業 OOBE。
     - 不支援裝置內容原則的 [註冊狀態頁面] 選項。
 
-## <a name="configuration"></a>組態
+
+## <a name="configuration"></a>設定
 Intune 不支援任何利用信賴平台模組或硬體管理的設定，包括：
 - [BitLocker 設定](../configuration/device-profiles.md#endpoint-protection)
 - [裝置韌體設定介面設定](../configuration/device-profiles.md#device-firmware-configuration-interface)

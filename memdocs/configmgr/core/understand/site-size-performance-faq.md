@@ -7,12 +7,12 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: 5cd23667eadc7e1caae90a135bc96be89563f883
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3e7b9f6bc861ef5a60e4c0857dc253e3c806a851
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706796"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073257"
 ---
 # <a name="configuration-manager-site-sizing-and-performance-faq"></a>Configuration Manager 站台大小和效能常見問題集
 
@@ -178,7 +178,7 @@ SQL Server 記憶體配置應無條件進位至整數 GB。 此外，當 RAM 增
 
 ### <a name="should-i-enable-sql-compression-on-my-database"></a>我是否應該在我的資料庫上啟用 SQL 壓縮？
 
-不建議您對 Configuration Manager 資料庫使用 SQL 壓縮。 雖然在 Configuration Manager 資料庫上啟用壓縮不會造成功能性問題，但相較於可能會對系統產生的效能影響，測試結果並未顯示出可節省顯著的大小。
+不建議您對 Configuration Manager 資料庫使用 SQL 壓縮。 雖然在 Configuration Manager 資料庫上啟用壓縮不會造成功能性問題，但與可能會對系統產生的相當大效能影響相比，測試結果在節省大小方面並未顯示出有顯著的效果。
 
 ### <a name="should-i-enable-sql-encryption-on-my-database"></a>我是否應該在我的資料庫上啟用 SQL 加密？
 
@@ -214,7 +214,7 @@ SQL Express 不會對次要站台造成任何顯著的效能影響，足以供�
 
 許多 Configuration Manager 系統管理員遵循下列文章提供的指導方針：[Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-confi) (SQL Server 中「平行處理原則的最大程度」設定選項的建議和指導方針)。 在大多數現代化的大型硬體上，此指引建議最高設為 8。 但是，如果您執行許多小型查詢，數量高於處理器數目，則將其設定為較高的數目可能會有幫助。 在較大的站台上具有較多可用核心時，限制於 8 並不一定是最佳設定。 
 
-在具備超過 8 個核心的 SQL Server 上，先從設為 0 開始，且僅在您遇到效能問題或過多鎖定時才進行變更。 設為 0 時，如果因為遇到效能問題而需要變更 MaxDOP，則改為設定新值，該值至少大於或等於該站台 SQL 伺服器大小的最低建議核心數目。 低於此值則幾乎一律會產生負面的效能影響。 例如，100,000 個用戶端站台的遠端 SQL Server，必須至少具有 12 個核心。 如果您的 SQL server 有 16 個核心，請以值 12 開始測試您的 MaxDOP 設定。
+在具備超過 8 個核心的 SQL Server 上，先從設為 0 開始，且僅在您遇到效能問題或過多鎖定時才進行變更。 設為 0 時，如果因為遇到效能問題而需要變更 MaxDOP，則改為設定新值，該值須至少大於或等於該站台 SQL 伺服器大小的最低建議核心數目。 低於此值則幾乎一律會產生負面的效能影響。 例如，100,000 個用戶端站台的遠端 SQL Server，必須至少具有 12 個核心。 如果您的 SQL server 有 16 個核心，請以值 12 開始測試您的 MaxDOP 設定。
 
 ## <a name="other-common-performance-related-questions"></a>其他常見的效能相關問題
 

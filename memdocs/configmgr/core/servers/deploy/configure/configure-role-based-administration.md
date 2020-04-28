@@ -9,12 +9,12 @@ ms.assetid: 57413dd3-b2f8-4a5f-b27f-8464d357caff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9f85f55e3bf982a75b27f65cd52c846f6a02f03f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 14258c3e7e2cfe5423b97064a26fdf5616d6b0a4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704686"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078612"
 ---
 # <a name="configure-role-based-administration-for-configuration-manager"></a>為 Configuration Manager 設定以角色為基礎的系統管理
 
@@ -120,7 +120,7 @@ ms.locfileid: "81704686"
     > [!IMPORTANT]  
     > - 當您安裝 Configuration Manager 1906 版時，現有的安全性角色將會自動新增 [資料夾類別]  權限。 您必須為任何新的安全性角色新增 [資料夾類別]  權限，並確認現有的角色具有適合您環境的權限。
     > 
-    > - 如果該使用者與建立物件的人共用安全性範圍，則可在使用者安全性範圍外的資料夾中搜尋項目。 <!--5602690-->
+    > - 如果使用者與建立物件的人員共用安全性範圍，則可在該使用者安全性範圍外的資料夾中搜尋項目。 <!--5602690-->
 
 ## <a name="configure-collections-to-manage-security"></a><a name="BKMK_ConfigColl"></a> 設定集合以管理安全性
 

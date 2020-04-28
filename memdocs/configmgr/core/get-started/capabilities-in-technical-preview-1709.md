@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3cefbbb9824266fd5fa057a7625332e85ec0ab32
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bedb515c8446e13189fb84644bc0ce7563cc1574
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705116"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078765"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-configuration-manager"></a>Configuration Manager Technical Preview 1709 中的功能
 
@@ -44,7 +44,7 @@ ms.locfileid: "81705116"
 
 ## <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>改善的 Configuration Manager 主控台 VPN 設定檔體驗
 <!-- 1313282 -->
-我們在此版本中更新了 VPN 設定檔精靈和屬性頁面，以顯示所選平台的合適設定。 明確說來：
+我們在此版本中更新了 VPN 設定檔精靈和屬性頁，以顯示所選平台的合適設定。 明確說來：
 
 - 每個平台都有自己的工作流程，這表示新的 VPN 設定檔只包含平台支援的設定。
 - [支援的平台]  頁面現在會出現在 [一般]  頁面之後。  您現在要先選擇平台再設定屬性值。
@@ -60,7 +60,7 @@ ms.locfileid: "81705116"
 
 ### <a name="try-it-out"></a>試試看！
 
-使用一般的程序建立新的 VPN 設定檔。 請注意，在 [VPN 設定檔精靈] 選項中的第一頁已變更。
+使用一般的程序建立新的 VPN 設定檔。 請注意，在 VPN 設定檔精靈選項中的第一頁已變更。
 
 1. 請移至 [資產與相容性]   > [概觀]   > [合規性設定]   > [公司資源存取]   > [VPN 設定檔]  ，然後選擇 [建立 VPN 設定檔]  。
 2. 在 [一般]  頁面上輸入名稱，並在 [指定您要建立的 VPN 設定檔類型]  下選擇下列選項之一：
@@ -79,7 +79,7 @@ ms.locfileid: "81705116"
 
 ## <a name="co-management-for-windows-10-devices"></a>Windows 10 裝置的共同管理    
 <!-- 1350871 -->
-許多客戶想要以他們管理使用簡化、低成本、雲端型解決方案之行動裝置的相同方式來管理 Windows 10 裝置。 不過，從傳統的管理轉換成現代化的管理可說困難重重。 從 Windows 10 1607 版 (也稱為年度更新版) 開始，您可以讓 Windows 10 裝置同時加入內部部署 Active Directory (AD) 和雲端型 Azure AD (混合式 Azure AD)。 共同管理能夠利用這項功能改進，讓您同時使用 Configuration Manager 和 Intune 來管理 Windows 10 裝置。 這個解決方案能讓您從傳統管理過渡到現代化管理，並提供您使用分段式方法來完成轉換。 
+許多客戶想要以他們管理使用簡化、低成本、雲端型解決方案之行動裝置的相同方式來管理 Windows 10 裝置。 不過，從傳統的管理轉換成現代化的管理可說困難重重。 從 Windows 10 1607 版 (也稱為年度更新版) 開始，您可以讓 Windows 10 裝置同時加入內部部署 Active Directory (AD) 和雲端型 Azure AD (混合式 Azure AD)。 共同管理能夠利用這項功能改進，讓您同時使用 Configuration Manager 和 Intune 來管理 Windows 10 裝置。 這個解決方案能讓您從傳統管理過渡到現代化管理，並提供您一個使用分段方法進行轉換的途徑。 
 
 ### <a name="prerequisites"></a>先決條件
 您必須先備妥下列必要條件，才能啟用共同管理。 有一般的必要條件，以及針對現有 Configuration Manager 用戶端和非用戶端裝置的不同必要條件。
@@ -152,7 +152,7 @@ ms.locfileid: "81705116"
 #### <a name="command-line-to-install-configuration-manager-client"></a>安裝 Configuration Manager 用戶端的命令列
 為還不是 Configuration Manager 用戶端的 Windows 10 裝置，使用 Intune 建立應用程式。 當您在後列各節中建立應用程式時，請使用下列命令列：
 
-ccmsetup.msi CCMSETUPCMD="/mp:&#60;*雲端管理閘道相互驗證端點的 URL*&#62;/ CCMHOSTNAME=&#60;*雲端管理閘道相互驗證端點的 URL*&#62; SMSSiteCode=&#60;*站台碼*&#62; SMSMP=https:&#47;/&#60;*MP 的 FQDN*&#62; AADTENANTID=&#60;*AAD 租用戶識別碼*&#62; AADTENANTNAME=&#60;*租用戶名稱*&#62; AADCLIENTAPPID=&#60;*AAD 整合的伺服器應用程式識別碼*&#62; AADRESOURCEURI=https:&#47;/&#60;*資源識別碼*&#62;”
+ccmsetup.msi CCMSETUPCMD="/mp:&#60;雲端管理閘道相互驗證端點的 URL  &#62;/ CCMHOSTNAME=&#60;雲端管理閘道相互驗證端點的 URL  &#62; SMSSiteCode=&#60;站台碼  &#62; SMSMP=https:&#47;/&#60;MP 的 FQDN  &#62; AADTENANTID=&#60;AAD 租用戶識別碼  &#62; AADTENANTNAME=&#60;租用戶名稱  &#62; AADCLIENTAPPID=&#60;AAD 整合的伺服器應用程式識別碼  &#62; AADRESOURCEURI=https:&#47;/&#60;資源識別碼  &#62;"
 
 例如，如果您有下列值：
 
@@ -173,7 +173,7 @@ ccmsetup.msi CCMSETUPCMD="/mp:&#60;*雲端管理閘道相互驗證端點的 URL*
 
 您可能會使用下列命令列：
 
-ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https:/&#47;sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https:/&#47;ConfigMgrServer”
+ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https:/&#47;sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https:/&#47;ConfigMgrServer"
 
 > [!Tip]
 >您可以使用下列步驟，找到您網站的命令列參數：     

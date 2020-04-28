@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a2dbd43ff5a8048286693dbfb417d6bb720a877
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 54e18ae8da6d534e26e37da8fba898e60f5a2986
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79353030"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079836"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>監視 Intune 裝置合規性政策
 
@@ -81,7 +81,7 @@ ms.locfileid: "79353030"
     - Android kiosk 或 Android Enterprise 專用裝置
   - 裝置使用裝置註冊管理員 (DEM) 帳戶註冊
 
-- **不符合規範︰** 裝置無法套用一或多個裝置合規性政策設定。 或者，使用者尚未遵守政策。
+- **不符合規範︰** 裝置無法套用一或多個裝置合規性政策設定。 或者，使用者尚未符合政策規範。
 
 - **裝置未同步處理︰** 裝置無法報告其裝置合規性政策狀態，原因為下列其中之一：
 
@@ -101,7 +101,7 @@ ms.locfileid: "79353030"
 該動作會開啟 [裝置合規性]  視窗，並在 [裝置狀態]  圖表中顯示裝置。 此圖表會顯示處於該狀態的裝置詳細資料，包括作業系統平台、上次簽入日期等。
 ![儀表板影像顯示該特定狀態之裝置的更多詳細資料](./media/compliance-policy-monitor/drill-down-details.png)
 
-如果您想要查看特定使用者擁有的所有裝置，您也可以鍵入使用者的電子郵件來篩選圖表報告。
+如果您想要查看特定使用者擁有的所有裝置，您也可以輸入使用者的電子郵件來篩選圖表報告。
 
 #### <a name="filter-and-columns"></a>篩選和資料行
 
@@ -179,7 +179,7 @@ Intune 會顯示該裝置上所套用裝置合規性原則設定的詳細資料�
     - **成功**：已套用原則
     - **錯誤**：原則無法套用。 訊息通常會顯示一個用來連結至說明的錯誤碼。
     - **衝突**：兩個設定會套用至相同的裝置，且 Intune 無法解決衝突。 系統管理員應該檢閱。
-    - **Pending**：裝置尚未使用 Intune 簽入以接收原則。
+    - **Pending**：裝置尚未使用 Intune 簽入以接收政策。
     - **不適用**：裝置無法接收原則。 例如，該原則更新了 iOS 11.1 的特定設定，但該裝置使用的是 iOS 10。
 
 3. 若要在使用此原則的裝置上查看詳細資料，請選取其中一個狀態。 例如，選取 [成功]  。 在下一個視窗中會列出特定裝置詳細資料，包括裝置名稱與部署狀態。

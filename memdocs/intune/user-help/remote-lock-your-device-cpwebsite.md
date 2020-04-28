@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1ac77e4c539c8d5614001f9a326b32536ee07629
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 79bcfc1fabab3b14a9a2560b692c5f2ca459aee4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79336481"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079411"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>從公司入口網站遠端鎖定裝置
 
@@ -53,7 +53,7 @@ ms.locfileid: "79336481"
 
 4. 訊息隨後出現，警告您即將鎖定裝置。 點選 [遠端鎖定]  確認。
 
-確認之後，公司入口網站會嘗試鎖定您的裝置。 在此期間會顯示「遠端鎖定待定」訊息。 當您的裝置鎖定時，狀態會顯示為「遠端鎖定成功」。  
+確認之後，公司入口網站會嘗試鎖定您的裝置。 在此期間會顯示「遠端鎖定擱置中」訊息。 當您的裝置被鎖定時，狀態會顯示為「遠端鎖定成功」。  
 
 [遠端鎖定] 狀態會顯示在三個位置︰
 
@@ -62,7 +62,7 @@ ms.locfileid: "79336481"
 * 在頁面的 [裝置]  區段上顯示裝置名稱的磚。  
 
 > [!Note]
-> 如果您看到「遠端鎖定失敗」通知，請等候幾分鐘。 然後再次嘗試鎖定裝置。 狀態會變更回「遠端鎖定待定」。 如果重試失敗，請連絡您的公司支援人員尋求協助。
+> 如果您看到「遠端鎖定失敗」通知，請等候幾分鐘。 然後再次嘗試鎖定裝置。 狀態會變更回「遠端鎖定擱置中」。 如果重試失敗，請連絡您的公司支援人員尋求協助。
 
 在使用遠端鎖定之後，如果找回裝置且想要解除鎖定，只要輸入密碼即可。  
 

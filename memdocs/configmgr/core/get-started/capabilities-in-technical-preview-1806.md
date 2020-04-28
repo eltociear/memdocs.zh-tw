@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 516d14e40edd582223bae1e3e1dd4bf8d3cf936d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 647eba601cbfa5304bf02f8bcf059fe6e851cbf0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695986"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074056"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Configuration Manager Technical Preview 1806 中的功能
 
@@ -183,7 +183,7 @@ SCUP 會繼續支援其他類別目錄和案例。 Configuration Manager 主控�
 另外還有新的全域條件：**在裝置上是否由 Intune 管理 Office 365 應用程式**。 預設會新增這項條件，作為新的 Office 365 應用程式的需求。 當您轉換這個工作負載時，共同受控用戶端不符合應用程式的需求，因此不會安裝透過 Configuration Manager 部署的 Office 365。
 
 ### <a name="known-issue"></a>已知問題
-- 這項工作負載轉換目前僅適用於 Office 365 部署。 Configuration Manager 會繼續管理 Office 365 更新。<!--510876--> 如需包括可能因應措施的詳細資訊，請參閱 Configuration Manager 1802　版之版本資訊中的[變更 Office 365 用戶端設定不適用](../servers/deploy/install/release-notes.md)。
+- 這項工作負載轉換目前僅適用於 Office 365 部署。 Configuration Manager 會繼續管理 Office 365 更新。<!--510876--> 如需包括可能因應措施的詳細資訊，請參閱 Configuration Manager 1802 版之版本資訊中的[變更 Office 365 用戶端設定不適用](../servers/deploy/install/release-notes.md)。
 
 
 

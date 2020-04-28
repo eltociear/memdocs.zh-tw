@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18fc3a70a89451deebe074ad8b5b8dc3a4a837f7
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1c98de99eb8f72840080ca720465559c462bc77f
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325820"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023362"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>針對應用程式安裝問題進行疑難排解
 
@@ -53,7 +53,7 @@ Intune 會根據特定使用者裝置上安裝的應用程式，提供應用程�
 應用程式安裝錯誤詳細資料會指出此問題。 您可以使用這些詳細資料，以決定解決問題所要採取的最佳動作。 如需有關針對應用程式安裝問題進行疑難排解的詳細資訊，請參閱 [Android 應用程式安裝錯誤](app-install-error-codes.md#android-app-installation-errors)和 [iOS 應用程式安裝錯誤](app-install-error-codes.md#ios-and-ipados-app-installation-errors)。
 
 > [!Note]  
-> 您也可以將瀏覽器指向  [來存取 [疑難排解]https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting) 窗格。
+> 您也可以將瀏覽器指向 [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting)來存取 [疑難排解]  窗格。
 
 ## <a name="user-group-targeted-app-installation-does-not-reach-device"></a>以使用者群組為目標的應用程式安裝無法連線到裝置
 如果您在安裝應用程式時發生問題，應該考量下列動作：
@@ -113,7 +113,7 @@ Intune 會根據特定使用者裝置上安裝的應用程式，提供應用程�
 [Troubleshooting packaging, deployment, and query of Microsoft Store apps](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) (針對封裝、部署及查詢 Microsoft 網上商店應用程式進行疑難排解) 主題中的資訊可協助您使用 Intune 或任何其他方法，為從 Microsoft 網上商店安裝應用程式時可能發生的常見問題進行疑難排解。
 
 ## <a name="app-troubleshooting-resources"></a>應用程式疑難排解資源
-- [將 Visio 和 Project 部署為 Office Pro Plus 部署的一部分](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Deploying-Visio-and-Project-as-part-of-your-Office/ba-p/701795)
+- [將 Visio 和 Project 部署為 Microsoft 365 Apps 部署的一部分](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Deploying-Visio-and-Project-as-part-of-your-Office/ba-p/701795) \(英文\)
 - [採取動作以確保透過 Intune 安裝在 Windows 10 1903 上部署 MSfB 應用程式](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Take-Action-to-Ensure-MSfB-Apps-deployed-through/ba-p/658864)
 - [針對 Microsoft Intune 中的 MSI 應用程式部署進行疑難排解](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-MSI-App-deployments-in-Microsoft/ba-p/359125)
 - [將軟體發佈到 Intune 傳統 Windows 電腦代理程式的最佳做法](https://support.microsoft.com/en-us/help/2583929/best-practices-for-intune-software-distribution-to-windows-pc)

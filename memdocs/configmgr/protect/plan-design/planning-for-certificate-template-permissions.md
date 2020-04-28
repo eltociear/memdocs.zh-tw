@@ -10,12 +10,12 @@ ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: cc981eac57a2eb77ead58225ec26d05e916a897b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 075d371a334f26a788c656fe85ec01ae2338eb26
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706136"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074821"
 ---
 # <a name="planning-for-certificate-template-permissions-for-certificate-profiles-in-configuration-manager"></a>規劃憑證設定檔在 Configuration Manager 中的憑證範本權限
 

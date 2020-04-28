@@ -2,7 +2,7 @@
 title: 在沒有網際網路連線的情況下同步 Office 365 更新
 titleSuffix: Configuration Manager
 description: 在與網際網路中斷連線的頂層軟體更新點上，同步 Office 365 更新。
-ms.date: 04/01/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,18 +10,21 @@ ms.assetid: a8fa7e7a-bf55-42de-b0c2-c56777dc1508
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 78b97be755659fa06466dd1bb1f6920e2a7be330
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3627d2f7772b7b9e133d742b0ee4f94dba6e457a
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699466"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110350"
 ---
 # <a name="synchronize-office-365-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a> 從已中斷連線的軟體更新點同步 Office 365 更新
 
 適用於：  Configuration Manager (最新分支)
 <!--4065163-->
 從 Configuration Manager 2002 版開始，您可使用工具，將 Office 365 更新從已連線到網際網路的 WSUS 伺服器匯入到已中斷連線的 Configuration Manager 環境中。 先前當您在已中斷連線的環境中匯出及匯入軟體更新的中繼資料時，您並無法部署 Office 365 更新。 Office 365 更新需要從 Office API 與 Office CDN 下載其他中繼資料，這在已中斷連線的環境中是做不到的。
+
+> [!Note]
+> 從 2020 年 4 月 21 日開始，「Office 365 專業增強版」會重新命名為「Microsoft 365 Apps 企業版」  。 如需詳細資訊，請參閱 [Office 365 專業增強版的名稱變更](https://docs.microsoft.com/deployoffice/name-change) \(部分機器翻譯\)。 在主控台正在進行更新時，您在 Configuration Manager 主控台與輔助文件中可能仍會看到提及舊名稱。
 
 ## <a name="prerequisites"></a>先決條件
 

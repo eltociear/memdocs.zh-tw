@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8545f7d1ef48cc426f4b8e48aa1832ce3328bf0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: eee979ad22a501f8545b93c85790d37ca9648cf7
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326758"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077898"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>設定行動裝置管理授權單位
 
@@ -89,7 +89,7 @@ MDM 授權單位無法變更回「未知」。 服務會使用 MDM 授權單位�
 
 ## <a name="what-to-expect-after-changing-the-mdm-authority"></a>變更 MDM 授權單位之後預期會發生的情況
 
-- 當 Intune 服務偵測到租用戶的 MDM 授權單位已變更之後，將會向所有已註冊的裝置傳送通知訊息，以要求簽入服務並進行同步處理 (此通知有別於一般的排程簽入)。 因此，當租用戶的 MDM 授權單位從 Intune 獨立部署變更之後，所有電源已開啟並處於線上的裝置都會連線至服務，接收新的 MDM 授權單位，並由新的 MDM 授權單位進行管理。 這些裝置的管理和保護不會有任何中斷。
+- 當 Intune 服務偵測到租用戶的 MDM 授權單位已變更時，會向所有已註冊的裝置傳送通知訊息，以要求簽入服務並進行同步處理 (此通知不包含在定期排定的簽入中)。 因此，當租用戶的 MDM 授權單位從 Intune 獨立部署變更之後，所有電源已開啟並處於線上的裝置都會連線至服務，接收新的 MDM 授權單位，並由新的 MDM 授權單位進行管理。 這些裝置的管理和保護不會有任何中斷。
 - 就算裝置在 MDM 授權單位變更期間 (或於結束後立即) 啟動電源並上線，在裝置能與處於新 MDM 授權單位之下的服務進行註冊之前，將會有最多 8 小時 (視下一個已排程一般簽入的時間而定) 的延遲。    
 
   > [!IMPORTANT]    
@@ -97,7 +97,7 @@ MDM 授權單位無法變更回「未知」。 服務會使用 MDM 授權單位�
 
 - 使用者可以透過從裝置手動啟動服務簽入，來快速變更至新的 MDM 授權單位。 使用者可以使用公司入口網站應用程式並起始裝置合規性檢查，來輕鬆執行此變更。
 - 在變更 MDM 授權單位之後，若要在裝置簽入服務並完成同步處理後確認一切是否正常，請在新的 MDM 授權單位中尋找該裝置。
-- 從 MDM 授權單位變更到裝置簽入服務這段期間，裝置會有一段過渡時間是處於離線狀態。 為了協助確保裝置在此期間能獲得保護並持續運作，下列設定檔會在裝置上保留最多七天 (或直到裝置與新的 MDM 授權單位連線，並接收會覆寫現有設定的新設定為止)：
+- 從 MDM 授權單位變更到裝置簽入服務這段期間，裝置會有一段過渡時間是處於離線狀態。 為了協助確保裝置在此過度期間能獲得保護並持續運作，下列設定檔將會在裝置上保留最多 7 天 (或直到裝置與新的 MDM 授權單位連線，並接收覆寫現有設定的新設定為止)：
   - 電子郵件設定檔
   - VPN 設定檔
   - 憑證設定檔

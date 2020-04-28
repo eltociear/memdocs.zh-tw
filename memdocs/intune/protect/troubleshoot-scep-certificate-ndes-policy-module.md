@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9f0a4b260fcd2698315ba8b777d88b86e203259
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f58723be1a3fed09173a20a585077aef72e0c8f0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350001"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079105"
 ---
 # <a name="troubleshoot-the-ndes-policy-module-in-microsoft-intune"></a>在 Microsoft Intune 中針對 NDES 原則模組進行疑難排解
 
@@ -67,13 +67,13 @@ ms.locfileid: "79350001"
 
 **當成功指示器不存在時**：
 
-如果您找不到這些項目，請從檢閱適用於[裝置到 NDES 伺服器的通訊](troubleshoot-scep-certificate-device-to-ndes.md#troubleshoot-common-errors)的疑難排解指導方針開始。
+如果您找不到這些項目，請從檢閱適用於[裝置到 NDES 伺服器的通訊](troubleshoot-scep-certificate-device-to-ndes.md#troubleshoot-common-errors)的疑難排解指引開始著手。
 
 如果該文章中的資訊無法協助您解決問題，以下是可指出問題的其他項目。
 
 ### <a name="ndespluginlog-contains-an-error-12175"></a>NDESPlugin.log 包含錯誤 12175
 
-當記錄包含與下列類項目似的錯誤 12175 時，SSL 憑證可能會發生問題：
+當記錄包含與以下類似的 12175 錯誤時，SSL 憑證可能會發生問題：
 
 ```
 WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID
@@ -92,7 +92,7 @@ Failed to send http request /CertificateRegistrationSvc/Certificate/VerifyReques
 
 ### <a name="ndespluginlog-contains-an-error-403--forbidden-access-is-denied"></a>NDESPlugin.log 包含錯誤 403 – 禁止:拒絕存取」
 
-當下列記錄包含與下列項目類似的錯誤 403 時，用戶端憑證可能不受信任或無效：
+當下列記錄包含與以下類似的 403 錯誤時，用戶端憑證可能不受信任或無效：
 
 **NDESPlugin.log**：
 
@@ -125,7 +125,7 @@ Signing certificate could not be retrieved. System.Security.Cryptography.Cryptog
 
 **解決方案**：在安裝連接器的伺服器上，開啟 [登錄編輯程式]，找出 `HKLM\SOFTWARE\Microsoft\MicrosoftIntune\NDESConnector` 登錄機碼，然後檢查 SigningCertificate 值是否存在。
 
-如果此值不存在，請重新啟動 services.msc 中的 Intune 連接器服務，然後檢查該值是否出現在登錄中。 如果仍然缺少該值，通常是因為 NDES 與 Intune 服務的伺服器之間發生網路連線問題。
+如果此值不存在，請重新啟動 services.msc 中的「Intune 連接器服務」，然後檢查該值是否出現在登錄中。 如果仍然缺少該值，通常是因為 NDES 與 Intune 服務的伺服器之間發生網路連線問題。
 
 ## <a name="ndes-passes-the-request-to-issue-the-certificate"></a>NDES 通過發出憑證的要求
 

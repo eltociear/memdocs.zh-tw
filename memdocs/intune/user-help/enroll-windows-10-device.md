@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2d5438a83132323f67f9fd9655a8a1bff52439a9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8f3150a887cfbff73976bb697e0b13ea129f003f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79348441"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080074"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>使用 Intune 公司入口網站註冊 Windows 10 裝置
 
@@ -56,11 +56,11 @@ Windows 10 已在各種裝置類型上獲得支援，包括桌面、電話及平
 
     ![新增工作或學校帳戶](./media/w10-enroll-rs1-enter-your-credentials.png)  
 
-    最後，您會看到一則訊息，指出您的公司或學校正在註冊您的裝置。
+    您最後會看到一則訊息，指出您的公司或學校正在註冊您的裝置。
 
 6. 若您的組織要求您為 Windows Hello 設定 PIN，您將會收到提示，要求您輸入驗證碼。 輸入驗證碼，並繼續遵循畫面上的步驟來建立 PIN。  
 
-7. 位於**已全部完成！** 畫面時，請選取 [完成]  。 您的裝置現在已經註冊。  
+7. 在 [您已準備就緒!]  的畫面時，請選取 [完成]。  您的裝置現在已經註冊。  
 
 8. 若要再次檢查您的連線，請返回 [設定]   > [帳戶]   > [存取公司或學校帳戶]  。  您的帳戶現在應該會列出。  
 

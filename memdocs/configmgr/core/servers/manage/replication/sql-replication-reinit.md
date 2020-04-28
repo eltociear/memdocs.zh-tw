@@ -10,12 +10,12 @@ ms.assetid: ce4a1ca8-6433-4447-819f-19dd5faa6f46
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c0e48f2c04e218a7f0eba1b7f06dec768edc8af4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f6207ed4eeeef892de38c85096d2cc80189214d1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699876"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078546"
 ---
 # <a name="sql-replication-reinit"></a>SQL 複寫重新初始化
 
@@ -27,7 +27,7 @@ ms.locfileid: "81699876"
 
 ## <a name="queries"></a>查詢
 
-此圖表使用下列查詢：
+此圖表會使用下列查詢：
 
 ### <a name="check-if-site-is-in-maintenance-mode"></a>檢查站台是否處於維護模式
 

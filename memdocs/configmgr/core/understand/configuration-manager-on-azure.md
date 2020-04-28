@@ -10,12 +10,12 @@ ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ced7d5347e4b8b9fbf0a3006063f507578a7b887
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c12372325573c6795396ff0832ca60cba68b8c29
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701226"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078493"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 的 Configuration Manager - 常見問題集
 
@@ -59,7 +59,7 @@ ms.locfileid: "81701226"
   - 使用網際網路通訊協定安全性 (IPsec) 和網際網路金鑰交換 (IKE)
 
 ### <a name="expressroute-has-many-different-options-like-unlimited-vs-metered-different-speed-options-and-premium-add-on-which-should-i-choose"></a>ExpressRoute 有許多不同的選項，例如無限行動數據與計量付費數據、不同速度的選項及超值的附加元件。 我該選哪一種？
-您要根據實作案例以及計劃散發的資料量選取選項。 站台伺服器與發佈點之間的 Configuration Manager 資料傳輸是可以控制的，但是站台伺服器對站台伺服器的通訊無法控制。   當您使用計量付費數據傳輸方案時，將特定網站 (和站台系統) 放在內部部署與使用 [Configuration Manager 內建的頻寬控制](../plan-design/hierarchy/fundamental-concepts-for-content-management.md)有助於控制使用 Azure 的成本。
+您要根據實作案例以及計劃散發的資料量選取選項。 站台伺服器與發佈點之間的 Configuration Manager 資料傳輸是可以控制的，但是站台伺服器對站台伺服器的通訊則無法控制。   當您使用計量付費數據傳輸方案時，將特定網站 (和站台系統) 放在內部部署與使用 [Configuration Manager 內建的頻寬控制](../plan-design/hierarchy/fundamental-concepts-for-content-management.md)有助於控制使用 Azure 的成本。
 
 ### <a name="what-about-installation-requirements-like-active-directory-domains-do-i-still-need-to-join-my-site-servers-to-an-active-directory-domain"></a>像 Active Directory 網域這樣的安裝需求呢？ 我還需要將站台伺服器加入 Active Directory 網域嗎？
 是。 當您移到 Azure 時，[支援的設定](../plan-design/configs/supported-configurations.md)保持不變，包括安裝 Configuration Manager 的 Active Directory 需求。
@@ -88,7 +88,7 @@ VM 中必須使用 Microsoft SQL Server。 Configuration Manager 目前不支援
 
 ### <a name="so-tell-me-more-about-azure-virtual-machines-what-size-vms-should-i-use"></a>那麼，告訴我更多關於 Azure 虛擬機器的情況吧，我該使用何種大小的 VM？
 一般情況下，計算能力 (CPU 和記憶體) 必須符合 [Configuration Manager 的建議硬體](../plan-design/configs/recommended-hardware.md)。 但是一般電腦硬體和 Azure VM 之間有一些差異，特別是關係到這些 VM 使用的磁碟時。  您使用的 VM 大小取決於環境的大小，以下提供您一些建議︰
-- 凡是大小相當大的生產環境部署，建議使用 “**S**” 類別的 Azure VM。 這是因為它們可以使用進階儲存體磁碟。  非 "S" 類別的 VM 使用 Blob 儲存體，而且一般不會符合可接受生產體驗的必要效能需求。
+- 凡是大小相當大的生產環境部署，都建議使用 "**S**" 類別的 Azure VM。 這是因為它們可以使用進階儲存體磁碟。  非 "S" 類別的 VM 使用 Blob 儲存體，而且一般不符合可接受之生產環境體驗的必要效能需求。
 - 多個進階儲存體磁碟應該用於較高的級別，且與 Windows 磁碟管理主控台中最大的 IOPS 等量。  
 - 建議您在初始站台部署期間使用較佳或多個進階磁碟 (例如用 P30 而非 P20，在等量磁碟區用 2xP30 而非 1xP30)。 接著，若站台後來因為額外負載需要增加 VM 大小，您就可以利用較大的 VM 大小來提供的額外 CPU 和記憶體。 您也會有預先準備好的磁碟，可以利用較大的 VM 大小所允許的額外 IOPS 輸送量。
 
@@ -119,7 +119,7 @@ VM 中必須使用 Microsoft SQL Server。 Configuration Manager 目前不支援
 
 ## <a name="user-experience"></a>使用者體驗
 ### <a name="you-mention-that-user-experience-is-one-of-the-main-areas-of-importance-why-is-that"></a>您提到的使用者體驗是很重要的主要部分之一，為什麼會這樣？
-您對網路功能、可用性、效能和 Configuration Manager 站台伺服器位置的決定，都會直接影響您的使用者。 我們相信移至 Azure 應該對您的使用者透明公開，他們才不會在與 Configuration Manager 的日常互動中感受到變化。
+您對網路功能、可用性、效能和 Configuration Manager 站台伺服器位置的決定，都會直接影響您的使用者。 我們相信移至 Azure 應該對您的使用者透明無感，他們才不會在與 Configuration Manager 的日常互動中感受到變化。
 
 ### <a name="ok-i-get-it-i-plan-to-install-a-single-stand-alone-primary-site-on-an-azure-virtual-machine-and-i-want-to-make-sure-my-costs-are-low-should-i-place-remote-site-systems-like-management-points-distribution-points-and-software-update-points-on-azure-virtual-machines-as-well-or-on-premises"></a>好，我了解了。 我打算在 Azure 虛擬機器上安裝單一的獨立主要站台，而且希望確保成本低廉。 我是不是也應該將 (遠端) 站台系統 (例如管理點、發佈點和軟體更新點) 放在 Azure 虛擬機器上，還是放在內部部署？
 除了從站台伺服器到發佈點的通訊以外，這些網站中伺服器對伺服器的通訊可能會在任何時間發生，並且不會使用任何機制控制網路頻寬的使用。 因為您無法控制站台系統之間的通訊，所以應該考慮與這些通訊相關的任何費用。

@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 4cb9b22220e4c33aadd5b7c46f4274df44e3ec9c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 87b51d2df20f13ad29bca0b5961d59a41cbedf49
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79337807"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080057"
 ---
 # <a name="effects-of-company-portal-ios-device-reset"></a>公司入口網站 iOS 裝置重設的影響 
 
@@ -32,13 +32,13 @@ ms.locfileid: "79337807"
 
 如果組織管理您的裝置，且您可以存取公司和學校電子郵件、應用程式以及 Wi-Fi：
 
-- 您的裝置將不再顯示於公司入口網站中。  
+- 裝置將不再顯示於公司入口網站中。  
 
-- 裝置將會重設為製造商的原廠預設值。 將會移除您的個人資料、應用程式和設定。
+- 裝置將會重設為製造商的原廠預設設定。 將會移除您的個人資料、應用程式和設定。
 
 如果裝置只設定為存取公司或學校電子郵件：
 
-- 您的裝置將不再顯示於公司入口網站中。  
+- 裝置將不再顯示於公司入口網站中。  
 
 - 則將會刪除公司或學校電子郵件帳戶。 未儲存的電子郵件將會被刪除。   
 

@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4c10922bbe855bfbd89228d1887db06399c261ca
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 53a30f376bd288e8d50d88ea8f33af37f3cd599e
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695776"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110146"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>規劃 Configuration Manager 中的安全性
 
@@ -392,7 +392,7 @@ Configuration Manager 與 Azure Active Directory (Azure AD) 整合，以允許�
 
 - 降低基礎結構需求。 例如，[使用管理點的軟體中心](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)，而不是應用程式類別目錄  
 
-- [管理 Office 365 應用程式](../../../sum/deploy-use/manage-office-365-proplus-updates.md)  
+- [管理 Microsoft 365 Apps 企業版](../../../sum/deploy-use/manage-office-365-proplus-updates.md)  
 
 
 **伺服器**  

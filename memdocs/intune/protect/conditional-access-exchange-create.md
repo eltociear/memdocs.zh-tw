@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 671f80efb54f51cac410b37de6227e456d9316d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 36b39d20e666015ae040a1fa058dca1d167686e4
+ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323121"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739896"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>設定 Intune 的 Exchange 內部部署存取
 
@@ -35,7 +35,7 @@ ms.locfileid: "80323121"
 
 設定條件式存取之前，請確認下列設定存在：
 
-- 您的 Exchange 版本為 **Exchange 2010 SP1 或更新版本**。 支援 Exchange 伺服器用戶端存取伺服器 (CAS) 陣列。
+- 您的 Exchange 版本為 **Exchange 2010 SP3 或更新版本**。 支援 Exchange 伺服器用戶端存取伺服器 (CAS) 陣列。
 
 - 您已安裝並使用 [Exchange ActiveSync 內部部署 Exchange 連接器](exchange-connector-install.md)，可將 Intune 連線至內部部署 Exchange。
 
@@ -124,7 +124,7 @@ Windows 8.1 及更新版本上原生的**郵件**應用程式 (在使用 Intune 
    > [!div class="mx-imgBorder"]
    > ![針對通知編輯組織工作流程的範例螢幕擷取畫面](./media/conditional-access-exchange-create/edit-organization-user-notification.png)
 
-   修改傳送給使用者的預設電子郵件訊息，如果使用者的裝置不符合規範，且他們想要存取 Exchange 內部部署，就會收到此訊息。 訊息範本會使用標記語言。 您也可以在輸入時看到訊息外觀的預覽
+   修改傳送給使用者的預設電子郵件訊息，這是當使用者裝置不符合規範但又想要存取 Exchange 內部部署時，會傳送給使用者的訊息。 訊息範本會使用標記語言。 您也可以在輸入時看到訊息外觀的預覽
 
    選取 [檢閱並儲存]  ，然後選取 [儲存]  來儲存您的編輯，以完成 Exchange 內部部署存取的設定。
 
@@ -142,7 +142,7 @@ Windows 8.1 及更新版本上原生的**郵件**應用程式 (在使用 Intune 
 
      - **封鎖存取**和**隔離**：立即封鎖所有裝置存取 Exchange 內部部署。 如果擁有裝置的使用者屬於您在上一個程序中設定為包含的群組中，則在該裝置向 Intune 註冊且評估為符合規範之後，即可存取。
 
-       「未」  執行 Samsung Knox Standard 的 Android 裝置不支援此設定，且一律會遭到封鎖。
+       「未」  執行 Samsung Knox Standard 的 Android 裝置不支援此設定，一律會遭到封鎖。
 
    - 針對 [裝置平台例外]  選取 [新增]  ，然後視您的環境需要指定詳細資料。
 

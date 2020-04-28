@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d47d91388fffd0e5716d20be640c4afbad2862e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4416e6bef4386358c964b0ed58aa568bb8c3a3a4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79343033"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078153"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Microsoft Intune App SDK 概觀
 Intune App SDK (適用於 iOS 和 Android) 可啟用您的應用程式以支援 Intune [應用程式保護原則](../apps/app-protection-policy.md)。 當應用程式具備套用的應用程式防護原則時，它可以由 Intune 管理，並由 Intune 識別為受控應用程式。 SDK 會盡力將應用程式開發人員所需的程式碼變更數量減到最少。 您會發現，您可以啟用大多數 SDK 功能，而不需要變更您的應用程式行為。 為了增強終端使用者和 IT 系統管理員體驗，您可以利用 SDK 的 API 來自訂應用程式行為，以支援需要應用程式參與的功能。
@@ -44,7 +44,7 @@ IT 系統管理員可以在受 Intune 管理的應用程式中設定 [剪貼簿]
 IT 系統管理員可以強制執行原則，以確保應用程式儲存到裝置的資料會經過加密。
 
 ### <a name="remotely-wipe-corporate-data"></a>從遠端抹除公司資料
-IT 系統管理員可以從受 Intune 管理的應用程式遠端抹除公司資料。 這項功能是以身分識別為基礎，而且只會刪除與使用者公司身分識別相關聯的檔案。 若要執行這項操作，此功能需要應用程式的參與。 應用程式可以根據使用者設定，指定應該進行抹除的身分識別。 如果沒有來自應用程式的這些指定的使用者設定，預設行為是抹除應用程式目錄，並通知使用者已移除存取權。
+IT 系統管理員可以從受 Intune 管理的應用程式遠端抹除公司資料。 這項功能是以身分識別為基礎，而且只會刪除與使用者公司身分識別相關聯的檔案。 若要執行這個操作，此功能需要應用程式的參與。 應用程式可以根據使用者設定，指定應該進行抹除的身分識別。 如果沒有來自應用程式的這些指定的使用者設定，預設行為是抹除應用程式目錄，並通知使用者已移除存取權。
 
 ### <a name="enforce-the-use-of-a-managed-browser"></a>強制使用受管理的瀏覽器
 IT 系統管理員可以強制使用 [Intune Managed Browser 應用程式](../apps/app-configuration-managed-browser.md)開啟應用程式中的網頁連結。 此功能可確保出現在公司環境中的連結會保留在受 Intune 管理之應用程式的網域內。
@@ -75,7 +75,7 @@ IT 系統管理員可以在終端使用者存取應用程式之前，檢查裝�
 無裝置註冊的應用程式保護可讓 Microsoft Intune 服務將應用程式保護原則直接部署到應用程式，而不需要裝置管理通道來部署原則。
 
 ### <a name="on-demand-application-vpn-connections-with-citrix-mvpn"></a>使用 Citrix mVPN 的隨選應用程式 VPN 連線 
-您可以搭配使用 Citrix XenMobile MDX 和 Microsoft Intune 來管理裝置和應用程式。 這個組合表示您可以使用 Citrix 的 mVPN 技術，透過 Intune 應用程式防護原則來管理應用程式。 與 Citrix 的整合可供適用於 iOS 和 Android 的 Intune App SDK 使用，並可與適用於 iOS 和 Android 的 Intune App Wrapping Tool 搭配使用 (使用 -citrix 旗標)。
+您可以搭配使用 Citrix XenMobile MDX 和 Microsoft Intune 來管理裝置和應用程式。 這個組合表示您可以使用 Citrix 的 mVPN 技術，透過 Intune 應用程式保護原則來管理應用程式。 與 Citrix 的整合可供適用於 iOS 和 Android 的 Intune App SDK 使用，並可與適用於 iOS 和 Android 的 Intune App Wrapping Tool 搭配使用 (使用 -citrix 旗標)。
  
 若要深入了解 Citrix MDX，請參閱[關於 MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/10/about-mdx-toolkit.html)、[適用於 iOS 的 Citrix MDX 應用程式包裝函式](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-ios.html)，以及[適用於 Android 的 Citrix MDX 應用程式包裝函式](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-android.html)。
 

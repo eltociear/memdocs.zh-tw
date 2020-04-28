@@ -2,7 +2,7 @@
 title: 建立分階段部署
 titleSuffix: Configuration Manager
 description: 使用階段式部署，自動執行將軟體推出到數個集合的作業。
-ms.date: 04/16/2019
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 75868250b1f35654e01065e7ff610beb293de727
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5af0b7c90225a1f42d55767a0296d7e2263f956f
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690726"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110452"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>使用 Configuration Manager 建立階段式部署
 
@@ -117,14 +117,12 @@ Include a timeline diagram
 
 4. 在 [設定]  頁面上，針對每個排程設定選擇一個選項。 如需詳細資訊，請參閱[階段設定](#bkmk_settings)。 完成時選取 [下一步]  。  
 
-5. 在 [階段]  頁面上，查看精靈為指定集合所建立的兩個階段。 選取 [下一步]  。   
-
-    > [!Note]  
-    > 本節涵蓋自動建立預設兩階段部署的程序。 此精靈可讓您新增、移除、重新排列、編輯或檢視階段式部署的階段。 如需這些其他動作的詳細資訊，請參閱[建立具有手動設定階段的階段式部署](#bkmk_manual)。  
+5. 在 [階段]  頁面上，查看精靈為指定集合所建立的兩個階段。 選取 [下一步]  。 這些指示涵蓋自動建立預設兩階段部署的程序。 此精靈可讓您新增、移除、重新排列、編輯或檢視階段式部署的階段。 如需這些其他動作的詳細資訊，請參閱[建立具有手動設定階段的階段式部署](#bkmk_manual)。  
 
 6. 在 [摘要]  索引標籤上確認您的選擇，然後選取 [下一步]  完成精靈。  
 
-
+> [!NOTE]
+> 從 2020 年 4 月 21 日開始，「Office 365 專業增強版」會重新命名為「Microsoft 365 Apps 企業版」  。 如需詳細資訊，請參閱 [Office 365 專業增強版的名稱變更](https://docs.microsoft.com/deployoffice/name-change) \(部分機器翻譯\)。 在主控台正在進行更新時，您在 Configuration Manager 產品與文件中可能仍會看到舊名稱。  
 
 ## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a> 建立具有手動設定階段的階段式部署
 <!--1358148--> 

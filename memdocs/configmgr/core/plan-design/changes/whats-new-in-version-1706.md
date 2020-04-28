@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9b70850a8ef52c97c4fb7d78537fbc559701210d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a4fa056c9c0708d2cecc0ca5f244e134e22ad10b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702576"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073704"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Configuration Manager 1706 版中的新功能
 
@@ -243,7 +243,7 @@ Windows Analytics 是一組解決方案，可讓您獲取環境目前狀態的�
 
 ### <a name="updates-to-android-for-work-sharing-configuration"></a>針對 Android for Work 共用設定的更新
 <!-- 1338403 -->
-在此版本中，[工作設定檔]  設定群組中的 [允許工作和個人設定檔之間的資料共用]  設定的值已經更新。 我們也新增了可以封鎖在工作及個人設定檔之間進行複製貼上動作的自訂設定。
+在此版本中，[工作設定檔]  設定群組中的 [允許工作和個人設定檔之間的資料共用]  設定的值已經更新。 我們也新增了可封鎖在工作與個人設定檔之間進行複製貼上動作的自訂設定。
 
 
 ### <a name="android-and-ios-enrollment-restrictions"></a>Android 和 iOS 的註冊限制

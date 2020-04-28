@@ -10,12 +10,12 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: fe34768de48f52dd4872a63ccf353fda1c691a44
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ca500ebbbbf8b2672492fec383feab49bfea0a52
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705796"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074991"
 ---
 # <a name="configure-certificate-infrastructure"></a>設定憑證基礎結構
 
@@ -157,7 +157,7 @@ ms.locfileid: "81705796"
 
     -   在站台系統伺服器上，使用 <Configuration Manager 安裝路徑\>  \Logs\crpsetup.log 檔案和 Configuration Manager 安裝路徑\> *<* \Logs\crpmsi.log 檔案。 在安裝成功之後會傳回 0 的結束代碼。  
 
-    -   透過使用瀏覽器，確認您可以連線至憑證登錄點的 URL，例如 https://server1.contoso.com/CMCertificateRegistration 。 您應會看到 [伺服器錯誤]  頁面上的應用程式名稱，以及 HTTP 404 描述。  
+    -   透過使用瀏覽器，確認您可以連線到憑證登錄點的 URL，例如 https://server1.contoso.com/CMCertificateRegistration 。 您應會看到 [伺服器錯誤]  頁面上的應用程式名稱，以及 HTTP 404 描述。  
 
 11. 找出憑證登錄點在主要站台伺服器電腦之下列資料夾中自動建立的根 CA 匯出憑證檔案：<ConfigMgr 安裝路徑\>  \inboxes\certmgr.box。 請將這個檔案儲存到安全的位置，讓您稍後在執行網路裝置註冊服務的伺服器上安裝 Configuration Manager 原則模組時可安全地存取。  
 

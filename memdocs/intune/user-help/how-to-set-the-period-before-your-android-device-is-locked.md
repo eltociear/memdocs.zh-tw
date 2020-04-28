@@ -19,16 +19,16 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1d6534fcbbf4e511635d452132f705fafb2e6166
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9c82bf136f736218b3f831f1bed7471277093a57
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79336702"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078867"
 ---
 # <a name="how-to-set-the-amount-of-time-before-your-android-device-locks-its-screen"></a>如何設定 Android 裝置鎖定其螢幕前的時間量
 
-若要重新連線到您的工作，您必須針對您擁有的裝置類型，依照下列步驟在裝置上設定密碼逾時。
+若要重新連線到您的工作，您必須依照所擁有裝置類型的步驟，在裝置上設定密碼逾時。
 
 ## <a name="native-non-samsung-knox-device"></a>原生 (非 Samsung Knox) 裝置
 

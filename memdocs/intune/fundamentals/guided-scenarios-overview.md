@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc536d4c2c0d06a768d42d4a796ec56cf80c0d66
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: aa70d5881a60d159ca668751ab2e1de9cf0cbd07
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80401430"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076096"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Intune 引導式案例概觀 
 
@@ -29,7 +29,7 @@ ms.locfileid: "80401430"
 
 如果您尚不熟悉實作特定 Intune 案例所需的所有步驟和資源，便可以使用引導式案例作為起點。 引導式案例將會自動組合原則、應用程式、指派及其他管理設定。 此外，引導式案例可能會刻意省略針對指定案例不適用或不常見的特定選項。 
 
-引導式案例並非不同於 Intune 一般工作流程的管理空間。 這些工作流程是設計來與 Intune 適用於設定檔、應用程式及原則的現有工作流程搭配使用。 在完成引導式案例之後，於未來對該案例進行的所有管理，都必須在適用於原則、應用程式及設定檔的現有功能表中進行。 引導式案例不會儲存「引導式案例」資源類型，或是於未來追蹤對那些資源所做的變更。 由引導式案例所建立的每個資源，都會出現在其相對應的工作負載中。 所有選項 (即便是那些在引導式案例中省略的選項) 都可在現有的功能表中進行編輯。  
+引導式案例並非與 Intune 一般工作流程不同的管理空間。 這些工作流程是設計來與 Intune 現有的設定檔、應用程式及原則工作流程搭配使用。 在完成引導式案例之後，於未來對該案例進行的所有管理，都必須在適用於原則、應用程式及設定檔的現有功能表中進行。 引導式案例不會儲存「引導式案例」資源類型，或追蹤未來對資源進行的變更。 由引導式案例所建立的每個資源，都會出現在其相對應的工作負載中。 所有選項 (即便是那些在引導式案例中省略的選項) 都可在現有的功能表中進行編輯。  
 
 ## <a name="types-of-guided-scenarios"></a>引導式案例的類型 
 
@@ -64,7 +64,7 @@ ms.locfileid: "80401430"
 
 引導式案例無法用來編輯現有資源。 建立之後，所有的資源、群組及指派都必須使用現有工作負載來編輯。
 
-### <a name="monitoring"></a>monitoring 
+### <a name="monitoring"></a>監視 
 
 除了初始建立程序之外，引導式案例無法用來監視現有資源。 建立之後，所有的資源、群組及指派都必須使用現有工作負載來監視。 
 

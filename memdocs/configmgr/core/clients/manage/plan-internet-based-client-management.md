@@ -10,12 +10,12 @@ ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 485b27e9781d9c636b8dfe3691fa7f7068a6db92
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 93c6f5166a26db9da1026191f8b07aa88a6f0cfd
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696676"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076742"
 ---
 # <a name="plan-for-internet-based-client-management-in-configuration-manager"></a>Configuration Manager 中以網際網路為基礎的用戶端管理規劃
 
@@ -49,7 +49,7 @@ ms.locfileid: "81696676"
   當您擁有設定為接受來自網際網路連線的軟體更新點時，Configuration Manager 在網際網路上以網際網路為基礎的用戶端一律皆會掃描此軟體更新點，藉以判斷所需的軟體更新。 不過，當這些用戶端位於網際網路上時，首先會嘗試從 Microsoft Update 下載軟體更新，而不是從以網際網路為基礎的發佈點下載。 只有在下載失敗後，才會嘗試從以網際網路為基礎的發佈點下載所需軟體更新。 未針對以網際網路為基礎的用戶端管理設定的用戶端，永遠不會嘗試從 Microsoft Update 下載軟體更新，但一律會使用 Configuration Manager 發佈點。  
  
 > [!Tip]  
-> 設定管理員用戶端會自動判斷它位於內部網路或網際網路。 如果用戶端可以連絡網域控制站或內部部署管理點，則會將其連線類型設定為 [目前為內部網路]。 否則，它會切換到 [目前為網際網路]，且用戶端會使用指派給其站台以進行通訊的管理點、軟體更新點和發佈點。
+> Configuration Manager 用戶端會自動判斷它是位於內部網路還是網際網路。 如果用戶端可以連絡網域控制站或內部部署管理點，則會將其連線類型設定為 [目前為內部網路]。 否則，它會切換到 [目前為網際網路]，且用戶端會使用指派給其站台以進行通訊的管理點、軟體更新點和發佈點。
 
 ##  <a name="considerations-for-client-communications-from-the-internet-or-untrusted-forest"></a>從網際網路或未受信任樹系的用戶端通訊考量  
  安裝在主要站台之下列站台系統角色支援來自未受信任位置 (例如網際網路或未受信任樹系) 的用戶端連線 (次要站台不支援來自未受信任位置的用戶端連線)：  

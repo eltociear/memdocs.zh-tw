@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a3fc8976c4799759088db4c4f28a9f50dff8e37
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d754076537fb8014b3e66a05413379637a67ba32
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79363547"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077966"
 ---
 # <a name="incomplete-user-enrollments-report"></a>未完成的使用者註冊報告
 
@@ -55,7 +55,7 @@ ms.locfileid: "79363547"
 在報告頂端，您可以看到未完成的註冊數目和百分比 (相對於所有註冊)。
 
 - 起始的註冊：嘗試的註冊數目。
-- 未完成的註冊：已嘗試但未能產生完整註冊且符合規範裝置的註冊數目。
+- 未完成的註冊：已嘗試但未能產生完整註冊和符合規範裝置的註冊數目。
 - 未完成的比率：嘗試但放棄的註冊百分比 (放棄的註冊/起始的註冊)。
 
 ### <a name="line-graph"></a>折線圖
@@ -80,7 +80,7 @@ ms.locfileid: "79363547"
 | EnrollmentWrapUp | 註冊裝置畫面，直到完成**載入公司資源** | iOS/Android | 需要 > 30 分鐘 |
 | DeviceCategory | 裝置類別選取 (如果管理員已設定)，直到按一下 [完成]  | iOS/Android | 需要 > 30 分鐘 |
 | PreEnrollmentWizard | 設定存取畫面 (若已啟動註冊但返回至設定存取) | iOS/Android| **延期** |
-| PreEnrollmentWizard | 設定存取畫面，直到按一下 [下一步是什麼]  畫面上的 [下一步]  | iOS/Android | 需要 > 30 分鐘 |
+| PreEnrollmentWizard | 設定存取畫面，直到按一下 [下一步是什麼]  畫面上的 [下一步]  為止 | iOS/Android | 需要 > 30 分鐘 |
 
 #### <a name="platform-screens-section"></a>平台畫面區段
 
@@ -88,7 +88,7 @@ ms.locfileid: "79363547"
 | ---- |---- |---- |---- |
 | iOSProfileLaunch | 提示顯示組態設定檔 | iOS/iPadOS | **忽略** |
 | iOSProfileLaunch | 安裝設定檔畫面 | iOS/iPadOS | **取消** |
-| iOSProfileLaunch | 提示信任設定檔來源註冊裝置 | iOS/iPadOS | **取消** |
+| iOSProfileLaunch | 提示信任設定檔來源以註冊裝置 | iOS/iPadOS | **取消** |
 | iOSProfileLaunch | 安裝設定檔畫面，直到設定檔安裝完成 | iOS/iPadOS | 需要 > 30 分鐘 |
 | AndroidPermissions | 裝置管理員啟用畫面 | Android | **取消** |
 | AndroidPermissions | 從提示核准撥打電話及管理通話，直到裝置管理員**啟用** | Android | 需要 > 30 分鐘 |

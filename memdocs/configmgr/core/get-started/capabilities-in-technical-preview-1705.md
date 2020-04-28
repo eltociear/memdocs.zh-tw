@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7ae14b4d05665c6524b7bd1706c1391f8116516
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a10726062d679666d14cbbb0b87510af5dfe30c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705236"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078799"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Configuration Manager Technical Preview 1705 中的功能
 
@@ -154,8 +154,8 @@ ms.locfileid: "81705236"
 
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>設定及部署 Windows Defender 應用程式防護原則
 
-[Windows Defender 應用程式防護](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)是一個新的 Windows 功能，可藉由在作業系統其他部分所無法存取的安全隔離容器中開啟未受信任的網站，來協助保護您的使用者。 在此 Technical Preview 中，我們已新增支援，可使用您所設定並接著部署到集合的 Configuration Manager 合規性設定來設定此功能。
-此功能將在 64 位元版 Windows 10 Creator’s Update 的預覽版中發行。 若要立即測試此功能，您必須使用此更新的預覽版本。
+[Windows Defender 應用程式防護](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)是一個新的 Windows 功能，可藉由在作業系統其他部分所無法存取的安全隔離容器中開啟未受信任的網站，來協助保護您的使用者。 在此 Technical Preview 中，我們已新增支援，可使用您所設定的 Configuration Manager 合規性設定來設定此功能，然後部署到集合。
+此功能將在 64 位元版 Windows 10 Creator's Update 的預覽版中發行。 若要立即測試此功能，您必須使用此更新的預覽版本。
 
 
 ### <a name="before-you-start"></a>在您開始使用 Intune 之前

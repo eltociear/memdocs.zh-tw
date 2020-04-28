@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7b2afaf1090b1e7c9c53d403f70c17d3e171cdbf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f100d28b3fd4ce0d310ddb2f0b4e777c72f72881
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705336"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076198"
 ---
 # <a name="capabilities-in-technical-preview-1701-for-configuration-manager"></a>Technical Preview 1701 Configuration Manager 中的功能
 
@@ -44,7 +44,7 @@ ms.locfileid: "81705336"
 
 以下說明這個 Technical Preview 的軟體更新點行為︰  
 
-- **新的用戶端會使用界限群組來選取軟體更新點，** 在安裝 1701 版之後安裝的用戶端，會從與用戶端界限群組建立關聯的軟體更新點中選取軟體更新點。
+- **新的用戶端會使用界限群組來選取軟體更新點，** 在安裝 1701 版之後安裝的用戶端會從這些與用戶端界限群組相關聯的軟體更新點中選取軟體更新點。
 
   這會取代先前行為，即用戶端從共用用戶端樹系的軟體更新點清單中隨機選取軟體更新點。   
 
@@ -109,7 +109,7 @@ ms.locfileid: "81705336"
 
    **編輯︰**
 
-   將設定名稱 *FairFaxArmResourceID* 的值變更為等於 “<https://management.usgovcloudapi.net/”>
+   將設定名稱 *FairFaxArmResourceID* 的值變更為等於 "<https://management.usgovcloudapi.net/">
 
    - **原始：** &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
      &lt;>&lt;/value>   

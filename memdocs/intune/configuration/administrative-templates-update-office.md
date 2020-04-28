@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcf2139019b1f4d764b55ee31f5961711a71834c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6b0c673eb702e3e9f08209d04bf256c049b10ee6
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80219872"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022682"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>使用更新通道和目標版本設定，以 Microsoft Intune 來更新 Office 365 系統管理範本
 
@@ -37,7 +37,7 @@ ms.locfileid: "80219872"
 
 ## <a name="prerequisites"></a>先決條件
 
-請務必針對您的 Office 應用程式[啟用 Office 365 專業增強版自動更新](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus) \(部分機器翻譯\)。 您可以使用群組原則或 Intune Office 2016 ADMX 範本來執行此動作：
+請務必針對您的 Office 應用程式[啟用 Microsoft 365 Apps 自動更新](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus) \(部分機器翻譯\)。 您可以使用群組原則或 Intune Office 2016 ADMX 範本來執行此動作：
 
 > [!div class="mx-imgBorder"]
 > ![在 Intune 系統管理範本中，設定 Office 的 [啟用自動更新] 設定](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
@@ -78,7 +78,7 @@ ms.locfileid: "80219872"
     > ![系統管理範本 L_Updatebranch 登錄機碼範例](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
-    > [使用 Configuration Manager 管理 Office 365 專業增強版](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) \(部份機器翻譯\) 會列出值及其意義。 登錄值是以選取的散發通道為基礎：
+    > [使用 Configuration Manager 管理 Microsoft 365 Apps](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) \(英文\) 會列出值及其意義。 登錄值是以選取的散發通道為基礎：
     >
     >- 每月通道                - value="Current"
     >- 每月通道 (已設定目標)     - value="Current"
@@ -98,7 +98,7 @@ ms.locfileid: "80219872"
     - `UpdateChannel`：根據已設定的設定而變更的動態索引鍵。
     - `CDNBaseUrl`：在裝置上安裝 Office 365 時設定。
 
-3. 查看 `UpdateChannel` 值。 此值會告訴您 Office 的更新頻率。 [使用 Configuration Manager 管理 Office 365 專業增強版](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) \(部份機器翻譯\) 會列出值，以及它們所設定的內容。
+3. 查看 `UpdateChannel` 值。 此值會告訴您 Office 的更新頻率。 [使用 Configuration Manager 管理 Microsoft 365 Apps](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) \(英文\) 會列出值及其設定。
 
     查看下列範例時，您會看到 `UpdateChannel` 設定為 `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`，即 [每月]  ：
 
@@ -141,7 +141,7 @@ ms.locfileid: "80219872"
 
 ### <a name="step-1-force-the-office-version-to-update"></a>步驟 1：強制 Office 版本更新
 
-1. 確認 Office 版本支援您所選擇的更新通道。 [Office 365 專業增強版的更新歷程記錄](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date)會列出支援不同更新通道的組建編號。
+1. 確認 Office 版本支援您所選擇的更新通道。 [Microsoft 365 Apps 的更新歷程記錄](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date)會列出支援不同更新通道的組建編號。
 
 2. 在您的 [Intune 系統管理範本](administrative-templates-windows.md#create-the-template)中，移至 [目標版本]  設定，然後輸入您想要的版本。
 
@@ -182,6 +182,6 @@ ms.locfileid: "80219872"
 
 [Office 365 用戶端的更新通道值](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
-[Office 365 專業增強版的 Office 雲端原則服務概觀](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service)
+[Microsoft 365 Apps 的 Office 雲端原則服務概觀](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service) \(部分機器翻譯\)
 
 [在 Microsoft Intune 中使用 Windows 10 範本設定群組原則設定 (ADMX 範本)](administrative-templates-windows.md)

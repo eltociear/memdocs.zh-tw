@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da9ab5fe5a8716e3af0ae02122f51d06e6e55e6f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 424b835669986d1ede6e2300e9dfaba619034c30
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352497"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079734"
 ---
 # <a name="data-intune-sends-to-apple"></a>Intune 傳送至 Apple 的資料
 
@@ -40,7 +40,7 @@ ms.locfileid: "79352497"
 
 下表列出 Microsoft Intune 從裝置傳送給已啟用 Apple 服務的資料。 
 
-| 服務 | 傳送至 Apple 的資料 | 用途 |
+| Service | 傳送至 Apple 的資料 | 用途 |
 |---|---| ---|
 | [APNS](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | 權杖, PushMagic | 如果伺服器接受裝置，裝置會提供其推播通知裝置權杖給伺服器。 伺服器應該使用這個權杖來傳送推播訊息至裝置。 此簽入訊息也包含 PushMagic 字串。 伺服器必須記住這個字串，並將它包含在它傳送至裝置的任何推播訊息中。 |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | 伺服器權杖 | 用來向 Apple 服務進行驗證的推播通知裝置權杖。 |
@@ -54,7 +54,7 @@ ms.locfileid: "79352497"
 | ASM/DEP | org_id | DEP 客戶識別碼。 此索引鍵僅適用於通訊協定第 3 版和更新版本。 |
 | ASM/DEP | serial_number | 裝置的序號 (字串)。 |
 | ASM/DEP | 模型 | 模型名稱 (字串)。 |
-| ASM/DEP | 描述 | 裝置的描述 (字串)。 |
+| ASM/DEP | description | 裝置的描述 (字串)。 |
 | ASM/DEP | asset_tag | 裝置的資產標籤 (字串)。 |
 | ASM/DEP | profile_status | 設定檔安裝的狀態。 可能的值：**空白**、**已指派**、**已推送**或**已移除**。 |
 | ASM/DEP | profile_uuid | 指派之設定檔的唯一識別碼。 |

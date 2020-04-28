@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cce452f5790091cbba351147b7c54da85a472f75
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 64a42bebdff76186d74854237e7985afa0ee2c89
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79347440"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079955"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-ios-devices"></a>將 iOS 裝置的記錄傳送給公司入口網站開發人員
 
@@ -32,7 +32,7 @@ ms.locfileid: "79347440"
 
 如果您遇到此問題，「公司入口網站」小組需要一些資訊來試著診斷根本原因。 以下是我們需要您提供協助的地方︰
 
-1. 嘗試讓問題再次發生。 如果不能也沒關係，但是如果可以的話，會讓下一個步驟更容易。
+1. 嘗試讓問題再次發生。 如果無法做到也沒關係，但是如果能夠做到的話，會讓下一個步驟更容易。
 2. 移至 [設定]   > [隱私權]   > [分析]   > [分析資料]  。 這是一份應用程式的活動清單，從當機到一般使用模式都涵蓋在內，但並不包含任何個人資訊。 清單的內容是依最新到最舊方式排序。 如果您能夠重現問題，它應該會是此頁面上的應用程式活動清單中的第一個項目。 如果您無法重現問題，請向下捲動直到您找到第一個開頭為「公司入口網站」的項目，然後點選以開啟它。
 3. 按住畫面，然後上下拖曳藍色小點，直到選取了報告中的所有文字。 點選快顯功能表中的 [複製]  。
 4. 開啟您的電子郵件應用程式，將報告內容貼到電子郵件的本文。 將這封電子郵件傳送至 <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Press and hold, then paste your copied Company Portal app logs here.">IntuneCPiOSfeedback@microsoft.com</a>。

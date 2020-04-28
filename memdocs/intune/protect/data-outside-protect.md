@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 682791256bf0ce40db1dedd1fa6b947efc85b729
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: aa8a18d24fb27b1d1ca7ea7dbe4fad532f85d662
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352380"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022716"
 ---
 # <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>使用 Microsoft Intune 防止未經授權的公司資料存取
 
@@ -36,7 +36,7 @@ ms.locfileid: "79352380"
 * 您的公司使用 Office 365 Exchange Online、SharePoint Online、商務用 OneDrive 或 Yammer。
 * 您的公司有 Microsoft 365、Enterprise Mobility + Security (EMS) 或 Azure 資訊安全的授權。
 * 您的公司使用執行 Windows 7 Service Pack 1 或更新版本的裝置。
-* 您的公司使用 Office 365 ProPlus 2016 或 2013 應用程式、Office Professional Plus 2016、Office Professional Plus 2013 Service Pack 1 或 Office Professional Plus 2010。
+* 您的公司使用 Microsoft 365 Apps (含 2016 應用程式或 2013 應用程式)、Office 專業增強版 2016、Office 專業增強版 2013 (含 Service Pack 1) 或 Office 專業增強版 2010。
 
 ## <a name="action-plan"></a>動作計劃
 

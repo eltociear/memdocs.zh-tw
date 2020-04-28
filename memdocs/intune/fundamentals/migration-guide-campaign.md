@@ -17,16 +17,16 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11959de1d03c7aa9cd29de2b4069c6d7bc133f79
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9a15bc7c1fd74aa3741a9bd699778795cbf3faab
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358438"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080023"
 ---
 # <a name="phase-2-migration-campaign"></a>階段 2：移轉活動
 
-選擇最符合組織需求的移轉方法，並根據您的特定需求來調整實作策略。 本指南的其餘部分提供完成將使用者的裝置註冊到 Intune 的目標所需的工具。
+選擇最符合組織需求的移轉方法，並根據您的特定需求來調整實作策略。 本指南的其餘部分會為您提供所需的工具，讓您達成將使用者裝置註冊到 Intune 的目標。
 
 ## <a name="keys-to-a-successful-migration"></a>成功移轉的關鍵
 
@@ -64,7 +64,7 @@ ms.locfileid: "79358438"
 
 - 請確定技術服務小組在整個移轉活動期間隨時可支援使用者。 在可預估支援通話的工作負載之前，請執行自願性移轉。
 
-- 在您的技術服務人員可以處理其餘的使用者數量之前，不要設定註冊的截止日期
+- 在您的技術服務人員可以處理其餘的使用者數量之前，請勿設定註冊截止日期
 
 > [!IMPORTANT]
 > 不要將 Intune 和現有的協力廠商 MDM 解決方案設為套用對 Exchange 或 SharePoint Online 等資源的存取控制。 此外，裝置一次只能在一個解決方案中註冊。

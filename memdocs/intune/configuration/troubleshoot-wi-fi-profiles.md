@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48ca59c9eea6ba7dd489f5c958ef6976095f27c9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 40eaf6be1b5f6cdb0222fc5bd79e8e5a5b72a947
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79360622"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078204"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>針對 Microsoft Intune 中的 Wi-Fi 裝置組態設定檔進行疑難排解
 
@@ -56,7 +56,7 @@ ms.locfileid: "79360622"
     > [!TIP]
     > 使用裝置管理員管理的 Android 裝置時，可能會列出多個憑證。 撤銷或移除憑證設定檔時，憑證會保留在裝置上。 在此情節中，請選取最新的憑證。 這通常是清單中顯示的最後一個憑證。
     >
-    > 這種情況不會發生在 Android Enterprise 和 Samsung Knox 裝置上。 如需詳細資訊，請參閱[管理 Android 工作設定檔裝置](../enrollment/android-enterprise-overview.md)和[移除 SCEP 和 PKCS 憑證](../protect/remove-certificates.md#android-knox-devices)。
+    > 這種情況不會發生在 Android Enterprise 與 Samsung Knox 裝置上。 如需詳細資訊，請參閱[管理 Android 工作設定檔裝置](../enrollment/android-enterprise-overview.md)和[移除 SCEP 和 PKCS 憑證](../protect/remove-certificates.md#android-knox-devices)。
 
 3. 接下來，使用者會收到安裝 Wi-Fi 設定檔的通知：
 

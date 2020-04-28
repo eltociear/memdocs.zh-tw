@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da03bb3fdf1f0d67639f7719215d756b7d598d7c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6b4afd0c440455b7dab9c1e7674a935967b2fd64
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325078"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078935"
 ---
 # <a name="turn-on-iosipados-supervised-mode"></a>開啟 iOS/iPadOS 受監管模式
 
@@ -33,7 +33,7 @@ Apple iOS/iPadOS 受監管模式讓管理員在管理 Apple 裝置時擁有更�
 
 Intune 在 Apple [裝置註冊計劃 (DEP)](../enrollment/device-enrollment-program-enroll-ios.md) 中提供受監管模式的支援。
 
-如需需要監督的 Apple 控制權清單，請參閱 Apple 的 [Payload settings reference](http://help.apple.com/configurator/mac/2.4/#/cad5370d089) (承載設定參考)。
+如需需要監督的 Apple 控制權清單，請參閱 Apple 的[承載資料設定參考](http://help.apple.com/configurator/mac/2.4/#/cad5370d089)。
 
 ## <a name="turn-on-supervised-mode-during-enrollment"></a>在註冊期間開啟受監管模式
 
@@ -41,7 +41,7 @@ Intune 在 Apple [裝置註冊計劃 (DEP)](../enrollment/device-enrollment-prog
 
 ## <a name="turn-on-supervised-mode-after-enrollment"></a>在註冊之後開啟受監管模式
 
-註冊之後，開啟受監管模式的唯一方式是將 iOS/iPadOS 裝置連接到 Mac，然後[使用 Apple Configurator](../enrollment/apple-configurator-enroll-ios.md) (這會重設裝置)。 您無法在註冊之後，於 Intune 中設定裝置的受監管模式。
+註冊之後，開啟受監管模式的唯一方式是將 iOS/iPadOS 裝置連接到 Mac，然後[使用 Apple Configurator](../enrollment/apple-configurator-enroll-ios.md) (這會重設裝置)。 您無法在註冊之後，於 Intune 中設定裝置的「受監督」模式。
 
 ## <a name="identify-a-supervised-device"></a>識別受監管的裝置
 

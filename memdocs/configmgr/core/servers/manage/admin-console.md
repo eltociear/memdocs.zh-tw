@@ -2,7 +2,7 @@
 title: Configuration Manager 主控台
 titleSuffix: Configuration Manager
 description: 了解如何巡覽 Configuration Manager 主控台。
-ms.date: 04/01/2020
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f6bcd0bc06721fbd6ea3ce1226867db522bb2560
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 58b66639094a602206114cd75a724504618ad38c
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700336"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110027"
 ---
 # <a name="how-to-use-the-configuration-manager-console"></a>如何使用 Configuration Manager 主控台
 
@@ -428,6 +428,8 @@ Configuration Manager 主控台有下列命令列選項：
 1. 選取圓形圖旁的 [需要檢視]  超連結，以向下切入至裝置清單。
 1. 此動作會帶您前往 [裝置]  下方的臨時節點，以查看需要更新的裝置。 您也可以對節點採取動作，例如從清單建立新的集合。
 
+> [!NOTE]
+> 從 2020 年 4 月 21 日開始，「Office 365 專業增強版」會重新命名為「Microsoft 365 Apps 企業版」  。 如需詳細資訊，請參閱 [Office 365 專業增強版的名稱變更](https://docs.microsoft.com/deployoffice/name-change) \(部分機器翻譯\)。 在主控台正在進行更新時，您在 Configuration Manager 主控台與輔助文件中可能仍會看到提及舊名稱。
 
 #### <a name="maximize-the-browse-registry-window"></a>最大化瀏覽登錄視窗
 

@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ff60d5823d7b249e4648b5858ff5ab2dcd5935a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 74fbf1af85fdaef7cebde5c58f7892015b433ff6
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357710"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079224"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>判斷部署目的、目標和挑戰
 
-想要擁有良好的部署計畫，第一步就是先識別組織的部署目的、目標，以及潛在的挑戰。 現在，我們來探討每個領域的詳細資訊。
+想要擁有良好的部署計畫，第一步就是先識別組織的部署目的和目標，以及潛在的挑戰。 讓我們更詳細地探討每個領域。
 
 ## <a name="deployment-goals"></a>部署目的
 
@@ -95,4 +95,4 @@ ms.locfileid: "79357710"
 
 ## <a name="next-steps"></a>後續步驟
 
-現在，您已經識別部署目的、目標和潛在挑戰，即可前往下一節：[識別使用案例](planning-guide-scenarios.md)。
+既然您已經識別部署目的、目標及潛在挑戰，現在即可前進到下一節：[識別使用案例](planning-guide-scenarios.md)。

@@ -10,12 +10,12 @@ ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1362f44c510fd34aebc6af77efc63e881c27688c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 78f74a9659a011defd50e6ab0e9e1cfe85eec16b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696466"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076725"
 ---
 # <a name="configuring-remote-control-in-configuration-manager"></a>在 Configuration Manager 中設定遠端控制
 
@@ -41,7 +41,7 @@ ms.locfileid: "81696466"
 
 #### <a name="enable-keyboard-translation"></a>啟用鍵盤轉譯
 
-根據預設，Configuration Manager 會將按鍵位置從檢視者的位置傳輸到共用者的位置。 如果檢視者和共用者的鍵盤設定不同，這可能會發生問題。 例如，具有英文鍵盤的檢視者會輸入"A"，但共用者的法文鍵盤會提供 "Q"。 您現在有選項可以設定遠端控制，讓字元本身從檢視者的鍵盤傳輸到共用者，以確保檢視者預期輸入的內容會抵達共用者端。
+根據預設，Configuration Manager 會將按鍵位置從檢視者的位置傳輸到共用者的位置。 如果檢視者和共用者的鍵盤設定不同，這可能會發生問題。 例如，具有英文鍵盤的檢視者會輸入"A"，但共用者的法文鍵盤會提供 "Q"。 您現在可以選擇設定遠端控制，讓字元本身從檢視者的鍵盤傳輸到共用者，以確保檢視者預期輸入的內容會抵達共用者端。
 
 若要開啟鍵盤轉譯，請在 [Configuration Manager 遠端控制]  中，選擇 [動作]  ，然後選擇 [啟用鍵盤轉譯]  以傳輸按鍵位置。
 

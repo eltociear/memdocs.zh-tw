@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1c3c08a8ea50e23b9e3e59a6a6e8f04168f10e2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 57210928bf92c5300db69dc68d5d5dd4d37795e7
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362416"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079428"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>在 Microsoft Intune 中使用 Windows 防火牆原則協助保護 Windows 電腦
 
@@ -58,7 +58,7 @@ Windows 防火牆原則可讓您建立及部署在受管理電腦上控制 Windo
 
 2. 設定並部署 **Windows 防火牆設定** 原則。 您可以使用建議的設定或自訂設定。 如需如何建立和部署原則的詳細資訊，請參閱[使用 Microsoft Intune 電腦用戶端的一般 Windows 電腦管理工作](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)。
 
-    下節列出您可以在原則中設定的值，以及在不自訂原則的情況下將使用的預設值。
+    下一節列出您可以在原則中設定的值，以及在不自訂原則的情況下將使用的預設值。
 
 部署 Windows 防火牆原則之後，即可在 [原則]  工作區的 [所有原則]  頁面上檢視其狀態。
 
@@ -114,7 +114,7 @@ Windows 防火牆原則可讓您建立及部署在受管理電腦上控制 Windo
 |**檔案及印表機共用**|可讓使用者與網路上的其他使用者共用本機檔案和印表機。 這項設定使用 NetBIOS、連結本機多點傳送名稱解析 (LLMNR)、伺服器訊息區 (SMB) 通訊協定及 RPC。|
 |**HomeGroup**<br>(Windows 7 或更新版本)|可讓受管理電腦加入 HomeGroup 網路。|
 |**iSCSI 服務**|可讓受管理電腦連線到 iSCSI 伺服器和裝置。|
-|**金鑰管理服務**|可讓您計算企業環境中電腦的授權合規性。|
+|**金鑰管理服務**|可讓您計算企業環境中電腦的授權相容。|
 |**Media Center Extenders**|可讓 Media Center Extender 與執行 Windows Media Center 的電腦通訊。 這項設定使用簡易服務探索通訊協定 (SSDP) 及 qWave。|
 |**Netlogon 服務**|設定網域用戶端和網域控制站之間的安全性通道，以驗證使用者和服務。 這項設定使用 RPC。|
 |**網路探索**|可讓電腦探索其他裝置，並被網路上的其他裝置探索。 這項設定使用功能探索裝載與發佈服務，以及 SSDP、NetBIOS、LLMNR 和 UPnP 網路通訊協定。|

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0711b407b185b3a9621ff80a371bd3aaa5032ead
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ac4a9797df1ea64a5ffbceca3ea204bd9ed13a6f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80407742"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075535"
 ---
 # <a name="configure-microsoft-launcher"></a>設定 Microsoft Launcher
 
@@ -49,6 +49,8 @@ Microsoft Launcher 應用程式[新增至 Intune](../apps/apps-add.md) 後，請
 
    > [!NOTE]
    > 透過設定設計工具設定屬性之後，JSON 資料也會更新為只反映這些屬性。 若要將其他設定金鑰新增至 JSON 資料，請使用 [JSON 指令碼範例](../apps/configure-microsoft-launcher.md#microsoft-launcher-configuration-example)，為每個設定金鑰複製必要的程式碼。 
+
+編輯先前已建立的應用程式設定原則時，如果已設定複雜屬性，編輯程序將會顯示 JSON 資料編輯器。 所有先前已設定的設定都會保留下來，而且您可以切換為使用設定設計工具來修改支援的設定。
 
 ## <a name="using-configuration-designer"></a>使用設定設計工具
 
@@ -84,7 +86,7 @@ Microsoft Launcher 應用程式[新增至 Intune](../apps/apps-add.md) 後，請
 |----------------------------------------------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    設定允許列出的應用程式<br>JSON 金鑰：`com.microsoft.launcher.HomeScreen.Applications`    |    BundleArray    | 請參閱：[設定允許列出的應用程式](configure-microsoft-launcher.md#set-allow-listed-applications)</sup>    |    讓您能夠從裝置上已安裝的應用程式中，定義一組可在主畫面上顯示的應用程式。 您可以針對想要顯示的應用程式輸入其應用程式套件名稱來定義應用程式，例如，輸入 `com.android.settings` 會使設定可在主畫面上存取。 您允許列於此區段的應用程式應已安裝於裝置上，才能在主畫面上顯示。<p>內容：<ul><li>**套件：** 應用程式套件名稱</li><li>**類別：** 應用程式活動，專屬於特定應用程式頁面。 如果此值是空的，即會使用預設的應用程式頁面。</li></ul>      |
 |    主畫面應用程式順序<br>JSON 金鑰：`com.microsoft.launcher.HomeScreen.AppOrder`    |    BundleArray    |    請參閱：[主畫面應用程式順序](configure-microsoft-launcher.md#home-screen-app-order)      |    讓您能夠在主畫面上指定應用程式順序。<p>內容：<br><ul><li>**型別：** 如要指定應用程式的位置，僅支援 `application` 類型。 如要指定網頁連結的位置，則類型為 `weblink`。</li><li>**位置：** 這會指定主畫面上的應用程式圖示插槽。 這會從左上方的位置 1 開始，從左至右，從上往下。</li><li>**套件：** 這是指定應用程式順序所用的應用程式套件。</li><li>**類別：** 這是某應用程式頁面特定的應用程式活動。 如果此值是空的，將使用預設的應用程式頁面。 這個屬性供應用程式使用。</li><li>**標籤：** 這是某應用程式頁面特定的應用程式活動。 如果此值是空的，將使用預設的應用程式頁面。 此屬性用於應用程式。</li><li>**連結：** 終端使用者按一下網頁連結圖示後要啟動的 URL。 此屬性用於網頁連結。</li></ul>    |
-|    設定釘選的網頁連結<br>JSON 金鑰：`com.microsoft.launcher.HomeScreen.WebLinks`    |    BundleArray    |    請參閱：[設定釘選的網頁連結](configure-microsoft-launcher.md#set-pinned-web-link)      |    此鍵可供將網站釘選到主畫面為快速啟動圖示。 如此即可確保終端使用者能夠快速輕鬆地存取重要的網站。 您可在「主畫面應用程式順序」設定中修改每個網頁連結圖示的位置。<p>內容：<br><ul><li>**• 標籤：** 顯示在 MS 啟動器主畫面上的網頁連結標題。</li><li>**連結：** 終端使用者按一下網頁連結圖示後要啟動的 URL。</li></ul>    |
+|    設定釘選的網頁連結<br>JSON 金鑰：`com.microsoft.launcher.HomeScreen.WebLinks`    |    BundleArray    |    請參閱：[設定釘選的網頁連結](configure-microsoft-launcher.md#set-pinned-web-link)      |    此鍵可供將網站釘選到主畫面為快速啟動圖示。 如此即可確保終端使用者能夠快速輕鬆地存取重要的網站。 您可以在 [主畫面應用程式順序] 設定中修改每個網頁連結圖示的位置。<p>內容：<br><ul><li>**• 標籤：** 顯示在 MS 啟動器主畫面上的網頁連結標題。</li><li>**連結：** 終端使用者按一下網頁連結圖示後要啟動的 URL。</li></ul>    |
 
 
 ### <a name="set-allow-listed-applications"></a>設定允許列出的應用程式

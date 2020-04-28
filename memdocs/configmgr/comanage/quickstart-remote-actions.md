@@ -10,12 +10,12 @@ ms.assetid: 4a877bed-f6c4-4048-9421-507dc848af5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e7dc4753a94dccf8a6a15751a436cecf8374e399
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0ca37a4e15f5da63ed743b541eeabc43708b0be1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691226"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075314"
 ---
 # <a name="remote-actions-with-co-management"></a>透過共同管理的遠端動作
 
@@ -51,7 +51,7 @@ ms.locfileid: "81691226"
 > 擁有 Intune 功能所帶給我們的立即優勢是能夠以遠端方式在機器上重設 Windows。  這對我們遺失或遭竊的機器來說非常重要，這對於具有高度行動力的行動員工而言更為普遍。
 > 這是我們必須在自訂 ConfigMgr 封裝中建置並維護的功能。 
 
-如需如何使用這些遠端動作的詳細資訊，請參閱[可用的裝置動作](https://docs.microsoft.com/intune/device-management#available-device-actions)。
+如需如何使用這些遠端動作的詳細資訊，請參閱[可用的裝置動作](../../intune/remote-actions/device-management.md#available-device-actions)。
 
 
 ## <a name="value-proposition"></a>價值主張
@@ -74,25 +74,25 @@ ms.locfileid: "81691226"
 
 - **刪除**：如果您想要從 Azure 入口網站的 Intune 移除裝置，請從特定的裝置窗格中刪除它們。 下一次裝置簽入時，它就會移除儲存於其上的所有組織資料。  
 
-如需詳細資訊，請參閱[使用抹除、淘汰或手動取消註冊裝置來移除裝置](https://docs.microsoft.com/intune/devices-wipe)。
+如需詳細資訊，請參閱[使用抹除、淘汰或手動取消註冊裝置來移除裝置](../../intune/remote-actions/devices-wipe.md)。
 
 #### <a name="selective-wipe"></a>選擇性抹除
 <!--SCCMDocs issue 973-->
 當您選擇 [應用程式選擇性抹除]  時，它會移除公司應用程式資料，而不會移除個人資料。 當裝置報告為遺失或遭竊時使用此動作。 
 
-如需詳細資訊，請參閱[如何只抹除 Intune 管理之應用程式中的公司資料](https://docs.microsoft.com/intune/apps-selective-wipe)。
+如需詳細資訊，請參閱[如何只抹除 Intune 管理之應用程式中的公司資料](../../intune/apps/apps-selective-wipe.md)。
 
 #### <a name="sync"></a>同步
 **同步**裝置動作會強制所選取的裝置立即使用 Intune 簽入。 當裝置簽入時，會立即接收所有擱置動作或已指派給它的原則。
 
 此功能可協助您立即驗證已指派的原則並對其進行疑難排解，而不用等到下次排程的簽入才進行。
 
-如需詳細資訊，請參閱[使用 Intune 同步裝置以取得最新的原則和動作](https://docs.microsoft.com/intune/device-sync)。
+如需詳細資訊，請參閱[使用 Intune 同步裝置以取得最新的原則和動作](../../intune/remote-actions/device-sync.md)。
 
 #### <a name="restart"></a>重新啟動
 **重新啟動**裝置動作會使得您所選擇的裝置重新啟動。 若有擱置的重新開機，但使用者無法執行它，則此動作非常有用。
 
-如需詳細資訊，請參閱[使用 Intune 從遠端重新啟動裝置](https://docs.microsoft.com/intune/device-restart)。
+如需詳細資訊，請參閱[使用 Intune 從遠端重新啟動裝置](../../intune/remote-actions/device-restart.md)。
 
 #### <a name="fresh-start"></a>全新開始
 **全新開始**裝置動作會移除安裝於任何執行 Windows 10 1703 版或更新版本之裝置上的應用程式。 「全新開始」有助於移除新裝置通常會安裝的預先安裝 (OEM) 應用程式。
@@ -101,12 +101,12 @@ ms.locfileid: "81691226"
 
 如果您預先決定的標準與哪些應用程式應該位於裝置上有關，則此動作會排除不符合您準則的項目。
 
-如需詳細資訊，請參閱[透過 Intune 使用「重新開始」重設 Windows 10 裝置](https://docs.microsoft.com/intune/device-fresh-start)。 
+如需詳細資訊，請參閱[透過 Intune 使用「重新開始」重設 Windows 10 裝置](../../intune/remote-actions/device-fresh-start.md)。 
 
 #### <a name="remote-control"></a>遠端控制
 Intune 所管理的裝置可以使用 [TeamViewer](https://www.teamviewer.com/) 從遠端管理。 TeamViewer 是您可個別取得的協力廠商程式。
 
-如需詳細資訊，請參閱[使用 TeamViewer 來遠端管理 Intune 裝置](https://docs.microsoft.com/intune/device-profile-android-teamviewer)。 
+如需詳細資訊，請參閱[使用 TeamViewer 來遠端管理 Intune 裝置](../../intune/remote-actions/teamviewer-support.md)。
 
 
 
@@ -114,5 +114,4 @@ Intune 所管理的裝置可以使用 [TeamViewer](https://www.teamviewer.com/) 
 
 除了透過 TeamViewer 進行遠端控制，若要在 Intune 中開始使用這些遠端裝置動作，當您[啟用共同管理](how-to-enable.md)之後就不需要任何額外設定。
 
-如需使用 TeamViewer 進行遠端控制的詳細資訊，請參閱[使用 TeamViewer 來遠端管理 Intune 裝置](https://docs.microsoft.com/intune/device-profile-android-teamviewer)。 
-
+如需使用 TeamViewer 進行遠端控制的詳細資訊，請參閱[使用 TeamViewer 來遠端管理 Intune 裝置](../../intune/remote-actions/teamviewer-support.md)。

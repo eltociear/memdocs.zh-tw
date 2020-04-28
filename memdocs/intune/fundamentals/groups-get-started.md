@@ -16,12 +16,12 @@ ms.assetid: 323f384d-8a76-4adc-999b-e508d641bfa1
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae7613606cd6803c4d65007ce5792e47d60bfb38
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5e8fdd0de8b276017a51c2fd464eef4b1d8505bc
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359179"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075348"
 ---
 # <a name="microsoft-intune-classic-groups-in-the-azure-portal"></a>Azure 入口網站中的 Microsoft Intune 傳統群組
 
@@ -82,7 +82,7 @@ Azure AD 中不提供您先前可能使用過的某些 Intune 群組功能︰
 |使用者群組的 manager 屬性|動態群組中 *manager* 屬性的進階規則|
 |父使用者群組中的所有使用者|該群組為成員的靜態群組|
 |父裝置群組中的所有行動裝置|該群組為成員的靜態群組|
-|Intune 所管理的所有行動裝置|'MDM' 為動態群組值的管理類型屬性|
+|Intune 所管理的所有行動裝置|值為 'MDM' 的動態群組 [管理類型] 屬性|
 |靜態群組內的巢狀群組 |靜態群組內的巢狀群組|
 |動態群組內的巢狀群組|有一層巢狀的動態群組|
 

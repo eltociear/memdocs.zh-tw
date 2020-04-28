@@ -10,12 +10,12 @@ ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 32944157759e537c5b01061ab8648f242cfdac57
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ab2270435ac13585cb0b7d3271f1faa02cc728d3
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693566"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075739"
 ---
 # <a name="how-to-assign-clients-to-a-site-in-configuration-manager"></a>如何在 Configuration Manager 中將用戶端指派給站台
 
@@ -122,7 +122,7 @@ Configuration Manager 也會檢查您是否已將 Configuration Manager (最新�
 ##  <a name="locating-management-points"></a>尋找管理點  
  在成功將用戶端指派至站台後，用戶端會找出站台中的管理點。  
 
- 用戶端電腦會下載站台中可連線的管理點清單。 這會在以下情況發生：每次用戶端重新啟動時、每 25 個小時，或用戶端偵測到網路變更 (例如電腦與網路中斷連線再重新連線，或者電腦接收新的 IP 位址) 時。 清單中包括內部網路的管理點，以及是否接受透過 HTTP 或 HTTPS 的用戶端連線。 當用戶端電腦位在網際網路上而還沒有管理點清單時，用戶端會連線至指定的以網際網路為基礎的管理點，以取得管理點清單。 當用戶端具有指派站台的管理點清單時，接著會選取一個要與其連線的管理點：  
+ 用戶端電腦會下載站台中可連線的管理點清單。 這會在以下情況發生：每次用戶端重新啟動時、每 25 個小時，或用戶端偵測到網路變更 (例如電腦與網路中斷連線再重新連線，或者電腦接收新的 IP 位址) 時。 清單中包括內部網路的管理點，以及是否接受透過 HTTP 或 HTTPS 的用戶端連線。 當用戶端電腦位在網際網路上且用戶端還沒有管理點清單時，它會連線到指定的網際網路型管理點，以取得管理點清單。 當用戶端具有指派站台的管理點清單時，接著會選取一個要與其連線的管理點：  
 
 -   當用戶端位在內部網路並且具有有效的 PKI 憑證可供使用時，用戶端會在選擇 HTTP 管理點之前先選擇 HTTPS 管理點。 然後再根據其樹系成員資格找出最近的管理點。  
 

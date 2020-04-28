@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6589b2bd1308f214cce53ac65c806ad7edd51e5f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d154dc0ba681a37ebb2155bfa1bcdb6d8734965f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701926"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073954"
 ---
 # <a name="what39s-new-in-version-1610-of-configuration-manager"></a>Configuration Manager 1610 版中的新功能
 
@@ -200,7 +200,7 @@ Configuration Manager 1602 版中引進了軟體中心的自訂商標。 該商�
 
 
 ## <a name="lookout-integration-for-hybrid-implementations-to-protect-ios-and-android-devices"></a>保護 iOS 和 Android 裝置的混合式實作 Lookout 整合
-Microsoft 整合 Lookout 的行動威脅防護解決方案，以透過偵測裝置上的惡意程式碼、高風險應用程式等功能，來保護 iOS 和 Android 行動裝置。 Lookout 的解決方案有助您判斷威脅等級，並可讓您進行相關設定。 您可以在 Configuration Manager 中建立合規性政策規則，依據 Lookout 的風險評估來判斷裝置的合規性。 您可以使用條件式存取原則，依據裝置合規性狀態，來允許或封鎖公司資源的存取。
+Microsoft 正與 Lookout 的行動威脅防護解決方案進行整合，以透過偵測裝置上的惡意程式碼、高風險應用程式等功能，來保護 iOS 和 Android 行動裝置。 Lookout 的解決方案可協助您判斷威脅等級，並可讓您進行相關設定。 您可以在 Configuration Manager 中建立合規性政策規則，依據 Lookout 的風險評估來判斷裝置的合規性。 您可以使用條件式存取原則，依據裝置合規性狀態，來允許或封鎖公司資源的存取。
 
 將會對不符合規範的 iOS 裝置之使用者，提示進行註冊。 會要求使用者在其裝置上安裝 Lookout for Work 應用程式並加以啟用，然後修補 Lookout for Work 應用程式回報的威脅之後，才可存取公司資料。
 

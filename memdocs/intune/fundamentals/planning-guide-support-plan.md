@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8cb8107efa5961c74277afa84da861305d8b9484
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2368e27cbd5f98683a0b00e6b23c070236c84491
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357281"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080108"
 ---
 # <a name="develop-a-support-plan"></a>開發支援計劃
 
@@ -37,19 +37,19 @@ ms.locfileid: "79357281"
 
 - 支援小組參與 Intune 部署程序初期的機率為何？
 
-現在，我們來檢閱每個領域的詳細資訊。
+讓我們更詳細地檢閱每個領域。
 
 ## <a name="which-teams-are-responsible-for-providing-support"></a>哪一個小組負責提供支援？
 
 組織可能有不同的支援階層或層級 (1-3)。 例如，第 1 層和第 2 層可能屬於支援小組，而第 3 層則包括負責 Intune 部署的 MDM 小組成員。
 
-一般來說，第 1 層是指第一層級的支援，且通常是使用者要求支援時會連絡的第一個層級。 如果第 1 層無法解決終端使用者的問題，他們會將它提升至第 2 層。 第 2 層視需要提報給第 3 層。 此外，您可將 Microsoft 支援服務視為第 4 層。
+一般來說，第 1 層是指第一層級的支援，且通常是使用者要求支援時會連絡的第一個層級。 如果第 1 層無法解決終端使用者的問題，它們就會將它呈報給第 2 層。 第 2 層視需要提報給第 3 層。 此外，您可將 Microsoft 支援服務視為第 4 層。
 
 深入了解 [Intune 支援](get-support.md)。
 
 ## <a name="what-is-the-support-process"></a>支援程序為何？
 
-在初始生產推出階段中，您可能需要所有三個階層參與多方會議或 Skype 會議。 以下是組織可以如何實作 IT 支援或技術服務人員工作流程的其中一個範例：
+在初始生產推出階段中，您可能需要所有三個階層參與多方會議或 Skype 會議。 以下是一個組織如何實作其 IT 支援或技術服務人員工作流程的範例：
 
 1. 終端使用者針對註冊問題連絡第 1 層 IT 支援或技術服務人員。
 
@@ -71,7 +71,7 @@ ms.locfileid: "79357281"
 
 ## <a name="how-you-plan-to-provide-intune-support-training"></a>您打算如何提供 Intune 支援訓練？
 
-請務必為您的 IT 支援或技術服務人員提供 Intune 技術訓練，以確保訓練與適當層級相符，並適用於特定支援層級與其職責。 您可讓 Intune MDM 小組為支援負責人進行這項訓練 (以培訓講師)，然後由負責人對其支援小組成員進行這項訓練。 這項訓練通常需要 2-3 個小時，其中包含理論課程和實驗室課程。
+請務必為您的 IT 支援或技術服務人員提供 Intune 技術訓練，以確保訓練與適當層級相符，並適用於特定的支援層級及其職責。 您可讓 Intune MDM 小組為支援負責人進行這項訓練 (以培訓講師)，然後由負責人對其支援小組成員進行這項訓練。 這項訓練通常需要 2-3 個小時，其中包含理論課程和實驗室課程。
 
 Intune 支援訓練的議程範例如下。
 

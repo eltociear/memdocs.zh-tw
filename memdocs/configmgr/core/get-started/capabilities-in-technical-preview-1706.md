@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e986827cee4911ac2204a8e2f50923dcdd71fed0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d554f4f6e0c68912f4fac91bc1a8db2807b26a04
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705146"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078782"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-configuration-manager"></a>Configuration Manager Technical Preview 1706 中的功能
 
@@ -38,7 +38,7 @@ ms.locfileid: "81705146"
   - **封鎖裝置上的 USB 偵錯**
   - **封鎖來自不明來源的應用程式**
 
-    例如，如果系統管理員將 [封鎖裝置上的 USB 偵錯]  設定為 [true]  ，則所有未啟用 USB 偵錯的裝置都會標示為不符合規範。
+    例如，如果管理員將 [封鎖裝置上的 USB 偵錯]  設定為 [true]  ，則所有未啟用 USB 偵錯的裝置都會標示為不符合規範。
 
 **以下是您可以使用此版本試用的新功能。**  
 
@@ -261,7 +261,7 @@ ms.locfileid: "81705146"
 
 **先決條件**
 - 若要新增連線，您的 Configuration Manager 環境必須先以[線上模式](../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes)設定[服務連接點](../servers/deploy/configure/about-the-service-connection-point.md)。 當您將連線新增至環境時，也會在執行此站台系統角色的電腦上安裝 Microsoft Monitoring Agent。
-- 將 Configuration Manager 註冊為「Web 應用程式和/或 Web API」管理工具，並且取得[來自此註冊的用戶端識別碼](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/)。
+- 將 Configuration Manager 註冊為 [Web 應用程式和/或 Web API] 管理工具，並取得[來自此註冊的用戶端識別碼](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/)。
 - 在 Azure Active Directory 中，為已註冊的管理工具建立用戶端金鑰。
 - 在 Azure 入口網站中，為已註冊的 Web 應用程式提供存取 OMS 的權限。
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c8e1551b49fce5074bd2e88d1d8802f62cca2bb
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: a773c449b0b6d60b9cf7bf6a280cc371d9c4cf03
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808114"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80979217"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>在 Intune 的 Windows 10 裝置上使用 PowerShell 指令碼
 
@@ -52,6 +52,9 @@ Intune 管理延伸模組具有下列必要條件。 一旦符合這些必要條
 - 已加入 Azure Active Directory (AD) 的裝置，包括：  
   
   - 已加入混合式 Azure AD：已加入 Azure Active Directory (AD) 和內部部署 Active Directory (AD) 的裝置。 請參閱 [Plan your hybrid Azure Active Directory join implementation](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) (規劃混合式 Azure Active Directory 加入實作) 以獲得指導。
+  
+  > [!TIP]
+  > 請確定裝置均會[加入](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) \(部分機器翻譯\) 至 Azure AD。 只在 Azure AD 中[註冊](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) \(部分機器翻譯\) 的裝置將不會收到您的指令碼。  
 
 - 在 Intune 中註冊的裝置，包括：
 
@@ -71,8 +74,8 @@ Intune 管理延伸模組具有下列必要條件。 一旦符合這些必要條
     - [用戶端應用程式工作負載](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
     - [如何將 Configuration Manager 工作負載切換至 Intune](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)
   
-> [!TIP]
-> 請確定裝置均會[加入](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) \(部分機器翻譯\) 至 Azure AD。 只在 Azure AD 中[註冊](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) \(部分機器翻譯\) 的裝置將不會收到您的指令碼。
+> [!NOTE]
+> 如需使用 Windows 10 VM 的相關資訊，請參閱[搭配 Intune 使用 Windows 10 虛擬機器](../fundamentals/windows-10-virtual-machines.md)。
 
 ## <a name="create-a-script-policy-and-assign-it"></a>建立並指派指令碼原則
 
@@ -125,6 +128,8 @@ Intune 管理延伸模組具有下列必要條件。 一旦符合這些必要條
 - 終端使用者不需要登入裝置來執行 PowerShell 指令碼。
 
 - Intune 管理延伸模組代理程式會每小時及在每次重新開機後聯繫 Intune 一次，查看其中是否有任何新的指令碼或變更。 將原則指派給 Azure AD 群組之後，即會執行 PowerShell 指令碼，並報告執行結果。 指令碼執行之後，除非指令碼或原則中發生變更，否則不會再次執行。 如果指令碼失敗，Intune 管理延伸模組代理程式將會嘗試針對接下來 3 個連續的 Intune 管理延伸模組代理程式簽入，重試指令碼三次。
+
+- 若為共用裝置，則會針對每個登入的新使用者執行 PowerShell 指令碼。
 
 ### <a name="failure-to-run-script-example"></a>無法執行指令碼範例
 上午 8 點

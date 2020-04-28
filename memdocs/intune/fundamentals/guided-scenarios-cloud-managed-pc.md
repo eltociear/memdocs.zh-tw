@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8720eec22c8e7fd8a9c8c2303b50e71db0e834ad
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1fcd77774cb19a70ee02cab9d2d1e6a44dd9745a
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362585"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023192"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>引導式案例 - 雲端管理的新式桌面
 
-現代化電腦是適用於資訊工作者最先進的生產力平台。 Office 365 專業增強版與 Windows 10 是具有 Windows 10 最新安全性基準和 Microsoft Defender 進階威脅防護的現代化電腦核心元件。
+現代化電腦是適用於資訊工作者最先進的生產力平台。 Microsoft 365 Apps 與 Windows 10 連同 Windows 10 最新安全性基準與 Microsoft Defender 進階威脅防護，是現代化電腦的核心元件。
 
 從雲端管理現代化電腦帶來網際網路遠端動作的另一層優點。 雲端管理利用內建的 Windows 行動裝置管理原則並去除對本機 Active Directory 群組原則的依賴。
 
@@ -46,7 +46,7 @@ ms.locfileid: "79362585"
 
 ## <a name="step-1---introduction"></a>步驟 1 - 簡介
 
-使用此引導式案例，您將會設定測試使用者、在 Intune 中註冊裝置，以及使用 Intune 建議的設定部署裝置，以及 Windows 10 與 Office 專業增強版。 若您選擇[在 Intune 啟用此保護](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune)，您的裝置也會針對 Microsoft Defender 進階威脅防護設定。 您設定的使用者與您註冊的裝置將會新增到新的安全性群組中，而且會使用安全性與生產力建議設定來設定。
+使用此引導式案例，您將會設定測試使用者、在 Intune 中註冊裝置，以及使用 Intune 建議的設定及 Windows 10 與 Microsoft 365 Apps 來部署裝置。 若您選擇[在 Intune 啟用此保護](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune)，您的裝置也會針對 Microsoft Defender 進階威脅防護設定。 您設定的使用者與您註冊的裝置將會新增到新的安全性群組中，而且會使用安全性與生產力建議設定來設定。
 
 ### <a name="what-you-will-need-to-continue"></a>您需要什麼才能繼續
 
@@ -121,7 +121,7 @@ Windows Autopilot 會將設定新裝置的程序自動化，因此使用者可�
 
 使用者將裝置加入 Azure Active Directory 之後，下列設定將套用到裝置：
 
-1. 將自動在雲端管理的電腦上安裝 Office 365 專業增強版。 它包括您熟悉的應用程式，包括 Access、Excel、OneNote、Outlook、PowerPoint、Publisher、商務用 Skype 與 Word。 您可以使用這些應用程式來與 Office 365 服務 (例如 SharePoint Online、Exchange Online 與商務用 Skype Online) 連線。 Office 365 專業增強版會定期更新新功能，這與非 Office 訂閱版本不同。 如需新功能清單，請參閱＜Office 365 的新增功能＞。
+1. Microsoft 365 Apps 將自動安裝在雲端管理的電腦上。 它包括您熟悉的應用程式，包括 Access、Excel、OneNote、Outlook、PowerPoint、Publisher、商務用 Skype 與 Word。 您可以使用這些應用程式來與 Office 365 服務 (例如 SharePoint Online、Exchange Online 與商務用 Skype Online) 連線。 與 Office 非訂閱版不同，Microsoft 365 Apps 會定期更新新功能。 如需新功能清單，請參閱＜Office 365 的新增功能＞。
 2. 將在雲端管理電腦上安裝 Windows 安全性基準。 若您已安裝 Microsoft Defender 進階威脅防護，引導式案例也會設定 Defender 的安全性基準。 Defender 進階威脅防護為 Windows 10 安全性堆疊提供新的入侵後保護層。 由於我們已將用戶端技術組合建置到 Windows 10 與強固的雲端服務中，它將有助於偵測其他防護方式未發現的威脅。 
 
 ## <a name="next-steps"></a>後續步驟

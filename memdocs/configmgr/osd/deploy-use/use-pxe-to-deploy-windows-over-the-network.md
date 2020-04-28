@@ -10,12 +10,12 @@ ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cff249bf5289ebcf354851258b5c9d598314ce3b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 11045ff31dc3832ac97d62f491561b3cf989813c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709056"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079343"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>利用 Configuration Manager 透過網路使用 PXE 來部署 Windows
 
@@ -105,6 +105,9 @@ Configuration Manager 中開機前執行環境 (PXE) 起始的 OS 部署，可�
 - 僅媒體與 PXE
 
 - 僅媒體與 PXE (隱藏)
+
+## <a name="option-82-during-pxe-dhcp-handshake"></a>PXE DHCP 交握期間的選項 82
+從 1906 版開始，不含 WDS 的 PXE 回應程式支援 PXE DHCP 交握期間的選項 82。 如果需要選項 82，請務必使用不含 WDS 的 PXE 回應程式。 WDS 不支援選項 82。
 
 ## <a name="deploy-the-task-sequence"></a><a name="BKMK_Deploy"></a> 部署工作順序
 

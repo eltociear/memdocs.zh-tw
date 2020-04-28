@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 65c8feb6381c59cc1fef3fb07a3ad8c33fc67e65
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 64d01598f3d5feb162898761645ac84b1c73b175
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705686"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074464"
 ---
 # <a name="capabilities-in-technical-preview-1602-for-configuration-manager"></a>Configuration Manager Technical Preview 1602 中的功能
 
@@ -42,7 +42,7 @@ ms.locfileid: "81705686"
 ##  <a name="improvements-to-software-center-in-version-1602"></a><a name="BKMK_SC1601"></a> 1602 版本中對軟體中心的改進  
 
 ### <a name="refresh-pc-machine-and-user-policy-from-software-center"></a>從軟體中心重新整理 PC 電腦和使用者原則  
- 新的 [同步原則]  選項已新增至軟體中心的 [選項]   > [電腦維護]  頁面，讓電腦重新整理它的 Configuration Manager 電腦和使用者原則。  
+ 新的 [同步原則]  選項已新增至軟體中心的 [選項]   > [電腦維護]  頁面，可讓電腦重新整理其 Configuration Manager 電腦和使用者原則。  
 
 ##  <a name="improvements-to-windows-10-servicing"></a><a name="BKMK_Win10Servicing"></a> Windows 10 服務的增強功能  
  在 1602 Technical Preview 中，我們新增了下列 Windows 10 服務增強功能：  

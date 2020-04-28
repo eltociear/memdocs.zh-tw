@@ -1,0 +1,96 @@
+### YamlMime:Hub
+title: Microsoft 端點管理員文件
+summary: Microsoft 端點管理員的官方產品文件
+metadata:
+  services: service
+  ms.service: microsoft-intune
+  ms.topic: hub-page
+  author: dougeby
+  ms.author: dougeby
+  manager: mtillman
+  ms.date: 04/20/2020
+  ms.openlocfilehash: b72bb3a86129b67622f1f22b4e78814d3dfee574
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741301"
+highlightedContent:
+  items:
+  - title: Microsoft 端點管理員概觀
+    itemType: overview
+    url: endpoint-manager-overview.md
+  - title: Microsoft 端點管理員 (產品頁面)
+    itemType: get-started
+    url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
+  - title: 教學課程：逐步解說 Microsoft 端點管理員中的 Intune
+    itemType: tutorial
+    url: ./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md
+  - title: 保護您的遠端員工
+    itemType: get-started
+    url: https://docs.microsoft.com/enterprise-mobility-security/remote-work/
+conceptualContent:
+  items:
+  - title: Microsoft Intune
+    links:
+    - url: ./intune/index.yml
+      itemType: overview
+      text: Microsoft Intune 文件
+    - url: ./intune/fundamentals/index.yml
+      itemType: overview
+      text: 規劃和設定 Intune
+    - url: ./intune/enrollment/index.yml
+      itemType: overview
+      text: 註冊裝置
+    - url: ./intune/remote-actions/index.yml
+      itemType: overview
+      text: 遠端管理裝置
+    - url: ./intune/protect/index.yml
+      itemType: overview
+      text: 為使用者與裝置建立合規性規則
+    - url: ./intune/configuration/index.yml
+      itemType: overview
+      text: 控制裝置功能與設定
+    - url: ./intune/apps/index.yml
+      itemType: concept
+      text: 管理及保護應用程式
+  - title: Microsoft Endpoint Configuration Manager
+    links:
+    - url: ./configmgr/index.yml
+      itemType: get-started
+      text: Microsoft Endpoint Configuration Manager 文件
+    - url: ./configmgr/comanage/index.yml
+      itemType: concept
+      text: 在 Configuration Manager 和 Intune 中管理裝置工作負載
+    - url: ./configmgr/desktop-analytics/index.yml
+      itemType: overview
+      text: 使用電腦分析進行更新整備
+    - url: ./configmgr/core/index.yml
+      itemType: overview
+      text: 管理您的基礎結構
+    - url: ./configmgr/apps/index.yml
+      itemType: concept
+      text: 管理應用程式
+    - url: ./configmgr/osd/index.yml
+      itemType: concept
+      text: 作業系統部署
+    - url: ./configmgr/sum/index.yml
+      itemType: concept
+      text: 軟體更新
+    - url: ./configmgr/compliance/index.yml
+      itemType: concept
+      text: 管理裝置的設定和合規性
+    - url: ./configmgr/protect/index.yml
+      itemType: concept
+      text: 保護您的基礎結構和資料
+  - title: Windows Autopilot
+    links:
+    - url: https://docs.microsoft.com/windows/deployment/windows-autopilot/
+      itemType: concept
+      text: Windows Autopilot 文件
+    - url: /mem/intune/enrollment/enrollment-autopilot
+      itemType: how-to-guide
+      text: Intune：使用 Windows Autopilot 註冊 Windows 裝置
+    - url: ./configmgr/osd/deploy-use/windows-autopilot-for-existing-devices.md
+      itemType: how-to-guide
+      text: Configuration Manager：使用現有裝置適用的 Windows Autopilot

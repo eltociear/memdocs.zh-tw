@@ -18,20 +18,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e986a6dcb598a11a0f2906d6d7be8e2e1abb6aba
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1e2b5f39c9c0316239c2de6f353c73e7f80f743c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351418"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079564"
 ---
 # <a name="data-collection-in-intune"></a>Intune 中的資料收集
 
 當使用者使用 Intune 註冊其公司或個人裝置時，Intune 會收集並共用某些個人資料。 Intune 會從下列來源收集個人資料：
 
-- 系統管理員在 Azure 入口網站中使用的 Intune。
+- 管理員在 Azure 入口網站中的 Intune 使用。
 - 終端使用者裝置 (當他們註冊進行 Intune 管理且處於使用期間)。
-- 客戶在第三方服務的帳戶 (根據系統管理員的指示)。
+- 客戶在第三方服務的帳戶 (依據管理員的指示)。
 - 診斷、效能及使用量資訊。
 
 從這些來源中，Intune 會收集可分為下列三個類別的資訊：[識別](#identified-data)、[匿名化](#pseudonymized-data)和[彙總](#aggregated-data)。
@@ -41,7 +41,7 @@ ms.locfileid: "79351418"
 
 ## <a name="identified-data"></a>識別資料
 
-Intune 所收集的大多數個人資料是識別資料。 此資料會繫結至使用者、裝置或應用程式，這對管理的性質來說特常重要。 識別資料用來管理使用者的裝置和應用程式，以及佈建 Intune 服務。
+Intune 所收集的大多數個人資料是識別資料。 此資料會繫結至使用者、裝置或應用程式，這對管理的性質來說特常重要。 所識別的資料會用來管理使用者的裝置和應用程式，以及佈建 Intune 服務。
 
 Intune 所收集的識別資料可能包括但不限於： 
 

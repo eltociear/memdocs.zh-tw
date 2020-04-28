@@ -19,16 +19,16 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b4a16204afc99169183e02eb269ab24d7f63cc49
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6fa5865c1be4733df6edef484894b246c767db59
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346049"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079598"
 ---
 # <a name="install-missing-certificate-required-by-your-organization"></a>安裝組織要求的遺漏憑證  
 
-如果裝置未在 Intune 註冊，且遺漏必要的憑證，即無法登入公司入口網站應用程式。 當您嘗試登入時，您會看到下列訊息：
+如果裝置未在 Intune 註冊，且遺漏必要的憑證，您便無法登入公司入口網站應用程式。 當您嘗試登入時，您會看到下列訊息：
 
 ![screenshot-error-message-about-missing-certificate](./media/andr-cert_install-1-cert_missing.png)
 

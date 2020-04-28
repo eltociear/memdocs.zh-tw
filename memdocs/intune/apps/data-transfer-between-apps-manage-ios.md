@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d838260f0a4961302b24486474eec74b4cacd23e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2d3b794fdd180ad655b7cd11cc5c1f6d11bc874e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79343943"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075450"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>如何使用 Microsoft Intune 管理 iOS 應用程式之間的資料傳輸
 
@@ -53,7 +53,7 @@ Intune 或協力廠商 EMM 解決方案所管理的裝置**需要**設定使用�
 
       **機碼** = IntuneMAMUPN, **值** = <username@company.com>
 
-      範例：[‘IntuneMAMUPN’, ‘janellecraig@contoso.com’]
+      範例：['IntuneMAMUPN', 'janellecraig@contoso.com']
       
      > [!NOTE]
      > 在 Intune 中，應用程式組態原則註冊類型必須被設定為 [受控裝置]  。

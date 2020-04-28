@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61ca3d5ecc614cee70c1d8a834f29b9db7ad21d2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 42e28238a1ffbad3faa162dd21d4639e742ec7e3
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326825"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075399"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>新增群組來組織使用者和裝置
 
@@ -91,7 +91,7 @@ Intune 使用 Azure Active Directory (Azure AD) 群組來管理裝置和使用�
 
 ## <a name="groups-and-policies"></a>群組和原則
 
-您組織資源的存取權是由您建立的使用者和群組所控制。
+控制您組織資源的存取權時，會依您建立的使用者和群組來控制。
 
 當您建立群組時，請考慮您會如何套用[合規性原則](../protect/device-compliance-get-started.md)和[組態設定檔](../configuration/device-profiles.md)。 例如，您可能會有：
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26576212f4df86681210956669320ed4b124025d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c1bb178c03682b9dd04902fecd50e5f2c9f01d0b
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80488130"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022852"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>教學課程：使用雲端為具有 ADMX 範本及 Microsoft Intune 的 Windows 10 裝置上設定群組原則
 
@@ -34,7 +34,7 @@ ms.locfileid: "80488130"
 ADMX 範本適用於下列服務：
 
 - **Microsoft Edge**：下載 [ Microsoft Edge 原則檔案](https://www.microsoftedgeinsider.com/en-us/enterprise)。
-- **Office**：下載 [Office 365 ProPlus、Office 2019 及 Office 2016 ](https://www.microsoft.com/download/details.aspx?id=49030)。
+- **Office**：於 [Microsoft 365 Apps、Office 2019 與 Office 2016](https://www.microsoft.com/download/details.aspx?id=49030) 下載。
 - **Windows**：內建於 Windows 10 作業系統。
 
 如需 ADMX 原則的詳細資訊，請參閱[了解支援 ADMX 的原則](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies)。

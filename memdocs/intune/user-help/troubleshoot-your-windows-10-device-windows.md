@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7af5274065217331cf3c7fc2a493374f4c0e2227
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f0ad29e04e2f1d15c94e3ecdc4dbb3c891cd605e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335649"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077711"
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>針對您的 Windows 10 裝置註冊進行疑難排解
 如果您已註冊您的裝置，但仍無法存取您的公司或學校電子郵件和檔案，請嘗試下列疑難排解步驟。  
@@ -41,7 +41,7 @@ ms.locfileid: "79335649"
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-access-work-or-school"></a>看見 [存取公司或學校資源] 時所需遵循的疑難排解步驟
 
-1. 如果您已遵循上述步驟，但仍然無法存取自己的工作或學校電子郵件及檔案，請回到 [存取公司或學校資源]  。
+1. 如果您已遵循上述步驟，但仍然無法存取自己的公司或學校電子郵件和檔案，請回到 [存取公司或學校資源]  。
 
 2. 請執行下列其中一項動作：
 
@@ -49,15 +49,15 @@ ms.locfileid: "79335649"
 
      ![validate-successful-enrollment](./media/w10-enroll-rs1-validate-successful-enrollment.png)
 
-   - 如果您並未看到以上所示的連線資訊，或您有看到，但遺漏了部分選項，請點選 [連線]  。 然後，以公司或學校認證登入來進行連線。  
+   - 如果您並未看到以上所示的連線資訊，或是您有看到，但其中遺漏部分選項，請點選 [連線]  。 然後，以公司或學校認證登入來進行連線。  
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>看見 [您的帳戶] 時所需遵循的疑難排解步驟
 
 如果您遵循上述步驟，但仍然無法存取自己的公司或學校電子郵件、檔案和其他資料，請回到 [帳戶]  並點選 [公司存取]  。
 
-- 如果您看到列出了自己的公司或學校帳戶，即表示您已連線。  
+- 如果您看到列出您的公司或學校帳戶，即表示您已連線。  
 
-- 如果看不到自己的公司或學校帳戶，請點選 [連線]  ，然後以公司或學校認證登入。
+- 如果看不到您的公司或學校帳戶，請點選 [連線]  ，然後以公司或學校認證登入。
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-set-up-a-work-or-school-account"></a>看見 [設定公司或學校帳戶] 時所需遵循的疑難排解步驟
 

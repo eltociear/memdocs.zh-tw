@@ -19,18 +19,18 @@ ms.reviewer: esmich, elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 92fcdda0e3b99e227fafb85a87a4f1eda27756e1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 91a69f413e4b24a5a9f5b5fb092270039d4e0668
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335181"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076878"
 ---
 # <a name="what-happens-if-you-unenroll-your-ios-or-macos-device-from-intune"></a>如果從 Intune 取消註冊 iOS 或 macOS 裝置，會發生什麼情況？
 
 當您從 Intune 取消註冊 iOS 或 macOS 裝置時：
 
-- 您的裝置將不再顯示於公司入口網站。
+- 您的裝置將不再顯示於公司入口網站中。
 
 - 您無法再從公司入口網站安裝應用程式。
 

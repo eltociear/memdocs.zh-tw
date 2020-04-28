@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: ab5ad2af9b1cad051346eca28c186e7223e8253a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fd668760a6b5d1a16cfbb8549063da4f7e8a8b7d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705496"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074175"
 ---
 # <a name="capabilities-in-technical-preview-1608-for-configuration-manager"></a>Configuration Manager Technical Preview 1608 中的功能
 
@@ -53,7 +53,7 @@ ms.locfileid: "81705496"
 此顯示畫面現在只會顯示父系軟體項目，或未定義關聯性的軟體。 只是另一個標題子系的軟體則不會顯示。
 
 ## <a name="remote-control-keyboard-translation"></a>遠端控制鍵盤轉譯
-在過去，Configuration Manager 會將按鍵位置從檢視者的位置轉移到共用者的位置。 如果檢視者和共用者的鍵盤設定不同，就會發生問題。 例如，具有英文鍵盤的檢視者會輸入"A"，但共用者的法文鍵盤會提供 "Q"。 我們將變更此預設行為，讓字元本身從檢視者的鍵盤轉移到共用者，以確保檢視者預期輸入的內容會抵達共用者端。
+在過去，Configuration Manager 會將按鍵位置從檢視者的位置傳輸到共用者的位置。 如果檢視者和共用者的鍵盤設定不同，就會發生問題。 例如，具有英文鍵盤的檢視者會輸入"A"，但共用者的法文鍵盤會提供 "Q"。 我們將變更此預設行為，讓字元本身從檢視者的鍵盤傳輸到共用者，以確保檢視者預期輸入的內容會抵達共用者端。
 
 如果檢視者想要根據共用者的鍵盤配置自行輸入，則可以關閉此行為。 若要變更此行為，請在 [Configuration Manager 遠端控制]  中，選擇 [動作]  ，然後選擇 [啟用鍵盤轉譯]  以轉移按鍵位置。
 

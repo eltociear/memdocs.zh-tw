@@ -2,7 +2,7 @@
 title: 網際網路存取需求
 titleSuffix: Configuration Manager
 description: 了解允許用於 Configuration Manager 功能之完整功能的網際網路端點。
-ms.date: 04/01/2020
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2edcff868a684d5e108626b7372241dd1ec47d1c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 58afaf564a8afaba4569755575fcc7c1757c5529
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701526"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110129"
 ---
 # <a name="internet-access-requirements"></a>網際網路存取需求
 
@@ -171,13 +171,16 @@ ms.locfileid: "81701526"
 
 ## <a name="manage-office-365"></a>管理 Office 365
 
-如果您使用 Configuration Manager 來部署及更新 Office 365，請允許下列端點：
+> [!NOTE]
+> 從 2020 年 4 月 21 日開始，「Office 365 專業增強版」會重新命名為「Microsoft 365 Apps 企業版」  。 如需詳細資訊，請參閱 [Office 365 專業增強版的名稱變更](https://docs.microsoft.com/deployoffice/name-change) \(部分機器翻譯\)。 在主控台正在進行更新時，您在 Configuration Manager 主控台與輔助文件中可能仍會看到提及舊名稱。
+
+如果您使用 Configuration Manager 來部署和更新 Microsoft 365 Apps 企業版，請允許下列端點：
 
 <!-- SCCMDocs#929 -->
 
-- `officecdn.microsoft.com`，以同步處理 Office 365 用戶端更新的軟體更新點
+- `officecdn.microsoft.com` - 用來同步 Microsoft 365 Apps 企業版用戶端更新的軟體更新點
 
-- `config.office.com`，以建立 Office 365 部署的自訂設定
+- `config.office.com` - 用來建立 Microsoft 365 Apps 企業版部署的自訂設定
 
 ## <a name="configuration-manager-console"></a>Configuration Manager 主控台
 

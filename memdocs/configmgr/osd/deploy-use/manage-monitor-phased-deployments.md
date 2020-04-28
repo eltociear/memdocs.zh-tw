@@ -10,12 +10,12 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: fa36d3782f75605221c03b7c0791e9b75b68f6e5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 419b91365d80062baabc289d0dbcf064c89b71a0
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690556"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110469"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>管理和監視階段式部署
 
@@ -76,7 +76,10 @@ ms.locfileid: "81690556"
 
 3. 在詳細資料窗格中，切換至 [階段式部署]  索引標籤。  
 
-4. 選取階段式部署，然後按一下功能區中的 [暫止]  或 [繼續]  。  
+4. 選取階段式部署，然後按一下功能區中的 [暫止]  或 [繼續]  。 
+
+> [!NOTE]
+> 從 2020 年 4 月 21 日開始，「Office 365 專業增強版」會重新命名為「Microsoft 365 Apps 企業版」  。 如需詳細資訊，請參閱 [Office 365 專業增強版的名稱變更](https://docs.microsoft.com/deployoffice/name-change) \(部分機器翻譯\)。 在主控台正在進行更新時，您在 Configuration Manager 產品與文件中可能仍會看到舊名稱。 
 
 <!-- Removed for 1806, need to clarify behavior with engineering
 When you suspend a phased deployment, it sets the available and deadline times on the active deployments to a future time. When you resume, it generates a new schedule based on when you resume the phased deployment. The new schedule helps to avoid problems if you resume after the original deadline. For example, the initial schedule has the required deadline seven days after the deployment is available. You suspend it on the second day. If you aren't ready to resume it until day eight, you don't want the deployment to be immediately past the deadline. So it generates a new deadline starting from when you resume the phased deployment on day eight. 

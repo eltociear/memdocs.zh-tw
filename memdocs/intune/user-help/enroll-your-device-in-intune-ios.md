@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aeb2e22348e7197f0abb62ee540c37079f8645f4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 49e598f370669ed55688af6e6a570a932b5bf9d3
+ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084687"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82137961"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>設定 iOS 裝置對公司資源的存取  
 
@@ -170,13 +170,13 @@ ms.locfileid: "80084687"
 
 8. 在 [登入]  畫面上，輸入您受控 Apple ID 的密碼。 在大部分情況下，除非組織為您提供一組不同的認證，否則這些認證會與您用來登入公司或學校帳戶的憑證相同。 
 9. 點選 [登入]  。  
-10. 安裝設定檔之後，畫面上會顯示成功訊息。 若要確認已安裝設定檔，請移至 [設定檔與裝置管理] ****  設定。 您應該會看到設定檔列在 [行動裝置管理] **** 底下。  
+10. 安裝設定檔之後，畫面上會顯示成功訊息。 若要確認是否已安裝設定檔，請前往 [設定檔與裝置管理]  設定。 您應該會看到設定檔列在 [行動裝置管理]  底下。  
 
     ![[設定] 應用程式的範例螢幕擷取畫面：[設定檔與裝置管理] 設定，其顯示管理設定檔。](./media/ios-12-cp-enroll-1904.PNG)  
 
 11. 返回公司入口網站應用程式。 公司入口網站會開始同步並設定您的裝置。 公司入口網站可能會提示您更新其他裝置設定。 如果它這麼做，請點選 [繼續]  。    
 
-12. 當清單中的所有項目都顯示綠色核取記號時，您即會知道安裝程式已完成。 請點選 [完成] **** 。  
+12. 當清單中的所有項目都顯示綠色核取記號時，您即會知道安裝程式已完成。 點選 [完成]  。  
 
 ## <a name="it-administrator-support"></a>IT 系統管理員支援  
 若您是 IT 系統管理員並在註冊裝置期間發生問題，請參閱[針對 Microsoft Intune 中的 iOS 裝置註冊問題進行疑難排解](https://support.microsoft.com/en-us/help/4039809)。 本文列出常見錯誤、其原因，以及解決這些問題的步驟。  

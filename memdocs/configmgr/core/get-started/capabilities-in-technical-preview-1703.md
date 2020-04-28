@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: cbdcc7a4774c9b57ab4a836719ebfc408a2d771d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d06bda9d07a53e022de27afc68f40f9ce706867f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705276"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076147"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Configuration Manager Technical Preview 1703 中的功能
 
@@ -58,7 +58,7 @@ ms.locfileid: "81705276"
 
 1. 在 Configuration Manager 主控台中，按一下 [軟體程式庫]  。
 2. 在 [軟體程式庫] 工作區中，展開 [應用程式管理]  ，然後按一下 [應用程式]  。
-3. 在 [應用程式]  檢視中，以滑鼠右鍵按一下其中一個資料行標頭，然後從清單中選取 [CI 唯一識別碼]  。 您會看到清單現在顯示每個應用程式的唯一識別碼。
+3. 在 [應用程式]  檢視中，以滑鼠右鍵按一下其中一個資料行標頭，然後從清單中選取 [CI 唯一識別碼]  。 您會看到清單中現已顯示每個應用程式的唯一識別碼。
 4. 請注意您想要提供連結之應用程式的 **CI 唯一識別碼**，例如：**ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
 5. 然後，移除接在應用程式 GUID 後方的所有文字，在此案例為 **/2**。 剩下的便是您的應用程式識別碼。
 6. 最後，在前面加上  **=** ，以完成建構連結。 使用上述範例，最終連結顯示如下：**Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**。

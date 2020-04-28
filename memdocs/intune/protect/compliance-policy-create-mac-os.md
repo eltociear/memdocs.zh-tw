@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 210ec5ea6acc2d0ce91a93c83991b630a6fdbb4d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d5ac87b7539888ddceb6095b8a8c37f194c5a97a
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79353238"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079819"
 ---
 # <a name="macos-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>使用 Intune，透過 macOS 設定將裝置標示為相容或不相容
 
@@ -90,7 +90,7 @@ ms.locfileid: "79353238"
 > [!IMPORTANT]
 > 如果 macOS 裝置上的密碼需求有變更，會在使用者下次變更其密碼時才生效。 例如，如果您將密碼長度限制設定為八位數，而 macOS 裝置目前有六位數密碼，那麼在下次使用者更新裝置上的密碼之前，該裝置仍符合規範。
 
-### <a name="encryption"></a>Encryption
+### <a name="encryption"></a>加密
 
 - **裝置上的資料儲存區加密**：  
   - [未設定]  (預設  )
@@ -116,7 +116,7 @@ ms.locfileid: "79353238"
 
 如需詳細資訊，請參閱 [macOS 上的門禁](https://support.apple.com/HT202491) (開啟 Apple 網站)。
 
-**允許從這些位置下載的應用程式**：允許從不同的位置將所支援應用程式安裝到您的裝置。 您的位置選項：
+**允許從這些位置下載的應用程式**：允許從不同位置將所支援應用程式安裝至裝置。 您的位置選項：
 
 - **未設定** (預設  ) - 閘道管理員選項對是否符合規範沒有任何影響。  
 - [Mac App Store]  - 僅安裝 Mac App Store 的應用程式。 無法安裝來自協力廠商或已識別開發人員的應用程式。 如果使用者選取閘道管理員來安裝 Mac App Store 以外的應用程式，裝置即視為不符合規範。

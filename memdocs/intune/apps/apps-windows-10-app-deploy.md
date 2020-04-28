@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58203c09784f0d4a50472ff4ae9cd06957025a1c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 391fa20cf7ba53af649f9f614d9ca02c653c278b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324326"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079309"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>使用 Microsoft Intune 進行 Windows 10 應用程式部署 
 
@@ -97,7 +97,7 @@ Microsoft Intune 支援 Windows 10 裝置上的各種應用程式類型和部署
 - Win32 應用程式
 - 離線授權的商務用 Microsoft Store 應用程式
 - LOB 應用程式 (MSI、APPX 及 MSIX)
-- Office 365 專業增強版
+- Microsoft 365 Apps 企業版
 
 您選取以在裝置內容中安裝的 Windows LOB 應用程式 (特別是 APPX 和 MSIX) 及商務用 Microsoft Store 應用程式 (離線應用程式)，必須指派至裝置群組。 如果其中一個這些應用程式是在使用者內容中部署，安裝將會失敗。 下列狀態和錯誤會出現在管理主控台中：
   - 狀態：失敗。

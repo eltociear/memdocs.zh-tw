@@ -1,0 +1,60 @@
+- name: 電腦分析文件
+  href: index.yml
+- name: 概觀
+  items:
+    - name: 什麼是電腦分析？
+      href: overview.md
+    - name: 新增功能
+      href: whats-new.md
+- name: 教學課程
+  items:
+    - name: 試驗 Windows 10
+      href: tutorial-windows10.md
+- name: 概念
+  items:
+    - name: 部署計劃
+      href: about-deployment-plans.md
+    - name: 資產
+      href: about-assets.md
+    - name: 品質與功能更新
+      href: about-updates.md
+    - name: 相容性評定
+      href: compat-assessment.md
+    - name: 健康情況狀態監視
+      href: health-status-monitoring.md
+- name: 操作指南
+  items:
+    - name: 設定電腦分析
+      href: set-up.md
+    - name: 連線 Configuration Manager
+      href: connect-configmgr.md
+    - name: 註冊裝置
+      href: enroll-devices.md
+    - name: 建立部署計劃
+      href: create-deployment-plans.md
+    - name: 部署到試用
+      href: deploy-pilot.md
+    - name: 部署到生產
+      href: deploy-prod.md
+    - name: 重設您的帳戶
+      href: account-reset.md
+    - name: 關閉您的帳戶
+      href: account-close.md
+- name: 參考
+  items:
+    - name: 啟用資料共用
+      href: enable-data-sharing.md
+    - name: 隱私權
+      href: privacy.md
+    - name: 疑難排解
+      href: troubleshooting.md
+    - name: 記錄收集器
+      href: log-collector.md
+    - name: 監視連線健康情況
+      href: monitor-connection-health.md
+    - name: 群組原則設定
+      href: group-policy-settings.md
+    - name: 常見問題集
+      href: faq.md
+    - name: 取得支援
+      href: get-support.md

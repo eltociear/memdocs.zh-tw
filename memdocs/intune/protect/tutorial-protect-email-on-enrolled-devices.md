@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 200bde56a4a1e77ce78678eddd35537c04dfa514
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24bdaf71f90e3da84fb26c4b69d9b81f43413c69
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325484"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079054"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>教學課程：保護受控裝置上的 Exchange Online 電子郵件
 
@@ -35,7 +35,7 @@ ms.locfileid: "80325484"
 > * 建立 Intune iOS 裝置合規性政策來設定裝置必須符合才能視為合規的條件。
 > * 建立 Azure Active Directory (Azure AD) 條件式存取原則，要求 iOS 裝置在 Intune 中註冊、符合 Intune 原則，並使用核准的 Outlook 行動應用程式來存取 Exchange Online 電子郵件。
 
-如果您沒有 Intune 訂用帳戶，請[註冊免費試用帳戶](../fundamentals/free-trial-sign-up.md)。
+如果沒有 Intune 訂用帳戶，請[註冊免費試用帳戶](../fundamentals/free-trial-sign-up.md)。
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -43,7 +43,7 @@ ms.locfileid: "80325484"
 
 - Azure Active Directory Premium ([免費試用](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
 
-- 包含 Exchange ([免費試用](https://go.microsoft.com/fwlink/p/?LinkID=510938)) 的 Office 365 商務版訂用帳戶
+- 包含 Exchange ([免費試用](https://go.microsoft.com/fwlink/p/?LinkID=510938)) 的 Microsoft 365 Apps 商務版訂用帳戶
 
 在開始之前，請先依照下列內容中的步驟，建立適用於 iOS 裝置的測試裝置設定檔：[Quickstart:建立 iOS/iPadOS 的電子郵件裝置設定檔](../configuration/quickstart-email-profile.md)。
 
@@ -53,7 +53,7 @@ ms.locfileid: "80325484"
 
 ## <a name="create-the-ios-device-compliance-policy"></a>建立 iOS 裝置合規性政策
 
-建立 Intune 裝置合規性政策來設定裝置必須符合才能視為合規的條件。 我們將會在本教學課程中，為 iOS 裝置建立裝置合規性政策。 合規性政策是平台特定的，因此您想要評估每個裝置平台都需要有個別的合規性政策。
+建立 Intune 裝置合規性政策來設定裝置必須符合才能視為合規的條件。 我們將會在此教學課程中，為 iOS 裝置建立裝置合規性政策。 合規性政策是平台特定的，因此您想要評估每個裝置平台都需要有個別的合規性政策。
 
 1. 在 Intune 中，選取 [裝置]   > [合規性原則]   > [建立原則]  。
 
@@ -100,7 +100,7 @@ ms.locfileid: "80325484"
 
 ## <a name="create-the-conditional-access-policy"></a>建立條件式存取原則
 
-現在我們將先建立條件式存取原則來要求所有裝置平台在 Intune 中註冊，並遵守我們的 Intune 合規性政策，然後它們才能存取 Exchange Online。 我們也將要求使用 Outlook 應用程式存取電子郵件。 條件式存取原則可以在 Azure AD 入口網站或 Intune 入口網站中設定。 因為我們已經在 Intune 入口網站中，所以我們將在這裡建立原則。
+現在我們將建立條件式存取原則，以要求所有裝置平台必須先在 Intune 中註冊並符合我們的 Intune 合規性政策，才能存取 Exchange Online。 我們也將要求使用 Outlook 應用程式存取電子郵件。 條件式存取原則可以在 Azure AD 入口網站或 Intune 入口網站中設定。 因為我們已經在 Intune 入口網站中，所以我們將在這裡建立原則。
 
 1. 在 Intune 中，選取 [端點安全性]   > [條件式存取]   > [新增原則]  。
 
@@ -162,7 +162,7 @@ ms.locfileid: "80325484"
 
 ## <a name="try-it-out"></a>試試看
 
-透過使用已建立的原則，所有嘗試登入 Office 365 電子郵件的 iOS/iPadOS 裝置都必須在 Intune 中註冊，並使用 iOS/iPadOS 版 Outlook 行動應用程式。 若要在 iOS 裝置上測試此案例，請嘗試使用您測試租用戶中使用者的認證登入 Exchange Online。 系統將會提示您註冊裝置並安裝 Outlook 行動應用程式。
+透過您已建立的原則，任何 iOS 裝置只要嘗試登入 Office 365 電子郵件，都必須在 Intune 中註冊，並使用 iOS/iPadOS 版 Outlook 行動應用程式。 若要在 iOS 裝置上測試此案例，請嘗試使用您測試租用戶中使用者的認證登入 Exchange Online。 系統將會提示您註冊裝置並安裝 Outlook 行動應用程式。
 
 1. 若要在 iPhone 上測試，請前往 [設定]   > [密碼與帳戶]   > [新增帳戶]   > [Exchange]  。
 

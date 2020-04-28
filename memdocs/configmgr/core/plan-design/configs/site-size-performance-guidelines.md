@@ -7,12 +7,12 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.topic: conceptual
 ms.date: 04/23/2019
-ms.openlocfilehash: 7380621fdc7a7f4d26b4844df3ee9026f0997024
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9e5cc21e4fef60f64576a7b578b3616a7e37756d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688646"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073495"
 ---
 # <a name="configuration-manager-site-size-and-performance-guidelines"></a>Configuration Manager 站台大小和效能指導方針
 
@@ -36,7 +36,7 @@ Configuration Manager 在延展性和效能方面引領業界。 其他文件涵
 下列各節強調在針對大型企業測試和模型化處理需求時，使用的一些重要設定和組態。 這些指導方針可協助設定對於建議硬體大小的基本系統效能期望。
 
 ### <a name="feature-intervals-settings"></a>功能間隔設定 
-大部分測試在系統的重要週期中使用預設間隔。 例如，硬體清查測試每週發生一次，且會有比預設 *.mof* 檔案大的檔案。 某些週期性的功能間隔，尤其是硬體和軟體清查週期，可能對於環境的效能特性有重大影響。 環境中若啟用資料收集的積極預設間隔，便需要加大的硬體，且與活動的增加直接成正比。 例如，假設您有 25,000 個桌面用戶端，且想要比預設間隔快兩倍的速度收集硬體清查。 您應該從調整站台的硬體開始著手，就彷彿您有 50,000 個用戶端。
+大部分測試在系統的重要週期中使用預設間隔。 例如，硬體清查測試每週發生一次，且會有比預設 *.mof* 檔案大的檔案。 某些週期性功能間隔 (尤其是硬體和軟體清查週期) 可能對環境的效能特性有重大影響。 環境中若啟用資料收集的積極預設間隔，便需要加大的硬體，且與活動的增加直接成正比。 例如，假設您有 25,000 個桌面用戶端，且想要比預設間隔快兩倍的速度收集硬體清查。 您應該從調整站台的硬體開始著手，就彷彿您有 50,000 個用戶端。
 
 ### <a name="objects"></a>物件 
 測試應該使用大型企業通常會與系統搭配使用的物件「上平均值」  。 典型值為數千個集合和應用程式，部署到數十萬名使用者或系統。 應該同時對系統中「所有」  物件以這些限制執行測試。 許多客戶運用數種功能，但通常不會以這些上限使用產品的所有功能。 測試所有產品功能有助於確保最佳的可能全系統效能，且對於某些客戶可能會使用高於平均用量的功能有緩衝。 

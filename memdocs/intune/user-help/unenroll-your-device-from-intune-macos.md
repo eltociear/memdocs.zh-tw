@@ -19,12 +19,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5b22902d4cc0aa28903cf5a159355c92befb8e6b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c0c2e76157ee09d5094e81856a27e655b5932d1f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335415"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077405"
 ---
 # <a name="unenroll-your-macos-device-from-company-portal"></a>從公司入口網站取消註冊 macOS 裝置
 
@@ -40,9 +40,9 @@ ms.locfileid: "79335415"
 
 當您從 Intune 取消註冊裝置時，會發生下列情況：
 
-- 您的裝置將不會顯示於公司入口網站。
+- 您的裝置不會顯示於公司入口網站中。
 
-- 您無法從公司入口網站來安裝應用程式。
+- 您無法從公司入口網站安裝應用程式。
 
 - 您在新增裝置時變更的任何裝置設定 (如密碼長度) 皆會失效。
 

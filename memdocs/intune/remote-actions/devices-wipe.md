@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2eae55477ef62c408ff886499f4668c81c799fc8
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e359b07669f45999ae3de4280d1eb65d5ca11064
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326294"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023328"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>使用抹除、淘汰或手動取消註冊裝置來移除裝置
 
@@ -134,7 +134,7 @@ ms.locfileid: "80326294"
 
 |資料類型|Windows 8.1 (MDM) 和 Windows RT 8.1|Windows RT|Windows Phone 8.1 和 Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Intune 安裝的公司應用程式和相關資料|會撤銷受 EFS 保護之檔案的索引鍵。 使用者無法開啟檔案。|不會移除公司應用程式。|原本透過公司入口網站安裝的應用程式將會解除安裝。 將會移除公司應用程式資料。|已解除安裝應用程式。 已移除側載金鑰。<br>針對 Windows 10 版本 1703 (Creators Update) 和更新版本，不會移除 Office 365 ProPlus 應用程式。 Intune 管理延伸模組所安裝的 Win32 應用程式不會在未註冊裝置上解除安裝。 系統管理員可以利用指派排除，來確保不會對 BYOD 裝置提供 Win32 應用程式。|
+|Intune 安裝的公司應用程式和相關資料|會撤銷受 EFS 保護之檔案的索引鍵。 使用者無法開啟檔案。|不會移除公司應用程式。|原本透過公司入口網站安裝的應用程式將會解除安裝。 將會移除公司應用程式資料。|已解除安裝應用程式。 已移除側載金鑰。<br>針對 Windows 10 1703 版 (Creators Update) 和更新版本，不會移除 Microsoft 365 Apps 應用程式。 Intune 管理延伸模組所安裝的 Win32 應用程式不會在未註冊裝置上解除安裝。 系統管理員可以利用指派排除，來確保不會對 BYOD 裝置提供 Win32 應用程式。|
 |設定|由 Intune 原則所設定的設定不再是強制性。 使用者可以變更這些設定。|由 Intune 原則所設定的設定不再是強制性。 使用者可以變更這些設定。|由 Intune 原則所設定的設定不再是強制性。 使用者可以變更這些設定。|由 Intune 原則所設定的設定不再是強制性。 使用者可以變更這些設定。|
 |Wi-Fi 及 VPN 設定檔設定|已移除。|已移除。|不支援。|已移除。|
 |憑證設定檔設定|憑證會予以移除及撤銷。|憑證會予以移除及撤銷。|不支援。|憑證會予以移除及撤銷。|

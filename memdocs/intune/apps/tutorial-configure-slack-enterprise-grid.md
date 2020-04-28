@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 556381337b225640f25d2e3adf86dde5ed428273
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 98ab8fd069b0542a29f61d9b0f5b69d7b82a8a1c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325674"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074770"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>教學課程：設定 Slack 以針對 EMM 和應用程式設定使用 Intune
 
@@ -35,7 +35,7 @@ Slack 是您可以與 Microsoft Intune 搭配使用的共同作業應用程式�
 > - 建立應用程式設定原則，以管理 iOS/iPadOS 上 Slack for EMM 應用程式和適用於 Android 工作設定檔裝置的 Slack 應用程式。
 > - 建立 Intune 裝置合規性政策，以設定 Android 和 iOS/iPadOS 裝置必須符合才能視為符合規範的條件。
 
-如果您沒有 Intune 訂用帳戶，請[註冊免費試用帳戶](../fundamentals/free-trial-sign-up.md)。
+如果沒有 Intune 訂用帳戶，請[註冊免費試用帳戶](../fundamentals/free-trial-sign-up.md)。
 
 ## <a name="prerequisites"></a>先決條件
 您將需要在本教學課程中，使用以下訂用帳戶測試租用戶：
@@ -84,7 +84,7 @@ Slack 是您可以與 Microsoft Intune 搭配使用的共同作業應用程式�
 12. 按一下 **[儲存]** 。
 
 ### <a name="optional-create-an-ios-device-compliance-policy"></a>(選擇性) 建立 iOS 裝置合規性政策
-建立 Intune 裝置合規性政策來設定裝置必須符合才能視為合規的條件。 我們將會在本教學課程中，為 iOS/iPadOS 裝置建立裝置合規性政策。 合規性政策是平台特定的，因此，您需要在 Android 裝置上針對您的 Slack 使用者新增不同的原則。
+建立 Intune 裝置合規性政策來設定裝置必須符合才能視為合規的條件。 針對此此教學課程，我們將會為 iOS/iPadOS 裝置建立裝置合規性政策。 合規性政策是平台特定的，因此，您需要在 Android 裝置上針對您的 Slack 使用者新增不同的原則。
 1. 在系統管理中心中，選取 [裝置合規性]   > [原則]   > [建立原則]  。
 2. 在 [名稱] 中，輸入「iOS 合規性政策測試」。
 3. 在 [描述] 中，輸入「iOS 合規性政策測試」。
@@ -128,7 +128,7 @@ Slack 是您可以與 Microsoft Intune 搭配使用的共同作業應用程式�
 5. 選取 [相關聯的應用程式]  。
 6. 在搜尋列中，輸入 "Slack"，然後選取該應用程式。
 7. 選取 [確定]  ，然後選取 [組態設定]  。
-    - 如需設定金鑰及其值的相關資訊，請參閱 [Slack 的 AppConfig 網頁](https://www.appconfig.org/company/slack/) \(英文\) 之「技術」索引標籤上的文件。
+    - 如需設定金鑰及其值的相關資訊，請參閱 [Slack 的 AppConfig 網頁](https://www.appconfig.org/company/slack/) \(英文\) 之 [Technical] \(技術\) 索引標籤上的文件。
 8. 按一下 [確定]  ，然後選取 [新增]  。
 9. 在搜尋列中，輸入「Slack 應用程式設定原則測試」，然後選取您剛新增的原則。
 10. 從管理員中，選取 [指派]  。
@@ -136,7 +136,7 @@ Slack 是您可以與 Microsoft Intune 搭配使用的共同作業應用程式�
 12. 按一下 **[儲存]** 。
 
 ### <a name="optional-create-an-android-device-compliance-policy"></a>(選擇性) 建立 Android 裝置合規性政策
-建立 Intune 裝置合規性政策來設定裝置必須符合才能視為合規的條件。 我們將在本教學課程中，為 Android 裝置建立裝置合規性政策。 合規性政策為平台特定，因此，您需要在 iOS/iPadOS 裝置上針對 Slack 使用者新增個別原則。
+建立 Intune 裝置合規性政策來設定裝置必須符合才能視為合規的條件。 針對此教學課程，我們將為 Android 裝置建立裝置合規性政策。 合規性政策為平台特定，因此，您需要在 iOS/iPadOS 裝置上針對 Slack 使用者新增個別原則。
 1. 在 Intune 中選取 [裝置合規性]   > [原則]   > [建立原則]  。
 2. 在 [名稱] 中，輸入「Android 合規性政策測試」。
 3. 在 [描述] 中，輸入「Android 合規性政策測試」。

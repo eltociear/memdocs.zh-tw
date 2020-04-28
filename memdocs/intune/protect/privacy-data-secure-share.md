@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aebb9163d236e5da48b92cfbbfc12e76db69b55c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9f4e6d425923637d991ef62bb0e3c8090e657403
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79339055"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079547"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Intune 中的資料安全性與共用
 
@@ -53,7 +53,7 @@ Intune 也會使用 RBAC 和 JiT 安全性等技術來支援事件，以確保�
 當租用戶管理員開啟特定功能 (例如 Apple 裝置註冊計劃) 時，Microsoft Intune 會取得管理員同意，以便與適當的協力廠商共用資料。 在這種情況下，Intune 可能與下列人員共用個人資料：
 
 - 作為 Microsoft 代理商的協力廠商。
-- 不會作為 Microsoft 代理商，但是只有在租用戶管理員明確授與 Intune 權限時才能這樣做的協力廠商。
+- 不作為 Microsoft 代理商的協力廠商，但僅限在租用戶管理員明確授與 Intune 權限來這麼做的情況下。
 
 作為 Microsoft 代理商的所有協力廠商都包含在[線上服務轉包商清單](https://aka.ms/Online_Serv_Subcontractor_List)中。
 

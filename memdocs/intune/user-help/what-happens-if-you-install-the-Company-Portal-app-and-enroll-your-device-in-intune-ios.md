@@ -19,18 +19,18 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 64a1a8484af537649fd618b5cfa718dc7dff5607
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: af748f91d47d6276b5590577079130e2be470e05
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335285"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077354"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-ios-device-in-intune"></a>如果您安裝公司入口網站應用程式並在 Intune 註冊您的 iOS 裝置，會發生什麼情況？
 
 當您安裝公司入口網站應用程式，並且在 Intune 中註冊您的 iOS 裝置時，您可以使用公司入口網站應用程式執行下列動作：
 
-- 存取公司的網路、電子郵件與工作檔案。
+- 存取公司的網路，以及電子郵件與工作檔案。
 
 - 從公司入口網站取得公司應用程式。
 
@@ -45,9 +45,9 @@ ms.locfileid: "79335285"
 
 註冊裝置之後，您公司的支援人員可以：
 
-- 在裝置遺失或遭竊時，將裝置重設回製造商的預設值。
+- 在裝置遺失或遭竊時，將裝置重設回製造商的預設設定。
 
-- 移除所有已安裝的公司相關資料和商務應用程式。 不會移除您的個人資料和設定。
+- 移除所有已安裝的公司相關資料和商務應用程式。 您的個人資料及設定不會移除。
 
 - 需要您在裝置上設定密碼或 PIN。
 

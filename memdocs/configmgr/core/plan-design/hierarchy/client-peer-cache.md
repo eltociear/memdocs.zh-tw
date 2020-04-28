@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1b9afc8c9cde94488908e4cd9737a58547326f9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c302e839c2a41ba27d160db24928f7e202de78dc
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703666"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110180"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Configuration Manager 用戶端的對等快取
 
@@ -41,7 +41,7 @@ ms.locfileid: "81703666"
 
 對等快取來源必須是對等快取用戶端之目前界限群組的成員。 管理點在提供給用戶端的內容來源清單中，不會包含來自鄰近界限群組的對等快取來源。 它只會包含來自鄰近界限群組的發佈點。 如需目前和鄰近界限群組的詳細資訊，請參閱[界限群組](../../servers/deploy/configure/boundary-groups.md)。<!--SCCMDocs issue 685-->  
 
-Configuration Manager 用戶端使用對等快取，將快取中的各種內容類型提供給其他用戶端。 此內容包含 Office 365 檔案和快速安裝檔案。<!--SMS.500850-->  
+Configuration Manager 用戶端使用對等快取，將快取中的各種內容類型提供給其他用戶端。 此內容包括 Microsoft 365 Apps 企業版與快速安裝檔案。<!--SMS.500850-->  
 
 對等快取不會取代 Windows BranchCache 或傳遞最佳化等其他解決方案的使用。 對等快取會搭配其他解決方案使用。 這些技術提供您更多的選項，以擴充傳統內容部署解決方案，例如發佈點。 對等快取是一個不依賴 BranchCache 的自訂解決方案。 如果您未啟用或使用 BranchCache，則對等快取仍能運作。  
 

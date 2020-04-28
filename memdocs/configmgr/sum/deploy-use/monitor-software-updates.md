@@ -5,17 +5,17 @@ description: Configuration Manager 主控台提供警示與狀態，以監視更
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/08/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
-ms.openlocfilehash: 278f859d58c4feda6fa13522b476ec2beb60f514
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: aa17e58f2687a48895502d1062a22d0c8630aea3
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709486"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110367"
 ---
 # <a name="monitor-software-updates-in-configuration-manager"></a>在 Configuration Manager 中監視軟體更新
 
@@ -33,7 +33,7 @@ Configuration Manager 提供多種方式協助您監視軟體更新物件、程�
 <!--4224414-->
 *(於 1906 版推出)*
 
-您可以鑽研合規性統計資料，了解哪些裝置需要特定的 Office 365 軟體更新。 若要檢視裝置清單，您需要檢視更新及裝置所屬集合的權限。 向下切入至裝置清單：
+您可以鑽研合規性統計資料，以了解哪些裝置需要特定的 Microsoft 365 Apps 軟體更新。 若要檢視裝置清單，您需要檢視更新及裝置所屬集合的權限。 向下切入至裝置清單：
 
 1. 前往 [軟體程式庫]   > [軟體更新]   > [所有軟體更新]  。
 1. 選取至少一部裝置所需的任何更新。

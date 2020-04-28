@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df5cb910d38deaca76ee92246badcebf02a7e4de
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a2f8ccfccfdca26416b0da92e6f27425e13c90c6
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79339601"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078034"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>使用 Intune 管理 Android 工作設定檔裝置
 
@@ -45,7 +45,7 @@ Intune 提供一系列您可以在 Android 工作設定檔裝置上設定的內�
 
 ## <a name="app-publishing-and-distribution"></a>發行與散發應用程式
 
-受控 Google Play 服務是 Android Enterprise 應用程式發佈及管理中不可或缺的一部分。 在公司設定檔中，部署到 Android Enterprise 工作設定檔裝置的所有應用程式，皆來自於受控 Google Play 服務。 若要管理和部署 Play Store 店中的應用程式，您可使用貴公司的系統管理員認證登入 Google Play 網站以進行 Google 管理。 您可以核准用來進行 Android Enterprise 部署的應用程式，使其出現在裝置的工作設定檔中。 這些應用程式接著會同步到 Intune 主控台，然後就能使用 Intune 部署及管理它們。 您組織所開發的企業營運 (LOB) 應用程式，必須使用 Google 的 Android 應用程式發佈主控台，才能發佈到受控 Google Play。 企業營運應用程式必須在 Android 應用程式發行主控台中設定，以限制對您組織的存取。
+受控 Google Play 服務是 Android Enterprise 應用程式發佈及管理中不可或缺的一部分。 在公司設定檔中，部署到 Android Enterprise 工作設定檔裝置的所有應用程式，皆來自於受控 Google Play 服務。 若要管理和部署 Play Store 店中的應用程式，您可使用貴公司的系統管理員認證登入 Google Play 網站以進行 Google 管理。 您可以核准用來進行 Android Enterprise 部署的應用程式，使其出現在裝置的工作設定檔中。 這些應用程式接著會同步到 Intune 主控台，然後就能使用 Intune 部署及管理它們。 您組織所開發的企業營運 (LOB) 應用程式必須使用 Google 的 Android 應用程式發佈主控台，才能發佈到受控 Google Play。 企業營運應用程式必須在 Android 應用程式發行主控台中設定，以限制對您組織的存取。
 
 應用程式可以在不與使用者互動且也不要求使用者允許**來自不明來源的安裝**情況下進行安裝。 若要瀏覽及安裝選擇性或可用的應用程式，使用者可以瀏覽其裝置上的 Play for Work 商店。 如需詳細資訊，請參閱[使用 Intune 將應用程式指派給 Android Enterprise 工作設定檔裝置](../apps/apps-add-android-for-work.md)。
 
@@ -55,13 +55,13 @@ Android Enterprise 提供部署應用程式設定值到支援這些值之應用�
 
 ## <a name="email-configuration"></a>電子郵件組態
 
-Android Enterprise 不提供預設電子郵件應用程式，也不會像 iOS/iPadOS 般地提供原生的電子郵件設定檔物件。 但是電子郵件組態可藉由將應用程式組態設定套用到支援這些設定的應用程式來加以設定。 在 Play Store 中，Gmail 及 Nine Work 這兩個 Exchange ActiveSync (EAS) 用戶端應用程式支援使用 Android Enterprise 應用程式設定進行設定。
+Android Enterprise 不提供預設電子郵件應用程式或原生電子郵件設定檔物件，就像 iOS/iPadOS 所提供的那些。 但是電子郵件組態可藉由將應用程式組態設定套用到支援這些設定的應用程式來加以設定。 在 Play Store 中，Gmail 及 Nine Work 這兩個 Exchange ActiveSync (EAS) 用戶端應用程式支援使用 Android Enterprise 應用程式設定進行設定。
 
 Intune 會在將 Gmail 及 Nine Work 應用程式當成工作應用程式管理時，提供它們適用的組態範本。 其他支援應用程式組態設定檔的電子郵件應用程式可以透過行動裝置應用程式設定原則加以設定。
 
 如果您針對 Android Enterprise 工作設定檔裝置使用 Exchange ActiveSync 條件式存取，請考慮使用 Gmail 或 Nine Work 電子郵件應用程式。 此外也支援 Android 版的 Microsoft Outlook 應用程式，或其他任何經由 ADAL 使用新式驗證的電子郵件應用程式。 如需詳細資訊，請參閱[如何在 Microsoft Intune 中設定電子郵件設定](../configuration/email-settings-configure.md)。
 
-## <a name="app-protection-policies"></a>應用程式保護原則
+## <a name="app-protection-policies"></a>應用程式防護原則
 
 在工作設定檔和個人設定檔中完全支援已套用的應用程式保護原則。 您可以在 Android 應用程式發行主控台 (https://play.google.com/apps/publish ) 中發行企業營運應用程式。 此主控台提供可以讓您將應用程式設為不對組織公開的選項。 如需詳細資訊，請參閱[在 Intune 中為 Android Enterprise 工作設定檔裝置新增裝置合規性政策](../protect/compliance-policy-create-android-for-work.md)。 如需應用程式防護原則的一般資訊，請參閱[什麼是應用程式防護原則？](../apps/app-protection-policy.md)
 

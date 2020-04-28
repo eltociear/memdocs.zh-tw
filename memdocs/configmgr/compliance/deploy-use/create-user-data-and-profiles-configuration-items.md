@@ -10,12 +10,12 @@ ms.assetid: 9fcbcc81-cd6f-496e-b075-ef1afa2b8ccc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: b5f5ee5f8348a3d0a2d059c18edaa964826228e1
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2a99384772895ff2675ade671076163b74cecee2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692456"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075297"
 ---
 # <a name="create-user-data-and-profiles-configuration-items-in-configuration-manager"></a>在 Configuration Manager 中建立使用者資料和設定檔設定項目
 
@@ -25,9 +25,9 @@ Configuration Manager 中的使用者資料和設定檔設定項目包含一些�
 
 - 將使用者的 [文件] 資料夾重新導向到網路共用。  
 
-- 請確定網路連線無法使用時，儲存在網路上的指定檔案在使用者電腦上可供使用。  
+- 確定在網路連線無法使用時，儲存在網路上的指定檔案可供在使用者電腦上使用。  
 
-- 設定使用者登入和登出時，使用者漫遊設定檔中的哪些檔案要與網路共用同步處理。  
+- 設定當使用者登入和登出時，使用者漫遊設定檔中的哪些檔案要與網路共用同步處理。  
 
   與 Configuration Manager 中的其他設定項目不同，您不會將使用者資料和設定檔設定項目新增至您之後部署的設定基準。 相反地，您是直接使用 [部署使用者資料和設定檔組態項目]  對話方塊來部署組態項目。  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 03a6e7cd49bbb5a65a4364be398961c048d2a1b9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f52d6956cf860de8e45ac4e532500d32bcf077ba
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705676"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074498"
 ---
 # <a name="capabilities-in-technical-preview-1512-for-configuration-manager"></a>Configuration Manager Technical Preview 1512 中的功能
 
@@ -67,15 +67,15 @@ ms.locfileid: "81705676"
 
     -   此設定為系統管理員提供能以更細微的方式隨選掃描網路檔案，而能避開在排程進行完整掃描期間，會一律掃描對應網路磁碟機的風險。  
 
-    -   必須對此設定先啟用 [掃描網路檔案]  設定 (設為 [是])，才可進行設定。  
+    -   必須先啟用 [掃描網路檔案]  設定 (設為 [是])，此設定才可供進行設定。  
 
-    -   此設定預設會是 [否]，表示完整掃描不會存取對應的網路磁碟機。  
+    -   此設定預設為 [否]，表示完整掃描不會存取對應的網路磁碟機。  
 
 -   提交自動範例檔案設定：  
 
      反惡意程式碼引擎可能會要求將範例檔案傳送給 Microsoft，進行進一步分析。 根據預設，在傳送這類範例前一律會出現提示。 系統管理員現已可管理下列設定，來設定此行為：  
 
-    -   進階：**啟用自動範例檔提交，來協助 Microsoft 判定某些偵測到的項目是否為惡意**：將此設定變更為 [是] 可啟用自動範例檔提交。 此設定預設為 [否]，表示停用自動提交範例檔案，而且在傳送範例之前將提示使用者。   (此項設定最初由 System Center 2012 R2 Configuration Manager SP1 時採用)  
+    -   進階：**啟用自動範例檔提交，來協助 Microsoft 判定某些偵測到的項目是否為惡意**：將此設定變更為 [是] 可啟用自動範例檔案提交。 此設定預設為 [否]，表示停用自動範例檔案提交，而會在傳送範例之前提示使用者。   (此項設定最初由 System Center 2012 R2 Configuration Manager SP1 時採用)  
 
     -   進階：**允許使用者修改自動範例檔提交設定**：此設定可決定使用者如果具備裝置的本機系統管理權限，是否可以在用戶端介面中變更自動範例檔提交設定。 此設定預設為 [否]，表示設定只能從 Configuration Manager 主控台變更，且裝置的本機系統管理員無法變更此設定。  
 
@@ -83,7 +83,7 @@ ms.locfileid: "81705676"
 
          ![TechRef&#95;WinDefender](../../core/get-started/media/TechRef_WinDefender.png "TechRef_WinDefender")  
 
-    此外，Endpoint Protection 反惡意程式碼原則的 [排除設定] 區段中現有的 [排除檔案及資料夾]  設定，已改良為可以排除裝置。 例如：您現已可以指定排除下列項目： **\device\mvfs** (適用於多版本檔案系統)。 此原則不會驗證裝置路徑。要在用戶端上為反惡意程式碼引擎提供 Endpoint Protection 原則，使其必須能夠解譯裝置字串。  
+    此外，Endpoint Protection 反惡意程式碼原則之 [排除設定] 區段中現有的 [排除檔案及資料夾]  設定已改良為可以排除裝置。 例如：您現已可以指定排除下列項目： **\device\mvfs** (適用於多版本檔案系統)。 此原則不會驗證裝置路徑。要在用戶端上為反惡意程式碼引擎提供 Endpoint Protection 原則，使其必須能夠解譯裝置字串。  
 
 **使用 Endpoint Protection 原則的必要條件：**  
 

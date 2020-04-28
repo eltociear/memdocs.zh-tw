@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 56a7b87f61c522eb7796d201be4b3100d57f8ca1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: bea6ab16baa923d4cc38dee421342636de9e1942
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346868"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076793"
 ---
 # <a name="what-happens-if-you-unenroll-your-windows-device-from-intune"></a>如果從 Intune 取消註冊 Windows 裝置，會發生什麼情況？
 
@@ -33,9 +33,9 @@ ms.locfileid: "79346868"
 
 ## <a name="windows-10-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10、Windows 8.1、Windows 8、Windows 7、Windows Vista
 
-- 您的裝置將不再顯示於公司入口網站，而且您將無法再從公司入口網站安裝應用程式。
+- 您的裝置將不再顯示於公司入口網站，而您也無法再從公司入口網站安裝應用程式。
 
-- 如果您已安裝 Intune 用戶端軟體，則會從電腦予以移除。
+- 如果您已安裝 Intune 用戶端軟體，則會從您的電腦中移除該軟體。
 
 - 從電腦移除 Intune Endpoint Protection 軟體。 若電腦上已有安裝並停用其他病毒防護軟體，可以在移除 Intune Endpoint Protection 之後重新啟用。 從公司入口網站移除之後，請檢查您的電腦。
 
@@ -50,7 +50,7 @@ ms.locfileid: "79346868"
 
 - 您無法再使用裝置上的公司應用程式和公司資料。
 
-- 有一些電子郵件應用程式 (例如 Windows Mail) 將無法再存取儲存在您裝置上的公司電子郵件。
+- 有些電子郵件應用程式 (例如 Windows Mail) 將無法再存取儲存在您裝置上的公司電子郵件。
 
 - 您可能無法使用 Wi-Fi 或虛擬私人網路連線到您的公司網路。
 
@@ -58,7 +58,7 @@ ms.locfileid: "79346868"
 
 ## <a name="windows-10-mobile-and-windows-phone-81"></a>Windows 10 Mobile 和 Windows Phone 8.1
 
-- 公司入口網站應用程式會從您的裝置解除安裝。 這表示您的裝置將不再顯示於公司入口網站，而且您也無法再從公司入口網站應用程式或公司入口網站安裝應用程式。
+- 公司入口網站應用程式會從您的裝置解除安裝。 這表示您的裝置將不再顯示於公司入口網站，而您也無法再從公司入口網站應用程式或公司入口網站安裝應用程式。
 
 - 您無法再使用裝置上的公司應用程式和公司資料。
 
@@ -69,7 +69,7 @@ ms.locfileid: "79346868"
 
 ## <a name="windows-rt-running-windows-81"></a>執行 Windows 8.1 的 Windows RT
 
-- 公司入口網站應用程式會從您的裝置解除安裝。 這表示您的裝置將不再顯示於公司入口網站，而且您將無法再從公司入口網站安裝應用程式。
+- 公司入口網站應用程式會從您的裝置解除安裝。 這表示您的裝置將不再顯示於公司入口網站，而您也無法從公司入口網站安裝應用程式。
 
 - 您無法再使用裝置上的公司應用程式和公司資料。
 
@@ -79,11 +79,11 @@ ms.locfileid: "79346868"
 
 - 您可能無法再存取裝置上的某些公司資源，例如檔案共用或內部網站。
 
-- 有一些電子郵件應用程式 (例如 Windows Mail) 將無法再存取儲存在您裝置上的公司電子郵件。
+- 有些電子郵件應用程式 (例如 Windows Mail) 將無法再存取儲存在您裝置上的公司電子郵件。
 
 當您移除 Windows RT 裝置時，將會發生下列情況：
 
-- 公司入口網站應用程式會從您的裝置解除安裝。 這表示您的裝置將不再顯示於公司入口網站，而且您將無法再從公司入口網站安裝應用程式。
+- 公司入口網站應用程式會從您的裝置解除安裝。 這表示您的裝置將不再顯示於公司入口網站，而您也無法從公司入口網站安裝應用程式。
 
 - 您無法再使用裝置上的公司應用程式和公司資料。
 

@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8be97edbbba9a998dd223a5a0e9c8982c1a16a1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 70f6e3d3fcd0a5f65866e43198b499b321aab836
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326589"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079037"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>教學課程：保護非受控裝置上的 Exchange Online 電子郵件
 
@@ -38,7 +38,7 @@ ms.locfileid: "80326589"
 
 - Azure Active Directory Premium ([免費試用](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
 - Intune 訂用帳戶 ([免費試用](../fundamentals/free-trial-sign-up.md))
-- 包含 Exchange ([免費試用](https://go.microsoft.com/fwlink/p/?LinkID=510938)) 的 Office 365 商務版訂用帳戶
+- 包含 Exchange ([免費試用](https://go.microsoft.com/fwlink/p/?LinkID=510938)) 的 Microsoft 365 Apps 商務版訂用帳戶
 
 ## <a name="sign-in-to-intune"></a>登入 Intune
 
@@ -46,7 +46,7 @@ ms.locfileid: "80326589"
 
 ## <a name="create-the-app-protection-policy"></a>建立應用程式保護原則
 
-在本教學課程中，我們將針對 Outlook 應用程式設定適用於 iOS 的 Intune 應用程式保護原則，以在應用程式層級設置適當的保護。 我們將需要有 PIN 碼才能在工作環境中開啟應用程式。 我們也會限制應用程式間的資料共用，以及防止公司資料被儲存到個人位置。
+在此教學課程中，我們將針對 iOS 設定適用於 Outlook 應用程式的 Intune 應用程式保護原則，以在應用程式層級設置適當的保護。 我們將需要有 PIN 碼才能在工作環境中開啟應用程式。 我們也會限制應用程式間的資料共用，以及防止公司資料被儲存到個人位置。
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 

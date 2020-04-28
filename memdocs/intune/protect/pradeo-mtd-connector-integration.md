@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe58f7baf20903ade462430f4944d0f4555223af
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 10cda4126f709ddd0cb5cda40b36067bd078a3f0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81725978"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079581"
 ---
 # <a name="integrate-pradeo-mobile-threat-defense-with-intune"></a>將 Pradeo Mobile Threat Defense 與 Intune 整合
 
@@ -56,7 +56,7 @@ Pradeo 應用程式授權程序如下：
 
 - 允許 Pradeo 服務將裝置健全狀況狀態的相關資訊傳送回 Intune。
 
-- 將 Pradeo 與 Azure AD 註冊群組成員資格同步，以填入其裝置的資料庫。
+- Pradeo 與「Azure AD 註冊群組」成員資格進行同步，以填入其裝置的資料庫。
 
 - 允許 Pradeo 管理主控台使用 Azure AD 單一登入 (SSO)。
 

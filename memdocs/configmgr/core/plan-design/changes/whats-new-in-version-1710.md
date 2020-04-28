@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: c541c257d885ee5cba9e174a86a6859b078c8594
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 15735b015796d2cccfa9b0a24afc8f6eb0573df1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702406"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073614"
 ---
 # <a name="what39s-new-in-version-1710-of-configuration-manager"></a>Configuration Manager 1710 版中的新功能
 
@@ -67,7 +67,7 @@ Version 1710 drops support for the following products:
 
 ### <a name="co-management-for-windows-10-devices"></a>Windows 10 裝置的共同管理    
 <!-- 1350871 -->
-在先前的 Windows 10 更新中，您已可以將 Windows 10 裝置同時聯結到內部部署的 Active Directory (AD) 及雲端式 Azure AD (混合式 Azure AD)。 自 Configuration Manager 1710 版開始，共同管理能夠利用這項改善，讓您使用 Configuration Manager 和 Intune 來同時管理多部 1709 版 (又稱 Fall Creators Update) 的 Windows 10 裝置。 這個解決方案能讓您從傳統管理過渡到現代化管理，並提供您使用分段式方法來完成轉換。 如需詳細資訊，請參閱 [Windows 10 裝置的共同管理](../../../comanage/overview.md)。
+在先前的 Windows 10 更新中，您已可以將 Windows 10 裝置同時聯結到內部部署的 Active Directory (AD) 及雲端式 Azure AD (混合式 Azure AD)。 自 Configuration Manager 1710 版開始，共同管理能夠利用這項改善，讓您使用 Configuration Manager 和 Intune 來同時管理多部 1709 版 (又稱 Fall Creators Update) 的 Windows 10 裝置。 這個解決方案能讓您從傳統管理過渡到現代化管理，並提供您一個使用分段方法進行轉換的途徑。 如需詳細資訊，請參閱 [Windows 10 裝置的共同管理](../../../comanage/overview.md)。
 
 ### <a name="restart-computers-from-the-configuration-manager-console-----1356283---"></a>從 Configuration Manager 主控台重新啟動電腦  <!-- 1356283 -->
 從此版本開始，您可以使用 Configuration Manager 主控台來識別需要重新啟動的用戶端裝置，然後使用用戶端通知動作來重新啟動這些裝置。
@@ -150,7 +150,7 @@ Version 1710 drops support for the following products:
 ### <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Configuration Manager 主控台中改進的 VPN 設定檔體驗 
 <!-- 1318232 -->
 
-我們在此版本中更新了 VPN 設定檔精靈和屬性頁，以顯示所選平台的合適設定：
+我們在此版本中更新了 VPN 設定檔精靈和屬性頁，以顯示適用於所選平台的設定：
 
 
 - 每個平台都有自己的工作流程，這表示新的 VPN 設定檔只包含平台支援的設定。
@@ -189,7 +189,7 @@ Configuration Manager 對密碼編譯的支援有限：新一代 (CNG) 憑證。
 Device Guard 原則有下列三項相關變更：
 
 - Device Guard 原則已重新命名為 Windows Defender 應用程式控制原則。 因此，像 [建立 Device Guard 原則]  精靈這樣的名稱，現在已名為 [建立 Windows Defender 應用程式控制原則]  精靈。
-- 使用 Windows 1709 版 Fall Creators Update 的裝置不需要重新啟動，就能套用 Windows Defender 應用程式控制原則。 重新啟動仍是預設，不過您也可以[關閉重新啟動](../../../protect/deploy-use/use-device-guard-with-configuration-manager.md)。
+- 使用 Windows 1709 版 Fall Creators Update 的裝置不需要重新啟動，就能套用「Windows Defender 應用程式控制」原則。 重新啟動仍是預設，不過您也可以[關閉重新啟動](../../../protect/deploy-use/use-device-guard-with-configuration-manager.md)。
 - 您可以[設定裝置來自動執行 Intelligent Security Graph 信任的軟體](../../../protect/deploy-use/use-device-guard-with-configuration-manager.md)。
 
 

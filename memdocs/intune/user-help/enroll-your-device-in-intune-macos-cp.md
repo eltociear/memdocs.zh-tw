@@ -19,18 +19,18 @@ ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2ef7951217b0b6df21a86ca29a8637385aa65715
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a069a70077a2b6b1b484bb8a88960c314488cc70
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79337014"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075909"
 ---
 # <a name="enroll-your-macos-device-using-the-company-portal-app"></a>使用公司入口網站應用程式註冊 macOS 裝置  
 
 使用 Intune 公司入口網站應用程式註冊您的 macOS 裝置，以安全地存取您的公司或學校電子郵件、檔案和應用程式。
 
-組織通常會要求先註冊裝置，才能存取專屬資料。 您的裝置註冊之後，它就變成「受控」  。 您的組織可以透過 Intune 等行動裝置管理 (MDM) 提供者將原則和應用程式指派給裝置。 若要從您的裝置持續存取公司或學校資訊，您必須設定裝置以符合您組織的原則設定。  
+組織通常會要求先註冊裝置，才能存取專屬資料。 您的裝置註冊之後，它就變成「受控」  。 您的組織可以透過 Intune 等行動裝置管理 (MDM) 提供者將原則和應用程式指派給裝置。 若要從您的裝置持續存取公司或學校資訊，您必須將裝置設定成符合您組織的原則設定。  
 
 本文描述如何使用適用於 macOS 的公司入口網站應用程式來註冊、設定及維護裝置，以符合您組織的要求。  
 
@@ -93,7 +93,7 @@ ms.locfileid: "79337014"
 此外，Microsoft Intune 公司入口網站小組也歡迎您提供意見反應。 請移至 [說明]   > [傳送意見反應]  ，以分享想法和意見。  
 
 ## <a name="unverified-profiles"></a>未驗證的設定檔  
-當您在 [系統喜好設定]   > [設定檔]  中檢視已安裝的行動裝置管理 (MDM) 設定檔時，有些設定檔可能會顯示未驗證狀態。 只要管理設定檔顯示已驗證狀態，您就不需要擔心。  
+當您在 [系統喜好設定]   > [設定檔]  中檢視已安裝的行動裝置管理 (MDM) 設定檔時，有些設定檔可能會顯示未驗證狀態。 只要管理設定檔顯示的狀態為已驗證，您就不需要擔心。  
 
 管理設定檔定義 MDM 通道連線。 只要管理設定檔經過驗證，透過該通道傳遞至機器的任何其他設定檔就會繼承管理設定檔的安全性特性。  
 

@@ -10,12 +10,12 @@ ms.assetid: a6f7f6b7-9ef3-4ffa-a3cf-d877ac55983b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1436f40dc989202725d7b83d551d318b970f9b5d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fc17437e508ea69a19043c29bf9ad4501cbac3e4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707436"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078510"
 ---
 # <a name="customize-support-center"></a>自訂支援中心
 
@@ -34,7 +34,7 @@ ms.locfileid: "81707436"
 > [!Important]  
 > 支援中心設定檔是 XML 格式的檔案。 對支援中心的作業至為重要。 建議只有熟悉 XML 和規則運算式的使用者才能修改這個檔案。  
 
-請先儲存原始備份，再自訂支援中心設定檔。 如果您在編輯檔案時發生錯誤，此備份可讓您復原原始的支援中心功能。 如果您未建立備份，而支援中心在您修改設定檔後無法正確運作，請重新安裝支援中心。 您也可以複製另一個支援中心安裝的設定檔。
+請先儲存原始備份，再自訂支援中心設定檔。 如果您在編輯檔案時發生錯誤，此備份可讓您復原原始的支援中心功能。 如果您未建立備份，而「支援中心」在您修改組態檔後未正確運作，請重新安裝「支援中心」。 您也可以複製另一個支援中心安裝的設定檔。
 
 
 

@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 374b433ff6ee50f91343489ae36a1a190d87c7aa
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b2ed22f393ea58d50c10175ffbd647bc53f592e5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79347856"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078816"
 ---
 # <a name="manage-apps-from-the-company-portal-website"></a>從公司入口網站管理應用程式 
 請前往[公司入口網站](https://portal.manage.microsoft.com)來檢視及管理組織的應用程式。 

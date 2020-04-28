@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1e1f1c04bed91de3ac193ea3b6a07bde4e8658ba
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d0e933d3ab40b6c07615f701c9d181d41e4fded5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81638240"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077779"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-entrust-datacard"></a>使用公司入口網站和 Entrust Datacard 設定 iOS 或 iPadOS 裝置
 
@@ -43,7 +43,7 @@ ms.locfileid: "81638240"
    * 從組織的衍生認證提供者 [Entrust Datacard](https://www.entrustdatacard.com/) 取得衍生認證。  
 
 ### <a name="what-are-derived-credentials"></a>什麼是衍生認證？  
-衍生認證是衍生自智慧卡認證並安裝在裝置上的憑證。 它會授與公司資源的遠端存取權，同時防止未經授權的使用者存取機密資訊。  
+衍生認證是衍生自您的智慧卡認證並安裝在您裝置上的憑證。 它會授與公司資源的遠端存取權，同時防止未經授權的使用者存取機密資訊。  
 
 衍生認證可用來： 
 * 驗證登入學校或公司應用程式、Wi-Fi 和 VPN 的學生和員工
@@ -51,7 +51,7 @@ ms.locfileid: "81638240"
 
 衍生認證是適用於衍生個人識別驗證 (PIV) 認證的國家標準暨技術研究院 (NIST) 指導方針實作，是特殊發行集 (SP) 800-157 的一部分。  
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
  若要完成註冊，則必須具備：
 
@@ -66,10 +66,10 @@ ms.locfileid: "81638240"
 
 2. 記下螢幕上的代碼。  
 
-    ![公司入口網站應用程式以及畫面上的訊息和驗證碼範例影像。](./media/copy-code-intercede.png)   
+    ![公司入口網站應用程式以及螢幕上訊息和代碼的範例影像。](./media/copy-code-intercede.png)   
 
 3. 切換至啟用智慧卡的裝置，然後前往 https://microsoft.com/devicelogin 。 
-4. 輸入先前記下的驗證碼。  
+4. 輸入先前記下的代碼。  
 
     ![公司入口網站 [輸入代碼] 提示的範例螢幕擷取畫面。](./media/enter-code-intercede.png)   
 
@@ -80,7 +80,7 @@ ms.locfileid: "81638240"
     ![裝置主畫面上公司入口網站推播通知的範例螢幕擷取畫面。](./media/action-required-in-app-intercede.png)  
 
 8. 在 [設定行動智慧卡存取]  畫面上：   
-    a. 點選組織的設定指示連結。 如果組織未提供其他指示，則會將您送往這篇文章。  
+    a. 點選組織其設定指示的連結。 如果組織未提供其他指示，則會將您送往這篇文章。  
     b. 點選 [開始]  。  
 
     ![公司入口網站 [設定行動智慧卡存取] 畫面的範例螢幕擷取畫面。](./media/smart-card-info-intercede.png)
@@ -107,7 +107,7 @@ ms.locfileid: "81638240"
 
     ![公司入口網站 [需要密碼] 畫面的範例螢幕擷取畫面，輸入密碼欄位。](./media/enter-password-derived-credentials.png)   
 
-20. 等候公司入口網站完成裝置設定。  
+20. 等待公司入口網站完成裝置設定。  
 
 
 ## <a name="next-steps"></a>後續步驟  

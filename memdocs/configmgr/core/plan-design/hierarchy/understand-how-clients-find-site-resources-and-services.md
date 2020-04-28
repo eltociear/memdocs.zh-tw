@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8af805b7183445cadbaeafa4ab21b40382f81dbc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a72ff9947f6ca31ce2158c5c763602b34948a15c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699906"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075654"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>了解用戶端如何找到 Configuration Manager 的站台資源和服務
 
@@ -172,7 +172,7 @@ Configuration Manager 用戶端使用稱為*服務位置*的處理序尋找可�
 
 **當您的 DNS 伺服器支援自動更新時**，可以將 Configuration Manager 設定為自動在內部網路將管理點發行到 DNS，或者手動將這些記錄發行到 DNS。 將管理點發佈到 DNS 時，會在服務位置 (SRV) 記錄中發佈其內部網路 FQDN 和連接埠號碼。 您可在 [管理點元件內容] 中設定網站的 DNS 發佈功能。 如需詳細資訊，請參閱 [Configuration Manager 的站台元件](../../../core/servers/deploy/configure/site-components.md)。  
 
-**當您的 DNS 區域針對動態更新設為「限安全」時**，只有第一個要發佈到 DNS 的管理點可使用預設權限順利完成。
+**當您的 DNS 區域針對動態更新設為「只有安全的」時**，只有第一個要發佈到 DNS 的管理點可使用預設權限順利完成此作業。
 
 如果只有一個管理點可以順利地發佈和變更其 DNS 記錄，且該管理點伺服器狀況良好，用戶端就能從該管理點取得完整的管理組件 (MP) 清單，並找出其慣用的管理點。
 

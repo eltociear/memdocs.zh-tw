@@ -5,23 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 04/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: shpate
+ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 618ed802d33f2c50a567f1e18da4689855bbf016
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: faf117f3eedbfe7527606d7a0942cab644c700cb
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551681"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615659"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>在 Intune 中使用安全性基準來設定 Windows 10 裝置
 
@@ -46,13 +46,34 @@ ms.locfileid: "80551681"
 
 [Windows 安全性基準](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) \(部分機器翻譯\) 是深入了解此功能的絕佳資源。 [行動裝置管理](https://docs.microsoft.com/windows/client-management/mdm/) (MDM) \(英文\) 是關於 MDM 以及您如何在 Windows 裝置上加以運用的絕佳資源。
 
+## <a name="available-security-baselines"></a>可用的安全性基準
+
+下列安全性基準執行個體可以搭欸 Intune 使用。 使用連結來檢視每個基準最近執行個體的設定。
+
+- **MDM 安全性基準**
+  - [2019 年 5 月的 MDM 安全性基準](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
+  - [預覽：2018 年 10 月的 MDM 安全性基準](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
+
+- **Microsoft Defender ATP 基準**
+  (若要使用此基準，您的環境必須滿足使用 [Microsoft Defender 進階威脅防護的先決條件](advanced-threat-protection.md#prerequisites))  。
+  - [Microsoft Defender ATP 基準版本 3](security-baseline-settings-defender-atp.md)
+
+  > [!NOTE]
+  > Microsoft Defender ATP 安全性基準已針對實體裝置最佳化，目前不建議用於虛擬機器 (VM) 或 VDI 端點。 特定基準設定可能會影響虛擬化環境上的遠端互動式工作階段。  如需詳細資訊，請參閱 Windows 文件中的[提高 Microsoft Defender ATP 安全性基準的合規性](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) \(英文\)。
+
+- **Microsoft Edge 基準**
+  - [適用於 2020 年 4 月的 Microsoft Edge 基準 (Edge 80 版和更新版本)](security-baseline-settings-edge.md?pivots-edge-april-2020)
+  - [預覽：適用於 2019 年 10 月的 Microsoft Edge 基準 (Edge 77 版和更新版本)](security-baseline-settings-edge.md?pivots=edge-october-2019)
+
+您可以繼續使用及編輯您以預覽範本為基礎建立的設定檔，即使已不提供該預覽設定檔來建立新設定檔也可以。
+
+當您準備好改用所用基準的較新版本時，請參閱本文中[變更設定檔的基準版本](#change-the-baseline-version-for-a-profile)。 
+
 ## <a name="about-baseline-versions-and-instances"></a>關於基準版本與執行個體
 
 基準的每個新版本執行個體都可以新增或移除設定或引進其他變更。 例如，當新的 Windows 10 設定因為新版本的 Windows 10 推出而變成可用時，MDM 安全性基準可能會收到包括最新設定的新版本執行個體。
 
-在 Intune 主控台中，每個基準的圖格都會顯示基準範本名稱和該基準的基本資訊。 該資訊包括您有多少個使用該基準類型的設定檔、有多少該基準類型的個別執行個體 (版本) 可用，以及可識別基準範本何時新增至您租用戶的「上次發行日期」  日期。 下列範例顯示常用 MDM 安全性基準的圖格：
-
-![基準圖格](./media/security-baselines/baseline-tile.png)
+在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)的 [端點安全性]   > [安全性基準]  底下，您會看到可用的基準清單。 該清單包括基準範本名稱、您有多少設定檔使用該基準類型、基準類型有多少個別執行個體 (版本) 可用，還有「上次發佈」  日期可以識別最新版基準範本在何時推出。
 
 若要檢視您使用之基準版本的詳細資訊，請選取基準圖格以開啟其 [概觀]  窗格，然後選取 [版本]  。 Intune 會顯示您的設定檔所使用基準版本的詳細資料。 在 [版本] 窗格上，您可以選取單一版本以檢視使用該版本之設定檔的深入詳細資料。 您也可以選取兩個不同的版本並選擇 [比較基準]  以下載詳述差異的 CSV 檔案。
 
@@ -74,26 +95,6 @@ ms.locfileid: "80551681"
 
 - [針對 Intune 中的原則和設定檔進行疑難排解](../configuration/troubleshoot-policies-in-microsoft-intune.md)
 - [監視您的安全性基準](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
-
-## <a name="available-security-baselines"></a>可用的安全性基準
-
-下列安全性基準執行個體可以搭欸 Intune 使用。 使用連結來檢視每個基準最近執行個體的設定。
-
-- **MDM 安全性基準**
-  - [2019 年 5 月的 MDM 安全性基準](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
-  - [預覽：2018 年 10 月的 MDM 安全性基準](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
-
-- **Microsoft Defender ATP 基準**
-  (若要使用此基準，您的環境必須滿足使用 [Microsoft Defender 進階威脅防護的先決條件](advanced-threat-protection.md#prerequisites))  。
-  - [Microsoft Defender ATP 基準版本 3](security-baseline-settings-defender-atp.md)
-
-  > [!NOTE]
-  > Microsoft Defender ATP 安全性基準已針對實體裝置最佳化，目前不建議用於虛擬機器 (VM) 或 VDI 端點。 特定基準設定可能會影響虛擬化環境上的遠端互動式工作階段。  如需詳細資訊，請參閱 Windows 文件中的[提高 Microsoft Defender ATP 安全性基準的合規性](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) \(英文\)。
-
-- **Microsoft Edge 基準**
-  - [預覽：Microsoft Edge 基準](security-baseline-settings-edge.md)
-
-您可以繼續使用及編輯您以預覽範本為基礎建立的設定檔，即使已不提供該預覽設定檔來建立新設定檔也可以。
 
 ## <a name="manage-baselines"></a>管理基準
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 098ccdef50c9f006884f9b6ae6acc635da100cb2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d9a3e2c2a2c50f2d0fde264eedc2096d34f815a9
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81725668"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023175"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>透過 Intune 設定並使用匯入的 PKCS 憑證
 
@@ -210,6 +210,9 @@ PowerShell 模組提供了使用 Windows 密碼編譯建立金鑰的方法。 �
 ## <a name="create-a-pkcs-imported-certificate-profile"></a>建立 PKCS 匯入憑證設定檔
 
 將憑證匯入至 Intune 之後，請建立 **PKCS 匯入憑證**設定檔，並將它指派給 Azure Active Directory 群組。
+
+> [!NOTE]
+> 建立已匯入 PKCS 的憑證設定檔之後，設定檔中的 [預期用途]  和 [金鑰儲存提供者]  (KSP) 值是唯讀的而無法編輯。 如果這兩個設定中有任何一個需要不同的值，請建立並部署新的設定檔。 
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 

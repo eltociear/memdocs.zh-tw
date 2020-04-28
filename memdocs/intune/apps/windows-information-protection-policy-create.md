@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e7305d33b1c40c2624c5c860f59922a5817c818
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8103e1a4946c0a325501b0d9f538c00d08a1e4cb
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326095"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078306"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>使用 Intune 建立及部署 Windows 資訊保護 (WIP) 原則
 
@@ -123,7 +123,7 @@ ms.locfileid: "80326095"
 
 ### <a name="before-you-begin"></a>開始之前
 
-WIP 學習是一種報表，可讓您監視啟用 WIP 的應用程式與 WIP 未知的應用程式。 未知的應用程式是不屬於組織 IT 部門所部署的應用程式。 在應用程式強制 WIP 使用「封鎖」模式之前，您可以從報告匯出這些應用程式，然後將它們新增到 WIP 原則，以避免造成生產力中斷。
+WIP 學習是一種報表，可讓您監視啟用 WIP 的應用程式與 WIP 未知的應用程式。 未知的應用程式是不屬於組織 IT 部門所部署的應用程式。 在應用程式強制 WIP 使用「封鎖」模式之前，您可以從報告匯出這些應用程式，然後將其新增到 WIP 原則，以避免造成生產力中斷。
 
 <!-- 1631908 -->
 除了檢視啟用 WIP 之應用程式的資訊外，您也可檢視與網站共用工作資料之裝置的摘要。 您可以藉由這項資訊，決定哪些網站應該加入群組和使用者 WIP 原則。 摘要會顯示啟用 WIP 之應用程式所存取的網站 URL。

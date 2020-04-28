@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d82121fbd3d02c5eef9f45a4e67a897277da9334
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8c3c2719759180fb4b367d46e45a314995b6f425
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357762"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079241"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>開發推出通訊計畫
 
@@ -37,11 +37,11 @@ ms.locfileid: "79357762"
 
 - 通訊的時間表
 
-現在，我們來檢閱每個領域的詳細資訊。
+讓我們更詳細地檢閱每個領域。
 
 ## <a name="what-needs-to-be-communicated"></a>要溝通哪些內容？
 
-在決定要溝通哪些資訊時，應依據您要溝通的 Intune 推出程序時間點而定。 您可能會決定從 Intune 推出啟動、註冊前及註冊後，針對組織群組和使用者進行階段性的通訊。 讓我們來探討適合每一個通訊階段的資訊類型。
+在決定要溝通哪些資訊時，應依據您要溝通的 Intune 推出程序時間點而定。 您可能會決定從 Intune 推出啟動、註冊前及註冊後，針對組織群組和使用者進行階段性的通訊。 讓我們來探討在每一階段可通訊的資訊類型。
 
 **啟動階段** <br/>引入 Intune 專案本身的廣泛通訊。 它應該回答一些問題，例如什麼是 Intune、為什麼組織採用 Intune (對組織和使用者的好處)，以及提供高層級的部署和推出計劃。
 
@@ -73,7 +73,7 @@ ms.locfileid: "79357762"
 
   | **通訊計畫** | **7 月** | **8 月** | **9 月** | **10 月** |
 |:---:|:---:|:---:|:---:|:---:|
-| 階段 1  | 全部： |  |  |  |
+| 階段 1  | 全部 |  |  |  |
 | 啟動會議 | 第一週 |  |  |  |
 | 階段 2 | IT | 銷售與行銷 | 零售 | 人力資源、財務和主管 |
 | 推出前電子郵件 1 | 第一週 | 第一週 | 第一週 | 第一週 |

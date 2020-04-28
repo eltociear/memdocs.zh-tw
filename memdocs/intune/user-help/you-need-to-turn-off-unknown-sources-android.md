@@ -18,18 +18,18 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: ee7c1898315a01872bc47b9928116bc9a487b837
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 449bbd14ae32ca5a8b0d02347b00a827fb714b40
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334674"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080159"
 ---
 # <a name="you-need-to-turn-off-unknown-sources"></a>您必須關閉不明來源
 
 您的 Android 裝置可以安裝來自多個位置的 App。 對於多數使用者而言，Google Play 商店的 App 就已經足夠。 某些 App (如公司開發供內部使用的 App)，可能需要從其他 App 商店安裝。 安裝來自未驗證位置的 App 可能導致裝置發生問題，且可能造成安全性問題。 您公司的支援人員已決定關閉對「未知來源」的存取權，以確保公司資料的安全。
 
-如果您看到訊息「必須停用來自未知來源的安裝」，您必須移至 **[設定]**  > **安全性** (在部分裝置上，這可能會是 **[鎖定畫面與安全性]** )，並關閉 **[不明的來源]** 。
+如果您看到「必須停用來自未知來源的安裝」訊息，就必須移至 [設定]   > [安全性]  (在某些裝置上，這可能會是 [鎖定畫面與安全性]  )，然後關閉 [未知來源]  。
 
 關閉 [未知來源]  之後，可能需要過幾分鐘，您才能繼續使用 Android 裝置來存取公司或學校的資料。
 

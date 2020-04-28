@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6c01abda978cec0b971ae41a977b6e016d68ec12
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fc38d0cbd70faa23f67c7089944b8b4c2cd0f7fc
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704426"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078714"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Configuration Manager 1602 版中的新功能
 
@@ -62,7 +62,7 @@ Configuration Manager 1602 更新僅會以執行 1511 版之原安裝站台的�
 
 -   可用的 Windows 10 升級現在只顯示於 Configuration Manager 主控台的 [Windows 10 服務]   \ [所有 Windows 10 更新]  節點。 這些更新已不再顯示於主控台的 [軟體更新]   \ [所有軟體更新]  節點中。  
 
--   維護計劃被視為是一項高風險部署，[選取集合]  視窗只會顯示與站台內容中所設定之部署驗證設定相符的自訂集合。 如需詳細資訊，請參閱[管理 Configuration Manager 高風險部署的設定](../../servers/manage/settings-to-manage-high-risk-deployments.md)。  
+-   服務方案被視為是一個高風險部署，[選取集合]  視窗只會顯示與站台屬性中所設定部署驗證設定相符的自訂集合。 如需詳細資訊，請參閱[管理 Configuration Manager 高風險部署的設定](../../servers/manage/settings-to-manage-high-risk-deployments.md)。  
 
 -   當使用者啟動 Windows 10 升級套件時，會收到一則即將升級作業系統的訊息。  
 
@@ -181,7 +181,7 @@ Configuration Manager 1602 更新僅會以執行 1511 版之原安裝站台的�
 
     -   進階：可讓使用者修改自動範例檔提交設定。  
 
-    此外，在 Endpoint Protection 反惡意程式碼原則的 [排除設定] 區段中，既有的 [排除檔案及資料夾]  設定現已可排除裝置。  
+    此外，在 Endpoint Protection 反惡意程式碼原則的 [排除設定] 區段中，現有的 [排除檔案及資料夾]  設定現已可以排除裝置。  
 
 如需詳細資訊，請參閱[如何建立和部署 Endpoint Protection 的反惡意程式碼原則](../../../protect/deploy-use/endpoint-antimalware-policies.md)。  
 

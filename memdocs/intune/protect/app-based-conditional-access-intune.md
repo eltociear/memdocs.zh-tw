@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04a8cd4ce64b566bf2d90ef301c1be44589a53e4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 27033c2452224bc93e335f3517c9548ad65666c4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79354187"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080142"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>搭配 Intune 使用以應用程式為基礎的條件式存取
 
@@ -34,9 +34,9 @@ ms.locfileid: "79354187"
 > [!NOTE]
 > 受管理應用程式是已套用應用程式保護原則的應用程式，而且可由 Intune 管理。
 
-當您只允許 Microsoft Outlook 應用程式存取 Exchange Online 時，可以封鎖 iOS/iPadOS 和 Android 上內建的郵件應用程式。 此外，您可以封鎖沒有套用 Intune 應用程式保護原則的應用程式，阻擋它們存取 SharePoint Online。
+當您只允許 Microsoft Outlook 應用程式存取 Exchange Online 時，可以封鎖 iOS/iPadOS 和 Android 上內建的郵件應用程式。 此外，您可以封鎖沒有套用 Intune 應用程式保護原則的應用程式，以阻擋這些應用程式存取 SharePoint Online。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 在您建立以應用程式為基礎的條件式存取原則之前，必須先擁有：
 
@@ -72,7 +72,7 @@ ms.locfileid: "79354187"
 
 5. 訊息代理程式應用程式會確認應用程式的身分。 系統中有一個安全性層級，所以訊息代理程式應用程式才能驗證應用程式是否已獲使用者授權使用。
 
-6. 訊息代理程式應用程式會在使用者驗證程序中，將應用程式用戶端識別碼傳送至 Azure AD，以檢查該應用程式是否在原則核准的清單中。
+6. 訊息代理程式應用程式會在使用者驗證程序中，將「應用程式用戶端識別碼」傳送至 Azure AD，以檢查該應用程式是否在原則核准的清單中。
 
 7. Azure AD 可允許使用者依據原則核准的清單驗證及使用應用程式。 如果應用程式不在清單中，Azure AD 會拒絕對應用程式的存取。
 

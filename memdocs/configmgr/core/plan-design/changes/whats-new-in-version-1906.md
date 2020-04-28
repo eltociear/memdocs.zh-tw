@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 94ad19c2b405af75c7432bb4601098f980c1e821
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c7ad4e96d9afba7e52d2ff2e5dd3f4f6be0b9a98
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702326"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078697"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Configuration Manager 最新分支 1906 版的新功能
 
@@ -371,6 +371,10 @@ OneTrace 是支援中心的新記錄檢視器。 其運作方式與 CMTrace 相�
 - 工作順序會設定新的唯讀變數 **_SMSTSLastContentDownloadLocation**。 這個變數包含下載工作順序或嘗試下載內容的最後一個位置。 您現在只要檢查此變數即可，不再需要剖析用戶端記錄。<!-- 2840337 -->
 
 - 當您建立工作順序媒體時，Configuration Manager 不會新增 autorun.inf 檔案。 此檔案通常會遭到反惡意程式碼軟體產品的封鎖。 如果情況需要，您仍然可以包含此檔案。<!-- 4090666 -->
+
+### <a name="improvements-to-pxe"></a>PXE 的改進
+
+不含 WDS 的 PXE 回應程式現已支援 PXE DHCP 交握期間的選項 82。 WDS 不支援選項 82。
 
 
 ## <a name="software-center"></a><a name="bkmk_userxp"></a> 軟體中心

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23594bd1e728e20deba6d978fc2a1f678d692ff3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b1987783be15bbde704e34bbd21ecd70dc048935
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364470"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078255"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>在 Microsoft Intune 中監視裝置設定檔
 
@@ -104,7 +104,7 @@ DFCI 設定檔會以每個設定為基礎進行報告，和其他裝置組態設
   - UEFI 不允許 DFCI 停用設定，且設定檔的設定是 [已停用]  。
   - 裝置缺乏停用該功能的硬體，且設定檔的設定是 [已停用]  。
   - 裝置沒有最新的 DFCI 韌體版本。
-  - 在於 Intune 中註冊 DFCI 之前，已於 UEFI 功能表中使用本機「退出」控制項來停用 DFCI。
+  - 在於 Intune 中註冊 DFCI 之前，已於 UEFI 功能表中使用本機 [退出] 控制項來停用 DFCI。
   - 裝置是在 Autopilot 註冊之外註冊至 Intune。
   - 裝置不是由 Microsoft CSP 註冊至 Autopilot，或是由 OEM 直接註冊。
 

@@ -10,12 +10,12 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec8292256a55b7fc7d99e07b27ee9dee366cb9a3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a7bbf395a5de98459043609986e51647362e7a0b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689506"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075331"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>使用 Configuration Manager 部署應用程式
 
@@ -265,7 +265,7 @@ ms.locfileid: "81689506"
 
     - 在用戶端設定的 [電腦代理程式]  群組中，排程這些對話方塊。 如需詳細資訊，請參閱[電腦代理程式](../../core/clients/deploy/about-client-settings.md#computer-agent)。  
 
-    - 如果您不想讓使用者看到這些訊息，請在部署內容的 [使用者體驗]  索引標籤上選取 [在軟體中心和所有通知中隱藏]  選項。 如需詳細資訊，請參閱[部署的使用者體驗設定](#bkmk_deploy-ux)。  
+    - 如果您不想讓使用者看到這些訊息，請在部署屬性的 [使用者體驗]  索引標籤上選取 [在軟體中心和所有通知中隱藏]  選項。 如需詳細資訊，請參閱[部署的使用者體驗設定](#bkmk_deploy-ux)。  
 
 - 如果您已將應用程式部署為 [必要]  ，但未指定 [自動關閉您在部署類型屬性對話方塊之 [安裝行為] 索引標籤上所指定且正在執行的可執行檔]  ，則在一或多個指定的應用程式正在執行時，應用程式的安裝會失敗。  
 

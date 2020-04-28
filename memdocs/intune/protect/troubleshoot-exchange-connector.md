@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af44b09f5e539306a24ae0e0294b3ad674f7cb74
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8a2cee7e57f303f798f3484e52462a22e981ed59
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79338548"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079122"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>為 Intune Exchange Connector 進行疑難排解
 
@@ -31,7 +31,7 @@ ms.locfileid: "79338548"
 
 ## <a name="before-you-start"></a>在您開始使用 Intune 之前
 
-在您開始針對 Intune 中的 Exchange Connector 問題進行疑難排解之前，請先收集一些基本資訊，以便在穩固的基礎上運作。 此方法可協助您進一步了解問題的本質，並更快速地解決問題。
+在您開始針對 Intune 中的 Exchange 連接器問題進行疑難排解之前，請先收集一些基本資訊，以便在穩固的基礎上進行工作。 此方法可協助您進一步了解問題的本質，並更快速地解決問題。
 
 - 確認程序符合安裝需求。 請參閱[安裝內部部署 Intune Exchange 連接器](exchange-connector-install.md)。
 - 確認帳戶具有 Exchange 和 Intune 系統管理員權限。
@@ -57,7 +57,7 @@ ms.locfileid: "79338548"
 
 - 確定防火牆和 Proxy 伺服器允許在裝載 Intune Exchange Connector 和 Intune 服務的伺服器之間進行通訊。
 
-- 裝載 Intune Exchange Connector 和 Exchange Client Access Server (CAS) 的電腦應該已加入網域且位於相同 LAN 上。 確定已針對 Intune Exchange Connector 所使用的帳戶新增必要權限。
+- 裝載 Intune Exchange Connector 和 Exchange Client Access Server (CAS) 的電腦應該已加入網域且位於相同 LAN 上。 確定已針對 Intune Exchange 連接器所使用的帳戶新增必要權限。
 
 - 使用通知帳戶來擷取 [自動探索]  設定。 如需 Exchange 中自動探索的詳細資訊，請參閱 [Exchange Server 中的自動探索服務](https://docs.microsoft.com/exchange/architecture/client-access/autodiscover?view=exchserver-2016) (機器翻譯)。
 

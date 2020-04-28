@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2ef5656c2608cee825dc294d87e661c7ad63634
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: dfa559a9c628dfc87c982023e350947d3e9bfeea
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322791"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771479"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>透過 Intune 設定並使用 PKCS 憑證
 
@@ -151,7 +151,7 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
 3. 針對 PKCS #12 的連接器按一下 [下載憑證連接器軟體]  ，並將該檔案儲存到要安裝連接器的伺服器所能存取位置。
 
    ![Microsoft Intune 憑證連接器下載](./media/certficates-pfx-configure/download-ndes-connector.png)
- 
+
 4. 下載完成後，請登入伺服器。 然後：
 
     1. 確定已安裝 .NET 4.5 Framework 或更高版本，這是 NDES 憑證連接器的必要項目。 Windows Server 2012 R2 及更新版本會自動隨附 .NET 4.5 Framework。
@@ -202,7 +202,7 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
 
    選取 [下一步]  。
 
-10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
+10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 請規劃將此憑證設定檔部署到接收 PKCS 憑證設定檔的相同群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
 
     選取 [下一步]  。
 
@@ -260,7 +260,7 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
 
    選取 [下一步]  。
 
-10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
+10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 請規劃將此憑證設定檔部署到接收受信任憑證設定檔的相同群組。如需有關指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
 
     選取 [下一步]  。
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 04991b4856ee45618b15788cb832d915a174b47a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4298a6a66d60d79d05f8b5cdc9ff8caa0e7f4426
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701936"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074022"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Configuration Manager 1606 版中的新功能
 
@@ -75,7 +75,7 @@ Configuration Manager 主控台的 [更新與服務] 節點變更如下︰
 ### <a name="new-distribution-point-update-behavior"></a>新的發佈點更新行為
 1606 版更新所導入的變更，可讓您在安裝未來更新時，提高發佈點的可用性。
 
-如果站台需要自動重新安裝標準及提取發佈點站台系統角色，在您安裝 1606 版更新之後，並接著在該站台安裝更新時，就再也不會同時離線更新所有發佈點。 反之，站台伺服器會使用站台的內容發佈設定，在任何特定時間將更新發佈至發佈點子集。 這樣一來，只有部分發佈點會離線安裝更新。 如此可讓還沒有開始更新或已完成更新的發佈點保持線上狀態，以提供內容給用戶端。
+如果站台需要自動重新安裝標準及提取發佈點站台系統角色，在您安裝 1606 版更新之後，並接著在該站台安裝更新時，就再也不會同時離線更新所有發佈點。 取而代之的是，站台伺服器會使用站台的內容發佈設定，在任何指定時間將更新發佈至一部分發佈點。 這樣一來，只有部分發佈點會離線安裝更新。 如此可讓還沒有開始更新或已完成更新的發佈點保持線上狀態，以提供內容給用戶端。
 
 
 

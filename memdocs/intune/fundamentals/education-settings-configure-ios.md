@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 104996e87c830701b1725129727c76d8c7a09ee3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cf4fc3017ccf3efcf93986544c8a60b60acbf3c8
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344125"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076113"
 ---
 # <a name="how-to-configure-intune-settings-for-the-iosipados-classroom-app"></a>如何設定 iOS/iPadOS Classroom 應用程式的 Intune 設定
 
@@ -97,7 +97,7 @@ iOS 教育設定檔只支援 PFX 憑證。 不支援 SCEP 憑證。
 
 ### <a name="configure-teacher-certificates"></a>設定老師憑證
 
-在 [教育]  窗格中，選擇 [老師憑證]  。
+在 [教育]  窗格中，選擇 [教師憑證]  。
 
 #### <a name="configure-teacher-root-certificate"></a>設定老師根憑證
 

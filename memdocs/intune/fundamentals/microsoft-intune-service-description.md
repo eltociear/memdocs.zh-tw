@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a37971928ab2aef8c5e78e9d0eefb748ecf5f04
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4ca133b1995769f1c4cdfdcaf6b3a8256d7e6d5c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358633"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078835"
 ---
 # <a name="microsoft-intune-service-description"></a>Microsoft Intune 服務描述
 
@@ -62,11 +62,11 @@ Microsoft 提供 Intune 登入權益，適用於合格方案中的合格服務�
 
   - Office 365 訊息中心中的訊息是有目標的。 這表示，如果您的公司沒有 Intune 教育版供應項目，我們將不會傳送有關 Intune 教育版的訊息給您。
 
-  - 訊息過期。 例如，含有「新增功能」頁面連結的服務更新通知，可能會在下次服務更新通知之前過期。 否則，您可能會有大量不再相關的文章待處理項目。
+  - 訊息過期。 例如，含有「新增功能」頁面連結的服務更新通知，可能會在下次服務更新通知之前過期。 否則，您會有大量可能已不再相關的文章待處理項目。
 
   - Office 365 管理行動應用程式可讓您搜尋所有訊息。如果您想要在組織中與同儕分享，也可轉送通知。
 
-  - 在編輯訊息中心喜好設定下，我們最終會有 **Intune** 的切換開關，讓您能夠查看張貼至 Intune 訂閱的這些訊息。 如果您看到 Office 365 的行動裝置管理，那是指不同的服務，不是 Intune。
+  - 在 [編輯訊息中心喜好設定] 底下，我們最終會有 [Intune]  的切換開關，讓您能夠查看這些張貼至 Intune 訂閱的訊息。 如果您看到 Office 365 的行動裝置管理，那是指不同的服務，不是 Intune。
 
 - 我們也會使用兩個部落格來分享 EMS 訊息與 Intune 支援最佳做法：
 
@@ -81,18 +81,18 @@ Microsoft 提供 Intune 登入權益，適用於合格方案中的合格服務�
 
 為了協助您規劃服務變更，我們會根據變更所產生的影響，在服務變更之前至少 7-90 天通知您。 這些變更可能包含以下任何類型的變更：
 
-- 您可能想要與技術服務人員或使用者分享的使用者體驗變更。 我們通常會在 7 到 30 天前為這些變更提供通知，並將這些通知記錄到 [Intune 應用程式 UI 的新功能](whats-new-app-ui.md)。 對於例如拼字錯誤修正之類的問題，我們通常不會在文件中指出。 但使用者註冊體驗中的變更對於 UI 來說已足夠重要，我們會在 Office 365 訊息中心中向客戶張貼訊息，並在 Intune 應用程式 UI 中張貼「新增功能」的連結，如此您便會收到變更內容的通知，並且有時間在變更推出至生產環境前評估和更新您的使用者指引。
+- 您可能想要與技術服務人員或使用者分享的使用者體驗變更。 我們通常會在 7 到 30 天前為這些變更提供通知，並將這些通知記錄到 [Intune 應用程式 UI 的新功能](whats-new-app-ui.md)。 對於例如拼字錯誤修正之類的問題，我們通常不會在文件中指出。 但終端使用者註冊體驗變更在 UI 中已足夠重要，我們會在 Office 365 訊息中心中向客戶張貼訊息，並在 Intune 應用程式 UI 中張貼「新增功能」的連結，如此您便會收到變更內容的通知，而有時間在變更於生產環境中推出前評估和更新您的使用者指引。
 
 - 需要您採取動作的變更稱為**變更計劃**，通常在約約 30 天前提供通知。 在 Office 365 訊息中心中，「類別」專指「變更計劃」，如果我們對生產何時進行變更有確切的日期，我們也會設定一個**最晚行動**日期，讓您能夠看見視覺化佇列與說明標記。
 
-- 針對大部分棄用功能，我們會在 90 天前提供通知。 例如，如果我們不再支援特定版本的 IE，我們的目標是在 90 天前提供通知。 不過，當有另一家公司宣布棄用功能時，棄用功能會變得有點複雜。 例如，某瀏覽器公司通知他們不再其最新組建中支援 Silverlight，因此我們會讓客戶知道我們已停止對該瀏覽器的支援，但我們給客戶的通知會在 90 天的期間以下。
+- 針對大部分棄用功能，我們會在 90 天前提供通知。 例如，如果我們將不再支援特定版本的 IE，我們的目標是在 90 天前提供通知。 不過，當有另一家公司宣布淘汰項時，淘汰情況就會變得複雜。 例如，某瀏覽器公司通知他們不再其最新組建中支援 Silverlight，因此我們會讓客戶知道我們已停止對該瀏覽器的支援，但我們給客戶的通知會在 90 天的期間以下。
 
 - 萬一 Intune 服務停用，將提前在 12 個月之前通知您。
 
-最後，在極少見的情況下，會需要採行任何事件後續動作來讓您的服務回到正軌，或者有我們根據客戶意見反應認定為可能具干擾性的大型變更，我們會依據您設定 [Office 365 通訊喜好設定](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc)的方式以及您是否提供有效 (且最好是可正常收發) 的電子郵件地址來傳送電子郵件給服務系統管理員。  
+最後，在極少見的情況下，例如需要採行任何事件後續動作來讓服務回到正軌的情況，或是有我們根據客戶意見反應認定為可能具干擾性的大型變更情況，我們會依據您設定 [Office 365 通訊喜好設定](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc)的方式及是否提供有效 (且最好是公司) 電子郵件地址，來傳送電子郵件給服務管理員。  
 
 
-<!--- ## Choose the management solution that’s right for you
+<!--- ## Choose the management solution that's right for you
 You can set up Intune in several ways to manage and help protect your company's mobile devices and computers (referred to as **devices** in this article).
 
 - **Intune stand-alone configuration.** Use the web-based admin console in Intune to manage devices in your organization. Intune can be used without any on-premises IT infrastructure. If you use Intune with Active Directory Domain Services, you can use domain user accounts that you manage with Domain Services with Intune.
@@ -100,7 +100,7 @@ You can set up Intune in several ways to manage and help protect your company's 
 --->
 
 ## <a name="language-support"></a>語言支援
-Intune 在 Azure 入口網站執行，並支援下列語言：簡體中文、繁體中文、捷克文、荷蘭文、英文、德文、匈牙利文、義大利文、日文、葡萄牙文 (巴西)、葡萄牙文 (葡萄牙)、俄文、西班牙文、英文、法文、韓文、波蘭文、瑞典文、土耳其文。
+Intune 會在支援下列語言的 Azure 入口網站中執行：簡體中文、繁體中文、捷克文、荷蘭文、英文、德文、匈牙利文、義大利文、日文、葡萄牙文 (巴西)、葡萄牙文 (葡萄牙)、俄文、西班牙文、英文、法文、韓文、波蘭文、瑞典文、土耳其文。
 
 Intune 管理主控台和使用者導向的行動體驗支援丹麥文、希臘文、芬蘭文、挪威文和羅馬尼亞文，以及 Azure 入口網站支援的所有語言。
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d193e067a752e89377b4bec903ff4f890add230
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ac6650f06abddd2633e73f39a6bf72d54e344a61
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325629"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079190"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>針對 Microsoft Intune 中的 BitLocker 原則進行疑難排解
 
@@ -35,7 +35,7 @@ BitLocker 磁碟機加密是 Microsoft Windows 作業系統所提供的服務，
 
 - **裝置設定原則** - 當您建立裝置組態設定檔以管理端點保護時，Intune 中會提供一些內建原則選項。 若要尋找這些選項，請[建立端點保護的裝置設定檔](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings)、針對 [平台]  選取 [Windows 10 和更高版本]  ，然後針對 [設定]  選取 [Windows 加密]  類別。 
 
-   您可以在這裡閱讀可用選項與功能的相關資訊：[Windows 加密](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption)。
+   您可以在這裡閱讀可用選項與功能的相關資訊：[Windows 加密](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption) \(部分機器翻譯\)。
 
 - **安全性基準** - [安全性基準](security-baselines.md)是設定和預設值的已知群組，由相關安全性小組建議，以協助保護 Windows 裝置的安全。 不同的基準來源 (例如 *MDM 安全性基準*或 *Microsoft Defender ATP 基準*) 可以管理相同的設定以及彼此不同的設定。 它們也可以管理您使用裝置設定原則管理的相同設定。 
 
@@ -171,7 +171,7 @@ EncryptionMethodWithXtsRdvDropDown: 6 (The value 6 refers to the 128 bit encrypt
 
 - **確認 Windows 版本支援無訊息加密** 這要求 1803 版的最低版本。 如果使用者不是裝置上的系統管理員，則其需要 1809 版的最低版本。 此外，針對不支援新式待命的裝置，1809 已新增支援
 
-**Bitlocker 加密裝置針對 Intune 合規性原則顯示為 [不符合規範]** - 當 BitLocker 加密未完成時，就會發生此問題。 根據磁碟大小、檔案數目和 BitLocker 設定等因素，BitLocker 加密可能需要很長的時間。 加密完成後，裝置便會顯示為 [符合規範]。 裝置也可能在最近安裝 Windows Update 後，隨即暫時不符合規範。
+**Bitlocker 加密裝置針對 Intune 合規性政策顯示為 [不符合規範]** - 當 BitLocker 加密未完成時，就會發生此問題。 根據磁碟大小、檔案數目和 BitLocker 設定等因素，BitLocker 加密可能需要很長的時間。 加密完成後，裝置便會顯示為 [符合規範]。 裝置也可能在最近安裝 Windows Update 後，隨即暫時不符合規範。
 
 **當原則指定 256 位元時，使用 128 位元演算法對裝置進行加密** -- 根據預設，Windows 10 會使用 XTS-AES 128 位元加密來將磁碟機加密。 請參閱這篇[在 Autopilot 期間為 BitLocker 設定 256 位元加密](https://techcommunity.microsoft.com/t5/intune-customer-success/setting-256-bit-encryption-for-bitlocker-during-autopilot-with/ba-p/323791#) \(英文\) 的指南。
 

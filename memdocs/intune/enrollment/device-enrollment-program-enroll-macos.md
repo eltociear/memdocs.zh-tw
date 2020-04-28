@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1070c7b396ac3c19c340a69b6e2eb8db9d6707b6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e6a62767fdb3e80c7f7f517c06f1e44a6a7423d1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327187"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078000"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>使用 Apple Business Manager 或 Apple School Manager 自動註冊 macOS 裝置
 
@@ -118,7 +118,7 @@ Apple Businesss Manager 註冊或 Apple School Manager 註冊都無法搭配[裝
 5. 針對 [使用者親和性]  ，為具備此設定檔的裝置選擇需要或不需要由指派的使用者來進行註冊。
     - **搭配使用者親和性進行註冊** - 針對屬於使用者且想要使用公司入口網站 App 進行像是安裝應用程式等服務的裝置，選擇此選項。 若使用 ADFS，則使用者親和性需要 [WS-Trust 1.3 使用者名稱/混合端點](https://technet.microsoft.com/library/adfs2-help-endpoints)。 [深入了解](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。具有使用者親和性的 macOS ADE 裝置不支援多重要素驗證。
 
-    - **不搭配使用者親和性進行註冊** - 針對未與任何使用者相關的裝置選擇此選項。 針對執行工作而不需存取本機使用者資料的裝置使用此選項。 公司入口網站應用程式之類的應用程式無法運作。
+    - **不搭配使用者親和性進行註冊** - 針對未與任何使用者相關的裝置選擇此選項。 針對執行工作而不需存取本機使用者資料的裝置使用此選項。 公司入口網站應用程式類的應用程式無法運作。
 
 6. 選擇 [裝置管理設定]  ，並選擇您是否想要針對使用此設定檔的裝置鎖定註冊。 **鎖定的註冊**會停用可將管理設定檔從 [系統喜好設定]  功能表中或透過 [終端機]  移除的 macOS 設定。 註冊裝置之後，必須抹除裝置才能變更此設定。
 

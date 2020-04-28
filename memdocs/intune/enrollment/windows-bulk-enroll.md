@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 077d7c4dd345b9b16677d61269b9f331dedb4dbb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: eabdae9fcc8bdc3b6c93d5b735a5b9fbf4dcf69a
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80488086"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078918"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Windows 裝置的大量註冊
 
@@ -75,7 +75,7 @@ Azure AD 使用者是這些裝置上的標準使用者，並且會接收指派�
 1. 存取應用程式所指定 [Project folder (專案資料夾)]  中指定的佈建套件位置。
 
 2. 選擇將佈建套件套用到裝置的方式。  您可以使用下列其中一種方式將佈建套件套用到裝置：
-   - 將佈建套件置於 USB 磁碟機，將 USB 磁碟機插入要大量註冊的裝置，並在初始安裝期間套用佈建套件
+   - 將佈建套件置於 USB 磁碟機，將 USB 磁碟機插入到要大量註冊的裝置，然後在初始安裝期間套用佈建套件
    - 將佈建套件置於網路資料夾，並在初始安裝之後套用佈建套件
 
    如需套用佈建套件的逐步指示，請參閱[套用佈建套件](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package)。

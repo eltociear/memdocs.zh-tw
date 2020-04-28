@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6dc2c1d4f07e601d98bc2f26ec4766e21a8f1bc7
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5d56d3982a036ace198ceae9bf2d01a8c12de6d5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350664"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079139"
 ---
 # <a name="troubleshoot-conditional-access"></a>條件式存取的疑難排解
 此文章說明您的使用者無法存取使用條件式存取所保護的資源時，或使用者可以存取受保護資源但應該封鎖受保護資源時，該怎麼辦。
@@ -85,7 +85,7 @@ ms.locfileid: "79350664"
 
 ## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>封鎖裝置，而且不會收到任何隔離電子郵件
 
-- 請確認裝置是否在 Intune 管理主控台中顯示為 Exchange ActiveSync 裝置。 如果沒有，則裝置探索可能將失敗，而原因可能是發生 Exchange Connector 問題。 如需詳細資訊，請參閱[針對 Intune 內部部署 Exchange Connector 進行疑難排解](troubleshoot-exchange-connector.md)。
+- 請確認裝置是否在 Intune 管理主控台中顯示為 Exchange ActiveSync 裝置。 如果沒有，則可能是裝置探索失敗，原因可能是 Exchange 連接器發生問題。 如需詳細資訊，請參閱[針對 Intune 內部部署 Exchange Connector 進行疑難排解](troubleshoot-exchange-connector.md)。
 
 - Exchange Connector 封鎖裝置之前，會傳送啟用 (隔離) 電子郵件。 如果裝置離線，則可能不會收到啟用電子郵件。 
 
@@ -105,14 +105,14 @@ ms.locfileid: "79350664"
 
 如果裝置不符合規範，但仍可繼續存取，請採取下列動作。
 
-- 檢閱您的目標和排除群組。 如果使用者不在正確的目標群組，或不在排除群組中，即不會遭到封鎖。 只會檢查目標群組中使用者的裝置合規性。
+- 檢閱您的目標和排除群組。 如果使用者不是在正確的目標群組中，或是在排除群組中，便不會遭到封鎖。 只會檢查目標群組中使用者的裝置相容性。
 
 - 確定已探索到該裝置。 Exchange Connector 指向 Exchange 2010 CAS，但使用者卻在 Exchange 2013 伺服器上？ 在此情況下，如果預設 Exchange 規則為 [允許]，即使是目標群組中的使用者，Intune 仍無法知道該裝置的 Exchange 連線。
 
 - 檢查 Exchange 中的裝置存在/存取狀態︰
-  - 使用這個 PowerShell Cmdlet 取得信箱的所有行動裝置清單："Get-ActiveSyncDeviceStatistics -mailbox mbx'。 如果裝置未列在其中，表示它並未存取 Exchange。
+  - 使用這個 PowerShell Cmdlet，取得信箱的所有行動裝置清單：'Get-ActiveSyncDeviceStatistics -mailbox mbx'。 如果裝置未列出，表示它並未存取 Exchange。
   
-  - 如果列出裝置，請使用 'Get-CASmailbox -identity:’upn’ | fl' Cmdlet 取得其存取狀態的詳細資訊，並將該資訊提供給 Microsoft 支援服務。
+  - 如果裝置被列出，請使用 'Get-CASmailbox -identity:'upn' | fl' Cmdlet 來取得其存取狀態的詳細資訊，並將該資訊提供給 Microsoft 支援服務。
 
 ## <a name="next-steps"></a>後續步驟
 如果這項資訊對您沒有幫助，您也可以[取得 Microsoft Intune 支援](../fundamentals/get-support.md)。

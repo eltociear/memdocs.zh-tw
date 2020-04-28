@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e002b62fb00c4e2e8523848c4c64ad7a54ce024
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 257f717243e021e7fd643a6e7ca41644e4369bcd
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357645"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080125"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>決定使用案例的需求
 
@@ -35,7 +35,7 @@ ms.locfileid: "79357645"
 
 以下是一些組織使用案例需求的範例，其中說明每個使用案例與次要使用案例、組織群組和行動裝置平台的不同需求。 您也可以使用下表來輸入您的組織使用案例需求：
 
-| **使用案例** | **次要使用案例** | **群組** | **裝置平台** | **需求** |
+| **使用案例** | **次要使用案例** | **群組** | **裝置平台** | **Requirements** |
 |:---:|:---:|:---:|:---:|:---:|
 | 公司 | 資訊工作者 | 人力資源、財務 | iOS/iPadOS | 安全電子郵件、裝置設定、設定檔、應用程式 |                                                          
 | 公司 | 主管 | 人力資源、財務 | iOS/iPadOS | 安全電子郵件、裝置設定、設定檔、應用程式 |                                                         
@@ -43,7 +43,7 @@ ms.locfileid: "79357645"
 | BYOD | 資訊工作者 | 行銷、銷售 | iOS/iPadOS | 安全電子郵件、裝置設定、設定檔、應用程式 |                                                         
 | BYOD | 主管 | 行銷、銷售 | iOS/iPadOS | 安全電子郵件、裝置設定、設定檔、應用程式 |
 
-您可以[下載上表的範本](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0)來輸入組織的使用案例和子使用案例需求。
+您可以[下載上表的範本](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0)來輸入組織的使用案例和次要使用案例需求。
 
 
 ## <a name="examples-of-requirements"></a>需求範例

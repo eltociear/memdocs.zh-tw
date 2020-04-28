@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ef37b5f99cda8022166972cdc015a3c60d0458a6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1785880af8c7d0d106abfe3eea8ecd390f6ce6b1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705626"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074447"
 ---
 # <a name="capabilities-in-technical-preview-1604-for-configuration-manager"></a>Configuration Manager Technical Preview 1604 中的功能
 
@@ -39,7 +39,7 @@ ms.locfileid: "81705626"
 
 ##### <a name="scenario-1-set-up-windows-store-for-business-synchronization"></a>案例 1：設定商務用 Windows 市集同步處理  
 
-1.  在 Azure Active Directory 中，將 Configuration Manager 登錄為 [Web 應用程式和/或 Web API] 管理工具。 這會提供您一個稍後將會需要的用戶端識別碼。  
+1.  在 Azure Active Directory 中，將 Configuration Manager 註冊為 [Web 應用程式和/或 Web API] 管理工具。 這會提供您一個稍後將會需要的用戶端識別碼。  
 
     1.  在 [https://manage.windowsazure.com](https://manage.windowsazure.com) 的 [Active Directory]  節點中，選取您的 Azure Active Directory，然後按一下 [應用程式]   >  [新增]  。  
 

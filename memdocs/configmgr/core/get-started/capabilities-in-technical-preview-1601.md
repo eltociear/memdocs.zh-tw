@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ea003aef949f5624591d87dd6105d3a1cff3b691
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2ae184400a3de0d7ab27fffc1ce1e6287593b1ae
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705726"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076300"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Configuration Manager Technical Preview 1601 中的功能
 
@@ -79,9 +79,9 @@ ms.locfileid: "81705726"
 
     若要使用這個選項，您必須在 Configuration Manager 中使用下面所述的特定規則來建立相容性原則，並在 Intune 主控台中設定條件式存取原則。  而且，若要確保只允許相容的電腦進行存取，您必須將 Windows 電腦需求設定為 [裝置必須符合規定]  選項。 以下是適用於 Configuration Manager 所管理電腦的相容原則規則。  
 
-    -   **需要在 Azure Active Directory 中註冊：** 這個規則會檢查使用者的裝置是否為加入 Azure AD 的工作區；如果沒有，則會在 Azure AD 中自動註冊裝置。 在 Windows 8.1 上才支援自動註冊。 在 Windows 7 電腦上，部署 MSI 以執行自動註冊。 如需詳細資訊，請參閱[這裡](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)。  
+    -   **需要在 Azure Active Directory 中註冊：** 這個規則會檢查使用者的裝置是否已加入 Azure AD 的工作場所網路；如果未加入，就會在 Azure AD 中自動註冊裝置。 在 Windows 8.1 上才支援自動註冊。 在 Windows 7 電腦上，部署 MSI 以執行自動註冊。 如需詳細資訊，請參閱[這裡](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)。  
 
-    -   **所有期限超過特定天數的已安裝必要更新：** 這個規則會確認使用者的裝置在您指定的期限和寬限期內是否具有所有必要更新 (在**必要的自動更新**規則中指定)，並會自動安裝任何擱置的必要更新。  
+    -   **所有期限超過特定天數的已安裝必要更新：** 這個規則會確認使用者的裝置在您指定的期限和寬限期內是否具有所有必要更新 (在 [需要自動更新]  規則中指定)，然後自動安裝任何擱置的必要更新。  
 
     -   **需要 BitLocker 磁碟機加密：** 這會確認裝置上的主要磁碟機 (例如 C:\\) 是否為 BitLocker 加密。 如果未在主要裝置上啟用 BitLocker 加密，則會封鎖存取電子郵件和 SharePoint 服務。  
 
@@ -126,7 +126,7 @@ ms.locfileid: "81705726"
 ##  <a name="client-online-status"></a><a name="bkmk_clientStatus"></a> 用戶端線上狀態  
 從 Technical Preview 1601 開始，您在 Configuration Manager 主控台中可以一眼就看出用戶端在線上還是離線。 運用主控台裝置清單中已更新的圖示和資料行，您可以評估環境中用戶端的狀態，找出問題區域以及其他可能需要注意的問題。  
 
-如果用戶端目前連線到 Configuration Manager 管理點站台系統角色，則用戶端在線上。 只要管理點接收來自用戶端的 ping 類似訊息，其狀態會是線上。 如果管理未接收訊息 5 分鐘左右，用戶端的狀態就會變更為離線。  
+如果用戶端目前連線到 Configuration Manager 管理點站台系統角色，則用戶端在線上。 只要管理點接收來自用戶端的 ping 類似訊息，其狀態會是線上。 如果管理持續 5 分鐘左右未接收訊息，用戶端的狀態就會變更為離線。  
 
 ### <a name="icons-for-client-status"></a>用戶端狀態圖示  
 
@@ -180,7 +180,7 @@ ms.locfileid: "81705726"
 -   您必須已部署支援應用程式設定的 iOS 應用程式。  
 
 #### <a name="try-it-out"></a>試試看！  
- 符合上述必要條件之後，您必須建立使用 iOS 部署類型的 Configuration Manager 應用程式。 您使用的應用程式必須支援應用程式設定。 請參閱應用程式的廠商文件，了解您可以設定的特定項目 (名稱/值組)。  
+ 符合上述必要條件之後，您必須建立使用 iOS 部署類型的 Configuration Manager 應用程式。 您使用的應用程式必須支援應用程式設定。 請參考應用程式的廠商文件，以了解您可以設定的具體項目 (名稱/值組)。  
 
  然後，在應用程式部署期間，將應用程式設定原則與 iOS 部署類型建立關聯。 您也可以從 [應用程式設定原則]  節點部署原則，而且目標設為現有應用程式和集合。  
 

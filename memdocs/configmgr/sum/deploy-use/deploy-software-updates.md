@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: 8104bbab04e2c8741bfbbc9c6fb61039033941c9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 00accfc5150226830b68beb194fa168c08148b84
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696136"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110418"
 ---
 # <a name="deploy-software-updates"></a>部署軟體更新  
 
@@ -68,10 +68,9 @@ ms.locfileid: "81696136"
 
 如需詳細資訊和詳細步驟，請參閱[手動部署軟體更新](manually-deploy-software-updates.md)。
 
-> [!Tip]  
-> 在手動部署 Office 365 用戶端更新時，請在 [軟體程式庫]  工作區之 [Office 365 用戶端管理]  下方的 [Office 365 更新]  節點中尋找它們。  
-
-
+> [!Note]
+> - 從 2020 年 4 月 21 日開始，「Office 365 專業增強版」會重新命名為「Microsoft 365 Apps 企業版」  。 如需詳細資訊，請參閱 [Office 365 專業增強版的名稱變更](https://docs.microsoft.com/deployoffice/name-change) \(部分機器翻譯\)。 在主控台正在進行更新時，您在 Configuration Manager 主控台與輔助文件中可能仍會看到提及舊名稱。
+> - 在手動部署 Office 365 用戶端更新時，請在 [軟體程式庫]  工作區之 [Office 365 用戶端管理]  下方的 [Office 365 更新]  節點中尋找它們。 
 
 ## <a name="automatically-deploy-software-updates"></a><a name="bkmk_auto"></a> 自動部署軟體更新
 

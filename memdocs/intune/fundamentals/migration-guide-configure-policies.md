@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f0f4106921f7b4ef1d33e72a217246543512bb5
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2cefc43aa4c1e5031bc1b755a244df54f6442137
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358282"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079989"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>移轉至 Microsoft Intune 時設定裝置合規性和應用程式管理原則
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53f95c83cecbfce68b2370c0c0d4f8e98f856e12
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b8239b750da0d04247608486ea7f3a11ca9c8f86
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326700"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077847"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>新增使用者並授與 Intune 系統管理權限
 
@@ -104,7 +104,7 @@ ms.locfileid: "80326700"
 
 - **全域管理員** - (Office 365 和 Intune) 存取 Intune 中的所有系統管理功能。 註冊 Intune 的人員將成為全域管理員。全域管理員是唯一可以指派其他管理員角色的管理員。 在組織中可以有一個以上的全域管理員。 我們建議的最佳做法是只讓公司內幾位人員擁有此角色，以降低企業風險。
 - **密碼管理員** - (Office 365 和 Intune) 重設密碼、管理服務要求以及監控服務健康狀況。 密碼管理員限於重設使用者的密碼。
-- **服務管理員** - (Office 365 和 Intune) 開啟 Microsoft 的支援要求，以及檢視服務儀表板和訊息中心。 除了開啟及讀取支援票證之外，他們擁有「僅檢視」權限。
+- **服務管理員** - (Office 365 和 Intune) 開啟 Microsoft 的支援要求，以及檢視服務儀表板和訊息中心。 除了開啟及讀取支援票證之外，他們還擁有「僅檢視」權限。
 - **計費管理員** - (Office 365 和 Intune) 進行採購、管理訂閱、管理支援票證以及監控服務健康狀況。
 - **使用者管理員** - (Office 365 和 Intune) 重設密碼、監控服務健全狀況、新增和刪除使用者帳戶和管理服務要求。 使用者管理管理員無法刪除全域管理員、建立其他管理員角色，或重設其他管理員的密碼。
 - **Intune 服務管理員** - 除了使用 [目錄角色]  選項建立系統管理員之權限以外的所有 Intune 全域管理員權限。

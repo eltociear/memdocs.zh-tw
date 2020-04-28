@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7fd1a1567096f804b56c5f141fccfc825f4a02e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6c0dab3c84e3a87048a8071c591722c63d89ad69
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79360310"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078119"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>使用 Intune App Wrapping Tool 準備應用程式保護原則的 Android 應用程式
 
 使用 Microsoft Intune App Wrapping Tool for Android 變更內部 Android 應用程式的行為，讓您限制應用程式的功能，而不需變更應用程式本身的程式碼。
 
-此工具是一個 Windows 命令列應用程式，可在 PowerShell 中執行並在您的 Android 應用程式周圍建立包裝函式。 包裝好應用程式後，您便可以在 Intune 中設定[行動應用程式管理原則](../apps/app-protection-policies.md)，變更應用程式功能。
+此工具是一個 Windows 命令列應用程式，可在 PowerShell 中執行並在您的 Android 應用程式周圍建立包裝函式。 包裝好應用程式後，您便可以透過在 Intune 中設定[行動應用程式管理原則](../apps/app-protection-policies.md)，以變更應用程式的功能。
 
 執行此工具之前，請檢閱[執行 App Wrapping Tool 的安全性考量](#security-considerations-for-running-the-app-wrapping-tool)。 若要下載此工具，請前往 GitHub 的 [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android)。
 
@@ -54,9 +54,9 @@ ms.locfileid: "79360310"
     > [!NOTE]
     > Intune App Wrapping Tool d不支援 Google 的 v2 與即將推出的 v3 應用程式簽署配置。 使用 Intune App Wrapping Tool 封裝 .apk 檔案之後，建議使用 [Google 提供的 Apksigner 工具]( https://developer.android.com/studio/command-line/apksigner)。 這將可確保一旦您的應用程式到達使用者裝置，就可由 Android 標準適當地啟動。 
 
-- (選擇性) 應用程式有時可能會達到 Dalvik 可執行檔 (DEX) 大小限制，因為包裝期間新增 Intune MAM SDK 類別。 DEX 檔案是 Android 應用程式編譯的一部分。 Intune App Wrapping Tool 會在最低 API 層級 21 或以上的應用程式包裝期間，自動處理 DEX 檔案溢位 (直至 [v.1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases))。 針對最低 API 層級為 < 21 的應用程式，最佳做法是使用包裝函式的 `-UseMinAPILevelForNativeMultiDex` 旗標來提高最低 API 層級。 若客戶無法增加應用程式的最低 API 層級，可使用下列 DEX 溢位解決方法。 在某些組織中，這可能需要與編譯應用程式的人員 (即應用程式建置小組) 合作：
+- (選擇性) 應用程式有時可能會達到 Dalvik 可執行檔 (DEX) 大小限制，因為包裝期間新增 Intune MAM SDK 類別。 DEX 檔案是 Android 應用程式編譯的一部分。 Intune App Wrapping Tool 會在最低 API 層級 21 或以上的應用程式包裝期間，自動處理 DEX 檔案溢位 (直至 [v.1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases))。 針對最低 API 層級為 < 21 的應用程式，最佳做法是使用包裝函式的 `-UseMinAPILevelForNativeMultiDex` 旗標來提高最低 API 層級。 若客戶無法增加應用程式的最低 API 層級，可使用下列 DEX 溢位因應措施。 在某些組織中，這可能需要與編譯應用程式的人員 (即應用程式建置小組) 合作：
 
-  - 請使用 ProGuard 從應用程式的主要 DEX 檔案排除未使用類別參考。
+  - 請使用 ProGuard 從應用程式的主要 DEX 檔案排除未使用的類別參考。
   - 針對使用 v 3.1.0 或更高版本 Android Gradle 外掛程式的客戶，請停用 [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html)。  
 
 ## <a name="install-the-app-wrapping-tool"></a>安裝應用程式包裝工具

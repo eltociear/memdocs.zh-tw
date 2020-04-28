@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8caf05a2869088fd4f8206d1306d82c696f527a2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b83092521f1ab0058d47d599e7fd9c10c2fd6d35
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81638217"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077762"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-intercede"></a>使用公司入口網站和 Intercede 設定 iOS 或 iPadOS 裝置
 
@@ -44,7 +44,7 @@ ms.locfileid: "81638217"
 
 
 ## <a name="what-are-derived-credentials"></a>什麼是衍生認證？  
-衍生認證是衍生自智慧卡認證並安裝在裝置上的憑證。 它會授與公司資源的遠端存取權，同時防止未經授權的使用者存取機密資訊。  
+衍生認證是衍生自您的智慧卡認證並安裝在您裝置上的憑證。 它會授與公司資源的遠端存取權，同時防止未經授權的使用者存取機密資訊。  
 
 衍生認證可用來： 
 * 驗證登入學校或公司應用程式、Wi-Fi 和 VPN 的學生和員工
@@ -52,7 +52,7 @@ ms.locfileid: "81638217"
 
 衍生認證是適用於衍生個人識別驗證 (PIV) 認證的國家標準暨技術研究院 (NIST) 指導方針實作，是特殊發行集 (SP) 800-157 的一部分。  
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
  若要完成註冊，則必須具備：
 

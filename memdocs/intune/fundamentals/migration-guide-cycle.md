@@ -17,18 +17,18 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d5a9c1fab01393f45c877165230ae68118b1113
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cdef53672c46fe4e49a5d21a22e585654c504f03
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358217"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075943"
 ---
 # <a name="typical-migration-cycle"></a>典型的移轉週期
 
-組織通常會以 IT 部門中少部分的使用者為目標，以小型試驗開始其 Intune 移轉。 此外，您的組織可能需要討論像是群組變更意願、使用者數目、複雜度、需求、位置及業務風險等因素，以協助決定移轉的時間範圍。
+組織通常會以 IT 部門中一部分的使用者為目標，以小型試驗開始其 Intune 移轉。 此外，您的組織可能需要討論像是群組變更意願、使用者數目、複雜度、需求、位置及業務風險等因素，以協助決定移轉的時間範圍。
 
-下列是如何排程目標群組的一個範例︰
+以下是一個示範如何排定目標群組的範例︰
 
   | **移轉的目標群組** | **時間週期 1** | **時間週期 2** | **時間週期 3** | **時間週期 4** | **...**
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -63,4 +63,4 @@ Intune 提供幾種監視移轉的方式：
 
 ## <a name="post-migration"></a>移轉後
 
-移轉到 Intune 之後，請淘汰先前的 MDM 提供者和取消訂閱服務。 此外，還請依照 MDM 提供者的指示，移除任何不必要的基礎結構需求。
+移轉到 Intune 之後，請淘汰先前的 MDM 提供者和取消訂閱服務。 此外，也請依照 MDM 提供者的指示，移除任何不必要的基礎結構需求。

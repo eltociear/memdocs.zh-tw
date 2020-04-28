@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 347b64317d39be587acccbabc6530019f13c152d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b712b0365505ce4dab6162640cc8440799f2948b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344060"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079445"
 ---
 # <a name="what-to-expect-when-your-android-app-is-managed-by-app-protection-policies"></a>當 Android 應用程式交由應用程式保護原則管理時的行為
 
@@ -78,7 +78,7 @@ ms.locfileid: "79344060"
 
 |**pfile**|
 |----|
-|Pfile 是適用於受保護檔案的泛型「包裝函式」格式，它會封裝已加密的內容和 Azure 資訊保護授權。 它可用來保護任何檔案類型。|
+|Pfile 是適用於受保護檔案的泛型「包裝函式」格式，可封裝已加密的內容和「Azure 資訊保護」授權。 它可用來保護任何檔案類型。|
 
 ## <a name="next-steps"></a>後續步驟
 [當 iOS/iPadOS 應用程式交由應用程式保護原則管理時的行為](end-user-mam-apps-ios.md)

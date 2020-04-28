@@ -17,16 +17,16 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46e717478078ab13cc2c8783cdacbde0911e83a5
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cb0b8bdc3fb5ed13f68ab2e261ada091e245ac1d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358191"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079666"
 ---
 # <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>階段 1：準備 Microsoft Intune 以用於行動裝置管理 (MDM)
 
-在探究設定 Intune 的詳細資訊之前，讓我們先檢閱您組織的行動裝置管理需求。 它可能有助於在目前的 MDM 提供者中執行作用中使用者的報告，以識別重要的使用者群組。 然後，您就可以開始處理[評估 MDM 需求](migration-guide-prepare.md#assess-mdm-requirements)一節中的問題。
+在深入鑽研設定 Intune 的詳細資料之前，讓我們先檢閱您組織的行動裝置管理需求。 它可能有助於在目前的 MDM 提供者中執行作用中使用者的報告，以識別重要的使用者群組。 然後，您就可以開始處理[評估 MDM 需求](migration-guide-prepare.md#assess-mdm-requirements)一節中的問題。
 
 ## <a name="assess-mdm-requirements"></a>評估 MDM 需求
 

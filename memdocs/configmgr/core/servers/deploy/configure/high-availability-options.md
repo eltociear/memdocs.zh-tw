@@ -10,12 +10,12 @@ ms.assetid: 1a38421d-24c1-4fef-bf6c-42fce53109ac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 32083deb30d3d7345ccad8d31541d3c641eb10c0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cf8714aff7235736628d44238561eea82b896698
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707266"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073308"
 ---
 # <a name="high-availability-options-for-configuration-manager"></a>Configuration Manager 的高可用性選項
 
@@ -221,7 +221,7 @@ Configuration Manager 用戶端自主性包括下列行為︰
 
 ### <a name="central-management-of-client-data-and-client-identity"></a>用戶端資料與用戶端識別身分的中央管理
 
-站台資料庫 (而非個別用戶端) 會保留有關各個用戶端識別身分的資訊，並且為該資料與特定電腦或使用者建立關聯性。  
+站台資料庫 (而非個別用戶端) 會保留每個用戶端識別身分的相關重要資訊，並將該資料與特定電腦或使用者建立關聯。  
 
 - 電腦上的用戶端來源檔案可以解除安裝與重新安裝，完全不會影響用戶端安裝所在電腦的歷程記錄。  
 

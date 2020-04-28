@@ -15,18 +15,18 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bc28f1b5170fb955f8614f098a46ed0c66a9f3a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f5d0e809e834a82f192128263742bc2b9b0024a2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344372"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079275"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>使用 Microsoft Enterprise Mobility + Security (EMS) 啟用 BYOD 的技術決策
 
 當您開發策略，讓員工在自己的裝置 (BYOD) 上從遠端工作時，您需要在這些狀況中進行重大決定，啟用 BYOD 以及如何保護公司資料。 幸運的是，EMS 以完整解決方案集提供您需要的所有功能。  
 
-在本主題中，我們會檢查啟用 BYOD 存取公司電子郵件的簡單使用案例。 我們會將焦點放在您需要管理整部裝置或只管理應用程式，兩者都是完全有效的選項。
+在本主題中，我們會檢查啟用 BYOD 存取公司電子郵件的簡單使用案例。 我們會將焦點放在您是需要管理整部裝置，還是只需管理應用程式，兩者都是完全有效的選項。
 
 ## <a name="assumptions"></a>假設
 * 您有 Azure Active Directory 和 Microsoft Intune 的基本知識
@@ -60,7 +60,7 @@ ms.locfileid: "79344372"
 * 登入風險等級
 * 裝置平台
 
-但許多組織通常仍有在意的特定風險。  下表列出常見考量，以及 MDM 與 MAM 對該考量的回應。
+儘管如此，許多組織通常仍有在意的特定風險。  下表列出常見考量，以及 MDM 與 MAM 對該考量的回應。
 
 | 考量   |   MDM  |   MAM  |
 |------------|--------|--------|
@@ -82,6 +82,6 @@ ms.locfileid: "79344372"
 |意外的資料共用或儲存至不安全的位置 | 停用列印 | n/a|
 
 ## <a name="next-steps"></a>後續步驟
-現在要將焦點放在裝置管理、應用程式管理或兩者的組合，決定您組織中是否啟用 BYOD。 實作選擇的決定權在您，以確保無論如何都能使用 Azure AD 提供的身分識別和安全性功能。  
+現在將把焦點放在裝置管理、應用程式管理或兩者的組合，以決定是否要在您的組織啟用 BYOD。 實作選擇的決定權在您，以確保無論如何都能使用 Azure AD 提供的身分識別和安全性功能。  
 
 使用 Intune [規劃指南](planning-guide.md)規劃下一個層級。

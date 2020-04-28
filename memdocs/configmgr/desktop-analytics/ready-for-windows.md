@@ -2,7 +2,7 @@
 title: Ready for Windows
 titleSuffix: Configuration Manager
 description: 關於 Ready for Windows 網站的淘汰
-ms.date: 10/30/2019
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: da56dbe1a363606e50569db8be10d65d10d1b422
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b3f378ce519085eb1d2714a901e20b29b62b0cd4
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695566"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82109976"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Ready for modern desktop 淘汰的常見問題集
 
@@ -31,6 +31,9 @@ ms.locfileid: "81695566"
 *Ready for modern desktop* 目錄已列出軟體解決方案，這些解決方案可支援並使用於執行 Windows 10 與 Office 365 ProPlus 的商業裝置上。 此目錄可協助正為其部署而考慮最新版本 Windows 10 與 Office 365 的 IT 主管。
 
 根據 IT 主管們的意見反應，其希望將這些見解與已經用於部署計劃的工具整合在一起。 使用[電腦分析](https://aka.ms/dadocs)與 [Office 365 ProPlus 整備功能](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch)在 Configuration Manager 中規劃及管理 Windows 10 與 Office 365 ProPlus 升級專案。 
+
+> [!Note]
+> 從 2020 年 4 月 21 日開始，「Office 365 專業增強版」會重新命名為「Microsoft 365 Apps 企業版」  。 如需詳細資訊，請參閱 [Office 365 專業增強版的名稱變更](https://docs.microsoft.com/deployoffice/name-change) \(部分機器翻譯\)。 在主控台正在進行更新時，您在 Configuration Manager 主控台與輔助文件中可能仍會看到提及舊名稱。
 
 ### <a name="what-is-desktop-analytics"></a>什麼是電腦分析？
 

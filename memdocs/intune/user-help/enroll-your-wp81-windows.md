@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 84a7f679cc071a3e8d339fd29e278dfde6eef28c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 08a6cf6eed86836c8fe887265faddb1459918aea
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79348194"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074753"
 ---
 # <a name="enroll-your-windows-phone-81-device-in-intune"></a>在 Intune 註冊 Windows Phone 8.1 裝置  
 
@@ -35,7 +35,7 @@ ms.locfileid: "79348194"
 ## <a name="enroll-through-company-portal"></a>透過公司入口網站註冊  
 如果您可以從 Microsoft Store 安裝公司入口網站應用程式，請遵循下列步驟。 
 
-1. 點選 [開始]   >  [存放區]  。  
+1. 點選 [開始]   > [市集]  。  
 
 2. 點選 [搜尋]  ，然後鍵入**公司入口網站**。  
 
@@ -54,7 +54,7 @@ ms.locfileid: "79348194"
 1. 在裝置上，開啟 [Microsoft Intune 公司入口網站]  應用程式。  
 
 
-2. 提供您的認證。 如果適用的話，系統可能會要求您接受貴公司的條款和條件。  
+2. 提供您的認證。 系統可能會要求您接受貴公司的條款和條件 (如果適用)。  
 
 3. 滑到 [我的裝置]  。  
 

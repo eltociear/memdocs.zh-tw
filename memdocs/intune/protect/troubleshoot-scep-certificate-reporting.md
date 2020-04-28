@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93bacecf2829b1e7119f909c14ce9ab44a8f6d2f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f4b374d79d689e1ecad8124489fe5023378bd4f1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79349897"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079071"
 ---
 # <a name="troubleshoot-ndes-reporting-of-certificate-deployments-in-microsoft-intune"></a>針對 Microsoft Intune 中憑證部署的 NDES 報告進行疑難排解
 
@@ -61,7 +61,7 @@ ms.locfileid: "79349897"
 
 ### <a name="troubleshoot-stuck-files"></a>針對停滯的檔案進行疑難排解
 
-如果您沒有在 *Succeed* 資料夾中看到任何新檔案，請檢查 *Processing* 資料夾中是否有任何檔案停滯。
+如果您沒有在 [Succeed]  資料夾中看到建立任何新檔案，請檢查是否有任何檔案停滯在 [Processing]  資料夾中。
 
 確認已在 NDES 伺服器上啟動 Intune 連接器服務，且 Ndesconnector.svclog 中沒有任何錯誤。
 

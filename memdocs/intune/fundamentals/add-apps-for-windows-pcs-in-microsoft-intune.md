@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2c5590acd870e2623491052ba43bf29e4676568
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d9ad6414bd0565389b39cc97322341ada0b4b4c4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344359"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079292"
 ---
 # <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>為執行 Intune 軟體用戶端的 Windows 電腦新增應用程式
 
@@ -53,7 +53,7 @@ ms.locfileid: "79344359"
    - [指定軟體安裝檔的位置]  。 輸入安裝檔的位置，或選擇 [瀏覽]  以從清單中選取位置。
    - [包含同一個資料夾的其他檔案和子資料夾]  。 某些使用 Windows Installer 的軟體會需要支援檔案。 這些必須位於安裝檔所在的相同資料夾中。 如果您也想要部署這些支援檔案，請選取這個選項。
 
-   例如，如果想要將名為 Application.msi 的應用程式發行到 Intune，頁面將如下所示︰![發行者的軟體安全程式頁面](./media/add-apps-for-windows-pcs-in-microsoft-intune/publisher-for-pc.png)
+   例如，如果想要將應用程式命名的 Application.msi 發行到 intune，頁面將如下所示︰![發佈工具的 [軟體設定] 頁面](./media/add-apps-for-windows-pcs-in-microsoft-intune/publisher-for-pc.png)
 
    這個安裝類型會佔用部分雲端儲存空間。
 
@@ -84,13 +84,13 @@ ms.locfileid: "79344359"
 
    如果應用程式符合任何已設定的規則，則不會進行安裝。
 
-6. 僅限 **Windows Installer** 檔案類型 (.msi 和 .exe)：在 [命令列引數]  頁面上，選擇您是否想為安裝程式提供選擇性的命令列引數。
+6. 僅限 **Windows Installer** 檔案類型 (.msi 和 .exe)：在 [命令列引數]  頁面上，選擇是否想為安裝程式提供選擇性的命令列引數。
    Intune 會自動新增下列參數︰
    - 針對 .exe 檔案，會新增 **/install**。
    - 針對 .msi 檔案，會新增 **/quiet**。
    請注意，只有在應用程式套件建立者啟用此項目的功能時，這些選項才會運作。
 
-7. 僅限 **Windows Installer** 檔案類型 (僅限 .exe)：您可以在 [傳回碼]  頁面上，新增應用程式在受管理 Windows 電腦上進行安裝時，供 Intune 解譯的新錯誤碼。
+7. 僅限 **Windows Installer** 檔案類型 (僅限 .exe)：您可以在 [傳回碼]  頁面上，新增應用程式在受控 Windows 電腦上進行安裝時，供 Intune 解譯的新錯誤碼。
 
    根據預設，Intune 會使用業界標準的傳回碼來回報應用程式套件安裝失敗或成功：**0** (成功) 或 **3010** (成功但需要重新啟動)。 您也可以將自己的傳回碼新增至這份清單。 如果您指定了傳回碼清單，但應用程式安裝傳回不在清單中的代碼，則會解譯為失敗。
 
@@ -104,4 +104,4 @@ ms.locfileid: "79344359"
 
 完成建立應用程式後，下一個步驟是進行部署。 如需詳細資訊，請參閱[使用 Microsoft Intune 將應用程式指派給群組](../apps/apps-deploy.md)。
 
-如果您想要閱讀將軟體部署到 Windows 電腦之秘訣和技巧的詳細資訊，請參閱部落格文章：[Support Tip: Best Practices for Intune Software Distribution to PC’s](https://support.microsoft.com/en-US/help/2583929) (支援秘訣：將 Intune 軟體部署到電腦的最佳做法)。
+如果想要閱讀將軟體部署至 Windows 電腦的祕訣和技巧詳細資訊，請參閱部落格文章：[支援祕訣：將 Intune 軟體發佈到電腦的最佳做法](https://support.microsoft.com/en-US/help/2583929) \(機器翻譯\)。

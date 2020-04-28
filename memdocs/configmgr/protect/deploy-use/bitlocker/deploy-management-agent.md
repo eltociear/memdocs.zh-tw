@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: be5ecd02817d315da4a3bea1f21285eb5a77d77e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 96594731ef64577d30267376d3bcb93268e59a9e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709356"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075008"
 ---
 # <a name="deploy-bitlocker-management"></a>部署 BitLocker 管理
 
@@ -194,6 +194,19 @@ Configuration Manager 不會重新加密已經使用 BitLocker 磁碟機加密�
 例如，您使用 MBAM 來加密不具 PIN 保護的磁碟機，但 Configuration Manager 原則需要 PIN。 該磁碟機會因此不符合原則的規範，即使該磁碟機已加密也一樣。
 
 若要解決此行為，請先停用裝置上的 BitLocker。 然後部署具有新設定的新原則。
+
+## <a name="co-management-and-intune"></a>共同管理與 Intune
+
+<!-- SCCMDocs#2321 -->
+
+適用於 BitLocker 的 Configuration Manager 用戶端處理常式是共同管理感知的。 如果裝置是共同管理的，而您將 [Endpoint Protection 工作負載](../../../comanage/workloads.md#endpoint-protection)切換至 Intune，則 Configuration Manager 用戶端會忽略其 BitLocker 原則。 裝置會從 Intune 取得 Windows 加密原則。
+
+當您切換加密管理授權單位時，請為[重新加密](#re-encryption)做規劃。
+
+如需有關使用 Intune 來管理 BitLocker 的詳細資訊，請參閱下列文章：
+
+- [搭配 Intune 使用裝置加密](../../../../intune/protect/encrypt-devices.md#bitlocker-encryption-for-windows-10)
+- [針對 Microsoft Intune 中的 BitLocker 原則進行疑難排解](../../../../intune/protect/troubleshoot-bitlocker-policies.md)
 
 ## <a name="next-steps"></a>後續步驟
 

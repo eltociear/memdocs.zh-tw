@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2d058da21a0ab9afea68b1f9cc1be4a73930d43
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 92eafef5bac7f1008284f896b85981d170331382
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351171"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079207"
 ---
 <!-- This article contains the exact baseline details for baseline versions that were previously published in security-baseline-settings-mdm.md.  -->
 
@@ -140,7 +140,7 @@ ms.locfileid: "79351171"
   **預設**：是  
   
 - **封鎖密碼管理員**  
-  根據預設，Microsoft Edge 會自動使用密碼管理員，讓使用者能夠在本機管理密碼。 停用此原則會限制 Microsoft Edge，使其無法使用密碼管理員。 如果您想要讓使用者選擇使用密碼管理員在本機儲存並管理密碼，就不要設定此原則。
+  根據預設，Microsoft Edge 會自動使用密碼管理員，讓使用者能夠在本機管理密碼。 停用此原則會限制 Microsoft Edge，使其無法使用密碼管理員。 如果想要讓使用者選擇使用密碼管理員在本機儲存並管理密碼，就不要設定此原則。
   
   **預設**：是  
   
@@ -297,7 +297,7 @@ ms.locfileid: "79351171"
       *設為 [是]，可防止使用簡單密碼。* 
 
   - **不得重複使用以前用過的密碼**  
-    指定可以將多少密碼儲存於無法使用的記錄中。 值會包含使用者的目前密碼。 例如，設定為 *1* 時，使用者在選擇新密碼時無法重複使用其目前的密碼。 設定為 *5* 表示使用者無法將其新密碼設定為其目前的密碼或先前使用過的四個密碼。
+    指定可以將多少個密碼儲存在無法使用的記錄中。 值會包含使用者的目前密碼。 例如，設定為 *1* 時，使用者在選擇新密碼時無法重複使用其目前的密碼。 設定為 *5* 表示使用者無法將其新密碼設定為其目前的密碼或先前使用過的四個密碼。
     
     **預設**：24  
 
@@ -581,7 +581,7 @@ ms.locfileid: "79351171"
   此原則設定可讓您決定是否可以在特定 Internet Explorer 區域的網頁上執行 VBScript。 這些選項包括： 
   - 啟用  - 不需要任何操作即可在特定區域的網頁上執行 VBScript。 
   - 提示  - 系統會提示員工是否要允許在區域中執行 VBScript。 
-  - 停用  - 防止在區域中執行 VBScript。 如果您停用或未設定此原則設定，則不需要任何操作即可在指定的區域中執行 VBScript。 
+  - 停用  - 防止在區域中執行 VBScript。 如果停用或未設定此原則設定，則不需要任何操作即可在指定的區域中執行 VBScript。 
   
   **預設**：停用  
   

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b05d89c40f274a7cacc29634fcf60433019c7e1f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4da13b77b52a8110072dcba208b70d1ce0407cbb
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327091"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077983"
 ---
 # <a name="set-enrollment-restrictions"></a>設定註冊限制
 
@@ -143,7 +143,7 @@ ms.locfileid: "80327091"
 - 註冊使用者會使用[裝置註冊管理員帳戶]( device-enrollment-manager-enroll.md)。
 - 裝置透過 [Windows Autopilot](enrollment-autopilot.md) 註冊。
 - 裝置已向 Windows Autopilot 註冊，但不是 Windows 設定中的 [僅限 MDM 註冊] 選項。
-- 裝置的 IMEI 編號列在 [裝置註冊]   > [[公司裝置識別碼](corporate-identifiers-add.md)]  (不支援 Windows Phone 8.1)。
+- 裝置的 IMEI 編號列在 [裝置註冊]   > [[公司裝置識別碼](corporate-identifiers-add.md)]  中。 (不支援 Windows Phone 8.1)。
 - 裝置透過[大量佈建套件](windows-bulk-enroll.md)註冊。
 - 裝置透過 GPO 註冊，或透過[從 Configuration Manager 自動註冊以共同管理](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1)方式註冊。
  

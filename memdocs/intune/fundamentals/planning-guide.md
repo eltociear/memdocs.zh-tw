@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6327de8fd4543f60d66eedc3ac6b86b8275f2ca2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65d4745580a4b0d733ffe14be03f0f9893074586
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357216"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080091"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Intune 部署規劃、設計和實作指南
 
@@ -33,23 +33,23 @@ ms.locfileid: "79357216"
 
 本指南包含將引導您完成部署 Intune 之端對端程序的章節。 從第 1 節開始釐清您的目的、目標和挑戰。 然後根據您需要的順序前往第 2 - 7 節。 您不需要依序閱讀這些章節；您可以同時閱讀這些章節。
 
-- [第 1 節︰判斷部署目的、目標和挑戰](planning-guide-deployment-goals.md)
+- [第 1 節：判斷部署目的、目標和挑戰](planning-guide-deployment-goals.md)
 
-- [第 2 節︰識別使用案例](planning-guide-scenarios.md)
+- [第 2 節：識別使用案例](planning-guide-scenarios.md)
 
-- [第 3 節︰決定使用案例需求](planning-guide-requirements.md)
+- [第 3 節：決定使用案例需求](planning-guide-requirements.md)
 
-- [第 4 節︰開發推出計畫](planning-guide-rollout-plan.md)
+- [第 4 節：開發推出計畫](planning-guide-rollout-plan.md)
 
 - [第 5 節︰開發推出通訊計畫](planning-guide-communication-plan.md)
 
-- [第 6 節︰開發支援計畫](planning-guide-support-plan.md)
+- [第 6 節：開發支援計畫](planning-guide-support-plan.md)
 
-- [第 7 節︰建立 Intune 設計](planning-guide-design.md)
+- [第 7 節：建立 Intune 設計](planning-guide-design.md)
 
-- [第 8 節︰Intune 實作](planning-guide-onboarding.md)
+- [第 8 節：Intune 實作](planning-guide-onboarding.md)
 
-- [第 9 節︰測試與驗證](planning-guide-test-validation.md)
+- [第 9 節：測試與驗證](planning-guide-test-validation.md)
 
 本指南也會提供其他技術資訊，以及可用來協助您使用 Intune 部署規劃、設計和實作程序的資料表範本。
 

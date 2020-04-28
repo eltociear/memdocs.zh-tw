@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ea760ef125ce2d6d7d0446564be3b2b27a6038ce
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: bee0f037e1695112739a898c75a67d232ea722d8
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335129"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079938"
 ---
 # <a name="why-enroll-your-android-device"></a>為什麼註冊您的 Android 裝置  
 
@@ -66,7 +66,7 @@ ms.locfileid: "79335129"
 ## <a name="permits-company-support-access-to-your-device"></a>允許公司支援人員存取您的裝置
 當您註冊裝置時，即允許您公司的支援人員或 IT 管理員在有限且有意義的理由下存取裝置。 他們可以：  
 
-* 將裝置重設為製造商的預設值。 如前所述，您也有權重設裝置。 不過，如果您無法立即存取公司入口網站應用程式，您的公司可以為您重設裝置。  
+* 將您的裝置重設回製造商的預設值。 如前所述，您也有權重設裝置。 不過，如果您無法立即存取公司入口網站應用程式，您的公司可以為您重設裝置。  
 
 * 移除所有公司相關資料。 如果您離職或您的裝置變成不受管理，您的組織可能會從您的裝置移除公司相關資料。 您的個人資料和設定不會被移除，而會保留在裝置上。  
 

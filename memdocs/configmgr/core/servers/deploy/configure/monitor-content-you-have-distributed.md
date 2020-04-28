@@ -10,12 +10,12 @@ ms.assetid: 82e8a693-9adf-4ca3-8484-7e101c34c7c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 31edf096c57b726c3723d261db7a3103fcc311f0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fafcbffe3231af78ae3a079061accc9f112a181c
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701126"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110010"
 ---
 # <a name="monitor-content-you-distribute-with-configuration-manager"></a>監視您使用 Configuration Manager 發佈的內容
 
@@ -157,7 +157,7 @@ ms.locfileid: "81701126"
 - [BranchCache](../../../plan-design/configs/support-for-windows-features-and-networks.md#bkmk_branchcache)
 - [對等快取](../../../plan-design/hierarchy/client-peer-cache.md)
 - [傳遞最佳化](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization) (從 1906 版開始)<sup>[附註 1](#bkmk_note1)</sup>
-- Microsoft Update：當 Configuration Manager 用戶端從 Microsoft 雲端服務下載軟體更新時，裝置會回報此來源。 這些服務包括 Microsoft Update 與 Office 365。
+- Microsoft Update：當 Configuration Manager 用戶端從 Microsoft 雲端服務下載軟體更新時，裝置會回報此來源。 這些服務包括 Microsoft Update 與 Microsoft 365 Apps 企業版。
 
 ![儀表板的用戶端內容來源圖格](media/3555759-do-source.png)
 

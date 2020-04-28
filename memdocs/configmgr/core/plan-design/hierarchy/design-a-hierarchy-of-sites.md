@@ -10,12 +10,12 @@ ms.assetid: 07ce872e-1558-42ad-b5ad-582c5b1bdbb4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3c642e97589ff345e4eb3a17b63b3fdfbc2891f9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1e14cf57e962d7bc90cc39db9ecfea68d9c5b00e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703586"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073342"
 ---
 # <a name="design-a-hierarchy-of-sites-for-configuration-manager"></a>為 Configuration Manager 設計站台階層
 
@@ -61,7 +61,7 @@ ms.locfileid: "81703586"
 
 ### <a name="standalone-primary-site"></a>獨立主要站台
 
-當獨立主要站台可支援管理所有的裝置和使用者時，請使用此站台。 如需詳細資訊，請參閱[大小和縮放比例](../configs/size-and-scale-numbers.md)。 當貴公司的地理位置可由單一主要站台服務時，此拓撲也會成功。 若要協助管理網路流量，請使用界限群組中的多個管理點及仔細規劃過的內容基礎結構。 如需詳細資訊，請參閱[設定界限群組](../../servers/deploy/configure/boundary-groups.md)和[內容管理的基本概念](fundamental-concepts-for-content-management.md)。  
+當獨立主要站台可支援管理所有的裝置和使用者時，請使用此站台。 如需詳細資訊，請參閱[大小和縮放比例](../configs/size-and-scale-numbers.md)。 當貴公司的地理位置可由單一主要站台提供服務時，此拓撲也會成功。 若要協助管理網路流量，請使用界限群組中的多個管理點及仔細規劃過的內容基礎結構。 如需詳細資訊，請參閱[設定界限群組](../../servers/deploy/configure/boundary-groups.md)和[內容管理的基本概念](fundamental-concepts-for-content-management.md)。  
 
 此拓撲提供下列優點：  
 

@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3a4dee8af68fec8c08cc58b02520f53e13adfbb3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f36da59c6924f6d2f71d882f601c6dd563840d73
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704886"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022529"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>設定要與 Configuration Manager 搭配使用的 Azure 服務
 
@@ -273,3 +273,5 @@ ms.locfileid: "81704886"
 4. Configuration Manager 用戶端要求 Azure AD 使用者權杖。 用戶端使用 Azure AD 用戶端應用程式的應用程式識別碼進行宣告，並將伺服器應用程式作為對象。 如需詳細資訊，請參閱[Azure AD 安全性權杖中的宣告](/azure/active-directory/develop/authentication-scenarios#security-tokens)。  
 
 5. 用戶端會透過向雲端管理閘道和內部部署啟用 HTTPS 的管理點呈現 Azure AD 權杖，來向站台驗證身分。  
+
+如需更多詳細資訊，請參閱 [Azure AD 驗證工作流程](../../../clients/manage/azure-ccmsetup.md)。

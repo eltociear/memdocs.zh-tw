@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f7dc2fcf505890af1e24f8176bef653a6d5f1022
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 0aff833df367cced712219fff0be85653ef79e89
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334973"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079649"
 ---
 # <a name="you-need-to-install-sandblast-mobile-protect-on-your-android-device"></a>您需要在 Android 裝置上安裝 SandBlast Mobile Protect
 
@@ -52,7 +52,7 @@ ms.locfileid: "79334973"
 
 10. 如果找不到任何威脅，所有三個威脅類型都會顯示綠色。
 
-11. 公司入口網站中的 [裝置詳細資料]  畫面會顯示您目前符合公司安全性需求的規範。
+11. 公司入口網站中的 [裝置詳細資料]  畫面會顯示您目前符合公司的安全性需求規範。
 
     ![您的裝置目前符合原則的規範](./media/mtd-device-now-compliant-android.png)
 

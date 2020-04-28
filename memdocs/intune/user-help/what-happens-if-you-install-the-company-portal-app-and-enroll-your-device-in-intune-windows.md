@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 6a8c7212de97fbcb741d03cbcec57bafc4692484
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65533f3d93d226b91493c98fd029c6257e7e6409
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335233"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077252"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-device-in-intune"></a>如果您安裝公司入口網站應用程式並在 Intune 註冊您的 Windows 裝置，會發生什麼情況？
 
@@ -33,7 +33,7 @@ ms.locfileid: "79335233"
 ## <a name="what-happens-to-all-windows-devices-after-enrollment"></a>所有 Windows 裝置在註冊後會發生的事
 在 Intune 註冊 Windows 或 Windows Phone 裝置可讓您：
 
-- 存取公司的網路、電子郵件與工作檔案。
+- 存取公司的網路，以及電子郵件與工作檔案。
 
 - 從公司入口網站取得公司應用程式。 (__注意__：若為 Windows 7 及 Windows Vista，您只能從公司入口網站取得公司應用程式)。
 
@@ -43,7 +43,7 @@ ms.locfileid: "79335233"
 
 當您註冊裝置時，即授權您公司的支援人員可以執行下列動作：
 
-- 將您的裝置重設為製造商的預設設定。 這項功能對裝置遺失或失竊的情況很有幫助。
+- 將您的裝置重設回製造商的預設設定。 這項功能對裝置遺失或失竊的情況很有幫助。
 
 - 只移除公司相關的檔案及商務應用程式。 *您的個人資料及設定不會移除。*
 
@@ -63,7 +63,7 @@ ms.locfileid: "79335233"
 
 - Intune Endpoint Protection 可能會安裝在您的電腦上。 此軟體會檢查病毒及惡意程式碼。
 
-- 您公司的支援人員可能會從您的電腦硬碟收集或刪除資料。
+- 公司支援人員可能會從電腦硬碟收集或刪除資料。
 
 - 您公司的支援人員可以在您的電腦上安裝應用程式並加以更新。
 
