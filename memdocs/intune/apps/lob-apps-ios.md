@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5caa8b23950e3ce87f66d6804961a9a2a3e21c6
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 90f943c7eca95a5311023b03e769e4e18ada9249
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324082"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80863089"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>將 iOS 企業營運應用程式新增至 Microsoft Intune
 
@@ -34,7 +34,7 @@ ms.locfileid: "80324082"
 > [!NOTE]
 > iOS 裝置的使用者可以移除部分內建的 iOS 應用程式，例如股票和地圖。 您無法使用 Intune 來重新部署這些應用程式。 如果使用者刪除這些應用程式，則必須移至應用程式商店，並手動重新安裝。
 >
-> iOS LOB 應用程式對每個應用程式有 4 GB 的大小上限。
+> iOS LOB 應用程式對於每個應用程式設有 2 GB 的大小上限。
 
 > [!NOTE]
 > 組合識別碼 (例如，*com.contoso.app*) 必須為應用程式的唯一識別碼。 例如，若要在實際執行版本上安裝 LOB 應用程式的搶鮮版 (Beta)，以供測試之用，該搶鮮版 (Beta) 必須具有不同的唯一識別碼 (例如 *com.contoso.app-beta*)。 否則，該搶鮮版 (Beta) 會與實際執行版本重疊，並視其為升級。 重新命名 .ipa 檔案並不會影響此行為。
@@ -80,7 +80,7 @@ ms.locfileid: "80324082"
 
 ## <a name="step-3---assignments"></a>步驟 3 - 指派
 
-1. 為應用程式選取 [必要]  、[適用於已註冊的裝置]  ，或 [解除安裝]  群組指派。 如需詳細資訊，請參閱[新增群組來組織使用者和裝置](../fundamentals/groups-add.md)與[使用 Microsoft Intune 將應用程式指派給群組](apps-deploy.md)。
+1. 為應用程式選取 [必要]  、[適用於已註冊的裝置]  、[無論註冊與否均可使用]  或 [解除安裝]  群組指派。 如需詳細資訊，請參閱[新增群組來組織使用者和裝置](../fundamentals/groups-add.md)與[使用 Microsoft Intune 將應用程式指派給群組](apps-deploy.md)。
 2. 按一下 [下一步]  以顯示 [檢閱 + 建立]  頁面。
 
 ## <a name="step-4---review--create"></a>步驟 4 - 檢閱 + 建立

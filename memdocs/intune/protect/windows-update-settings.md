@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bb76dbb14fe2deb95c02a18ccc048fc6a4b2538
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 0b18af35b0e741540637ecdde74877d1058a7915
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078952"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254702"
 ---
 # <a name="windows-update-settings-for-intune"></a>適用於 Intune 的 Windows Update 設定  
 
@@ -85,8 +85,7 @@ Update 設定可控制裝置將下載的位元和時機。 如需每個設定之
   支援的延遲期間：  
 
   - *Windows 1709 版與更新版本* - 0 到 365 天  
-  - Windows 1703 版  - 0 到 180 天  
-
+  
   「功能更新」通常是 Windows 的新功能。  
 
 - **設定功能更新解除安裝期間 (2 - 60 天)**  
@@ -164,8 +163,6 @@ Update 設定可控制裝置將下載的位元和時機。 如需每個設定之
   
   此設定根據裝置的 Windows 版本會有不同的結果：  
  
-  - Windows 1703 版與較舊版本  - 當您重新啟動裝置時，會進行一些檢查，包括檢查作用中的使用者、電池電量、執行中的遊戲等。  
-  
   - Windows 1709 版與更新版本  - 在「使用時間」期間，不會針對更新執行下列程序：掃描、下載、安裝和重新啟動。 在「使用時間」之後，只要裝置通過電池檢查和電源檢查，便會執行更新程序，且可將裝置從睡眠喚醒、掃描、下載、安裝和重新開機。 
 
 - **封鎖使用者使其無法暫停 Windows 更新**  

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 04/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e05577967d874ea8e3cd5e4bdd5e20e204158921
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: eb5a04b8db382345cbf8f3e86feab8b3cea9efd9
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325446"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615686"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>使用 Intune 建立 Mobile Threat Defense (MTD) 裝置合規性原則
 
@@ -59,6 +59,11 @@ ms.locfileid: "80325446"
    - **中等**：如果在裝置上發現的威脅為低或中層級，則會將裝置評估為符合規範。 如果偵測到高層級的威脅，則會將裝置判斷為不相容。
 
    - **高**：這個層級最不安全。 這會允許所有威脅等級，並只將 Mobile Threat Defense 用於回報用途。 裝置必須要有使用此裝置啟用的 MTD 應用程式。
+
+   > [!IMPORTANT]
+   > 若您是 Android Enterprise 裝置的擁有人，則在建立及儲存原則之後，便無法再編輯原則來修改威脅等級。 所有對**要求裝置等同於或低於裝置威脅等級**之裝置健康情況設定的變更皆不會生效。 若要變更威脅等級值，必須先刪除目前的原則，然後再建立新原則，以設定所需的威脅等級。
+   >
+   > 這是已知的問題，將會在後續的 Intune 更新中解決。
 
 6. 選取 [確定]  兩次，然後選取 [建立]  來建立原則。
 

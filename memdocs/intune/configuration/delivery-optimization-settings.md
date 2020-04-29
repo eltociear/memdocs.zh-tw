@@ -16,12 +16,12 @@ ms.reviewer: kerimh
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08ed9df5f636ce014d5c9949a63bd06fb1c7c6f1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d0b66b486025fa67d138f9ace09b78d4e894737e
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350183"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254923"
 ---
 # <a name="delivery-optimization-settings-for-intune"></a>Intune 的傳遞最佳化設定
 
@@ -60,9 +60,9 @@ Intune 主控台中大多數選項會直接對應到 Windows 文件中深入討�
 
 |設定  |Windows 版本  |詳細資料  |
 |---------|---------|---------|
-|[對等快取所需要的最低 RAM (GB)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#minimum-ram-inclusive-allowed-to-use-peer-caching)      | 1703        | 指定裝置使用對等快取時必須擁有的 RAM 大小下限 (GB)。 <br><br>**預設**： 「不設定任何值」   <br><br>**建議**：4 GB <br><br>原則 CSP：[DOMinRAMAllowedToPeer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominramallowedtopeer) <br><br>        |
-|[對等快取所需要的最低磁碟大小 (GB)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#minimum-disk-size-allowed-to-use-peer-caching)      | 1703        | 指定裝置使用對等快取時必須擁有的磁碟大小下限 (GB)。 <br><br>**預設**：「不設定任何值」   <br><br>**建議**：32 GB   <br><br>原則 CSP：[DOMinDiskSizeAllowedToPeer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domindisksizeallowedtopeer) <br><br>    |
-|[對等快取的內容檔案大小下限 (MB)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#minimum-peer-caching-content-file-size)      | 1703        | 指定使用對等快取時，檔案必須符合或超過的大小下限 (MB)。  <br><br>**預設**：「不設定任何值」   <br><br>**建議**：10 MB   <br><br>原則 CSP：[DOMinFileSizeToCache](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominfilesizetocache)  <br><br>      |
+|[對等快取所需要的最低 RAM (GB)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#minimum-ram-inclusive-allowed-to-use-peer-caching)      | 1709        | 指定裝置使用對等快取時必須擁有的 RAM 大小下限 (GB)。 <br><br>**預設**： 「不設定任何值」   <br><br>**建議**：4 GB <br><br>原則 CSP：[DOMinRAMAllowedToPeer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominramallowedtopeer) <br><br>        |
+|[對等快取所需要的最低磁碟大小 (GB)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#minimum-disk-size-allowed-to-use-peer-caching)      | 1709        | 指定裝置使用對等快取時必須擁有的磁碟大小下限 (GB)。 <br><br>**預設**：「不設定任何值」   <br><br>**建議**：32 GB   <br><br>原則 CSP：[DOMinDiskSizeAllowedToPeer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domindisksizeallowedtopeer) <br><br>    |
+|[對等快取的內容檔案大小下限 (MB)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#minimum-peer-caching-content-file-size)      | 1709        | 指定使用對等快取時，檔案必須符合或超過的大小下限 (MB)。  <br><br>**預設**：「不設定任何值」   <br><br>**建議**：10 MB   <br><br>原則 CSP：[DOMinFileSizeToCache](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominfilesizetocache)  <br><br>      |
 |[上傳所需的電池電量下限 (%)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#allow-uploads-while-the-device-is-on-battery-while-under-set-battery-level)      | 1709        | 以百分比指定裝置上傳資料至同儕節點時，必須擁有的電池電量下限。 若電池電量低於指定值，則任何使用中的上傳都會自動暫停。   <br><br>**預設**：「不設定任何值」   <br><br>**建議**：40%   <br><br>原則 CSP：[DOMinBatteryPercentageAllowedToUpload](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominbatterypercentageallowedtoupload) <br><br>        |
 |[修改快取磁碟機](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#modify-cache-drive)        | 1607        | 指定傳遞最佳化用來進行快取的磁碟機。 您可以使用環境變數、磁碟機代號，或是完整路徑。  <br><br>**預設**：%SystemDrive% <br><br>原則 CSP：[DOModifyCacheDrive](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domodifycachedrive) <br><br>        |
 | [快取保留時間上限 (日)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#max-cache-age)    | 1511         | 指定每個檔案成功下載該檔案後，要在裝置傳遞最佳化快取上保留的時間長度。   <br><br>使用 Intune，您會以天數指定快取保留時間。 您定義的天數會轉換成適用秒數，這是 Windows 定義此設定的方式。 例如，設為 3 天的 Intune 設定會在裝置上轉換成 259200 秒 (3 天)。  <br><br>**預設**： 「不設定任何值」      <br><br>**建議**：7   <br><br>原則 CSP：[DOMaxCacheAge](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcacheage)  <br><br>          |
