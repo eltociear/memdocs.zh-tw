@@ -6,28 +6,32 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 4b6dcbcc-4661-4463-9a36-698d673502c6
-ms.reviewer: jinyoon
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0a9f4d9195c68664f42570746ade6d924c8da62
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: e5b568a90d4077c32a88044beea746907613eb0e
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323016"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81525728"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>將 Jamf Pro 與 Intune 整合以取得合規性
 
-如果您的組織是使用 [Jamf Pro](https://www.jamf.com) \(英文\) 來管理 macOS 裝置，您可以搭配 Azure Active Directory (Azure AD) 條件式存取使用 Microsoft Intune 合規性原則，來確保組織中的裝置符合規範，然後才讓那些裝置存取公司資源。 此文章將協助您設定 Jamf 與 Intune 的整合。
+如果您的組織是使用 [Jamf Pro](https://www.jamf.com) \(英文\) 來管理 macOS 裝置，您可以搭配 Azure Active Directory (Azure AD) 條件式存取使用 Microsoft Intune 合規性原則，來確保組織中的裝置符合規範，然後才讓那些裝置存取公司資源。 若要整合 Jamf Pro 與 Intune，您有兩個選項：
+
+- **手動設定整合**：使用本文中的資訊，手動設定 Jamf 與 Intune 的整合。
+- **使用 Jamf Cloud Connector** (*建議*)：使用[搭配使用 Jamf Cloud Connector 與 Microsoft Intune](../protect/conditional-access-jamf-cloud-connector.md) 中的資訊來安裝 Jamf Cloud Connector，以整合 Jamf Pro 與 Microsoft Intune。 Cloud Connector 會自動執行您手動設定整合時所需的許多步驟。
+
 
 當 Jamf Pro 與 Intune 整合時，您可以透過 Azure AD，從 macOS 裝置與 Intune 同步處理清查資料。 Intune 的合規性引擎接著會分析清查資料來產生報告。 Intune 的分析結合了裝置使用者 Azure AD 身分識別的相關情報，透過條件式存取來推動強制執行。 符合條件式存取原則規範的裝置可存取受保護的公司資源。
 
@@ -154,7 +158,7 @@ Jamf 和 Intune 必須能夠存取下列連接埠，才能正確整合：
 
 ## <a name="disconnect-jamf-pro-and-intune"></a>中斷 Jamf Pro 和 Intune 的連線
 
-如果您不再使用 Jamf Pro 來管理組織中的 Mac，而且想要讓使用者受 Intune 管理，您必須移除 Jamf Pro 與 Intune 之間的連線。 使用 Jamf Pro 主控台來移除連線。
+如果您需要移除 Jamf Pro 與 Intune 的整合，請使用下列步驟，從 Jamf Pro 主控台內移除連線。此資訊適用於手動設定的整合，以及使用 Cloud Connector 的整合。
 
 1. 在 Jamf Pro 中，移至 [全域管理]   > [條件式存取]  。 在 [macOS Intune 整合]  索引標籤上，選取 [編輯]  。
 

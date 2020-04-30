@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6855abaf09a89303bfadd1a973dd1e1761346af
-ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
+ms.openlocfilehash: 728fa69303760252068db454c04ed4431b89602a
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80624896"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615520"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>使用 Intune 將受控 Google Play 應用程式新增至 Android Enterprise 裝置
 
@@ -141,8 +141,6 @@ ms.locfileid: "80624896"
 2. 在主控台中，選取 [加入新的應用程式]  。
 3. 您可以用與發行應用程式至 Google Play 商店的相同方式，上傳並提供應用程式的相關資訊。 不過，您必須選取 [只讓我的組織 (<組織名稱>) 使用此應用程式]  。
 
-    ![只將應用程式提供給您組織使用](./media/apps-add-android-for-work/restrict.png)
-
     這項作業會讓應用程式僅提供給您的組織使用。 在公用 Google Play 商店上則不提供該應用程式。
 
     如需如何上傳及發行 Android 應用程式的詳細資訊，請參閱 [Google Developer Console 說明](https://support.google.com/googleplay/android-developer/answer/113469)。
@@ -218,6 +216,10 @@ Android Enterprise 會要求您先在受控 Google Play Web 主控台中核准�
 ## <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices"></a>Android Enterprise 工作設定檔裝置的其他受控 Google Play 應用程式報告
 
 針對部署到 Android Enterprise 工作設定檔裝置的受控 Google Play 應用程式，您可以使用 Intune 檢視裝置上所安裝應用程式的狀態與版本號碼。 
+
+## <a name="working-with-managed-google-play-closed-testing-tracks"></a>使用受控 Google Play 封閉式測試追蹤
+
+您可以將受控 Google Play 應用程式的非生產版本，散發至 Android Enterprise 案例中註冊的裝置 (**Android Enterprise 工作設定檔**、**完全受控**和 **專用**)，以便執行測試。 在 Intune 中，您可以看到應用程式是否具有已發佈的生產前組建測試追蹤，以及是否能夠將該追蹤指派給 AAD 使用者群組或裝置群組。 將生產版本指派給現存群組的工作流程，與指派非生產通道的工作流程相同。 部署之後，每個追蹤的安裝狀態將會對應至受控 Google Play 中的追蹤版本號碼。 如需詳細資訊，請參閱 [Google Play 封閉式測試追蹤進行應用程式發行前測試](https://support.google.com/googleplay/android-developer/answer/3131213)。
 
 ## <a name="delete-managed-google-play-apps"></a>刪除受控的 Google Play 應用程式
 必要時，您可以從 Microsoft Intune 刪除受控的 Google Play 應用程式。 若要刪除受控的 Google Play 應用程式，請在 Azure 入口網站中開啟 Microsoft Intune，然後選取 [應用程式]   > [所有應用程式]  。 從應用程式清單，選取受控的 Google Play 應用程式右側的省略符號 (...)，然後從顯示的清單選取 [刪除]  。 當您從應用程式清單刪除受控 Google Play 應用程式時，會自動取消核准受控 Google Play 應用程式。

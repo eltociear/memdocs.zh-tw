@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 483f82e67c3f5d8ad3b4e55fba73e21eba85d49d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 03df52662aaced80280192b9096c6d169020b55d
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327155"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615454"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>識別公司所擁有的裝置
 
@@ -128,3 +128,9 @@ ms.locfileid: "80327155"
 3. 將 [裝置擁有權]  指定為 [個人]  或 [公司]  。
 
    ![顯示裝置類別及裝置擁有權選項的裝置內容](./media/corporate-identifiers-add/device-properties.png)
+
+您可在基於隱私權考量，將裝置擁有權類型從 [個人]  變更為 [公司]  時，設定傳送推播通知給 Android 與 iOS 公司入口網站使用者。 
+
+當裝置的擁有權類型從 [公司] 變更為 [個人] 時，Intune 會刪除在過去 7 天內從該裝置收集的所有應用程式資訊。 如果適用的話，Intune 也會刪除所記錄的電話號碼。 Intune 仍會收集由 IT 系統管理員在裝置上安裝的應用程式清查，且在將裝置標示為個人之後，仍會收集其部分電話號碼。
+
+您可在 Microsoft 端點管理員中找到這項設定，方法為選取 [租用戶管理]   > [自訂]  。 如需詳細資訊，請參閱[公司入口網站 - 設定](../apps/company-portal-app.md#configuration)。

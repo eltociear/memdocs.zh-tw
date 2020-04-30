@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/10/2018
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4965f29144131895660796bc3282ba46d6b8101
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b93e850e7a38feb7dd5347670279f6d85b92455b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353602"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725655"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>在 Intune 中簽署和加密電子郵件的 S/MIME 概觀
 
@@ -46,7 +46,7 @@ ms.locfileid: "79353602"
 
 Intune 中的簽署憑證使用 PKCS 憑證。 [設定並使用 PKCS 憑證](certficates-pfx-configure.md)說明如何在您的 Intune 環境中部署及使用 PKCS 憑證。 這些步驟包括：
 
-- 下載並安裝 Microsoft Intune 憑證連接器以支援 PKCS 憑證要求。
+- 下載並安裝 Microsoft Intune 憑證連接器以支援 PKCS 憑證要求。 此連接器具有與[受控裝置](../fundamentals/intune-endpoints.md#access-for-managed-devices)相同的網路需求。
 - 為您的裝置建立受信任的根憑證設定檔。 此步驟包含針對您的憑證授權單位使用受信任的根和中繼憑證，然後將設定檔部署到裝置。
 - 使用您建立的憑證範本來建立 PKCS 憑證設定檔。 此設定檔會將簽署憑證發行給裝置，並將 PKCS 憑證設定檔部署到裝置。
 

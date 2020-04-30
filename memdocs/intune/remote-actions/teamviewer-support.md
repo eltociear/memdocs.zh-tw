@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9dc309cb373d9f06fd68810531d5634eb4c0b7d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1a18895ecfcb17567170dfae8f07814020a60df1
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325047"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81726013"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>使用 TeamViewer 來遠端管理 Intune 裝置
 
@@ -67,7 +67,7 @@ ms.locfileid: "80325047"
 當您開始遠端工作階段時，使用者會在其裝置上的公司入口網站應用程式圖示上看到通知旗標。 當應用程式開啟時也會出現通知。 然後使用者就能接受遠端協助要求。
 
 > [!NOTE]
-> 使用「無使用者」方法 (例如 DEM 及 WCD) 註冊的 Windows 裝置不會在公司入口網站應用程式中顯示 TeamViewer 通知。 在這些情況下，建議使用 TeamViewer 入口網站來產生工作階段。
+> 使用「無使用者」方法 (例如裝置註冊管理員 (DEM) 及 Windows Configuration Designer (WCD)) 註冊的 Windows 裝置不會在公司入口網站應用程式中顯示 TeamViewer 通知。 在這些情況下，建議使用 TeamViewer 入口網站來產生工作階段。
 
 在 TeamViewer 中，您可以在裝置上完成一系列動作，包括控制裝置。 對於您可以執行的作業之完整詳細資料，請參閱 [TeamViewer guidance](https://www.teamviewer.com/support/documents/) (TeamViewer 指導)。
 

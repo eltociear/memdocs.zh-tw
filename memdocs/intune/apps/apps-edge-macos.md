@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 002d8e8826fbc1420bf9deca6fb88a3468e8a2ad
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: c0d9267f989988ae33d56696d424de56a649bca2
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324518"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80900468"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>使用 Microsoft Intune 將 Microsoft Edge 新增至 macOS 裝置
 
 您必須先將應用程式新增至 Intune，才可以部署、設定、監視或保護它們。 其中一個可用的[應用程式類型](apps-add.md#app-types-in-microsoft-intune)是 Microsoft Edge 77 版和更新版本  。 藉由在 Intune 中選取此應用程式類型，您可以指派 Microsoft Edge *77 版和更新版本*，並將其安裝到您所管理且執行 macOS 的裝置。 此應用程式類型可讓您輕鬆地將 Microsoft Edge 指派給 macOS 裝置，而不需要您使用 macOS 應用程式包裝工具。 為了讓您保有最安全以及最新版的應用程式，這些應用程式也自帶 Microsoft AutoUpdate (MAU)。
 
 > [!IMPORTANT]
-> 此應用程式類型處於**公開預覽**，並提供 macOS 的開發人員和搶鮮版 (Beta) 通道。 部署僅限英文 (EN)，不過，終端使用者可以在瀏覽器中的 [設定]   > [語言]  下變更顯示語言。 
+> 此應用程式類型可提供 macOS 的開發人員和 Beta 通道。 部署僅限英文 (EN)，不過，終端使用者可以在瀏覽器中的 [設定]   > [語言]  下變更顯示語言。 
 
 > [!NOTE]
 > Microsoft Edge *77 版和更新版本的*也適用於 Windows 10。

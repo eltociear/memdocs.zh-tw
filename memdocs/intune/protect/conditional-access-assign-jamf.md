@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 3/13/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,22 +18,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba902cca39db44c20c79ae7b960b13966c1a09d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 8b7ef62056fc85f7584d0d7fed3eab646d199476
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323097"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81525663"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>在使用 Jamf Pro 管理的 Mac 上強制執行合規性
 
-當您[將 Jamf Pro 與 Intune 整合](conditional-access-integrate-jamf.md)時，可以使用條件式存取原則，以根據您的組織需求在 Mac 裝置上強制執行合規性。  此文章將協助您進行以下工作：  
+當您將 Jamf Pro 與 Intune 整合時，可以使用條件式存取原則，以根據您的組織需求在 Mac 裝置上強制執行合規性。 此文章將協助您進行以下工作：  
 
 - 建立條件式存取原則。
 - 設定 Jamf Pro，以將 Intune 公司入口網站應用程式部署到您使用 Jamf 管理的裝置。
 - 設定裝置，以在裝置使用者從 Jamf 自助服務應用程式內開始登入公司入口網站應用程式時，向 Azure AD 註冊。 裝置註冊會在 Azure AD 中建立身分識別，以允許透過條件式存取原則來評估裝置，以存取公司資源。  
  
 此文章中的程序需要 Intune 和 Jamf Pro 主控台的存取權。
+Intune 支援兩種整合 Jamf Pro 的方法，您可以將其與本文中的程序分開設定：
+
+- 建議：[使用 Jamf Cloud Connector 將 Jamf Pro 與 Intune 整合](conditional-access-jamf-cloud-connector.md)
+- [手動設定 Jamf Pro 與 Intune 的整合](conditional-access-integrate-jamf.md)
 
 ## <a name="set-up-device-compliance-policies-in-intune"></a>在 Intune 中設定裝置合規性原則
 
@@ -41,7 +45,7 @@ ms.locfileid: "80323097"
 
 2. 選取 [裝置]   > [合規性政策]  。 如果您是使用先前建立的原則，請在主控台中選取該原則，然後移至此程序的下一個步驟。 若要建立新原則，請選取 [建立原則]  ，然後指定 [平台]  為 [macOS]  的原則詳細資料。 設定 [設定]  和 [因不符合規範而採取的動作]  ，以符合您的組織需求，然後選取 [建立]  以儲存原則。
 
-3. 在原則的 [概觀]  窗格上，選取 [指派]  。 使用可用的選項來設定會收到此原則的 Azure Active Directory (Azure AD) 使用者與安全性群組。 **Jamf 與 Intune 的整合不支援以裝置群組為目標的合規性政策。**
+3. 在原則的 [概觀]  窗格上，選取 [指派]  。 使用可用的選項來設定會收到此原則的 Azure Active Directory (Azure AD) 使用者與安全性群組。 **Jamf 與 Intune 的整合不支援以裝置群組為目標的合規性原則。**
 
 > [!NOTE]
 > Jamf 與 Intune 的整合僅支援 AAD 使用者群組。 以裝置群組為目標的裝置合規性原則將不適用。

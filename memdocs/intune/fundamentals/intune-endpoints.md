@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e1a7c9665f142bf7dd7832e6bac0e016539ddea
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 86c90d8313cd9eed853ad438a5ea9a31f0d834ce
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79358724"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725542"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Microsoft intune 的網路端點  
 
@@ -34,6 +34,9 @@ Intune 屬於僅限雲端的服務，因此不需要內部部署基礎結構，�
 
 若要管理位於防火牆和 Proxy 伺服器後方的裝置，您必須啟用 Intune 的通訊功能。
 
+> [!NOTE]
+> 區段中的資訊也會套用於 Microsoft Intune 憑證連接器。 此連接器具有與受控裝置相同的網路需求
+
 - Proxy 伺服器必須同時支援 **HTTP (80)** 和 **HTTPS (443)** ，因為 Intune 用戶端使用這兩種通訊協定。 Windows 資訊保護使用連接埠 444。
 - 針對某些工作 (例如下載傳統電腦代理程式的軟體更新)，Intune 會需要未驗證的 Proxy 伺服器存取 manage.microsoft.com
 
@@ -44,6 +47,7 @@ Intune 屬於僅限雲端的服務，因此不需要內部部署基礎結構，�
 > [!NOTE] If Windows 8.1 devices haven't cached proxy server credentials, enrollment might fail because the request doesn't prompt for credentials. Enrollment fails without warning as the request wait for a connection. If users might experience this issue, instruct them to open their browser settings and save proxy server settings to enable a connection.   -->
 
 受管理裝置需要進行可讓 [所有使用者]  穿過防火牆存取服務的設定。
+
 
 下表列出 Intune 用戶端存取的連接埠和服務：
 

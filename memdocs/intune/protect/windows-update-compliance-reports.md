@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,20 +16,20 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ad666f21b2ff271b99675486835357dfd071773
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 157c61e9f145295f5ef728d12385fa44697a88e2
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326510"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725648"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>更新的 Intune 合規性報表
 
-當您使用 Intune 將 Windows 更新部署到 Windows 10 裝置時，請檢視更新合規性的詳細資料，做法是使用 Intune 或稱為「更新合規性」  的免費解決方案，該解決方案是 Microsoft Operations Management Suite (OMS) 的一部分。
+當您使用 Intune 將 Windows 更新部署到 Windows 10 裝置時，請檢視更新合規性的詳細資料，做法是使用 Intune 或稱為「更新合規性」  的免費解決方案。 更新合規性是 Microsoft Operations Management Suite (OMS) 的一部分。
 
 ## <a name="use-intune"></a>使用 Intune
 
-若要針對您已設定之 Windows 10 更新通道的部署狀態檢閱其原則報表：
+若要針對您已設定的 Windows 10 更新通道，檢閱其部署狀態的原則報告：
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
@@ -43,17 +43,17 @@ ms.locfileid: "80326510"
 
    - **使用者狀態**：這將會顯示使用者名稱、狀態及上一次報告日期；如需詳細資料，請參閱[列出 deviceConfigurationUserStatuses](https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0) \(英文\)。
 
-   - **結束使用者更新狀態**：這將會顯示 Windows 裝置更新狀態；如需詳細資料，請參閱 [windowsUpdateState](https://docs.microsoft.com/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta) \(英文\)。
+   - **終端使用者更新狀態**：這將會顯示 Windows 裝置更新狀態；如需詳細資料，請參閱 [windowsUpdateState](https://docs.microsoft.com/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta)。
 
 ## <a name="use-update-compliance"></a>使用更新合規性
 
-您可以使用[更新合規性](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor)這個 Windows Analytics 解決方案來監視 Windows 10 更新的首度發行。 更新合規性是透過 Azure 入口網站提供，並可免費用於符合其[必要條件](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites)的裝置。  
+您可以使用[更新合規性](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor)來監視 Windows 10 更新的推出。 更新合規性是透過 Azure 入口網站提供，並可免費用於符合其[必要條件](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites)的裝置。  
 
 當您使用此解決方案時，可將商業識別碼部署至任何您以 Intune 管理、且要報告更新合規性的 Windows 10 裝置。  
 
 在 Intune 中，您會使用自訂原則的 OMA-URI 設定來設定商業識別碼。 請參閱[在 Intune 中使用 Windows 10 裝置的自訂設定](../configuration/custom-settings-windows-10.md)。
 
-用於設定商業識別碼的 OMA-URI (區分大小寫) 路徑為： *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*  
+用於設定商業識別碼的 OMA-URI (區分大小寫) 路徑為： *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*
 
 例如，您可以在 [新增或編輯 OMA-URI 設定]  中使用下列值：
 

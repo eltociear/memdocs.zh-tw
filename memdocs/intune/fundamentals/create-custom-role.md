@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07c29f45c2d9356bda78e021d3baf9647aa03397
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6633682a9572ba36f41f42e77c5aa64403e0e209
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326803"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81440572"
 ---
 # <a name="create-a-custom-role-in-intune"></a>在 Intune 中建立自訂角色
 
@@ -40,7 +40,7 @@ ms.locfileid: "80326803"
 
 3. 在 [權限]  頁面上，選擇您希望搭配此角色使用的權限。
 
-4. 在 [範圍 (標籤)]  頁面上，選擇此角色的標籤。 這個角色可以存取也擁有這些標籤的資源。 選擇 [下一步]  。
+4. 在 [範圍 (標籤)]  頁面上，選擇此角色的標籤。 當此角色指派給使用者時，該使用者可以存取也具有這些標記的資源。 選擇 [下一步]  。
 
 5. 在 [檢閱 + 建立]  頁面上，當您完成操作時，請選擇 [建立]  。 新角色會顯示在 [Intune 角色 - 所有角色]  刀鋒視窗上的清單中。
 

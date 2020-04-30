@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/17/2002
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebeb2c31b72ec10f4ce95b09e32b3e3c9accccfa
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 7b6940d191902627616501f192fc810363bee1a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323020"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81688234"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>在 Microsoft Intune 中使用衍生認證
 
-*此文章適用於執行 iOS 的裝置*
+*本文適用於 iOS/iPadOS，以及執行 7.0 版和更新版本的 Android Enterprise 完全受控裝置*
 
 在需要智慧卡進行驗證或加密和簽署的環境中，您現在可以使用 Intune，透過衍生自使用者智慧卡的憑證來佈建行動裝置。 該憑證稱為「衍生認證」  。 Intune [支援數個衍生認證簽發者](#supported-issuers)，但您一次只能針對每個租用戶使用單一簽發者。
 
@@ -34,18 +34,19 @@ ms.locfileid: "80323020"
 **使用 Intune 的實作**：
 
 - Intune 管理員會將其租用戶設定為與支援的衍生認證簽發者搭配使用。 您不需要在衍生認證簽發者的系統中設定任何 Intune 特定設定。
-
 - Intune 管理員會指定衍生認證作為下列物件的驗證方法：  
-
+  
+  **針對 iOS/iPadOS**：
   - 常用的設定檔類型，例如 Wi-Fi、VPN 和電子郵件，其中包括 iOS/iPadOS 原生郵件應用程式
-
   - 應用程式驗證
-
   - S/MIME 簽署和加密
 
+  **針對 Android Enterprise 完全受控裝置**：
+  - 常見設定檔類型，例如 Wi-Fi 和 VPN
+  - 應用程式驗證
+  
 - 使用者可以使用其在電腦上的智慧卡向衍生的認證簽發者進行驗證，以取得衍生的認證。 然後簽發者會向行動裝置發出一個衍生自其智慧卡的憑證。
-
-- 當應用程式或資源存取設定檔需要衍生認證時，裝置收到衍生的認證後，就會用於驗證和 S/MIME 簽署和加密。 
+- 當應用程式或資源存取設定檔需要衍生認證時，裝置收到衍生的認證後，就會用於驗證和 S/MIME 簽署和加密。
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -53,21 +54,22 @@ ms.locfileid: "80323020"
 
 ### <a name="supported-platforms"></a>支援的平台
 
-Intune 支援下列 OS 平台上的衍生認證：
+Intune 支援下列平台上的衍生認證：
 
 - iOS/iPadOS
+- Android Enterprise - 完全受控裝置 (7.0 版和更新版本)
 
 ### <a name="supported-issuers"></a>支援的簽發者
 
 Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intune 與下列簽發者搭配使用：
 
-- **DISA Purebred**： https://cyber.mil/pki-pke/purebred/
+- **DISA Purebred** (僅限 iOS)：https:\//cyber.mil/pki-pke/purebred/
 - **Entrust Datacard**： https://www.entrustdatacard.com/
 - **Intercede**： https://www.intercede.com/
 
-如需使用不同簽發者的重要詳細資訊，請檢閱該簽發者的指引<!-- , including the issuers end-user workflow-->。 如需詳細資訊，請參閱此文章中的[規劃衍生認證](#plan-for-derived-credentials)。
+如需使用不同簽發者的重要詳細資訊，請檢閱該簽發者的指引。 如需詳細資訊，請參閱此文章中的[規劃衍生認證](#plan-for-derived-credentials)。
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > 如果您從租用戶刪除衍生認證簽發者，透過該簽發者所設定的衍生認證將無法再運作。
 >
 > 請參閱此文章稍後的[變更衍生認證簽發者](#change-the-derived-credential-issuer)。
@@ -76,23 +78,24 @@ Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intun
 
 規劃將 Intune 公司入口網站應用程式部署到將註冊衍生認證的裝置。 裝置使用者會使用公司入口網站應用程式來啟動認證註冊程序。
 
-針對 iOS/iPadOS 裝置，請參閱[將 iOS/iPadOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md)。
+- 針對 iOS 裝置，請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md)。
+- 針對 Android 裝置，請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md)。
 
 ## <a name="plan-for-derived-credentials"></a>規劃衍生認證
 
 設定衍生認證簽發者之前，請先了解下列考量。
 
-### <a name="1-review-the-documentation-for-your-chosen-derived-credential-issuer"></a>1) 檢閱您所選擇之衍生認證簽發者的文件  
+### <a name="1-review-the-documentation-for-your-chosen-derived-credential-issuer"></a>1) 檢閱您所選擇之衍生認證簽發者的文件
 
 設定簽發者之前，請先檢閱該簽發者的文件，以了解其系統如何將衍生認證提供給裝置。
 
-視您選擇的簽發者而定，在註冊時可能需要工作人員來協助使用者完成程序。 您也應該檢閱目前的 Intune 設定，以確保其不會封鎖裝置或使用者完成認證要求所需的存取。
+視您選擇的簽發者而定，在註冊時可能需要工作人員來協助使用者完成程序。 此外，檢閱目前的 Intune 設定，以確保其不會封鎖裝置或使用者完成認證要求所需的存取。
 
 例如，您可以使用條件式存取來封鎖不符合規範的裝置電子郵件存取。 如果您依賴電子郵件通知來通知使用者啟動衍生認證註冊程序，您的使用者在符合原則之前，可能不會收到這些指示。
 
 同樣地，某些衍生認證要求工作流程需要使用裝置相機來掃描螢幕上的 QR 代碼。 此程式碼會將該裝置連結至驗證要求，該驗證要求是針對具有使用者的智慧卡認證的衍生認證簽發者所產生的。 如果裝置設定原則封鎖相機使用，則使用者無法完成衍生認證註冊要求。
 
-一般資訊：
+**一般資訊**：
 
 - 您一次只能為每個租用戶設定單一簽發者，而且該簽發者可供租用戶中的所有使用者和支援的裝置使用。
 
@@ -106,39 +109,57 @@ Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intun
 
 #### <a name="disa-purebred"></a>DISA Purebred
 
-請檢閱 [DISA Purebred 的使用者工作流程](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-disa-purebred)。 此工作流程的主要需求包括：
+針對您將搭配衍生認證使用的裝置，檢閱平台專屬的使用者工作流程。
+
+- [iOS 與 iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
+
+**主要需求包括**：
 
 - 使用者需要存取電腦或 KIOSK，讓他們可以使用智慧卡向簽發者驗證。
-
 - 將註冊衍生認證的裝置必須安裝 Intune 公司入口網站應用程式。
-
 - 使用 Intune [部署 DISA Purebred 應用程式](#deploy-the-disa-purebred-app)到將註冊衍生認證的裝置。 此應用程式必須透過 Intune 部署，才能進行管理，而且之後可以與 Intune 公司入口網站應用程式搭配使用。 裝置使用者會使用此應用程式來完成衍生認證要求。
-
 - DISA Purebred 應用程式需要[個別應用程式 VPN](../configuration/vpn-settings-configure.md)，以確保應用程式可以在註冊衍生認證期間存取 DISA Purebred。
-
-- 裝置使用者必須在註冊程序中使用即時代理程式。 在註冊期間，系統會在使用者進行註冊程序時，提供限時的一次性密碼。
+- 裝置使用者必須在註冊程序中使用即時代理程式。 在註冊期間，系統會在使用者繼續註冊程序時，提供限時的一次性密碼。
+- 對使用衍生認證的原則進行變更時 (例如建立新的 Wi-Fi 設定檔)，系統會通知 iOS 和 iPadOS 使用者開啟公司入口網站應用程式。
+- 當使用者需要更新其衍生的認證時，系統會通知他們開啟公司入口網站應用程式。
 
 如需取得和設定 DISA Purebred 應用程式的資訊，請參閱此文章稍後的[部署 DISA Purebred 應用程式](#deploy-the-disa-purebred-app)。
 
 #### <a name="entrust-datacard"></a>Entrust Datacard
 
-請檢閱 [Entrust Datacard 的使用者工作流程](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-entrust-datacard)。 此工作流程的主要需求包括：
+針對您將搭配衍生認證使用的裝置，檢閱平台專屬的使用者工作流程。
+
+- [iOS 與 iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust-datacard)
+- [Android Enterprise 完全受控裝置](../user-help/enroll-android-device-entrust-datacard.md)
+
+**主要需求包括**：
 
 - 使用者需要存取電腦或 KIOSK，讓他們可以使用智慧卡向簽發者驗證。
-
 - 將註冊衍生認證的裝置必須安裝 Intune 公司入口網站應用程式。
-
 - 使用裝置相機來掃描 QR 代碼，以將驗證要求連結至行動裝置的衍生認證要求。
+- 公司入口網站應用程式會提示使用者，或透過電子郵件來註冊衍生認證。
+- 對使用衍生認證的原則進行變更時，例如建立新的 Wi-Fi 設定檔：
+  - **iOS 和 iPadOS**：系統會通知使用者開啟公司入口網站應用程式。
+  - **Android Enterprise 完全受控裝置**：公司入口網站應用程式不需要開啟。
+- 當使用者需要更新其衍生的認證時，系統會通知他們開啟公司入口網站應用程式。
 
 #### <a name="intercede"></a>Intercede
 
-請檢閱 [Intercede 的使用者工作流程](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-intercede)。 此工作流程的主要需求包括：
+針對您將搭配衍生認證使用的裝置，檢閱平台專屬的使用者工作流程。
+
+- [iOS 與 iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede)
+- [Android Enterprise 完全受控裝置](../user-help/enroll-android-device-intercede.md)
+
+**主要需求包括**：
 
 - 使用者需要存取電腦或 KIOSK，讓他們可以使用智慧卡向簽發者驗證。
-
 - 將註冊衍生認證的裝置必須安裝 Intune 公司入口網站應用程式。
-
 - 使用裝置相機來掃描 QR 代碼，以將驗證要求連結至行動裝置的衍生認證要求。
+- 公司入口網站應用程式會提示使用者，或透過電子郵件來註冊衍生認證。
+- 對使用衍生認證的原則進行變更時，例如建立新的 Wi-Fi 設定檔：
+  - **iOS 和 iPadOS**：系統會通知使用者開啟公司入口網站應用程式。
+  - **Android Enterprise 完全受控裝置**：公司入口網站應用程式不需要開啟。
+- 當使用者需要更新其衍生的認證時，系統會通知他們開啟公司入口網站應用程式。
 
 ### <a name="3-deploy-a-trusted-root-certificate-to-devices"></a>3) 將受信任的根憑證部署至裝置
 
@@ -150,9 +171,15 @@ Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intun
 
 我們建議您提供將裝載指引的 URL。 當您為租用戶設定衍生認證簽發者，而且該 URL 可從公司入口網站應用程式中取得時，您可以指定此 URL。 如果您未指定自己的 URL，Intune 會提供一般詳細資料的連結。 這些詳細資料無法涵蓋所有案例，而且對您的環境而言可能不正確。
 
-### <a name="5-deploy-intune-policies-that-require-derived-credentials"></a>5) 部署需要衍生認證的 Intune 原則
+### <a name="dive-idsupported-objects-5-deploy-intune-policies-that-require-derived-credentials"></a><dive id="supported-objects"> 5) 部署需要衍生認證的 Intune 原則
 
-建立新的原則，或編輯現有的原則以使用衍生認證。 衍生的認證會取代應用程式驗證、Wi-Fi、VPN、電子郵件，以及 S/MIME 簽署和加密的其他驗證方法。
+建立新的原則，或編輯現有的原則以使用衍生認證。 衍生認證會取代下列物件的其他驗證方法：
+
+- 應用程式驗證
+- Wi-Fi
+- VPN
+- 電子郵件 (僅限 iOS)
+- S/MIME 簽署和加密，包括 Outlook (僅限 iOS)
 
 避免要求使用衍生認證來存取您將用來作為取得衍生認證之程序一部分的程序，因為這可能會讓使用者無法完成要求。
 
@@ -168,8 +195,8 @@ Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intun
 
 3. 針對衍生認證簽發者原則指定易記的**顯示名稱**。  您的裝置使用者不會看到此名稱。
 
-4. 針對**衍生認證簽發者**，請選取您為租使用者選擇的衍生認證簽發者：
-   - DISA Purebred
+4. 針對**衍生認證簽發者**，請選取您為租用戶選擇的衍生認證簽發者：
+   - DISA Purebred (僅限 iOS)
    - Entrust Datacard
    - Intercede  
 
@@ -181,7 +208,7 @@ Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intun
 
    - 向簽發者註冊裝置，以取得新的衍生認證。
    - 當目前的認證接近到期時，取得新的衍生認證。
-   - 使用衍生認證搭配 Wi-Fi、VPN、電子郵件或應用程式驗證，以及 S/MIME 簽署和加密的原則。
+   - 使用衍生認證搭配[支援的物件](#supported-objects)。
 
 7. 準備好時，請選取 [儲存]  以完成衍生認證簽發者的設定。
 
@@ -197,8 +224,10 @@ Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intun
 
 **請完成下列工作**：
   
-1. 下載 [DISA Purebred 應用程式](https://cyber.mil/pki-pke/purebred/)。
-2. 在 Intune 中部署 DISA Purebred 應用程式。  請參閱[將 iOS/iPadOS 企業營運應用程式新增至 Microsoft Intune](../apps/lob-apps-ios.md)。
+1. 下載 DISA Purebred 應用程式：https:\//cyber.mil/pki-pke/purebred/。
+
+2. 在 Intune 中部署 DISA Purebred 應用程式。 請參閱[將 iOS 企業營運應用程式新增至 Microsoft Intune](../apps/lob-apps-ios.md)。
+
 3. 針對 DISA Purebred 應用程式[建立個別應用程式 VPN](../configuration/vpn-settings-configure.md)。
 
 ## <a name="use-derived-credentials-for-authentication-and-smime-signing-and-encryption"></a>使用衍生認證進行驗證和 S/MIME 簽署和加密
@@ -206,10 +235,16 @@ Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intun
 您可以針對下列設定檔類型和用途，指定**衍生認證**：
 
 - [應用程式](#use-derived-credentials-for-app-authentication)
-- [電子郵件](../configuration/email-settings-ios.md)
-- [VPN](../configuration/vpn-settings-ios.md)
+- 電子郵件：
+  - [iOS 與 iPadOS](../configuration/email-settings-ios.md)
+  - [Android Enterprise](../configuration/email-settings-android-enterprise.md)
+- VPN：
+  - [iOS 與 iPadOS](../configuration/vpn-settings-ios.md)
+  - [Android Enterprise](../configuration/vpn-settings-android-enterprise.md)
 - [S/MIME 簽署和加密](certificates-s-mime-encryption-sign.md)
-- [Wi-Fi](../configuration/wi-fi-settings-ios.md)
+- Wi-Fi：
+  - [iOS 與 iPadOS](../configuration/wi-fi-settings-ios.md)
+  - [Android Enterprise](../configuration/wi-fi-settings-android-enterprise.md)
 
   針對 Wi-Fi 設定檔，只有在 [EAP 類型]  設定為下列其中一個值時，才可以使用驗證方法  ：
   - EAP – TLS
@@ -221,35 +256,25 @@ Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intun
 針對網站和應用程式使用衍生認證進行憑證型驗證。 傳遞衍生認證進行應用程式驗證：
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-
 2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+3. 輸入下列設定：
 
-3. 輸入下列內容：
-   - **平台**：選取將接收此設定檔之裝置的平台。
-   - **設定檔**：選取 [衍生認證] 
+   針對 iOS 與 iPadOS：
+   - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，**iOS 裝置設定檔的衍生認證**是良好的設定檔名稱。
+   - **描述**：輸入描述來概述設定和其他重要的詳細資料。
+   - **平台**：選取 [iOS/iPadOS]  。
+   - **設定檔類型**：選取 [衍生認證]  。
 
-4. 選取 [建立]  。
+   針對 Android Enterprise：
+   - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，**Android Enterprise 裝置設定檔的衍生認證**是不錯的設定檔名稱。
+   - **描述**：輸入描述來概述設定和其他重要的詳細資料。
+   - **平台**：選取 [Android 企業]  。
+   - **設定檔類型**：在 [僅限裝置擁有者]  之下，選取 [衍生認證]  。
 
-5. 在 [基本資訊]  中，輸入下列內容：
+4. 按一下 [確定]  以儲存您的變更。
+5. 完成時，選取 [確定]   > [建立]  以建立 Intune 設定檔。 完成時，您的設定檔會顯示在 [裝置 - 設定檔]  清單中。
+6. 選取您的新設定檔 > [指派]  。 選取應接收原則的群組。
 
-   - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，**iOS/iPadOS 裝置設定檔的衍生認證**是良好設定檔名稱。
-   - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
-
-6. 選取 [下一步]  。
-
-7. 在 [組態設定]  中，將 [使用衍生認證進行應用程式認證]  設定為 [是]  ，然後選取 [下一步]  。
-
-8. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
-
-   選取 [下一步]  。
-
-9. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
-
-    選取 [下一步]  。
-
-10. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
-
- 
 使用者會根據您在設定衍生認證簽發者時所指定的設定，接收應用程式或電子郵件通知。 通知會通知使用者啟動公司入口網站，以便處理衍生認證原則。
 
 ## <a name="renew-a-derived-credential"></a>更新衍生認證
@@ -260,7 +285,6 @@ Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intun
 
 在裝置收到新的衍生認證之後，會將使用衍生認證的原則重新部署到該裝置。
 
-
 ## <a name="change-the-derived-credential-issuer"></a>變更衍生認證簽發者
 
 在租用戶層級中，您可以變更認證簽發者，但一次只支援一個租用戶一個簽發者。
@@ -269,7 +293,7 @@ Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intun
 
 ### <a name="change-the-issuer-for-your-tenant"></a>變更租用戶的簽發者
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > 如果您刪除簽發者並立即重新設定相同的簽發者，您仍然必須更新設定檔和裝置，以使用來自該簽發者的衍生認證。 在您刪除簽發者之前取得的衍生認證已不再有效。
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
@@ -287,4 +311,4 @@ Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intun
 
 ## <a name="next-steps"></a>後續步驟
 
-[裝置組態設定檔概觀](../configuration/device-profile-create.md)
+[建立裝置組態設定檔](../configuration/device-profile-create.md)。
