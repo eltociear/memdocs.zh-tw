@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 647eba601cbfa5304bf02f8bcf059fe6e851cbf0
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 522e01b0d811d768d4f239bc917c2e3db08e05ef
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074056"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210072"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Configuration Manager Technical Preview 1806 中的功能
 
@@ -163,10 +163,10 @@ SCUP 會繼續支援其他類別目錄和案例。 Configuration Manager 主控�
 
 ## <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge"></a>設定 Microsoft Edge 的 Windows Defender SmartScreen 設定
 <!--1353701-->
-此版本在 [Microsoft Edge 瀏覽性合規性設定原則](../../compliance/deploy-use/browser-profiles.md)中新增三項 [Windows Defender SmartScreen](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) 設定。 此原則目前在 [SmartScreen 設定]  頁面中包含下列額外設定：
-- **允許 SmartScreen**：指定是否允許 Windows Defender SmartScreen。 如需詳細資訊，請參閱 [AllowSmartScreen 瀏覽器原則](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)。
-- **使用者可以覆寫站台的 SmartScreen 提示**：指定使用者是否可覆寫 Windows Defender SmartScreen 篩選工具有關潛在惡意網站的警告。 如需詳細資訊，請參閱 [PreventSmartScreenPromptOverride 瀏覽器原則](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)。
-- **使用者可以覆寫檔案的 SmartScreen 提示**：指定使用者是否可覆寫 Windows Defender SmartScreen 篩選工具有關下載未驗證檔案的警告。 如需詳細資訊，請參閱 [PreventSmartScreenPromptOverrideForFiles 瀏覽器原則](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)。
+此版本在 [Microsoft Edge 瀏覽性合規性設定原則](../../compliance/deploy-use/browser-profiles.md)中新增三項 [Windows Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) 設定。 此原則目前在 [SmartScreen 設定]  頁面中包含下列額外設定：
+- **允許 SmartScreen**：指定是否允許 Windows Defender SmartScreen。 如需詳細資訊，請參閱 [AllowSmartScreen 瀏覽器原則](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)。
+- **使用者可以覆寫站台的 SmartScreen 提示**：指定使用者是否可覆寫 Windows Defender SmartScreen 篩選工具有關潛在惡意網站的警告。 如需詳細資訊，請參閱 [PreventSmartScreenPromptOverride 瀏覽器原則](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)。
+- **使用者可以覆寫檔案的 SmartScreen 提示**：指定使用者是否可覆寫 Windows Defender SmartScreen 篩選工具有關下載未驗證檔案的警告。 如需詳細資訊，請參閱 [PreventSmartScreenPromptOverrideForFiles 瀏覽器原則](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)。
 
 
 
