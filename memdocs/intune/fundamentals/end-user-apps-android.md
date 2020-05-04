@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 04/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1d18a423242300b6c2b66c01c59404cef42ebd9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4c0c913d3bc1467096090ac4e80d1d9d5f578a1b
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79372546"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182305"
 ---
 # <a name="how-your-android-users-get-their-apps"></a>Android 使用者如何取得其應用程式  
 
@@ -33,12 +33,12 @@ ms.locfileid: "79372546"
 | 應用程式類型 | 企業營運 (LOB) 應用程式 | Play Store 應用程式  |
 | ------------- |-------------| -----|
 | 可用的應用程式      | 使用者在公司入口網站中點選 [安裝]  。 隨即會出現通知，而使用者將點選該通知以開始安裝。 安裝成功之後，通知將會消失。 | 使用者點選公司網站中的應用程式，即會前往 Play Store 中的應用程式頁面。 使用者可以在這裡開始安裝。|
-| Required apps      | 在**執行 Android 9.0 和更早版本的裝置**上，使用者會看見其無法關閉的通知，並指出他們必須安裝應用程式。 使用者可點選通知以開始下載及安裝。 安裝成功之後，通知將會消失。 在**執行 Android 10 和更新版本的裝置**上，使用者會看見其無法關閉的通知，並指出他們必須安裝應用程式。 使用者可點選通知來開始下載，然後獲得通知以開始安裝應用程式。 安裝成功之後，通知將會消失。| 使用者會看見他們無法關閉的通知，指出他們必須安裝應用程式。 使用者點選通知，即會前往 Play Store 中的應用程式頁面。 使用者可以在這裡開始安裝。 安裝成功之後，通知將會消失。 |
+| Required apps      | 使用者會看見他們無法關閉的通知，指出他們必須安裝應用程式。 使用者點選通知以開始安裝。 安裝成功之後，通知將會消失。    | 使用者會看見他們無法關閉的通知，指出他們必須安裝應用程式。 使用者點選通知，即會前往 Play Store 中的應用程式頁面。 使用者可以在這裡開始安裝。 安裝成功之後，通知將會消失。 |
 
-您的終端使用者必須允許來自未知來源的安裝，才能安裝 [LOB 應用程式](../apps/lob-apps-android.md)。 這些設定通常可在兩個不同的位置中找到：
+您的終端使用者必須允許來自未知來源的安裝，才能安裝 [LOB 應用程式](../apps/lob-apps-android.md)。 根據 Android 版本而定，此設定通常可在兩個不同的位置中找到：
 
-* **Android 7.1.2 和以下版本**：[設定]   > [安全性]   > [未知來源] 
-* **Android 8.0 和以上版本**：[設定]   > [應用程式與通知]   > [Special app access] (特殊應用程式存取)   > [Install unknown apps] (安裝未知應用程式)   > [公司入口網站]   > [Allow from this source] (允許來自此來源) 
+* Android 7.1.2 和更舊版本：[設定]   > [安全性]   > [未知來源] 
+* Android 8.0 和更新版本：[設定]   > [應用程式與通知]   > [特殊應用程式存取]   > [安裝未知的應用程式]   > [公司入口網站]   > [允許從這個來源] 
 
 如果發生這種情況，公司入口網站應用程式將會通知，並直接引導終端使用者進行適當的設定。 
 
@@ -47,13 +47,13 @@ ms.locfileid: "79372546"
 | 應用程式類型 | 企業營運 (LOB) 應用程式 | Play Store 應用程式  |
 | ------------- |-------------| -----|
 | 可用的應用程式      | 使用者在公司入口網站中點選 [安裝]  。 應用程式將在使用者無須介入下完成安裝。 | 使用者點選公司網站中的應用程式，即會前往 Play Store 中的應用程式頁面。 使用者可以在這裡開始安裝。|
-| Required apps      | 在**執行 Android 9.0 和更早版本的裝置**上，不需要使用者介入即會安裝應用程式。 在**執行 Android 10 和更新版本的裝置**上，使用者會看見其無法關閉的通知，並指出他們必須安裝應用程式。 使用者點選通知以開始安裝。 安裝成功之後，通知將會消失。 | 使用者會看見他們無法關閉的通知，指出他們必須安裝應用程式。 使用者點選通知，即會前往 Play Store 中的應用程式頁面。 使用者可以在這裡開始安裝。 安裝成功之後，通知將會消失。 |
+| Required apps      | 應用程式將在使用者無須介入下完成安裝。    | 使用者會看見他們無法關閉的通知，指出他們必須安裝應用程式。 使用者點選通知，即會前往 Play Store 中的應用程式頁面。 使用者可以在這裡開始安裝。 安裝成功之後，通知將會消失。 |
 
 應用程式可為受管理或不受管理，如下所述。 讓應用程式受管理的程序，針對所有類型的 Android 裝置都是相同的。
 
-**受控應用程式**：這些應用程式可透過原則進行管理。 它們已由 Intune「包裝」或已透過 Intune App SDK 建置。 這些應用程式可由 Intune 管理，並套用應用程式原則。
+* 受控應用程式：這些應用程式是透過原則進行管理。 它們已由 Intune「包裝」或已透過 Intune App SDK 建置。 這些應用程式可由 Intune 管理，並套用應用程式原則。
 
-**非受控應用程式**：這些應用程式無法透過原則進行管理。 它們未受 Intune 包裝或未併入 Intune App SDK。 應用程式原則無法套用到這些應用程式。
+* 非受控應用程式：這些應用程式無法透過原則進行管理。 它們未受 Intune 包裝或未併入 Intune App SDK。 應用程式原則無法套用到這些應用程式。
 
 ## <a name="zebra-devices-with-zebra-mobility-extensions"></a>含有 Zebra Mobility Extensions 的 Zebra 裝置
 
