@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/03/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 635804a9ad5cd76d104f16bcd204df1daa28b114
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 86117193ce7aae01380923ce26f84dfb5ba97a4d
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696490"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182288"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>使用應用程式防護原則的資料保護架構 
 
@@ -37,7 +37,7 @@ APP 資料保護設定架構可分成三種不同的設定案例：
 
 - 層級 2 企業增強資料保護 – 若裝置的使用者須存取敏感性或機密資訊，則 Microsoft 建議這些裝置使用此設定。 此設定適用於大部分存取公司或學校資料的行動使用者。 有些控制措施可能會影響使用者體驗。
 
-- 層級 3 企業高度資料保護 – 若裝置是由具有更大型或更複雜安全性小組的組織所運行，或針對特別高風險的特定使用者或群組所運行，則 Microsoft 建議這些裝置使用此設定 (例如，某個組織發現處理資料的使用者竊取資料而直接並嚴重影響其股票價格)。 若組織可能成為資金充裕且經驗老道的攻擊者目標，則應該會想要使用此設定。
+- 層級 3 企業高度資料保護 – 若裝置是由具有更大型或更複雜安全性小組的組織所執行，或針對特別高風險的特定使用者或群組 (處理未經授權的洩漏會造成組織實質性損失之高度敏感性資料的使用者) 所執行，則 Microsoft 建議針對這些裝置使用此設定。 若組織可能成為資金充裕且經驗老道的攻擊者目標，則應該會想要使用此設定。
 
 ## <a name="app-data-protection-framework-deployment-methodology"></a>APP 資料保護架構部署方法
 
@@ -159,8 +159,8 @@ Microsoft 建議先檢閱和分類使用案例，再使用該層級的規範方�
 
 | 設定 | 設定說明 |          值 / 動作  |          平台        | 備忘錄 |
 |--------------------|----------------------------|-----------------------------------------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 裝置條件  |       最低 OS 版本  |          *格式：Major.Minor.Build <br>範例： 12.4.4* / 封鎖存取 |          iOS/iPadOS        | Microsoft 建議設定最低 iOS 主要版本，以符合 Microsoft 應用程式支援的 iOS 版本。   Microsoft 應用程式支援 N-1 方法，其中 N 是目前的 iOS 主要發行版本。 針對次要和組建版本值，Microsoft 建議確保裝置已透過個別的安全性更新保持在最新狀態。 如需 Apple 的最新建議，請參閱 [Apple 安全性更新](https://support.apple.com/en-us/HT201222) |
-| 裝置條件  |       最低 OS 版本  |          *格式：Major.Minor<br>   範例：8.0* / 封鎖存取   |          Android        | Microsoft 建議設定最低 Android 主要版本，以符合 Microsoft 應用程式支援的 Android 版本。 遵守 Android Enterprise 建議需求的 OEM 和裝置必須支援目前發行版本 + 一個字母升級。   目前，Android 建議知識工作者使用 Android 8.0 和更新版本。   如需 Android 的最新建議，請參閱 [Android Enterprise Recommended 規格需求](https://www.android.com/enterprise/recommended/requirements/) |
+| 裝置條件  |       最低 OS 版本  |          *格式：Major.Minor.Build <br>範例： 12.4.6* / 封鎖存取 |          iOS/iPadOS        | Microsoft 建議設定最低 iOS 主要版本，以符合 Microsoft 應用程式支援的 iOS 版本。   Microsoft 應用程式支援 N-1 方法，其中 N 是目前的 iOS 主要發行版本。 針對次要和組建版本值，Microsoft 建議確保裝置已透過個別的安全性更新保持在最新狀態。 如需 Apple 的最新建議，請參閱 [Apple 安全性更新](https://support.apple.com/en-us/HT201222) |
+| 裝置條件  |       最低 OS 版本  |          *格式：Major.Minor<br>   範例：5.0* / 封鎖存取   |          Android        | Microsoft 建議設定最低 Android 主要版本，以符合 Microsoft 應用程式支援的 Android 版本。 遵守 Android Enterprise 建議需求的 OEM 和裝置必須支援目前發行版本 + 一個字母升級。   目前，Android 建議知識工作者使用 Android 8.0 和更新版本。   如需 Android 的最新建議，請參閱 [Android Enterprise Recommended 規格需求](https://www.android.com/enterprise/recommended/requirements/) |
 | 裝置條件  |       最低修補程式版本  |          *格式： YYYY-MM-DD <br> 範例：2020-01-01* / 封鎖存取  |          Android        | Android 裝置可能會收到每月安全性修補程式，但版本會取決於 OEM 及/或電訊廠商。 組織應該確保所部署的 Android 裝置確實收到安全性更新，再實作此設定。 如需最新的修補程式版本，請參閱 [Android 安全性公告](https://source.android.com/security/bulletin/)。  |
 
 #### <a name="level-3-enterprise-high-data-protection"></a>層級 3 企業高度資料保護 
@@ -192,6 +192,7 @@ Microsoft 建議先檢閱和分類使用案例，再使用該層級的規範方�
 
 | 設定 | 設定說明 |          值 / 動作  |          平台        | 備忘錄 |
 |----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 裝置條件  |       最低 OS 版本  |          *格式：Major.Minor<br>   範例：8.0* / 封鎖存取   |          Android        | Microsoft 建議設定最低 Android 主要版本，以符合 Microsoft 應用程式支援的 Android 版本。 遵守 Android Enterprise 建議需求的 OEM 和裝置必須支援目前發行版本 + 一個字母升級。   目前，Android 建議知識工作者使用 Android 8.0 和更新版本。   如需 Android 的最新建議，請參閱 [Android Enterprise Recommended 規格需求](https://www.android.com/enterprise/recommended/requirements/) |
 |       裝置狀況  |          已進行 JB 或 Root 破解的裝置  |        N/A / 抹除資料  |          iOS/iPadOS、Android        |  |
 |       裝置狀況  |          允許的最高威脅等級  |          受保護 / 封鎖存取  |          iOS/iPadOS、Android        | <p>您可以使用 Mobile Threat Defense 來檢查未註冊的裝置是否有任何威脅。 如需詳細資訊，請參閱[未註冊裝置的 Mobile Threat Defense](https://aka.ms/mtdmamdocs) (英文)。      </p><p>     如果已註冊裝置，則可以略過此設定來為已註冊的裝置部署 Mobile Threat Defense。 如需詳細資訊，請參閱[已註冊裝置的 Mobile Threat Defense](../protect/mtd-device-compliance-policy-create.md)。</p> |
 

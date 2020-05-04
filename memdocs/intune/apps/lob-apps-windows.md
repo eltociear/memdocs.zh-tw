@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb9695db99b8c170978ed2a27800b7cfe6090168
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e77c1dd32bc70b94d5c4fdd74ea82dbd65211e38
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80323906"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166633"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>將 Windows 企業營運應用程式新增至 Microsoft Intune
 
@@ -60,7 +60,9 @@ ms.locfileid: "80323906"
     - **名稱**：輸入在公司入口網站中顯示的應用程式名稱。 確定您使用的所有應用程式名稱都是唯一的。 如果有重複的應用程式名稱，只有一個應用程式會出現在公司入口網站中。
     - **描述**：輸入應用程式的描述。 此描述會出現在公司入口網站上。
     - **發行者**：輸入應用程式發行者的名稱。
-    - **最基本的作業系統**：從清單中，選擇能夠安裝應用程式的最基本作業系統版本。 若將應用程式指派給安裝舊版作業系統的裝置，就不會進行安裝。
+    - **應用程式安裝內容**：選取要與此應用程式相關聯的安裝內容。 針對雙重模式應用程式，請選取適用於此應用程式的所需內容。 針對所有其他應用程式，這會根據套件預先選取，且無法修改。
+    - **略過應用程式版本**：如果應用程式開發人員會自動更新應用程式，請設定為 [是]  。 此選項只適用於行動裝置的 .msi 應用程式。
+    - **命令列引數**：(選擇性) 輸入任何您想要在 .msi 檔案執行時套用的命令列引數。  **/q** 就是一個例子。 因為系統會自動使用 msiexec 命令或引數，例如 **/i** 或 **/x**，所以請不藥包含在內。 如需詳細資訊，請參閱[命令列選項](https://docs.microsoft.com/windows/desktop/Msi/command-line-options)。 如果 .MSI 檔案需要其他命令列選項，請考慮使用 [Win32 應用程式管理](app-management.md)。
     - **類別**：選取一或多個內建的應用程式類別，或選取您建立的類別。 類別可以讓使用者在瀏覽公司入口網站時，更輕鬆地找到應用程式。
     - **將此顯示為公司入口網站中的精選應用程式**：當使用者瀏覽應用程式時，在公司入口網站的主頁面上，以突顯的方式顯示應用程式。
     - **資訊 URL**：(選用) 輸入包含此應用程式相關資訊的網站 URL。 此 URL 會出現在公司入口網站上。

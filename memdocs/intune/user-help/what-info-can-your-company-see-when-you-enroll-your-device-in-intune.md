@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: ccef2c10f4baaac9e417dd4952b1ea6d6cf47e5c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ed3f9f6f01c8dc2df3a89daee991d9f8c61056b9
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346842"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210310"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>當我註冊裝置時，我的組織可以看到哪些資訊？
 
@@ -50,10 +50,13 @@ ms.locfileid: "79346842"
 - 裝置序號
 - IMEI
 
+ > [!NOTE]
+ > 針對 Android Enterprise 完全受控和專用裝置，您將無法看到所有應用程式清查。    
+    
 **組織可能會看到的資訊：**
 
-- 電話號碼：如果是公司所擁有的裝置，組織能看到完整的電話號碼。 如果是個人所擁有的裝置，組織便只能看到電話號碼的最後四個數字。 您可在個別裝置的 [裝置詳細資料]  頁面上看到每個個別裝置的所有權類型。
-- 裝置儲存空間：如果您無法安裝必要的應用程式，您的組織可以查看裝置儲存空間，以確定空間是否不足。  
-- 組織：組織一律無法看到裝置的位置，除非您需要復原某個已遺失的受監督 iOS 裝置。 請瀏覽 [Apple iOS 文件](https://go.microsoft.com/fwlink/?linkid=853816)，以深入了解受監督的裝置。  
-- 應用程式清查詳細資料：如果您的組織使用 Mobile Threat Defense，他們將能夠檢視您 iOS 裝置上應用程式的相關詳細資料。 深入了解 [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md)。 如果是個人裝置，組織只能看到您的受控應用程式清查。 如果是公司擁有的裝置，組織可以看到所有的應用程式清查。
-- 網路資訊：有關 Android 裝置網路連線的一些資訊，可能可以提供給您組織的支援人員。 例如，如果您的組織要求裝置保留在某個建築物內，則您的裝置會識別網路連線位置。 
+- 電話號碼：針對公司所擁有的裝置，組織可以看到您完整的電話號碼。 如果是個人所擁有的裝置，組織便只能看到電話號碼的最後四個數字。 您可在個別裝置的 [裝置詳細資料]  頁面上看到每個個別裝置的所有權類型。
+- 裝置儲存空間：如果您無法安裝必要的應用程式，組織可以查看裝置儲存空間，以了解是否是空間不足。  
+- 位置：組織一律無法看到裝置的位置，除非您需要復原某個已遺失的受監督 iOS 裝置。 請瀏覽 [Apple iOS 文件](https://go.microsoft.com/fwlink/?linkid=853816)，以深入了解受監督的裝置。  
+- 應用程式清查詳細資料：如果您的組織使用 Mobile Threat Defense，他們將能夠檢視您 iOS 裝置上應用程式的相關詳細資料。 深入了解 [Mobile Threat Defense](set-up-mobile-threat-defense.md)。 如果是個人裝置，組織只能看到您的受控應用程式清查。 如果是公司擁有的裝置，組織可以看到所有的應用程式清查。
+- 網路資訊：有些與 Android 裝置網路連線相關的資訊，可能會提供給您組織的支援人員。 例如，如果您的組織要求裝置保留在某個建築物內，則您的裝置會識別網路連線位置。 

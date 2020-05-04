@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e359b07669f45999ae3de4280d1eb65d5ca11064
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: cbcd54a56304df36c536e5a623f4e9da5ba3f15b
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023328"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254685"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>使用抹除、淘汰或手動取消註冊裝置來移除裝置
 
@@ -94,7 +94,7 @@ ms.locfileid: "82023328"
 |電子郵件|已移除經由 Intune 佈建的電子郵件設定檔。 已刪除裝置上的快取電子郵件。|
 |Azure AD 退出|已移除 Azure AD 記錄。|
 
-### <a name="android"></a>Android
+### <a name="android-device-administrator"></a>Android 裝置管理員
 
 |資料類型|Android|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
@@ -110,11 +110,11 @@ ms.locfileid: "82023328"
 |電子郵件|N/A (Android 裝置不支援電子郵件設定檔)|已移除經由 Intune 佈建的電子郵件設定檔。 已刪除裝置上的快取電子郵件。|
 |Azure AD 退出|已移除 Azure AD 記錄。|已移除 Azure AD 記錄。|
 
-### <a name="android-work-profile"></a>Android 工作設定檔
+### <a name="android-enterprise-devices-with-a-work-profile"></a>使用工作設定檔的 Android Enterprise 裝置
 
 從 Android 工作設定檔裝置移除公司資料會移除該裝置上工作設定檔中的所有資料、應用程式和設定。 Intune 管理已淘汰該裝置。 Android 工作設定檔不支援抹除。
 
-### <a name="android-enterprise-kiosk-devices"></a>Android 企業 kiosk 裝置
+### <a name="android-enterprise-dedicated-devices"></a>Android Enterprise 專用裝置
 
 您只能抹除 kiosk 裝置。 您無法淘汰 Android kiosk 裝置。
 
@@ -134,7 +134,7 @@ ms.locfileid: "82023328"
 
 |資料類型|Windows 8.1 (MDM) 和 Windows RT 8.1|Windows RT|Windows Phone 8.1 和 Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Intune 安裝的公司應用程式和相關資料|會撤銷受 EFS 保護之檔案的索引鍵。 使用者無法開啟檔案。|不會移除公司應用程式。|原本透過公司入口網站安裝的應用程式將會解除安裝。 將會移除公司應用程式資料。|已解除安裝應用程式。 已移除側載金鑰。<br>針對 Windows 10 1703 版 (Creators Update) 和更新版本，不會移除 Microsoft 365 Apps 應用程式。 Intune 管理延伸模組所安裝的 Win32 應用程式不會在未註冊裝置上解除安裝。 系統管理員可以利用指派排除，來確保不會對 BYOD 裝置提供 Win32 應用程式。|
+|Intune 安裝的公司應用程式和相關資料|會撤銷受 EFS 保護之檔案的索引鍵。 使用者無法開啟檔案。|不會移除公司應用程式。|原本透過公司入口網站安裝的應用程式將會解除安裝。 將會移除公司應用程式資料。|已解除安裝應用程式。 已移除側載金鑰。<br>針對 Windows 10 1709 版 (Creators Update) 和更新版本，不會移除 Microsoft 365 應用程式。 Intune 管理延伸模組所安裝的 Win32 應用程式不會在未註冊裝置上解除安裝。 系統管理員可以利用指派排除，來確保不會對 BYOD 裝置提供 Win32 應用程式。|
 |設定|由 Intune 原則所設定的設定不再是強制性。 使用者可以變更這些設定。|由 Intune 原則所設定的設定不再是強制性。 使用者可以變更這些設定。|由 Intune 原則所設定的設定不再是強制性。 使用者可以變更這些設定。|由 Intune 原則所設定的設定不再是強制性。 使用者可以變更這些設定。|
 |Wi-Fi 及 VPN 設定檔設定|已移除。|已移除。|不支援。|已移除。|
 |憑證設定檔設定|憑證會予以移除及撤銷。|憑證會予以移除及撤銷。|不支援。|憑證會予以移除及撤銷。|

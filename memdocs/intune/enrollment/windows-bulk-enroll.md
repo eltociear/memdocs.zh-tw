@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eabdae9fcc8bdc3b6c93d5b735a5b9fbf4dcf69a
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 54b26c2b7599906df29e5130b99dc38124e0b411
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078918"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254787"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Windows 裝置的大量註冊
 
@@ -32,7 +32,7 @@ Azure AD 使用者是這些裝置上的標準使用者，並且會接收指派�
 
 ## <a name="prerequisites-for-windows-devices-bulk-enrollment"></a>Windows 裝置大量註冊的先決條件
 
-- 執行 Windows 10 Creator Update (組建 1703) 或更新版本的裝置
+- 執行 Windows 10 Creators Update (組建 1709) 或更新版本的裝置
 - [Windows 自動註冊](windows-enroll.md#enable-windows-10-automatic-enrollment)
 
 ## <a name="create-a-provisioning-package"></a>建立佈建套件

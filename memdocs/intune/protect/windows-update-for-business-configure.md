@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c156e0d1b627d285c6654994d6114920f86b2bab
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 060fa4af918df05588a858a3883d0bbb96a99334
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80488057"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254668"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>在 Intune 中管理 Windows 10 軟體更新
 
@@ -46,7 +46,7 @@ Intune 提供下列原則類型以管理更新：
 
 - Windows 10 電腦必須執行下列 Windows 10 版本：
   - **Windows 10 更新通道**：1607 版或更新版本
-  - **Windows 10 功能更新**：1703 版或更新版本
+  - **Windows 10 功能更新**：1709 版或更新版本
 
 - Windows Update 支援下列 Windows 10 版本：
   - Windows 10

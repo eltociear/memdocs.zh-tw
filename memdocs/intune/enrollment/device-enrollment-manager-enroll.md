@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27ec9e4c407dd8ef1a94e9c443f62ea5456866dc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8710043244e0b6becebef60890ac1a0ec3105971
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80808146"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254634"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>使用裝置註冊管理員帳戶在 Intune 中註冊裝置
 
@@ -43,6 +43,13 @@ DEM 使用者帳戶及以 DEM 使用者帳戶註冊的裝置具有下列限制�
 - 使用 DEM 帳戶註冊的每部裝置都必須獲得正確授權，才能由 Intune 進行管理。 授權可能是 Intune 使用者授權或 Intune 裝置授權。
 - 若要使用 DEM 帳戶[註冊 Android Enterprise 工作設定檔裝置](android-work-profile-enroll.md)，每個帳戶只能註冊 10 部裝置。
 - [不支援使用 DEM 帳戶註冊 Android Enterprise 完全受控裝置](android-fully-managed-enroll.md)。
+- 將 Azure AD 裝置限制套用至 DEM 帳戶，將會防止您達到 DEM 帳戶可以註冊的 1,000 個裝置限制。
+
+## <a name="enrollment-methods-supported-by-dem-accounts"></a>DEM 帳戶支援的註冊方法
+
+- [Windows Autopilot](enrollment-autopilot.md)
+- [Windows 裝置大量註冊](windows-bulk-enroll.md)
+- 透過公司入口網站起始 DEM
 
 ## <a name="add-a-device-enrollment-manager"></a>新增裝置註冊管理員
 
@@ -52,14 +59,13 @@ DEM 使用者帳戶及以 DEM 使用者帳戶註冊的裝置具有下列限制�
 
 3. 在 [新增使用者]  刀鋒視窗中，輸入 DEM 使用者的使用者主體名稱，然後選取 [新增]  。 DEM 隨即會新增至 DEM 使用者清單。
 
-## <a name="permissions-for-dem"></a>DEM 的權限
+## <a name="permissions-required-to-create-dem-accounts"></a>建立 DEM 帳戶所需的權限
 
 需要具備全域管理員或 Intune 服務管理員 Azure AD 角色以
 - 將 DEM 權限指派給 Azure AD 使用者帳戶
 - 查看所有 DEM 使用者
 
 若未針對使用者指派全域管理員或 Intune 服務管理員角色，但他們具備已針對所指派裝置註冊管理員角色啟用的讀取權限，則只能看到他們所建立的 DEM 使用者。
-
 
 ## <a name="remove-device-enrollment-manager-permissions"></a>移除裝置註冊管理員權限
 

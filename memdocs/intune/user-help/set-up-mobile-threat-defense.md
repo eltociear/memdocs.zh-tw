@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/25/2019
+ms.date: 04/27/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b5df63a14f27b657c585eb43e09b02368d969939
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 676af3373acd399056a0ebdc77c9152442a72101
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084403"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182271"
 ---
 # <a name="install-mobile-threat-defense"></a>安裝 Mobile Threat Defense   
 
@@ -30,7 +30,7 @@ ms.locfileid: "80084403"
 
 如果沒有所需的 MTD 應用程式，則會禁止您使用公司或學校帳戶來登入受保護的應用程式。 在本文中，您將了解[如何安裝 MTD 應用程式](set-up-mobile-threat-defense.md#install-app)以防止遭到封鎖。  
 
-有多種 MTD 廠商應用程式可供安裝；組織會讓您知道要使用哪一種。 
+有各種不同的 MTD 廠商應用程式可供安裝，其名稱各不相同。 您的組織將會告訴您應使用何種應用程式。 如果組織要求您安裝某個應用程式，但未提供進一步的指示或連結來取得該應用程式，請與您的 IT 支援人員連絡。 
 
 
 ## <a name="information-your-organization-can-see"></a>組織可以看到的資訊   

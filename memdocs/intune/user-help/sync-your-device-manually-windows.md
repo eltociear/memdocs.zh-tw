@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f9e62cd4c4034e4cf2eafaea56aa3e5175b1797e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cc2fbfac43916a8298646f6ff57c146c45966b1c
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335740"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254804"
 ---
 # <a name="sync-your-windows-device-manually"></a>手動同步處理您的 Windows 裝置
 
@@ -40,7 +40,7 @@ Intune 支援從公司入口網站應用程式、桌面工作列或 [開始] 功
 * [Windows Phone 8.1](#windows-phone-81)    
 
 ## <a name="sync-directly-from-company-portal-app-for-windows"></a>直接從 Windows 版公司入口網站應用程式進行同步
-完成這些步驟以手動同步處理執行 Creators Update (1703 版) 或更新版本的任何 Windows 10 裝置。
+完成這些步驟以手動同步處理執行 Creators Update (1709 版) 或更新版本的任何 Windows 10 裝置。
 
 1. 在您的裝置上開啟「公司入口網站」應用程式。
 

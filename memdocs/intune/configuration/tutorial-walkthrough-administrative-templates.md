@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1bb178c03682b9dd04902fecd50e5f2c9f01d0b
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 41a2dce895761053e482fe029e4599819a099ac6
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022852"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254855"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>教學課程：使用雲端為具有 ADMX 範本及 Microsoft Intune 的 Windows 10 裝置上設定群組原則
 
@@ -53,7 +53,7 @@ ADMX 範本適用於下列服務：
 
 本功能適用於：
 
-- Windows 10 1703 版及更新版本
+- Windows 10 1709 版及更新版本
 
 ## <a name="prerequisites"></a>先決條件
 

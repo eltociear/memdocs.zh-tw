@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04bc86ff697ed7083cacd552cbf9ebe5096a228c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f74308e5c59adee6810d54ce44cf104514f83056
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326875"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254770"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>針對 Microsoft Intune 中的 Windows 裝置註冊問題進行疑難排解
 
@@ -304,7 +304,7 @@ Registering your device for mobile management (Previous step failed)
 
 - 裝置必須具有實體 TPM 2.0 晶片。 具有虛擬 TPM (例如 Hyper-V VM) 或 TPM 1.2 晶片的裝置無法在自我部署模式下使用。
 - 裝置必須執行下列其中一個 Windows 版本：
-    - Windows 10 組建 1703 或更新版本。
+    - Windows 10 組建 1709 或更新版本。
     - 如果使用混合式 Azure AD Join，則為 Windows 10 組建 1809 或更新版本。
 
 
