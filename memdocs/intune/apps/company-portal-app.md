@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/16/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6a3152966dee507cde690d9be8f5a7e210c7945
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 7e584019063c6af7f04f5666ba2c38d8199681c5
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407743"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771419"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>如何自訂 Intune 公司入口網站應用程式、公司入口網站及 Intune 應用程式
 
@@ -31,7 +31,7 @@ ms.locfileid: "80407743"
 
 ## <a name="customizing-the-user-experience"></a>自訂使用者體驗
 
-您可以透過自訂終端使用者體驗，協助為終端使用者提供熟悉且實用的體驗。 若要執行此動作，請巡覽至 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)、選取 [租用戶系統管理]   > [自訂]  ，然後進行必要的設定。 這些設定將套用到公司入口網站應用程式、公司入口網站，以及 Android 上的 Intune 應用程式。
+您可以透過自訂終端使用者體驗，協助為終端使用者提供熟悉且實用的體驗。 若要這麼做，請瀏覽至 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，然後選取 [租用戶管理]   > [自訂]  ，您可在其中編輯預設原則，或最多建立 10 個以群組為目標的原則。 這些設定將套用到公司入口網站應用程式、公司入口網站，以及 Android 上的 Intune 應用程式。
 
 ## <a name="branding"></a>商標
 
@@ -93,6 +93,7 @@ ms.locfileid: "80407743"
 | 隱私權聲明 URL | 79 | 設定當使用者按一下隱私權連結時要顯示的組織隱私權聲明。 您必須以 `https://www.contoso.com` 格式輸入有效的 URL。 |
 | 適用於 iOS/iPadOS 之公司入口網站中的隱私權訊息 | 520 | 保留預設值或設定自訂訊息，以列出貴組織在受控 iOS/iPadOS 裝置上可以看到或無法看到的項目。 您可以使用 Markdown 來新增項目符號、粗體、斜體和連結。 |
 | 裝置註冊 | N/A | 指定是否及如何提示使用者註冊行動裝置管理。 詳細資料如下。 |
+| 裝置擁有權通知 | N/A | 將裝置擁有權類型從 [個人] 變更為 [公司] 時，將推播通知傳送給 Android 與 iOS 公司入口網站使用者。 根據預設，此推播通知設定為關閉。 當裝置擁有權設定為公司擁有權時，Intune 會有更大的裝置存取權，其中包括完整應用程式清查、FileVault 金鑰輪替、電話號碼擷取，以及選取少數遠端動作。 如需詳細資訊，請參閱[變更裝置擁有權](../enrollment/corporate-identifiers-add.md#change-device-ownership)。  |
 
 ### <a name="device-enrollment-setting-options"></a>裝置註冊設定選項
 
@@ -188,7 +189,7 @@ iOS/iPadOS 公司入口網站可以使用深色模式。 使用者可以下載�
 <sup>(4)</sup> **重新命名**只會變更公司入口網站應用程式或 Web 入口網站中的裝置名稱，而非裝置上的裝置名稱。<br>
 <sup>(5)</sup> 使用者註冊的 iOS/iPadOS 裝置上無法使用**抹除**。<br>
 <sup>(6)</sup> 在某些 Android 和 Android Enterprise 設定上不支援**重設密碼**。 如需詳細資訊，請參閱[在 Intune 中重設或移除裝置密碼](../remote-actions/device-passcode-reset.md)。<br>
-<sup>(7)</sup> **淘汰**和**抹除**不適用於 Android Enterprise 裝置擁有者案例 (COPE、COBO、COSU)。<br> 
+<sup>(7)</sup> **淘汰**和**抹除**不適用於 Android Enterprise 裝置擁有者案例 (COPE、COBO、COSU)。<br>
 <sup>(8)</sup> 使用者註冊的 iOS/iPadOS 裝置上不支援**重設密碼**。
 
 ## <a name="next-steps"></a>後續步驟

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 633adc8fa28f422c4b21958675efb53cb2571d39
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: a0cf2096b4a8862a29d47bc05aa29f0cbb48792b
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324739"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023243"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>將應用程式新增至 Microsoft Intune 
 
@@ -56,8 +56,8 @@ Intune 支援各種不同的應用程式類型。 每種應用程式類型的可
 | Windows Phone 8.1 市集應用程式  | 市集應用程式  | [應用程式類型]  選取 [Windows Phone 8.1]  ，並輸入應用程式的 Microsoft Store URL。 |
 | Microsoft Store 應用程式  | 市集應用程式  | [應用程式類型]  選取 [Windows]  ，並輸入應用程式的 Microsoft Store URL。 |
 | 受控的 Google Play 應用程式 | 市集應用程式  | [應用程式類型]  選取 [受控的 Google Play]  、搜尋應用程式，然後在 Intune 中選取該應用程式。 |
-| 適用於 Windows 10 的 Office 365 應用程式  | 市集應用程式 (Office 365) | [應用程式類型]  選取 [Office 365 套件]  下的 [Windows 10]  ，然後選取想要安裝的 Office 365 應用程式。  |
-| 適用於 macOS 的 Office 365 應用程式 | 市集應用程式 (Office 365) | [應用程式類型]  選取 [Office 365 套件]  下的 [macOS]  ，然後選取 Office 365 應用程式套件。 |
+| 適用於 Windows 10 的 Office 365 應用程式  | 市集應用程式 (Office 365) | 針對 [應用程式類型]  選取 [Microsoft 365 Apps]  下的 [Windows 10]  ，然後選取想要安裝的 Office 365 應用程式。  |
+| 適用於 macOS 的 Office 365 應用程式 | 市集應用程式 (Office 365) | 針對 [應用程式類型]  選取 [Microsoft 365 Apps]  下的 [macOS]  ，然後選取 Office 365 應用程式套件。 |
 | 適用於 Windows 10 的 Microsoft Edge 77 版和更新版本 | 市集應用程式 | [應用程式類型]  選取 [Microsoft Edge 77 版和更新版本]  下的 [Windows 10]  。 |
 | 適用於 macOS 的 Microsoft Edge 77 版和更新版本 | 市集應用程式 | [應用程式類型]  選取 [Microsoft Edge 77 版和更新版本]  下的 [macOS]  。 |
 | Android 企業營運 (LOB) 應用程式 | LOB 應用程式 | [應用程式類型]  選取 [企業營運]  應用程式，選取 [應用程式套件檔案]  ，然後輸入副檔名為 **.apk** 的 Android 安裝檔。  |
@@ -121,7 +121,7 @@ Intune 也支援存取需要安全存取內部部署資料的用戶端應用程�
 Intune 讓您修改部署的應用程式功能，幫助這些應用程式符合公司的規範及安全性原則。 這項控制能讓您決定保護公司資料的方式。 Intune 受控應用程式使用一組豐富的行動應用程式保護原則，例如：
 
 - 限制複製和貼上及另存新檔功能。
-- 設定網頁連結以在 Intune Managed Browser 應用程式內開啟。
+- 設定要在 Microsoft Edge 應用程式內開啟的網頁連結。
 - 啟用使用多重身分識別和應用程式層級的條件式存取。
 
 Intune 受控應用程式也可以在無需註冊之下啟用應用程式保護，這可讓您選擇在不管理使用者裝置的情況下套用資料外洩防護原則。 此外，您可以使用 Intune App SDK 和 App Wrapping Tool，將行動應用程式管理併入您的行動和企業營運應用程式。 如需這些工具的詳細資訊，請參閱 [Intune App SDK 概觀](../developer/app-sdk.md)。

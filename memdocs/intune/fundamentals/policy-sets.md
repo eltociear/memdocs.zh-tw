@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82e02795dc9dbcbc0598218418404fe74fdf1226
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: e6a3e2b9026024791ef1a9e4eb5aca08718d8573
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551625"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023158"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>使用原則集合將管理物件集合組成群組
 
@@ -89,7 +89,7 @@ ms.locfileid: "80551625"
   - Android 市集應用程式
   - Android 企業營運應用程式
   - 受控 Android 企業營運應用程式
-  - Office 365 專業增強版套件 (Windows 10)
+  - Microsoft 365 Apps (Windows 10)
   - 網頁連結
   - 內建 iOS/iPadOS 應用程式
   - 內建 Android 應用程式
@@ -121,6 +121,7 @@ ms.locfileid: "80551625"
     如果將原則新增至已部署至群組的原則集合，該群組將會在工作負載中顯示為已直接指派，而非「透過原則集合指派」。 因此，MAM 並不會處理來自原則集合的群組指派刪除。
 
 - MAM 針對任何原則類型皆不支援部署至 [所有使用者]  和 [所有裝置]  虛擬群組。
+- 無法選取類型為 [系統管理範本] 的裝置組態設定檔作為原則集的一部分。
 
 ## <a name="next-steps"></a>後續步驟
 
