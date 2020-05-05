@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3b9497d80fad3a0abd7e7b14b1b8ac02b249c77
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0913937714b59aca56c1e61fabe9d8154b6d4d24
+ms.sourcegitcommit: af8a3efd361a7f3fa6e98e5126dfb1391966ff76
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339848"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82149108"
 ---
 # <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices"></a>註冊 Android Enterprise 專用裝置或完全受控裝置
 
@@ -31,16 +31,15 @@ ms.locfileid: "79339848"
 
 | 註冊方法 | 專用且完全受控裝置的最低 Android OS 版本 |
 | ----- | ----- |
-| 近距離無線通訊 | 5.1 |
+| 近距離無線通訊 | 6.0 |
 | 權杖項目 | 6.0 |
 | QR 代碼 | 7.0 |
-| 零接觸 (Zero Touch)  | 8.0\* |
-
-\* 僅限參與的製造商。
+| 零接觸 (Zero Touch)  | 8.0<br><br> 針對參與的製造商。 |
+| [Knox Mobile Enrollment](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll)  | 6.0<br><br> 針對 Samsung Knox 2.8 或更高版本的裝置。 |
 
 ## <a name="enroll-by-using-near-field-communication-nfc"></a>使用近距離無線通訊 (NFC) 註冊
 
-針對支援 NFC 的裝置，您可透過建立特殊格式化的 NFC 標籤，佈建您的裝置。 您可以使用自己的應用程式或任何 NFC 標記建立者工具。 如需詳細資訊，請參閱 [C-based Android Enterprise device enrollment with Microsoft Intune](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/) (使用 Microsoft Intune 註冊 C 型 Android Enterprise 裝置) 及 [Google's Android Management API documentation](https://developers.google.com/android/management/provision-device#nfc_method) (Google 的 Android 管理 API 文件)。
+針對支援 NFC 的裝置 6 及更新版本，您可透過建立特殊格式化的 NFC 標籤，佈建您的裝置。 您可以使用自己的應用程式或任何 NFC 標記建立者工具。 如需詳細資訊，請參閱 [C-based Android Enterprise device enrollment with Microsoft Intune](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/) (使用 Microsoft Intune 註冊 C 型 Android Enterprise 裝置) 及 [Google's Android Management API documentation](https://developers.google.com/android/management/provision-device#nfc_method) (Google 的 Android 管理 API 文件)。
 
 ## <a name="enroll-by-using-a-token"></a>使用權杖註冊
 
@@ -91,6 +90,8 @@ ms.locfileid: "79339848"
 
 4. 選擇 [套用]  。
 
+## <a name="enroll-by-using-knox-mobile-enrollment"></a>使用 Knox Mobile Enrollment 進行註冊
+若要使用 Samsung 的 Knox Mobile Enrollment，裝置必須執行 Android OS 第 6 版或更新版本，以及 Samsung Knox 2.8 或更高版本。 如需詳細資訊，請了解[如何使用 Knox Mobile Enrollment 自動註冊裝置](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll)。
 
 ## <a name="next-steps"></a>後續步驟
 - [部署 Android 應用程式](../apps/apps-deploy.md)

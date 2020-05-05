@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d6fdb0e019c4c61a83beed63c6d2470a0ed04b1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: c2d0d4c186dd0c703e371169fd24c2dbdabaa8ea
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326059"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254838"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>在 Microsoft Intune 中透過 OEMConfig 使用和管理 Android Enterprise 裝置
 
@@ -151,21 +151,25 @@ OEMConfig 原則是特殊類型的裝置設定原則，類似[應用程式設定
 
 | OEM | 套件組合識別碼 | OEM 文件 (若有的話) |
 | --- | --- | ---|
-| Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin 系統管理指南](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) \(英文\) |
-| Zebra Technologies | com.zebra.oemconfig.common | [Zebra OEMConfig 概觀](http://techdocs.zebra.com/oemconfig ) \(英文\) |
+| Ascom | com.ascom.myco.oemconfig | |
+| Cipherlab | com.cipherlab.oemconfig | |
 | Honeywell | com.honeywell.oemconfig |  |
+| HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
+| HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 | 
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
+| Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin 系統管理指南](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) \(英文\) |
+| Seuic | com.seuic.seuicoemconfig | |
 | Spectralink - Barcodes | com.spectralink.barcode.service |  |
 | Spectralink - Buttons | com.spectralink.buttons |  |
 | Spectralink - Device | com.spectralink.slnkdevicesettings  |  |
 | Spectralink - Logging | com.spectralink.slnklogger |  |
 | Spectralink - VQO | com.spectralink.slnkvqo |  |
-| Seuic | com.seuic.seuicoemconfig | |
 | Unitech Electronics | com.unitech.oemconfig | |
+| Zebra Technologies | com.zebra.oemconfig.common | [Zebra OEMConfig 概觀](http://techdocs.zebra.com/oemconfig ) \(英文\) |
 
 -----------------
 
-如果您的裝置上存在 OEMConfig 應用程式，但其沒有列於上表中，或是沒有顯示在 Intune 主控台中，請傳送電子郵件到 `IntuneOEMConfig@microsoft.com`。
+如果裝置上存在 OEMConfig 應用程式，但其沒有列於上表中，或沒有顯示在 Intune 主控台中，請傳送電子郵件至 `IntuneOEMConfig@microsoft.com`。
 
 > [!NOTE]
 > OEMConfig 應用程式必須先由 Intune 上架，才能搭配 OEMConfig 設定檔進行設定。 在支援該應用程式之後，您不需要連絡 Microsoft 便能在租用戶中加以設定。 只要依照此頁面上的指示執行即可。

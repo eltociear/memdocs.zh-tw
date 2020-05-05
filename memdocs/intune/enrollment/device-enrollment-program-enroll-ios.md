@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82b9dd1db3bd625f21dcdbf2df375f5b8612e74a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: db9164d68783356faf01fe4fc4e8d74f2a4b0869
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327231"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023345"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>使用 Apple 的自動裝置註冊來自動註冊 iOS/iPadOS 裝置
 
@@ -32,7 +32,7 @@ ms.locfileid: "80327231"
 
 您可設定 Intune，以註冊透過 Apple [自動裝置註冊 (ADE)](https://deploy.apple.com) (前稱為裝置註冊計劃) 所購買的 iOS/iPadOS 裝置。 自動裝置註冊能夠自動地幫助您註冊大量裝置。 iPhone、iPad 與 MacBook 等裝置可直接交付給使用者。 當使用者開啟裝置電源時，會以預先設定的設定來執行設定助理 (包括 Apple 產品的典型全新體驗)，並註冊裝置以接受管理。
 
-若要啟用 ADE，您可同時使用 Intune 與 [Apple Business Manager (ABM)](https://business.apple.com/) 或 [Apple School Manager (ASM)](https://school.apple.com/) 入口網站。 您需要序號或採購單編號的清單，才能在上述任一個 Apple 入口網站中將裝置指派給 Intune 進行管理。 您可在 Intune 中建立 ADE 註冊設定檔，其中包含已在註冊期間套用至裝置的設定。 請注意，ADE 無法與[裝置註冊管理員](device-enrollment-manager-enroll.md)帳戶一起使用。
+若要啟用 ADE，您可同時使用 Intune 與 [Apple Business Manager (ABM)](https://business.apple.com/) 或 [Apple School Manager (ASM)](https://school.apple.com/) 入口網站。 您需要序號或採購單編號的清單，才能在上述任一個 Apple 入口網站中將裝置指派給 Intune 進行管理。 您可在 Intune 中建立 ADE 註冊設定檔，其中包含已在註冊期間套用至裝置的設定。 ADE 無法與[裝置註冊管理員](device-enrollment-manager-enroll.md)帳戶一起使用。
 
 > [!NOTE]
 > ADE 會設定終端使用者無法移除的裝置設定。 因此，在[移轉至 ADE](../fundamentals/migration-guide-considerations.md) 之前，必須先抹除裝置，讓裝置回復為出廠 (全新) 狀態。
@@ -52,7 +52,7 @@ ADE 註冊與公司入口網站應用程式的 App Store 版本不相容。 您�
 
 Apple 在 iOS/iPadOS 5 中引進受監管模式。 您可以使用更多控制措施管理受監管模式中的 iOS/iPadOS 裝置，例如封鎖螢幕畫面擷取及封鎖從 App Store 安裝應用程式。 因此，它特別適用於公司擁有的裝置。 Intune 支援針對受監督模式設定裝置，以作為 ADE 的一部分。
 
-iOS/iPadOS 11 中對非監督式 ADE 裝置的支援已淘汰。 在 iOS/iPadOS 11 與更新版本中，應一律監督 ADE 設定裝置。 在未來的 iOS/iPadOS 版本中，將會忽略 ADE *is_supervised* 旗標。
+iOS/iPadOS 11 中對非監督式 ADE 裝置的支援已淘汰。 在 iOS/iPadOS 11 與更新版本中，應一律監督 ADE 設定裝置。 使用 iOS/iPadOS 13.0 和更新版本時，將會忽略 ADE *is_supervised* 旗標。 使用自動裝置註冊進行註冊時，會自動監督所有使用 13.0 版和更新版本的 iOS/iPadOS 裝置。 
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -66,6 +66,13 @@ iOS/iPadOS 11 中對非監督式 ADE 裝置的支援已淘汰。 在 iOS/iPadOS 
 - 在 [Apple 的 ADE](https://deploy.apple.com) 中購買的裝置
 - [行動裝置管理 (MDM) 授權單位](../fundamentals/mdm-authority-set.md)
 - [Apple MDM Push Certificate](apple-mdm-push-certificate-get.md)
+
+## <a name="supported-volume"></a>支援的磁碟區
+
+- 每個權杖的註冊設定檔上限：1,000  
+- 每個設定檔的 Automated Device Enrollment 裝置上限：無限制 (在每個權杖的裝置數目上限內)
+- 每個 Intune 帳戶的 Automated Device Enrollment 權杖上限：2,000
+- 每個權杖的 Automated Device Enrollment 裝置數目上限：75,000
 
 ## <a name="get-an-apple-ade-token"></a>取得 Apple ADE 權杖
 
@@ -84,8 +91,8 @@ iOS/iPadOS 11 中對非監督式 ADE 裝置的支援已淘汰。 在 iOS/iPadOS 
 
 2. 藉由選取 [我同意]  來將權限授與 Microsoft，以將使用者和裝置資訊傳送給 Apple。
 
-> [!NOTE]
-> 當您在步驟 2 之後下載 Intune 公開金鑰憑證後，請勿關閉精靈或巡覽出這個頁面。 這麼做會讓您下載的憑證失效，而必須重複此程序。 如果遇到此狀況，則您通常會注意到 [檢閱 + 建立]  索引標籤上的 [建立]  按鈕呈現灰色，而無法完成此程序。
+   > [!NOTE]
+   > 當您在步驟 2 之後下載 Intune 公開金鑰憑證後，請勿關閉精靈或巡覽出這個頁面。 這麼做會讓您下載的憑證失效，而必須重複此程序。 如果遇到此狀況，則您通常會注意到 [檢閱 + 建立]  索引標籤上的 [建立]  按鈕呈現灰色，而無法完成此程序。
 
    ![[Apple 憑證] 工作區中 [註冊計劃權杖] 窗格下載公開金鑰的螢幕擷取畫面。](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
@@ -122,7 +129,7 @@ iOS/iPadOS 11 中對非監督式 ADE 裝置的支援已淘汰。 在 iOS/iPadOS 
 
 ### <a name="step-4-upload-your-token-and-choose-scope-tags"></a>步驟 4： 上傳權杖，然後選擇範圍標籤。
 
-1. 在 [Apple 權杖]  方塊中，瀏覽至憑證 (.pem) 檔案，選擇 [開啟]  。
+1. 在 [Apple 權杖]  方塊中，瀏覽至憑證 (.p7m) 檔案，選擇 [開啟]  。
 2. 如果您想要將[範圍標籤](../fundamentals/scope-tags.md)套用到這個 DEP 權杖中，請選擇 [範圍 (標籤)]  ，然後選取您想要的範圍標籤。 新增到此權杖的設定檔和裝置會繼承套用到權杖的範圍標籤。
 3. 選擇 **[建立]** 。
 
@@ -141,14 +148,15 @@ iOS/iPadOS 11 中對非監督式 ADE 裝置的支援已淘汰。 在 iOS/iPadOS 
 
     ![[建立設定檔] 螢幕擷取畫面。](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. 在 [基本]  頁面上，為設定檔輸入系統管理用的**名稱**與**描述**。 使用者看不到這些詳細資料。 您可以使用此 [名稱]  欄位，在 Azure Active Directory 中建立動態群組。 設定檔名稱可用來定義 enrollmentProfileName 參數，以註冊具備此註冊設定檔的裝置。 深入了解 [Azure Active Directory 動態群組](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)。
+3. 在 [基本]  頁面上，為設定檔輸入系統管理用的**名稱**與**描述**。 使用者看不到這些詳細資料。 您可以使用此 [名稱]  欄位，在 Azure Active Directory 中建立動態群組。 設定檔名稱可用來定義 enrollmentProfileName 參數，以註冊具備此註冊設定檔的裝置。 針對使用自動裝置註冊 (含使用者親和性) 進行註冊的裝置，在裝置設定之前註冊使用者為其成員的目標 AAD 使用者群組，將會確保最快速地將原則傳遞至裝置。 將應用程式和原則其目標設為以註冊設定檔為基礎的動態群組，會導致在完成註冊流程後套用至裝置時產生一些延遲。
+深入了解 [Azure Active Directory 動態群組](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)。
 
     ![設定檔名稱與描述。](./media/device-enrollment-program-enroll-ios/image05.png)
 
 4. 選取 [下一步:  裝置管理設定]。
 
 5. 針對 [使用者親和性]  ，為具備此設定檔的裝置選擇需要或不需要由指派的使用者來進行註冊。
-    - **搭配使用者親和性進行註冊** - 針對屬於使用者的裝置，以及想要使用公司入口網站進行像是安裝應用程式等服務的裝置，選擇此選項。 如果使用 ADFS，而且註冊設定檔將 [不向設定輔助程式驗證，而向公司入口網站驗證]  設定為 [否]  ，則需要 [WS-Trust 1.3 使用者名稱/混合端點](https://technet.microsoft.com/library/adfs2-help-endpoints) [深入了解](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。
+    - **搭配使用者親和性進行註冊** - 針對屬於使用者的裝置，以及想要使用公司入口網站進行像是安裝應用程式等服務的裝置，選擇此選項。 如果您使用 ADFS 且使用 [設定助理] 來進行驗證，[WS-Trust 1.3 使用者名稱/混合端點](https://technet.microsoft.com/library/adfs2-help-endpoints) [(深入了解)](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) 是必要的。
 
     - **不搭配使用者親和性進行註冊** - 針對未與任何使用者相關的裝置選擇此選項。 針對不會存取本機使用者資料的裝置，請使用此選項。 公司入口網站應用程式類的應用程式無法運作。
 
@@ -197,10 +205,15 @@ iOS/iPadOS 11 中對非監督式 ADE 裝置的支援已淘汰。 在 iOS/iPadOS 
 
 10. 選擇您是否想要針對使用此設定檔的裝置鎖定註冊。 **鎖定的註冊**會停用可將管理設定檔從 [設定]  功能表中移除的 iOS/iPadOS 設定。 註冊裝置之後，必須抹除裝置才能變更此設定。 這類裝置必須將**受監督**管理模式設為 [是]  。 
 
+    > [!NOTE]
+    > 使用 [鎖定註冊]  註冊裝置之後，使用者將無法在公司入口網站應用程式中使用 [移除裝置]  或 [恢復出廠預設值]  。 使用者將無法使用這些選項。 使用者也無法在公司入口網站 (https://portal.manage.microsoft.com) 中移除裝置。
+    > 此外，如果 BYOD 裝置已轉換為 Apple Automated Device Enrollment 裝置，並使用已啟用 [鎖定註冊]  的設定檔進行註冊，則使用者將可使用 [移除裝置]  和 [恢復出廠預設值]  30 天，然後這些選項就會停用或無法使用。 參考： https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859 。
+
 11. 選擇您是否想要讓使用此設定檔的裝置**與電腦同步**。 若選擇 [依據憑證允許 Apple Configurator]  ，則必須在 [Apple Configurator 憑證]  下選擇憑證。
 
      > [!NOTE]
-     > 如果 [與電腦同步]  設定為 [全部拒絕]  ，則連接埠將會在 iOS 和 iPadOS 裝置上受到限制。 連接埠只能用於充電，而沒有其他用途。 連接埠將遭到封鎖，而無法使用 iTunes 或 Apple Configurator。
+     > 如果 [與電腦同步]  設定為 [全部拒絕]  ，則連接埠將會在 iOS 和 iPadOS 裝置上受到限制。 連接埠只能用於充電，而沒有其他用途。 連接埠將遭到封鎖，而無法使用 iTunes 或 Apple Configurator 2。
+     如果 [與電腦同步]  設定為 [依憑證允許 Apple Configurator]  ，請務必儲存憑證的本機複本，以便稍後存取。 您將無法對上傳的複本進行變更。 請務必保留此憑證，以供日後存取。 
 
 12. 若您在前一個步驟中選擇 [依據憑證允許 Apple Configurator]  ，則請選擇要匯入的 Apple Configurator 憑證。
 
@@ -287,7 +300,7 @@ iOS/iPadOS 11 中對非監督式 ADE 裝置的支援已淘汰。 在 iOS/iPadOS 
 ## <a name="renew-an-ade-token"></a>更新 ADE 權杖  
 
 > [!NOTE]
-> 除了每年更新 ADE 權杖之外，當在 Apple Business Manager 中設定權杖的使用者變更 Managed Apple ID 密碼時，或該使用者離開 Apple Business Manager 組織時，您也必須在 Intune 和 Apple Business Manager 中更新註冊計畫權杖。
+> 除了每年更新 ADE 權杖之外，當在 Apple Business Manager 中設定權杖的使用者變更 Managed Apple ID 密碼時，或該使用者離開 Apple Business Manager 組織時，您也必須在 Intune 和 Apple Business Manager 中更新註冊計劃權杖。
 
 1. 前往 business.apple.com。  
 2. 在 [管理伺服器]  下，選擇與您所欲更新之權杖檔案相關的 MDM 伺服器。
@@ -305,3 +318,15 @@ iOS/iPadOS 11 中對非監督式 ADE 裝置的支援已淘汰。 在 iOS/iPadOS 
 8. 上傳新下載的權杖。  
 9. 選擇 [更新權杖]  。 您會看到權杖已更新的確認。   
     ![確認的螢幕擷取畫面。](./media/device-enrollment-program-enroll-ios/confirmation.png)
+
+## <a name="delete-an-ade-token-from-intune"></a>從 Intune 刪除 ADE 權杖
+
+您可以從 Intune 刪除註冊設定檔權杖，只要
+- 未將任何裝置指派給權杖
+- 未將任何裝置指派給預設設定檔
+
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [iOS/macOS]   > [iOS/macOS 註冊]   > [註冊計劃權杖]  > 選擇權杖 > [裝置]  。
+2. 刪除已指派給權杖的所有裝置。
+3. 移至 [裝置]   > [iOS/macOS]   > [iOS/macOS 註冊]   > [註冊計劃權杖]  > 選擇權杖 > [設定檔]  。
+4. 如有預設設定檔，請予以刪除。
+5. 移至 [裝置]   > [iOS/macOS]   > [iOS/macOS 註冊]   > [註冊計劃權杖]  > 選擇權杖 > [刪除]  。

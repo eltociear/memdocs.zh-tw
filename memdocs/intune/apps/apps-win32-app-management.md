@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee632901162042f7d777043e6700b796b4badf58
-ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
+ms.openlocfilehash: 8d1933350675a0d36042d1a4bd1e6a26c9a95814
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80620619"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254600"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune Standalone - Win32 應用程式管理
 
@@ -357,6 +357,11 @@ Windows 10 1709 與更新版本的用戶端將會使用 Windows 10 用戶端上�
 ## <a name="set-win32-app-availability-and-notifications"></a>設定 Win32 應用程式可用性和通知
 您可以設定 Win32 應用程式的開始時間和期限時間。 在開始時間時，Intune 管理擴充功能將會開始下載應用程內容，並針對所需意圖對它進行快取。 系統會在期限時間安裝應用程式。 針對可用的應用程式，開始時間將會決定何時會在公司入口網站中顯示應用程式，而且系統將會在使用者從公司入口網站要求該應用程式時下載內容。 此外，您可以啟用重新啟動寬限期。 
 
+> [!IMPORTANT]
+> 只有當 [程式]  區段的 [裝置重新啟動行為]  設定為下列其中一個選項時，才能使用 [指派]  區段中的 [重新啟動寬限期]  設定：
+> - [根據傳回碼決定行為] 
+> - [Intune 用戶端將會強制裝置重新啟動] 
+
 使用下列步驟來針對所需應用程式設定以日期和時間為基礎的應用程式可用性：
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
@@ -405,6 +410,8 @@ Windows 10 1709 與更新版本的用戶端將會使用 Windows 10 用戶端上�
 > **在 X86 用戶端電腦上**：<br>
 > *C:\Program Files\Microsoft Intune Management Extension\Content*<br>
 > *C:\windows\IMECache*
+>
+> 如需詳細資訊，請參閱[執行目前支援之 Windows 版本的企業電腦的病毒掃描建議](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers)。
 
 ### <a name="detecting-the-win32-app-file-version-using-powershell"></a>使用 PowerShell 偵測 Win32 應用程式的檔案版本
 

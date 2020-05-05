@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e5abdfe69d5553be420d96da60f34df93a6b2f4
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: f4dd0b1702b06f3efbed07a70b13a59b271816f8
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083677"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023005"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Microsoft Intune 的應用程式設定原則
 
@@ -72,6 +72,20 @@ ms.locfileid: "80083677"
 
 > [!NOTE]
 > 針對多重身分識別應用程式 (例如 Microsoft Outlook)，可以考慮使用者喜好設定。 例如，焦點收件匣會遵循使用者設定，而不會變更設定。 其他參數可讓您控制使用者是否可以變更設定。 如需詳細資訊，請參閱[部署 iOS/iPadOS 和 Android 版 Outlook 應用程式組態設定](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune) \(部分機器翻譯\)。
+
+## <a name="android-app-configuration-policies"></a>Android 應用程式設定原則
+
+對於 Android 應用程式設定原則，您可以在建立應用程式組態設定檔之前，先選取裝置註冊類型。 您可考慮以註冊類型 (工作設定檔或裝置擁有者) 為基礎的憑證設定檔。 此更新提供下列各項：
+
+1. 如果建立新的設定檔，並為裝置註冊類型選取了 [工作設定檔] 和 [裝置擁有者設定檔]，將無法為憑證設定檔與應用程式設定原則建立關聯。
+2. 如果已建立新的設定檔，且僅選取 [工作設定檔]，則可以使用在 [裝置設定] 下建立的 [工作設定檔] 憑證原則。
+3. 如果已建立新的設定檔，且僅選取 [裝置擁有者]，則可以使用在 [裝置設定] 下建立的 [裝置擁有者] 憑證原則。 
+4. 如果您將 Gmail 或 Nine 組態設定檔部署到未包含使用者的 Android Enterprise 專用裝置，其將會失敗，因為 Intune 無法解析使用者。
+
+> [!IMPORTANT]
+> 在此功能發行前 (2020 年 4 月發行 - 2004) 所建立現有原則若沒有任何與該原則建立關聯的憑證設定檔，則會預設為裝置註冊類型的 [工作設定檔] 和 [裝置擁有者設定檔]。 此外，在此功能發行前建立的現有原則若具有與其建立關聯的憑證設定檔，則僅會預設為 [工作設定檔]。
+> 
+> 現有原則將不會修復或發行新的憑證。
 
 ## <a name="validate-the-applied-app-configuration-policy"></a>驗證已套用的應用程式設定原則
 
@@ -149,7 +163,7 @@ ms.locfileid: "80083677"
 
 ### <a name="android-configuration-on-managed-devices"></a>受控裝置上的 Android 設定
 
-您可以在受控裝置上使用 [Intune 診斷記錄]  針對受控應用程式設定驗證 iOS/iPadOS 設定。
+您可以在受控裝置上，使用 [Intune 診斷記錄]  針對受控應用程式設定驗證 Android 設定。
 
 若要收集 Android 裝置的記錄，您或終端使用者必須透過 USB 連線 (或裝置上的**檔案總管**同等功能) 從裝置下載記錄。 步驟如下：
 

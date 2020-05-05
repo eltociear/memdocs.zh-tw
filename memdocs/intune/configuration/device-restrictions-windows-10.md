@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 237e281b88492ff7b7e1b5614600662e15761935
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 4babd715df08a905a5ceed6ec881cbfe07f5de19
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407833"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82209868"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>使用 Intune 來允許或限制功能的 Windows 10 (和更新版本) 裝置設定
 
@@ -81,11 +81,13 @@ ms.locfileid: "80407833"
 
   [ApplicationManagement/AllowGameDVR CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr) \(部分機器翻譯\)
 
-- **僅限來自 Store 的應用程式**：此設定會決定使用者從 Microsoft Store 以外位置安裝應用程式時的使用者體驗。 選項包括：
+- **僅限來自 Store 的應用程式**：此設定會決定使用者從 Microsoft Store 以外位置安裝應用程式時的使用者體驗。 其不會防止從 USB 裝置、網路共用或其他非網際網路來源安裝內容。 使用值得信任的瀏覽器，協助確保這些保護如預期般運作。
+
+  選項包括：
 
   - **未設定** (預設值)：Intune 不會變更或更新此設定。 根據預設，OS 可能會允許使用者從 Microsoft Store 以外的位置安裝應用程式，包括其他原則設定中定義的應用程式。  
   - **任何位置**：關閉應用程式建議，並允許使用者從任何位置安裝應用程式。  
-  - **僅限 Store**：強制終端使用者只從 Microsoft Store 安裝應用程式。
+  - **僅限 Store**：意圖是要防止您的使用者裝置在從網際網路下載可執行內容時，受到惡意內容影響。 當使用者嘗試從網際網路安裝應用程式時，系統會封鎖安裝。 使用者會看到一則訊息，建議他們從 Microsoft Store 下載應用程式。
   - **建議**：從 Microsoft Store 中提供的網頁安裝應用程式時，使用者會看到一則訊息，建議其從市集下載該應用程式。  
   - **優先使用 Store**：當使用者從 Microsoft Store 以外位置安裝應用程式時，會發出警告。
 
@@ -140,10 +142,14 @@ ms.locfileid: "80407833"
 
 這些設定使用[帳戶原則 CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts)，它也會列出支援的 Windows 版本。
 
+> [!IMPORTANT]
+> 封鎖或停用這些 Microsoft 帳戶設定可能會影響需要使用者登入 Azure AD 的註冊案例。 例如，您使用的是 [AutoPilot 白手套](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove)。 一般而言，使用者會看見 Azure AD 登入視窗。 當這些設定設定為 [封鎖]  或 [停用]  時，可能不會顯示 Azure AD 登入選項。 相反地，系統會要求使用者接受 EULA，並建立本機帳戶 (這可能不是您想要的)。
+
 - **Microsoft 帳戶**：[封鎖]  防止終端使用者建立 Microsoft 帳戶與裝置的關聯性。 [未設定]  (預設) 允許新增及使用 Microsoft 帳戶。
+
 - **非 Microsoft 帳戶**：[封鎖]  防止終端使用者以使用者介面新增非 Microsoft 帳戶。 [未設定]  (預設) 讓使用者新增未與 Microsoft 帳戶建立關聯的電子郵件帳戶。
 - **Microsoft 帳戶的設定同步**：**未設定** (預設) 允許裝置和應用程式設定與 Microsoft 帳戶相關聯，以在裝置之間進行同步處理。 [封鎖]  防止此同步。
-- **Microsoft 帳戶登入小幫手**：設為 [未設定]  (預設) 時，終端使用者可以啟動和停止 **Microsoft 帳戶登入小幫手** (wlidsvc) 服務。 此作業系統服務可讓使用者登入其 Microsoft 帳戶。 [停用]  防止終端使用者控制 Microsoft 登入小幫手服務 (wlidsvc)。
+- **Microsoft 帳戶登入小幫手**：設為 [未設定]  (預設) 時，終端使用者可以啟動和停止 **Microsoft 帳戶登入小幫手** (wlidsvc) 服務。 此作業系統服務可讓使用者登入其 Microsoft 帳戶。 [停用]  可將 Microsoft 登入小幫手服務 (wlidsvc) 設定為 [已停用]，並防止終端使用者手動將其啟動。
 
 ## <a name="cloud-printer"></a>雲端印表機
 
@@ -669,7 +675,7 @@ GDI DPI 縮放比例會讓非 DPI 感知的應用程式變成依監視器 DPI �
 
 ## <a name="microsoft-defender-smart-screen"></a>Microsoft Defender 智慧型畫面
 
-- **適用於 Microsoft Edge 的 SmartScreen**：[需要]  會關閉 Microsoft Defender SmartScreen，並防止使用者開啟它。 [未設定]  (預設) 開啟 SmartScreen。 可協助保護使用者免受潛在威脅，並防止使用者關閉它。
+- **適用於 Microsoft Edge 的 SmartScreen**：[需要]  會開啟 Microsoft Defender SmartScreen，並防止使用者將其關閉。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會開啟 SmartScreen，並允許使用者將其開啟或關閉。
 
   Microsoft Edge 會使用 Microsoft Defender SmartScreen (已開啟)，以保護使用者免於遭受潛在的網路釣魚詐騙和惡意軟體攻擊。
 

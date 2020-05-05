@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c047c0f54e64dbe17b6bd9e9082272e80fe7566c
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: 5657a26419280871e6739060509a72c4604fc3a7
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401464"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255008"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune 的新功能 - 前幾個月
 
@@ -222,7 +222,7 @@ Intune 支援下列衍生認證提供者：
 
 如需有關標準的詳細資訊，請參閱位於 www.nccoe.nist.gov 的 [PIV 衍生認證](https://www.nccoe.nist.gov/projects/building-blocks/piv-credentials) \(英文\)。
 
-#### <a name="use-graph-api-to-specify-a-on-premises-user-principal-name-as-a-variable-for-scep-certificates----5437939----------"></a>使用圖形 API 指定內部部署使用者主體名稱作為 SCEP 憑證的變數<!--  5437939        -->  
+#### <a name="use-graph-api-to-specify-an-on-premises-user-principal-name-as-a-variable-for-scep-certificates----5437939----------"></a>使用圖形 API 指定內部部署使用者主體名稱作為 SCEP 憑證的變數<!--  5437939        -->  
 當您使用 [Intune 圖形 API](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0) 時，您可以將 onPremisesUserPrincipalName 指定為 SCEP 憑證的主體別名 (SAN) 的變數。
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->'
@@ -2011,7 +2011,7 @@ Android 及 iOS 裝置上適用於 Web 內容的應用程式原則設定會進�
 此功能僅適用於 iOS，並需要整合 Intune APP SDK for iOS 9.0.1 版或更新版本的應用程式參與。 您必須整合此 SDK，才能針對目標應用程式強制執行該行為。 這項整合會輪流發生並取決於特定的應用程式小組。 參與的一些應用程式包括 WXP、Outlook、Managed Browser 和 Yammer。
 
 #### <a name="network-access-control-support-on-ios-vpn-clients---1333693---"></a>iOS VPN 用戶端上的網路存取控制支援<!-- 1333693 -->
-透過此更新，您可以在為 Cisco AnyConnect、F5 Access 和 Citrix SSO for iOS 建立 VPN 設定檔時啟用網路存取控制 (NAC)。 此設定可讓裝置的 NAC 識別碼包含在 VPN 設定檔中。 目前尚沒有任何支援此新 NAC 識別碼的 VPN 用戶端或 NAC 合作夥伴解決方案；當提供支援時，我們將透過[支援部落格文章](ttps://aka.ms/iOS12_and_vpn)通知您。
+透過此更新，您可以在為 Cisco AnyConnect、F5 Access 和 Citrix SSO for iOS 建立 VPN 設定檔時啟用網路存取控制 (NAC)。 此設定可讓裝置的 NAC 識別碼包含在 VPN 設定檔中。 目前尚沒有任何支援此新 NAC 識別碼的 VPN 用戶端或 NAC 合作夥伴解決方案；當提供支援時，我們將透過[支援部落格文章](https://aka.ms/iOS12_and_vpn)通知您。
 
 若要使用 NAC，您將需要：
 1. 選擇允許 Intune 在 VPN 設定檔中包含裝置識別碼
@@ -2200,7 +2200,7 @@ Microsoft 365 的承諾之一是簡化管理，多年來我們已整合後端的
 適用於：最新的 [Windows 測試人員](https://docs.microsoft.com/windows-insider/at-work-pro/)組建 (目前為預覽版)。
 
 #### <a name="windows-defender-atp-configuration-package-automatically-added-to-configuration-profile---2144658---"></a>Windows Defender ATP 設定套件會自動新增至組態設定檔<!-- 2144658 -->
-在 Intune 中使用[進階威脅防護和上線](../protect/advanced-threat-protection.md#onboard-devices-by-using-a-configuration-profile)裝置時，您必須先下載設定套件，並將之新增至組態設定檔。 透過此更新，Intune 會從 Windows Defender 資訊安全中心自動取得套件，並將之新增至設定檔。
+在 Intune 中使用[進階威脅防護和上線](../protect/advanced-threat-protection.md#onboard-windows-devices-by-using-a-configuration-profile)裝置時，您必須先下載設定套件，並將之新增至組態設定檔。 透過此更新，Intune 會從 Windows Defender 資訊安全中心自動取得套件，並將之新增至設定檔。
 適用於 Windows 10 及更新版本。
 
 #### <a name="require-users-to-connect-during-device-setup--2311457--"></a>要求使用者在裝置設定期間連線<!--2311457-->
@@ -2530,7 +2530,7 @@ AutoPilot 部署設定檔可以指派給包含 AutoPilot 裝置的 Azure AD 群�
 #### <a name="new-all-devices-filter-device-category---1878520---"></a>[新增全部] 裝置篩選條件：裝置類別<!-- 1878520 -->
 您現在可以依裝置類別篩選 [所有裝置]  清單。 若要這樣做，請選擇 [裝置]   > [所有裝置]   > [篩選]   > [裝置類別]  。
 
-#### <a name="use-teamviewer-to-screen-share-ios-and-macos-devices---1985547---"></a>使用 TeamViewer 來共用 iOS 和 MacOS 裝置的螢幕畫面<!-- 1985547 -->
+#### <a name="use-teamviewer-to-screen-share-ios-and-macos-devices---1985547---"></a>使用 TeamViewer 來共用 iOS 和 macOS 裝置的螢幕畫面<!-- 1985547 -->
 系統管理員現在可以連線至 [TeamViewer](../remote-actions/teamviewer-support.md)，並與 iOS 和 macOS 裝置建立螢幕畫面共用工作階段。 iPhone、iPad 及 macOS 使用者都可以與任何其他電腦或行動裝置即時共用其螢幕畫面。 
 
 #### <a name="multiple-exchange-connector-support---2070451---"></a>多重 Exchange Connector 支援<!-- 2070451 -->
@@ -2935,7 +2935,7 @@ Intune 可讓您控制[管理軟體更新](../protect/windows-update-for-busines
 我們已更新 Android 版公司入口網站應用程式，以遵循 Android 的 [Material Design](https://material.io/) 指導方針。 您可以在[應用程式 UI 最新內容](whats-new-app-ui.md)一文中看到新圖示的影像。
 
 #### <a name="company-portal-enrollment-improved---1874230-eeready--"></a>已改善的公司入口網站註冊<!-- 1874230 eeready-->
-使用者如果是在 Windows 10 1703 組建或更新版本上使用公司入口網站來註冊裝置，現在將能夠在不離開應用程式的情況下，完成第一個註冊步驟。
+使用者如果是在 Windows 10 1709 組建或更新版本上使用公司入口網站來註冊裝置，現在將能夠在不離開應用程式的情況下完成第一個註冊步驟。
 #### <a name="hololens-and-surface-hub-now-appear-in-device-lists--1725868---"></a>HoloLens 和 Surface Hub 現在會出現在裝置清單 中<!--1725868 -->
 我們已新增支援，可向 Android 版公司入口網站應用程式顯示已在 Intune 註冊的 HoloLens 和 Surface Hub 裝置。
 
@@ -3574,7 +3574,7 @@ Kiosk 模式具有下列要求：
 ### <a name="access-to-managed-app-logs-for-ios---1469920---"></a>存取 iOS 的受控應用程式記錄檔<!-- 1469920 -->
 安裝 Managed Browser 的終端使用者現在已可檢視所有 Microsoft 發行之應用程式的管理狀態，並傳送記錄檔來為受管理的 iOS 應用程式進行疑難排解。
 
-深入了解如何在 iOS 裝置上的 Managed Browser 啟用疑難排解模式，請參閱 [How to access to managed app logs using the Managed Browser on iOS](../apps/app-configuration-managed-browser.md#how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios) (如何在 iOS 上使用 Managed Browser 存取受管理應用程式記錄檔)。
+深入了解如何在 iOS 裝置上的 Managed Browser 啟用疑難排解模式，請參閱 [How to access to managed app logs using the Managed Browser on iOS](../apps/app-configuration-managed-browser.md) (如何在 iOS 上使用 Managed Browser 存取受管理應用程式記錄檔)。
 
 ### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290---1417174---"></a>iOS 版公司入口網站 2.9.0 版中裝置設定工作流程的改善<!-- 1417174 -->
 
@@ -3994,7 +3994,7 @@ Intune 現在支援上傳 iOS、macOS 和 Android 序號以作為公司裝置識
 適用於 iOS 和 Android 的 Microsoft Teams 應用程式，現在是針對適用於 Exchange 和 SharePoint Online 之應用程式型條件式存取原則核准的應用程式一部分。 可以透過 Azure 入口網站中的 [Intune 應用程式防護] 刀鋒視窗，使用應用程式型條件式存取，將應用程式設定為所有租用戶。
 
 ### <a name="managed-browser-and-app-proxy-integration---1287310---"></a>受控瀏覽器和應用程式 Proxy 整合<!-- 1287310 -->
-Intune Managed Browser 現在可以整合 Azure AD Application Proxy 服務，讓使用者即使在遠端工作時也能存取內部網路網站。 瀏覽器的使用者只需和平常一樣輸入網站 URL，Managed Browser 便會透過應用程式 Proxy Web 閘道來路由傳送要求。 如需詳細資訊，請參閱[使用 Managed Browser 原則管理網際網路存取](../apps/app-configuration-managed-browser.md)。
+Intune Managed Browser 現在可以整合 Azure AD Application Proxy 服務，讓使用者即使在遠端工作時也能存取內部網路網站。 瀏覽器的使用者只需和平常一樣輸入網站 URL，Managed Browser 便會透過應用程式 Proxy Web 閘道來路由傳送要求。 如需詳細資訊，請參閱[使用受管理的瀏覽器原則管理網際網路存取](../apps/app-configuration-managed-browser.md)。
 
 ### <a name="new-app-configuration-settings-for-the-intune-managed-browser---682951---"></a>適用於 Intune Managed Browser 的新應用程式組態設定<!-- 682951 -->
 在此版本中，我們已新增 iOS 和 Android 的 Intune Managed Browser 應用程式的進一步設定。 您現在能使用應用程式設定原則，針對瀏覽器設定預設的首頁和書籤。
@@ -4025,7 +4025,7 @@ Intune Managed Browser 現在可以整合 Azure AD Application Proxy 服務，�
 根據使用者意見反應，Android 版公司入口網站應用程式已新增功能表動作，可從裝置起始公司入口網站的移除。 此動作會將裝置從 Intune 管理移除，來讓使用者可以將應用程式從裝置移除。 您可以在[應用程式 UI 的新功能](whats-new-app-ui.md)頁面和 [Android 使用者文件](../user-help/unenroll-your-device-from-intune-android.md)中看到這些變更。
 
 ### <a name="improvements-to-app-syncing-with-windows-10-creators-update--676505--"></a>透過 Windows 10 Creators Update 改善應用程式同步處理<!--676505-->
-Windows 10 版公司入口網站應用程式現在會針對具有 Windows 10 Creators Update (版本 1703) 之裝置的應用程式安裝要求，自動初始化同步處理。 這會減少應用程式安裝在「待同步」狀態期間出現拖延的問題。 此外，使用者將能從應用程式內手動起始同步處理。 您可以在[應用程式 UI 的新功能](whats-new-app-ui.md)頁面看到這些變更。
+Windows 10 所適用公司入口網站應用程式現在會針對具有 Windows 10 Creators Update (1709 版) 的裝置，自動起始應用程式安裝要求的同步處理。 這會減少應用程式安裝在「待同步」狀態期間出現拖延的問題。 此外，使用者將能從應用程式內手動起始同步處理。 您可以在[應用程式 UI 的新功能](whats-new-app-ui.md)頁面看到這些變更。
 
 ### <a name="new-guided-experience-for-windows-10-company-portal---1058938---"></a>Windows 10 公司入口網站新型引導式體驗<!---1058938--->
 Windows 10 的公司入口網站應用程式將包含之前尚未確定或註冊之裝置的引導式 Intune 逐步解說體驗。 此全新體驗提供逐步指示，引導使用者向 Azure Active Directory 註冊 (條件式存取功能所需)，以及 MDM 註冊 (裝置管理功能所需)。 此引導式體驗將可從公司入口網站首頁上存取。 未完成註冊的使用者可以繼續使用應用程式，但可使用的功能將會受到限制。

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/03/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 687ef14791d1ae0df60d28802d27b99dd9547423
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: 64cb05d6e031cfe08789d6b7c923d9e489d0e433
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401343"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254311"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>將適用於 Windows 10 的 Microsoft Edge 新增至 Microsoft Intune
 
 您必須先將應用程式新增至 Intune，才可以部署、設定、監視或保護它們。 其中一個可用的[應用程式類型](apps-add.md#app-types-in-microsoft-intune)是 Microsoft Edge 77 版和更新版本  。 藉由在 Intune 中選取此應用程式類型，您可以指派 Microsoft Edge *77 版和更新版本*，並將其安裝到您所管理且執行 Windows 10 的裝置。
 
 > [!IMPORTANT]
-> 此應用程式類型處於**公開預覽**狀態，並提供 Windows 10 的穩定、Beta 和 Dev 通道。 部署僅限英文 (EN)，不過，終端使用者可以在瀏覽器中的 [設定]   > [語言]  下變更顯示語言。 Microsoft Edge 是一個 Win32 應用程式，安裝在系統內容和類似的架構 (x86 OS 上的 x86 應用程式，以及 x64 OS 上的 x64 應用程式) 上。 Intune 會偵測任何預先存在的 Microsoft Edge 安裝。 如果其安裝在使用者內容中，則系統安裝將會加以覆寫。 如果是安裝在系統內容中，就會回報安裝成功。 此外，Microsoft Edge 的自動更新預設會 [開啟]  。
+> 此應用程式類型可提供 Windows 10 的穩定、Beta 和 Dev 通道。 部署僅限英文 (EN)，不過，終端使用者可以在瀏覽器中的 [設定]   > [語言]  下變更顯示語言。 Microsoft Edge 是一個 Win32 應用程式，安裝在系統內容和類似的架構 (x86 OS 上的 x86 應用程式，以及 x64 OS 上的 x64 應用程式) 上。 Intune 會偵測任何預先存在的 Microsoft Edge 安裝。 如果其安裝在使用者內容中，則系統安裝將會加以覆寫。 如果是安裝在系統內容中，就會回報安裝成功。 此外，Microsoft Edge 的自動更新預設會 [開啟]  。
 
 > [!NOTE]
 > Microsoft Edge *77 版和更新版本*也適用於 macOS。
@@ -38,7 +38,7 @@ ms.locfileid: "80401343"
 
 ## <a name="prerequisites"></a>先決條件
 
-- Windows 10 1703 版或更新版本。
+- Windows 10 1709 版或更新版本。
 - 在使用者內容中為所有通道提供的 Microsoft Edge *77 版和更新版本*的任何預先安裝版本，將被在系統內容中安裝的 Edge 覆寫。
 
 ## <a name="configure-the-app-in-intune"></a>在 Intune 中設定應用程式

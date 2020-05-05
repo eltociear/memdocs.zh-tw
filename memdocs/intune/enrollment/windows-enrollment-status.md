@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0efaaf94f969e0b1b27582027a68b9e59c944b0c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 8ba3563a243b13b874608ad7a3ec918130e5bb80
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326858"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022699"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>設定註冊狀態頁面
  
@@ -41,7 +41,7 @@ ms.locfileid: "80326858"
 您也可以設定每個設定檔的優先順序，來解決將設定檔指派給相同使用者時所發生的衝突。
 
 > [!NOTE]
-> 註冊狀態頁面只能以屬於已指派群組的使用者為目標，且在註冊時，會在裝置上設定所有使用該裝置之使用者的原則。  
+> 註冊狀態頁面只能以屬於已指派群組的使用者為目標，且在註冊時，會在裝置上設定所有使用該裝置之使用者的原則。  目前不支援以 [註冊狀態頁面] 設定檔為目標的裝置。
 
 ## <a name="available-settings"></a>可用的設定
 
@@ -97,6 +97,10 @@ ms.locfileid: "80326858"
 5. 對於 [若這些必要的應用程式已指派給使用者/裝置，請在安裝這些應用程式之前，封鎖裝置使用它們]  ，選擇 [已選取]  。
 6. 選擇 [選取應用程式]  > 選擇應用程式 > [選取]   > [儲存]  。
 
+Intune 會使用此清單中包含的應用程式來篩選應視為封鎖的清單。  其不會指定應該安裝哪些應用程式。  例如，如果您將此清單設定為包含「應用程式 1」、「應用程式 2」和「應用程式 3」，而「應用程式 3」和「應用程式 4」是以裝置或使用者為目標，則 [註冊狀態頁面] 只會追蹤「應用程式 3」。  「應用程式 4」仍然會安裝，但 [註冊狀態頁面] 不會等待其完成。
+
+最多可指定 25 個應用程式。
+
 ## <a name="enrollment-status-page-tracking-information"></a>註冊狀態頁面追蹤資訊
 
 註冊狀態頁面會追蹤三個階段的資訊；裝置準備、裝置設定和帳戶設定。
@@ -145,10 +149,11 @@ ms.locfileid: "80326858"
 ### <a name="troubleshooting"></a>疑難排解
 疑難排解的主要問題。
 
-- 為什麼在使用註冊狀態頁面的 Autopilot 部署期間，在裝置設定階段期間未安裝我的應用程式？
-  - 若要保證應用程式會在 Autopilot 裝置設定階段期間安裝，請確定 
-        1. 已選取應用程式，以在選取的應用程式清單中封鎖存取
-        2. 您的目標是將應用程式設為 Autopilot 設定檔所指派的相同 Azure AD 裝置群組。 
+- 為什麼應用程式未使用 [註冊狀態] 頁面來安裝及追蹤？
+  - 若要保證應用程式會使用 [註冊狀態] 頁面來安裝及追蹤，請確定：
+      - 應用程式會使用「必要」指派，以指派給包含裝置 (適用於以裝置為目標的應用程式) 或使用者 (適用於以使用者為目標的應用程式) 的 Azure AD 群組。  (以裝置為目標的應用程式會在 ESP 其裝置階段期間進行追蹤，而以使用者為目標的應用程式則會在 ESP 其使用者階段期間進行追蹤。)
+      - 您可指定 [Block device use until all apps and profiles are installed] \(所有應用程式與設定檔未完成安裝之前，禁止使用裝置\)  ，或將應用程式包含在 [Block device use until these required apps are installed] \(這些必要應用程式未完成安裝之前，禁止使用裝置\)  清單中。
+      - 應用程式會安裝在裝置內容中，且沒有任何使用者內容適用性規則。
 
 - 為什麼會顯示非 Autopilot 部署的註冊狀態頁面，例如當使用者第一次登入 Configuration Manager 共同管理註冊的裝置時？  
   - 註冊狀態頁面會列出所有註冊方法的安裝狀態，包括
@@ -190,7 +195,6 @@ ms.locfileid: "80326858"
 ### <a name="known-issues"></a>已知問題
 以下是已知問題。 
 - 停用 ESP 設定檔並不會從裝置移除 ESP 原則，而且使用者在第一次登入裝置時，仍會取得 ESP。 停用 ESP 設定檔時，不會移除原則。 您必須部署 OMA-URI 以停用 ESP。 如需有關如何使用 OMA-URI 停用 ESP 的指示，請參閱上述。 
-- 擱置重新開機一律會造成逾時。 因為裝置需要重新開機，所以會發生逾時。 需要重新開機才有時間完成註冊狀態頁面中所追蹤的項目。 重新開機會導致註冊狀態頁面結束，而且在重新開機後，裝置將不會進入帳戶設定。  請考慮不需要重新開機進行應用程式安裝。 
 - 裝置設定期間的重新開機會強制使用者在轉換至帳戶設定階段之前輸入其認證。 重新開機期間不會保留使用者認證。 請讓使用者輸入其認證，然後註冊狀態頁面才能繼續。 
 - 在低於 1903 的 Windows 10 版本上進行 [新增工作和學校帳戶] 註冊期間，註冊狀態頁面一律會逾時。 註冊狀態頁面會等待 Azure AD 註冊完成。 Windows 10 1903 版和更新版本中已修正此問題。  
 - 使用 ESP 的混合式 Azure AD Autopilot 部署所花的時間超過 ESP 設定檔中所定義的逾時期間。 在混合式 Azure AD Autopilot 部署上，ESP 會花費 40 分鐘的時間，超過 ESP 設定檔中所設定的值。 此延遲使內部部署 AD 連接器有時間建立 Azure AD 的新裝置記錄。 

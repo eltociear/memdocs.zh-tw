@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -16,12 +16,12 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f4b50ac8df811a3e71070ebec979139b3ebbe62
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 0834ee2ac6cbd7460ed96024a9b30ab503fae9fb
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325119"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078331"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>簽署企業營運應用程式以使用 Intune 將它們部署到 Windows 裝置
 
@@ -78,7 +78,7 @@ Windows 8.1 Desktop/Windows 10 Desktop 與行動裝置版
 
 ## <a name="manually-deploy-windows-10-company-portal-app"></a>手動部署 Windows 10 公司入口網站應用程式
 
-如果您不想提供 Microsoft Store 的存取權限，即使您還沒有整合 Intune 與商務用 Microsoft Store (MSFB)，仍可直接從 Intune 手動部署 Windows 10 公司入口網站應用程式。 或者，如果您已整合，則可透過[使用 MSFB 部署應用程式](store-apps-windows.md)來部署公司入口網站應用程式。
+如果您不想提供 Microsoft Store 的存取權，即使還沒有整合 Intune 與商務用 Microsoft Store (MSFB)，仍可直接從 Intune 手動部署 Windows 10 公司入口網站應用程式。 或者，如果您已整合，則可透過[使用 MSFB 部署應用程式](store-apps-windows.md)來部署公司入口網站應用程式。
 
  > [!NOTE]
  > 這個選項將需要在每次應用程式發行更新時，部署手動更新。
@@ -87,7 +87,7 @@ Windows 8.1 Desktop/Windows 10 Desktop 與行動裝置版
 2. 取得應用程式之後，在 [詳細目錄]  頁面中選取該應用程式。  
 3. 在 [平台]  選取 [Windows 10 所有裝置]  ，然後選取適當的 [架構]  並下載。 此應用程式不需要應用程式授權檔案。
    ![供下載的 Windows 10 X86 套件詳細資料的影像](./media/app-sideload-windows/Win10CP-all-devices.png)
-4. 下載「必要架構」底下的所有套件。 x86、x64 及 ARM 架構都要執行這個步驟 – 所以總共 9 個套件，如下圖所示。
+4. 下載「必要架構」底下的所有套件。 x86、x64、ARM 及 ARM64 架構都要執行這個步驟 – 所以總共 9 個套件，如下圖所示。
 
    ![要下載之相依性檔案的圖片 ](./media/app-sideload-windows/Win10CP-dependent-files.png)
 5. 將公司入口網站應用程式上傳至 Intune 之前，先建立資料夾 (例如 C:&#92;Company Portal)，並以如下結構放置套件︰
@@ -100,13 +100,13 @@ Windows 8.1 Desktop/Windows 10 Desktop 與行動裝置版
 
 有關 Intune 如何處理通用應用程式的相依性，詳細資訊請參閱[透過 Microsoft Intune MDM 部署具相依性的 appxbundle](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/)。  
 
-### <a name="how-do-i-update-the-company-portal-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>如果使用者已從市集安裝較舊的公司入口網站應用程式，我如何能更新他們裝置上的公司入口網站應用程式？
+### <a name="how-do-i-update-the-company-portal-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>如果使用者已從市集安裝較舊的公司入口網站應用程式，我如何能更新其裝置上的公司入口網站？
 
 如果您的使用者已經從市集安裝 Windows 8.1 或 Windows Phone 8.1 公司入口網站應用程式，則他們的裝置應該會自動更新到新版本，您或您的使用者不需要採取任何動作。 如果更新沒發生，請使用者確認他們已在其裝置上啟用自動更新市集應用程式。
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>如何將我側載的 Windows 8.1 公司入口網站應用程式升級至 Windows 10 公司入口網站應用程式？
 
-我們建議的移轉方式是刪除 Windows 8.1 公司入口網站應用程式的部署，做法是將部署動作設定為「解除安裝」。 完成後，可以使用任何上述選項部署 Windows 10 公司入口網站應用程式。  
+建議的移轉方式是藉由將部署動作設定為「解除安裝」，以刪除 Windows 8.1 公司入口網站應用程式的部署。 完成後，可以使用任何上述選項部署 Windows 10 公司入口網站應用程式。  
 
 如果您需要側載應用程式，且您部署 Windows 8.1 公司入口網站時未使用 Symantec 憑證簽署它，請遵循之前「透過 Intune 直接部署」一節所述步驟完成升級。
 
@@ -114,13 +114,13 @@ Windows 8.1 Desktop/Windows 10 Desktop 與行動裝置版
 
 ### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>如何將我已簽署及側載的 Windows Phone 8.1 公司入口網站應用程式或 Windows 8.1 公司入口網站應用程式，升級至 Windows 10 公司入口網站應用程式？
 
-我們建議的移轉方式是刪除 Windows Phone 8.1 公司入口網站應用程式或 Windows 8.1 公司入口網站應用程式的現有部署，做法是將部署動作設定為「解除安裝」。 完成後，便可以正常部署 Windows 10 公司入口網站應用程式。  
+建議的移轉方式是藉由將部署動作設定為「解除安裝」，以刪除 Windows 8.1 公司入口網站應用程式或其現有部署。 完成後，便可以正常部署 Windows 10 公司入口網站應用程式。  
 
 否則，必須適當地更新及簽署 Windows 10 公司入口網站應用程式，以確保遵循升級方式。  
 
 如果是以這種方式簽署及部署 Windows 10 公司入口網站應用程式，每當市集內有新的應用程式更新時，您就必須為每個應用程式重複此程序。 當市集更新時，應用程式不會自動更新。  
 
-以下說明如何以此方式簽署和部署應用程式︰
+以下說明如何以此方式簽署和部署應用程式：
 
 1. 從 [https://aka.ms/win10cpscript](https://aka.ms/win10cpscript) 下載「Microsoft Intune Windows 10 公司入口網站應用程式簽署指令碼」。  此指令碼需要在主機電腦上安裝適用於 Windows 10 的 Windows SDK。 若要下載適用於 Windows 10 的 Windows SDK，請瀏覽 [https://go.microsoft.com/fwlink/?LinkId=619296](https://go.microsoft.com/fwlink/?LinkId=619296)。
 2. 從商務用 Microsoft 網上商店下載 Windows 10 公司入口網站應用程式，詳如前述。  

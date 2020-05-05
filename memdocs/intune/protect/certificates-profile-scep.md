@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,20 +16,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a775171a72de32af98d8089311b5fe467e560515
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 3da418db81a315e4102b63c34ffc557646d36f70
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323136"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126068"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>在 Intune 中建立並指派 SCEP 憑證設定檔
 
 在您[設定基礎結構](certificates-scep-configure.md)以支援簡單憑證註冊通訊協定 (SCEP) 憑證之後，您可以建立 SCEP 憑證設定檔，然後將其指派給 Intune 中的使用者和裝置。
 
-> [!IMPORTANT]  
-> 將使用 SCEP 憑證設定檔之裝置必須信任您的受信任根憑證授權 (CA)，您才能建立 SCEP 憑證設定檔。 使用 Intune 中的*受信任憑證設定檔*，將受信任的根 CA 憑證佈建給使用者與裝置。如需受信任憑證設定檔的資訊，請參閱＜在 Intune 中使用憑證以進行驗證＞  中的[＜匯出受信任的根 CA 憑證＞](certificates-configure.md#export-the-trusted-root-ca-certificate)和[＜建立受信任的憑證設定檔＞](certificates-configure.md#create-trusted-certificate-profiles)。
-
+> [!IMPORTANT]
+> 為了讓裝置使用 SCEP 憑證設定檔，這些裝置必須信任受信任根憑證授權單位 (CA)。 最好是藉由將[受信任憑證設定檔](../protect/certificates-configure.md#create-trusted-certificate-profiles)部署到接收 SCEP 憑證設定檔的相同群組，以建立根 CA 的信任。 受信任憑證設定檔會佈建受信任的根 CA 憑證。
 
 ## <a name="create-a-scep-certificate-profile"></a>建立 SCEP 憑證設定檔
 
@@ -95,7 +94,8 @@ ms.locfileid: "80323136"
        - **序號**
        - **自訂**：選取此選項時，會一併顯示 [自訂]  文字方塊。 您可以使用此欄位來輸入自訂主體名稱格式，包括變數。 自訂格式支援兩個變數：**一般名稱 (CN)** 和**電子郵件 (E)** 。 **一般名稱 (CN)** 可以設定為下列任何變數：
 
-         - **CN={{UserName}}** ：使用者的使用者主體名稱，例如 janedoe@contoso.com。
+         - **CN={{UserName}}** ：使用者的使用者名稱，例如 janedoe。
+         - **CN={{UserPrincipalName}}** ：使用者的使用者主體名稱，例如 janedoe@contoso.com.\*
          - **CN={{AAD_Device_ID}}** ：您在 Azure Active Directory (AD) 中註冊裝置時所指派的識別碼。 此識別碼通常用於向 Azure AD 驗證。
          - **CN={{SERIALNUMBER}}** ：製造商通常用來識別裝置的唯一序號 (SN)。
          - **CN={{IMEINumber}}** ：用來識別行動電話的國際行動設備識別碼 (IMEI)。
@@ -111,6 +111,8 @@ ms.locfileid: "80323136"
          - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
          該範例包含使用 CN 和 E 變數的主體名稱格式，以及組織單位、組織、位置、縣/市及國家/地區值的字串。 [CertStrToName 函式](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) 說明此函式和它支援的字串。
+         
+         \* 對於「僅限 Android 裝置擁有者」設定檔，**CN={{UserPrincipalName}}** 設定將無法運作。 「僅限 Android 裝置擁有者」設定檔可用於沒有使用者的裝置，因此此設定檔將無法取得使用者的使用者主體名稱。 如果您對具有使用者的裝置真的需要此選項，您可使用如下的因應措施：**CN={{UserName}}\@contoso.com** 其會提供您手動新增的使用者名稱和網域，例如 janedoe@contoso.com
 
       - **裝置憑證類型**
 
@@ -224,7 +226,7 @@ ms.locfileid: "80323136"
 
    - **SCEP 伺服器 URL**：
 
-     輸入一或多個透過 SCEP 發行憑證的 NDES 伺服器 URL。 例如，輸入類似 *https://ndes.contoso.com/certsrv/mscep/mscep.dll* 的內容。 您可以視需要新增額外的 SCEP URL 來進行負載平衡，因為 URL 會隨機推送至具有設定檔的裝置。 如果其中一個 SCEP 伺服器不可用，則 SCEP 要求將會失敗，且可能會在稍後的裝置簽入中對已關閉的相同伺服器提出憑證要求。
+     輸入一或多個透過 SCEP 發行憑證的 NDES 伺服器 URL。 例如，輸入類似 `https://ndes.contoso.com/certsrv/mscep/mscep.dll` 的內容。 您可以視需要新增額外的 SCEP URL 來進行負載平衡，因為 URL 會隨機推送至具有設定檔的裝置。 如果其中一個 SCEP 伺服器不可用，則 SCEP 要求將會失敗，且可能會在稍後的裝置簽入中對已關閉的相同伺服器提出憑證要求。
 
 8. 選取 [下一步]  。
 
@@ -259,7 +261,7 @@ ms.locfileid: "80323136"
 
 **例如**，您有顯示為 *Test user (TestCompany, LLC)* 的主體名稱。  若 CSR 包含之 CN 中的 *TestCompany* 與 *LLC* 之前有逗點，則會發生問題。  使用引號括住整個 CN，或移除 *TestCompany* 與 *LLC* 之間的逗號，即可避免此問題：
 
-- **加上引號**：*CN=* "Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+- **加上引號**：*CN="Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 - **移除逗號**：*CN=Test User (TestCompany LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 
  不過，嘗試使用反斜線字元來逸出逗號將會失敗，而且 CRP 記錄中會記錄錯誤：
@@ -282,7 +284,11 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 
 ## <a name="assign-the-certificate-profile"></a>指派憑證設定檔
 
-請使用與您為其他用途[部署裝置設定檔](../configuration/device-profile-assign.md)的相同方式，來指派 SCEP 憑證設定檔。 不過，在繼續之前請先考慮下列事項：
+請使用與您為其他用途[部署裝置設定檔](../configuration/device-profile-assign.md)的相同方式，來指派 SCEP 憑證設定檔。
+
+為了 使用 SCEP 憑證設定檔，裝置還必須收到受信任的憑證設定檔，以使用受信任根 CA 憑證來佈建 SCEP 憑證設定檔。 建議將受信任的根憑證設定檔和 SCEP 憑證設定檔部署到相同群組。
+
+在繼續之前，請先考慮下列事項：
 
 - 當您指派 SCEP 憑證設定檔給群組時，受信任根 CA 憑證檔案 (如同在「受信任憑證設定檔」  中所指定) 即會安裝在裝置上。 裝置會使用 SCEP 憑證設定檔來建立該受信任根 CA 憑證的憑證要求。
 
@@ -293,8 +299,6 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 - 若要在裝置註冊之後快速將憑證發行至裝置，請將憑證設定檔指派到使用者群組，而不是裝置群組。 如果您將它指派至裝置群組，便必須先執行完整的裝置註冊，裝置才能接收原則。
 
 - 如果您針對 Intune 和 Configuration Manager 使用共同管理，請在 Configuration Manager 中，將資源存取原則的[工作負載滑桿設定為](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) [Intune]  或 [試驗 Intune]  。 此設定可讓 Windows 10 用戶端啟動要求憑證的流程。
-
-- 雖然您會分別建立及指派受信任的憑證設定檔和 SCEP 憑證設定檔，但兩者都必須受指派。 如果裝置上未安裝這兩者，SCEP 憑證原則將會失敗。 請確定所有受信任根憑證設定檔都會部署到與 SCEP 設定檔相同的群組。 例如，如果您要將 SCEP 憑證設定檔部署到使用者群組，則也必須將受信任的根 (和中繼) 憑證設定檔部署到同一使用者群組。
 
 > [!NOTE]
 > 在 iOS/iPadOS 裝置上，當 SCEP 憑證設定檔或 PKCS 憑證設定檔與其他設定檔 (例如 Wi-Fi 或 VPN 設定檔) 建立關聯時，裝置會收到這些每個其他設定檔的憑證。 這會導致 iOS/iPadOS 裝置具有多個由 SCEP 或 PKCS 憑證要求提供的憑證。 

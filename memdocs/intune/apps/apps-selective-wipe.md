@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a063baf405c9f9886718242f48a47e1e5fe68f5
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1640928bfb1ca27d4ee72e014adad88db0976a2d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324512"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078323"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>如何只抹除 Intune 管理之應用程式中的公司資料
 
@@ -40,9 +40,9 @@ ms.locfileid: "80324512"
 > 移除直接從應用程式同步到原生通訊錄的連絡人。 無法清除從原生通訊錄同步處理到其他外部來源的任何連絡人。 目前只有 Microsoft Outlook 應用程式可使用此功能。
 
 ## <a name="deployed-wip-policies-without-user-enrollment"></a>在無須使用者註冊的情況下部署 WIP 原則
-「Windows 資訊保護」(WIP) 原則能在無須 MDM 使用者註冊其 Windows 10 裝置的情況下部署。 此設定允許公司根據 WIP 設定保護其公司文件，同時允許使用者維持其自身 Windows 裝置的管理。 一旦使用 WIP 原則保護文件，Intune 系統管理員便可以選擇性抹除受保護的資料。 透過選取使用者和裝置，並傳送抹除要求，所有透過 WIP 原則保護的資料都會無法使用。 從 Azure 入口網站中的 Intune，選取 [用戶端應用程式]   > [應用程式選擇性抹除]  。 如需詳細資訊，請參閱[使用 Intune 建立及部署 Windows 資訊保護 (WIP) 應用程式保護原則](windows-information-protection-policy-create.md)。
+「Windows 資訊保護」(WIP) 原則能在無須 MDM 使用者註冊其 Windows 10 裝置的情況下部署。 此設定允許公司根據 WIP 設定保護其公司文件，同時允許使用者維持其自身 Windows 裝置的管理。 一旦使用 WIP 原則保護文件，Intune 系統管理員便可以選擇性抹除受保護的資料 ([全域管理員或 Intune 服務管理員](../fundamentals/users-add.md#types-of-administrators))。 透過選取使用者和裝置，並傳送抹除要求，所有透過 WIP 原則保護的資料都會無法使用。 從 Azure 入口網站中的 Intune，選取 [用戶端應用程式]   > [應用程式選擇性抹除]  。 如需詳細資訊，請參閱[使用 Intune 建立及部署 Windows 資訊保護 (WIP) 應用程式保護原則](windows-information-protection-policy-create.md)。
 
-## <a name="create-a-wipe-request"></a>建立抹除要求
+## <a name="create-a-device-based-wipe-request"></a>建立以裝置為基礎的抹除要求
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [應用程式]   > [應用程式選擇性抹除]   > [建立抹除要求]  。<br>
@@ -61,6 +61,16 @@ ms.locfileid: "80324512"
 
    ![[用戶端應用程式 - 應用程式選擇性抹除] 窗格的螢幕擷取畫面](./media/apps-selective-wipe/apps-selective-wipe-03.png)
 
+## <a name="create-a-user-based-wipe-request"></a>建立以使用者為基礎的抹除要求
+
+藉由將使用者新增至使用者層級抹除，將會自動對所有使用者裝置上的所有應用程式發出抹除命令。  使用者將會在每次從所有裝置簽入時繼續取得抹除命令。  若要重新啟用使用者，您必須將其從清單中移除。  
+
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+2. 選取 [應用程式]   > [應用程式選擇性抹除]   > [建立抹除要求]  。<br>
+   選取 [使用者層級抹除]  。
+3. 按一下 [新增]  ，[選取使用者]  窗格隨即顯示。
+4. 選擇您想要抹除其應用程式資料的使用者，然後按一下 [選取]  。
+
 ## <a name="monitor-your-wipe-requests"></a>監視抹除要求
 
 您可有摘要報表顯示抹除要求的整體狀態，以及暫止的要求數與失敗數。 若要取得更多詳細資訊，請遵循下列步驟︰
@@ -74,7 +84,7 @@ ms.locfileid: "80324512"
 >[!IMPORTANT]
 > 使用者必須開啟應用程式，抹除才會發生，並可能在發出要求後花費 30 分鐘的時間。
 
-## <a name="delete-a-wipe-request"></a>刪除抹除要求
+## <a name="delete-a-device-wipe-request"></a>刪除裝置抹除要求
 
 處於擱置狀態的抹除將會顯示，直到您手動將其刪除為止。 若要手動刪除抹除要求：
 
@@ -85,6 +95,14 @@ ms.locfileid: "80324512"
     ![[應用程式選擇性抹除] 窗格中抹除要求清單的螢幕擷取畫面](./media/apps-selective-wipe/delete-wipe-request.png)
 
 3. 當收到確認刪除的提示時，請選擇 [是]  或 [否]  ，然後按一下 [確定]  。
+
+## <a name="delete-a-user-wipe-request"></a>刪除使用者抹除要求
+
+在系統管理員移除前，使用者抹除都會保留在清單中。 若要從清單中移除使用者：
+
+1. 在 [用戶端應用程式 - 應用程式選擇性抹除]  窗格上，選取 [使用者層級抹除]  。
+2. 在清單中，以滑鼠右鍵按一下要刪除的使用者，然後選擇 [刪除]  。 
+
 
 ## <a name="see-also"></a>請參閱
 [什麼是應用程式保護原則](app-protection-policy.md)

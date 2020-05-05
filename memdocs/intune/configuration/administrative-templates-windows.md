@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75ef2a03c9f42f0bda78af009f0fb563fbcedb75
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: f609ec62259deffb220c8ee935d0f10a98ae77b5
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220000"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254889"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>在 Microsoft Intune 中使用 Windows 10 範本設定群組原則設定
 
@@ -41,7 +41,7 @@ Windows 設定類似於 Active Directory (AD) 中的群組原則 (GPO) 設定。
 
 ## <a name="before-you-begin"></a>開始之前
 
-- 從 Windows 10 1703 版 (RS2/組建 15063) 開始，可以使用其中一些設定。 有些設定不會包含在所有的 Windows 版本中。 為了獲得最佳體驗，建議使用 Windows 10 企業版 1903 (19H1/組建 18362) 和更新版本。
+- 從 Windows 10 1709 版 (RS2/組建 15063) 開始，可使用其中一些設定。 有些設定不會包含在所有的 Windows 版本中。 為了獲得最佳體驗，建議使用 Windows 10 企業版 1903 (19H1/組建 18362) 和更新版本。
 
 - Windows 設定會使用 [Windows 原則 CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies)。 CSP 適用於不同版本的 Windows，例如 Home、Professional、Enterprise 等。 若要查看 CSP 是否適用於特定版本，請前往 [Windows 原則 CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies)。
 
@@ -102,6 +102,10 @@ Windows 設定類似於 Active Directory (AD) 中的群組原則 (GPO) 設定。
     選取 [下一步]  。
 
 14. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
+
+    如果設定檔已指派給使用者群組，則設定的 ADMX 設定會套用至使用者註冊並登入的任何裝置。 如果設定檔已指派給裝置群組，則設定的 ADMX 設定會套用至任何登入該裝置的使用者。 如果 ADMX 設定是電腦設定 (`HKEY_LOCAL_MACHINE`) 或使用者設定 (`HKEY_CURRENT_USER`)，就會發生此指派。 使用某些設定時，已指派給使用者的電腦設定也可能影響該裝置上其他使用者的體驗。
+    
+    如需相關資訊，請參閱[使用者群組與裝置群組的比較](device-profile-assign.md#user-groups-vs-device-groups)。
 
     選取 [下一步]  。
 

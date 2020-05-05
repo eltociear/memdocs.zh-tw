@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/25/2020
+ms.date: 04/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69ca92125728ec8fdac27c229f8aacc5c0ef29c0
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: af60c16c4a7c9d27409f82cfc53d5c345dfe1af0
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359396"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210201"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>要在 Intune 中使用常見 iOS/iPadOS 功能用的 iOS 與 iPadOS 裝置設定
 
@@ -97,7 +97,7 @@ Intune 包含一些內建設定，可讓 iOS/iPadOS 使用者在其裝置上使�
 
     新增到資料夾中頁面的應用程式會以和清單相同的順序，由左至右排列。 如果您新增的應用程式超過一個頁面所能容納的數目，應用程式就會被移到另一個頁面。
 
-    - **資料夾名稱**：資料夾的名稱。 這是在使用者裝置上對使用者顯示的名稱。
+    - **資料夾名稱**：資料夾的名稱。 此名稱會在其裝置上向使用者顯示。
     - **頁面清單**：**新增**頁面，然後輸入下列屬性：
 
       - **頁面名稱**：輸入頁面的名稱。 此名稱用於供您在 Microsoft 端點管理員系統管理中心中參考， 而「不會」  顯示在 iOS/iPadOS 裝置上。
@@ -111,10 +111,10 @@ Intune 包含一些內建設定，可讓 iOS/iPadOS 使用者在其裝置上使�
 
 #### <a name="example"></a>範例
 
-在以下範例中，Dock 畫面只會顯示 [Safari]、[郵件] 和 [股市] 應用程式。 其中已選取 [郵件] 應用程式來顯示其屬性：
+在下列範例中，Dock 畫面會顯示 [Safari]、[郵件] 和 [股市] 應用程式。 其中已選取 [郵件] 應用程式來顯示其屬性：
 
 > [!div class="mx-imgBorder"]
-> ![範例 iOS/iPadOS Dock 設定](./media/ios-device-features-settings/FfFiUcP.png)
+> ![Intune 中 iOS/iPadOS 主畫面配置的 Dock 設定範例](./media/ios-device-features-settings/dock-screen-mail-app.png)
 
 當您將該原則指派給 iPhone 時，Dock 看起來會如下圖所示：
 
@@ -158,10 +158,15 @@ Intune 包含一些內建設定，可讓 iOS/iPadOS 使用者在其裝置上使�
 
 #### <a name="example"></a>範例
 
-在以下範例中，將會新增名為 **Contoso** 的新頁面。 此頁面會顯示 [尋找朋友] 和 [設定] 應用程式。 其中已選取 [設定] 應用程式來顯示其屬性：
+在以下範例中，將會新增名為 **Contoso** 的新頁面。 此頁面會顯示 [尋找朋友] 和 [設定] 應用程式：
 
 > [!div class="mx-imgBorder"]
-> ![Intune 中的 iOS/iPadOS 主畫面設定範例](./media/ios-device-features-settings/Jc2OxyX.png)
+> ![Intune 中 iOS/iPadOS 主畫面配置的新頁面設定和範例](./media/ios-device-features-settings/page-find-friends-settings-apps.png)
+
+其中已選取 [設定] 應用程式來顯示其屬性：
+
+> [!div class="mx-imgBorder"]
+> ![Intune 中 iOS/iPadOS 主畫面配置的 [設定] 應用程式屬性範例](./media/ios-device-features-settings/page-settings-app-properties.png)
 
 當您將該原則指派給 iPhone 時，頁面看起來會如下圖所示：
 
@@ -175,7 +180,7 @@ Intune 包含一些內建設定，可讓 iOS/iPadOS 使用者在其裝置上使�
 - **新增**：為應用程式新增通知：
 
   > [!div class="mx-imgBorder"]
-  > ![在 Intune 的 iOS/iPadOS 設定檔中新增應用程式通知](./media/ios-device-features-settings/ios-macos-app-notifications.png)
+  > ![在 Intune 的 iOS/iPadOS 設定檔中新增應用程式通知](./media/ios-device-features-settings/ios-ipados-app-notifications.png)
 
   - **應用程式套件組合識別碼**：輸入您要新增之應用程式的 [應用程式套件組合識別碼]  。 請參閱[內建 iOS/iPadOS 應用程式的套件組合識別碼](bundle-ids-built-in-ios-apps.md)，以取得一些範例。
   - **應用程式名稱**：輸入您要新增之應用程式的名稱。 此名稱用於供您在 Microsoft 端點管理員系統管理中心中參考， 「不會」  顯示在裝置上。
@@ -214,9 +219,11 @@ Intune 包含一些內建設定，可讓 iOS/iPadOS 使用者在其裝置上使�
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>設定適用於：裝置註冊、自動裝置註冊 (受監督)
 
-- **AAD 中的使用者名稱屬性**：Intune 會針對 Azure AD 中的每個使用者尋找這個屬性。 Intune 接著會先填入各欄位 (例如 UPN)，再產生要安裝在裝置上的 XML。 選項包括：
+- **領域**：輸入 URL 的網域部分。 例如，輸入 `contoso.com`。
+- **Kerberos 主體名稱**：Intune 會針對 Azure AD 中的每個使用者尋找這個屬性。 Intune 接著會先填入各欄位 (例如 UPN)，再產生要安裝在裝置上的 XML。 選項包括：
 
-  - **使用者主體名稱**：系統會以下列方式剖析 UPN：
+  - **未設定**：Intune 不會變更或更新此設定。 根據預設，當設定檔部署到裝置時，OS 會提示使用者輸入 Kerberos 主體名稱。 MDM 需要主體名稱才能安裝 SSO 設定檔。
+  - **使用者主體名稱**：使用者主體名稱 (UPN) 會以下列方式剖析：
 
     > [!div class="mx-imgBorder"]
     > ![Intune 中的 iOS/iPadOS 使用者名稱 SSO 屬性](./media/ios-device-features-settings/User-name-attribute.png)
@@ -227,15 +234,22 @@ Intune 包含一些內建設定，可讓 iOS/iPadOS 使用者在其裝置上使�
 
   - **Intune 裝置識別碼**：Intune 會自動選取 Intune 裝置識別碼。
 
-    根據預設，應用程式只需要使用裝置識別碼。 但如果您的應用程式會使用領域和裝置識別碼，您可以在 [領域] 文字方塊中輸入領域。
+    根據預設，應用程式只需要使用裝置識別碼。 但如果您的應用程式會使用領域和裝置識別碼，您可以在 [領域]  文字方塊中輸入領域。
 
     > [!NOTE]
     > 如果使用裝置識別碼，則領域預設為留白。
 
   - **Azure AD 裝置識別碼**
+  - **SAM 帳戶名稱**：Intune 會填入內部部署安全性帳戶管理員 (SAM) 帳戶名稱。
 
-- **領域**：輸入 URL 的網域部分。 例如，輸入 `contoso.com`。
-- **將會使用單一登入的 URL 首碼**：[新增]  貴組織中需要使用者單一登入驗證的任何 URL。
+
+- **應用程式**：在可使用單一登入的使用者裝置上 [新增]  應用程式。
+
+  `AppIdentifierMatches` 陣列必須包含符合應用程式套件組合識別碼的字串。 這些字串可以是完全相符的項目 (例如 `com.contoso.myapp`)，或是您也可以使用 \* 萬用字元來輸入套件組合識別碼的首碼相符項目。 此萬用字元必須出現在字串結尾處的句號字元 (.) 之後，且只能出現一次 (例如 `com.contoso.*`)。 包含萬用字元時，套件組合識別碼開頭為首碼的任何應用程式都會被授與帳戶存取權。
+
+  使用 [應用程式名稱]  輸入使用者易記的名稱來協助您識別套件組合識別碼。
+
+- **URL 前置詞**：[新增]  貴組織中需要使用者單一登入驗證的任何 URL。
 
   例如，當使用者連線到這些網站的任一個時，iOS/iPadOS 裝置會使用單一登入認證。 使用者不需要輸入任何其他認證。 如果已啟用多重要素驗證，使用者就必須輸入第二道驗證。
 
@@ -246,13 +260,7 @@ Intune 包含一些內建設定，可讓 iOS/iPadOS 使用者在其裝置上使�
 
   `http://.com` 和 `https://.com` 模式分別會符合所有 HTTP 和 HTTPS URL。
 
-- **將使用單一登入的應用程式**：在可使用單一登入的使用者裝置上 [新增]  應用程式。
-
-  `AppIdentifierMatches` 陣列必須包含符合應用程式套件組合識別碼的字串。 這些字串可以是完全相符的項目 (例如 `com.contoso.myapp`)，或是您也可以使用 \* 萬用字元來輸入套件組合識別碼的首碼相符項目。 此萬用字元必須出現在字串結尾處的句號字元 (.) 之後，且只能出現一次 (例如 `com.contoso.*`)。 包含萬用字元時，套件組合識別碼開頭為首碼的任何應用程式都會被授與帳戶存取權。
-
-  使用 [應用程式名稱]  輸入使用者易記的名稱來協助您識別套件組合識別碼。
-
-- **認證更新憑證**：如果使用憑證 (而不是密碼) 來進行驗證，請選取現有的 SCEP 或 PFX 憑證作為驗證憑證。 一般而言，此憑證就是部署供使用者用於 VPN、Wi-Fi 或電子郵件等其他設定檔的同一憑證。
+- **更新憑證**：如果使用憑證 (而不是密碼) 來進行驗證，請選取現有的 SCEP 或 PFX 憑證作為驗證憑證。 一般而言，此憑證就是部署供使用者用於 VPN、Wi-Fi 或電子郵件等其他設定檔的同一憑證。
 
 ## <a name="web-content-filter"></a>Web 內容篩選
 
@@ -288,37 +296,24 @@ Intune 包含一些內建設定，可讓 iOS/iPadOS 使用者在其裝置上使�
 
 - **SSO 應用程式延伸模組類型**：選擇 SSO 應用程式延伸模組的類型。 選項包括：
 
-  - **未設定**：Intune 不會變更或更新此設定。 根據預設，OS 不會使用應用程式延伸模組。 若要停用應用程式延伸模組，您可以將 SSO 應用程式延伸模組類型切換為 [未設定]  。
-  - **重新導向**：使用一般且可自訂的重新導向應用程式延伸模組，以搭配新式驗證流程使用 SSO。 請確定您知道組織應用程式延伸模組的延伸模組識別碼。
+  - **未設定**：Intune 不會變更或更新此設定。 根據預設，OS 不會使用應用程式擴充功能。 若要停用應用程式延伸模組，您可以將 SSO 應用程式延伸模組類型切換為 [未設定]  。
+  - **Microsoft Azure AD**：使用 Microsoft 企業單一登入外掛程式，這是重新導向類型的 SSO 應用程式擴充功能。 此外掛程式會在所有可支援 [Apple 的企業單一登入](https://developer.apple.com/documentation/authenticationservices)功能的應用程式中，提供 Active Directory 帳戶的 SSO。 使用此 SSO 應用程式擴充類型，在 Microsoft 應用程式、組織應用程式和使用 Azure AD 進行驗證的網站上啟用 SSO。
 
-    在 iOS/iPadOS 13.0+ 裝置上，您可以使用此重新導向 SSO 應用程式延伸模組類型，設定 **Microsoft Azure AD SSO 應用程式延伸模組**。 Microsoft Azure AD 延伸模組可在使用 Azure AD 進行驗證的 Microsoft 應用程式和組織應用程式之間啟用單一登入。 Azure AD 延伸模組可充當進階驗證代理人，其提供安全性和使用者體驗改善。 先前搭配 Microsoft Authenticator 應用程式使用代理驗證的所有應用程式，都將繼續透過 SSO 延伸模組取得 SSO。 Azure AD SSO 延伸模組尚不支援瀏覽器 SSO。 如需有關 SSO 和 iOS/iPadOS 驗證代理程式的詳細資訊，請參閱[在 macOS 和 iOS/iPadOS 上設定 SSO](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios) \(機器翻譯\)。  
-
-    **設定 iOS Microsoft Azure AD 延伸模組：**
-
-    1. 將 [SSO 應用程式延伸模組類型]  設定為 [重新導向]  。
-    2. 將 [延伸模組識別碼]  設為 `com.microsoft.azureauthenticator.ssoextension`。
-    3. 將 [小組識別碼]  設為 `SGGM6D27TK`。
-    4. 在 [RUL]  設定中，輸入下列 URL：
-
-        - `https://login.microsoftonline.com`
-        - `https://login.windows.net`
-        - `https://login.microsoft.com`
-        - `https://sts.windows.net`
-        - `https://login.partner.microsoftonline.cn`
-        - `https://login.chinacloudapi.cn`
-        - `https://login.microsoftonline.de`
-        - `https://login.microsoftonline.us`
-        - `https://login.usgovcloudapi.net`
-        - `https://login-us.microsoftonline.com`
+    SSO 外掛程式可充當進階驗證代理人，其提供安全性和使用者體驗改善。 先前搭配 Microsoft Authenticator 應用程式使用代理驗證的所有應用程式，都會繼續透過[適用於 Apple 裝置的 Microsoft 企業單一登入外掛程式](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)取得 SSO。
 
     > [!IMPORTANT]
-    > 若要使用 iOS/iPadOS Microsoft Azure AD 延伸模組實現 SSO，請先在裝置上安裝 iOS/iPadOS Microsoft Authenticator 應用程式。 Authenticator 會將 Azure AD 延伸模組傳遞至裝置，而 MDM SSO 應用程式延伸模組設定則會啟用 Azure AD 延伸模組。 一旦 Authenticator 和 SSO 應用程式延伸模組設定檔安裝在裝置上，使用者就必須輸入認證，才能登入並建立工作階段。 此工作階段之後會用於不同的應用程式，而不需要使用者再次進行驗證。
+    > 若要使用 Microsoft Azure AD SSO 應用程式擴充類型實現 SSO，請先在裝置上安裝 iOS/iPadOS Microsoft Authenticator 應用程式。 Authenticator 應用程式會將 Microsoft 企業單一登入外掛程式傳遞至裝置，而 MDM SSO 應用程式擴充功能設定會啟用此外掛程式。 一旦 Authenticator 和 SSO 應用程式擴充設定檔安裝在裝置上，使用者就必須輸入認證，才能登入並在其裝置上建立工作階段。 此工作階段之後會用於不同的應用程式，而不需要使用者再次進行驗證。 如需有關 Authenticator 的詳細資訊，請參閱[什麼是 Microsoft Authenticator 應用程式](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview)。
 
+  - **重新導向**：使用一般且可自訂的重新導向應用程式延伸模組，以搭配新式驗證流程使用 SSO。 請確定您知道組織應用程式延伸模組的延伸模組識別碼。
   - **認證**：使用一般且可自訂的認證應用程式延伸模組，以搭配查問與回應驗證流程使用 SSO。 請確定您知道組織應用程式延伸模組的延伸模組識別碼。
   - **Kerberos**：使用 Apple 的內建 Kerberos 延伸模組，其包含在 iOS 13.0+ 與 iPadOS 13.0+ 中。 此選項為 [認證]  應用程式延伸模組的 Kerberos 特定版本。
 
   > [!TIP]
   > 使用 [重新導向]  與 [認證]  類型時，您會新增自己的設定值來透過延伸模組傳遞。 如果您使用的是**認證**，請考慮使用 Apple 在 **Kerberos** 類型中提供的內建組態設定。
+
+- **共用裝置模式** (僅限 Microsoft Azure AD)：如果您要將 Microsoft 企業單一登入外掛程式部署至針對 Azure AD 的共用裝置模式功能所設定的 iOS/iPadOS 裝置，請選擇 [啟用]  。 處於共用模式的裝置可讓許多使用者全域登入和登出可支援共用裝置模式的應用程式。 當設定為 [未設定]  時，Intune 則不會變更或更新此設定。 根據預設，iOS/iPadOS 裝置不打算在多個使用者之間共用。
+
+  如需共用裝置模式及其啟用方式的詳細資訊，請參閱[共用裝置模式概觀](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices)，以及 [iOS 裝置的共用裝置模式](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices)。  
 
 - **延伸模組識別碼** (重新導向與認證)：輸入能識別 SSO 應用程式延伸模組的套件組合識別碼，例如 `com.apple.extensiblesso`。
 
@@ -336,21 +331,21 @@ Intune 包含一些內建設定，可讓 iOS/iPadOS 使用者在其裝置上使�
 - **URL** (僅限重新導向)：輸入識別提供者的 URL 前置詞，重新導向應用程式延伸模組會代為使用 SSO。 當系統將使用者重新導向到這些 URL 時，SSO 應用程式延伸模組將會介入並提示進行 SSO。
 
   - 您的 Intune 單一登入應用程式延伸模組設定檔中的所有 URL 都不能重複。 您不能在任何 SSO 應用程式延伸模組設定檔中重複使用網域，即使您是使用不同類型的 SSO 應用程式延伸模組也一樣。
-  - URL 的開頭必須是 http:// 或 https://。
+  - URL 的開頭必須是 `http://` 或 `https://`。
 
-- **其他設定** (重新導向與認證)：輸入要傳遞到 SSO 應用程式延伸模組的其他延伸模組專用資料：
+- **其他設定** (Microsoft Azure AD、重新導向和認證)：輸入要傳遞到 SSO 應用程式延伸模組的其他延伸模組專用資料：
   - **索引鍵**：輸入所要新增項目的名稱，例如 `user name`。
   - **類型**：輸入資料的類型。 選項包括：
 
     - 字串
     - 布林值：在 [設定值]  中，輸入 `True` 或 `False`。
     - 整數：在 [設定值]  中，輸入數字。
-    
+
   - **值**：輸入資料。
 
   - **新增**：選取以新增設定金鑰。
 
-- **鑰匙串使用方式** (僅限 Kerberos)：[封鎖]  可防止將密碼儲存並保存在 Keychain 中。 如果選擇封鎖，則系統不會提示使用者儲存其密碼，且需要在 Kerberos 票證到期時重新輸入該密碼。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可允許將密碼儲存並保存在 Keychain 中。 當票證到期時，系統不會提示使用者重新輸入其密碼。
+- **鑰匙串使用方式** (僅限 Kerberos)：[封鎖]  可防止將密碼儲存並保存在 Keychain 中。 如果選擇封鎖，則系統不會提示使用者儲存其密碼，且需要在 Kerberos 票證到期時重新輸入該密碼。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 會允許將密碼儲存並保存在 Keychain 中。 當票證到期時，系統不會提示使用者重新輸入其密碼。
 - **Face ID、Touch ID 或密碼** (僅限 Kerberos)：[必要]  ，強制使用者在需要認證以更新 Kerberos 票證時，輸入 Face ID、Touch ID 或裝置密碼。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 不會要求使用者使用生物識別技術或裝置密碼來重新整理 Kerberos 票證。 如果封鎖 [鑰匙串使用方式]  ，則不會套用此設定。
 - **預設領域** (僅限 Kerberos)：[啟用]  會將所輸入的 [領域]  值設定為預設領域。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 不會設定預設領域。
 

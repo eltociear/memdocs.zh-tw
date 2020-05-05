@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87cfb3edf860cfc9de9c479a13dd1ea3fa54e599
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ef7a076c0a41e84e0028da6655569401f334772c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326463"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078969"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>在 Intune 中重設或移除裝置密碼
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-本文件將討論裝置層級密碼重設，以及 Android Enterprise (之前稱為 Android for Work 或 AfW) 裝置上的工作設定檔密碼重設。 由於需求各自不同，因此，請務必注意這兩者之間的差異。 裝置層級密碼重設會重設整部裝置的密碼。 工作設定檔密碼重設只會重設 Android Enterprise 裝置上的使用者工作設定檔。
+本文件將討論裝置層級密碼重設，以及 Android Enterprise (之前稱為 Android for Work 或 AfW) 裝置上的工作設定檔密碼重設。 由於需求各自不同，因此，請務必注意這兩者之間的差異。 裝置層級密碼重設會重設整部裝置的密碼。 工作設定檔密碼重設只會重設 Android Enterprise 裝置上的使用者工作設定檔密碼。
 
 ## <a name="supported-platforms-for-device-level-passcode-reset"></a>支援裝置層級密碼重設的平台
 
@@ -59,13 +59,15 @@ ms.locfileid: "80326463"
 
 1. 使用下列任一角色登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)：Azure Active Directory 全域管理員、Azure Active Directory Intune 服務管理員、技術服務人員或角色管理員。
 2. 選取 [裝置]  ，然後選取 [所有裝置]  。
-3. 從您管理的裝置清單中選取裝置，然後選擇 [移除密碼]  。
+3. 從您管理的裝置清單中選取裝置，然後選擇 [重設密碼]  。
 
-## <a name="reset-android-work-profile-passcodes"></a>重設 Android 工作設定檔密碼
+## <a name="reset-android-work-profile-and-device-owner-passcodes"></a>重設 Android 工作設定檔和裝置擁有者密碼
 
 以工作設定檔註冊的支援 Android Enterprise 裝置會收到新受控設定檔解除鎖定密碼，或終端使用者的受控設定檔查問。
 
-針對執行 8.x 或更新版本並以工作設定檔註冊的 Android Enterprise 裝置，終端使用者在完成註冊之後，會立即收到啟用重設密碼的通知。 如果工作設定檔密碼為必要且已設定，就會顯示通知。 輸入其密碼之後，就會關閉通知。
+針對執行 8.x 版或更新版本的 Android Enterprise 工作設定檔裝置，終端使用者會在註冊完成後，立即收到啟用其重設密碼的通知。 如果工作設定檔密碼為必要且已設定，就會顯示通知。 輸入其密碼之後，就會關閉通知。
+
+對於執行8.x 版或更新版本的 Android Enterprise 裝置擁有者或工作設定檔裝置，在從主控台選取重設密碼之後，系統會向 MEM Intune 系統管理員顯示暫時密碼。 必須在裝置上輸入暫時密碼。 裝置的暫時密碼會顯示在主控台中 7 天。
 
 
 ## <a name="remove-iosipados-passcodes"></a>移除 iOS/iPadOS 密碼
