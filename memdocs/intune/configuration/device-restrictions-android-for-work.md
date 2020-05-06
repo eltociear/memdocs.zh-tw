@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf2c3c09ca957b0355669edc536dfd1f0d0e3226
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 38598e0245b0cfe15be4b9303620aea1724933d1
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407895"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166565"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>使用 Intune 來允許或限制功能的 Android Enterprise 裝置設定
 
@@ -85,7 +85,7 @@ ms.locfileid: "80407895"
 
 ### <a name="system-security"></a>系統安全性
 
-- **對應用程式進行威脅掃描**：[必要]  (預設值) 可讓 Google Play 安全防護在應用程式安裝前後掃描這些應用程式。 如果偵測到威脅，可能會警告使用者從裝置移除應用程式。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能不會啟用或執行 Google Play Protect 來掃描應用程式。
+- **對應用程式進行威脅掃描**：[必要]  (預設值) 可讓 Google Play 安全防護在應用程式安裝前後掃描這些應用程式。 如果偵測到威脅，可能會警告使用者從裝置移除應用程式。 當設定為 [未設定]  時，Intune 則不會變更或更新此設定。 根據預設，OS 可能不會啟用或執行 Google Play Protect 來掃描應用程式。
 
 ### <a name="dedicated-devices"></a>專用裝置
 
@@ -206,7 +206,10 @@ ms.locfileid: "80407895"
 
 - **密碼過期前的天數**：輸入裝置密碼必須在多少天後變更，介於 1-365 之間。 例如，輸入 `90`，密碼會在 90 天後到期。 密碼到期時，系統會提示使用者建立新的密碼。 當此值為空白時，Intune 不會變更或更新此設定。
 - **使用者在重複使用某組密碼前，必須使用的密碼組數**：使用此設定限制使用者建立以前用過的密碼。 輸入不得重複使用的舊密碼，從 1 到 24。 列如，輸入 `5` 讓使用者無法將新密碼設定為其目前密碼或之前使用過的四個密碼之一。 當此值為空白時，Intune 不會變更或更新此設定。
-- **登入失敗幾次後即抹除裝置**：輸入抹除裝置前允許的密碼錯誤次數，介於 4-11 之間。 `0` (零) 可能會停用裝置抹除功能。 當此值為空白時，Intune 不會變更或更新此設定。
+- **登入失敗幾次後即抹除裝置**：輸入抹除裝置前允許的錯誤密碼次數，介於 4-11 之間。 `0` (零) 可能會停用裝置抹除功能。 當此值為空白時，Intune 則不會變更或更新此設定。
+
+  > [!NOTE]
+  > 系統不會提示裝置擁有者裝置設定密碼。 這些設定將會強制執行，而且您必須手動設定密碼。 在您設定符合您需求的密碼前，強制執行此作業的原則會回報為失敗。
 
 ### <a name="power-settings"></a>電源設定
 

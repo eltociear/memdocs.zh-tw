@@ -10,12 +10,12 @@ ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 075d371a334f26a788c656fe85ec01ae2338eb26
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 91434b70ca514430ab4cfd6815186bc6d6bc33db
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074821"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210123"
 ---
 # <a name="planning-for-certificate-template-permissions-for-certificate-profiles-in-configuration-manager"></a>規劃憑證設定檔在 Configuration Manager 中的憑證範本權限
 
@@ -40,7 +40,7 @@ ms.locfileid: "82074821"
 ## <a name="adding-read-and-enroll-permissions-for-users-and-computers"></a>新增使用者及電腦的讀取和註冊權限  
  如果您的憑證授權單位 (CA) 基礎結構團隊由不同團隊負責管理，且該團隊希望 Configuration Manager 能先驗證使用者是否擁有有效的 Active Directory 網域服務帳戶，然後才傳送憑證設定檔給使用者以要求使用者憑證，新增使用者及電腦的讀取和註冊權限會是較適當的方式。 對於此設定，您必須先指定一個或多個包含使用者的安全性群組，然後才授與這些群組憑證範本的讀取和註冊權限。 在此種案例中，安全性控制由 CA 系統管理員負責管理。  
 
- 同樣地，您可以指定一個或多個包含電腦帳戶的安全性群組，並授與這些群組憑證範本的讀取和註冊權限。 如果您將電腦憑證設定檔部署到屬於網域成員的電腦，便需為該電腦的電腦帳戶授與讀取和註冊權限。 如果電腦不是網域成員 (例如，如果它是工作群組電腦或個人行動裝置)，便不需要這些權限。  
+ 同樣地，您可以指定一個或多個包含電腦帳戶的安全性群組，並授與這些群組憑證範本的讀取和註冊權限。 如果您將電腦憑證設定檔部署到屬於網域成員的電腦，便需為該電腦的電腦帳戶授與讀取和註冊權限。 如果該電腦不是網域成員，則不需要這些權限。 例如，如果該電腦是工作群組電腦或個人行動裝置。  
 
  雖然這項設定使用額外的安全性控制，但卻不是建議的最佳作法。 原因是指定的裝置使用者或擁有者可能會個別向 Configuration Manager 要求憑證，而且提供可能用來假冒其他使用者或裝置的憑證主體值。  
 

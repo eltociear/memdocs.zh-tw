@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 672c978a7e590e8e26f676733bd2903d3684e978
-ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
+ms.openlocfilehash: de679314bcd3b52ff879fbe9a6340a61d2b7e993
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80611745"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078357"
 ---
 # <a name="app-protection-policies-overview"></a>應用程式保護原則概觀
 
@@ -36,7 +36,7 @@ ms.locfileid: "80611745"
 ## <a name="how-you-can-protect-app-data"></a>如何保護應用程式資料
 您的員工使用行動裝置處理公私事務。 確保員工生產力的同時，想要防止故意和不小心的資料外洩。 您還想要保護從您非受控裝置存取的公司資料。
 
-您可以使用 Intune 應用程式保護原則，而**不受任何行動裝置管理 (MDM) 解決方案影響**。 不論是否在裝置管理解決方案中註冊裝置，這項獨立性都可協助您保護貴公司的資料。 您可以實作**應用程式層級原則**，以限制存取公司資源，並將資料保留在 IT 部門範疇內。
+您可以使用 Intune 應用程式保護原則，而**不受任何行動裝置管理 (MDM) 解決方案影響**。 不論是否在裝置管理解決方案中註冊裝置，這項獨立性都有助保護公司的資料。 您可以實作**應用程式層級原則**，以限制存取公司資源，並將資料保留在 IT 部門範疇內。
 
 ### <a name="app-protection-policies-on-devices"></a>裝置上的應用程式防護原則
 
@@ -167,7 +167,7 @@ Intune SDK 開發小組會針對使用原生 Android、iOS/iPadOS (Obj-C、Swift
 ### <a name="word-excel-and-powerpoint"></a>Word、Excel 和 PowerPoint
 使用 [Word、Excel 與 PowerPoint](https://products.office.com/business/office) 應用程式的其他需求包括下列各項：
 
-- 終端使用者必須擁有連結到其 Azure Active Directory 帳戶的 [Office 365 商務版或企業版](https://products.office.com/business/compare-more-office-365-for-business-plans)授權。 訂用帳戶必須包括行動裝置版 Office 應用程式，而且可以包括[商務用 OneDrive](https://onedrive.live.com/about/business/) 的雲端儲存體帳戶。 Office 365 授權可在 [Microsoft 365 系統管理中心](https://admin.microsoft.com)內根據這些[指示](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)指派。
+- 終端使用者必須擁有連結到其 Azure Active Directory 帳戶的 [Microsoft 365 Apps 商務版或企業版](https://products.office.com/business/compare-more-office-365-for-business-plans)授權。 訂用帳戶必須包括行動裝置版 Office 應用程式，而且可以包括[商務用 OneDrive](https://onedrive.live.com/about/business/) 的雲端儲存體帳戶。 Office 365 授權可在 [Microsoft 365 系統管理中心](https://admin.microsoft.com)內根據這些[指示](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)指派。
 
 - 使用者必須有受控的位置，此位置是使用 [儲存組織資料複本] 應用程式保護原則設定下的細微另存新檔功能所設定。 例如，若受控位置是 OneDrive，則 [OneDrive](https://onedrive.live.com/about/) 應用程式應該在終端使用者的 Word、Excel 或 PowerPoint 應用程式中設定。
 
@@ -251,7 +251,7 @@ PIN 是用來允許僅有正確的使用者可以存取應用程式中的組織�
 **在同一個發行者的應用程式上設定 PIN 兩次？**<br>
 MAM (在 iOS/iPadOS 上) 目前允許應用程式層級 PIN 包含英數字元與特殊字元 (稱為「密碼」)，這需要應用程式 (亦即 WXP、Outlook、Managed Browser、Yammer) 參與以整合[適用於 iOS 的 Intune SDK](../developer/app-sdk-ios.md)。 如果沒有，密碼設定將不會正確地針對目標應用程式強制執行。 這是在「適用於 iOS 7.1.12 版的 Intune SDK」中推出的功能 。
 
-為了支援此功能，並確保與適用於 iOS/iPadOS 其 Intune SDK 先前版本的回溯相容性，因此 7.1.12 及更新版本中的所有 PIN (不論數字或密碼)，都與先前 SDK 版本中的數字 PIN 分開處理。 因此，如果裝置上有來自同一個發行者的多個應用程式，且其使用的「適用於 iOS 的 Intune SDK」有 7.1.12 之前和 7.1.12 之後的版本，則這些應用程式必須設定兩次 PIN。 這兩個 PIN (針對每個應用程式) 沒有任何關係 (亦即，它們必須遵守套用至應用程式的應用程式保護原則)。 確切地說，只有  當應用程式 A 和 B 套用相同的原則 (相對於 PIN) 時，使用者才需要設定相同的 PIN 兩次。 
+為了支援此功能，並確保與適用於 iOS/iPadOS 其 Intune SDK 先前版本的回溯相容性，因此 7.1.12 及更新版本中的所有 PIN (不論數字或密碼)，都與先前 SDK 版本中的數字 PIN 分開處理。 因此，如果裝置上有來自同一個發行者的多個應用程式，且其使用的「適用於 iOS 的 Intune SDK」有 7.1.12 之前和 7.1.12 之後的版本，則這些應用程式必須設定兩次 PIN。 這兩個 PIN (針對每個應用程式) 沒有任何關係 (亦即，其必須遵守套用至應用程式的應用程式保護原則)。 確切地說，只有  當應用程式 A 和 B 套用相同的原則 (相對於 PIN) 時，使用者才需要設定相同的 PIN 兩次。 
 
 針對已啟用 Intune 行動裝置應用程式管理的 iOS/iPadOS 應用程式，這是應用程式上的 PIN 特定行為。 一段時間之後，隨著應用程式採用適用於 iOS 的 Intune SDK 較新版本，需要針對同一個發行者應用程式設定 PIN 兩次的問題就會減少。 如需範例，請查看下面的注意事項。
 
@@ -300,7 +300,7 @@ MAM 選擇性抹除僅會從應用程式移除公司應用程式資料。 該要
 Intune 應用程式防護會取決於使用者的身分識別，以在應用程式與 [Intune SDK](../developer/app-sdk.md) 之間保持一致。 保證一致的唯一方式是透過新式驗證。 有些案例中，應用程式可搭配內部部署組態運作，但是不保證一定運作。
 
 **從受控應用程式開啟網頁連結的安全方式**<br>
-IT 系統管理員可以針對 [Intune Managed Browser 應用程式](app-configuration-managed-browser.md)部署與設定應用程式保護原則，這是由 Microsoft Intune 開發的網頁瀏覽器，可輕鬆地利用 Intune 加以管理。 針對 Intune 受控應用程式，IT 系統管理員可以要求其中的所有網頁連結都必須使用 Managed Browser 應用程式來開啟。
+IT 系統管理員可以針對 [Microsoft Edge](app-configuration-managed-browser.md)部署與設定應用程式保護原則，這是可利用 Intune 輕鬆管理的網頁瀏覽器。 針對 Intune 受控應用程式，IT 系統管理員可以要求其中的所有網頁連結都必須使用 Managed Browser 應用程式來開啟。
 
 ## <a name="app-protection-experience-for-ios-devices"></a>iOS 裝置的應用程式防護體驗
 

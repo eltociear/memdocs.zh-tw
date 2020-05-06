@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 04/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a533344b72952098403fae0ebcabbcad473684a
-ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
+ms.openlocfilehash: 16c086295b93b72ef2f9cfbd2d6a15d6bb54f320
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80611713"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82183003"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>MAM 和應用程式保護的相關常見問題
 
@@ -38,9 +38,9 @@ MAM 可保護應用程式內組織的資料。 透過不需註冊的 MAM (MAM-WE
 
 **MAM 支援哪些裝置組態？**<br></br>
 Intune MAM 支援兩個組態︰
-- **Intune MDM + MAM**：IT 系統管理員只能管理已在 Intune 行動裝置管理 (MDM) 註冊之裝置上使用 MAM 與應用程式保護原則的應用程式。 若要使用 MDM + MAM 管理應用程式，客戶應該在 Azure 入口網站中使用 Intune 主控台，網址為 [https://portal.azure.com](https://portal.azure.com )。
+- **Intune MDM + MAM**：IT 系統管理員只能管理已在 Intune 行動裝置管理 (MDM) 註冊之裝置上使用 MAM 與應用程式保護原則的應用程式。 若要使用 MDM + MAM 管理應用程式，客戶應該使用 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-- **不需註冊裝置的 MAM**：不需註冊裝置的 MAM (或 MAM-WE) 允許 IT 系統管理員管理未在 Intune MDM 註冊之裝置上使用 MAM 與應用程式保護原則的應用程式。 這表示應用程式可由向協力廠商 EMM 提供者註冊之裝置上的 Intune 來管理。 若要使用 MAM-WE 來管理應用程式，客戶應該在 Azure 入口網站中使用 Intune 主控台，網址為 [https://portal.azure.com](https://portal.azure.com)。 此外，向協力廠商企業行動管理 (EMM) 提供者註冊的裝置，或是完全不註冊 MDM 的裝置，也可使用 Intune 來管理應用程式。
+- **不需註冊裝置的 MAM**：不需註冊裝置的 MAM (或 MAM-WE) 允許 IT 系統管理員管理未在 Intune MDM 註冊之裝置上使用 MAM 與應用程式保護原則的應用程式。 這表示應用程式可由向協力廠商 EMM 提供者註冊之裝置上的 Intune 來管理。 若要使用 MAM-WE 管理應用程式，客戶應該使用 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 此外，向協力廠商企業行動管理 (EMM) 提供者註冊的裝置，或是完全不註冊 MDM 的裝置，也可使用 Intune 來管理應用程式。
 
 
 ## <a name="app-protection-policies"></a>應用程式防護原則
@@ -54,6 +54,7 @@ Intune MAM 支援兩個組態︰
 **可能會針對不同的裝置，同時將 MDM 與 MAM 原則套用至相同使用者嗎？例如，假設使用者能夠從他們自己已啟用 MAM 的機器中存取工作資源，同時也要開始處理並使用 Intune MDM 管理的裝置。針對此想法是否有任何需要注意的事項？**<br></br>
 如果您在未設定裝置狀態的情況下將 MAM 原則套用至使用者，則使用者將在 BYOD 裝置和 Intune 管理的裝置上取得 MAM 原則。 您也可以根據受控狀態來套用 MAM 原則。 因此，當您建立應用程式保護原則時，要在所有應用程式類型的目標旁邊選取 [否]。 接著，執行下列其中一項動作：
 - 將較不嚴格的 MAM 原則套用至 Intune 管理的裝置，並將較嚴格的 MAM 原則套用至非 MDM 註冊的裝置。
+-   如同第三方受控裝置一樣，將同樣嚴格的 MAM 原則套用至 Intune 受控裝置。
 - 僅將 MAM 原則套用至未註冊的裝置。
 
 如需詳細資料，請參閱[如何監視應用程式保護原則](app-protection-policies-monitor.md)。
@@ -69,7 +70,7 @@ Intune MAM 支援兩個組態︰
 
 - 終端使用者必須擁有指派給其 Azure Active Directory 帳戶的 Microsoft Intune 授權。 請參閱[管理 Intune 授權](../fundamentals/licenses-assign.md)，以了解如何將 Intune 授權指派給終端使用者。
 
-- 終端使用者必須隸屬於由應用程式保護原則設為目標的安全性群組。 相同的應用程式保護原則必須將已使用的特定應用程式設為目標。 應用程式保護原則可在 [Azure 入口網站](https://portal.azure.com)中的 Intune 主控台中建立與部署。 安全群組目前可在 [Microsoft 365 糸統管理中心](https://admin.microsoft.com)內建立。
+- 終端使用者必須隸屬於由應用程式保護原則設為目標的安全性群組。 相同的應用程式保護原則必須將已使用的特定應用程式設為目標。 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中可以建立和部署應用程式保護原則。 安全群組目前可在 [Microsoft 365 糸統管理中心](https://admin.microsoft.com)內建立。
 
 - 終端使用者必須使用其 AAD 帳戶來登入應用程式。
 
@@ -78,7 +79,7 @@ Intune MAM 支援兩個組態︰
 Intune SDK 開發小組會針對使用原生 Android、iOS/iPadOS (Obj-C、Swift)、Xamarin 與 Xamarin.Forms 平台所建置的應用程式，主動地進行測試並維護支援。 雖然有部分客戶成功搭配其他平台 (例如 React Native 和 NativeScript) 整合 Intune SDK，我們並沒有針對使用我們所不支援之平台的應用程式開發人員提供明確的指引或外掛程式。
 
 **Intune APP SDK 是否支援 Microsoft 驗證程式庫 (MSAL) 或社交帳戶？**<br></br>
-Intune APP SDK 會針對第一方及協力廠商 SDK 版本使用部分進階 ADAL 功能。 因此，MSAL 並不適用於我們的許多核心案例，例如向 Intune 應用程式防護服務進行驗證，以及條件式啟動。 Microsoft 身分識別小組的整體指示是要將所有 Microsoft Office 應用程式切換至 MSAL，因此 Intune SDK 未來遲早會需要支援它，但目前尚未有確切計畫。
+Intune App SDK 可將 Azure Active Directory 驗證程式庫或 Microsoft 驗證程式庫用於其驗證和條件式啟動案例。 針對不註冊裝置的管理情節，它也依賴 ADAL/MSAL 來向 MAM 服務註冊使用者身分識別。
 
 **使用 [Outlook 行動裝置應用程式 (英文)](https://products.office.com/outlook) 時有哪些其他需求？**
 
@@ -91,7 +92,7 @@ Intune APP SDK 會針對第一方及協力廠商 SDK 版本使用部分進階 AD
 
 **使用 [Word、Excel 與 PowerPoint](https://products.office.com/business/office) 應用程式時有哪些其他需求？**
 
-- 終端使用者必須擁有連結到其 Azure Active Directory 帳戶的 [Office 365 商務版或企業版](https://products.office.com/business/compare-more-office-365-for-business-plans)授權。 訂用帳戶必須包括行動裝置版 Office 應用程式，而且可以包括[商務用 OneDrive](https://onedrive.live.com/about/business/) 的雲端儲存體帳戶。 Office 365 授權可在 [Microsoft 365 系統管理中心](https://admin.microsoft.com)內根據這些[指示](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)指派。
+- 終端使用者必須擁有連結到其 Azure Active Directory 帳戶的 [Microsoft 365 Apps 商務版或企業版](https://products.office.com/business/compare-more-office-365-for-business-plans)授權。 訂用帳戶必須包括行動裝置版 Office 應用程式，而且可以包括[商務用 OneDrive](https://onedrive.live.com/about/business/) 的雲端儲存體帳戶。 Office 365 授權可在 [Microsoft 365 系統管理中心](https://admin.microsoft.com)內根據這些[指示](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)指派。
 
 - 使用者必須有受控的位置，此位置是使用 [儲存組織資料複本] 應用程式保護原則設定下的細微另存新檔功能所設定。 例如，若受控位置是 OneDrive，則 [OneDrive](https://onedrive.live.com/about/) 應用程式應該在終端使用者的 Word、Excel 或 PowerPoint 應用程式中設定。
 
@@ -140,7 +141,7 @@ Intune PIN 會根據以閒置為基礎的計時器 ([重新檢查存取需求前
 
 - **Intune 如何針對暴力密碼破解攻擊保護 PIN？**<br></br> 做為應用程式 PIN 原則的一部份，IT 系統管理員可以設定在鎖定應用程式之前，使用者可以嘗試驗證其 PIN 的次數上限。 當嘗試次數達到上限之後，Intune App SDK 可以抹除應用程式中的「公司」資料。
   
-- **為何我需要在來自同一個發行者的應用程式上設定兩次 PIN？**<br></br> MAM (在 iOS/iPadOS 上) 目前允許應用程式層級 PIN 包含英數字元與特殊字元 (稱為「密碼」)，這需要應用程式 (亦即 WXP、Outlook、Managed Browser、Yammer) 參與以整合適用於 iOS/iPadOS 的 Intune APP SDK。 如果沒有，密碼設定將不會正確地針對目標應用程式強制執行。 此功能在適用於 iOS/iPadOS 7.1.12 版的 Intune SDK 中推出 。 <br><br> 為了支援此功能，並確保與適用於 iOS/iPadOS 其 Intune SDK 先前版本的回溯相容性，因此 7.1.12 及更新版本中的所有 PIN (不論數字或密碼)，都與先前 SDK 版本中的數字 PIN 分開處理。 因此，如果裝置上有來自同一個發行者的多個應用程式，則具有適用於 iOS 的 Intune SDK 7.1.12 之前和 7.1.12 之後版本都將必須設定兩次 PIN。 <br><br> 雖然如此，這兩個 PIN (針對每個應用程式) 沒有任何關係，亦即，它們必須遵守套用至應用程式的應用程式保護原則。 確切地說，只有  當應用程式 A 和 B 套用相同的原則 (相對於 PIN) 時，使用者才需要設定相同的 PIN 兩次。 <br><br> 針對已啟用 Intune 行動裝置應用程式管理的 iOS/iPadOS 應用程式，這是應用程式上的 PIN 特定行為。 一段時間之後，隨著應用程式採用適用於 iOS 的 Intune SDK 較新版本，需要針對同一個發行者應用程式設定 PIN 兩次的問題就會減少。 如需範例，請查看下面的注意事項。
+- **為何我需要在來自同一個發行者的應用程式上設定兩次 PIN？**<br></br> MAM (在 iOS/iPadOS 上) 目前允許應用程式層級 PIN 包含英數字元與特殊字元 (稱為「密碼」)，這需要應用程式 (亦即 WXP、Outlook、Managed Browser、Yammer) 參與以整合適用於 iOS/iPadOS 的 Intune APP SDK。 如果沒有，密碼設定將不會正確地針對目標應用程式強制執行。 此功能在適用於 iOS/iPadOS 7.1.12 版的 Intune SDK 中推出 。 <br><br> 為了支援此功能，並確保與適用於 iOS/iPadOS 其 Intune SDK 先前版本的回溯相容性，因此 7.1.12 及更新版本中的所有 PIN (不論數字或密碼)，都與先前 SDK 版本中的數字 PIN 分開處理。 因此，如果裝置上有來自同一個發行者的多個應用程式，則具有適用於 iOS 的 Intune SDK 7.1.12 之前和 7.1.12 之後版本都將必須設定兩次 PIN。 <br><br> 雖然如此，這兩個 PIN (針對每個應用程式) 沒有任何關係；亦即，其必須遵守套用至應用程式的應用程式保護原則。 確切地說，只有  當應用程式 A 和 B 套用相同的原則 (相對於 PIN) 時，使用者才需要設定相同的 PIN 兩次。 <br><br> 針對已啟用 Intune 行動裝置應用程式管理的 iOS/iPadOS 應用程式，這是應用程式上的 PIN 特定行為。 一段時間之後，隨著應用程式採用適用於 iOS 的 Intune SDK 較新版本，需要針對同一個發行者應用程式設定 PIN 兩次的問題就會減少。 如需範例，請查看下面的注意事項。
 
   >[!NOTE]
   > 例如，若應用程式 A 是使用 7.1.12 前的版本建置，而相同發行者應用程式 B 是使用 7.1.12 或更新版本建置，當 A 和 B 安裝在同一部 iOS/iPadOS 裝置上時，終端使用者將需要針對兩者分別設定 PIN。 <br><br> 如果 SDK 版本是 7.1.9 的應用程式 C 安裝在該裝置上，則它會和應用程式 A 共用相同的 PIN。 <br><br> SDK 版本是 7.1.14 的應用程式 D 會和應用程式 B 共用相同的 PIN。 <br><br> 如果只有應用程式 A 和 C 安裝在同一部裝置上，則只需要設定一個 PIN。 只有應用程式 B 和 D 安裝在同一部裝置上的情況也是如此。
@@ -161,7 +162,7 @@ Intune 可以透過三種不同的方式抹除資料：完整的裝置抹除、M
 
 - **什麼是 MDM 選擇性抹除？**<br></br> 請參閱[移除裝置 - 淘汰](../remote-actions/devices-wipe.md#retire)，以閱讀移除公司資料的相關資訊。
 
-- **什麼是 MAM 選擇性抹除？**<br></br> MAM 選擇性抹除僅會從應用程式移除公司應用程式資料。 該要求是使用 Intune Azure 入口網站來起始的。 若要了解如何起始抹除要求，請參閱[如何只抹除應用程式中的公司資料](apps-selective-wipe.md)。
+- **什麼是 MAM 選擇性抹除？**<br></br> MAM 選擇性抹除僅會從應用程式移除公司應用程式資料。 系統會使用 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)來起始要求。 若要了解如何起始抹除要求，請參閱[如何只抹除應用程式中的公司資料](apps-selective-wipe.md)。
 
 - **MAM 選擇性抹除發生的速度有多快？**<br></br> 如果使用者在起始選擇性抹除時正在使用應用程式，Intune App SDK 每隔 30 分鐘就會檢查來自 Intune MAM 服務的選擇性抹除要求。 它也會在使用者首次啟動應用程式並以其工作或學校帳戶登入時檢查選擇性抹除。
 
@@ -177,7 +178,7 @@ Intune 應用程式保護取決於使用者的身分識別在應用程式與 Int
 大部分的應用程式保護功能是內建在公司入口網站應用程式中。 雖然公司入口網站應用程式一律為必要，但也不需要註冊裝置。 若是 MAM-WE，終端使用者只需要在裝置上安裝公司入口網站應用程式即可。
 
 **已設定給同一組應用程式和使用者的多個 Intune 應用程式保護存取設定，在 Android 上如何運作？**<br></br>
-Intune 應用程式保護存取原則，在使用者嘗試從其公司帳戶存取目標應用程式時，會以特定順序套用在終端使用者裝置上。 一般情況下，封鎖會優先，然後是可以關閉的警告。 例如，如果適用於特定的使用者/應用程式，警告使用者進行修補程式升級的最低 Android 修補程式版本設定，將在封鎖使用者使其無法存取的最低 Android 修補程式版本設定之後套用。 因此，當情況是 IT 系統管理員將最低 Android 修補程式版本設定為 2018-03-01，最低 Android 修補程式版本 (僅警告) 設定為 2018-02-01 時，如果嘗試存取應用程式的裝置使用修補程式版本 2018-01-01，則因為導致封鎖存取的最低 Android 修補程式版本設定限制更多，而使得終端使用者將會被封鎖。 
+Intune 應用程式存取保護原則，在使用者嘗試從其公司帳戶存取目標應用程式時，會以特定順序套用在終端使用者裝置上。 一般情況下，封鎖會優先，然後是可以關閉的警告。 例如，如果適用於特定的使用者/應用程式，警告使用者進行修補程式升級的最低 Android 修補程式版本設定，將在封鎖使用者使其無法存取的最低 Android 修補程式版本設定之後套用。 因此，當情況是 IT 系統管理員將最低 Android 修補程式版本設定為 2018-03-01，最低 Android 修補程式版本 (僅警告) 設定為 2018-02-01 時，如果嘗試存取應用程式的裝置使用修補程式版本 2018-01-01，則因為導致封鎖存取的最低 Android 修補程式版本設定限制更多，而使得終端使用者將會被封鎖。 
 
 處理不同類型的設定時，應用程式版本需求會優先，然後是 Android 作業系統版本需求和 Android 修補程式版本需求。 接著會以相同順序檢查所有類型之設定的任何警告。
 

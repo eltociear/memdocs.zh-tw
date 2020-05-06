@@ -2,7 +2,7 @@
 title: 建立和執行指令碼
 titleSuffix: Configuration Manager
 description: 在用戶端裝置上建立並執行 PowerShell 指令碼。
-ms.date: 04/01/2020
+ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1c15106eeecdac0377900d913160bc23614327db
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2113baf43c377379a2a996c59fd13e55072cf898
+ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689656"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605179"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>從 Configuration Manager 主控台建立及執行 PowerShell 指令碼
 
@@ -98,7 +98,7 @@ Configuration Manager 已整合執行 PowerShell 指令碼的能力。 PowerShel
 >最佳做法不該允許指令碼作者核准自己的指令碼。 只有在實驗室設定中才允許這樣做。 請仔細考慮變更此設定對生產環境可能的影響。
 
 ## <a name="security-scopes"></a>安全性範圍
-*(隨 1710 版推出)*  
+  
 執行指令碼會使用安全性範圍，此為 Configuration Manager 的現有功能，透過代表使用者群組的指派標記，控制指令碼的撰寫與執行。 如需使用安全性範圍的詳細資訊，請參閱[為 Configuration Manager 設定以角色為基礎的系統管理](../../core/servers/deploy/configure/configure-role-based-administration.md)。
 
 ## <a name="create-security-roles-for-scripts"></a><a name="bkmk_ScriptRoles"></a> 建立指令碼的安全性角色
@@ -168,11 +168,11 @@ Configuration Manager 已整合執行 PowerShell 指令碼的能力。 PowerShel
 5. 完成精靈。 新指令碼會顯示在 [指令碼]  清單中，其狀態為 [等候核准]  。 您必須先核准此指令碼，才能在用戶端裝置上執行它。 
 
 > [!IMPORTANT]
-> 使用執行指令碼功能時，避免以指令碼處理裝置重新開機或是重新啟動 Configuration Manager 代理程式。 這麼做可能會造成不斷重新開機的狀態。 如有需要，從 Configuration Manager 1710 版開始，加強了可重新啟動裝置的用戶端通知功能。 [擱置重新啟動欄](../../core/clients/manage/manage-clients.md#restart-clients)可協助找出需要重新啟動的裝置。 
+> 使用執行指令碼功能時，避免以指令碼處理裝置重新開機或是重新啟動 Configuration Manager 代理程式。 這麼做可能會造成不斷重新開機的狀態。 如有需要，目前用戶端通知功能已有所加強，可重新啟動裝置。 [擱置重新啟動欄](../../core/clients/manage/manage-clients.md#restart-clients)可協助找出需要重新啟動的裝置。 
 > <!--SMS503978  -->
 
 ## <a name="script-parameters"></a>指令碼參數
-*(隨 1710 版推出)*  
+
 將參數新增至指令碼可提高工作的彈性。 您最多可以包括 10 個參數。 以下列出執行指令碼功能目前能夠使用的指令碼參數：「字串」  、「整數」  資料類型。 也提供預設值的清單。 如果您的指令碼有不支援的資料類型，您會收到警告。
 
 在 [建立指令碼]  對話方塊中，按一下 [指令碼]  下的 [指令碼參數]  。
@@ -181,8 +181,7 @@ Configuration Manager 已整合執行 PowerShell 指令碼的能力。 PowerShel
 
 >[!IMPORTANT]
 > 參數值不能包含單引號。 </br></br>
-> Configuration Manager 1802 版中存在一個已知問題，就是具有空格的參數不會正確傳遞至指令碼。 如果參數中使用了空格，則只有參數中的第一個項目會傳遞給指令碼，而空格後的所有項目都不會被傳遞。 系統管理員可以透過使用替代字元取代空格並轉換它們，或使用其他方法來編寫指令碼。
-
+> 有一個已知問題，其會使包含或括在單引號中的參數值無法正確傳遞到指令碼。 指定在指令碼中包含空格的預設參數值時，請改為使用雙引號。 在建立或執行**指令碼**期間指定預設參數值時，無論值是否包含空格，將預設值括在雙引號或單引號中都不是必要操作。
 
 ### <a name="parameter-validation"></a>參數驗證
 
@@ -282,22 +281,31 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 
 ## <a name="script-monitoring"></a>指令碼監視
 
-在您於裝置集合上起始執行指令碼之後，請使用下列程序來監視作業。 從 1710 版開始，您可以在指令碼執行時即時監視指令碼，也可以回到特定執行指令碼執行的報表。 指令碼狀態資料已在[刪除過時用戶端作業維護工作](../../core/servers/manage/reference-for-maintenance-tasks.md)期間或刪除指令碼時清除。<br>
+在您於裝置集合上起始執行指令碼之後，請使用下列程序來監視作業。 您可在執行期間即時監視指令碼，也可以之後再返回所指定 [執行指令碼] 執行的狀態和結果。 指令碼狀態資料已在[刪除過時用戶端作業維護工作](../../core/servers/manage/reference-for-maintenance-tasks.md)期間或刪除指令碼時清除。<br>
 
 ![指令碼監視 - 指令碼執行狀態](./media/run-scripts/RS-monitoring-three-bar.png)
 
 1. 在 Configuration Manager 主控台中，按一下 [監視]  。
 2. 在 [監視]  工作區中，按一下 [指令碼狀態]  。
 3. 在 [指令碼狀態]  清單中，您可以檢視在用戶端裝置上執行之每個指令碼的結果。 指令碼結束代碼 **0** 通常表示指令碼已成功執行。
-    - 從 Configuration Manager 1802 版開始，指令碼輸出會被截斷為 4 KB，以提供更好的顯示體驗。  <!--510013-->
-   
+
+ 
    ![指令碼監視器 - 截斷的指令碼](./media/run-scripts/Script-monitoring-truncated.png)
 
-## <a name="script-output-in-1810"></a>1810 中的指令碼輸出
+## <a name="script-output"></a>指令碼輸出
 
-您可以使用原始或結構化的 JSON 格式來檢視詳細指令碼輸出。 此格式可讓輸出變得更容易讀取與分析。 如果指令碼傳回有效的 JSON 格式文字，則可將詳細的輸出當成 **JSON 輸出**或**原始輸出**來檢視。 否則，唯一的選項是**指令碼輸出**。
+用戶端的傳回指令碼輸出，透過將指令碼的結果輸送到 [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) Cmdlet 來格式化成 JSON。 JSON 格式會一致傳回可讀取的指令碼輸出。 針對不會傳回物件作為輸出的指令碼，ConvertTo-Json Cmdlet 會將輸出轉換成用戶端傳回的簡易字串，而非 JSON。  
 
-### <a name="example-script-output-is-valid-json"></a>範例：指令碼輸出是有效的 JSON
+- 得到未知結果的指令碼或離線的用戶端，皆不會出現在圖表或資料集中。 <!--507179-->
+- 請避免傳回大型指令碼輸出，因為它會被截斷為 4 KB。 <!--508488-->
+- 將指令碼中的列舉物件轉換為字串值，以正確地以 JSON 格式加以顯示。 <!--508377-->
+
+   ![將列舉物件轉換為字串值](./media/run-scripts/enum-tostring-JSON.png)
+
+您可以使用原始或結構化的 JSON 格式來檢視詳細指令碼輸出。 此格式可讓輸出變得更容易讀取與分析。 如果指令碼傳回有效的 JSON 格式文字，或輸出可使用 [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) PowerShell Cmdlet 來轉換成 JSON，則請將詳細輸出作為 **JSON 輸出**或**原始輸出**來檢視。 否則，唯一的選項是**指令碼輸出**。
+
+### <a name="example-script-output-is-convertible-to-valid-json"></a>範例：指令碼輸出可轉換成有效的 JSON
+
 命令：`$PSVersionTable.PSVersion`  
 
 ``` Output
@@ -307,34 +315,14 @@ Major  Minor  Build  Revision
 ```
 
 ### <a name="example-script-output-isnt-valid-json"></a>範例：指令碼輸出不是有效的 JSON
+
 命令：`Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
 ``` Output
 Microsoft Windows 10 Enterprise
 ```
 
-- 1810 用戶端會透過快速通訊通道將小於 80 KB 的輸出傳回給站台。 這項變更可提高檢視指令碼或查詢輸出的效能。  
-
-  - 如果指令碼或查詢輸出大於 80 KB，則用戶端會透過狀態訊息來傳送資料。  
-  - 1802 之前的用戶端會繼續使用狀態訊息。
-
-## <a name="script-output-pre-1810"></a>1810 版之前版本的指令碼輸出
-
-- 從 Configuration Manager 1802 版開始，會使用 JSON 格式傳回指令碼輸出。 此格式一律傳回可讀取的指令碼輸出。 
-- 得到未知結果的指令碼或離線的用戶端，皆不會出現在圖表或資料集中。 <!--507179-->
-- 請避免傳回大型指令碼輸出，因為它會被截斷為 4 KB。 <!--508488-->
-- 當搭配下層用戶端版本執行 Configuration Manager 1802 版或更新版本時，某些含有指令碼輸出格式的功能會無法使用。 <!--508487-->
-    - 1802 之前版本的 Configuration Manager 用戶端會得到字串輸出。
-    -  Configuration Manager 1802 (含) 以上的版本為 JSON 格式。
-        - 例如，您從某用戶端版本得到結果可能是 TEXT，而從另一個版本得到的結果是 "TEXT" (輸出括以雙引號)。這兩種結果都會顯示在圖表中，但會分列在兩個不同的類別。
-        - 若要暫時解決此問題，可考慮對兩個不同的集合執行指令碼。 一個是 1802 版之前的用戶端，另一個是 1802 (含) 以上之版本的用戶端。 或者您也可以在指令碼中，將列舉物件轉換為字串值，以便能以正確的 JSON 格式加以顯示。 
-- 將指令碼中的列舉物件轉換為字串值，以正確地以 JSON 格式加以顯示。 <!--508377-->
-
-   ![將列舉物件轉換為字串值](./media/run-scripts/enum-tostring-JSON.png)
-
 ## <a name="log-files"></a>記錄檔
-
-從 1810 版開始，已新額外的記錄以用於疑難排解。
 
 - 在用戶端上，根據預設位於 C:\Windows\CCM\logs：  
   - **Scripts.log**  

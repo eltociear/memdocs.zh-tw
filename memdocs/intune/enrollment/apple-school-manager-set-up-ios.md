@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bbca477b389b568d2aca1ab0f9394ec09fe2b24
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: 63a465e39e8a041c47b6748d9dacdebf3c6ea8a5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696562"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078102"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>使用 Apple School Manager 來設定 iOS/iPadOS 裝置註冊
 
@@ -90,7 +90,7 @@ Apple School Manager 註冊無法搭配 [Apple 的裝置註冊計劃](device-enr
 4. 針對 [使用者親和性]  ，為具備此設定檔的裝置選擇需要或不需要由指派的使用者來進行註冊。
     - **搭配使用者親和性進行註冊** - 針對屬於使用者的裝置，以及想要使用公司入口網站進行像是安裝應用程式等服務的裝置，選擇此選項。 此選項也可讓使用者使用公司入口網站來驗證其裝置。 若使用 ADFS，則使用者親和性需要 [WS-Trust 1.3 使用者名稱/混合端點](https://technet.microsoft.com/library/adfs2-help-endpoints)。 [深入了解](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。   Apple School Manager 的「共用的 iPad」模式需要使用者不搭配使用者親和性進行註冊。
 
-    - **不搭配使用者親和性進行註冊** - 針對未與任何使用者相關的裝置選擇此選項，例如共用的裝置。 針對執行工作而不需存取本機使用者資料的裝置使用此選項。 公司入口網站應用程式之類的應用程式無法運作。
+    - **不搭配使用者親和性進行註冊** - 針對未與任何使用者相關的裝置選擇此選項，例如共用的裝置。 針對執行工作而不需存取本機使用者資料的裝置使用此選項。 公司入口網站應用程式類的應用程式無法運作。
 
 5. 如果您選擇 [搭配使用者親和性進行註冊]  ，則可以讓使用者使用公司入口網站進行驗證，而不是 Apple 設定輔助程式。
 
@@ -105,7 +105,7 @@ Apple School Manager 註冊無法搭配 [Apple 的裝置註冊計劃](device-enr
     > 使用 Apple 設定輔助程式進行驗證時，不支援這些功能。
 
 6. 選擇 [裝置管理設定]  ，並選擇您是否想要監督使用此設定檔的裝置。
-    **受監督**裝置可提供您更多管理選項，並且預設會停用 [啟用鎖定]。 Microsoft 建議使用 ADE 作為啟用受監管模式的機制，特別是針對將部署大量 iOS/iPadOS 裝置的組織。
+    **受監督**裝置可提供您更多管理選項，並且預設會停用 [啟用鎖定]。 Microsoft 建議使用 ADE 作為啟用 Intune 受監督模式的機制，特別是針對將部署大量 iOS/iPadOS 裝置的組織。
 
     有兩種方式可通知使用者其裝置收到監督：
 
@@ -166,7 +166,7 @@ Apple School Manager 註冊無法搭配 [Apple 的裝置註冊計劃](device-enr
 
 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊方案權杖]  > 選擇清單中的權杖 > [裝置]   > [同步]  。![[註冊計劃裝置] 節點與 [同步] 連結的螢幕擷取畫面。](./media/apple-school-manager-set-up-ios/image06.png)
 
-為了遵循 Apple 規定的可接受註冊計劃流量，Intune 具有下列限制︰
+為遵循 Apple 條款內所規定的註冊計劃流量，Intune 具有下列限制︰
 - 完整同步處理每 7 天只能執行一次。 完整同步期間，每當 Apple 序號指派至 Intune 時，Intune 都會重新整理一次。 如果在上一次完整同步處理過後的七天內嘗試進行完整同步處理，Intune 只會重新整理尚未列在 Intune 中的序號。
 - 任何同步處理要求都會在 15 分鐘內完成。 在此期間或直到要求成功，會停用 [同步處理]  按鈕。
 - Intune 每 24 小時會與 Apple 同步一次新增及移除的裝置。

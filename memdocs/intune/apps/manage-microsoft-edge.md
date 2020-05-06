@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58e651849632fd06f962edfc90649ad14eeaeda0
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: cc1b11fe533499ebe29101c09fb1355cd8d04243
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696549"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82183070"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>透過搭配 Microsoft Intune 使用 Microsoft Edge 來管理 Web 存取
 
@@ -39,8 +39,8 @@ ms.locfileid: "80696549"
 ## <a name="getting-started"></a>開始使用
 
 您和您的終端使用者可以從公用應用程式存放區下載 Microsoft Edge，以便用於您的組織中。 瀏覽器原則的作業系統需求為下列其中之一：
-- Android 4 及更新版本
-- iOS 8.0 和更新版本
+- Android 5 及更新版本
+- iOS 12.0 及更新版本
 
 ## <a name="application-protection-policies-for-microsoft-edge"></a>Microsoft Edge 的應用程式保護原則
 
@@ -129,7 +129,7 @@ SSO 要求裝置必須註冊 iOS 裝置的 Microsoft Authenticator 應用程式�
 
 ## <a name="direct-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>將使用者導向 Microsoft Edge，而不是 Intune Managed Browser 
 
-Intune Managed Browser 和 Microsoft Edge 都可以用來作為被原則保護的瀏覽器。 為了確保您的使用者會被引導為使用正確的瀏覽器應用程式，請用下列組態設定來設定所有由 Intune 所管理之應用程式 (例如 Outlook、OneDrive 與 SharePoint) 的目標：
+Microsoft Edge 可作為受原則保護的瀏覽器。 為了確保您的使用者會被引導為使用正確的瀏覽器應用程式，請用下列組態設定來設定所有由 Intune 所管理之應用程式 (例如 Outlook、OneDrive 與 SharePoint) 的目標：
 
 |    機碼    |    值    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -194,7 +194,7 @@ Microsoft Edge 及 [Azure AD 應用程式 Proxy](https://docs.microsoft.com/azur
 
 |    機碼    |    值    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    指定一組值 URL。 每個熱門網站捷徑都會包含一個標題與 URL。 請使用 `|` 字元來分隔標題和 URL。 例如： <br> `GitHub | https://github.com/||LinkedIn|https://www.linkedin.com`    |
+|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    指定一組值 URL。 每個熱門網站捷徑都會包含一個標題與 URL。 請使用 `|` 字元來分隔標題和 URL。 例如： <br> `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
 
 ## <a name="configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge"></a>針對 Microsoft Edge 中的新索引標籤頁面設定您組織的標誌與品牌色彩
 
@@ -415,7 +415,7 @@ Microsoft Edge 及 [Azure AD 應用程式 Proxy](https://docs.microsoft.com/azur
 
 以下是 Microsoft Edge 的其他安全性和隱私權考量：
 
-- Microsoft Edge 不會使用使用者在其裝置上針對原生瀏覽器 https://docs.microsoft.com/en-us/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps 所做的設定，因為 Microsoft Edge 無法存取這些設定。
+- Microsoft Edge 不會使用使用者在其裝置上針對原生瀏覽器所設定的設定，因為 Microsoft Edge 並無法存取這些設定。
 - 您可以在與 Microsoft Edge 相關聯的應用程式保護原則中設定 [需要簡單的 PIN 碼才能存取]  或 [需要公司認證才能存取]  選項。 如果使用者選取驗證頁面上的說明連結，他們便可以瀏覽任何網際網路網站，無論那些網站是否被加入原則中的已封鎖清單。
 - Microsoft Edge 可以在直接存取網站時，只封鎖網站的存取。 它不會在使用者使用中繼服務 (例如翻譯服務) 來存取網站時封鎖存取。
 - 若要允許驗證並存取 Intune 文件，請從允許或封鎖清單設定中排除 * **.microsoft.com**。 它一律會被允許。

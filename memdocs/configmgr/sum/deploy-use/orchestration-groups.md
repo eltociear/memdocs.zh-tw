@@ -2,7 +2,7 @@
 title: 協調流程群組
 titleSuffix: Configuration Manager
 description: 建立協調流程群組，並將更新部署到其中。
-ms.date: 04/01/2020
+ms.date: 04/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cddbebea-b418-4839-b0a8-7809486c8a4c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d9998f298cee24e9f10b3fd8c5e58d7b76200485
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e9a307df23900abb985535b2ab59a5ff172cafb7
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702976"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254906"
 ---
 # <a name="orchestration-groups-in-configuration-manager"></a>Configuration Manager 中的協調流程群組
 <!--3098816-->
@@ -138,7 +138,6 @@ ms.locfileid: "81702976"
    1. 判斷協調流程失敗的原因，並解決任何問題。
    1. [重設群組成員的協調流程狀態](#bkmk_reset)。
    1. 從 [協調流程群組]  節點，按一下 [啟動協調流程]  按鈕，以重新啟動協調流程。
-    使用 [啟動協調流程]  按鈕來重設該狀態。  
    [![啟動協調流程 ](./media/3098816-start-orchestration.png)](./media/3098816-start-orchestration.png#lightbox)
 
 

@@ -10,12 +10,12 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ca500ebbbbf8b2672492fec383feab49bfea0a52
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 590c6fd336ec19949b5f5b99b25b3104524a52d6
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074991"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210106"
 ---
 # <a name="configure-certificate-infrastructure"></a>設定憑證基礎結構
 
@@ -34,7 +34,7 @@ ms.locfileid: "82074991"
 
 ### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>安裝及設定網路裝置註冊服務和相依性  
 
-1. 在執行 Windows Server 2012 R2 的伺服器上，為 Active Directory 憑證服務伺服器角色安裝及設定網路裝置註冊服務角色服務。 如需詳細資訊，請參閱 TechNet 上 Active Directory 憑證服務文件庫中的 [網路裝置註冊服務指南](https://go.microsoft.com/fwlink/p/?LinkId=309016) 。  
+1. 在執行 Windows Server 2012 R2 的伺服器上，為 Active Directory 憑證服務伺服器角色安裝及設定網路裝置註冊服務角色服務。 如需詳細資訊，請參閱[網路裝置註冊服務指導](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\))。
 
 2. 檢查並在必要時修改網路裝置註冊服務使用的憑證範本安全性權限：  
 
@@ -44,7 +44,7 @@ ms.locfileid: "82074991"
 
    -   網路裝置註冊服務應用程式集區使用的 SCEP 服務帳戶：**讀取**和**註冊**權限。  
 
-        此需求並非 Configuration Manager 特定，而屬於設定網路裝置註冊服務的一部分。 如需詳細資訊，請參閱 TechNet 上 Active Directory 憑證服務文件庫中的 [網路裝置註冊服務指南](https://go.microsoft.com/fwlink/p/?LinkId=309016) 。  
+        此需求並非 Configuration Manager 特定，而屬於設定網路裝置註冊服務的一部分。 如需詳細資訊，請參閱[網路裝置註冊服務指導](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\))。  
 
    > [!TIP]  
    >  若要識別網路裝置註冊服務使用的憑證範本，請在執行網路裝置註冊服務的伺服器上檢視下列登錄機碼：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP。  
@@ -69,7 +69,7 @@ ms.locfileid: "82074991"
 
    - 將 [MaxRequestBytes]  設為 [16777216]  。  
 
-     如需詳細資訊，請參閱 Microsoft 知識庫中的文章 [820129：Windows 的 Http.sys 登錄設定](https://go.microsoft.com/fwlink/?LinkId=309013) \(英文\)。  
+     如需詳細資訊，請參閱 Microsoft 支援服務文章 [820129：適用於 Windows 的 HTTP.sys 登錄設定](https://support.microsoft.com/help/820129) (英文)。
 
 6. 在相同伺服器的 Internet Information Services (IIS) 管理員中，修改 /certsrv/mscep 應用程式的要求篩選設定，然後重新啟動伺服器。 在 [編輯要求篩選設定]  對話方塊中，[要求限制]  設定應如下所示：  
 
@@ -79,7 +79,7 @@ ms.locfileid: "82074991"
 
    - **查詢字串上限 (位元組)** ：**65534**  
 
-     如需關於這些設定以及如何設定的詳細資訊，請參閱 IIS 參考庫中的 [Requests Limits (要求限制)](https://go.microsoft.com/fwlink/?LinkId=309014) 。  
+     如需這些設定以及其設定方法的詳細資訊，請參閱 [ISS 要求限制](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/) (英文)。
 
 7. 如果您希望能要求有效期間低於目前使用之憑證範本的憑證：此設定預設針對企業 CA 已停用。 若要在企業 CA 上啟用此選項，請使用 Certutil 命令列工具，然後使用下列命令停止後再重新啟動憑證服務：  
 
@@ -89,9 +89,9 @@ ms.locfileid: "82074991"
 
    3. **net start certsvc**  
 
-      如需詳細資訊，請參閱 TechNet 上 PKI 技術文件庫中的 [Certificate Services Tools and Settings (憑證服務工具和設定)](https://go.microsoft.com/fwlink/p/?LinkId=309015) 。  
+      如需詳細資訊，請參閱[憑證服務工具和設定](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\))。
 
-8. 使用下列連結作為範例，確認「網路裝置註冊服務」正常運作： **https://server.contoso.com/certsrv/mscep/mscep.dll** 。 您應該查看內建的網路裝置註冊服務網頁。 這個網頁提供服務的說明，並說明網路裝置會使用 URL 來提交憑證要求。  
+8. 使用下列連結作為範例，以驗證網路裝置註冊服務可正常運作：`https://server.contoso.com/certsrv/mscep/mscep.dll`。 您應該查看內建的網路裝置註冊服務網頁。 這個網頁提供服務的說明，並說明網路裝置會使用 URL 來提交憑證要求。  
 
    現在網路裝置註冊服務和相依性已設定完成，您可以準備安裝及設定憑證登錄點。
 
@@ -125,7 +125,7 @@ ms.locfileid: "82074991"
    - 如果您選取 [處理 SCEP 憑證要求]  ，請設定下列各項︰
      -   憑證登錄點的 [網站名稱]  、[HTTPS 連接埠號碼]  和 [虛擬應用程式名稱]  。 這些欄位會自動填入預設值。 
      -   **網路裝置註冊服務和根 CA 憑證的 URL** - 按一下 [新增]  ，接著在 [新增 URL 和根 CA 憑證]  對話方塊方塊中，指定下列各項︰
-         - **網路裝置註冊服務的 URL**：以下列格式指定 URL： https:// *<server_FQDN>* /certsrv/mscep/mscep.dll。 例如，如果執行「網路裝置註冊服務」的伺服器 FQDN 是 server1.contoso.com，請輸入 **https://server1.contoso.com/certsrv/mscep/mscep.dll** 。
+         - **網路裝置註冊服務的 URL**：以下列格式指定 URL： https:// *<server_FQDN>* /certsrv/mscep/mscep.dll。 例如，如果執行網路裝置註冊服務的伺服器 FQDN 是 server1.contoso.com，請鍵入 `https://server1.contoso.com/certsrv/mscep/mscep.dll`。
          - **根 CA 憑證**：瀏覽並選取您在＜步驟 1：  安裝及設定網路裝置註冊服務和相依性＞中所建立及儲存的憑證 (.cer) 檔案。 此根 CA 憑證允許憑證登錄點驗證 Configuration Manager 原則模組將會使用的用戶端驗證憑證。  
 
    - 如果您選取 [處理 PFX 憑證要求]  ，則需設定所選憑證授權單位的連線詳細資訊和認證。
@@ -157,7 +157,7 @@ ms.locfileid: "82074991"
 
     -   在站台系統伺服器上，使用 <Configuration Manager 安裝路徑\>  \Logs\crpsetup.log 檔案和 Configuration Manager 安裝路徑\> *<* \Logs\crpmsi.log 檔案。 在安裝成功之後會傳回 0 的結束代碼。  
 
-    -   透過使用瀏覽器，確認您可以連線到憑證登錄點的 URL，例如 https://server1.contoso.com/CMCertificateRegistration 。 您應會看到 [伺服器錯誤]  頁面上的應用程式名稱，以及 HTTP 404 描述。  
+    -   透過使用瀏覽器，驗證可連線到憑證登錄點的 URL。 例如 `https://server1.contoso.com/CMCertificateRegistration`。 您應會看到 [伺服器錯誤]  頁面上的應用程式名稱，以及 HTTP 404 描述。  
 
 11. 找出憑證登錄點在主要站台伺服器電腦之下列資料夾中自動建立的根 CA 匯出憑證檔案：<ConfigMgr 安裝路徑\>  \inboxes\certmgr.box。 請將這個檔案儲存到安全的位置，讓您稍後在執行網路裝置註冊服務的伺服器上安裝 Configuration Manager 原則模組時可安全地存取。  
 
@@ -185,7 +185,7 @@ ms.locfileid: "82074991"
 
 4. 在 [安裝資料夾]  頁面上，接受原則模組的預設安裝資料夾，或指定替代資料夾，然後按 [下一步]  。  
 
-5. 在 [憑證登錄點]  頁面上，使用網站系統伺服器的 FQDN 以及在憑證登錄點的內容中指定的虛擬應用程式名稱，指定憑證登錄點的 URL。 預設的虛擬應用程式名稱是 CMCertificateRegistration。 例如，如果站台系統伺服器的 FQDN 是 server1.contoso.com，且您已使用預設虛擬應用程式名稱，請指定 **https://server1.contoso.com/CMCertificateRegistration** 。  
+5. 在 [憑證登錄點]  頁面上，使用網站系統伺服器的 FQDN 以及在憑證登錄點的內容中指定的虛擬應用程式名稱，指定憑證登錄點的 URL。 預設的虛擬應用程式名稱是 CMCertificateRegistration。 例如，如果站台系統伺服器的 FQDN 是 server1.contoso.com，且已使用預設虛擬應用程式名稱，則請指定 `https://server1.contoso.com/CMCertificateRegistration`。
 
 6. 接受預設的連接埠 [443]  ，或指定憑證登錄點使用的替代連接埠號碼，然後按 [下一步]  。  
 

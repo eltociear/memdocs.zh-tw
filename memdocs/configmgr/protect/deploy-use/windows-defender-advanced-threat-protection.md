@@ -2,7 +2,7 @@
 title: Microsoft Defender 進階威脅防護
 titleSuffix: Configuration Manager
 description: 了解如何管理及監視 Microsoft Defender 進階威脅防護，此為協助企業回應先進攻擊的一項新服務。
-ms.date: 04/01/2020
+ms.date: 04/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 186751bb8b1768b34573e2b614ce992b58fa9232
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a635ae36875984537c18c4850a3526d57ffceb31
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706236"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210140"
 ---
 # <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender 進階威脅防護
 
@@ -29,7 +29,7 @@ Microsoft Defender ATP 是 [Windows Defender 資訊安全中心](https://securit
 
 - 訂閱 Microsoft Defender 進階威脅防護線上服務  
 - 執行 Configuration Manager 用戶端的用戶端電腦
-- 使用[支援的用戶端作業系統](#bkmk_os)一節中所列 OS 的用戶端。 
+- 使用[支援的用戶端作業系統](#bkmk_os)一節中所列 OS 的用戶端。
 
 ### <a name="supported-client-operating-systems"></a><a name="bkmk_os"></a> 支援的用戶端作業系統
 根據正在執行的 Configuration Manager 版本，下列用戶端作業系統可以上線：
@@ -62,7 +62,7 @@ Microsoft Defender ATP 是 [Windows Defender 資訊安全中心](https://securit
       1. 當處理序完成時，從 [設定連線]  區段中，複製 [工作區金鑰]  和 [工作區識別碼]  的值。
 
 > [!IMPORTANT]
-> Microsoft Defender ATP 設定檔包含應受到保護的敏感性資訊。
+> - Microsoft Defender ATP 設定檔包含應受到保護的敏感性資訊。
 
 ## <a name="onboard-devices"></a>將裝置上線
 
@@ -70,6 +70,7 @@ Microsoft Defender ATP 是 [Windows Defender 資訊安全中心](https://securit
 1. 輸入Microsoft Defender ATP 原則的 [名稱]  和 [描述]  ，然後選取 [上線]  。
 1. **瀏覽**至組織的 Microsoft Defender ATP 雲端服務租用戶所提供設定檔。
    - 針對 **Windows 7 和 8.1** 或 **Windows Server 2008 R2 SP1、2012 R2 和 2016**，請提供**工作區金鑰**和**工作區識別碼**。
+   - 針對 Configuration Manager 2002 版，即使只是將 Windows Server 2019 和 Windows Server 1803 或更新版本的裝置上線，也會需要**工作區金鑰**和**工作區識別碼**。 從 [Microsoft Defender ATP 線上服務](https://securitycenter.windows.com/)選取 [設定]   > [上線]   > [Windows 7 和 8.1]  來取得這些值。 <!--7054188-->
 1. 指定為了分析而從受管理裝置收集和分享的範例檔案。  
 
    - **無**

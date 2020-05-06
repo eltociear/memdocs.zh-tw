@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 04/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 00faad5cccf8b2ed3198542868a36cb4699299b8
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: bf490c71fdc94b974e53a9d0f388a777e986f13c
+ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808204"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619571"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune 的新功能
 
@@ -51,8 +51,147 @@ ms.locfileid: "80808204"
 ### Device security
 ### Intune apps
 ### Monitor and troubleshoot
-### Role-based access control
--->  
+
+<!-- ########################## -->
+## <a name="week-of-april-20-2020"></a>2020 年 4 月 20 日當週
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### <a name="device-management"></a>裝置管理
+
+#### <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions---6317104-cm3555758-idready---"></a>Microsoft 端點管理員租用戶連結：裝置同步及裝置動作<!-- 6317104, CM3555758 idready -->
+Microsoft 端點管理員會將設定管理員和 Intune 整合至單一主控台。 從 Configuration Manager 2002 版開始，您可將 Configuration Manager 裝置上傳至雲端服務，並在系統管理中心對其採取動作。 如需詳細資訊，請參閱 [Microsoft 端點管理員租用戶連結：裝置同步及裝置動作](../../configmgr/tenant-attach/device-sync-actions.md)。 
+
+### <a name="app-management"></a>應用程式管理
+
+#### <a name="microsoft-office-365-proplus-rename---6368143---"></a>Microsoft Office 365 專業增強版重新命名<!-- 6368143 -->
+Microsoft Office 365 專業增強版正在重新命名為 **Microsoft 365 Apps 企業版**。 若要深入了解，請參閱 [Office 365 專業增強版的名稱變更](https://docs.microsoft.com/deployoffice/name-change) (機器翻譯)。 我們通常會在文件中將其稱為 Microsoft 365 Apps。 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，可藉由選取 [應用程式]   > [Windows]   > [新增]  來找到應用程式套件。 如需新增應用程式的資訊，請參閱[將應用程式新增至 Microsoft Intune](../apps/apps-add.md)。
+
+<!-- ########################## -->
+## <a name="week-of-april-13-2020-2004-service-release"></a>2020 年 4 月 13 日當週 (2004 服務版本)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>應用程式管理
+
+#### <a name="manage-smime-settings-for-outlook-on-android-enterprise-devices---6517085-----"></a>在 Android Enterprise 裝上上管理 Outlook 的 S/MIME 設定<!-- 6517085   -->
+您可以使用應用程式設定原則，在執行 Android Enterprise 的裝置上管理 Outlook 的 S/MIME 設定。 您也可以選擇是否允許裝置使用者啟用或停用 Outlook 設定中的 S/MIME。 若要使用 Android 的應用程式設定原則，請在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，前往 [應用程式]   > [應用程式設定原則]   > [新增]   > [受控裝置]  。 如需有關設定 Outlook 設定的詳細資訊，請參閱 [Microsoft Outlook 組態設定](../apps/app-configuration-policies-outlook.md)。
+
+#### <a name="pre-release-testing-for-managed-google-play-apps---2681933----"></a>受控 Google Play 應用程式發行前測試<!-- 2681933  -->
+使用 [Google Play 封閉式測試追蹤進行應用程式發行前測試](https://support.google.com/googleplay/android-developer/answer/3131213)的組織可以使用 Intune 來管理這些追蹤。 您可以選擇性地將發佈至 Google Play 生產前追蹤的應用程式指派給試驗群組，以便執行測試。 在 Intune 中，您可以看到應用程式是否具有已發佈的生產前組建測試追蹤，以及是否能夠將該追蹤指派給 AAD 使用者或裝置群組。 這項功能適用於所有目前支援的 Android Enterprise 案例 (工作設定檔、完全受控以及專用)。 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，可藉由選取 [應用程式]   > [Android]   > [新增]  來新增受控 Google Play 應用程式。 如需詳細資訊，請參閱[使用受控 Google Play 封閉式測試追蹤](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks)。
+
+#### <a name="microsoft-teams-is-now-included-in-the-office-365-suite-for-macos---5903936----"></a>Microsoft 小組現在已包含在 macOS 版的 Office 365 套件中<!-- 5903936  -->
+在 Microsoft 端點管理員中獲指派 macOS 版 Microsoft Office 的使用者，除了現有 Microsoft Office 應用程式 (Word、Excel、PowerPoint、Outlook 以及 OneNote) 之外，也會獲得 Microsoft 小組。 Intune 會辨識已安裝其他 macOS 版 Office 應用程式的現有 Mac 裝置，並會在下次裝置簽入 Intune 時嘗試安裝 Microsoft 小組。 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，可藉由選取 [應用程式]   > [macOS]   > [新增]  來找到 macOS 版的 **Office 365 套件**。 如需詳細資訊，請參閱[使用 Microsoft Intune 將 Office 365 指派給 macOS 裝置](../apps/apps-add-office365-macos.md)。
+
+#### <a name="update-to-android-app-configuration-policies---6113334----"></a>Android 應用程式設定原則更新<!-- 6113334  -->
+已更新 Android 應用程式設定原則，讓系統管理員能夠在建立應用程式組態設定檔之前，先選取裝置註冊類型。 該功能已新增至註冊類型式 ([工作設定檔] 或 [裝置擁有者]) 的憑證設定檔帳戶中。  此更新提供下列各項：
+
+1. 如果建立新的設定檔，並為裝置註冊類型選取了 [工作設定檔] 和 [裝置擁有者設定檔]，將無法為憑證設定檔與應用程式設定原則建立關聯。
+2. 如果已建立新的設定檔，且僅選取 [工作設定檔]，則可以使用在 [裝置設定] 下建立的 [工作設定檔] 憑證原則。
+3. 如果已建立新的設定檔，且僅選取 [裝置擁有者]，則可以使用在 [裝置設定] 下建立的 [裝置擁有者] 憑證原則。 
+
+> [!IMPORTANT]
+> 在此功能發行前 (2020 年 4 月發行 - 2004) 所建立現有原則若沒有任何與該原則建立關聯的憑證設定檔，則會預設為裝置註冊類型的 [工作設定檔] 和 [裝置擁有者設定檔]。 此外，在此功能發行前建立的現有原則若具有與其建立關聯的憑證設定檔，則僅會預設為 [工作設定檔]。
+
+此外，我們將會新增 Gmail 與 Nine 電子郵件組態設定檔，這些組態設定檔適用於 [工作設定檔] 和 [裝置擁有者] 註冊類型，包括在這兩個電子郵件設定類型上使用憑證設定檔。  您在 [裝置設定] 的 [工作設定檔] 下所建立所有 Gmail 或 Nine 原則都會繼續套用至裝置，且不需要將其移至應用程式設定原則。
+
+在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，可選取 [應用程式]   > [應用程式設定原則]  來尋找應用程式設定原則。 若需要應用程式設定原則的詳細資訊，請參閱 [Microsoft Intune 的應用程式設定原則](../apps/app-configuration-policies-overview.md)。
+
+#### <a name="push-notification-when-device-ownership-type-is-changed---5575875---"></a>裝置擁有權類型變更時的推播通知<!-- 5575875 -->
+您可在基於隱私權考量，將裝置擁有權類型從 [個人] 變更為 [公司] 時，設定傳送推播通知給 Android 與 iOS 公司入口網站使用者。 根據預設，此推播通知設定為關閉。 您可在 Microsoft 端點管理員中找到這項設定，方法為選取 [租用戶管理]   > [自訂]  。 若要深入了解裝置擁有權如何影響終端使用者，請參閱[變更裝置擁有權](../enrollment/corporate-identifiers-add.md#change-device-ownership)。
+
+#### <a name="group-targeting-support-for-customization-pane---4722837----"></a>[自訂] 窗格的群組目標支援<!-- 4722837  -->
+您可以在 [自訂]  窗格中，將設定的目標設為使用者群組。 若要在 Intune 中尋找這些設定，請巡覽至 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，然後選取 [租用戶系統管理]   > [自訂]  。 如需自訂的詳細資訊，請參閱[如何自訂 Intune 公司入口網站應用程式、公司入口網站及 Intune 應用程式](../apps/company-portal-app.md)。
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>裝置設定
+
+#### <a name="multiple-evaluate-each-connection-attempt-on-demand-vpn-rules-supported-on-ios-ipados-and-macos---6424615----"></a>iOS、iPadOS 和 macOS 上支援的多個「評估每個連線嘗試」隨選 VPN 規則<!-- 6424615  -->
+Intune 使用者體驗允許相同 VPN 設定檔中有多個隨選 VPN 規則具有 [評估每個連線嘗試]  動作 ([裝置]   > [組態設定檔]   > [建立設定檔]   > [iOS/iPadOS]  或 [macOS]  適用於平台 > [VPN]  適用於設定檔 > [自動 VPN]   > [隨選]  )。
+
+其只接受清單中的第一個規則。 此行為是固定的，而且 Intune 會評估清單中的所有規則。 每個規則都會以其出現在隨選規則清單中的順序進行評估。
+
+> [!NOTE]
+> 如果有現有的 VPN 設定檔使用這些隨選 VPN 規則，則下次變更 VPN 設定檔時，就會套用修正。 舉例來說，進行次要變更 (例如變更連線名稱)，然後儲存設定檔。
+>
+> 如果您使用 SCEP 憑證進行驗證，此變更會使此 VPN 設定檔的憑證重新發出。
+
+適用於：
+- iOS/iPadOS
+- macOS
+
+如需 VPN 設定檔的詳細資訊，請參閱[建立 VPN 設定檔](../configuration/vpn-settings-configure.md)。
+
+#### <a name="additional-options-in-sso-and-sso-app-extension-profiles-on-iosipados-devices---6504155-----"></a>iOS/iPadOS 裝置上 SSO 和 SSO 應用程式延伸模組設定檔中的其他選項<!-- 6504155   -->
+
+在 iOS/iPadOS 裝置上，您可：
+- 在 SSO 設定檔中 ([裝置]   > [組態設定檔]   > [建立設定檔]   > [iOS/iPadOS]  作為平台 > [裝置功能]  作為設定檔 > [單一登入]  )，將 Kerberos 主體名稱設定為 SSO 設定檔中的安全性帳戶管理員 (SAM) 帳戶名稱。 
+- 在 SSO 應用程式延伸模組設定檔中 ([裝置]   > [組態設定檔]   > [建立設定檔]   > [iOS/iPadOS]  作為平台 > [裝置功能]  作為設定檔類型 > [單一登入應用程式延伸模組]  )，按幾下滑鼠便能使用新的 SSO 應用程式延伸模組類型設定 iOS/iPadOS Microsoft Azure AD 延伸模組。 您可在共用裝置模式中啟用裝置的 Azure AD 擴充功能，並將擴充功能特有的資料傳送至擴充功能。
+
+適用於：
+- iOS/iPadOS 13.0+
+
+如需在 iOS/iPadOS 裝置上使用單一登入的詳細資訊，請參閱[單一登入應用程式延伸模組概觀](../configuration/device-features-configure.md#single-sign-on-app-extension)和[單一登入設定清單](../configuration/ios-device-features-settings.md#single-sign-on-app-extension)。
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-enrollment"></a>裝置註冊
+
+#### <a name="delete-apple-automated-device-enrollment-token-when-default-profile-is-present--6393220---"></a>若有預設設定檔，請刪除 Apple Automated Device Enrollment 權杖<!--6393220 -->
+之前，您無法刪除預設設定檔，這表示您無法刪除與其相關聯的 Automated Device Enrollment 權杖。 現在，您可以在下列情況下刪除權杖：
+- 未將任何裝置指派給權杖
+- 預設設定檔已存在。若要這麼做，請刪除預設設定檔，然後刪除相關聯的權杖。
+如需詳細資訊，請參閱[從 Intune 刪除 ADE 權杖](../enrollment/device-enrollment-program-enroll-ios.md#delete-an-ade-token-from-intune)。
+
+#### <a name="scaled-up-support-for-apple-automated-device-enrollment-and-apple-configurator-2-devices-profiles-and-tokens--3542402---"></a>已擴大 Apple Automated Device Enrollment 和 Apple Configurator 2 裝置、設定檔和權杖的支援<!--3542402 -->
+為了協助散發的 IT 部門和組織，Intune 現在支援每個權杖最多 1000 個註冊設定檔、每個 Intune 帳戶最多 2000 個 Automated Device Enrollment (先前稱為 DEP) 權杖，以及每個權杖最多 75000 個裝置。 每個註冊設定檔的裝置都沒有特定限制，但低於每個權杖的裝置數目上限。
+
+Intune 現在最多支援 1000 個 Apple Configurator 2 設定檔。
+
+如需詳細資訊，請參閱[支援的磁碟區](../enrollment/device-enrollment-program-enroll-ios.md#supported-volume)。
+
+#### <a name="all-devices-page-column-entry-changes--6967616---"></a>所有裝置頁面的資料行項目變更<!--6967616 -->
+在 [所有裝置]  頁面上，[管理者]  資料行已變更：
+- 現在會顯示 Intune  ，而不是 MDM 
+- 現在會顯示「共同管理」  ，而不是「MDM/ConfigMgr 代理程式」 
+
+匯出值不會改變。
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>裝置管理
+
+#### <a name="trusted-platform-manager-tpm-version-information-now-on-device-hardware-page--6224914-idmiss---"></a>信任的平台管理員 (TPM) 版本資訊現在位於 [裝置硬體] 頁面上<!--6224914 idmiss -->
+您現在可以在裝置的硬體頁面上看到 TPM 版本號碼 ([Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > [裝置]  > 選擇裝置 > [硬體]  > 查看 [系統機殼]  底下)。
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="monitor-and-troubleshoot"></a>監視及疑難排解
+
+#### <a name="collect-logs-to-better-troubleshoot-scripts-assigned-to-macos-devices---6359853----"></a>收集記錄，以針對指派給 macOS 裝置的指令碼進行更妥善的疑難排解<!-- 6359853  -->
+您現在可以收集記錄，以改善針對指派給 macOS 裝置的指令碼進行的疑難排解。 您最多可以收集 60 MB (已壓縮) 或 25 個檔案 (以先發生者為準)。 如需詳細資訊，請參閱[使用記錄收集對 macOS 殼層指令碼原則進行疑難排解](../apps/macos-shell-scripts.md#troubleshoot-macos-shell-script-policies-using-log-collection)。
+ 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="security"></a>安全性
+
+#### <a name="derived-credentials-to-provision-android-enterprise-fully-managed-devices-with-certificates--4839592------"></a>衍生認證用以佈建具有憑證的 Android Enterprise 完全受控裝置<!--4839592    -->
+Intune 現在支援使用[衍生認證](../protect/derived-credentials.md)作為 Android 裝置的驗證方法。 衍生認證是國家標準暨技術研究院 (NIST) 800-157 標準的實作，用於將憑證部署至裝置。 我們對 Android 的支援擴展了我們對執行 iOS/iPadOS 之裝置的支援。
+
+衍生認證仰賴個人識別驗證 (PIV) 或一般存取卡 (CAC)，如智慧卡。 若要取得其行動裝置的衍生認證，使用者必須從 Microsoft Intune 應用程式中啟動，並遵循您所使用之提供者獨有的註冊工作流程。 對於所有提供者來說，共同的要求是在電腦上使用智慧卡向衍生認證提供者進行驗證。 該提供者接著會將憑證發行至衍生自使用者智慧卡的裝置。
+
+您可以使用衍生認證作為 VPN 和 Wi-Fi 的裝置組態設定檔的驗證方法。 您也可使用其進行應用程式驗證，以及針對支援 S/MIME 的應用程式進行 S/MIME 簽署和加密。
+
+Intune 現在支援下列 Android 衍生認證提供者：
+- Entrust Datacard
+- Intercede
+
+第三個提供者 DISA Purebred 將在未來的版本中提供給 Android 使用。
+
+#### <a name="microsoft-edge-security-baseline-is-now-generally-available--6586139---"></a>Microsoft Edge 安全性基準現已正式運作<!--6586139 -->
+
+*這個新基準會在接下來幾週內推出給租用戶。我們預期所有租用戶將在五月初採用這個新基準。*
+
+新版本的 [Microsoft Edge 安全性基準](../protect/security-baselines.md#available-security-baselines)現已可用，並以公開上市 (GA) 的形式發行。 先前的 Edge 基準處於預覽狀態。  2020 年 4 月的新基準版本 (Edge 80 版及更新版本)。 
+
+隨著此新基準的發行，您將無法再根據先前的基準版本建立設定檔，但您可繼續使用您以這些版本建立的設定檔。 您也可選擇[更新現有的設定檔，以使用最新的基準版本](../protect/security-baselines.md#change-the-baseline-version-for-a-profile)。 
 
 <!-- ########################## -->
 ## <a name="week-of-april-6-2020"></a>2020 年 4 月 6 日當週
@@ -76,20 +215,16 @@ ms.locfileid: "80808204"
 
 ### <a name="app-management"></a>應用程式管理  
 
-#### <a name="company-portal-for-ios-supports-landscape-mode--6048329-wnready---"></a>iOS 公司入口網站支援橫向模式<!--6048329 wnready -->   
+#### <a name="company-portal-for-ios-supports-landscape-mode--6048329----"></a>iOS 公司入口網站支援橫向模式<!--6048329  -->   
 使用者現在可以自由選擇螢幕方向來註冊其裝置、尋找應用程式，以及取得 IT 支援。 除非使用者將螢幕鎖定在直向模式，否則應用程式會自動偵測並將螢幕調整為直向或橫向模式。  
 
-#### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>macOS 裝置的指令碼支援 (公開預覽)<!-- 4280361 wnready -->
+#### <a name="script-support-for-macos-devices-public-preview---4280361----"></a>macOS 裝置的指令碼支援 (公開預覽)<!-- 4280361  -->
 您可新增指令碼並將其部署至 macOS 裝置。 這項支援可讓您使用 macOS 裝置上的原生 MDM 功能，大幅延伸您能對 macOS 裝置所做的設定。 如需詳細資訊，請參閱[在 macOS 裝置上的 Intune 中使用 Shell 指令碼](../apps/macos-shell-scripts.md)。
 
 <!-- ########################## -->
 ## <a name="week-of-march-24-2020"></a>2020 年 3 月 24 日當週
 
 ### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>改善了在 Android 與 Android 企業裝置上建立裝置限制設定檔時的使用者介面體驗<!-- 5841361 -->
-
-> [!NOTE] 
-> Intune 使用者介面正在更新為全螢幕體驗，可能需要數週的時間。 在您的租用戶收到此更新之前，當您建立或編輯設定時，您的工作流程將略有不同。
-
 當建立 Android 或 Android 企業裝置的設定檔時，端點管理系統管理中心的體驗已有所更新。 此變更會影響下列裝置組態設定檔 ([裝置]   > [組態設定檔]   > [建立設定檔]   > 選取 [Android 裝置管理員]  或 [Android 企業]  作為平台)：
 
 - 裝置限制：Android 裝置管理員
@@ -99,10 +234,6 @@ ms.locfileid: "80808204"
 如需您可以設定之裝置限制的詳細資訊，請參閱 [Android 裝置系統管理員](../configuration/device-restrictions-android.md) 和 [Android 企業](../configuration/device-restrictions-android-for-work.md)。
 
 ### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>已改善在 iOS/iPadOS 和 macOS 裝置上建立設定檔時的使用者介面體驗<!-- 5569002 5568997 -->
-
-> [!NOTE]
-> Intune 使用者介面正在更新為全螢幕體驗，可能需要數週的時間。 在您的租用戶收到此更新之前，當您建立或編輯設定時，您的工作流程將略有不同。
-
 當建立 iOS 或 macOS 裝置的設定檔時，端點管理系統管理中心的體驗已有所更新。 此變更會影響下列裝置組態設定檔 ([裝置]   > [組態設定檔]   > [建立設定檔]   > [iOS/iPadOS]  或 [macOS]  作為平台)：
 
 - 自訂：iOS/iPadOS、macOS
@@ -113,9 +244,6 @@ ms.locfileid: "80808204"
 - 喜好設定檔案：macOS
 
 ### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>macOS 裝置上 [裝置功能] 中的 [從使用者設定隱藏] 設定<!-- 6524869 -->
-
-> [!NOTE]
-> 此變更將會在接下來幾週內向所有客戶推出。
 
 當在 macOS 裝置上建立裝置功能組態設定檔時，有一項新的 [從使用者設定隱藏]  設定 ([裝置]   > [組態設定檔]   > [建立設定檔]   > [macOS]  作為平台 > [裝置功能]  設定檔 > [登入項目]  )。
 
@@ -158,7 +286,7 @@ iOS 裝置上新部署的 Web 剪輯 (釘選的 Web 應用程式) 需要在受�
 #### <a name="users-personal-encrypted-recovery-key---6273943----"></a>使用者的個人加密修復金鑰<!-- 6273943  -->
 目前提供新的 Intune 功能，可讓使用者透過 Android 公司入口網站應用程式或透過 Android Intune 應用程式，擷取其 Mac 裝置的個人加密 **FileVault** 修復金鑰。 公司入口網站應用程式與 Intune 應用程式中都會提供一個連結，該連結將開啟 Chrome 瀏覽器並連線至 Web 公司入口網站，使用者可在該網站中看到存取其 Mac 裝置所需的 **FileVault** 修復金鑰。 如需加密的詳細資訊，請參閱[搭配 Intune 使用裝置加密](../protect/encrypt-devices.md)。
 
-#### <a name="optimized-dedicated-device-enrollment----6114580-wnready---"></a>已將專用裝置註冊最佳化 <!-- 6114580 wnready -->
+#### <a name="optimized-dedicated-device-enrollment----6114580----"></a>已將專用裝置註冊最佳化 <!-- 6114580  -->
 我們正在將 Android Enterprise 專用裝置的註冊最佳化，以便能夠更輕鬆地將與 Wi-Fi 相關聯的 SCEP 憑證套用到 2019 年 11 月 22 日前註冊的專用裝置。 針對新註冊，Intune 應用程式將繼續安裝，但終端使用者將不再需要於註冊期間執行**啟用 Intune 代理程式**步驟。 安裝將會在背景中自動進行，而與 Wi-Fi 相關聯的 SCEP 憑證可以在不需與終端使用者互動的情況下進行部署和設定。  
 
 隨著 Intune 服務後端部署，這些變更將在三月的整個月內分階段推出。 所有租用戶都將在三月結束時具備這個新行為。 如需相關資訊，請參閱 [Android Enterprise 專用裝置中的 SCEP 憑證支援](https://techcommunity.microsoft.com/t5/intune-customer-success/support-for-scep-certificates-in-android-enterprise-dedicated/ba-p/928147) \(英文\)。
@@ -212,9 +340,6 @@ Microsoft Azure AD 小組已建立重新導向的單一登入 (SSO) 應用程式
 
 ####  <a name="ui-update-when-configuring-compliance-policy---3961639------"></a>設定合規性政策時的 UI 更新<!-- 3961639    -->
 
-> [!NOTE]
-> Intune 使用者介面正在更新為全螢幕體驗，可能需要數週的時間。 在您的租用戶收到此更新之前，當您建立或編輯設定時，您的工作流程將略有不同。
-
 我們已在 Microsoft 端點管理員中更新[建立合規性政策](../protect/create-compliance-policy.md#create-the-policy)的 UI ([裝置]   > [合規性政策]   > [原則]   > [建立原則]  )。 我們提供一個新的使用者體驗，其中包含您先前使用的相同設定和詳細資料。 新體驗會遵循類似精靈的流程來建立合規性政策，並包含可讓您在其中為原則新增「指派」  的新頁面和 [檢閱 + 建立]  頁面，而您可以在建立原則之前，於此頁面檢閱設定。
 
 #### <a name="retire-noncompliant-devices---1827291---------"></a>淘汰不符合規範的裝置<!-- 1827291       -->
@@ -255,7 +380,7 @@ Microsoft Azure AD 小組已建立重新導向的單一登入 (SSO) 應用程式
 #### <a name="new-android-report-on-android-devices-overview-page---5435435-----"></a>[Android 裝置概觀] 頁面上的新 Android 報告<!-- 5435435   -->
 我們已在 [Android 裝置概觀] 頁面中，將報告新增至 Microsoft 端點管理員系統管理主控台，以顯示每個裝置管理解決方案中已註冊的 Android 裝置數量。 此圖表 (如同 Azure 主控台中已有的相同圖表) 會顯示工作設定檔、完全受控、專用，以及已註冊裝置系統管理員的裝置數量。 若要查看報告，請選擇 [裝置]   > [Android]   > [概觀]  。
 
-#### <a name="guide-users-from-android-device-administrator-management-to-work-profile-management--5857738-idready-wnready-wnstaged--"></a>引導使用者從 Android 裝置系統管理員管理至工作設定檔管理<!--5857738 idready wnready wnstaged-->
+#### <a name="guide-users-from-android-device-administrator-management-to-work-profile-management--5857738---wnstaged--"></a>引導使用者從 Android 裝置系統管理員管理至工作設定檔管理<!--5857738   wnstaged-->
 我們將發行 Android 裝置系統管理員平台的新合規性設定。 此設定可供在裝置由裝置系統管理員管理時，將其設為不符合規範。
 
 在這些不符合規範的裝置上，於 [更新裝置設定]  頁面中，使用者會看到 [移至新的裝置管理安裝程式]  訊息。 如果使用者點選 [解決]  按鈕，系統將引導完成下列動作：
@@ -532,7 +657,7 @@ Intune 現在支援解除安裝 Windows 10 裝置上的 Microsoft Edge 77 版與
 Microsoft Intune 現在支援適用於 macOS 的 Microsoft Edge 應用程式的其他 [穩定]  部署通道。 [穩定]  通道是在企業環境中廣泛部署 Microsoft Edge 的建議通道。 其會每六週更新一次，每個版本都會納入來自 [Beta]  通道的改良功能。 除了 [穩定]  與 [Beta]  通道，Intune 也支援 [Dev]  通道。 公開預覽提供適用於 macOS 的 Microsoft Edge 77 版與更新版本的 [穩定] 與 [Dev] 通道。 瀏覽器的自動更新預設為 [開啟]。 如需詳細資訊，請參閱[使用 Microsoft Intune 將 Microsoft Edge 新增至 macOS 裝置](../apps/apps-edge-macos.md)。
 
 #### <a name="retirement-of-intune-managed-browser--5728447---"></a>淘汰 Microsoft Intune Managed Browser<!--5728447 -->
-即將淘汰 Intune Managed Browser。 將 Microsoft Edge 用於受保護的 Intune 瀏覽器體驗。 如需詳細資訊，請參閱項目「[採取行動：將 Microsoft Edge 用於受保護的 Intune 瀏覽器體驗](whats-new.md#take-action-use-microsoft-edge-for-your-protected-intune-browser-experience)」(下方的 [通知](whats-new.md#notices) 一節中)。
+即將淘汰 Intune Managed Browser。 將 Microsoft Edge 用於受保護的 Intune 瀏覽器體驗。 
 
 <!-- ########################## -->
 ## <a name="week-of-january-20-2020-2001-service-release"></a>2020 年 1 月 20 日當週 (2001 服務版本)

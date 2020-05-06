@@ -10,12 +10,12 @@ ms.assetid: 3e82cd96-0ce0-474a-a597-d65fceadc95a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a13a22cc7e9ced580229306ab3680fca61319992
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2456f530444fa5d9514247edd77cbe7b02f62c38
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706386"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126007"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>教學課程：將 Windows 10 部署至試驗
 
@@ -29,7 +29,7 @@ ms.locfileid: "81706386"
 > * 建立適用於 Windows 10 的電腦分析部署計劃  
 > * 使用 Configuration Manager 將 Windows 10 部署到試驗群組  
 
-如果您沒有 Azure 訂用帳戶，請先建立[免費的帳戶](https://azure.microsoft.com/free)，再開始進行。 若正確設定，使用電腦分析並不會產生任何 Azure 費用。
+如果您沒有 Azure 訂用帳戶，請先建立[免費帳戶](https://azure.microsoft.com/free)，再開始進行。 若正確設定，使用電腦分析並不會產生任何 Azure 費用。
 
 電腦分析使用 Azure 訂用帳戶中的「Log Analytics 工作區」  。 工作區本質上是一個容器，包含帳戶資訊和帳戶的簡單設定資訊。 如需詳細資訊，請參閱[管理工作區](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json)。
 
@@ -219,8 +219,7 @@ Configuration Manager 會建立設定原則來設定目標集合中的裝置。 
 
 監視裝置的設定以進行電腦分析。 在 Configuration Manager 主控台中，移至 [軟體程式庫]  工作區，展開 [電腦分析服務]  節點，然後選取 [連線健康情況]  儀表板。  
 
-Configuration Manager 會在建立連線的 60 分鐘內同步您的集合。 在電腦分析入口網站中，移至 [通用試驗]  ，然後查看您的 Configuration Manager 裝置集合。
-
+Configuration Manager 會在建立連線的 60 分鐘內同步集合。 在電腦分析入口網站中，前往 [通用試驗]  ，然後查看 Configuration Manager 裝置集合。 入口網站的其餘部分可能需要兩到三天才會顯示完整資料。 如需詳細資訊，請參閱[資料延遲](troubleshooting.md#data-latency)。
 
 ## <a name="create-a-desktop-analytics-deployment-plan"></a>建立電腦分析部署計劃
 

@@ -2,7 +2,7 @@
 title: 站台系統管理安全性和隱私權
 titleSuffix: Configuration Manager
 description: 將 Configuration Manager 中站台管理的安全性和隱私權最佳化
-ms.date: 07/26/2019
+ms.date: 04/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 1d58176e-abc0-4087-8583-ce70deb4dcf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35c2738b363895671528196e99b324fd2fe6f5a7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 923018e35fae1ec1f5e9c0869ef22d43b5de552b
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704576"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182254"
 ---
 # <a name="security-and-privacy-for-site-administration-in-configuration-manager"></a>Configuration Manager 中站台管理的安全性和隱私權
 
@@ -169,7 +169,11 @@ Configuration Manager 會自動建立及管理這些安全性群組。 此行為
 
 ### <a name="if-you-use-email-notification-configure-authenticated-access-to-the-smtp-mail-server"></a>如果您使用電子郵件通知，請設定對 SMTP 郵件伺服器的驗證存取
 
-盡可能使用支援驗證存取的郵件伺服器。 使用站台伺服器的電腦帳戶進行驗證。 如果必須指定使用者帳戶進行驗證，請使用具備最低權限的帳戶。  
+盡可能使用支援驗證存取的郵件伺服器。 使用站台伺服器的電腦帳戶進行驗證。 如果必須指定使用者帳戶進行驗證，請使用具備最低權限的帳戶。 
+
+### <a name="enforce-ldap-channel-binding-and-ldap-signing"></a>強制執行 LDAP 通道繫結和 LDAP 簽署
+
+透過將伺服器設定為拒絕不要求簽署的簡單驗證及安全性階層 (SASL) LDAP 繫結，或拒絕在純文字連線上執行的 LDAP 簡單繫結，可改善 Active Directory 網域控制站的安全性。 從 1910 版開始，Configuration Manager 支援強制執行 LDAP 通道繫結和 LDAP 簽署。 如需詳細資訊，請參閱 [Windows 的 2020 LDAP 通道繫結和 LDAP 簽名要求](https://support.microsoft.com/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows)。 <!--6244453-->
 
 
 ## <a name="security-guidance-for-the-site-server"></a><a name="BKMK_Security_SiteServer"></a> 適用於站台伺服器的安全性指引

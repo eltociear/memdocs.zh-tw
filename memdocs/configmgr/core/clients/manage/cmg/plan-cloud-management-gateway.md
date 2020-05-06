@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5d48908cc99b086a9d7e975e30f226b1b252a8db
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 67b6fc51493dce4ee1718586cbf454da91883409
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771243"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254617"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中進行雲端管理閘道規劃
 
@@ -226,6 +226,7 @@ Fourth Coffee 在其西雅圖總部的內部部署資料中心具有管理中心
 | Mac、Linux 及 UNIX 用戶端     | ![不支援](media/Red_X.png) |
 | 對等快取     | ![不支援](media/Red_X.png) |
 | 內部部署 MDM     | ![不支援](media/Red_X.png) |
+| BitLocker 管理     | ![不支援](media/Red_X.png) |
 
 |機碼|
 |--|

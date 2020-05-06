@@ -5,17 +5,17 @@ description: 了解如何準備 Windows 10 網際網路型裝置以進行共同�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 04/24/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 32c148b695a47241c6646a2a7309f0a27f3b3070
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 59ca1006d8700e52b3f3fb703f8896ce9fa8b9b7
+ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691046"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82137910"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>如何準備網際網路型裝置以進行共同管理
 
@@ -65,7 +65,7 @@ ms.locfileid: "81691046"
 
 3. 在 [啟用]  索引標籤上，複製命令列。 將它貼到 [記事本] 並儲存，以準備供下一個程序使用。  
 
-下列命令列是一個範例：`CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC"`
+下列命令列是一個範例：`CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC"`
 
 <!--1358215-->
 決定環境所需的命令列屬性：  
@@ -91,14 +91,14 @@ ms.locfileid: "81691046"
 
     如需詳細資訊，請參閱[關於用戶端安裝屬性 - PROVISIONTS](../core/clients/deploy/about-client-installation-properties.md#provisionts)。
 
-此站台會將額外的 Azure AD 資訊發佈至雲端管理閘道 (CMG)。 已加入 Azure AD 的用戶端會在 ccmsetup 過程中從 CMG 取得此資訊 (使用它所加入的同一租用戶)。 在具有多個 Azure AD 租用戶的環境中，此行為可進一步簡化共同管理的裝置註冊作業。 唯二必要的 ccmsetup 屬性分別為 **CCMHOSTNAME** 和 **SMSSiteCode**。<!--3607731-->
+此站台會將額外的 Azure AD 資訊發佈至雲端管理閘道 (CMG)。 已加入 Azure AD 的用戶端會在 ccmsetup 過程中從 CMG 取得此資訊 (使用它所加入的同一租用戶)。 在具有多個 Azure AD 租用戶的環境中，此行為可進一步簡化共同管理的裝置註冊作業。 只有兩個必要的 ccmsetup 屬性，分別是 **CCMHOSTNAME** 和 **SMSSITECODE**。<!--3607731-->
 
 > [!NOTE]
 > 如果您已從 Intune 部署 Configuration Manager 用戶端，請使用新的命令列與新的 MSI 更新 Intune 應用程式。 <!-- SCCMDocs-pr issue 3084 -->
 
 下列範例包含所有這些屬性：
 
-`ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com PROVISIONTS=PRI20001`
+`CCMSETUPCMD="CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com PROVISIONTS=PRI20001"`
 
 如需詳細資訊，請參閱[用戶端安裝屬性](../core/clients/deploy/about-client-installation-properties.md)。
 

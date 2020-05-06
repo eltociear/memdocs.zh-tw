@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5657a26419280871e6739060509a72c4604fc3a7
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: c3adb6f1548c0b332aaa477014f07559ffc826c1
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255008"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842286"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune 的新功能 - 前幾個月
 
@@ -4187,7 +4187,7 @@ Android for Work 裝置限制設定檔現在有新的選項，可協助您設定
 - 指定是否允許通知音效。
 
 ### <a name="configure-ios-apps-to-run-in-single-app-mode-autonomously---737837---"></a>設定 iOS 應用程式在單一應用程式模式中自發執行<!-- 737837 -->
-您現在可以使用 Intune 裝置設定檔，設定 iOS 裝置在[自發性單一應用程式模式](../configuration/device-restrictions-ios.md#autonomous-single-app-mode)中執行指定的應用程式。 設定此模式並執行應用程式時，裝置會被鎖定，因此只能執行該應用程式。 一個例子是當您設定應用程式讓使用者在裝置上進行測試時。 當應用程式的動作完成時，或當您移除此原則時，裝置就會回到其正常狀態。
+您現在可以使用 Intune 裝置設定檔，設定 iOS 裝置在[自發性單一應用程式模式](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam)中執行指定的應用程式。 設定此模式並執行應用程式時，裝置會被鎖定，因此只能執行該應用程式。 一個例子是當您設定應用程式讓使用者在裝置上進行測試時。 當應用程式的動作完成時，或當您移除此原則時，裝置就會回到其正常狀態。
 
 ### <a name="configure-trusted-domains-for-email-and-web-browsing-on-ios-devices---723765---"></a>為 iOS 裝置上的電子郵件和網頁瀏覽設定受信任網域<!-- 723765 -->
 您現在可以從 iOS 裝置限制設定檔設定下列[網域設定](../configuration/device-restrictions-ios.md#domains)：

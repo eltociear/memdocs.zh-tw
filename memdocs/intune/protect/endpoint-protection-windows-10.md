@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/13/2020
+ms.date: 04/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aaec456a5ff9864fedf5e95f317bc484ddfc4d82
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: fedca34aaf390dfec655e3166f3a153af93a7ce0
+ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80275062"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506585"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>使用 Intune 保護裝置的 Windows 10 (及更新版本) 設定
 
@@ -748,17 +748,6 @@ Microsoft Intune 包含許多設定，可協助保護您的裝置。 本文描�
     - **備份修復密碼和金鑰封裝**  
     - **只備份修復密碼**  
 
-  - **用戶端驅動的復原密碼旋轉**  
-    **預設**：已為已加入 Azure AD 的裝置啟用金鑰輪替  
-    BitLocker CSP：[ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
-    
-    此設定會在作業系統磁碟復原後起始用戶端驅動的復原密碼輪替 (使用 bootmgr 或 WinRE)。  
-
-    - 尚未設定  
-    - 已停用金鑰輪替  
-    - 已為已加入 Azure AD 的裝置啟用金鑰輪替  
-    - 已為已加入 Azure AD 和混合式的裝置啟用金鑰輪替  
-
   - **啟用 BitLocker 之前將復原資訊儲存在 Azure Active Directory 中**  
     **預設**：尚未設定  
  
@@ -942,6 +931,9 @@ Microsoft Intune 包含許多設定，可協助保護您的裝置。 本文描�
 > **在 X86 用戶端電腦上**：  
 > *C:\Program Files\Microsoft Intune Management Extension\Content*  
 > *C:\windows\IMECache*  
+>
+> 如需詳細資訊，請參閱[執行目前支援之 Windows 版本的企業電腦的病毒掃描建議](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers)。
+
 
 ### <a name="controlled-folder-access"></a>受控資料夾存取權  
 
@@ -1264,9 +1256,8 @@ Microsoft Defender 資訊安全中心是以個別的應用程式或各個功能�
   **預設**：尚未設定  
   LocalPoliciesSecurityOptions CSP：[Devices_AllowUndockWithoutHavingToLogon](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
 
-  
-  - **封鎖** - 使用者可以按停駐可攜式裝置的實體退出按鈕，安全地卸除裝置。  
-  - **未設定** - 使用者必須登入裝置並收到權限，才能卸除裝置。  
+  - **封鎖** - 使用者必須登入裝置並收到權限，才能卸除裝置。
+  - **未設定** - 使用者可以按停駐可攜式裝置的實體退出按鈕來安全地卸除裝置。
 
 - **安裝共用印表機的印表機驅動程式**  
   **預設**：尚未設定  
@@ -1309,8 +1300,8 @@ Microsoft Defender 資訊安全中心是以個別的應用程式或各個功能�
   LocalPoliciesSecurityOptions CSP：[InteractiveLogon_DoNotRequireCTRLALTDEL](https://go.microsoft.com/fwlink/?linkid=867951)  
 
 
-  - **啟用** - 使用者不需要按 CTRL+ALT+DEL 就能登入。  
-  - **未設定** - 需要使用者按 CTRL+ALT+DEL 才能登入 Windows。  
+  - **啟用** - 需要使用者按 CTRL+ALT+DEL 才能登入 Windows。
+  - **未設定** - 使用者不需要按 CTRL+ALT+DEL 就能登入。
 
 - **智慧卡移除行為**  
   **預設**：鎖定工作站   

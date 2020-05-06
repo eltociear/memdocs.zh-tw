@@ -147,10 +147,10 @@
               href: apps-configure-chrome-android.md
         - name: 大量採購應用程式與書籍
           items:
-            - name: 管理 VPP 應用程式和書籍
+            - name: 大量採購概觀
               href: vpp-apps.md
               displayName: vpp; volume purchased
-            - name: iOS VPP 應用程式
+            - name: 大量採購的 iOS 應用程式
               href: vpp-apps-ios.md
             - name: 商務用 Microsoft Store 應用程式
               href: windows-store-for-business.md
@@ -206,6 +206,10 @@
           href: app-install-error-codes.md
         - name: 行動應用程式管理疑難排解
           href: troubleshoot-mam.md
+        - name: 檢閱應用程式保護記錄
+          href: app-protection-policy-settings-log.md
+        - name: 針對應用程式保護原則部署進行疑難排解
+          href: troubleshoot-app-protection-policy-deployment.md
 - name: 參考
   items:
     - name: 使用 Intune App SDK 來保護應用程式

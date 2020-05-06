@@ -2,7 +2,7 @@
 title: 記錄檔參考
 titleSuffix: Configuration Manager
 description: Configuration Manager 用戶端、伺服器及相依元件之所有記錄檔的參考。
-ms.date: 11/29/2019
+ms.date: 04/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f203861e2f82aa7eb0942a22a7b16cf5dd49616c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 36ab89f1e9988adc167bf69ff7d9f53b02bbe10f
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706526"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166531"
 ---
 # <a name="log-file-reference"></a>記錄檔參考
 
@@ -29,86 +29,85 @@ ms.locfileid: "81706526"
 
 - [用戶端記錄檔](#BKMK_ClientLogs)  
 
-    - [用戶端操作](#BKMK_ClientOpLogs)  
+  - [用戶端操作](#BKMK_ClientOpLogs)  
 
-    - [用戶端安裝](#BKMK_ClientInstallLog)  
+  - [用戶端安裝](#BKMK_ClientInstallLog)  
 
-    - [Linux 和 UNIX 的用戶端](#BKMK_LogFilesforLnU)  
+  - [Linux 和 UNIX 的用戶端](#BKMK_LogFilesforLnU)  
 
-    - [Mac 電腦的用戶端](#BKMK_LogfilesforMac)  
+  - [Mac 電腦的用戶端](#BKMK_LogfilesforMac)  
 
 - [伺服器記錄檔](#BKMK_ServerLogs)  
 
-    - [站台伺服器和站台系統](#BKMK_SiteSiteServerLog)  
+  - [站台伺服器和站台系統](#BKMK_SiteSiteServerLog)  
 
-    - [站台伺服器安裝](#BKMK_SiteInstallLog)
+  - [站台伺服器安裝](#BKMK_SiteInstallLog)
 
-    - [資料倉儲服務點](#BKMK_DataWarehouse)
+  - [資料倉儲服務點](#BKMK_DataWarehouse)
 
-    - [後援狀態點](#BKMK_FSPLog)  
+  - [後援狀態點](#BKMK_FSPLog)  
 
-    - [管理點](#BKMK_MPLog)  
+  - [管理點](#BKMK_MPLog)  
 
-    - [服務連接點](#BKMK_WITLog)  
+  - [服務連接點](#BKMK_WITLog)  
 
-    - [軟體更新點](#BKMK_SUPLog)  
+  - [軟體更新點](#BKMK_SUPLog)  
 
 - [依功能區分的記錄檔](#BKMK_FunctionLogs)  
 
-    - [應用程式管理](#BKMK_AppManageLog)  
+  - [應用程式管理](#BKMK_AppManageLog)  
 
-    - [Asset Intelligence](#BKMK_AILog)  
+  - [Asset Intelligence](#BKMK_AILog)  
 
-    - [備份和復原](#BKMK_BnRLog)  
+  - [備份和復原](#BKMK_BnRLog)  
 
-    - [憑證註冊](#BKMK_CertificateEnrollment)
+  - [憑證註冊](#BKMK_CertificateEnrollment)
 
-    - [用戶端通知](#BKMK_BGB)
+  - [用戶端通知](#BKMK_BGB)
 
-    - [雲端管理閘道](#cloud-management-gateway)
+  - [雲端管理閘道](#cloud-management-gateway)
 
-    - [合規性設定和公司資源存取](#BKMK_CompSettingsLog)  
+  - [合規性設定和公司資源存取](#BKMK_CompSettingsLog)  
 
-    - [Configuration Manager 主控台](#BKMK_ConsoleLog)  
+  - [Configuration Manager 主控台](#BKMK_ConsoleLog)  
 
-    - [內容管理](#BKMK_ContentLog)  
+  - [內容管理](#BKMK_ContentLog)  
 
-    - [電腦分析](#desktop-analytics)
+  - [電腦分析](#desktop-analytics)
 
-    - [探索](#BKMK_DiscoveryLog)  
+  - [探索](#BKMK_DiscoveryLog)  
 
-    - [Endpoint Protection](#BKMK_EPLog)  
+  - [Endpoint Protection](#BKMK_EPLog)  
 
-    - [擴充功能](#BKMK_Extensions)  
+  - [擴充功能](#BKMK_Extensions)  
 
-    - [清查](#BKMK_InventoryLog)  
+  - [清查](#BKMK_InventoryLog)  
 
-    - [移轉](#BKMK_MigrationLog)  
+  - [移轉](#BKMK_MigrationLog)  
 
-    - [行動裝置](#BKMK_MDMLog)  
+  - [行動裝置](#BKMK_MDMLog)  
 
-    - [OS 部署](#BKMK_OSDLog)  
+  - [OS 部署](#BKMK_OSDLog)  
 
-    - [電源管理](#BKMK_PowerMgmtLog)  
+  - [電源管理](#BKMK_PowerMgmtLog)  
 
-    - [遠端控制](#BKMK_RCLog)  
+  - [遠端控制](#BKMK_RCLog)  
 
-    - [報告](#BKMK_ReportLog)  
+  - [報告](#BKMK_ReportLog)  
 
-    - [以角色為基礎的系統管理](#BKMK_RBALog)  
+  - [以角色為基礎的系統管理](#BKMK_RBALog)  
 
-    - [軟體計量](#BKMK_MeteringLog)  
+  - [軟體計量](#BKMK_MeteringLog)  
 
-    - [軟體更新](#BKMK_SU_NAPLog)  
+  - [軟體更新](#BKMK_SU_NAPLog)  
 
-    - [網路喚醒](#BKMK_WOLLog)  
+  - [網路喚醒](#BKMK_WOLLog)  
 
-    - [Windows 10 維護](#BKMK_WindowsServicingLog)
+  - [Windows 10 維護](#BKMK_WindowsServicingLog)
 
-    - [Windows Update 代理程式](#BKMK_WULog)  
+  - [Windows Update 代理程式](#BKMK_WULog)  
 
-    - [WSUS 伺服器](#BKMK_WSUSLog)  
-
+  - [WSUS 伺服器](#BKMK_WSUSLog)  
 
 ## <a name="client-log-files"></a><a name="BKMK_ClientLogs"></a> 用戶端記錄檔
 
@@ -120,6 +119,7 @@ ms.locfileid: "81706526"
 
 |記錄檔名稱|說明|  
 |--------------|-----------------|  
+|ADALOperationProvider.log|使用 Azure Active Directory (Azure AD) 驗證程式庫 (ADAL) 的用戶端驗證權杖要求資訊。|
 |BitLockerManagementHandler.log|記錄有關 BitLocker 管理原則的資訊。|
 |CAS.log|內容存取服務。 維護用戶端上的本機套件快取。|  
 |Ccm32BitLauncher.log|記錄啟動用戶端上標記為「以 32 位元執行」  之應用程式的動作。|  
@@ -131,11 +131,12 @@ ms.locfileid: "81706526"
 |Ccmperf.log|記錄維護相關活動以及擷取用戶端效能計數器相關資料的活動。|  
 |CcmRestart.log|記錄用戶端服務重新啟動活動。|  
 |CCMSDKProvider.log|記錄用戶端 SDK 介面的活動。|  
+|ccmsqlce.log|記錄用戶端所使用 SQL Compact Edition 的活動。 此記錄通常只會在啟用偵錯記錄，或元件發生問題時才會使用。 用戶端健全狀況工作 (ccmeval) 通常會自行修正此元件的問題。|
 |CertificateMaintenance.log|維護 Active Directory 網域服務和管理點的憑證。|  
 |CIDownloader.log|記錄有關設定項目定義下載的詳細資料。|  
-|CITaskMgr.log|記錄針對每一種應用程式和部署類型起始的工作，例如內容下載，以及安裝或解除安裝動作。|  
+|CITaskMgr.log|記錄每個應用程式和部署類型的工作，例如內容下載和安裝或解除安裝動作。|  
 |ClientAuth.log|記錄用戶端的簽署和驗證活動。|  
-|ClientIDManagerStartup.log|建立和維護用戶端 GUID，並識別在用戶端登錄和指派期間執行的工作。|  
+|ClientIDManagerStartup.log|建立和維護用戶端 GUID，並識別在用戶端登錄和指派期間的工作。|  
 |ClientLocation.log|記錄與用戶端網站指派相關的工作。|  
 |CMHttpsReadiness.log|記錄執行 Configuration Manager HTTPS 整備評估工具的結果。 此工具會檢查電腦是否擁有可用於 Configuration Manager 的公開金鑰基礎結構 (PKI) 用戶端驗證憑證。|  
 |CmRcService.log|記錄遠端控制服務的資訊。|  
@@ -208,28 +209,28 @@ Linux 和 UNIX 的 Configuration Manager 用戶端會在下列記錄檔中記錄
 
 |記錄檔名稱|詳細資料|
 |-------------------|-----------------------------------------------------------------|
-|Scxcm.log| Linux 和 UNIX 的 Configuration Manager 用戶端核心服務的記錄檔 (ccmexec.bin)。 此記錄檔包含有關 ccmexec.bin 的安裝和進行中操作的資訊。<br /><br /> 根據預設，這個記錄檔位於 **/var/opt/microsoft/scxcm.log**<br /><br /> 若要變更記錄檔的位置，請編輯 **/opt/microsoft/configmgr/etc/scxcm.conf** ，並變更 **PATH** 欄位。 您不需要重新啟動用戶端電腦或服務，變更會直接生效。<br /><br /> 您可以將記錄層級設定為下列四項不同設定的其中一項。 |
-| Scxcmprovider.log |Linux 和 UNIX 的 Configuration Manager 用戶端 CIM 服務的記錄檔 (omiserver.bin)。 此記錄檔包含 nwserver.bin 進行中操作的相關資訊。<br /><br /> 這個記錄檔位於 <strong>/var/opt/microsoft/configmgr/scxcmprovider.log</strong><br /><br /> 若要變更記錄檔的位置，請編輯 **/opt/microsoft/omi/etc/scxcmprovider.conf** ，並變更 **PATH** 欄位。 您不需要重新啟動用戶端電腦或服務，變更會直接生效。<br /><br /> 您可以將記錄層級設定為下列三項設定的其中一項。|
+|Scxcm.log| Linux 和 UNIX 的 Configuration Manager 用戶端核心服務的記錄檔 (ccmexec.bin)。 此記錄檔包含有關 ccmexec.bin 的安裝和進行中操作的資訊。 根據預設，此記錄檔位於 **/var/opt/microsoft/scxcm.log**。 若要變更記錄檔的位置，請編輯 **/opt/microsoft/configmgr/etc/scxcm.conf** ，並變更 **PATH** 欄位。 您不需要重新啟動用戶端電腦或服務，變更會直接生效。 您可以將記錄層級設定為下列四項不同設定的其中一項。 |
+| Scxcmprovider.log |Linux 和 UNIX 的 Configuration Manager 用戶端 CIM 服務的記錄檔 (omiserver.bin)。 此記錄檔包含 nwserver.bin 進行中操作的相關資訊。 此記錄位於 `/var/opt/microsoft/configmgr/scxcmprovider.log`。 若要變更記錄檔的位置，請編輯 **/opt/microsoft/omi/etc/scxcmprovider.conf** ，並變更 **PATH** 欄位。 您不需要重新啟動用戶端電腦或服務，變更會直接生效。 您可以將記錄層級設定為下列三項設定的其中一項。|
 
 這兩個記錄檔支援數個記錄層級︰  
 
 - **scxcm.log**： 若要變更記錄層級，請編輯 **/opt/microsoft/configmgr/etc/scxcm.conf** 並將 **MODULE** 標記的每個執行個體變更為您想要的記錄層級：  
 
-    - ERROR：指出需要注意的問題  
+  - ERROR：指出需要注意的問題  
 
-    - WARNING：指出用戶端操作可能發生的問題  
+  - WARNING：指出用戶端操作可能發生的問題  
 
-    - INFO：更詳細的記錄，表示用戶端上各種不同事件的狀態  
+  - INFO：更詳細的記錄，表示用戶端上各種不同事件的狀態  
 
-    - TRACE：詳細資訊記錄，通常用來診斷問題  
+  - TRACE：詳細資訊記錄，通常用來診斷問題  
 
 - **scxcmprovider.log**： 若要變更記錄層級，請編輯 **/opt/microsoft/omi/etc/scxcmprovider.conf** 並將 **MODULE** 標記的每個執行個體變更為您想要的記錄層級：  
 
-    - ERROR：指出需要注意的問題  
+  - ERROR：指出需要注意的問題  
 
-    - WARNING：指出用戶端操作可能發生的問題
+  - WARNING：指出用戶端操作可能發生的問題
 
-    - INFO：更詳細的記錄，表示用戶端上各種不同事件的狀態  
+  - INFO：更詳細的記錄，表示用戶端上各種不同事件的狀態  
 
 在正常作業情況下，請使用「錯誤」記錄層級。 此記錄層級會建立最小的記錄檔。 隨著記錄層級從「錯誤」提升至「警告」、「資訊」，再提升至「追蹤」，所建立的記錄檔會越來越大，因為會有更多資料寫入檔案。  
 
@@ -243,17 +244,16 @@ Linux 和 UNIX 的用戶端不會限制用戶端記錄檔的大小上限。 它�
 
 ### <a name="client-for-mac-computers"></a><a name="BKMK_LogfilesforMac"></a> Mac 電腦的用戶端
 
-適用於 Mac 電腦的 Configuration Manager 用戶端會在下列記錄檔中記錄資訊：  
+Mac 電腦所適用 Configuration Manager 用戶端會在 Mac 電腦上的下列記錄檔中記錄資訊：  
 
-|記錄檔名稱|詳細資料|  
-|--------------|-------------|  
-|CCMClient-&lt;日期時間  >.log|記錄與 Mac 用戶端操作相關的活動，包括應用程式管理、清查以及錯誤記錄。<br /><br /> 這個記錄檔位於 Mac 電腦上的 /Library/Application Support/Microsoft/CCM/Logs 資料夾內。|  
-|CCMAgent-&lt;日期時間  >.log|記錄與用戶端操作相關的資訊，包括使用者登入與登出操作以及 Mac 電腦活動。<br /><br /> 這個記錄檔位於 Mac 電腦上的 ~/Library/Logs 資料夾內。|  
-|CCMNotifications-&lt;日期時間  >.log|記錄顯示在 Mac 電腦上，與 Configuration Manager 通知相關的活動。<br /><br /> 這個記錄檔位於 Mac 電腦上的 ~/Library/Logs 資料夾內。|  
-|CCMPrefPane-&lt;日期時間  >.log|記錄 Mac 電腦上，與 Configuration Manager 喜好設定對話方塊相關的活動，包括一般狀態與錯誤記錄。<br /><br /> 這個記錄檔位於 Mac 電腦上的 ~/Library/Logs 資料夾內。|  
+|記錄檔名稱|詳細資料|位置|
+|--------------|-------------|-------------|
+|CCMClient-&lt;日期時間  >.log|記錄與 Mac 用戶端操作相關的活動，包括應用程式管理、清查以及錯誤記錄。| `/Library/Application Support/Microsoft/CCM/Logs`|  
+|CCMAgent-&lt;日期時間  >.log|記錄與用戶端操作相關的資訊，包括使用者登入與登出操作以及 Mac 電腦活動。| `~/Library/Logs`|  
+|CCMNotifications-&lt;日期時間  >.log|記錄顯示在 Mac 電腦上，與 Configuration Manager 通知相關的活動。| `~/Library/Logs`|  
+|CCMPrefPane-&lt;日期時間  >.log|記錄 Mac 電腦上，與 Configuration Manager 喜好設定對話方塊相關的活動，包括一般狀態與錯誤記錄。| `~/Library/Logs`|  
 
 站台系統伺服器上的 **SMS_DM.log** 記錄檔也會記錄 Mac 電腦與針對行動裝置和 Mac 電腦設定的管理點之間的通訊。  
-
 
 ## <a name="server-log-files"></a><a name="BKMK_ServerLogs"></a> 伺服器記錄檔
 
@@ -277,6 +277,7 @@ Linux 和 UNIX 的用戶端不會限制用戶端記錄檔的大小上限。 它�
 |CertMgr.log|記錄站台內通訊的憑證活動。|網站系統伺服器|  
 |chmgr.log|記錄用戶端健全狀況管理員的活動。|網站伺服器|  
 |Cidm.log|記錄由用戶端安裝資料管理員 (CIDM) 所做出的用戶端設定變更。|網站伺服器|  
+|CollectionAADGroupSyncWorker.log | 從 2002 版開始，會將集合成員資格結果同步至 Azure Active Directory 的記錄檔。 在 1910 版及更早版本中，此功能的記錄是合併在 SMS_AZUREAD_DISCOVERY_AGENT.log 中。 | 網站伺服器|
 |colleval.log|記錄有關集合評估工具建立、變更和刪除集合時的詳細資料。|網站伺服器|  
 |compmon.log|記錄網站伺服器受監視元件執行緒的狀態。|網站系統伺服器|  
 |compsumm.log|記錄元件狀態摘要器的工作。|網站伺服器|  
@@ -284,7 +285,7 @@ Linux 和 UNIX 的用戶端不會限制用戶端記錄檔的大小上限。 它�
 |dataldr.log|記錄有關處理 Configuration Manager 資料庫中 MIF 檔案和硬體清查的資訊。|網站伺服器|  
 |ddm.log|記錄探索資料管理員的活動。|網站伺服器|  
 |despool.log|記錄傳入的網站對網站通訊傳輸。|網站伺服器|  
-|distmgr.log|記錄有關套件建立、壓縮、差異複寫以及資訊更新的詳細資料。|網站伺服器|  
+|distmgr.log|記錄有關套件建立、壓縮、差異複寫以及資訊更新的詳細資料。 其也可以包含發佈管理員元件中的其他活動。 例如：安裝發佈點、連線嘗試，以及安裝元件。 如需使用此記錄其他功能的詳細資訊，請參閱[服務連接點](#BKMK_WITLog)和 [OS 部署](#BKMK_OSDLog)。|網站伺服器|  
 |EPCtrlMgr.log|記錄有關將 Endpoint Protection 站台系統角色伺服器中的惡意程式碼威脅資訊與 Configuration Manager 資料庫同步的資訊。|網站伺服器|  
 |EPMgr.log|記錄 Endpoint Protection 網站系統角色的狀態。|網站系統伺服器|  
 |EPSetup.log|提供有關安裝 Endpoint Protection 網站系統角色的資訊。|網站系統伺服器|  
@@ -296,7 +297,7 @@ Linux 和 UNIX 的用戶端不會限制用戶端記錄檔的大小上限。 它�
 |inboxmgr.log|記錄收件匣資料夾之間的檔案傳輸活動。|網站伺服器|  
 |inboxmon.log|記錄收件匣檔案處理與效能計數器更新。|網站伺服器|  
 |invproc.log|記錄從次要網站將 MIF 檔案轉寄至其父網站的情形。|網站伺服器|  
-|migmctrl.log|記錄有關包含移轉作業、共用發佈點及發佈點升級等移轉動作的資訊。|Configuration Manager 階層中的頂層站台，以及每個子主要站台。<br /><br /> 在多重主要站台階層中，使用管理中心網站上建立的記錄檔。|  
+|migmctrl.log|記錄有關包含移轉作業、共用發佈點及發佈點升級等移轉動作的資訊。|Configuration Manager 階層中的頂層站台，以及每個子主要站台。 在多重主要站台階層中，使用管理中心網站上建立的記錄檔。|  
 |mpcontrol.log|記錄具有 Windows 網際網路名稱服務 (WINS) 的管理點的註冊。 每 10 分鐘記錄一次管理點的可用性。|網站系統伺服器|  
 |mpfdm.log|記錄將用戶端檔案移動到網站伺服器上相對應 INBOXES 資料夾的管理點元件動作。|網站系統伺服器|  
 |mpMSI.log|記錄有關管理點安裝的詳細資料。|網站伺服器|  
@@ -323,7 +324,7 @@ Linux 和 UNIX 的用戶端不會限制用戶端記錄檔的大小上限。 它�
 |sitecomp.log|記錄有關網站內所有網站系統伺服器上已安裝網站元件的維護詳細資料。|網站伺服器|  
 |sitectrl.log|記錄資料庫內網站控制物件的網站設定變更。|網站伺服器|  
 |sitestat.log|記錄所有網站系統的可用性與磁碟空間監視程序。|網站伺服器|
-|SMS_AZUREAD_DISCOVERY_AGENT.log| 將集合成員資格結果同步至 Azure Active Directory 的記錄檔。 此功能最初是在 Configuration Manager 1906 版中引進作為發行前版本功能。| 網站伺服器|
+|SMS_AZUREAD_DISCOVERY_AGENT.log| Azure Active Directory (Azure AD) 使用者和使用者群組探索的記錄檔。 在 1910 版及更早版本中，其也包含了集合成員資格同步到 Azure AD 的結果。| 網站伺服器|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|會從商務用 Microsoft Store 同步應用程式之元件的記錄檔。|網站伺服器|
 |SMS_ISVUPDATES_SYNCAGENT.log| 第三方軟體更新的同步處理記錄檔。| Configuration Manager 階層中的頂層軟體更新點。|
 |SMS_OrchestrationGroup.log| 協調流程群組的記錄檔|網站伺服器|
@@ -355,7 +356,7 @@ Linux 和 UNIX 的用戶端不會限制用戶端記錄檔的大小上限。 它�
 |ConfigMgrSetup.log|記錄來自站台伺服器安裝的詳細資料輸出。|網站伺服器|  
 |ConfigMgrSetupWizard.log|記錄 [安裝精靈] 內與活動相關的資訊。|網站伺服器|  
 |SMS_BOOTSTRAP.log|記錄有關啟動次要網站安裝處理進度的資訊。 包含在 ConfigMgrSetup.log 內的實際安裝處理詳細資料。|網站伺服器|  
-|smstsvc.log|記錄有關安裝、使用以及移除 Windows 服務的資訊，而該服務使用起始連線之伺服器的電腦帳戶，測試伺服器間的網路連線性與權限。|站台伺服器與站台系統伺服器|  
+|smstsvc.log|記錄安裝、使用和移除 Windows 服務的資訊。 Windows 會使用此服務來測試網路連線能力及伺服器之間的權限。 其會使用建立連線的伺服器電腦帳戶。|站台伺服器與站台系統伺服器|  
 
 ### <a name="data-warehouse-service-point"></a><a name="BKMK_DataWarehouse"></a> 資料倉儲服務點
 
@@ -426,7 +427,7 @@ Linux 和 UNIX 的用戶端不會限制用戶端記錄檔的大小上限。 它�
 |sitecomp.log|記錄服務連接點安裝的詳細資料。|網站伺服器|  
 |SmsAdminUI.log|記錄 Configuration Manager 主控台活動。|執行 Configuration Manager 主控台的電腦|  
 |SMS_CLOUDCONNECTION.log|記錄雲端服務的相關資訊。|設有服務連接點的電腦|
-|SMSProv.log|SMS 提供者所執行的記錄活動。 Configuration Manager 主控台活動會使用 SMS 提供者。|SMS 提供者的電腦|  
+|SMSProv.log|SMS 提供者的記錄活動。 Configuration Manager 主控台活動會使用 SMS 提供者。|SMS 提供者的電腦|  
 |SrvBoot.log|記錄服務連接點安裝程式服務的詳細資料。|設有服務連接點的電腦|  
 |statesys.log|記錄行動裝置管理訊息的處理。|主要網站和管理中心網站|  
 
@@ -527,7 +528,7 @@ Linux 和 UNIX 的用戶端不會限制用戶端記錄檔的大小上限。 它�
 |Crpmsi.log|記錄有關憑證登錄點的安裝和設定詳細資料。|憑證登錄點|  
 |NDESPlugin.log|記錄挑戰驗證和憑證註冊活動。|Configuration Manager 原則模組和網路裝置註冊服務|  
 
-除了 Configuration Manager 記錄檔以外，檢閱執行網路裝置註冊服務之伺服器上，以及裝載憑證登錄點之伺服器上的事件檢視器中的 Windows 應用程式記錄檔。 例如，尋找來自 **NetworkDeviceEnrollmentService** 來源的訊息。 
+除了 Configuration Manager 記錄檔以外，檢閱執行網路裝置註冊服務伺服器上，以及裝載憑證登錄點伺服器上事件檢視器中的 Windows 應用程式記錄檔。 例如，尋找來自 **NetworkDeviceEnrollmentService** 來源的訊息。
 
 您也可以使用下列記錄檔：  
 
@@ -559,12 +560,11 @@ Linux 和 UNIX 的用戶端不會限制用戶端記錄檔的大小上限。 它�
 
 |記錄檔名稱|說明|含有記錄檔的電腦|
 |--------------|-----------------|----------------------------|  
-|CloudMgr.log|記錄有關雲端管理閘道服務的部署、進行中的服務狀態，以及服務相關使用資料的詳細資料。<br>您可以藉由編輯登錄機碼 HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER 中的**記錄層級**值，來設定記錄層級。|主要站台伺服器或 CAS 上的 *installdir* 資料夾。|
-|CMGSetup.log<sup>[附註 1](#bkmk_note1)</sup>|記錄有關雲端管理閘道部署 (Azure 中的本機部署) 第二階段的詳細資料<br>您可以使用 [Azure 入口網站\雲端服務設定] 索引標籤上的 [追蹤層級]\([資訊] (預設)、[詳細資訊]、[錯誤]) 設定來設定記錄層級。     |您 Azure 伺服器上的 **%approot%\logs**，或站台系統伺服器上的 SMS/Logs 資料夾|
-|CMGHttpHandler.log<sup>[附註 1](#bkmk_note1)</sup>|記錄在 Azure 中與 Internet Information Services 繫結的雲端管理閘道 http 處理常式的詳細資料<br>您可以使用 [Azure 入口網站\雲端服務設定] 索引標籤上的 [追蹤層級]\([資訊] (預設)、[詳細資訊]、[錯誤]) 設定來設定記錄層級。     <br>從 1806 版開始，此記錄不會存在。 元件功能會合併到 CMG 服務元件中。 請改為查看 CMGService.log。<!--SCCMDocs-pr issue #2822-->|您 Azure 伺服器上的 **%approot%\logs**，或站台系統伺服器上的 SMS/Logs 資料夾|
-|CMGService.log<sup>[附註 1](#bkmk_note1)</sup>|記錄 Azure 中雲端管理閘道服務核心元件的詳細資料<br>您可以使用 [Azure 入口網站\雲端服務設定] 索引標籤上的 [追蹤層級]\([資訊] (預設)、[詳細資訊]、[錯誤]) 設定來設定記錄層級。     |您 Azure 伺服器上的 **%approot%\logs**，或站台系統伺服器上的 SMS/Logs 資料夾|
-|SMS_Cloud_<br>ProxyConnector.log|記錄了雲端管理閘道服務和雲端管理閘道連接點之間的連線設定詳細資料。|網站系統伺服器|
-|CMGContentService.log<sup>[附註 1](#bkmk_note1)</sup>|<!--SCCMDocs-pr issue #2822-->當啟用 CMG 以同時從 Azure 儲存體提供內容時，此記錄會記錄該服務的詳細資料。|您 Azure 伺服器上的 **%approot%\logs**，或站台系統伺服器上的 SMS/Logs 資料夾|
+|CloudMgr.log|記錄有關雲端管理閘道服務的部署、進行中的服務狀態，以及服務相關使用資料的詳細資料。 若要設定記錄層級，請編輯下列登錄機碼中的**記錄層級**值：`HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER`|主要站台伺服器或 CAS 上的 *installdir* 資料夾。|
+|CMGSetup.log <sup>[附註 1](#bkmk_note1)</sup>|記錄有關雲端管理閘道部署 (Azure 中的本機部署) 第二階段的詳細資料。 若要設定記錄層級，請使用 [Azure 入口網站\雲端服務設定]  索引標籤上的 [追蹤層級]  ([資訊]  (預設)、[詳細資訊]  、[錯誤]  ) 設定。|您 Azure 伺服器上的 **%approot%\logs**，或站台系統伺服器上的 SMS/Logs 資料夾|
+|CMGService.log <sup>[附註 1](#bkmk_note1)</sup>|記錄 Azure 中雲端管理閘道服務核心元件的詳細資料。 若要設定記錄層級，請使用 [Azure 入口網站\雲端服務設定]  索引標籤上的 [追蹤層級]  ([資訊]  (預設)、[詳細資訊]  、[錯誤]  ) 設定。|您 Azure 伺服器上的 **%approot%\logs**，或站台系統伺服器上的 SMS/Logs 資料夾|
+|SMS_Cloud_ProxyConnector.log|記錄了雲端管理閘道服務和雲端管理閘道連接點之間的連線設定詳細資料。|網站系統伺服器|
+|CMGContentService.log <sup>[附註 1](#bkmk_note1)</sup>|<!--SCCMDocs-pr issue #2822-->當啟用 CMG 以同時從 Azure 儲存體提供內容時，此記錄會記錄該服務的詳細資料。|您 Azure 伺服器上的 **%approot%\logs**，或站台系統伺服器上的 SMS/Logs 資料夾|
 
 - 如需針對部署進行疑難排解，請使用 **CloudMgr.log** 和 **CMGSetup.log**
 - 如需針對服務健全狀況進行疑難排解，請使用 **CMGService.log** 和 **SMS_Cloud_ProxyConnector.log**。
@@ -594,7 +594,7 @@ Linux 和 UNIX 的用戶端不會限制用戶端記錄檔的大小上限。 它�
 |--------------|-----------------|----------------------------|  
 |ConfigMgrAdminUISetup.log|記錄 Configuration Manager 主控台的安裝。|執行 Configuration Manager 主控台的電腦|  
 |SmsAdminUI.log|記錄有關操作 Configuration Manager 主控台的資訊。|執行 Configuration Manager 主控台的電腦|  
-|SMSProv.log|SMS 提供者所執行的記錄活動。 Configuration Manager 主控台活動會使用 SMS 提供者。|網站伺服器或網站系統伺服器|  
+|SMSProv.log|SMS 提供者的記錄活動。 Configuration Manager 主控台活動會使用 SMS 提供者。|網站伺服器或網站系統伺服器|  
 
 ### <a name="content-management"></a><a name="BKMK_ContentLog"></a> 內容管理
 
@@ -687,7 +687,7 @@ Configuration Manager 用戶端上的記錄檔位於下列目錄：`%WinDir%\CCM
 
 |記錄檔名稱|說明|含有記錄檔的電腦|  
 |--------------|-----------------|----------------------------|  
-|migmctrl.log|記錄有關包含移轉作業、共用發佈點及發佈點升級等移轉動作的資訊。|Configuration Manager 階層中的頂層站台，以及每個子主要站台。<br /><br /> 在多重主要網站階層中，使用管理中心網站上建立的記錄檔。|  
+|migmctrl.log|記錄有關包含移轉作業、共用發佈點及發佈點升級等移轉動作的資訊。|Configuration Manager 階層中的頂層站台，以及每個子主要站台。 在多重主要網站階層中，使用管理中心網站上建立的記錄檔。|  
 
 ### <a name="mobile-devices"></a><a name="BKMK_MDMLog"></a> 行動裝置
 
@@ -760,7 +760,7 @@ Configuration Manager 用戶端上的記錄檔位於下列目錄：`%WinDir%\CCM
 |MCSSetup.log|記錄有關多點傳送伺服器角色安裝的詳細資料。|網站系統伺服器|  
 |MCSMSI.log|記錄有關多點傳送伺服器角色安裝的詳細資料。|網站系統伺服器|  
 |Mcsperf.log|記錄有關多點傳送效能計數器更新的詳細資訊。|網站系統伺服器|  
-|MP_ClientIDManager.log|記錄對於工作順序從 PXE 或開機媒體起始之用戶端識別碼要求的管理點回應。|網站系統伺服器|  
+|MP_ClientIDManager.log|記錄針對工作順序從 PXE 或開機媒體開始用戶端識別碼要求的管理點回應。|網站系統伺服器|  
 |MP_DriverManager.log|記錄對 [自動套用驅動程式] 工作順序動作要求的管理點回應。|網站系統伺服器|  
 |OfflineServicingMgr.log|記錄作業系統 Windows Imaging 格式 (WIM) 檔案上的離線服務排程和更新套用動作的詳細資料。|網站系統伺服器|  
 |Setupact.log|記錄有關 Windows Sysprep 和安裝記錄檔的詳細資料。 如需詳細資訊，請參閱[記錄檔](https://docs.microsoft.com/windows/deployment/upgrade/log-files)。|用戶端|  
@@ -772,7 +772,7 @@ Configuration Manager 用戶端上的記錄檔位於下列目錄：`%WinDir%\CCM
 |smpperf.log|記錄狀態移轉點效能計數器更新。|網站系統伺服器|  
 |smspxe.log|記錄有關使用 PXE 開機之用戶端的回應詳細資料，以及有關擴充開機映像和開機檔案的詳細資料。|網站系統伺服器|  
 |smssmpsetup.log|記錄有關狀態移轉點的安裝和設定詳細資料。|網站系統伺服器|
-| SMS_PhasedDeployment.log| 階段式部署記錄檔|Configuration Manager 階層中的頂層站台| 
+| SMS_PhasedDeployment.log| 階段式部署記錄檔|Configuration Manager 階層中的頂層站台|
 |Smsts.log|記錄工作序列的活動。|用戶端|  
 |TSAgent.log|記錄啟動工作順序之前工作順序相依性的結果。|用戶端|  
 |TaskSequenceProvider.log|記錄匯入、匯出或編輯工作順序時，工作順序的相關詳細資料。|網站系統伺服器|  
@@ -828,17 +828,17 @@ Configuration Manager 用戶端上的記錄檔位於下列目錄：`%WinDir%\CCM
 
 |記錄檔名稱|說明|含有記錄檔的電腦|  
 |--------------|-----------------|----------------------------|  
-|AlternateHandler.log|記錄用戶端呼叫 Office 隨選即用 COM 介面以下載並安裝 Office 365 用戶端更新時的詳細資料。 這類似於使用 WuaHandler 來呼叫「Windows Update 代理程式」API 以下載並安裝 Windows 更新。<!-- SCCMDocs#888 -->|用戶端|
+|AlternateHandler.log|記錄用戶端呼叫 Office 隨選即用 COM 介面以下載並安裝 Microsoft 365 Apps 企業版用戶端更新時的詳細資料。 這類似於使用 WuaHandler 來呼叫「Windows Update 代理程式」API 以下載並安裝 Windows 更新。<!-- SCCMDocs#888 -->|用戶端|
 |Ccmperf.log|記錄維護相關活動以及擷取用戶端效能計數器相關資料的活動。|用戶端|
 |DeltaDownload.log|記錄有關使用「傳遞優化」下載快速更新與更新的資訊。|用戶端|  
 |PatchDownloader.log|記錄有關從更新來源將軟體更新下載至網站伺服器上目的地之程序的詳細資料。|手動下載更新時，此記錄檔會位於您執行主控台的機器上執行主控台之使用者的 %temp% 目錄中。 就自動部署規則而言，如果 ConfigMgr 用戶端安裝在站台伺服器上，此記錄檔就會位於站台伺服器的 %windir%\CCM\Logs 中。|  
 |PolicyEvaluator.log|記錄有關用戶端電腦上原則評估的詳細資料，包括來自軟體更新的原則。|用戶端|  
 |RebootCoordinator.log|記錄有關協調軟體更新安裝後，用戶端電腦上系統重新啟動的詳細資料。|用戶端|  
 |ScanAgent.log|記錄有關軟體更新、WSUS 位置及相關動作之掃描要求的詳細資料。|用戶端|  
-|SdmAgent.log|記錄有關追蹤補救和合規性的詳細資料。 不過，軟體更新記錄檔 Updateshandler.log 提供有關安裝合規性所需軟體更新之更具參考價值的詳細資料。<br /><br /> 此記錄檔會與相容性設定共用。|用戶端|  
+|SdmAgent.log|記錄有關追蹤補救和合規性的詳細資料。 不過，軟體更新記錄檔 Updateshandler.log 提供有關安裝合規性所需軟體更新之更具參考價值的詳細資料。 此記錄檔會與相容性設定共用。|用戶端|  
 |ServiceWindowManager.log|記錄有關評估維護期間的詳細資料。|用戶端|
-|SMS_ISVUPDATES_SYNCAGENT.log| 第三方軟體更新的同步處理記錄檔。| Configuration Manager 階層中的頂層軟體更新點。| 
-|SMS_OrchestrationGroup.log| 協調流程群組的記錄檔|網站伺服器| 
+|SMS_ISVUPDATES_SYNCAGENT.log| 第三方軟體更新的同步處理記錄檔。| Configuration Manager 階層中的頂層軟體更新點。|
+|SMS_OrchestrationGroup.log| 協調流程群組的記錄檔|網站伺服器|
 |SmsWusHandler.log|記錄有關 Inventory Tool for Microsoft Updates 之掃描程序的詳細資料。|用戶端|  
 |StateMessage.log|記錄有關所建立並傳送至管理點之軟體更新狀態訊息的詳細資料。|用戶端|  
 |SUPSetup.log|記錄有關軟體更新點安裝的詳細資料。 當軟體更新點安裝完成時， **Installation was successful** 會寫入此記錄檔中。|網站系統伺服器|  
@@ -895,7 +895,6 @@ Configuration Manager 用戶端上的記錄檔位於下列目錄：`%WinDir%\CCM
 |SoftwareDistribution.log|記錄有關從已設定更新來源同步至 WSUS 伺服器資料庫之軟體更新的詳細資料。|WSUS 伺服器|  
 
 這些記錄檔位於 `%ProgramFiles%\Update Services\LogFiles` 資料夾中。
-
 
 ## <a name="see-also"></a>請參閱
 

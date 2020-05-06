@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,18 +19,18 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 38d1b40ecdeee5bfd872297a5fd4f0229cb48dcf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 268ed874be65c9ade7f801b89528d1a23f176ee1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337586"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077796"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-disa-purebred"></a>使用公司入口網站和 DISA Purebred 設定 iOS 或 iPadOS 裝置  
 
 使用 Intune 公司入口網站應用程式註冊您的裝置，以安全地使用行動裝置存取您組織的電子郵件、檔案和應用程式。 您的裝置註冊之後，它就變成「受控」  。 您的組織可以透過 Intune 等行動裝置管理 (MDM) 提供者將原則和應用程式指派給裝置。  
 
-在註冊期間，您也會在裝置上安裝衍生認證。 組織可能會要求在存取資源或簽署和加密電子郵件時，使用衍生認證作為驗證方法。 
+在註冊期間，您也會在裝置上安裝衍生的認證。 組織可能會要求在存取資源或簽署和加密電子郵件時，使用衍生認證作為驗證方法。 
 
 如果使用智慧卡來執行下列動作，則可能需要設定衍生認證：
 
@@ -39,10 +40,10 @@ ms.locfileid: "79337586"
 在本文中，您將：  
 
    * 使用 Intune 公司入口網站註冊 iOS 或 iPadOS 行動裝置。  
-   * 從組織的衍生認證提供者 [DISA Purebred](https://cyber.mil/pki-pke/purebred/) 取得衍生認證。  
+   * 從組織的衍生認證提供者 DISA Purebred (https:\//cyber.mil/pki-pke/purebred/) 取得衍生認證。  
 
 ## <a name="what-are-derived-credentials"></a>什麼是衍生認證？  
-衍生認證是衍生自智慧卡認證並安裝在裝置上的憑證。 它會授與公司資源的遠端存取權，同時防止未經授權的使用者存取機密資訊。  
+衍生認證是從您的智慧卡認證衍生而來，並安裝在您裝置上的憑證。 它會授與公司資源的遠端存取權，同時防止未經授權的使用者存取機密資訊。  
 
 衍生認證可用來： 
 * 驗證登入學校或公司應用程式、Wi-Fi 和 VPN 的學生和員工
@@ -52,7 +53,7 @@ ms.locfileid: "79337586"
 
 ## <a name="prerequisites"></a>先決條件
 
- 若要完成註冊，必須具備：
+ 若要完成註冊，則必須具備：
 
 * 學校或公司提供的智慧卡
 * 可使用智慧卡登入的電腦或 Kiosk 存取權
@@ -64,17 +65,17 @@ ms.locfileid: "79337586"
 ## <a name="enroll-device"></a>註冊裝置  
 1. 在行動裝置上開啟 iOS/iPadOS 版公司入口網站應用程式，並使用公司帳戶登入。  
 
-2. 記下畫面上的驗證碼。  
+2. 記下螢幕上的代碼。  
 
-    ![公司入口網站應用程式以及畫面上的訊息和驗證碼範例影像。](./media/copy-code-intercede.png)  
-3. 切換至支援智慧卡的裝置，然後前往 https://microsoft.com/devicelogin 。 
-4. 輸入先前記下的驗證碼。  
+    ![公司入口網站應用程式以及螢幕上訊息和代碼的範例影像。](./media/copy-code-intercede.png)  
+3. 切換至啟用智慧卡的裝置，然後前往 https://microsoft.com/devicelogin 。 
+4. 輸入先前記下的代碼。  
 
-    ![公司入口網站 [輸入驗證碼] 提示的範例螢幕擷取畫面。](./media/enter-code-intercede.png)   
+    ![公司入口網站 [輸入代碼] 提示的範例螢幕擷取畫面。](./media/enter-code-intercede.png)   
 
 5. 插入智慧卡以進行登入。  
-6. 返回行動裝置上的公司入口網站應用程式，並遵循畫面上的指示來註冊裝置。  
-7. 註冊完成之後，公司入口網站會通知設定智慧卡。 點選通知。 如果您沒有收到通知，請檢查電子郵件。   
+6. 返回行動裝置上的公司入口網站應用程式，並遵循螢幕上的指示來註冊裝置。  
+7. 註冊完成之後，公司入口網站會通知設定智慧卡。 點選通知。 如果沒有收到通知，請檢查電子郵件。   
 
     ![裝置主畫面上公司入口網站推播通知的範例螢幕擷取畫面。](./media/action-required-in-app-intercede.png)  
 8. 在 [設定行動智慧卡存取]  畫面上：  

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d596a0a43c17243431fa47bcac996868fd38066
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: ef8fb81b7be05d21eec5a4d1b544ee1a7d34bd07
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80358696"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693481"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>設定適用於 Android Enterprise 的 Microsoft Managed Home Screen 應用程式
 
@@ -66,7 +66,6 @@ Managed Home Screen 這個應用程式用於企業擁有的 Android Enterprise �
 | 設定應用程式圖示大小 | 整數 | 2 | 讓您可以設定顯示在主畫面上的應用程式圖示大小。 您可以在這項設定中選擇下列值，以呈現不同大小 - 0 (最小)、1 (小)、2 (正常)、3 (大) 和 4 (最大)。 |
 | 設定應用程式資料夾圖示 | 整數 | 0 | 讓您可以定義主畫面上的應用程式資料夾外觀。 您可以從下列值中選擇外觀：深色正方形 (0)；深色圓形 (1)；淺色正方形 (2)；淺色圓形 (3)。 |
 | 設定畫面方向 | 整數 | 1 | 讓您可將主畫面的方向設為直向模式、橫向模式或允許自動旋轉。 您可以輸入值 1 (直向模式)、2 (橫向模式)、3 (自動旋轉)，來設定方向。 |
-| 啟用裝置遙測 | bool | FALSE | 啟用正對 Managed Home Screen 擷取的所有遙測。 若您啟用此項，Microsoft 就能夠截取裝置使用方式遙測，例如在這部裝置上啟動某個應用程式遙測。 |
 | 設定允許列出的應用程式 | bundleArray | FALSE | 讓您能夠從裝置上已安裝的應用程式中，定義一組可在主畫面上顯示的應用程式。 您可以針對您想要顯示的應用程式輸入其應用程式套件名稱來定義應用程式，例如輸入 com.microsoft.emmx 將會使設定可在主畫面上存取。 您允許列於此區段的應用程式應已安裝於裝置上，才能在主畫面上顯示。 |
 | 設定釘選的 Web 連結 | bundleArray | FALSE | 讓您可在主畫面上，將網站釘選為快速啟動圖示。 您可以利用這項設定定義 URL，並將其新增到主畫面，讓終端使用者只要輕觸一下，即可在瀏覽器中啟動。 |
 | 啟用螢幕保護裝置 | bool | FALSE | 啟用或停用螢幕保護裝置。 若設為 true，您可以設定 **screen_saver_image**、**screen_saver_show_time**、**inactive_time_to_show_screen_saver** 及 **media_detect_screen_saver**。 |
@@ -78,10 +77,17 @@ Managed Home Screen 這個應用程式用於企業擁有的 Android Enterprise �
 | 虛擬 Home 鍵類型 | string | swipe_up | 使用 **swipe_up**，透過向上撥動的手勢存取 Home 鍵。 使用 **float** 來存取附著式、常設的 Home 鍵，可讓使用者在畫面上四處移動。 |
 | 電池與訊號強度指標列 | bool | True  | 將此設定改為 `True`，會顯示電池與訊號強度指標列。 |
 | 結束鎖定工作模式的密碼 | string |   | 輸入 4-6 位數的代碼，用來暫時退出鎖定工作模式，以進行疑難排解。 |
+| 顯示受管理的設定 | bool | TRUE | 「受控設定」是受控的主畫面應用程式，其只會在您已設定可供快速存取的任何設定之後才會顯示，其中包括 [顯示 Wi-Fi 設定]  、[顯示藍牙設定]  、[顯示音量設定]  與 [顯示手電筒設定]  。 這些設定也能藉由向下滑動畫面進行存取。 將此機碼設定為 `False` 來隱藏「受控設定」應用程式，並讓終端使用者只能經由向下滑動畫面來存取這些設定。    |
+| 輕鬆存取偵錯功能表 | bool | FALSE | 若將此設定設為 `True`，將可從「受管理的設定」應用程式，或藉由向下滑動受管理的主畫面來存取偵錯功能表。 結束 Kiosk 模式的功能目前包含在偵錯功能表中，只要按大約 15 次 [返回] 按鈕就能使用。 若將此設定保持為 `False`，可限制只能從 [返回] 按鈕進入偵錯功能表。   |
 | 顯示 Wi-Fi 設定 | bool | FALSE | 將此設定改為 `True` 可讓終端使用者開啟或關閉 Wi-Fi，或連線到其他 Wi-Fi 網路。  |
+| 啟用 Wi-Fi 允許清單 | bool | FALSE | 若將此設定設為 `True`，並填寫 **Wi-Fi 允許清單**，就能限制受管理的主畫面中顯示的 Wi-Fi 網路。 若設定為 `False`，將可顯示裝置探索到所有可能可以使用的 Wi-Fi 網路。 請注意，僅當 [顯示 Wi-Fi 設定]  設定為 `True`，並填寫了 **Wi-Fi 允許清單**時，此設定才會生效。   |
+| Wi-Fi 允許清單| bundleArray | FALSE | 允許在受管理的主畫面中，列出裝置所要顯示之 Wi-Fi 網路的所有 SSID。 僅當 [顯示 Wi-Fi 設定]  與 [啟用 Wi-Fi 允許清單]  設定為 `True` 時，此清單才會生效。 若上述任一設定為 `False`，便無須修改此設定。    |
 | 顯示藍牙設定 | bool | FALSE | 將此設定改為 `True`，可讓終端使用者開啟或關閉藍牙，以及連線到其他具藍牙功能的裝置。   |
+| 顯示音量設定 | bool | FALSE | 若將此設定設為 `True`，終端使用者便能使用音量滑桿來調整媒體音量。   |
+| 顯示手電筒設定 | bool | FALSE | 若將此設定設為 `True`，終端使用者便能開啟或關閉裝置的手電筒。 若裝置不支援手電筒，即便此設定設為 `True`，亦不會顯示此設定。   |
+| 顯示裝置資訊設定 | bool | FALSE | 若將此設定設為 `True`，終端使用者便能從受管理的設定應用程式，或藉由向下滑動畫面，快速存取裝置的相關資訊。 可存取的資訊包括裝置的品牌、型號及序號。   |
 | 資料夾中的應用程式會依名稱排序 | bool | TRUE | 將此設定切換為 `False` 會允許資料夾中的項目以其被指定的順序顯示。 否則，它們將會在資料夾中依字母順序顯示。   |
-| 已啟用應用程式順序 | bool | FALSE | 將此設定切換為 `True` 會允許設定 Managed Home Screen 上應用程式、網頁連結及資料夾的順序。 啟用後，請使用 **app_order**來設定排序。   |
+| 已啟用應用程式順序 | bool | FALSE | 將此設定切換為 `True` 會允許設定 Managed Home Screen 上應用程式、網頁連結及資料夾的順序。 啟用之後，請使用 **app_order** 設定順序。   |
 | 應用程式順序 | bundleArray | FALSE | 可讓您指定 Managed Home Screen 上應用程式、網頁連結及資料夾的順序。 若要使用此設定，必須啟用 [鎖定主畫面]  ，定義 [設定格線間距]  ，並將 [已啟用應用程式順序]  設定為 `True`。   |
 
 ## <a name="enter-json-data"></a>輸入 JSON 資料
@@ -124,10 +130,6 @@ Managed Home Screen 這個應用程式用於企業擁有的 Android Enterprise �
         {
             "key": "screen_orientation",
             "valueInteger": 1
-        },
-        {
-            "key": "enable_telemetry",
-            "valueBool": false
         },
         {
             "key": "applications",
@@ -182,6 +184,51 @@ Managed Home Screen 這個應用程式用於企業擁有的 Android Enterprise �
         {
             "key": "show_bluetooth_setting",
             "valueBool": false
+        },
+        {
+            "key": "show_flashlight_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_volume_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_device_info_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_managed_setting",
+            "valueBool": false
+        },
+        {
+            "key": "enable_easy_access_debugmenu",
+            "valueBool": false
+        },
+        {
+            "key": "enable_wifi_allowlist",
+            "valueBool": false
+        },
+        {
+            "key": "wifi_allowlist",
+            "valueBundleArray": [
+                {
+                    "managedProperty": [
+                        {
+                            "key": "SSID",
+                            "valueString": "name of Wi-Fi network 1 here"
+                        }
+                    ]
+                },   
+                {
+                    "managedProperty": [
+                        {
+                            "key": "SSID",
+                            "valueString": "name of Wi-Fi network 2 here"
+                        }
+                    ]
+                }  
+            ]
         },
         {
             "key": "grid_size",
@@ -335,7 +382,7 @@ Managed Home Screen 這個應用程式用於企業擁有的 Android Enterprise �
 Managed Home Screen 應用程式現在可讓您存取 Google 的 Android Device Policy 應用程式。 Managed Home Screen 應用程式是用於裝置的自訂啟動器，這些裝置已在 Intune 中註冊為使用多應用程式 kiosk 模式的 Android Enterprise (AE) 專用裝置。 您可以存取 Android Device Policy 應用程式，或引導使用者存取 Android Device Policy 應用程式，以用以支援和偵錯。 當裝置在 Managed Home Screen 中註冊和鎖定時，即可使用這項啟動功能。 不需要其他安裝即可使用這項功能。
 
 ## <a name="managed-home-screen-debug-screen"></a>受控主畫面偵錯畫面
-您可以按一下 [返回]  按鈕，直到顯示 [偵錯] 畫面為止 (按一下 [返回]  按鈕 15 次以上)，來存取受控主畫面的 [偵錯] 畫面。 您可以從此 [偵錯] 畫面啟動「Android 裝置原則」應用程式、檢視及上傳記錄檔，或暫停 kiosk 模式以更新裝置。 如需有關暫停 kiosk 模式的詳細資訊，請參閱 Android Enterprise [專用裝置設定](../configuration/device-restrictions-android-for-work.md#dedicated-devices)中的**離開 kiosk 模式**項目。
+您可以按一下 [返回]  按鈕，直到顯示 [偵錯] 畫面為止 (按一下 [返回]  按鈕 15 次以上)，來存取受控主畫面的 [偵錯] 畫面。 您可以從此 [偵錯] 畫面啟動「Android 裝置原則」應用程式、檢視及上傳記錄檔，或暫停 kiosk 模式以更新裝置。 如需有關暫停 kiosk 模式的詳細資訊，請參閱 Android Enterprise [專用裝置設定](../configuration/device-restrictions-android-for-work.md#dedicated-devices)中的**離開 kiosk 模式**項目。 若要更快地存取受管理之主畫面的偵錯畫面，可以利用應用程式設定原則，將 **Enable easy access debug menu** (允許快速存取偵錯功能表) 設定為 `True`。 
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb8d5b53e136ea22d1edbad7755e198fd4155285
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 4ffa3d11b92c38373da22e53b96fe9cf9e520b5b
+ms.sourcegitcommit: af8a3efd361a7f3fa6e98e5126dfb1391966ff76
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551395"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82149178"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>在 Intune 中新增 iOS、iPadOS 或 macOS 裝置功能設定
 
@@ -37,9 +37,6 @@ Intune 包含許多可協助系統管理員控制 iOS、iPadOS 和 macOS 裝置�
 Intune 會使用「組態設定檔」來依據貴組織的需求建立和自訂這些設定。 在設定檔中新增這些功能之後，接著將該設定檔推送或部署至組織中的 iOS/iPadOS 和 macOS 裝置。
 
 本文描述您可以設定的各種功能，並示範如何建立裝置組態設定檔。 您也可以查看適用於 [iOS/iPadOS](ios-device-features-settings.md) 和 [macOS](macos-device-features-settings.md) 裝置的所有可用設定。
-
-> [!NOTE]
-> Intune 使用者介面 (UI) 正在更新為全螢幕體驗，而且可能需要數週的時間。 在您的租用戶收到此更新之前，當您建立或編輯此文章中所述的設定時，您的工作流程將略有不同。
 
 ## <a name="airprint"></a>AirPrint
 
@@ -136,12 +133,12 @@ AirPrint 是可讓裝置透過無線網路列印到檔案的 Apple 功能。 在
 
 大部分的企業營運 (LOB) 應用程式需要某種程度的使用者驗證才會支援安全性。 在許多情況下，驗證都會要求使用者重複輸入相同認證。 為了改善使用者體驗，開發人員可以建立使用單一登入 (SSO) 的應用程式。 使用單一登入可減少使用者必須輸入認證的次數。
 
+單一登入設定檔是以 Kerberos 為基礎。 Kerberos 是一種網路驗證通訊協定，其使用秘密金鑰加密來驗證用戶端與伺服器應用程式。 Intune 設定會在存取伺服器或指定的應用程式時定義 Kerberos 帳戶資訊，並處理網頁和原生應用程式的 Kerberos 挑戰。 Apple 建議您使用 [Kerberos SSO 應用程式擴充功能](#single-sign-on-app-extension) (在本文中) 設定，而不是 SSO 設定。  
+
 若要使用單一登入，請確定您已具備：
 
 - 已將程式碼撰寫成會在裝置上的單一登入中尋找使用者認證存放區的應用程式。
 - 設定進行 iOS/iPadOS 裝置單一登入的 Intune。
-
-![單一登入窗格](./media/device-features-configure/sso-blade.png)
 
 如需可在 Intune 中設定的設定清單，請參閱 [iOS/iPadOS 上的單一登入](ios-device-features-settings.md#single-sign-on)。
 
@@ -156,8 +153,8 @@ AirPrint 是可讓裝置透過無線網路列印到檔案的 Apple 功能。 在
 
 在 Intune 中，使用這些設定來設定貴組織、您的識別提供者、Microsoft 或 Apple 所建立的 SSO 應用程式延伸模組。 SSO 應用程式擴充功能會為您的使用者處理驗證。 這些設定會設定重新導向類型和認證類型的 SSO 應用程式延伸模組。
 
-- 重新導向類型是專為 OAuth 和 SAML2 等新式驗證通訊協定設計的。 Microsoft 具有 iOS/iPadOS Azure AD 重新導向類型的 SSO 應用程式延伸模組，可以使用單一登入應用程式延伸模組設定來啟用。
-- 認證類型是專為挑戰和回應驗證流程所設計。 您可以在 Apple 所提供的 Kerberos 特定認證延伸模組或一般認證延伸模組之間進行選擇。
+- 重新導向類型是專為 OAuth 和 SAML2 等新式驗證通訊協定設計的。 您可以在 macOS 裝置上使用一般重新導向擴充功能。 對於 iOS/iPadOS 裝置，您可選擇 Microsoft 的 Azure AD SSO 擴充功能 ([Microsoft 企業單一登入外掛程式](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) 和一般重新導向擴充功能。
+- 認證類型是專為挑戰和回應驗證流程所設計。 您可以在 Apple 所提供的 Kerberos 特定認證擴充功能和一般認證擴充功能之間進行選擇。
 
 如需可在 Intune 中設定的設定清單，請參閱 [iOS/iPadOS SSO 應用程式延伸模組](ios-device-features-settings.md#single-sign-on-app-extension)和 [macOS SSO 應用程式延伸模組](macos-device-features-settings.md#single-sign-on-app-extension)。
 
