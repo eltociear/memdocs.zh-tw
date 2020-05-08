@@ -10,12 +10,12 @@ ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4375867e70cb7f2989b78572c7fc8e005f95be73
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c9e8e40a6bdfa129a03e6042985e4956ffb21b5c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694036"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906324"
 ---
 # <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-configuration-manager"></a>如何在 Configuration Manager 中將用戶端部署至 UNIX 和 Linux 伺服器
 
@@ -36,7 +36,7 @@ ms.locfileid: "81694036"
  安裝用戶端之後，即可在 Configuration Manager 主控台中指定 [用戶端設定] 來設定用戶端代理程式，而設定方式與 Windows 用戶端相同。 如需詳細資訊，請參閱  [Linux 和 UNIX 伺服器的用戶端設定](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU)。  
 
 ##  <a name="about-client-installation-packages-and-the-universal-agent"></a><a name="BKMK_AboutInstallPackages"></a> 關於用戶端安裝套件和通用代理程式  
- 若要在特定平台上安裝 Linux 和 UNIX 的用戶端，您必須使用安裝用戶端之電腦的適用用戶端安裝封裝。 從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=525184)下載的每個用戶端都包含適用的用戶端安裝套件。 除了用戶端安裝封裝之外，用戶端下載還會包括管理每部電腦上用戶端安裝的 **install** 指令碼。  
+ 若要在特定平台上安裝 Linux 和 UNIX 的用戶端，您必須使用安裝用戶端之電腦的適用用戶端安裝封裝。 從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=47719)下載的每個用戶端都包含適用的用戶端安裝套件。 除了用戶端安裝封裝之外，用戶端下載還會包括管理每部電腦上用戶端安裝的 **install** 指令碼。  
 
  當您安裝用戶端時，不論您使用的用戶端安裝套件為何，您都可以使用相同的程序和命令列屬性。  
 
@@ -69,7 +69,7 @@ ms.locfileid: "81694036"
 
 ###  <a name="to-install-the-configuration-manager-client-on-linux-and-unix-servers"></a><a name="BKMK_ToInstallLnUClinent"></a> 在 Linux 和 UNIX 伺服器上安裝 Configuration Manager 用戶端  
 
-1.  在 Windows 電腦上，為您想要管理的電腦 [下載適用於 Linux 或 UNIX 伺服器的用戶端檔案](https://go.microsoft.com/fwlink/?LinkID=525184) 。  
+1.  在 Windows 電腦上，為您想要管理的電腦 [下載適用於 Linux 或 UNIX 伺服器的用戶端檔案](https://www.microsoft.com/download/details.aspx?id=47719) 。  
 
 2.  執行 Windows 電腦的自我解壓縮 .exe 檔案，解壓縮安裝指令碼和用戶端安裝 .tar 檔案。  
 

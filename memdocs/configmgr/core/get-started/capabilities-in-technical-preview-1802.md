@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 50e05d07ec3e2612c170157c45f5e64abe3766de
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cf6980def8a4f61248bd676edc0ca93f2546816e
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701326"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905274"
 ---
 # <a name="capabilities-in-technical-preview-1802-for-configuration-manager"></a>Configuration Manager Technical Preview 1802 中的功能
 
@@ -56,7 +56,7 @@ ms.locfileid: "81701326"
  
 ## <a name="configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups"></a>設定 Windows 傳遞最佳化以使用 Configuration Manager 界限群組
 <!-- 1324696 -->
-您可以使用 Configuration Manager 界限群組，來定義和規範在您的公司網路上以及到遠端辦公室的內容發佈。 [Windows 傳遞最佳化](/windows/deployment/update/waas-delivery-optimization)是一種雲端式點對點技術，可在 Windows 10 裝置之間共用內容。 從這個版本開始，設定傳遞最佳化，以便在同儕節點之間共用內容時使用界限群組。 新的用戶端設定會套用界限群組識別碼，以作為用戶端上的傳遞最佳化群組識別碼。 當用戶端與傳遞最佳化雲端服務進行通訊時，它會使用此識別碼來尋找含有所需內容的同儕節點。 
+您可以使用 Configuration Manager 界限群組，來定義和規範在您的公司網路上以及到遠端辦公室的內容發佈。 [Windows 傳遞最佳化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)是一種雲端式點對點技術，可在 Windows 10 裝置之間共用內容。 從這個版本開始，設定傳遞最佳化，以便在同儕節點之間共用內容時使用界限群組。 新的用戶端設定會套用界限群組識別碼，以作為用戶端上的傳遞最佳化群組識別碼。 當用戶端與傳遞最佳化雲端服務進行通訊時，它會使用此識別碼來尋找含有所需內容的同儕節點。 
 
 ### <a name="prerequisites"></a>先決條件
 - 傳遞最佳化僅適用於 Windows 10 用戶端
@@ -68,7 +68,7 @@ ms.locfileid: "81701326"
 2. 選取新的**傳遞最佳化**群組。
 3. 啟用 [請在傳遞最佳化群組識別碼使用 Configuration Manager 界限群組]  設定。
 
-如需詳細資訊，請參閱[傳遞最佳化選項](/windows/deployment/update/waas-delivery-optimization#how-microsoft-uses-delivery-optimization)中的**群組**傳遞模式選項。
+如需詳細資訊，請參閱[傳遞最佳化選項](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#how-microsoft-uses-delivery-optimization)中的**群組**傳遞模式選項。
 
 
 
@@ -96,16 +96,16 @@ Windows 10 就地升級的預設工作順序範本現在包含其他群組，其
 - **移除不相容的應用程式**：在此群組中新增步驟，以移除與此版本 Windows 10 不相容的任何應用程式。 將應用程式解除安裝的方法各不相同。 如果應用程式使用 Windows Installer，請從應用程式之 Windows Installer 部署類型內容的 [程式]  索引標籤中複製**解除安裝程式**命令列。 然後使用解除安裝程式命令列，在此群組中新增**執行命令列**步驟。 例如： </br>`msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`</br> 
 - **移除不相容的驅動程式**：在此群組中新增步驟，以移除與此版本 Windows 10 不相容的任何驅動程式。
 - **移除/暫止協力廠商安全性**：在此群組中新增步驟，以移除或暫止協力廠商安全性程式，例如防毒軟體。
-   - 如果您使用協力廠商的磁碟加密程式，請使用 **/ReflectDrivers** [命令列選項](/windows-hardware/manufacture/desktop/windows-setup-command-line-options)，將其加密驅動程式提供給 Windows 安裝程式。 在此群組的工作順序中，新增[設定工作順序變數](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)步驟。 將工作順序變數設為 **OSDSetupAdditionalUpgradeOptions**。 搭配驅動程式的路徑來將值設為 **/ReflectDriver**。 這個[工作順序動作變數](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS)會附加工作順序所使用的 Windows 安裝程式命令列。 如需這個程序的任何其他指引，請連絡您的軟體廠商。
+   - 如果您使用協力廠商的磁碟加密程式，請使用 **/ReflectDrivers** [命令列選項](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)，將其加密驅動程式提供給 Windows 安裝程式。 在此群組的工作順序中，新增[設定工作順序變數](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)步驟。 將工作順序變數設為 **OSDSetupAdditionalUpgradeOptions**。 搭配驅動程式的路徑來將值設為 **/ReflectDriver**。 這個[工作順序動作變數](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS)會附加工作順序所使用的 Windows 安裝程式命令列。 如需這個程序的任何其他指引，請連絡您的軟體廠商。
 
 ### <a name="new-groups-under-post-processing"></a>**後續處理**下的新群組
 - **套用以安裝程式為基礎的驅動程式**：在此群組中新增步驟以從套件安裝以安裝程式為基礎的驅動程式 (.exe)。
 - **安裝/啟用協力廠商安全性**：在此群組中新增步驟，以安裝或啟用協力廠商安全性程式，例如防毒軟體。 
-- **設定 Windows 預設應用程式與關聯**：在此群組中新增步驟以設定 Windows 預設應用程式與檔案關聯。 首先，使用您所需的應用程式關聯來準備參照電腦。 接著，執行下列命令列來匯出： </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>將 XML 檔案新增至套件。 然後，在此群組中新增[執行命令列](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine)步驟。 指定包含 XML 檔案的套件，然後指定下列命令列： </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> 如需詳細資訊，請參閱[匯出或匯入預設應用程式關聯](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)。
-- **套用自訂項目與個人化項目**：在此群組中新增步驟以套用 [開始] 功能表自訂項目，例如組織程式群組。 如需詳細資訊，請參閱[自訂開始畫面](/windows-hardware/manufacture/desktop/customize-the-start-screen)。
+- **設定 Windows 預設應用程式與關聯**：在此群組中新增步驟以設定 Windows 預設應用程式與檔案關聯。 首先，使用您所需的應用程式關聯來準備參照電腦。 接著，執行下列命令列來匯出： </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>將 XML 檔案新增至套件。 然後，在此群組中新增[執行命令列](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine)步驟。 指定包含 XML 檔案的套件，然後指定下列命令列： </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> 如需詳細資訊，請參閱[匯出或匯入預設應用程式關聯](https://docs.microsoft.com/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)。
+- **套用自訂項目與個人化項目**：在此群組中新增步驟以套用 [開始] 功能表自訂項目，例如組織程式群組。 如需詳細資訊，請參閱[自訂開始畫面](https://docs.microsoft.com/windows-hardware/manufacture/desktop/customize-the-start-screen)。
 
 ### <a name="additional-recommendations"></a>其他建議
-- 檢閱 Windows 文件以[解決 Windows 10 升級錯誤](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)。 這篇文章也包含有關升級程序的詳細資訊。
+- 檢閱 Windows 文件以[解決 Windows 10 升級錯誤](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)。 這篇文章也包含有關升級程序的詳細資訊。
 - 在預設的**檢查整備程度**步驟中，啟用 [確認最小可用磁碟空間 (MB)]  。 針對 32 位元作業系統升級套件，將值設為至少 **16384** (16 GB)，或針對 64 位元設為 **20480** (20 GB)。 
 - 使用 **SMSTSDownloadRetryCount** [內建工作順序變數](../../osd/understand/task-sequence-variables.md)來重試下載原則。 目前依預設，用戶端會重試兩次；已將此變數設為二 (2)。 如果您的用戶端不在有線的公司網路連線上，額外的重試次數可協助用戶端取得原則。 使用此變數，如果它無法下載原則，除了延遲失敗以外，不會造成任何負面的副作用。<!-- 501016 --> 此外，從預設的 15 秒增加 **SMSTSDownloadRetryDelay** 變數。
 - 執行內嵌相容性評估。 
@@ -227,14 +227,14 @@ Configuration Manager (最新分支) 1710 版支援[密碼編譯：新一代 (CN
 
 ## <a name="cloud-management-gateway-support-for-azure-resource-manager"></a>Azure Resource Manager 的雲端管理閘道支援
 <!-- 1324735 -->
-建立[雲端管理閘道](../clients/manage/cmg/plan-cloud-management-gateway.md) (CMG) 的執行個體時，精靈現在會提供選項來建立 **Azure Resource Manager 部署**。 [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) 是可將所有解決方案資源當作單一實體 (稱為[資源群組](/azure/azure-resource-manager/resource-group-overview#resource-groups)) 來管理的新式平台。 使用 Azure Resource Manager 部署 CMG 時，站台會使用 Azure Active Directory (Azure AD) 來驗證並建立必要的雲端資源。 這個現代化的部署不需要傳統的 Azure 管理憑證。  
+建立[雲端管理閘道](../clients/manage/cmg/plan-cloud-management-gateway.md) (CMG) 的執行個體時，精靈現在會提供選項來建立 **Azure Resource Manager 部署**。 [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) 是可將所有解決方案資源當作單一實體 (稱為[資源群組](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups)) 來管理的新式平台。 使用 Azure Resource Manager 部署 CMG 時，站台會使用 Azure Active Directory (Azure AD) 來驗證並建立必要的雲端資源。 這個現代化的部署不需要傳統的 Azure 管理憑證。  
 
 CMG 精靈仍會使用 Azure 管理憑證來提供**傳統服務部署**的選項。 若要簡化資源的部署與管理，我們建議針對所有新的 CMG 執行個體使用 Azure Resource Manager 部署模型。 如果可能，請透過 Resource Manager 重新部署現有的 CMG 執行個體。
 
 Configuration Manager 不會將現有的傳統 CMG 執行個體移轉至 Azure Resource Manager 部署模型。 使用 Azure Resource Manager 部署來建立新的 CMG 執行個體，然後移除傳統的 CMG 執行個體。 
 
 > [!IMPORTANT]
-> 此功能不會啟用對 Azure 雲端服務提供者 (CSP) 的支援。 使用 Azure Resource Manager 的 CMG 部署會繼續使用 CSP 不支援的傳統雲端服務。 如需詳細資訊，請參閱 [Azure CSP 中可用的 Azure 服務](/azure/cloud-solution-provider/overview/azure-csp-available-services)。  
+> 此功能不會啟用對 Azure 雲端服務提供者 (CSP) 的支援。 使用 Azure Resource Manager 的 CMG 部署會繼續使用 CSP 不支援的傳統雲端服務。 如需詳細資訊，請參閱 [Azure CSP 中可用的 Azure 服務](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)。  
 
 ### <a name="prerequisites"></a>先決條件
 - 與 [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md) 整合。 不需要 Azure AD 使用者探索。
@@ -317,7 +317,7 @@ Windows AutoPilot 是使用新式方法來將新的 Windows 10 裝置上架並�
 
 ## <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>適用於 Windows Defender 惡意探索防護之 Configuration Manager 原則的改善
 <!-- 1356220 -->
-針對 [Windows Defender 惡意探索防護](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)，已在 Configuration Manager 中新增適用於攻擊面縮減和受控資料夾存取權元件的額外原則設定。
+針對 [Windows Defender 惡意探索防護](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)，已在 Configuration Manager 中新增適用於攻擊面縮減和受控資料夾存取權元件的額外原則設定。
 
 **適用於受控資料夾存取權的新設定**<br/>
 當您設定受控資料夾存取權時有兩個其他選項：[僅封鎖磁碟磁區]  和 [僅稽核資料磁區]  。 這兩個設定只允許針對開機磁區啟用受控資料夾存取權，而且不會啟用特定資料夾或預設受保護資料夾的保護。 
@@ -332,20 +332,20 @@ Windows AutoPilot 是使用新式方法來將新的 Windows 10 裝置上架並�
 
 ## <a name="microsoft-edge-browser-policies"></a>Microsoft Edge 瀏覽器原則
 <!-- 1357310 -->
-針對在 Windows 10 用戶端上使用 [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) 網頁瀏覽器的客戶，您現在可以建立 Configuration Manager 合規性設定原則來設定數個 Microsoft Edge 設定。 此原則目前包含下列設定：
+針對在 Windows 10 用戶端上使用 [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) 網頁瀏覽器的客戶，您現在可以建立 Configuration Manager 合規性設定原則來設定數個 Microsoft Edge 設定。 此原則目前包含下列設定：
 - **將 Microsoft Edge 瀏覽器設為預設值**：將適用於網頁瀏覽器的 Windows 10 預設應用程式設定設為 Microsoft Edge
-- **允許網址列下拉式清單**：需要 Windows 10 (1703 版或更新版本)。 如需詳細資訊，請參閱 [AllowAddressBarDropdown 瀏覽器原則](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown)。
-- **允許同步 Microsoft 瀏覽器之間的我的最愛**：需要 Windows 10 (1703 版或更新版本)。 如需詳細資訊，請參閱 [SyncFavoritesBetweenIEAndMicrosoftEdge 瀏覽器原則](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge)。
-- **允許在結束時清除瀏覽資料**：需要 Windows 10 (1703 版或更新版本)。 如需詳細資訊，請參閱 [ClearBrowsingDataOnExit 瀏覽器原則](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit)。
-- **允許「不要追蹤」標頭**：如需詳細資訊，請參閱 [AllowDoNotTrack 瀏覽器原則](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack)。
-- **允許自動填入**：如需詳細資訊，請參閱 [AllowAutofill 瀏覽器原則](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill)。
-- **允許 Cookie**：如需詳細資訊，請參閱 [AllowCookies 瀏覽器原則](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)。
-- **允許快顯封鎖程式**：如需詳細資訊，請參閱 [AllowPopups 瀏覽器原則](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups)。
-- **允許網址列的搜尋建議**：如需詳細資訊，請參閱 [AllowSearchSuggestionsinAddressBar 瀏覽器原則](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar)。
-- **允許將內部網路流量傳送到 Internet Explorer**：如需詳細資訊，請參閱 [SendIntranetTraffictoInternetExplorer 瀏覽器原則](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer)。
-- **允許密碼管理員**：如需詳細資訊，請參閱 [AllowPasswordManager 瀏覽器原則](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)。
-- **允許開發人員工具**：如需詳細資訊，請參閱 [AllowDeveloperTools 瀏覽器原則](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools)。
-- **允許延伸模組**：如需詳細資訊，請參閱 [AllowExtensions 瀏覽器原則](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions)。
+- **允許網址列下拉式清單**：需要 Windows 10 (1703 版或更新版本)。 如需詳細資訊，請參閱 [AllowAddressBarDropdown 瀏覽器原則](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown)。
+- **允許同步 Microsoft 瀏覽器之間的我的最愛**：需要 Windows 10 (1703 版或更新版本)。 如需詳細資訊，請參閱 [SyncFavoritesBetweenIEAndMicrosoftEdge 瀏覽器原則](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge)。
+- **允許在結束時清除瀏覽資料**：需要 Windows 10 (1703 版或更新版本)。 如需詳細資訊，請參閱 [ClearBrowsingDataOnExit 瀏覽器原則](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit)。
+- **允許「不要追蹤」標頭**：如需詳細資訊，請參閱 [AllowDoNotTrack 瀏覽器原則](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack)。
+- **允許自動填入**：如需詳細資訊，請參閱 [AllowAutofill 瀏覽器原則](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowautofill)。
+- **允許 Cookie**：如需詳細資訊，請參閱 [AllowCookies 瀏覽器原則](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)。
+- **允許快顯封鎖程式**：如需詳細資訊，請參閱 [AllowPopups 瀏覽器原則](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups)。
+- **允許網址列的搜尋建議**：如需詳細資訊，請參閱 [AllowSearchSuggestionsinAddressBar 瀏覽器原則](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar)。
+- **允許將內部網路流量傳送到 Internet Explorer**：如需詳細資訊，請參閱 [SendIntranetTraffictoInternetExplorer 瀏覽器原則](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer)。
+- **允許密碼管理員**：如需詳細資訊，請參閱 [AllowPasswordManager 瀏覽器原則](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)。
+- **允許開發人員工具**：如需詳細資訊，請參閱 [AllowDeveloperTools 瀏覽器原則](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools)。
+- **允許延伸模組**：如需詳細資訊，請參閱 [AllowExtensions 瀏覽器原則](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowextensions)。
 
 ### <a name="prerequisites"></a>先決條件
 - 已加入 Azure Active Directory 的 Windows 10 用戶端。 

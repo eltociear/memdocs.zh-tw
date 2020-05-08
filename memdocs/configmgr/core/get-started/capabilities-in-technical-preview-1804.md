@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b30386745244900e7f525f8f45b25a598628bf43
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b709d6ec0c0cda188502c314d945a70e8de71288
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078731"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905243"
 ---
 # <a name="capabilities-in-technical-preview-1804-for-configuration-manager"></a>Configuration Manager Technical Preview 1804 中的功能
 
@@ -134,8 +134,6 @@ ms.locfileid: "82078731"
 
 使用支援中心來進行用戶端疑難排解、即時檢視記錄檔，或擷取 Configuration Manager 用戶端電腦的狀態，以於稍後進行分析。 支援中心為合併眾多系統管理員疑難排解工具的單一工具。 Technical Preview 中會提供支援中心預覽的最新版本，其中包含錯誤修正、增強功能，以及新記錄檔檢視器的預覽。 支援中心的安裝程式位於站台伺服器的 **cd.latest\SMSSETUP\Tools\SupportCenter** 資料夾中。
 
- > [!Tip]  
- > 支援中心現有功能的舊版文件，可於 [TechNet](https://technet.microsoft.com/library/dn688621.aspx) 取得。 相關資訊目前正在逐步移轉至 docs.microsoft.com 文件庫。  
 
 ### <a name="new-support-center-features"></a>支援中心的新功能  
 

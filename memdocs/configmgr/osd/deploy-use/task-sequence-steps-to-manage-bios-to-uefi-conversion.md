@@ -10,12 +10,12 @@ ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9183efd622cb425027500d3fe51ed7b86d3a94e4
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b9bd8f8102cbf6c814956127fc95a5f3961779c0
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079360"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906954"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>用於管理 BIOS 轉換到 UEFI 的工作順序步驟
 Windows 10 提供許多新安全性功能，都需要啟用 UEFI 的裝置。 您可能有支援 UEFI，不過是使用傳統 BIOS 的新型 Windows 電腦。 在過去，將裝置轉換為 UEFI 需要您實際操作每部電腦，重新分割硬碟，並重新設定韌體。 透過使用 Configuration Manager 中的工作順序，您可以準備硬碟以進行 BIOS 至 UEFI 轉換，以就地升級程序之一部分的方式從 BIOS 轉換至 UEFI，並以硬體清查之一部分的方式收集 UEFI 資訊。
@@ -57,7 +57,7 @@ Windows 10 Creators Update 引進一個簡單的轉換工具，能夠為支援 U
 ### <a name="to-convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>在就地升級期間從 BIOS 轉換至 UEFI
 1. 建立能就地升級至 Windows 10 Creators Update 的作業系統升級工作順序。
 2. 編輯工作順序。 在 [後置處理群組]  中，新增下列工作順序步驟：
-   1. 在 [一般] 中，新增 [執行命令列]  步驟。 您將新增 MBR2GPT 工具的命令列，此工具會在不修改或刪除磁碟資料的情況下，將磁碟從 MBR 轉換至 GPT。 在命令列中，鍵入下列命令：**MBR2GPT /convert /disk:0 /AllowFullOS**。 您也可以選擇在 Windows PE (而非完整作業系統) 中執行 MBR2GPT.EXE 工具。 若要這麼做，您可以在執行 MBR2GPT.EXE 工具的步驟之前，新增將電腦重新啟動至 WinPE 的步驟，並從命令列移除 /AllowFullOS 選項。 如需工具和可用選項的相關詳細資料，請參閱 [MBR2GPT.EXE (英文)](https://technet.microsoft.com/itpro/windows/deploy/mbr-to-gpt)。
+   1. 在 [一般] 中，新增 [執行命令列]  步驟。 您將新增 MBR2GPT 工具的命令列，此工具會在不修改或刪除磁碟資料的情況下，將磁碟從 MBR 轉換至 GPT。 在命令列中，鍵入下列命令：**MBR2GPT /convert /disk:0 /AllowFullOS**。 您也可以選擇在 Windows PE (而非完整作業系統) 中執行 MBR2GPT.EXE 工具。 若要這麼做，您可以在執行 MBR2GPT.EXE 工具的步驟之前，新增將電腦重新啟動至 WinPE 的步驟，並從命令列移除 /AllowFullOS 選項。 如需工具和可用選項的相關詳細資料，請參閱 [MBR2GPT.EXE (英文)](https://docs.microsoft.com/windows/deployment/mbr-to-gpt)。
    2. 新增啟動 OEM 工具的步驟，以將韌體從 BIOS 轉換成 UEFI。 這通常會是「執行命令列」工作順序步驟，其中包含啟動 OEM 工具的命令列。
    3. 在 [一般] 中，新增 [重新啟動電腦]  步驟。 如需指定重新啟動後要執行的項目，請選取 [目前安裝的預設作業系統]  。
 3. 部署工作順序。

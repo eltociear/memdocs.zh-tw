@@ -10,12 +10,12 @@ ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2ff86df999ab744d590b1ca120a8b566d18f446b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f04b777f030f9e55e1d5b17ace9ec8b83d9f8679
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701256"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906125"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Configuration Manager 的協助工具功能
 
@@ -89,5 +89,5 @@ Configuration Manager 包含協助所有人使用的功能。
 - [軟體中心使用者指南](software-center.md)
 
 > [!NOTE]  
-> 本文提供的資訊僅適用於擁有 Microsoft 產品美國地區授權的使用者。 如果您在美國以外地區取得本產品，可以使用軟體套件隨附的子公司資訊卡，或者瀏覽 [Microsoft 協助工具網站](https://go.microsoft.com/fwlink/?LinkId=8431)，取得 Microsoft 支援服務的連絡資訊。 您可以與您所在地區的子公司連絡，了解本節所述的產品及服務類型是否已於當地銷售。 關於協助工具的資訊，還有其他語言版本，包括日文和法文。  
+> 本文提供的資訊僅適用於擁有 Microsoft 產品美國地區授權的使用者。 如果您在美國以外地區取得本產品，可以使用軟體套件隨附的子公司資訊卡，或者瀏覽 [Microsoft 協助工具網站](https://www.microsoft.com/accessibility/)，取得 Microsoft 支援服務的連絡資訊。 您可以與您所在地區的子公司連絡，了解本節所述的產品及服務類型是否已於當地銷售。 關於協助工具的資訊，還有其他語言版本，包括日文和法文。  
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d154dc0ba681a37ebb2155bfa1bcdb6d8734965f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b3e1a2feaddb7384d76790249152c89dfa8ee2d3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073954"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904807"
 ---
 # <a name="what39s-new-in-version-1610-of-configuration-manager"></a>Configuration Manager 1610 版中的新功能
 
@@ -29,8 +29,8 @@ Configuration Manager 1610 更新最新分支，是先前安裝為執行版本 1
 > 若要安裝新的站台，您必須使用 Configuration Manager 的基準版本。  
 >
 > 深入了解：    
-> - [安裝新的站台](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [在站台安裝更新](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [安裝新的站台](../../servers/deploy/install/installing-sites.md)  
+> - [在站台安裝更新](../../servers/manage/updates.md)  
 > - [基準和更新版本](../../servers/manage/updates.md#bkmk_Baselines)
 
 下列各節提供 Configuration Manager 1610 版中的變更和推出的新功能詳細資料。  
@@ -168,7 +168,7 @@ Configuration Manager 1602 版中引進了軟體中心的自訂商標。 該商�
 
 ## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>在自動部署規則中依內容大小進行篩選
 您現在可以在自動部署規則中依軟體更新的內容大小進行篩選。 例如，您可以僅下載小於 2MB 的軟體更新，可以將 [內容大小 (KB)]  篩選設定為 [< 2048]  。 使用此篩選可避免自動下載大型軟體更新，以在網路頻寬有限時，能提供較簡單而略為低階的 Windows 服務支援。 如需詳細資料，請參閱：
-- [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/) (略為低階之作業系統上 Configuration Manager 及簡化的 Windows 服務)
+- [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056) (略為低階之作業系統上 Configuration Manager 及簡化的 Windows 服務)
 - [自動部署軟體更新](../../../sum/deploy-use/automatically-deploy-software-updates.md)
 
 若要設定 [內容大小 (KB)]  欄位，請執行下列其中一項作業：

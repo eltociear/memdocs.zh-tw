@@ -10,12 +10,12 @@ ms.assetid: dba904ae-7c44-46db-ae63-999b9821cb46
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4574b7ae97e8200da248a0b798677eacadb6229f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: deb3108d492a955eb0ec6b1635e306dcb85e0062
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703076"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904205"
 ---
 # <a name="cng-certificates-overview"></a>CNG 憑證概觀
 <!-- 1356191 --> 
@@ -23,7 +23,7 @@ ms.locfileid: "81703076"
 Configuration Manager 對密碼編譯新一代 (CNG) 憑證的支援有限。 設定管理員用戶端可以搭配 CNG 金鑰儲存提供者 (KSP) 中的私密金鑰來使用 PKI 用戶端驗證憑證。 有 KSP 的支援，Configuration Manager 用戶端可以支援硬體式私用金鑰，例如 PKI 用戶端驗證憑證的 TPM KSP。
 
 ## <a name="supported-scenarios"></a>支援的案例
-下列案例可以使用[密碼編譯 API 新一代 (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) 憑證範本：
+下列案例可以使用[密碼編譯 API 新一代 (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) 憑證範本：
 
 - 搭配 HTTPS 管理點進行用戶端登錄及通訊   
 - 搭配 HTTPS 發佈點進行軟體發佈及應用程式部署   

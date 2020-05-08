@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7e803dd1cbacbbd65a5f2968e217656b088d281
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 51a974247d7281d6134b699a5865f801d1ed6094
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705446"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905713"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Configuration Manager Technical Preview 1609 中的功能
 
@@ -51,7 +51,6 @@ Endpoint Protection 反惡意程式碼原則設定的改進 - 您現在可以指
 
 Upgrade Analytics 可讓您評估及分析裝置整備及與 Windows 10 的相容性，以更輕鬆順暢地進行升級。 整合 Upgrade Analytics 與 Configuration Manager 之後，您可以在 Configuration Manager 管理主控台中存取升級相容性資料，然後從裝置清單中設定要升級或修復的目標裝置。
 
-您可以在 [Get started with Upgrade Analytics](https://technet.microsoft.com/itpro/windows/deploy/upgrade-analytics-get-started) (開始使用 Upgrade Analytics) 中閱讀更多有關 Upgrade Analytics 的資訊。
 
 ## <a name="native-connection-types-for-windows-10-vpn-hybrid-profiles"></a>Windows 10 VPN 混合式設定檔的原生連線類型
 
@@ -348,7 +347,7 @@ Configuration Manager 1609 Technical Preview 引進了新的儀表板。 若要�
 - Office 365 用戶端版本
 - Office 365 用戶端語言
 - Office 365 用戶端通道     
-如需詳細資訊，請參閱 [Office 365 ProPlus 更新通道的概觀](https://technet.microsoft.com/library/mt455210.aspx)。
+如需詳細資訊，請參閱 [Office 365 ProPlus 更新通道的概觀](https://docs.microsoft.com/deployoffice/overview-update-channels)。
 - 在可用產品集合中選取 Office 365 用戶端的自動部署規則。
 
 您可以在此儀表板上執行下列動作：

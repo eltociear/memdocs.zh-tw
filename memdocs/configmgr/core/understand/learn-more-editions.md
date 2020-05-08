@@ -10,12 +10,12 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f18ed2180f1d526e2afa4872e8fa9018c7e18721
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 04ed335c65369840085fe44ba2f1b81d7806a0e3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706876"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906056"
 ---
 # <a name="licensing-and-branches-for-configuration-manager"></a>Configuration Manager 的授權和分支
 
@@ -32,7 +32,7 @@ ms.locfileid: "81706876"
 
 如果客戶具有 Configuration Manager 授權的作用中軟體保證 (SA) 或自 2016 年 10 月 1 日起的對等訂閱權限，即有權使用 2016 年 10 月發行的 Configuration Manager 1606 版。 如果客戶具有自 2016 年 10 月 1 日起的 Configuration Manager 權限，則在安裝時會發現最新分支和長期維護分支 (LTSB) 這兩個授權選項。
 
-如需您透過 Microsoft 大量授權方案購買之產品的完整條款及條件，請參閱[授權條款與文件](https://go.microsoft.com/fwlink/?LinkId=800052) \(英文\)。
+如需您透過 Microsoft 大量授權方案購買之產品的完整條款及條件，請參閱[授權條款與文件](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1) \(英文\)。
 
 
 ## <a name="licensed-branches"></a>授權的分支
@@ -117,7 +117,7 @@ LTSB 是以最新分支 1606 版為基礎，並具有下列限制：
 
 - [VLSC 的概觀](https://www.microsoft.com/Licensing/existing-customer/vlsc-training-and-resources.aspx)
 
-- [Microsoft 大量授權產品條款](https://go.microsoft.com/fwlink/?LinkId=800052)
+- [Microsoft 大量授權產品條款](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1)
 
 - 大量授權客戶可以從[大量授權服務中心](https://www.microsoft.com/Licensing/servicecenter/default.aspx)取得其授權摘要。 移至 [授權]  功能表，然後選取 [授權摘要]  。
 

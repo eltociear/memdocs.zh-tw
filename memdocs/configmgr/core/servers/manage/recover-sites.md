@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 14f319cfa1d09cf21cc5da5ed4a9fde9b9b9799b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b17c8c9ed0c1f6f9a5aeb487e07ad3d3dc66cbae
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708526"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903966"
 ---
 # <a name="recover-a-configuration-manager-site"></a>復原 Configuration Manager 站台
 
@@ -193,7 +193,7 @@ ms.locfileid: "81708526"
 
 Configuration Manager 可對 SQL Server 的站台資料庫執行變更追蹤。 變更追蹤可讓 Configuration Manager 查詢有關上次時間點後，資料庫資料表中出現的變更資訊。 保留期間會指定保留變更追蹤資訊的時間長度。 根據預設，站台資料庫的保留期間設定為五天。 復原網站資料庫時，您的備份是在保留期間內或保留期間外，復原程序的進行方式也隨之不同。 例如，若 SQL server 失敗，而上次備份是七天以前，表示備份是在保留期間外。
 
-如需 SQL Server 變更追蹤本質的詳細資訊，請參閱來自 SQL Server 小組的下列部落格文章：[Change Tracking Cleanup - part 1](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-1/) (變更追蹤清除 - 第 1 部分) 和 [Change Tracking Cleanup - part 2](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-2) (變更追蹤清除 - 第 2 部分)。
+如需 SQL Server 變更追蹤本質的詳細資訊，請參閱來自 SQL Server 小組的下列部落格文章：[Change Tracking Cleanup - part 1](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) (變更追蹤清除 - 第 1 部分) 和 [Change Tracking Cleanup - part 2](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-2) (變更追蹤清除 - 第 2 部分)。
 
 ### <a name="reinitialization-of-site-or-global-data"></a>重新初始化站台或全域資料
 

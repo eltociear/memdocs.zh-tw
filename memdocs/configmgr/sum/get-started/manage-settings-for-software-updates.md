@@ -10,12 +10,12 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 2c8ca66bc83ec8eb18bc331287b6dbee47af7d85
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a2a45ff866ea02aacc83c42109c8cba4020ed4e
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703036"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906789"
 ---
 #  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a> 管理軟體更新的設定  
 
@@ -40,7 +40,7 @@ ms.locfileid: "81703036"
 建立站台的軟體更新點時，用戶端會收到提供軟體更新點伺服器名稱，以及在電腦上設定 [指定近端內部網路 Microsoft 更新服務的位置]  本機原則的電腦原則。 WUA 會擷取 [設定偵測更新的近端內部網路更新服務]  設定中指定的伺服器名稱，然後在掃描軟體更新相容性時連線至此伺服器。 建立 [指定近端內部網路 Microsoft 更新服務的位置]  設定的網域原則時，它會覆寫本機原則，而 WUA 可能會連線至軟體更新點以外的伺服器。 如果發生這種情形，用戶端可能會根據不同的產品、分類和語言掃描軟體更新合規性。 因此，您應該不要設定用戶端電腦的 Active Directory 原則。  
 
 ### <a name="allow-signed-content-from-intranet-microsoft-update-service-location-group-policy"></a>允許來自內部網路 Microsoft 更新服務位置的已簽署內容群組原則  
-您必須先啟用 [允許來自內部網路 Microsoft 更新服務位置的已簽署內容]  群組原則設定，電腦上的 WUA 才會掃描透過 System Center 更新發行者建立和發佈軟體更新。 啟用此原則設定時，如果軟體更新已在本機電腦上的 [受信任的發行者]  憑證存放區中簽署，則 WUA 將接受透過近端內部網路位置接收的軟體更新。 如需更新發行者所需群組原則設定的詳細資訊，請參閱 [Updates Publisher 2011 Documentation Library (更新發行者 2011 文件庫)](https://go.microsoft.com/fwlink/p/?LinkId=232476)。  
+您必須先啟用 [允許來自內部網路 Microsoft 更新服務位置的已簽署內容]  群組原則設定，電腦上的 WUA 才會掃描透過 System Center 更新發行者建立和發佈軟體更新。 啟用此原則設定時，如果軟體更新已在本機電腦上的 [受信任的發行者]  憑證存放區中簽署，則 WUA 將接受透過近端內部網路位置接收的軟體更新。 如需更新發行者所需群組原則設定的詳細資訊，請參閱 [Updates Publisher 2011 Documentation Library (更新發行者 2011 文件庫)](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))。  
 
 ### <a name="automatic-updates-configuration"></a>自動更新設定  
 自動更新允許在用戶端電腦上接收安全性更新和其他重要的下載。 自動更新是透過 [設定自動更新]  群組原則設定，或透過本機電腦上的 [控制台] 設定。 當自動更新啟用時，用戶端電腦將接收更新通知，而且用戶端電腦將根據所設的設定下載及更新所需的更新。 如果自動更新與軟體更新並存，每一部用戶端電腦都可顯示通知圖示，並且快顯相同更新的通知。 另外，需要重新啟動時，每一部用戶端電腦可顯示相同更新的重新啟動對話方塊。  

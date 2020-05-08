@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 522e01b0d811d768d4f239bc917c2e3db08e05ef
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 2168f844f1c9ef98ea21da68b73531bca7aad999
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210072"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905180"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Configuration Manager Technical Preview 1806 中的功能
 
@@ -81,10 +81,10 @@ SCUP 會繼續支援其他類別目錄和案例。 Configuration Manager 主控�
 
     > [!Tip]  
     > 軟體更新點需要 HTTPS，因為它是用來處理簽署憑證的 WSUS API 需求。 用戶端不需要同時啟用 HTTPS。 如需在 WSUS 上啟用 HTTPS 的詳細資訊，請參閱下列文章以取得協助：  
-    > - [使用安全通訊端層通訊協定確保 WSUS 的安全](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
-    > - [WSUS 支援部落格文章](https://blogs.technet.microsoft.com/sus/2011/05/09/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names/)
+    > - [使用安全通訊端層通訊協定確保 WSUS 的安全](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
+    > - [WSUS 支援部落格文章](https://docs.microsoft.com/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
 
-- 軟體更新點 (WSUSContent 資料夾) 上有足夠的磁碟空間來儲存協力廠商軟體更新的來源二進位檔案內容。 必要的儲存體數量因廠商、更新類型以及您為部署所發佈的特定更新而異。 如果您需要將 WSUSContent 資料夾移至具有更多可用空間的另一個磁碟機，請參閱 WSUS 支援小組的部落格文章 [How to change the location where WSUS stores updates locally](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/) (如何變更 WSUS 在本機儲存更新的位置)。  
+- 軟體更新點 (WSUSContent 資料夾) 上有足夠的磁碟空間來儲存協力廠商軟體更新的來源二進位檔案內容。 必要的儲存體數量因廠商、更新類型以及您為部署所發佈的特定更新而異。 如果您需要將 WSUSContent 資料夾移至具有更多可用空間的另一個磁碟機，請參閱 WSUS 支援小組的部落格文章 [How to change the location where WSUS stores updates locally](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally) (如何變更 WSUS 在本機儲存更新的位置)。  
 
 - 啟用並部署用戶端設定 [軟體更新]  群組中的 [[啟用協力廠商軟體更新]](../clients/deploy/about-client-settings.md#enable-third-party-software-updates) 用戶端設定。  
 
@@ -191,9 +191,6 @@ SCUP 會繼續支援其他類別目錄和案例。 Configuration Manager 主控�
 <!--1357861-->
 Package Conversion Manager 現在是一種整合工具，可讓您將舊版 Configuration Manager 2007 套件轉換至 Configuration Manager 最新分支應用程式。 接著，您便可以使用應用程式的功能，例如相依性、需求規則和使用者裝置親和性。
 
-> [!Tip]  
-> Package Conversion Manager 現有功能的舊版文件，可於 [TechNet](https://technet.microsoft.com/library/hh531519.aspx) 取得。 相關資訊目前正在逐步移轉至 docs.microsoft.com 文件庫。
-
 ### <a name="try-it-out"></a>試試看！
  請嘗試完成工作。 然後傳送[意見反應](capabilities-in-technical-preview-1804.md#bkmk_feedback)，讓我們知道後續結果。
 
@@ -206,7 +203,6 @@ Package Conversion Manager 現在是一種整合工具，可讓您將舊版 Conf
      - **轉換套件**：某些套件可以輕鬆地轉換成具有此動作的應用程式。
      - **修正並轉換**：有些套件需要在轉換成應用程式之前修正問題。  
 
-   如需這些動作的詳細資訊，請參閱[如何分析和轉換套件](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh846244%28v%3dtechnet.10%29)。  
 
 3. 移至 [監視]  工作區，然後選取 [套件轉換狀態]  。 這個新的儀表板會顯示站台中套件的整體分析與轉換狀態。 新的背景工作會自動彙總分析資料。  
 

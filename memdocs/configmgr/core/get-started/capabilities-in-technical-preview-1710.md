@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 503bb6d2293b4b5efb1d84980225a9d7052e1656
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3dd4c3f22a0f2c24153e6d26be2e3098511c5dc4
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705106"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905314"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-configuration-manager"></a>Configuration Manager Technical Preview 1710 中的功能
 
@@ -125,7 +125,7 @@ PowerShell 指令碼部署最初是在 Technical Preview 的 [Tech Preview 1706]
 
 ## <a name="limited-support-for-cng-certificates"></a>針對 CNG 憑證的有限支援
 <!-- 1356191 -->
-從此版本開始，您現在可以針對下列案例使用[加密 API：新一代 (CNG) API](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) 憑證範本：
+從此版本開始，您現在可以針對下列案例使用[加密 API：新一代 (CNG) API](https://docs.microsoft.com/windows/win32/seccng/cng-features) 憑證範本：
 
 - 搭配 HTTPS 管理點進行用戶端註冊及通訊。   
 - 搭配 HTTPS 發佈點進行軟體發佈及應用程式部署。   

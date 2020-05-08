@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d3ae44892cd46a438113fb54dad0e290b8fb148e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 556ddb10f0ba25fc1c3cf4b215d5058d3221c7fe
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707736"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906456"
 ---
 # <a name="checklist-for-installing-update-1702-for-configuration-manager"></a>安裝 Configuration Manager 1702 版更新的檢查清單
 
@@ -89,7 +89,7 @@ ms.locfileid: "81707736"
 
 **檢閱適用於 Windows 10 的 Windows 評定及部署套件 (ADK) 版本** Windows 10 ADK 應該是 1607 或更新版本。 如果您必須更新 ADK，請在開始更新 Configuration Manager 之前進行。 這樣可確保預設開機映像會自動更新至最新版的 Windows PE。 (自訂開機映像必須手動更新)。
 
-如果您要在更新 ADK 之前更新站台，請參閱部落格[適用於 Windows 10 的Configuration Manager 和 Windows ADK 1607 版 (英文)](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/09/configuration-manager-and-the-windows-adk-for-windows-10-version-1607/)，以取得用來重新產生開機映像的指令碼。
+如果您要在更新 ADK 之前更新站台，請參閱部落格[適用於 Windows 10 的Configuration Manager 和 Windows ADK 1607 版 (英文)](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-the-windows-adk-for-windows-10-version/ba-p/274047)，以取得用來重新產生開機映像的指令碼。
 
 **檢閱站台和階層狀態，並確認沒有任何未解決的問題：** 在更新站台之前，請先針對站台伺服器、站台資料庫伺服器，以及安裝在遠端電腦上的站台系統角色，解決所有操作問題。 網站更新會因為現有的操作問題而失敗。
 

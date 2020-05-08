@@ -10,12 +10,12 @@ ms.assetid: 3393db41-900a-44c5-b950-2d46a35a198c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4b7db4537965b17cd56cc4d996eec576c2b18965
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3825ef9b9b1efd576a31742e0fdbe7c2bc3b1628
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706046"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906856"
 ---
 # <a name="security-and-privacy-for-certificate-profiles-in-configuration-manager"></a>在 Configuration Manager 中憑證設定檔的安全性和隱私權
 
@@ -27,7 +27,7 @@ ms.locfileid: "81706046"
 
 |安全性最佳做法|更多資訊|  
 |----------------------------|----------------------|  
-|識別並遵循任何網路裝置註冊服務的安全性最佳實務，包含在 Internet Information Services (IIS) 設定網路裝置註冊服務網站，要求使用 SSL 並忽略用戶端的憑證。|請參閱 TechNet 上 Active Directory 憑證服務文件庫中的 [網路裝置註冊服務指南](https://go.microsoft.com/fwlink/p/?LinkId=309016) 。|  
+|識別並遵循任何網路裝置註冊服務的安全性最佳實務，包含在 Internet Information Services (IIS) 設定網路裝置註冊服務網站，要求使用 SSL 並忽略用戶端的憑證。|如需詳細資訊，請參閱[網路裝置註冊服務指導](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11))。|  
 |當您設定 SCEP 憑證設定檔時，請選擇裝置和基礎結構可支援的最安全選項。|識別、實作及遵循為您的裝置和基礎結構所建議的任何安全性最佳作法。|  
 |手動指定使用者裝置親和性，而不是讓使用者識別自己的主要裝置。 此外，請勿啟用基於使用方式的設定。|如果您按一下 SCEP 憑證設定檔中的 [只允許在使用者主要裝置上註冊憑證]  選項，請勿將由使用者或裝置收集到的資訊視為已授權。 如果您使用此設定來部署 SCEP 憑證設定檔，而且信任的系統管理使用者未指定使用者裝置親和性，未授權的使用者可能會因而獲得較高的權限，以及被授與驗證憑證。<br /><br /> **注意︰** 如果您確實啟用了基於使用方式的設定，則會藉由使用未受到 Configuration Manager 保護的狀態訊息來收集此資訊。 若要降低此威脅，請在用戶端電腦和管理點之間使用 SMB 簽署或 IPsec。|  
 |請勿將使用者的讀取及註冊權限加入憑證範本，或設定憑證登錄點跳過憑證範本檢查。|雖然 Configuration Manager 支援額外檢查以確認您是否新增使用者的讀取及註冊安全性權限，但是您也可以在無法驗證時設定憑證登錄點以跳過該檢查，但這兩種設定都不是安全性最佳作法。 如需詳細資訊，請參閱[規劃憑證設定檔的憑證範本權限](../../protect/plan-design/planning-for-certificate-template-permissions.md)。|  

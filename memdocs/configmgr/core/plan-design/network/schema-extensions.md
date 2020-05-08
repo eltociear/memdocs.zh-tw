@@ -10,12 +10,12 @@ ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c78bb5876455e68292e4a69d86a256fa9e5172d0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1ace560130e43fd5675b51b6d507e84043c01407
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701466"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904080"
 ---
 # <a name="schema-extensions-for-configuration-manager"></a>Configuration Manager 的架構延伸
 
@@ -25,7 +25,7 @@ ms.locfileid: "81701466"
 
 -   最好是可延伸 Active Directory 架構，但並非必要。  
 
-[延伸 Active Directory 架構](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema)之前，您應該要熟悉 Active Directory 網域服務並熟悉 [修改 Active Directory 架構](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx)。  
+[延伸 Active Directory 架構](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema)之前，您應該要熟悉 Active Directory 網域服務並熟悉 [修改 Active Directory 架構](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10))。  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>延伸 Configuration Manager 的 Active Directory 架構時應考量的事項  
 

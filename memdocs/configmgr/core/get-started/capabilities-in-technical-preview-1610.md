@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6402205ae694d719845492b1af37000a0b9335c5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cee161747d5c0b462836b7c3a44e1460173b124c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705356"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905650"
 ---
 # <a name="capabilities-in-technical-preview-1610-for-configuration-manager"></a>Configuration Manager Technical Preview 1610 中的功能
 
@@ -29,7 +29,7 @@ ms.locfileid: "81705356"
 
 **以下是您可以使用此版本試用的新功能。**  
 ## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>在自動部署規則中依內容大小進行篩選
-您現在可以在自動部署規則中依軟體更新的內容大小進行篩選。 例如，您可以將 [內容大小 (KB)]  篩選設定為 [< 2048]  ，僅下載小於 2MB 的軟體更新。 使用此篩選可防止自動下載大型軟體更新，以在網路頻寬有限時，提供簡化 Windows 下層服務的更佳支援。 如需詳細資訊，請參閱 [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)(Configuration Manager 及下層作業系統上的簡化 Windows 服務)。
+您現在可以在自動部署規則中依軟體更新的內容大小進行篩選。 例如，您可以將 [內容大小 (KB)]  篩選設定為 [< 2048]  ，僅下載小於 2MB 的軟體更新。 使用此篩選可防止自動下載大型軟體更新，以在網路頻寬有限時，提供簡化 Windows 下層服務的更佳支援。 如需詳細資訊，請參閱 [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056)(Configuration Manager 及下層作業系統上的簡化 Windows 服務)。
 
 #### <a name="to-configure-the-content-size-field"></a>設定內容大小欄位
 若要設定 [內容大小 (KB)]  欄位，請在建立 ADR 時移至 [建立自動部署規則精靈] 中的 [軟體更新]  頁面，或移至現有 ADR 內容中的 [軟體更新]  索引標籤。

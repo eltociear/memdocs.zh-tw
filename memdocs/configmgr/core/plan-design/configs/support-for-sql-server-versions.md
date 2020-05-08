@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 24c3a72eacea6446fb82785a25b0318d8cad0471
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3c52008089a6d23d5c4efe44f0970bb186eb334a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691386"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904640"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager 的 SQL Server 版本支援
 
@@ -65,7 +65,7 @@ SQL Server 必須位於站台伺服器電腦上。
 - 您所使用的 SQL Server 版本仍受 Microsoft 支援。
 - SQL Server 支援這兩種 SQL Server 版本之間的複寫。 如需詳細資訊，請參閱 [SQL Server 複寫回溯相容性](https://docs.microsoft.com/sql/relational-databases/replication/replication-backward-compatibility)。
 
-針對 SQL Server 2016 與之前的版本，對每個 SQL 版本與 Service Pack 的支援遵循 [Microsoft 生命週期](https://aka.ms/sqllifecycle)原則。 支援包括累積更新在內的特定 SQL Server Service Pack，除非它們中斷對 Service Pack 基準版本的回溯相容性。 從 SQL Server 2017 開始，將不會發行 Service Pack，因為它遵循[現代化的維護模型](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/) \(英文\)。 SQL Server 小組會建議持續的[主動式累積更新安裝](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/) (當它們成為可用時)。
+針對 SQL Server 2016 與之前的版本，對每個 SQL 版本與 Service Pack 的支援遵循 [Microsoft 生命週期](https://aka.ms/sqllifecycle)原則。 支援包括累積更新在內的特定 SQL Server Service Pack，除非它們中斷對 Service Pack 基準版本的回溯相容性。 從 SQL Server 2017 開始，將不會發行 Service Pack，因為它遵循[現代化的維護模型](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server) \(英文\)。 SQL Server 小組會建議持續的[主動式累積更新安裝](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism) (當它們成為可用時)。
 
 除非另有指定，否則以下是 Configuration Manager 所有現用版本支援的 SQL Server 版本。 如果新增新 SQL Server 版本的支援，就會註明新增該支援的 Configuration Manager 版本。 同樣地，如果支援已被取代，請查看受影響之 Configuration Manager 版本的詳細資料。
 

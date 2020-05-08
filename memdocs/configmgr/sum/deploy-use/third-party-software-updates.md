@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f430979a2189494e977c501a36f9f039f860ca7a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: f5461f888bfa2b749061eef4000f0d7c5f756b84
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771433"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906752"
 ---
 # <a name="enable-third-party-updates"></a>啟用協力廠商更新 
 
@@ -30,7 +30,7 @@ ms.locfileid: "81771433"
 ## <a name="prerequisites"></a>先決條件 
 - 最上層軟體更新點的 WSUSContent 資料夾上有足夠的磁碟空間來儲存協力廠商軟體更新的來源二進位檔案內容。
     - 必要的儲存體數量因廠商、更新類型以及您為部署所發佈的特定更新而異。
-    - 如果您需要將 WSUSContent 資料夾移至具有更多可用空間的另一個磁碟機，請參閱 [How to change the location where WSUS stores updates locally](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/) (如何變更 WSUS 在本機儲存更新的位置) 部落格文章。
+    - 如果您需要將 WSUSContent 資料夾移至具有更多可用空間的另一個磁碟機，請參閱 [How to change the location where WSUS stores updates locally](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally) (如何變更 WSUS 在本機儲存更新的位置) 部落格文章。
 - 協力廠商軟體更新同步處理服務需要存取網際網路。
     - 如需合作夥伴類別目錄清單，需要透過 HTTPS 連接埠 443 連線至 download.microsoft.com。 
     -  從網際網路存取任何協力廠商的類別目錄和更新內容檔案。 可能需要 443 以外的其他連接埠。
@@ -40,7 +40,7 @@ ms.locfileid: "81771433"
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>當 SUP 距離最上層站台伺服器很遠時的其他需求 
 
 1. 當 SUP 不在遠端時，必須啟用 SUP 上的 SSL。 這需要從內部憑證授權單位或透過公用提供者產生伺服器驗證憑證。
-    - [Configure SSL on WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) (在 WSUS 上設定 SSL)
+    - [Configure SSL on WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) (在 WSUS 上設定 SSL)
         - 當您在 WSUS 上設定 SSL 時，請注意有些 Web 服務和虛擬目錄一律是 HTTP 而非 HTTPS。 
         - Configuration Manager 會透過 HTTP 從您的 WSUS 內容目錄下載軟體更新套件的協力廠商內容。   
     - [在 SUP 上設定 SSL](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
@@ -234,7 +234,7 @@ ms.locfileid: "81771433"
 -  Configuration Manager 有新版的類別目錄 cab 檔案格式。 新的版本包括廠商的二進位檔憑證。 只要您核准並信任類別目錄，這些憑證就會新增至 [管理]  工作區之 [安全性]  下的 [憑證]  節點中。  
      - 只要下載的 URL 是 https 且更新經過簽署，您仍然可以使用較舊的類別目錄 cab 檔案版本。 因為二進位檔憑證不在 cab 檔中，也未經核准，所以無法發佈內容。 您可在 [憑證]  節點中找到憑證，解除封鎖後再次發佈更新來暫時解決此問題。 如果您要發佈使用不同憑證簽署的多項更新，每個要用到的憑證都需要解除封鎖。
      - 如需詳細資訊，請參閱下列狀態訊息表中的狀態訊息 11523 和 11524。
--  當頂層軟體更新點上的協力廠商軟體更新同步處理服務需要 Proxy 伺服器來進行網際網路存取時，數位簽章檢查可能會失敗。 若要解決此問題，請在站台系統上設定 WinHTTP Proxy 設定。 如需詳細資訊，請參閱[適用於 WinHTTP 的 Netsh 命令](https://go.microsoft.com/fwlink/p/?linkid=199086) \(英文\)。
+-  當頂層軟體更新點上的協力廠商軟體更新同步處理服務需要 Proxy 伺服器來進行網際網路存取時，數位簽章檢查可能會失敗。 若要解決此問題，請在站台系統上設定 WinHTTP Proxy 設定。 如需詳細資訊，請參閱[適用於 WinHTTP 的 Netsh 命令](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10)) \(英文\)。
 - 針對內容儲存體使用 CMG 時，如果已啟用 [下載可用的差異內容]  [用戶端設定](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available)，第三方更新的內容將不會下載至用戶端。 <!--6598587-->
 
 ## <a name="status-messages"></a>狀態訊息

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 398f16b8f75d894030d76406807f74bdaa4be9d5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ace27e9035af6696e455382a32365be0e3824d65
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695946"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905206"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Configuration Manager Technical Preview 1807 版的功能 
 
@@ -82,7 +82,7 @@ Community Hub 是與他人共用實用 Configuration Manager 物件的集中式�
 
 - 在用戶端 OS 上使用 Configuration Manager 主控台。  
 
-    - 或者：在伺服器 OS 上，停用 [Internet Explorer:Enhanced Security Configuration](https://go.microsoft.com/fwlink/?LinkId=253461) (Internet Explorer：增強型安全性設定) (不建議)。  
+    - 或者：在伺服器 OS 上，停用 [Internet Explorer:Enhanced Security Configuration](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)) (Internet Explorer：增強型安全性設定) (不建議)。
 
 - 使用主控台的電腦需要存取網際網路，並連線到下列網站：  
     - `https://aka.ms`  

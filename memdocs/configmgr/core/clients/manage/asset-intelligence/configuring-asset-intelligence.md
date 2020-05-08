@@ -10,12 +10,12 @@ ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 56a65a0a4e1dd9a96e5725ea8c68cc435947bb08
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1a5c89d3fdd82bfa654f806c6931bde2621e714b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694756"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906617"
 ---
 # <a name="configure-asset-intelligence-in-configuration-manager"></a>在 Configuration Manager 中設定 Asset Intelligence
 
@@ -139,7 +139,7 @@ Asset Intelligence 同步處理點站台系統角色可用來將 Configuration M
 4.  在 [匯入]  頁面上，指定要匯入 Microsoft 大量授權 (MVLS) 檔案 (.xml 或 .csv) 或一般授權聲明檔案 (.csv)。 如需建立一般授權聲明檔案的詳細資訊，請參閱本主題稍後的 [建立要匯入的一般授權聲明資訊檔案](#BKMK_CreateGeneralLicenseStatement) 。  
 
     > [!WARNING]  
-    >  若要下載 .csv 格式的 MVLS 檔案，以匯入 Asset Intelligence 類別目錄，請參閱 [Microsoft 大量授權服務中心](https://go.microsoft.com/fwlink/p/?LinkId=226547)。 若要存取這項資訊，您必須在該網站上註冊帳戶。 如需如何取得 .xml 格式之 MVLS 檔案的相關資訊，請連絡您的 Microsoft 客戶代表。  
+    >  若要下載 .csv 格式的 MVLS 檔案，以匯入 Asset Intelligence 類別目錄，請參閱 [Microsoft 大量授權服務中心](https://www.microsoft.com/Licensing/servicecenter/default.aspx)。 若要存取這項資訊，您必須在該網站上註冊帳戶。 如需如何取得 .xml 格式之 MVLS 檔案的相關資訊，請連絡您的 Microsoft 客戶代表。  
 
 5.  輸入授權聲明檔案的 UNC 路徑，或選擇 [瀏覽]  以選取網路共用資料夾和檔案。  
 

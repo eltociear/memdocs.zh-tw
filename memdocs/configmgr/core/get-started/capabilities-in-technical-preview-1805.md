@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 88234bb3117850bc3280242671ae459308a5262e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d8c1cd6610bd09b2714951d8a755770b6347b2f6
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696026"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905237"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-configuration-manager"></a>Configuration Manager Technical Preview 1805 中的功能
 
@@ -163,8 +163,6 @@ Configuration Manager 不會將現有的傳統雲端發佈點執行個體移轉�
 <!--1358112-->
 
 Windows 低額外延遲背景傳輸 (LEDBAT) 是 Windows Server 的一個功能，能協助管理背景網路傳輸。 至於在所支援 Windows Server 版本上執行的發佈點，您可以啟用一個選項來協助調整網路流量。 有的話，用戶端只會使用網路頻寬。 
-
-如需有關 Windows LEDBAT 的詳細資訊，請參閱[新的傳輸功能改進](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/) \(New transport advancements\) 部落格文章。
 
 
 ### <a name="prerequisites"></a>先決條件

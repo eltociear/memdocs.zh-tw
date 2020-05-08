@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.openlocfilehash: 91c11e133c74cd3b55db09e8bf80fd6c4df7774d
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 4ed49ed3623b34bfb51fd66fafa858ae3951a5af
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210089"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906350"
 ---
 # <a name="configure-microsoft-edge-settings-in-configuration-manager"></a>在 Configuration Manager 中設定 Microsoft Edge 設定
 
 適用於：  Configuration Manager (最新分支)
 
 <!-- 1357310 -->
-從 1802 版開始，針對在 Windows 10 用戶端上使用 [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) 網頁瀏覽器的客戶，會建立 Configuration Manager 合規性設定原則來設定數個 Microsoft Edge 設定。 
+從 1802 版開始，針對在 Windows 10 用戶端上使用 [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) 網頁瀏覽器的客戶，會建立 Configuration Manager 合規性設定原則來設定數個 Microsoft Edge 設定。 
 
 此原則僅適用於 Windows 10 (1703 版或更新版本) 上的用戶端。 <!--511552-->
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: 138ff268f42dae1c15e11b34c92e6c7a3044705b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: a870d2bf18b9e7f064e914f450aee0f5e3e2e545
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078442"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906709"
 ---
 # <a name="prerequisites-for-software-updates-in-configuration-manager"></a>在 Configuration Manager 中進行軟體更新的先決條件
 
@@ -83,7 +83,7 @@ ms.locfileid: "82078442"
 
 - 您必須在您的軟體更新點與網站伺服器上，安裝 2015 年 10 月發行的 [KB 3095113](https://support.microsoft.com/kb/3095113)，才能同步**升級**分類。
   - 此更新會啟用 [升級]  分類。
-- 若要服務 Windows 10 1607 版及更新版本，您必須安裝並設定 [KB 3159706](https://support.microsoft.com/en-us/help/3159706)。 KB 3159706 已於 2016 年 5 月發行。
+- 若要服務 Windows 10 1607 版及更新版本，您必須安裝並設定 [KB 3159706](https://support.microsoft.com/help/3159706)。 KB 3159706 已於 2016 年 5 月發行。
   - 此更新可讓 WSUS 以原生方式來解密用於升級 Windows 10 1607 版及更新版本的檔案。
 
 >[!IMPORTANT]
@@ -95,7 +95,7 @@ ms.locfileid: "82078442"
 
 ### <a name="historical-information-about-kb-3095113"></a>KB 3095113 的歷程記錄資訊
 
- [KB 3095113](https://support.microsoft.com/kb/3095113) 於 2015 年 10 月[發行為 Hotfix](https://blogs.technet.microsoft.com/wsus/2015/12/03/important-update-for-wsus-4-0-kb-3095113/)，以將 Windows 10 升級的支援新增至 WSUS。 此更新可讓 WSUS 在 Windows 10 的 [升級]  分類中同步處理及發佈更新。
+ [KB 3095113](https://support.microsoft.com/kb/3095113) 於 2015 年 10 月[發行為 Hotfix](https://docs.microsoft.com/archive/blogs/wsus/important-update-for-wsus-4-0-kb-3095113)，以將 Windows 10 升級的支援新增至 WSUS。 此更新可讓 WSUS 在 Windows 10 的 [升級]  分類中同步處理及發佈更新。
 
 若未先安裝 [Hotfix 3095113](https://support.microsoft.com/kb/3095113)，即同步任何升級，將會在 WSUS 資料庫 (SUSDB) 中填入無法使用的資料。 必須先清除該資料，才能正確地部署升級。 無法使用 [下載軟體更新精靈] 來下載此狀態中的 Windows 10 升級。
 
@@ -115,13 +115,13 @@ ERROR: DownloadContentFiles() failed with hr=0x80073633
 # This log is truncated for readability.
 ```
 
-在過去，當發生這些錯誤時，可藉由執行 [WSUS 解決步驟](https://blogs.technet.microsoft.com/wsus/2016/01/29/how-to-delete-upgrades-in-wsus/)的修改版本來解決這些錯誤。 由於這些步驟類似於在安裝 KB 3159706 後不執行所需手動步驟的解決方案，所以我們將這兩組步驟結合成下一節中的單一解決方案：
+在過去，當發生這些錯誤時，可藉由執行 [WSUS 解決步驟](https://docs.microsoft.com/archive/blogs/wsus/how-to-delete-upgrades-in-wsus)的修改版本來解決這些錯誤。 由於這些步驟類似於在安裝 KB 3159706 後不執行所需手動步驟的解決方案，所以我們將這兩組步驟結合成下一節中的單一解決方案：
 
 - [安裝 KB 3095113 或 KB 3159706 之前，先將同步升級復原](#bkmk_fix-upgrades)。
 
 ### <a name="historical-information-about-kb-3159706"></a>KB 3159706 的歷程記錄資訊
 
-KB 3148812 最初於 2016 年 4 月發行，讓 WSUS 以原生方式來解密用於升級 Windows 10 套件的 .esd 檔案。 [KB 3148812 造成了部分客戶的問題](https://blogs.technet.microsoft.com/wsus/2016/05/05/the-long-term-fix-for-kb3148812-issues/)，並已取代為 [KB 3159706](https://support.microsoft.com/en-us/help/3159706)。 您必須先在所有軟體更新點和站台伺服器上安裝 KB 3159706，才能服務 Windows 10 1607 版和更新版本的裝置。 不過，如果您不知道在安裝 KB 之後需要進行下列手動步驟，就可能會發生問題：
+KB 3148812 最初於 2016 年 4 月發行，讓 WSUS 以原生方式來解密用於升級 Windows 10 套件的 .esd 檔案。 [KB 3148812 造成了部分客戶的問題](https://docs.microsoft.com/archive/blogs/wsus/the-long-term-fix-for-kb3148812-issues)，並已取代為 [KB 3159706](https://support.microsoft.com/help/3159706)。 您必須先在所有軟體更新點和站台伺服器上安裝 KB 3159706，才能服務 Windows 10 1607 版和更新版本的裝置。 不過，如果您不知道在安裝 KB 之後需要進行下列手動步驟，就可能會發生問題：
 
 1. 從提高權限的命令提示下，執行 `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing`。
 1. 重新啟動所有 WSUS 伺服器上的 WSUS 服務。

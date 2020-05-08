@@ -10,12 +10,12 @@ ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9777fb12a2d63a990587386ac33cb2749bf19a4e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 93c3887307c32ea636a6dbb064cda13f4b9130c6
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702816"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905139"
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-configuration-manager-current-branch"></a>規劃將 Configuration Manager 物件移轉至 Configuration Manager 最新分支
 
@@ -123,7 +123,7 @@ ms.locfileid: "81702816"
 您可以移轉設定項目和設定基準。  
 
 > [!NOTE]  
->  移轉作業不支援 Configuration Manager 2007 來源階層中未解譯的設定項目。 您無法移轉或將這些設定項目匯入到目的地階層。 如需未解譯設定項目的詳細資訊，請參閱 Configuration Manager 2007 文件庫中 [About Configuration Items in Desired Configuration Management](https://go.microsoft.com/fwlink/?LinkId=103846) (關於 Desired Configuration Management 的設定項目) 主題的＜Uninterpreted Configuration Item＞(未解譯的設定項目)。  
+>  移轉作業不支援 Configuration Manager 2007 來源階層中未解譯的設定項目。 您無法移轉或將這些設定項目匯入到目的地階層。 如需未解譯設定項目的詳細資訊，請參閱 Configuration Manager 2007 文件庫中 [About Configuration Items in Desired Configuration Management](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item) (關於 Desired Configuration Management 的設定項目) 主題的＜Uninterpreted Configuration Item＞(未解譯的設定項目)。  
 
 您可以匯入 Configuration Manager 2007 設定套件。 匯入程序會自動轉換設定套件，使其與 Configuration Manager 最新分支相容。  
 

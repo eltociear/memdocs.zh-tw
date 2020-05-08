@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3af6f2883ebf17ab19f57762b8b3bf26e3716262
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 9e59d850a78a8f45f93769003e7a1de99e5634b3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075722"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906393"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>在 Configuration Manager 中建立 Windows 應用程式
 
@@ -58,7 +58,7 @@ Configuration Manager 支援在所有支援的 Windows 10 版本上佈建應用�
 
 Configuration Manager 支援 Windows 10 應用程式套件 (.msix) 與應用程式套件組合 (.msixbundle) 格式。 Windows 10 1809 版或更新版本支援這些格式。
 
-- 如需 MSIX 的概觀，請參閱[深入了解 MSIX](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/) \(英文\)。  
+- 如需 MSIX 的概觀，請參閱[深入了解 MSIX](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix) \(英文\)。  
 
 - 如需如何建立新的 MSIX 應用程式，請參閱 [Insider 組建 17682 中引進的 MSIX 支援](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376) \(英文\)。  
 
@@ -79,7 +79,7 @@ Configuration Manager 支援 Windows 10 應用程式套件 (.msix) 與應用程�
 
   - 從 Microsoft 網上商店安裝 [MSIX Packaging Tool](https://www.microsoft.com/store/productId/9N5LW3JBCXKF)  
 
-  - 安裝 [MSIX 封裝工具驅動程式](/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
+  - 安裝 [MSIX 封裝工具驅動程式](https://docs.microsoft.com/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
 
 請勿在此裝置上安裝任何其他應用程式或服務。 它是您的參考系統。
 
@@ -104,7 +104,7 @@ Configuration Manager 支援 Windows 10 應用程式套件 (.msix) 與應用程�
 
 若要使用此 MSIX 應用程式，您必須先以數位方式簽署它，用戶端才會信任它。 如需有關此程序的詳細資訊，請參閱下列文章：
 
-- [MSIX – MSIX Packaging Tool – 簽署 MSIX 套件](https://blogs.msdn.microsoft.com/sgern/2018/09/06/msix-the-msix-packaging-tool-signing-the-msix-package/) \(英文\)
+- [MSIX – MSIX Packaging Tool – 簽署 MSIX 套件](https://docs.microsoft.com/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package) \(英文\)
 - [如何使用 SignTool 簽署應用程式套件](https://docs.microsoft.com/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool) \(英文\)
 
 簽署應用程式之後，請在 Configuration Manager 中的應用程式上建立新的部署類型。 如需詳細資訊，請參閱[建立應用程式的部署類型](../deploy-use/create-applications.md#bkmk_create-dt)。

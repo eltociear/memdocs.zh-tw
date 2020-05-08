@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2ae184400a3de0d7ab27fffc1ce1e6287593b1ae
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: ed3f53b6e2e9557def20fc459dfcf4641b0e396d
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076300"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905833"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Configuration Manager Technical Preview 1601 中的功能
 
@@ -164,7 +164,6 @@ ms.locfileid: "82076300"
 
  Configuration Manager 現在藉由從應用程式市集匯入授權資訊，可透過此種程式協助您管理購買的應用程式，並追蹤您已經使用了多少個授權。  
 
- 如需詳細資訊，請參閱[使用 Configuration Manager 管理您透過大量採購方案購買的應用程式](https://technet.microsoft.com/library/mt627954.aspx)。  
 
 ### <a name="ios---app-configuration-for-applicationsbr-hybrid"></a>iOS - 混合式應用程式的應用程式<br />設定  
  有些 iOS 應用程式支援預先設定的設定 (例如應用程式應該連線的伺服器或資料庫)。 Configuration Manager 現在支援將應用程式設定原則部署至裝置，而這些裝置可以讓使用者立即使用應用程式，而不需要知道這項資訊。 開發人員必須在其應用程式中啟用這項功能。  

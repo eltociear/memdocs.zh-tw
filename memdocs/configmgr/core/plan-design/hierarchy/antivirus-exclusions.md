@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: df951bfb44313cfec8dacb8c0df34abb7beb0c56
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f3f38de1d7440ffd0293bde359deeb6be3bbeffb
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703736"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906197"
 ---
 # <a name="recommended-antivirus-exclusions-for-configuration-manager"></a>Configuration Manager 的建議防毒軟體排除項目
 
@@ -114,10 +114,10 @@ ms.locfileid: "81703736"
 
 如需防毒軟體排除項目的詳細資訊，請參閱下列文章：
 
-[Configuration Manager 最新分支防毒軟體排除項目 -System Center Premier Field Engineer 部落格](https://blogs.technet.microsoft.com/systemcenterpfe/2017/05/24/configuration-manager-current-branch-antivirus-update/) \(英文\)
+[Configuration Manager 最新分支防毒軟體排除項目 -System Center Premier Field Engineer 部落格](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/configuration-manager-current-branch-antivirus-exclusions/ba-p/884831) \(英文\)
 
-[已更新的 System Center 2012 Configuration Manager 防毒軟體排除項目，含有關 OSD 與開機映像的詳細資料](https://blogs.technet.microsoft.com/systemcenterpfe/2013/01/11/updated-system-center-2012-configuration-manager-antivirus-exclusions-with-more-details-on-osd-and-boot-images-etc/) \(英文\)
+[已更新的 System Center 2012 Configuration Manager 防毒軟體排除項目，含有關 OSD 與開機映像的詳細資料](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/updated-system-center-2012-configuration-manager-antivirus/ba-p/884371) \(英文\)
 
-[如何選擇防毒軟體以在執行 SQL Server 的電腦上執行](https://support.microsoft.com/en-us/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server) \(機器翻譯\)
+[如何選擇防毒軟體以在執行 SQL Server 的電腦上執行](https://support.microsoft.com/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server) \(機器翻譯\)
 
-[執行目前支援之 Windows 版本的企業電腦的病毒掃描建議](https://support.microsoft.com/en-us/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows)
+[執行目前支援之 Windows 版本的企業電腦的病毒掃描建議](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows)

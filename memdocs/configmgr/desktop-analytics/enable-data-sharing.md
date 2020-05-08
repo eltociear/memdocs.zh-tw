@@ -10,12 +10,12 @@ ms.assetid: be680198-4cea-4378-a686-d52f382ba483
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7610b0e60f3ea02918c9dd98858a3b2bfd7c712
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f8dd7c4c561ca22c679ee8ae03764ebb20b87664
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708196"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906091"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>啟用電腦分析的資料共用
 
@@ -73,7 +73,10 @@ Microsoft 建議您搭配電腦分析啟用 [增強 (受限)]  診斷資料層�
 > [!Important]  
 > 針對隱私權和資料完整性，Windows 會在與診斷資料端點通訊時，檢查 Microsoft SSL 憑證 (憑證關聯)。 無法進行 SSL 攔截和檢查。 若要使用電腦分析，請從 SSL 檢查中排除這些端點。<!-- BUG 4647542 -->
 
-從 2002 版開始，如果 Configuration Manager 站台無法連線至雲端服務的必要端點，就會引發重大狀態訊息識別碼 11488。 當無法連線至服務時，SMS_SERVICE_CONNECTOR 元件狀態會變更為重大。 在 Configuration Manager 主控台的 [[元件狀態]](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) 節點中，查看詳細狀態。<!-- 5566763 -->
+從 2002 版開始，如果 Configuration Manager 站台無法連線至雲端服務的必要端點，就會引發重大狀態訊息識別碼 11488。 當無法連線至服務時，SMS_SERVICE_CONNECTOR 元件狀態會變更為重大。 在 Configuration Manager 主控台的 [元件狀態](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) 節點中，查看詳細狀態。<!-- 5566763 -->
+
+> [!NOTE]
+> 如需 Microsoft IP 位址範圍的詳細資訊，請參閱 [Microsoft 公用 IP 空間](https://www.microsoft.com/download/details.aspx?id=53602) \(英文\)。 這些位址會定期更新。 服務沒有任何細微性，您可以使用這些範圍中的任何 IP 位址。
 
 ### <a name="server-connectivity-endpoints"></a>伺服器連線端點
 

@@ -10,12 +10,12 @@ ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 623125ad64c7ed421ea209137eb68f17891d7a81
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7848e3c0c38391ab61d10ad46cbb772c812539c7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694846"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906647"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-configuration-manager"></a>在 Configuration Manager 中規劃將用戶端部署至 Windows Embedded 裝置
 
@@ -46,11 +46,11 @@ ms.locfileid: "81694846"
 
  Configuration Manager 支援管理下列類型的寫入篩選器：  
 
-- 檔案型寫入篩選器 (FBWF) - 如需詳細資訊，請參閱 [File-Based Write Filter](https://go.microsoft.com/fwlink/?LinkID=204717) (檔案型寫入篩選器)。  
+- 檔案型寫入篩選器 (FBWF) - 如需詳細資訊，請參閱 [File-Based Write Filter](https://docs.microsoft.com/previous-versions/windows/embedded/aa940926(v=winembedded.5)) (檔案型寫入篩選器)。  
 
-- 增強式寫入篩選器 (EWF) RAM - 如需詳細資訊，請參閱 [Enhanced Write Filter](https://go.microsoft.com/fwlink/?LinkId=204718) (增強式寫入篩選器)。  
+- 增強式寫入篩選器 (EWF) RAM - 如需詳細資訊，請參閱 [Enhanced Write Filter](https://docs.microsoft.com/previous-versions/windows/embedded/ms912906(v=winembedded.5)) (增強式寫入篩選器)。  
 
-- 整合寫入篩選器 (UWF) - 如需詳細資訊，請參閱 [Unified Write Filter](https://go.microsoft.com/fwlink/?LinkId=309236) (整合寫入篩選器)。  
+- 整合寫入篩選器 (UWF) - 如需詳細資訊，請參閱 [Unified Write Filter](https://docs.microsoft.com/windows-hardware/customize/enterprise/unified-write-filter) (整合寫入篩選器)。  
 
   當 Windows Embedded 裝置處於 EWF RAM Reg 模式時，Configuration Manager 不支援寫入篩選器。  
 

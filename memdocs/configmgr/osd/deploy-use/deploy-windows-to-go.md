@@ -10,12 +10,12 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0174cea761da15cc57eeb55fba26070fe664bb76
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: add0d17205cc82b30f3a88558c690a813239b92a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690506"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906941"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>使用 Configuration Manager 部署 Windows To Go
 
@@ -23,7 +23,7 @@ ms.locfileid: "81690506"
 
 此主題說明在 Configuration Manager 中佈建 Windows To Go 的步驟。 Windows To Go 是 Windows 8 的企業版功能，可用於建立 Windows To Go 工作區，無論電腦執行哪一種作業系統，只要符合 Windows 7 或 Windows 8 的憑證需求，就可以從以 USB 連接的外部磁碟機啟動 Windows To Go 工作區。 Windows To Go 工作區可以使用企業應用於桌上型電腦和膝上型電腦的映像，管理方法也相同。  
 
- 如需 Windows To Go 的詳細資訊，請參閱 [Windows To Go 功能概觀](https://go.microsoft.com/fwlink/p/?LinkId=263433)。  
+ 如需 Windows To Go 的詳細資訊，請參閱 [Windows To Go 功能概觀](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11))。  
 
 ## <a name="provision-windows-to-go"></a>佈建 Windows To Go  
  Windows To Go 是儲存在 USB 連接的外部磁碟機中的作業系統。 佈建 Windows To Go 磁碟機的方式與佈建其他作業系統部署的方式相似。 不過，由於 Windows To Go 的設計是以使用者為中心，而且是具高度機動性的解決方案，因此必須運用稍微不同的方法佈建這些磁碟機。  

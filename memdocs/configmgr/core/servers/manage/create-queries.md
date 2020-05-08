@@ -10,12 +10,12 @@ ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 05b77fa181da67858c30f48fc8045c20384953ce
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 63f815394414167ad4f887c5970538eab22c931a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703446"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906152"
 ---
 # <a name="create-queries-in-configuration-manager"></a>在 Configuration Manager 中建立查詢
 
@@ -49,9 +49,9 @@ ms.locfileid: "81703446"
     > [!TIP]  
     > 您可以使用下列參考文件，協助您建構自己的 WQL 查詢：  
     >   
-    > -   [WQL (適用於 WMI 的 SQL)](https://go.microsoft.com/fwlink/p/?LinkId=256653)  
-    > -   [WHERE 子句](https://go.microsoft.com/fwlink/p/?LinkId=256654)  
-    > -   [WQL 運算子](https://go.microsoft.com/fwlink/p/?LinkId=256655)  
+    > -   [WQL (適用於 WMI 的 SQL)](https://docs.microsoft.com/windows/win32/wmisdk/wql-sql-for-wmi)  
+    > -   [WHERE 子句](https://docs.microsoft.com/windows/win32/wmisdk/where-clause)  
+    > -   [WQL 運算子](https://docs.microsoft.com/windows/win32/wmisdk/wql-operators)  
 
 8.  在 [&lt;查詢名稱\> 陳述式內容]  對話方塊的 [準則]  索引標籤上，指定用來縮小查詢結果的準則。 例如，您可以只傳回具有 **XYZ** 之站台碼的資源。 您可以設定查詢的多項準則。  
 

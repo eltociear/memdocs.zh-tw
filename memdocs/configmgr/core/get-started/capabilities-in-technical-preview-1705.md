@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0a10726062d679666d14cbbb0b87510af5dfe30c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3259bd1b20740046e70b1ef53281b0ff235a3896
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078799"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905472"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Configuration Manager Technical Preview 1705 中的功能
 
@@ -121,12 +121,12 @@ ms.locfileid: "82078799"
 
 - 此版本不支援容錯移轉成使用非同步認可複本作為您的站台資料庫。
   > [!CAUTION]  
-  > 由於 Configuration Manager 並不會驗證非同步認可複本的狀態來確認它是否為最新版，並且[這類複本在設計上即可能不同步](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes)，因此使用非同步認可複本作為站台資料庫將可能讓您站台和資料的完整性面臨風險。  
+  > 由於 Configuration Manager 並不會驗證非同步認可複本的狀態來確認它是否為最新版，並且[這類複本在設計上即可能不同步](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes)，因此使用非同步認可複本作為站台資料庫將可能讓您站台和資料的完整性面臨風險。  
 
 - 您可以在可用性群組中使用的複本數量和類型，與您所用 SQL Server 版本所支援的複本數量和類型相同。   (先前的支援僅限使用兩個同步認可複本)。
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>設定非同步認可複本
-若要將非同步複本新增到[與 Configuration Manager 搭配使用的可用性群組](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)，您並不需要執行設定同步複本所需的設定指令碼。 (這是因為不支援使用該非同步複本作為站台資料庫)。如需有關如何將次要複本新增到可用性群組的資訊，請參閱 [SQL Server 文件](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot))。
+若要將非同步複本新增到[與 Configuration Manager 搭配使用的可用性群組](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)，您並不需要執行設定同步複本所需的設定指令碼。 (這是因為不支援使用該非同步複本作為站台資料庫)。如需詳細資訊，請參閱[將次要複本加入至可用性群組](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014)。
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>使用非同步複本來復原您的站台
 在您使用非同步複本來復原站台資料庫之前，必須先停止作用中的主要站台，以防止使用者對站台資料庫進行額外的寫入。 在停止該站台之後，您可以使用非同步複本來取代使用[手動復原的資料庫](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered)。
@@ -154,8 +154,8 @@ ms.locfileid: "82078799"
 
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>設定及部署 Windows Defender 應用程式防護原則
 
-[Windows Defender 應用程式防護](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)是一個新的 Windows 功能，可藉由在作業系統其他部分所無法存取的安全隔離容器中開啟未受信任的網站，來協助保護您的使用者。 在此 Technical Preview 中，我們已新增支援，可使用您所設定的 Configuration Manager 合規性設定來設定此功能，然後部署到集合。
-此功能將在 64 位元版 Windows 10 Creator's Update 的預覽版中發行。 若要立即測試此功能，您必須使用此更新的預覽版本。
+[Windows Defender 應用程式防護](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)是一個新的 Windows 功能，可藉由在作業系統其他部分所無法存取的安全隔離容器中開啟未受信任的網站，來協助保護您的使用者。 此技術預覽新增一項支援，可以讓您使用您所設定的 Configuration Manager 合規性設定來設定此功能，並將其部署到集合中。
+此功能將隨 Windows 10 Creators Update 64 位元版的預覽版發行。 若要立即測試此功能，您必須使用此更新的預覽版本。
 
 
 ### <a name="before-you-start"></a>在您開始使用 Intune 之前

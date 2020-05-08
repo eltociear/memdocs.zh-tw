@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df289c284774a4e0bb3a379853f31f8d6f5bd44d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 623a8dab52e13c4674b961e825033430d34a8f88
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704166"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906553"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>密碼編譯控制項技術參考
 
@@ -260,5 +260,5 @@ Configuration Manager 也會使用用戶端驗證憑證，從發佈點傳送狀�
 - 停用 SSL 3.0、TLS 1.0 和 TLS 1.1 
 - 重新排序 TLS 相關的加密套件 
 
-如需詳細資訊，請參閱 [How to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](https://support.microsoft.com/en-us/kb/245030/) (如何在 Schannel.dll 中限制使用特定的密碼編譯演算法與通訊協定) 和 [Prioritizing Schannel Cipher Suites](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx) (設定安全通道加密套件的優先順序)。 這些程序不會影響 Configuration Manager 的功能。
+如需詳細資訊，請參閱 [How to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](https://support.microsoft.com/help/245030/) (如何在 Schannel.dll 中限制使用特定的密碼編譯演算法與通訊協定) 和 [Prioritizing Schannel Cipher Suites](https://docs.microsoft.com/windows/win32/secauthn/prioritizing-schannel-cipher-suites) (設定安全通道加密套件的優先順序)。 這些程序不會影響 Configuration Manager 的功能。
 

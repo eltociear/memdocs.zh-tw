@@ -10,12 +10,12 @@ ms.assetid: 6893fce1-7ad5-4151-9ba9-3096871e8e4a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7ba1f41af778602fb95d268c071b5f0d1dde158c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ad92e4906c45b5c720ab35efc055449a27cc0850
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693386"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906226"
 ---
 # <a name="security-and-privacy-for-migration-to-configuration-manager-current-branch"></a>遷移至 Configuration Manager 最新分支的安全性和隱私權
 
@@ -48,9 +48,9 @@ ms.locfileid: "81693386"
 
  如需有關安全性和隱私權資的詳細資訊，請參閱下列其中一個主題：  
 
--   如需 Configuration Manager 2007 隱私權資訊的詳細資訊，請參閱 Configuration Manager 2007 文件庫中的 [Configuration Manager 2007 的安全性與隱私權](https://go.microsoft.com/fwlink/p/?LinkId=216450)。  
+-   如需 Configuration Manager 2007 隱私權資訊的詳細資訊，請參閱 Configuration Manager 2007 文件庫中的 [Configuration Manager 2007 的安全性與隱私權](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680768(v=technet.10))。  
 
--   如需 System Center 2012 Configuration Manager 隱私權資訊的詳細資訊，請參閱 System Center 2012 Configuration Manager 文件庫中的 [System Center 2012 Configuration Manager 的安全性和隱私權](https://technet.microsoft.com/library/gg682033.aspx)。  
+-   如需 System Center 2012 Configuration Manager 隱私權資訊的詳細資訊，請參閱 System Center 2012 Configuration Manager 文件庫中的 [System Center 2012 Configuration Manager 的安全性和隱私權](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682033(v=technet.10))。  
 
 -   如需 Configuration Manager 隱私權資訊的詳細資訊，請參閱 [Configuration Manager 的安全性和隱私權](../../core/plan-design/security/security-and-privacy.md)。  
 

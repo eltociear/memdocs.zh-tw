@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7ec5802a8931bc4397eaf302920f09d8597802fe
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 73aac9e1bfb7b902a7db28ba4be00a2a02277324
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705556"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905687"
 ---
 # <a name="capabilities-in-technical-preview-1607-for-configuration-manager"></a>Configuration Manager Technical Preview 1607 中的功能
 
@@ -62,7 +62,7 @@ Configuration Manager 1602 版中引進了軟體中心的自訂商標。 在 Tec
 ## <a name="use-the-same-network-adapter-for-multiple-pxe-initiated-deployments"></a>針對多個 PXE 起始的部署使用相同的網路介面卡
 在 Technical Preview 1607 版中，當您使用乙太網路介面卡製作多部裝置的映像時 (例如您在多部裝置上使用的 USB 乙太網路介面卡)，您可以啟用新的設定，以便輸入乙太網路介面卡的硬體識別碼。 執行 PXE 安裝和註冊用戶端時，Configuration Manager 會略過清單中的硬體識別碼。
 
-如需此問題的詳細資訊，請參閱 [Configuration Manager OSD 支援小組部落格](https://blogs.technet.microsoft.com/system_center_configuration_manager_operating_system_deployment_support_blog/2015/08/27/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in-system-center-configuration-manger-osd/)。  
+如需此問題的詳細資訊，請參閱 [Configuration Manager OSD 支援小組部落格](https://techcommunity.microsoft.com/t5/configuration-manager-archive/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in/ba-p/273721)。  
 
 ### <a name="enable-the-feature-to-manage-duplicate-hardware-identifiers"></a>啟用此功能以管理重複的硬體識別碼  
 1. 在 Configuration Manager 主控台中，移至 [管理]   > [概觀]   > [雲端服務]   > [更新與服務]   > [功能]  。

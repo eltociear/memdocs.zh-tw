@@ -10,23 +10,23 @@ ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9917ec8a1ed2072903276de438f49d3f783a1284
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ed155fb61491a273732ed3b974b6ddb5ac29bc89
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692606"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904005"
 ---
 # <a name="health-attestation-for-configuration-manager"></a>Configuration Manager 的健康情況證明
 
 適用於：  Configuration Manager (最新分支)
 
-系統管理員可以在 Configuration Manager 主控台內檢視 [Windows 10 裝置健康情況證明](https://technet.microsoft.com/library/mt592023.aspx)的狀態。  系統管理員可透過裝置健康情況證明，確認用戶端電腦已啟用下列可信任的 BIOS、TPM 及開機軟體設定：  
+系統管理員可以在 Configuration Manager 主控台內檢視 [Windows 10 裝置健康情況證明](https://docs.microsoft.com/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices)的狀態。  系統管理員可透過裝置健康情況證明，確認用戶端電腦已啟用下列可信任的 BIOS、TPM 及開機軟體設定：  
 
 -   開機初期啟動的反惡意程式碼 - 開機初期啟動的反惡意程式碼 (ELAM) 可在您電腦啟動時且在其他廠商驅動程式初始化之前，為它提供保護。 [如何開啟 ELAM](https://gallery.technet.microsoft.com/How-to-turn-on-Early-84552ec5)  
 -   BitLocker -「Windows BitLocker 磁碟機加密」是一種軟體，可讓您將存放在 Windows 作業系統磁碟區上的所有資料都加密。  [如何開啟 BitLocker](https://gallery.technet.microsoft.com/How-to-turn-on-BitLocker-34294d3d)  
--   安全開機 -「安全開機」是由電腦產業成員所開發的一種安全標準，可協助確保您的電腦只使用電腦製造商信任的軟體來開機。 [深入了解安全開機](https://technet.microsoft.com/library/hh824987.aspx)  
--   程式碼完整性 -「程式碼完整性」是一項功能，可藉由在每次將驅動程式或系統檔案載入記憶體時驗證其完整性，改進作業系統的安全性。 [深入了解程式碼完整性](https://technet.microsoft.com/library/dd348642.aspx)  
+-   安全開機 -「安全開機」是由電腦產業成員所開發的一種安全標準，可協助確保您的電腦只使用電腦製造商信任的軟體來開機。 [深入了解安全開機](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh824987(v=win.10))  
+-   程式碼完整性 -「程式碼完整性」是一項功能，可藉由在每次將驅動程式或系統檔案載入記憶體時驗證其完整性，改進作業系統的安全性。 [深入了解程式碼完整性](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd348642(v=ws.10))  
 
 由 Configuration Manager 管理的電腦和內部部署資源，以及透過 Microsoft Intune 管理的行動裝置，皆可使用這項功能。 系統管理員可以指定要透過雲端還是內部部署基礎結構來執行報告。 內部部署裝置健康情況證明監視可讓系統管理員監視無法存取網際網路的用戶端電腦。
 
@@ -34,7 +34,7 @@ ms.locfileid: "81692606"
 
  **需求：**  
 
--   執行 Windows 10 版本 1607 或 Windows Server 2016 版本 1607 並[已啟用裝置健康情況證明](https://technet.microsoft.com/windows-server-docs/security/device-health-attestation)的用戶端裝置。
+-   執行 Windows 10 版本 1607 或 Windows Server 2016 版本 1607 並[已啟用裝置健康情況證明](https://docs.microsoft.com/windows-server/security/device-health-attestation)的用戶端裝置。
 -   啟用 TPM 1.2 或 TPM 2 的裝置。
 -   使用雲端管理時，Configuration Manager 用戶端代理程式與具有 *has.spserv.microsoft.com* (連接埠 443)「健康情況證明」服務 (雲端管理) 的管理點之間的通訊。 在內部部署時，用戶端必須能夠與啟用裝置健康情況證明的管理點通訊。
 

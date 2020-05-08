@@ -10,12 +10,12 @@ ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8889c0ee306eaaf682563b2e8e72d5482054d1c7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7e4e84b55c929dd878cb0720b3f61dfceedcf449
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690256"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904101"
 ---
 # <a name="prepare-windows-servers-to-support-configuration-manager"></a>準備 Windows Servers 以支援 Configuration Manager
 
@@ -98,7 +98,7 @@ Windows 電腦必須符合其作為站台伺服器或站台系統伺服器的預
 ##  <a name="iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a> 用於發佈點的 IIS 要求篩選  
 IIS 預設會使用要求篩選來封鎖 HTTP 或 HTTPS 通訊存取伺服器數個副檔名和資料夾位置。 在發佈點上，如此可預防用戶端下載包含遭封鎖副檔名或資料夾位置的套件。  
 
-如果您的套件來源檔案包含在 IIS 中遭要求篩選設定封鎖的副檔名，您就必須將要求篩選設定為允許這些副檔名。 在您發佈點電腦上的「IIS 管理員」中[編輯要求篩選功能](https://technet.microsoft.com/library/hh831621.aspx)，即可完成此操作。  
+如果您的套件來源檔案包含在 IIS 中遭要求篩選設定封鎖的副檔名，您就必須將要求篩選設定為允許這些副檔名。 在您發佈點電腦上的「IIS 管理員」中[編輯要求篩選功能](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11))，即可完成此操作。  
 
 此外，Configuration Manager 的套件和應用程式使用下列副檔名。 請確認您的要求篩選設定未封鎖下列副檔名：  
 
@@ -136,4 +136,4 @@ IIS 預設會使用要求篩選來封鎖 HTTP 或 HTTPS 通訊存取伺服器數
 - HEAD
 - PROPFIND
 
-如需詳細資訊，請參閱[設定 IIS 中的要求篩選](https://technet.microsoft.com/library/hh831621.aspx#Verbs) \(英文\)。 
+如需詳細資訊，請參閱[設定 IIS 中的要求篩選](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs) \(英文\)。 
