@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 11066470347db0f3ffbfadda9897aed92baa645b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e7bc30c4350d96654a0f6a6ae548d63c2928e791
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073597"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904662"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Configuration Manager 1802 版中的新功能
 
@@ -169,7 +169,7 @@ Surface 裝置儀表板提供在您的環境中找到的 Surface 裝置相關資
 
 ### <a name="microsoft-edge-browser-policies"></a>Microsoft Edge 瀏覽器原則
 <!-- 1357310 -->
-針對在 Windows 10 用戶端上使用 [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) 網頁瀏覽器的客戶，請建立 Configuration Manager 合規性設定原則來設定數個 Microsoft Edge 設定。 如需詳細資訊，請參閱[建立 Microsoft Edge 瀏覽器的設定檔](../../../compliance/deploy-use/browser-profiles.md)。 
+針對在 Windows 10 用戶端上使用 [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) 網頁瀏覽器的客戶，請建立 Configuration Manager 合規性設定原則來設定數個 Microsoft Edge 設定。 如需詳細資訊，請參閱[建立 Microsoft Edge 瀏覽器的設定檔](../../../compliance/deploy-use/browser-profiles.md)。 
 
 
 

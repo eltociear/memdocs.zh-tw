@@ -13,17 +13,17 @@ ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a65efa6e-4a48-47f3-8f6e-34a85ca64ced
-ms.reviewer: jeffbu, cgerth
+ms.reviewer: andredm7
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65d4745580a4b0d733ffe14be03f0f9893074586
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 613bb0ddf935815a4022fa483e0aad615c64121a
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080091"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802033"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Intune 部署規劃、設計和實作指南
 
@@ -53,7 +53,10 @@ ms.locfileid: "82080091"
 
 本指南也會提供其他技術資訊，以及可用來協助您使用 Intune 部署規劃、設計和實作程序的資料表範本。
 
-- [其他資源：連結和資料表範本](planning-guide-resources.md)
+### <a name="additional-resources"></a>其他資源
+
+- [Microsoft 端點管理員概念證明 (PoC) 指南：](https://www.microsoft.com/microsoft-365/partners/endpoint-manager-poc)這旨在提供如何在組織中執行成功 PoC 的架構和技術指導。
+- [連結和資料表範本](planning-guide-resources.md)
 
 ## <a name="assumptions"></a>假設
 

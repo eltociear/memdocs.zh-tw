@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/10/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 71039737a74aebb3066c001536aaf677a0467696
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c37563dee40d776d352dec4e0b8ef11b1dc8f67b
+ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79345672"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506534"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Microsoft Intune 中的傳遞最佳化設定
 
@@ -39,22 +39,28 @@ ms.locfileid: "79345672"
 2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
 
 3. 輸入下列內容：
+   - **平台**：選取 [Windows 10 及更新版本]  。
+   - **設定檔類型**：選取 [傳遞最佳化]  。
 
-    - **名稱**：為新的設定檔輸入描述性名稱。
-    - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
-    - **平台**：選取 [Windows 10 及更新版本]  。
-    - **設定檔類型**：選取 [傳遞最佳化]  。
+4. 選取 [建立]  。
 
-4. 選擇 [設定]   > [設定]  ，並定義更新和應用程式的下載方式。 如需可用設定的資訊，請參閱 [Intune 的傳遞最佳化設定](delivery-optimization-settings.md)。
+5. 在 [基本]  頁面上，輸入新設定檔的名稱與描述，然後選擇 [下一步]  。
 
-5. 完成後，請選取 [確定]   > [建立]  以儲存變更。
+6. 在 [組態設定]  頁面上，定義要下載更新及應用程式的方式。 如需可用設定的資訊，請參閱 [Intune 的傳遞最佳化設定](delivery-optimization-settings.md)。
 
-設定檔隨即建立並顯示在清單中。 接下來，[指派設定檔](device-profile-assign.md)，然後[監視其狀態](device-profile-monitor.md)。
+   當完成設定時，請選取 [下一步]  。
 
-<!-- ## Move existing update rings to delivery optimization
+7. 在 [範圍 (標籤)]  頁面上，選取 [選取範圍標籤]  以開啟 [選取標籤]  窗格並指派範圍標籤到設定檔。
+  
+   選取 [下一步]  以繼續進行操作。
 
-**Delivery optimization** settings replace **Software updates – Windows 10 Update Rings**. Your existing update rings can be easily changed to use the **Delivery optimization** settings. To maintain the same settings when you create a delivery optimization profile, use the same *Delivery optimization download mode* and then set the same settings as you already use. However, you can choose to reconfigure delivery optimization settings to take advantage of the full range of addition settings that the Delivery Optimization profile can manage. 
--->
+8. 在 [指派]  頁面上，選取將接收此設定檔的群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
+
+   選取 [下一步]  。
+
+9. 在 [適用性規則]  頁面上，使用 [規則]  、[屬性]  和 [值]  選項來定義此設定檔在指派群組中套用的方式。
+
+10. 在 [檢閱 + 建立]  頁面上，當您完成操作時，請選擇 [建立]  。 設定檔隨即建立並顯示在清單中。 接下來，[指派設定檔](device-profile-assign.md)，然後[監視其狀態](device-profile-monitor.md)。
 
 ## <a name="remove-delivery-optimization-from-windows-10-update-rings"></a>從 Windows 10 更新通道移除傳遞最佳化
 

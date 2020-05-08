@@ -5,23 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 05/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: faf117f3eedbfe7527606d7a0942cab644c700cb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 35e48be90b80d0c776087c95444f5f77f5ff547c
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615659"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693408"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>在 Intune 中使用安全性基準來設定 Windows 10 裝置
 
@@ -56,7 +56,8 @@ ms.locfileid: "81615659"
 
 - **Microsoft Defender ATP 基準**
   (若要使用此基準，您的環境必須滿足使用 [Microsoft Defender 進階威脅防護的先決條件](advanced-threat-protection.md#prerequisites))  。
-  - [Microsoft Defender ATP 基準版本 3](security-baseline-settings-defender-atp.md)
+  - [Microsoft Defender ATP 基準 (適用於 2020 年 4 月) - 版本 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
+  - [Microsoft Defender ATP 基準 (適用於 2020 年 3 月) - 版本 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
 
   > [!NOTE]
   > Microsoft Defender ATP 安全性基準已針對實體裝置最佳化，目前不建議用於虛擬機器 (VM) 或 VDI 端點。 特定基準設定可能會影響虛擬化環境上的遠端互動式工作階段。  如需詳細資訊，請參閱 Windows 文件中的[提高 Microsoft Defender ATP 安全性基準的合規性](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) \(英文\)。
@@ -73,15 +74,21 @@ ms.locfileid: "81615659"
 
 基準的每個新版本執行個體都可以新增或移除設定或引進其他變更。 例如，當新的 Windows 10 設定因為新版本的 Windows 10 推出而變成可用時，MDM 安全性基準可能會收到包括最新設定的新版本執行個體。
 
-在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)的 [端點安全性]   > [安全性基準]  底下，您會看到可用的基準清單。 該清單包括基準範本名稱、您有多少設定檔使用該基準類型、基準類型有多少個別執行個體 (版本) 可用，還有「上次發佈」  日期可以識別最新版基準範本在何時推出。
+在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)的 [端點安全性]   > [安全性基準]  底下，您會看到可用的基準清單。 該清單包括基準範本名稱、您有多少設定檔使用該基準類型、基準類型有多少個別執行個體 (版本) 可用，還有「上次發佈」  日期可識別最新版基準範本的可用時間。
 
-若要檢視您使用之基準版本的詳細資訊，請選取基準圖格以開啟其 [概觀]  窗格，然後選取 [版本]  。 Intune 會顯示您的設定檔所使用基準版本的詳細資料。 在 [版本] 窗格上，您可以選取單一版本以檢視使用該版本之設定檔的深入詳細資料。 您也可以選取兩個不同的版本並選擇 [比較基準]  以下載詳述差異的 CSV 檔案。
-
-![比較基準](./media/security-baselines/compare-baselines.png)
-
-當您建立安全性基準設定檔  時，設定會自動使用最新的已發行安全性基準執行個體。  您可以繼續使用及編輯先前建立且使用較早基準版本執行個體的設定檔，包括使用預覽版本建立的基準。
+若要檢視您使用之基準版本的詳細資訊，請選取基準圖格以開啟其 [概觀]  窗格，然後選取 [版本]  。 Intune 會顯示設定檔所使用基準版本的詳細資料，包括最近和目前的基準版本。  您可選取單一版本以檢視使用該版本設定檔的深入詳細資料。
 
 您可選擇[變更搭配指定設定檔使用的基準版本](#change-the-baseline-version-for-a-profile)。 這表示當新版本推出時，您不必建立新的基準設定檔就能發揮其功能。 當就緒時，您可改為選取基準設定檔並使用內建選項將該設定檔的執行個體版本變更為新版本。
+
+### <a name="compare-baseline-versions"></a>比較基準版本
+
+在安全性基準的 [版本]  窗格中，您可看到一份清單，其中包含已部署此基準的每個版本。 清單也包括最近和使用中的基準版本。 在建立新的安全性基準*設定檔*時，設定檔會使用最近的安全性基準版本。  您可繼續使用及編輯先前建立且使用較早基準版本的設定檔，包括使用預覽版本建立的基準。
+
+若要了解版本之間的變更，請選取兩個不同版本的核取方塊，然後選取 [比較基準]  來下載記載差異詳細資料的 CSV 檔案。 
+
+下載會識別兩個基準版本中的每一項設定，並查看此設定是否已變更 (*notEqual*) 或仍然相同 (*equal*)。 詳細資料也包括版本的設定預設值，以及設定是「新增」  到最近的版本，還是已從最近的版本中「移除」  。
+
+![比較基準](./media/security-baselines/compare-baselines.png)
 
 ## <a name="avoid-conflicts"></a>避免衝突
 
@@ -199,6 +206,14 @@ ms.locfileid: "81615659"
 當安全性基準設定不再適用裝置，或基準中的設定設定為 [未設定]  時，裝置上的那些設定不會還原為預先受控設定。 裝置上先前的受控設定會保留其上次從基準所接收的設定，直到一些其他程序更新裝置上的那些設定。
 
 稍後可能變更裝置上那些設定的其他程序包括不同或新的安全性基準、裝置設定檔、群組原則設定，或在裝置上手動編輯設定。
+
+### <a name="older-baseline-versions"></a>較舊的基準版本
+
+Microsoft 端點管理員會根據典型組織其變更需求來更新內建安全性基準的版本。 每一個新版本都會將版本更新至特定的基準。 預期是客戶將會使用最新基準版本作為其裝置組態設定檔的起點。
+
+若已經沒有任何設定檔繼續使用列在租用戶中的較舊基準，Microsoft 端點管理員便只會列出最新的可用基準版本。
+
+若有和較舊基準建立關聯的設定檔，則較舊的基準將會繼續列在其中。
 
 ## <a name="co-managed-devices"></a>共同管理的裝置
 

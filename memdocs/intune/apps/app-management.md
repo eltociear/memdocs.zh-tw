@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e97322fa8a126203bf6e4d1e7a3703b92ded339
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: baffa150b416b778e41a59fdf4e5a1b686cdae7b
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80536840"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538146"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>什麼是 Microsoft Intune 應用程式管理？
 
@@ -109,6 +109,11 @@ Intune 提供各種功能，可協助您在所要的裝置上取得所需的應�
     - **應用程式類別**：新增、釘選及刪除應用程式類別名稱。
     - **電子書**：針對您想要在公司內使用的應用程式或書籍，某些應用程式市集可讓您購買多個授權。 如需詳細資訊，請參閱[使用 Microsoft Intune 管理大量採購的應用程式與書籍](vpp-apps.md)。
 - **說明及支援**：進行疑難排解、要求支援，或者檢視 Intune 狀態。 如需詳細資訊，請參閱[針對問題進行疑難排解](../fundamentals/help-desk-operators.md)。
+
+### <a name="try-the-interactive-guide"></a>試試互動式指南
+[使用 Microsoft 端點管理員管理和保護行動和傳統型應用程式](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) (英文) 互動式指南會帶您逐步使用 Microsoft Endpoint Manager 系統管理中心，以示範如何在 Intune 中管理註冊的裝置、實施政策合規性，以及保護組織的資料。</br></br>
+
+> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
 
 ## <a name="additional-information"></a>其他資訊
 主控台內的下列項目提供應用程式相關功能：

@@ -10,12 +10,12 @@ ms.assetid: cdb9fb0c-0912-41e4-b427-f40620971763
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d948452da54a41e35095b01cb0e942e02a7a597f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ff2d5c6df0da6b25395858a55ef1ee8a3c0da00b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700556"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906529"
 ---
 # <a name="reference-for-configuration-manager-setup"></a>Configuration Manager 安裝程式參考
 
@@ -73,4 +73,4 @@ Configuration Manager 安裝程式提供下列各節中所述的數個主題連�
 
 如需詳細資訊，包含每個層級所收集之詳細資料的揭露，請參閱 [Configuration Manager 的診斷和使用方式資料](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)。  
 
-若要在線上檢視 Configuration Manager 隱私權聲明，請前往 [https://go.microsoft.com/fwlink/?LinkID=626527](https://go.microsoft.com/fwlink/?LinkID=626527)。
+如需詳細資訊，請參閱 [Microsoft 隱私權聲明](https://privacy.microsoft.com/privacystatement)。

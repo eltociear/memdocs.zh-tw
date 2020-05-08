@@ -10,12 +10,12 @@ ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 78b9175c10d4389623bfa08ac7895df200944a13
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 13c3be302ecefad36d7be8617a4cc9354db1b685
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706906"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906065"
 ---
 # <a name="what-is-configuration-manager"></a>什麼是 Configuration Manager？
 
@@ -33,7 +33,7 @@ Microsoft Endpoint Manager 是一個整合的解決方案，可用於管理您�
 - [Intune](https://docs.microsoft.com/intune)
 - [電腦分析](../../desktop-analytics/overview.md)
 - [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
-- [裝置管理系統管理員主控台](https://go.microsoft.com/fwlink/?linkid=2109094)中的其他功能
+- [裝置管理系統管理員主控台](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)中的其他功能
 
 如需詳細資訊，請參閱 [Microsoft Endpoint Configuration Manager 常見問題集](microsoft-endpoint-manager-faq.md)。
 

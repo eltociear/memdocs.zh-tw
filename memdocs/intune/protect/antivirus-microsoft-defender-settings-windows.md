@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 554bc09aa57306010069df4a85baa70fafdc41a6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7d8ea221b6c1768055e3ca1839c20ed64e2e3838
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086672"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802016"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Microsoft Intune 中 Windows 10 Microsoft Defender 防毒軟體原則的設定
 
@@ -82,7 +82,7 @@ ms.locfileid: "80086672"
   - **是** - 強制使用即時監視。 裝置使用者無法變更此設定。
 
 - **啟用即時監視保護**  
-  CSP：[AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+  CSP：[AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935)
 
   設定主動持續執行，而不是隨選執行的防毒保護。
 
@@ -90,8 +90,16 @@ ms.locfileid: "80086672"
   - **否** - 在裝置上封鎖即時監視保護。 裝置使用者無法變更此設定。
   - **是** - 在裝置上啟用即時監視保護。
 
+- **監視傳入及傳出的檔案**  
+  CSP：[Defender/RealTimeScanDirection](https://go.microsoft.com/fwlink/?linkid=2113943)
+
+  進行此設定，以判斷要監視的 NTFS 檔案和程式活動。
+  - **監視所有檔案** (「預設」  )
+  - **只監視傳入檔案**
+  - **只監視傳出檔案**
+
 - **開啟行為監視**  
-  CSP：[AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048&clcid=0x409)
+  CSP：[AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
 
   根據預設，Windows 10 Desktop 裝置上的 Defender 使用行為監視功能。
 
@@ -109,7 +117,7 @@ ms.locfileid: "80086672"
   - **是** - 網路保護已開啟。 裝置使用者無法變更此設定。
 
 - **掃描所有已下載的檔案和附件**  
-  CSP：[EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939&clcid=0x409)
+  CSP：[EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939)
 
   將 Defender 設定為掃描所有已下載的檔案和附件。
 
@@ -118,7 +126,7 @@ ms.locfileid: "80086672"
   - **是** - Defender 會掃描所有已下載的檔案和附件。 裝置使用者無法變更此設定。
 
 - **掃描在 Microsoft 瀏覽器中使用的指令碼**  
-  CSP：[AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
+  CSP：[AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054)
 
   將 Defender 設定為掃描指令碼。
 
@@ -127,7 +135,7 @@ ms.locfileid: "80086672"
   - **是** - Defender 會掃描指令碼。 裝置使用者無法變更此設定。
 
 - **掃描網路檔案**  
-  CSP：[AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&clcid=0x409)
+  CSP：[AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&)
 
   將 Defender 設定為掃描網路檔案。
 
@@ -136,7 +144,7 @@ ms.locfileid: "80086672"
   - **是** - 開啟網路檔案的掃描。 裝置使用者無法變更此設定。
 
 - **掃描電子郵件**  
-  CSP：[AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052&clcid=0x409)
+  CSP：[AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
 
   將 Defender 設定為掃描內送電子郵件。
 
@@ -147,7 +155,7 @@ ms.locfileid: "80086672"
 ## <a name="remediation"></a>修復
 
 - **隔離惡意程式碼後的保留天數 (0-90)**  
-  CSP：[DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055&clcid=0x409)
+  CSP：[DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055)
 
   指定系統儲存隔離項目的天數 (從 0 到 90)，超過這個指定的天數之後即會自動將其移除。 值為 0 時會將項目保留在隔離區中，而且系統不會自動加以移除。
 
@@ -160,7 +168,7 @@ ms.locfileid: "80086672"
   - **自動傳送所有樣本**
 
 - **要對潛在垃圾應用程式採取的動作**  
-  CSP：[PUAProtection](https://go.microsoft.com/fwlink/?linkid=2114051&clcid=0x409)
+  CSP：[PUAProtection](https://go.microsoft.com/fwlink/?linkid=2114051)
 
   指定潛在垃圾應用程式 (PUA) 的偵測層級。 Defender 會在下載潛在垃圾軟體或嘗試安裝在裝置上時，對使用者發出警示。
 
@@ -170,7 +178,7 @@ ms.locfileid: "80086672"
   - **稽核模式** - Defender 會偵測潛在的垃圾應用程式，但不採取任何動作。 您可以搜尋 [事件檢視器] 中由 Defender 建立的事件，以檢閱 Defender 會對其採取動作之應用程式的相關資訊。
 
 - **偵測到威脅時的動作**  
-  CSP：[ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938&clcid=0x409)
+  CSP：[ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938)
 
   根據惡意程式碼的威脅等級，指定 Defender 針對偵測到的惡意程式碼所採取的動作。
   
@@ -193,7 +201,7 @@ ms.locfileid: "80086672"
 ## <a name="scan"></a>掃描
 
 - **掃描封存檔**  
-  CSP：[AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047&clcid=0x409)
+  CSP：[AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
 
   將 Defender 設定為掃描封存檔，例如 ZIP 或 CAB 檔案。
 
@@ -203,7 +211,7 @@ ms.locfileid: "80086672"
   - **是** - 啟用封存檔的掃描。 裝置使用者無法變更此設定。
 
 - **為排程的掃描使用低 CPU 優先順序**  
-  CSP：[EnableLowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944&clcid=0x409)
+  CSP：[EnableLowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944)
 
   為排程的掃描設定 CPU 優先順序。
   - **未設定** (*預設*) - 此設定會還原為系統預設值，而不會對 CPU 優先順序進行任何變更。
@@ -211,7 +219,7 @@ ms.locfileid: "80086672"
   - **是** - 在排程掃描期間，將會使用低 CPU 優先順序。 裝置使用者無法變更此設定。
 
 - **停用追補完整掃描**  
-  CSP：[DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042&clcid=0x409)
+  CSP：[DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042)
 
   為排程的完整掃描設定追補掃描。 追補掃描是因錯過定期排定的掃描而起始的掃描。 通常是因為電腦在排定的時間關機，才會錯過這些排定的掃描。
 
@@ -220,7 +228,7 @@ ms.locfileid: "80086672"
   - **是** - 為排程的完整掃描強制執行追捕掃描，且使用者無法將其停用。 如果電腦連續在兩次排定的掃描離線，追補掃描會在下次有人登入電腦時啟動。 如果未設定排程的掃描，將不會執行追補掃描。 裝置使用者無法變更此設定。
 
 - **停用追捕快速掃描**  
-  CSP：[DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941&clcid=0x409)
+  CSP：[DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941)
 
   為排程的快速掃描設定追補掃描。 追補掃描是因錯過定期排定的掃描而起始的掃描。 通常是因為電腦在排定的時間關機，才會錯過這些排定的掃描。
 
@@ -229,12 +237,12 @@ ms.locfileid: "80086672"
   - **是** - 為排程的快速掃描強制執行追捕掃描，且使用者無法將其停用。 如果電腦連續在兩次排定的掃描離線，追補掃描會在下次有人登入電腦時啟動。 如果未設定排程的掃描，將不會執行追補掃描。 裝置使用者無法變更此設定。
 
 - **每次掃描的 CPU 使用量限制**  
-  CSP：[AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046&clcid=0x409)
+  CSP：[AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046)
 
   以百分比指定 0 到 100，也就是 Defender 掃描的平均 CPU 負載因數。
 
 - **在完整掃描期間掃描對應的網路磁碟機**  
-  CSP：[AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945&clcid=0x409)
+  CSP：[AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945)
 
   將 Defender 設定為掃描對應的網路磁碟機。
 
@@ -243,13 +251,13 @@ ms.locfileid: "80086672"
   - **是** - 啟用對應網路磁碟機的掃描。 裝置使用者無法變更此設定。
 
 - **每日快速掃描的執行時間**  
-  CSP：[ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053&clcid=0x409)
+  CSP：[ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053)
 
   選取 Defender 快速掃描執行的當日時間。
   根據預設，此為 [未設定] 
 
 - **掃描類型**  
-  CSP：[ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045&clcid=0x409)
+  CSP：[ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045)
 
   選取 Defender 執行的掃描類型。
 
@@ -271,14 +279,14 @@ ms.locfileid: "80086672"
 ## <a name="updates"></a>更新
 
 - **輸入檢查安全性情報更新的頻率 (0-24 小時)**  
-  CSP：[SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936&clcid=0x409)
+  CSP：[SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
 
   從 0 到 24 指定用來檢查特徵標記的間隔 (以小時為單位)。 值為 0 時，不會檢查新的特徵標記。 值為 2 時，將會每隔兩小時檢查一次，依此類推。
 
 ## <a name="user-experience"></a>使用者經驗
 
 - **允許使用者存取 Microsoft Defender 應用程式**  
-  CSP：[AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043&clcid=0x409)  
+  CSP：[AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043)  
 
   - **未設定** (*預設*) - 此設定會還原為用戶端預設值，其中允許 UI 與通知。
   - **否** - 無法存取 Defender 使用者介面 (UI)，而且會隱藏通知。

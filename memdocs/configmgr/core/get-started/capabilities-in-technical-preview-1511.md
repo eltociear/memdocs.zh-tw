@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f32eaffe673324699e20fc7c579ea1ac9b38c479
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 337b494bdce24463c19dd22ae975af5e99d6d895
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076334"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905837"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Configuration Manager Technical Preview 1511 中的功能
 
@@ -34,7 +34,7 @@ ms.locfileid: "82076334"
 
 -   Windows 10 Desktop Pro 或 Windows 10 Enterprise Edition 1511 版或更新版本。  
 
--   要透過 [Windows Update for Business](https://technet.microsoft.com/library/mt622730\(v=vs.85\).aspx)進行管理的電腦。  
+-   要透過 [Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb)進行管理的電腦。  
 
 ### <a name="try-it-out"></a>試試看！  
  請嘗試完成下列工作，然後使用本主題頂端附近的意見反應資訊，告訴我們工作的成效：  
@@ -67,7 +67,7 @@ ms.locfileid: "82076334"
 
 4. 您可以使用主控台中的監視或報告功能，來確認 Office 365 更新是否相容。  
 
-   如需詳細步驟，請參閱 [透過 Configuration Manager Technical Preview 管理 Office 365 用戶端更新](https://technet.microsoft.com/library/mt628083.aspx)。  
+   如需詳細步驟，請參閱 [透過 Configuration Manager Technical Preview 管理 Office 365 用戶端更新](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)。  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> 支援適用於高可用性資料庫的 SQL Server AlwaysOn  
  Configuration Manager 現在支援使用 SQL Server AlwaysOn 可用性群組來裝載站台資料庫。  當您安裝新的站台時，您可以指示安裝程式使用可用性群組，而不是一般 SQL Server 執行個體。  
@@ -110,7 +110,7 @@ ms.locfileid: "82076334"
  使用下列程序先建立及設定可用性群組，然後再安裝使用可用性群組的新 Configuration Manager 站台。  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>建立 SQL Server AlwaysOn 可用性群組  
-[建立 SQL Server 可用性群組](https://technet.microsoft.com/library/ff878265\(v=sql.120\).aspx) 的程序記載於 SQL Server 文件庫中。  當您建立可用性群組時，請確定符合使用 Configuration Manager 的下列需求：  
+[建立 SQL Server 可用性群組](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) 的程序記載於 SQL Server 文件庫中。  當您建立可用性群組時，請確定符合使用 Configuration Manager 的下列需求：  
 
 -   最多三個成員：  
 
@@ -165,7 +165,7 @@ ms.locfileid: "82076334"
 
 #### <a name="to-create-a-collection-for-a-server-cluster"></a>若要建立伺服器叢集的集合  
 
-1.  [建立裝置集合](https://technet.microsoft.com/library/gg712295.aspx)以包含叢集中的伺服器。  
+1.  [建立裝置集合](../clients/manage/collections/create-collections.md)以包含叢集中的伺服器。  
 
 2.  在 [資產與相容性]  工作區中，按一下 [裝置集合]  ，再以滑鼠右鍵按一下包含叢集伺服器的集合，然後按一下 [內容]  。  
 
@@ -200,6 +200,6 @@ ms.locfileid: "82076334"
 
 #### <a name="to-deploy-software-updates-to-the-server-cluster"></a>若要將軟體更新部署至伺服器叢集  
 
-1.  [部署軟體更新](https://technet.microsoft.com/library/gg712304.aspx)至伺服器叢集集合。  
+1.  [部署軟體更新](../../sum/deploy-use/deploy-software-updates.md)至伺服器叢集集合。  
 
-2.  [監視軟體更新部署](https://technet.microsoft.com/library/gg712304.aspx)。  
+2.  [監視軟體更新部署](../../sum/deploy-use/monitor-software-updates.md)。  

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a773c449b0b6d60b9cf7bf6a280cc371d9c4cf03
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 749377ceecf29d9b900cff108fc4b736d6b8d0f2
+ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80979217"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605162"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>在 Intune 的 Windows 10 裝置上使用 PowerShell 指令碼
 
@@ -30,7 +30,7 @@ ms.locfileid: "80979217"
 
 本功能適用於：
 
-- Windows 10 及更新版本
+- Windows 10 及更新版本 (排除 Windows 10 家用版)
 
 > [!NOTE]
 > 一旦符合 Intune 管理延伸模組先決條件，就會在 PowerShell 指令碼或 Win32 應用程式指派至使用者或裝置時，自動安裝 Intune 管理延伸模組。 如需詳細資訊，請參閱 Intune 管理延伸模組[先決條件](../apps/intune-management-extension.md#prerequisites)。
@@ -47,7 +47,7 @@ Intune 管理延伸模組可補充內建的 Windows 10 MDM 功能。 您可以�
 
 Intune 管理延伸模組具有下列必要條件。 一旦符合這些必要條件，就會在 PowerShell 指令碼或 Win32 應用程式指派至使用者或裝置時，自動安裝 Intune 管理延伸模組。
 
-- 執行 Windows 10 1607 版或更新版本的裝置。 如果裝置是使用[大量自動註冊](../enrollment/windows-bulk-enroll.md)進行註冊的，則裝置必須執行 Windows 10 1703 版或更新版本。 因為 S 模式不允許執行非 Microsoft Store 應用程式，所以 Windows 10 的 S 模式不支援 Intune 管理延伸模組。 
+- 執行 Windows 10 1607 版或更新版本的裝置。 如果裝置是使用[大量自動註冊](../enrollment/windows-bulk-enroll.md)來註冊，則該裝置必須執行 Windows 10 1709 版或更新版本。 因為 S 模式不允許執行非 Microsoft Store 應用程式，所以 Windows 10 的 S 模式不支援 Intune 管理延伸模組。 
   
 - 已加入 Azure Active Directory (AD) 的裝置，包括：  
   

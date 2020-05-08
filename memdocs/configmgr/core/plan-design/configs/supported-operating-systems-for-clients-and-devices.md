@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 57c60fcdadf3e58b59d33ecf2753789122a38ecc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e9e0ec6df5f80b318cb78ed8cddc986b613230e1
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078680"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904540"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager 針對用戶端和裝置支援的 OS 版本
 
@@ -209,7 +209,7 @@ Configuration Manager 媒體未隨附 macOS 用戶端安裝套件。 從 Microso
 > [!Important]  
 > Configuration Manager 1902 版已捨棄針對 Linux 和 UNIX 作為用戶端的支援。 淘汰隨 [1802 版](../changes/whats-new-in-version-1802.md#deprecation-announcement-for-linux-and-unix-client-support)宣布。 請考慮以 Microsoft Azure 管理來管理 Linux 伺服器。 Azure 解決方案具有廣泛的 Linux 支援，在大部分情況下都超越 Configuration Manager 的功能性，包括 Linux 的完整修補程式管理。
 
-Configuration Manager 媒體未隨附 Linux 和 UNIX 用戶端安裝套件。 從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=525184)下載**其他作業系統的用戶端**。 除了用戶端安裝套件之外，用戶端下載還會包括管理每部電腦上用戶端安裝的指令碼。  
+Configuration Manager 媒體未隨附 Linux 和 UNIX 用戶端安裝套件。 從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=47719)下載**其他作業系統的用戶端**。 除了用戶端安裝套件之外，用戶端下載還會包括管理每部電腦上用戶端安裝的指令碼。  
 
 ### <a name="requirements-and-limitations"></a>需求及限制
 

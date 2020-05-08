@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 235f5517c9968ba63b04fefa03d9486e5bd6e52d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d1ff20db13a87faea41d262da5742a428ec4d28f
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086398"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587296"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>在 Microsoft Intune 中新增 Wi-Fi 設定並在您的裝置上使用
 
@@ -97,6 +97,10 @@ Wi-Fi 設定檔支援下列裝置平台：
     選取 [下一步]  。
 
 11. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立]  時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
+
+> [!TIP]
+> 若您針對 Wi-Fi 設定檔使用以憑證為基礎的驗證，請部署 Wi-Fi 設定檔、憑證設定檔及信任的根設定檔至相同群組，以確保每部裝置都能識別您憑證授權單位的合法性。  如需詳細資訊，請參閱[如何使用 Microsoft Intune 設定憑證](../protect/certificates-configure.md)。
+
 
 ## <a name="next-steps"></a>後續步驟
 

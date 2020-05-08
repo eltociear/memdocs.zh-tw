@@ -5,34 +5,58 @@ description: 由 Intune 支援、用於管理 Microsoft Defender 進階威脅防
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 05/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67f4d3c08cbad08464d488073c574babcc77dc61
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+zone_pivot_groups: atp-baseline-versions
+ms.openlocfilehash: e1081395c733807c38dc940ebd1b7c2765da7a9a
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81397504"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693403"
 ---
+<!-- Pivots in use: 
+::: zone pivot="atp-april-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020,atp-april-2020"
+::: zone-end
+-->
+
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Intune 的 Microsoft Defender 進階威脅防護基準設定
 
 檢視 Microsoft Intune 支援的 Microsoft Defender 進階威脅防護基準設定。 進階威脅防護 (ATP) 基準預設值代表 ATP 建議的設定，可能不符合其他安全性基準的基準預設值。
 
-本文中詳細資料適用於 2020 年 3 月 1 日發行的第 3 版 Microsoft Defender ATP 基準。
+::: zone pivot="atp-april-2020"
+
+本文中詳細資料適用於 2020 年 4 月 21 日發行的第 4 版 Microsoft Defender ATP 基準。 若要了解此基準版本與先前版本相較之下的變更內容，請使用檢視此基準 [版本]  窗格時可取得的[比較基準](../protect/security-baselines.md#compare-baseline-versions)動作。
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
+本文中詳細資料適用於 2020 年 3 月 1 日發行的第 3 版 Microsoft Defender ATP 基準。 若要了解此基準版本與先前版本相較之下的變更內容，請使用檢視此基準 [版本]  窗格時可取得的[比較基準](../protect/security-baselines.md#compare-baseline-versions)動作。
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
 
 當您的環境符合使用 [Microsoft Defender 進階威脅防護](advanced-threat-protection.md#prerequisites)的必要條件時，即可使用 Microsoft Defender 進階威脅防護基準。
 
 此基準會針對實體裝置最佳化，目前不建議用於虛擬機器 (VM) 或 VDI 端點。 特定基準設定可能會影響虛擬化環境上的遠端互動式工作階段。 如需詳細資訊，請參閱 Windows 文件中的[提高 Microsoft Defender ATP 安全性基準的合規性](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) \(英文\)。
+
 
 ## <a name="application-guard"></a>應用程式防護
 
@@ -630,11 +654,26 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
   - **是** (預設  ) - 掃描所有已下載的檔案和附件。 此設定會還原為用戶端預設值，也就是開啟，但使用者可予以變更。 若要停用此設定，請使用自訂 URI。
   - **未設定** - 此設定會還原為用戶端預設值，也就是開啟，但使用者可予以變更。 若要停用此設定，請使用自訂 URI。
 
+::: zone-end
+::: zone pivot="atp-april-2020"
+
+- **封鎖即時監視保護**  
+  CSP：[Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+
+  - **是**
+  - [未設定]  (預設  )
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
 - **封鎖即時監視保護**  
   CSP：[Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
 
   - **是** (預設  )
   - **未設定**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 - **掃描瀏覽器指令碼**  
   CSP：[Defender/AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
@@ -863,6 +902,8 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
     - **不允許**
     - **必要**
     - **允許** (預設  )
+
+::: zone-end
 
 ## <a name="next-steps"></a>後續步驟
 

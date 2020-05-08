@@ -10,12 +10,12 @@ ms.assetid: 2285a953-6a86-4ed5-97dd-cd57b02bc1ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d0968a61be4e450bb145b309f61de0d6c212549
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2b5bcbce659601e10f44f06af94eb939767a389a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694816"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906632"
 ---
 # <a name="prepare-to-deploy-client-software-to-macs"></a>準備將用戶端軟體部署到 Mac
 
@@ -27,7 +27,7 @@ ms.locfileid: "81694816"
 
 ## <a name="mac-prerequisites"></a>Mac 必要條件
 
-Configuration Manager 媒體未隨附 Mac 用戶端安裝套件。 從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=525184)下載**其他作業系統的用戶端**。  
+Configuration Manager 媒體未隨附 Mac 用戶端安裝套件。 從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=47719)下載**其他作業系統的用戶端**。  
 
 如需支援版本的清單，請參閱[支援用戶端和裝置的作業系統](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers)。
 

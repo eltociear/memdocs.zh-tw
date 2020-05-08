@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 04981e944b838f89af2383678c94e620aaefd7f0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 849dd0bdb0f6583d525df8af3f6d46f8a4a9aecf
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702346"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904679"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Configuration Manager 最新分支 1910 版的新功能
 
@@ -46,7 +46,7 @@ Microsoft Endpoint Manager 是一個整合的解決方案，可用於管理您�
 - [Intune](https://docs.microsoft.com/intune)
 - [電腦分析](../../../desktop-analytics/overview.md)
 - [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
-- [裝置管理系統管理員主控台](https://go.microsoft.com/fwlink/?linkid=2109094)中的其他功能
+- [裝置管理系統管理員主控台](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)中的其他功能
 
 如需詳細資訊，請參閱 Brad Anderson (Microsoft 公司副總裁) 所張貼有關 Microsoft 365 的下列文章：
 

@@ -10,12 +10,12 @@ ms.assetid: f86559de-092a-4ce8-9b43-5d7530e0b763
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 74436eb95166ae9bc78d7ae22881b709349bf847
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f6fcf4736c30d8743d0d26b52aac60ef12b5c9cd
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695436"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906304"
 ---
 # <a name="how-to-configure-software-inventory-in-configuration-manager"></a>如何在 Configuration Manager 中設定軟體清查
 
@@ -44,7 +44,7 @@ ms.locfileid: "81695436"
    > [!TIP]
    >   inventoryprovider.log 中的錯誤碼 80041006 表示 WMI 提供者的記憶體不足。 亦即，已叫用提供者的記憶體配額限制，而且清查提供者無法繼續。
    > 在此情況下，清查代理程式所建立的報表具有 0 個項目，因此不會回報任何清查項目。 <br/>
-   > 此錯誤的可能解決方案會是減少軟體清查收集的範圍。 在限制清查範圍之後發生錯誤的環境中，增加 [_ProviderHostQuotaConfiguration](https://msdn.microsoft.com/library/aa394671) 類別中所定義的 [MemoryPerHost](https://blogs.technet.microsoft.com/askperf/2008/09/16/memory-and-handle-quotas-in-the-wmi-provider-service/) 屬性可以提供解決方案。
+   > 此錯誤的可能解決方案會是減少軟體清查收集的範圍。 在限制清查範圍之後發生錯誤的環境中，增加 [_ProviderHostQuotaConfiguration](https://docs.microsoft.com/windows/win32/wmisdk/--providerhostquotaconfiguration) 類別中所定義的 [MemoryPerHost](https://techcommunity.microsoft.com/t5/ask-the-performance-team/memory-and-handle-quotas-in-the-wmi-provider-service/ba-p/373319) 屬性可以提供解決方案。
 
 <!--SMS.480648 include WMI Out of memory tip -->
 

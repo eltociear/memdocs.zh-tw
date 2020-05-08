@@ -10,12 +10,12 @@ ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1bdfb8c6d528c12581f05f86111a1a76d2259faa
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84f4b822475111352c5dcf23f4868a1fa43ec3a7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695426"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906276"
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-configuration-manager"></a>Configuration Manager 中 Linux 和 UNIX 的硬體清查
 
@@ -105,7 +105,7 @@ Linux 或 UNIX 伺服器上的硬體清查會根據您在用戶端設定中所�
 ###  <a name="create-a-custom-hardware-inventory-provider-for-linux-and-unix-computers"></a><a name="BKMK_LinuxProvider"></a> 建立 Linux 及 UNIX 電腦的自訂硬體清查提供者：  
  若要建立 Linux 及 UNIX Configuration Manager 用戶端的自訂硬體清查提供者，請使用 **OMI 原始檔 - v.1.0.6** 並遵循 OMI 快速入門指南的指示。 此程序包括建立受管理物件格式 (MOF) 檔案，該檔案定義新提供者的結構描述。 稍後，您將 MOF 檔案匯入 Configuration Manager 中，以啟用新自訂清查類別的支援。  
 
- OMI 原始檔 - v.1.0.6 及 OMI 入門指南可從 [Open Group](https://github.com/microsoft/omi/blob/master/README.md) 網站下載。 您可以在 OpenGroup.org 網站上下列網頁的 [文件]  索引標籤中找到這些下載項目：[Open Management Infrastructure (OMI)](https://go.microsoft.com/fwlink/p/?LinkId=286805)。  
+ OMI 原始檔 - v.1.0.6 及 OMI 入門指南可從 [Open Group](https://github.com/microsoft/omi/blob/master/README.md) 網站下載。 您可以在 OpenGroup.org 網站上下列網頁的 [文件]  索引標籤中找到這些下載項目：[Open Management Infrastructure (OMI)](https://collaboration.opengroup.org/omi/)。  
 
 ###  <a name="configure-each-computer-that-runs-linux-or-unix-with-the-custom-hardware-inventory-provider"></a><a name="BKMK_AddProvidertoLinux"></a> 使用自訂硬體清查提供者來設定每部執行 Linux 或 UNIX 的電腦：  
  建立自訂清查提供者之後，您必須在每部您要在其中收集清查的電腦上，複製並登錄提供者程式庫檔案。  

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd126e59b8162a66815e89d0e80850fe2fe9c2d4
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: b9fa14dd54a820ed20f8b3b504a836392c7f428f
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771072"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538168"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>在裝置上設定規則可在您的組織中使用 Intune 存取資源
 
@@ -74,7 +74,7 @@ Intune 會使用 Azure Active Directory (AD) [條件式存取](https://docs.micr
 
 ### <a name="with-conditional-access"></a>使用條件式存取
 
-針對符合政策規則的裝置，您可以將電子郵件及其他組織資源的存取權提供給它們。 如果裝置不符合政策規則，它們便無法存取組織資源。 這就是條件式存取。
+針對符合原則規範的裝置，您可給予這些裝置電子郵件和組織資源的存取權限。 若裝置不符合原則規範，便無法取得組織資源的存取權限。 這就是條件式存取。
 
 ### <a name="without-conditional-access"></a>不使用條件式存取
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 151b258826dcb65b3311b81e3c47bc5c089cb017
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: c9b23d68928b183a70e8069edbf6027ddc0436ed
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771221"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587298"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>在 Microsoft Intune 中使用憑證進行驗證
 
@@ -99,7 +99,9 @@ ms.locfileid: "81771221"
 
 ## <a name="create-trusted-certificate-profiles"></a>建立受信任的憑證設定檔
 
-建立 SCEP、PKCS 或已匯入 PKCS 的憑證設定檔之前，請先建立受信任的憑證設定檔。 將受信任的憑證設定檔部署到接收其他憑證設定檔類型的相同群組，可確保每個裝置都能辨識您 CA 的合法性。 SCEP 憑證設定檔會直接參考受信任的憑證設定檔。 PKCS 憑證設定檔不會直接參考受信任的憑證設定檔，但會直接參考裝載 CA 的伺服器。 PKCS 匯入的憑證設定檔不會直接參考受信任的憑證設定檔，但可以在裝置上使用。 將受信任的憑證設定檔部署到裝置，即可確保建立此信任。 當裝置不信任根 CA 時，SCEP 或 PKCS 憑證設定檔便會失敗。
+建立 SCEP、PKCS 或已匯入 PKCS 的憑證設定檔之前，請先建立受信任的憑證設定檔。 將受信任的憑證設定檔部署到接收其他憑證設定檔類型的相同群組，可確保每個裝置都能辨識您 CA 的合法性。 這包括 VPN、Wi-Fi 和電子郵件等設定檔。
+
+SCEP 憑證設定檔會直接參考受信任的憑證設定檔。 PKCS 憑證設定檔不會直接參考受信任的憑證設定檔，但會直接參考裝載 CA 的伺服器。 PKCS 匯入的憑證設定檔不會直接參考受信任的憑證設定檔，但可以在裝置上使用。 將受信任的憑證設定檔部署到裝置，即可確保建立此信任。 當裝置不信任根 CA 時，SCEP 或 PKCS 憑證設定檔便會失敗。
 
 針對每個您想要支援的裝置平台，建立個別的受信任憑證設定檔，如同您針對 SCEP、PKCS 和 PKCS 所匯入憑證設定檔進行的作業一樣。
 

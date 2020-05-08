@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 824eaeb939249e1bcc2ed21d5815a0a72dc54797
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 46d2af2d89e41e931add0f77931b442b68835235
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700266"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906471"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>備份 Configuration Manager 站台
 
@@ -231,7 +231,7 @@ SMS 寫入器的寫入器識別碼為 **03ba67dd-dc6d-4729-a038-251f7018463b**�
 SMS 寫入器服務必須在本機系統帳號戶下執行。  
 
 ### <a name="volume-shadow-copy-service"></a>磁碟區陰影複製服務  
-VSS 是一組 COM API，其中實作了一個架構以允許進行磁碟區備份時系統上的應用程式仍能繼續寫入磁碟區。 VSS 提供一致的介面，可在磁碟上更新資料的使用者應用程式 (SMS 寫入器服務) 與備份應用程式 (備份管理員服務) 之間進行協調。 如需詳細資訊，請參閱[磁碟區陰影複製服務](https://go.microsoft.com/fwlink/p/?LinkId=241968)。  
+VSS 是一組 COM API，其中實作了一個架構以允許進行磁碟區備份時系統上的應用程式仍能繼續寫入磁碟區。 VSS 提供一致的介面，可在磁碟上更新資料的使用者應用程式 (SMS 寫入器服務) 與備份應用程式 (備份管理員服務) 之間進行協調。 如需詳細資訊，請參閱[磁碟區陰影複製服務](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service)。  
 
 
 

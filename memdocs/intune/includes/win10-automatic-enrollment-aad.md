@@ -28,9 +28,11 @@
    - **全部**：所有使用者都可以自動註冊其 Windows 10 裝置
 
       > [!IMPORTANT]
-      > 針對 BYOD 裝置，若已為所有使用者 (或相同的使用者群組) 同時啟用了 MAM 使用者範圍與 MDM 使用者範圍 (自動 MDM 註冊)，則會優先使用 MAM 使用者範圍。 裝置會使用 Windows 資訊保護 (WIP) 原則 (如已設定)，而不會註冊 MDM。
+      > 針對 Windows BYOD 裝置，若為所有使用者 (或相同的使用者群組) 同時啟用了 MAM 使用者範圍和 MDM 使用者範圍 (自動 MDM 註冊)，則 MAM 使用者範圍優先順序會較高。 若有進行設定，裝置便不會註冊 MDM，且會套用 Windows 資訊保護 (WIP) 原則。
       >
-      > 針對公司裝置，若已同時啟用這兩個範圍，則會優先使用 MDM 使用者範圍。 裝置會註冊 MDM。
+      > 若您的目的是為 Windows BYOD 裝置啟用 MDM 自動註冊：請將 MDM 使用者範圍設為 [全部]  (或 [部分]  ，然後指定群組)，並將 MAM 使用者範圍設為 [無]  (或 [部分]  ，然後指定群組。請確認使用者並非同時是 MDM 和 MAM 使用者範圍所瞄準群組的成員)。
+      >
+      >針對[企業裝置](../enrollment/enrollment-restrictions-set.md#blocking-personal-windows-devices)，若同時啟用了 MDM 和 MAM 使用者範圍，則 MDM 使用者範圍的優先順序會較高。 裝置將會自動在設定的 MDM 中註冊。
 
    > [!NOTE]
    > MDM 使用者範圍必須設定為包含使用者物件的 Azure AD 群組。

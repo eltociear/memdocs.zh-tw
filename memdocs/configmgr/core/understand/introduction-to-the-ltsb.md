@@ -10,12 +10,12 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eda58982094860ccf075bcd2d1d8ed9e3d3bb2df
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d4f5ff0e1c8c92fbadc286e9909388eb66aa8f7b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706916"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906093"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-configuration-manager"></a>Configuration Manager 的長期維護分支簡介
 
@@ -53,7 +53,7 @@ LTSB 不提供雲端整合，以及 Configuration Manager 最新分支 1610 版�
 
 ## <a name="find-ltsb-documentation"></a>尋找 LTSB 的文件
 
-LTSB 是以最新分支 1606 版為基礎。 請使用[最新分支文件](https://docs.microsoft.com/sccm/)，其中有 LTSB 特定的注意事項與限制。 那些注意事項與限制可在下列文章中找到：
+LTSB 是以最新分支 1606 版為基礎。 請使用[最新分支文件](https://docs.microsoft.com/mem/configmgr/)，其中有 LTSB 特定的注意事項與限制。 那些注意事項與限制可在下列文章中找到：
 
 - [安裝 LTSB](install-the-ltsb.md)
 - [將 LTSB 升級至最新分支](convert-to-current-branch.md)
@@ -68,7 +68,7 @@ LTSB 是以最新分支 1606 版為基礎。 請使用[最新分支文件](https
 
 如果客戶擁有 System Center Configuration Manager 的永久權限 ，或可接受 SA 或訂閱於 10 月 1 日之後失效，則可在失效當下安裝 System Center Configuration Manager LTSB 版。
 
-如需這些授權的詳細資訊，請參閱[透過 Microsoft 大量授權方案購買之產品的完整條款及條件](https://go.microsoft.com/fwlink/?LinkId=800052) \(英文\)。
+如需這些授權的詳細資訊，請參閱[透過 Microsoft 大量授權方案購買之產品的完整條款及條件](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1) \(英文\)。
 
 如需 Configuration Manager 分支的授權詳細資訊，請參閱 [Configuration Manager 授權與分支](learn-more-editions.md)。
 

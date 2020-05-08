@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a4fa056c9c0708d2cecc0ca5f244e134e22ad10b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: a8a4ce1c3d54311db18decc85f57d3e03298d339
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073704"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904684"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Configuration Manager 1706 版中的新功能
 
@@ -28,8 +28,8 @@ Configuration Manager 更新 1706 版的最新分支以主控台內的更新形�
 > 若要安裝新的站台，您必須使用 Configuration Manager 的基準版本。  
 >
 > 深入了解：    
-> - [安裝新的站台](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [在站台安裝更新](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [安裝新的站台](../../servers/deploy/install/installing-sites.md)  
+> - [在站台安裝更新](../../servers/manage/updates.md)  
 > - [基準和更新版本](../../servers/manage/updates.md#bkmk_Baselines)  
 
 下列各節提供 Configuration Manager 1706 版中所推出之變更和新功能的詳細資料。  

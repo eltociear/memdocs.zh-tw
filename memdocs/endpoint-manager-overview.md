@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 05/04/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 939224776199407abb6a508f25bf5dadbacb882f
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 1dee569d6f2ce4ed1a3bc278c9c9a886f9d23974
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "82135985"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782254"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Microsoft 端點管理員概觀
 
@@ -102,11 +102,11 @@ ms.locfileid: "82135985"
 
 ## <a name="what-you-need-to-get-started"></a>開始使用的必要條件
 
+Microsoft 端點管理員是統一數種技術的解決方案平台。 這不是新的授權。 服務的授權方式會依據其個別授權條款。 如需詳細資訊，請參閱[產品授權條款](https://www.microsoft.com/licensing/product-licensing/products)。
+
 如果您目前使用 Configuration Manager，您也會取得 Microsoft Intune 來共同管理您的 Windows 裝置。 針對 iOS/iPadOS 和 Android 等其他平台，則需要個別的 Intune 授權。
 
-在大多數情況下，Microsoft 365 可能是最佳選項，因為它可提供您「端點管理員」和 Office 365。
-
-如需詳細資訊，請參閱 [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise)。
+在大多數情況下，Microsoft 365 可能是最佳選項，因為它可提供您「端點管理員」和 Office 365。 如需詳細資訊，請參閱 [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise)。
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6891a46050bb83e54fb34b97d9129fcb5873785
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f877de32c9915f91d1e2d7f2d90b9b40ab69df11
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701416"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906580"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>Configuration Manager 隱私權的其他資訊
 
@@ -91,6 +91,6 @@ Microsoft 雲端保護服務不會刻意收集個人資訊。 在 Microsoft 雲�
 
 在 Configuration Manager 主控台中，移至 [監視]  工作區、選取 [站台階層]  節點，然後切換到 [地理檢視]  。 此檢視可讓您使用 Microsoft Bing 地圖服務所提供的地圖，來檢視您的 Configuration Manager 實體伺服器拓撲。 為了啟用此功能，您所提供的位置資訊會從您的伺服器傳送至 Bing 地圖服務的網路服務。
 
-Microsoft 使用此資訊來運作和改進 Microsoft Bing 地圖服務以及其他 Microsoft 網站和服務。 如需詳細資訊，請參閱 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?LinkId=823548)。
+Microsoft 使用此資訊來運作和改進 Microsoft Bing 地圖服務以及其他 Microsoft 網站和服務。 如需詳細資訊，請參閱 [Microsoft 隱私權聲明](https://privacy.microsoft.com/privacystatement)。
 
 您可以選擇不使用網站階層的地理檢視。 預設的「階層圖」檢視可讓您查看階層而不使用 Bing 地圖服務。

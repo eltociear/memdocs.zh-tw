@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54e18ae8da6d534e26e37da8fba898e60f5a2986
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5f85a8ffc81aa91bce09d6a76eeb5a52335d8b23
+ms.sourcegitcommit: dda5e6f00f79737348e850d971f15fc3093d6431
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079836"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82745193"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>監視 Intune 裝置合規性政策
 
@@ -102,6 +102,11 @@ ms.locfileid: "82079836"
 ![儀表板影像顯示該特定狀態之裝置的更多詳細資料](./media/compliance-policy-monitor/drill-down-details.png)
 
 如果您想要查看特定使用者擁有的所有裝置，您也可以輸入使用者的電子郵件來篩選圖表報告。
+
+> [!TIP]
+> 若沒有使用者登入裝置，則具備目標裝置合規性政策的裝置就會將合規性報告傳送回 Intune，顯示**系統帳戶**作為使用者主體名稱。 發生這種情況的原因是裝置合規性政策已瞄準使用者群組或裝置群組，但在評估合規性政策時沒有任何使用者登入裝置。
+>
+> 此外，若有多名使用者登入相同的裝置，且在巧合情況下裝置瞄準了範圍涵蓋所有目前登入裝置使用者的合規性政策，則合規性報告可能會顯示相同的裝置多次，因為每一名登入裝置的使用者都必須評估裝置合規性政策並將其報告回 Intune。
 
 #### <a name="filter-and-columns"></a>篩選和資料行
 

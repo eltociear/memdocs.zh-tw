@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 04/29/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e857cdd7028851f14f607739ba7e37c744fa2f1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 337f7608b4c75a5a2ce2c85774d2090d549ae1fe
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359459"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587256"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Intune 中的 macOS Endpoint Protection 設定  
 
@@ -113,6 +113,18 @@ ms.locfileid: "80359459"
 
   - **允許略過的次數**  
   設定使用者可以忽略幾次啟用 FileVault 的提示，使用者即會需要 FileVault 才能登入。 
+
+    > [!IMPORTANT]
+    >
+    > 使用值**無限制，一律提示**有一個已知的問題。 此設定會在下一次登入時要求裝置加密，而非讓使用者在登入時略過加密。 此問題預計會在六月底修正，且已在 MC210922 中報告。
+    >
+    > 修正後，此設定將會具備新的選項零 (**0**)，要求裝置在下一次使用者登入裝置時加密。 此外，當 Intune 更新包含此修正時，任何設為**無限制，一律提示**的原則都會更新至使用新的 **0** 值，維持目前要求加密的行為。
+    >
+    > 修正此問題後，您可透過重新設定此設定來設為 [No limit, always prompt] \(無限制，一律提示\)  以略過要求加密，因為設定將會如同原先預期般運作，並允許使用者略過加密裝置。
+    >
+    > 如果已註冊 macOS 裝置，則可透過登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，前往 [租用戶管理]   > [租用戶狀態]  ，選取 [服務健全狀況和訊息中心]  ，然後尋找訊息識別碼 **MC210922** 來檢視詳細資訊。
+
+    <br> 
 
     - **未設定** - 在允許下一次登入之前，需要在裝置上進行加密。  
     - **1** 到 **10** - 需要在裝置上進行加密之前，允許使用者忽略提示 1 到 10 次。  

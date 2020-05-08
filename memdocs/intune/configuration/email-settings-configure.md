@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdf722acf463bf576b222e5f13da2dcaff64504e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 9657353dd877b380d506e588934e3f6fd29b51c1
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086974"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587030"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>使用 Intune 將電子郵件設定新增至裝置
 
@@ -95,6 +95,8 @@ Microsoft Intune 包含不同的電子郵件設定，可部署到您組織中的
 
 - **憑證**：當您建立電子郵件設定檔時，您可以選擇先前在 Intune 中建立的憑證設定檔。 這個憑證稱為識別憑證。 該憑證會針對受信任的憑證設定檔或根憑證進行驗證，以確認使用者的裝置可以連線。 受信任的憑證會指派到可驗證電子郵件連線的電腦。 一般而言，此電腦是原生郵件伺服器。
 
+  若您針對電子郵件設定檔使用以憑證為基礎的驗證，請部署電子郵件設定檔、憑證設定檔及信任的根設定檔至相同的群組，確保每個裝置都能識別您憑證授權單位的合法性。
+
   如需如何在 Intune 中建立及使用憑證設定檔的詳細資訊，請參閱 [How to configure certificates with](../protect/certificates-configure.md) (如何利用 Intune 設定憑證)。
 
 - **使用者名稱和密碼**：終端使用者會藉由輸入使用者名稱和密碼，來向原生郵件伺服器進行驗證。 電子郵件設定檔中沒有密碼。 因此，終端使用者要在連線到電子郵件時輸入密碼。
@@ -109,7 +111,7 @@ Microsoft Intune 包含不同的電子郵件設定，可部署到您組織中的
 
 - **Android Samsung Knox Standard**：依據電子郵件地址，偵測到重複的現有電子郵件設定檔，且會以 Intune 設定檔覆寫它。 Android 不會使用主機名稱來識別設定檔。 請勿在不同主機上使用相同電子郵件地址來建立多個電子郵件設定檔。 這些設定檔會彼此覆寫。
 
-- **Android 公司設定檔**：Intune 提供兩個 Android 公司電子郵件設定檔：一個用於 Gmail 應用程式，一個用於 Nine Work 應用程式。 這些應用程式都可從 Google Play 商店取得，並在裝置工作設定檔中安裝。 這些應用程式都不會建立重複的設定檔。 兩個應用程式都支援連線到 Exchange。 若要使用電子郵件連線功能，請將其中一個電子郵件應用程式部署到使用者的裝置。 然後建立及部署適當的電子郵件設定檔。 Nine Work 之類的電子郵件應用程式可能不是免費的。 請檢閱應用程式的授權詳細資料，如有任何問題，請連絡應用程式廠商。
+- **Android 公司設定檔**：Intune 提供兩個 Android 公司電子郵件設定檔：一個用於 Gmail 應用程式，一個用於 Nine Work 應用程式。 這些應用程式都可從 Google Play 商店取得，並在裝置工作設定檔中安裝。 這些應用程式都不會建立重複的設定檔。 兩個應用程式都支援連線到 Exchange。 若要使用電子郵件連線功能，請將其中一個電子郵件應用程式部署到使用者的裝置。 然後建立及部署適當的電子郵件設定檔。 您可以使用 Gmail 與 Nine 電子郵件組態設定檔，這些組態設定檔適用於 [工作設定檔] 和 [裝置擁有者] 註冊類型，包括在這兩個電子郵件設定類型上使用憑證設定檔。 您在 [裝置設定] 的 [工作設定檔] 下所建立所有 Gmail 或 Nine 原則都會繼續套用至裝置，且不需要將其移至應用程式設定原則。 Nine Work 之類的電子郵件應用程式可能不是免費的。 請檢閱應用程式的授權詳細資料，如有任何問題，請連絡應用程式廠商。 
 
 ## <a name="changes-to-assigned-email-profiles"></a>對指派的電子郵件設定檔進行變更
 
