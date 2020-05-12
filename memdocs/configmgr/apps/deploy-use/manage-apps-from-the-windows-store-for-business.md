@@ -10,12 +10,12 @@ ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b8ba727aff682e3efbba6a91941a5499f9f00e8b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7d6a61324f8c777ba5ed09dd26816152d6f17af9
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689316"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643210"
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-and-education-with-configuration-manager"></a>使用 Configuration Manager 管理從商務與教育用 Microsoft Store 取得的應用程式
 
@@ -129,6 +129,9 @@ Configuration Manager 同時支援在具有 Configuration Manager 用戶端的 W
 - **選取的語言**：選取要從市集同步處理，並在軟體中心內向使用者顯示的語言。 比方說，如果使用者設定德文版 Windows，則軟體中心就會為市集應用程式顯示德文字串。 此行為需要同步處理該語言，且特定應用程式有該語言存在。
 
 - **預設語言**：如果未提供使用者的語言，請選取要使用的預設語言。  
+
+> [!NOTE]
+> Configuration Manager 不會從市集同步應用程式圖示。 如果您需要在 [軟體中心] 中顯示此應用程式的圖示，請手動將其新增至應用程式屬性。 如需詳細資訊，請參閱[手動指定應用程式資訊](create-applications.md#bkmk_manual-app)。<!-- 2837053 -->
 
 ## <a name="create-and-deploy-the-app"></a><a name="bkmk_deploy"></a> 建立並部署應用程式
 

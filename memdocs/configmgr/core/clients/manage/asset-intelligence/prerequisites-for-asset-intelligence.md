@@ -10,12 +10,12 @@ ms.assetid: 23ab4f94-7bfe-436e-8a6a-029409a2730c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: dfed0f2c2e8149abb05d4b21047d4d494f034e53
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a7f87336c35c236a9e07d531469d65958d5d14e0
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695006"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906591"
 ---
 # <a name="prerequisites-for-asset-intelligence-in-configuration-manager"></a>資產智慧 Configuration Manager 中的必要條件
 
@@ -42,4 +42,4 @@ Configuration Manager 中的 Asset Intelligence 具有外部相依性和產品�
 |硬體清查用戶端代理程式相依性|若要收集某些 Asset Intelligence 報告所需的清查資料，您必須啟用硬體清查用戶端代理程式。 此外，您還必須在主要站台伺服器電腦上，啟用 Asset Intelligence 報告所需的一些硬體清查報告類別。<br /><br /> 如需啟用硬體清查用戶端代理程式的相關資訊，請參閱[如何擴充硬體清查](../../../../core/clients/manage/inventory/extend-hardware-inventory.md)。|  
 |軟體計量用戶端代理程式相依性|有些 Asset Intelligence 軟體報告需要軟體計量用戶端代理程式來提供資料。 如需啟用軟體計量用戶端代理程式的相關資訊，請參閱[使用軟體計量監視應用程式使用量](../../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。<br /><br /> 下列 Asset Intelligence 報告需要軟體計量用戶端代理程式來提供資料：<br /><br /> -   軟體 07A - 依電腦數目列出最近使用過的可執行檔<br />-   軟體 07B - 最近使用過指定可執行檔的電腦<br />-   軟體 07C - 特定電腦上最近使用過的可執行檔<br />-   軟體 08A - 依使用者數目列出最近使用過的可執行檔<br />-   軟體 08B - 最近使用過指定可執行檔的使用者<br />-   軟體 08C - 依指定使用者列出最近使用過的可執行檔|  
 |Asset Intelligence 硬體清查報告類別先決條件|Configuration Manager 中的 Asset Intelligence 報告需要特定硬體清查報告類別。 在啟用硬體清查報告類別，且用戶端已根據這些類別回報硬體清查之前，相關聯的 Asset Intelligence 報告不會包含任何資料。 您可以啟用下列硬體清查報告類別，來支援 Asset Intelligence 報告需求：<br /><br /> -   SMS_SystemConsoleUsage<sup>1</sup><br />-   SMS_SystemConsoleUser<sup>1</sup><br />-   SMS_InstalledSoftware<br />-   SMS_AutoStartSoftware<br />-   SMS_BrowserHelperObject<br />-   Win32_USBDevice<br />-   SMS_InstalledExecutable<br />-   SMS_SoftwareShortcut<br />-   SoftwareLicensingService<br />-   SoftwareLicensingProduct<br />-   SMS_SoftwareTag<br /><br /> <sup>1</sup> 預設已啟用 **SMS_SystemConsoleUsage** 和 **SMS_SystemConsoleUser** Asset Intelligence 硬體清查報告類別。<br /><br /> 當您按一下 [Asset Intelligence]  節點時，您可以在 Configuration Manager 主控台的 [資產與相容性]  工作區中，編輯 Asset Intelligence 硬體清查報告類別。 如需詳細資訊，請參閱[設定 Asset Intelligence](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md) 主題中的[啟用 Asset Intelligence 硬體清查報告類別](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md#BKMK_EnableAssetIntelligence)一節。|  
-|Reporting Services 點|您必須先安裝 Reporting Services 點站台系統角色，才會顯示軟體更新報告。 如需建立 Reporting Services 點的詳細資訊，請參閱 [在 Configuration Manager 中設定報告](https://go.microsoft.com/fwlink/p/?LinkId=232661)。|  
+|Reporting Services 點|您必須先安裝 Reporting Services 點站台系統角色，才會顯示軟體更新報告。 如需建立 Reporting Services 點的相關詳細資訊，請參閱[設定報告](../../../servers/manage/configuring-reporting.md)。|  

@@ -2,7 +2,7 @@
 title: Proxy 伺服器支援
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 站台系統伺服器如何使用 Proxy 伺服器。
-ms.date: 04/01/2020
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5581214dd786bdefd29d0e4d2626de536ad26ace
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 89a2f76f394d3bdf8fd6785429ae0ae60302537a
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701476"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802084"
 ---
 # <a name="proxy-server-support-in-configuration-manager"></a>Configuration Manager 中的 Proxy 伺服器支援
 
@@ -50,6 +50,10 @@ ms.locfileid: "81701476"
 - 根據預設，使用該電腦的**系統**帳戶來進行連線。 如有必要，它也可以使用站台系統 Proxy 伺服器帳戶。  
 
 - 使用 Windows 網頁瀏覽器 API。  
+
+### <a name="cloud-management-gateway-connection-point"></a>雲端管理閘道連接點
+
+雲端管理閘道 (CMG) 連接點是與 Azure 中的 CMG 服務進行通訊的內部部署角色。 如需詳細資訊，請參閱[針對 CMG 進行規劃](../../clients/manage/cmg/plan-cloud-management-gateway.md)。
 
 ### <a name="distribution-point"></a>發佈點
 
@@ -111,3 +115,7 @@ ms.locfileid: "81701476"
     - **使用認證連線至 Proxy 伺服器**：許多 Proxy 伺服器需要使用者進行驗證。 根據預設，站台系統伺服器會使用其電腦帳戶連線到 Proxy 伺服器。 如有必要，請啟用此選項，按一下 [設定]  ，然後選擇 [現有的帳戶]  或指定 [新增帳戶]  。 這些認證是**站台系統 Proxy 伺服器帳戶**。  如需詳細資訊，請參閱 [Accounts used in Configuration Manager](../hierarchy/accounts.md) (Configuration Manager 中使用的帳戶)。  
 
 4. 選擇 [確定]  即可儲存新的 Proxy 伺服器設定。  
+
+## <a name="next-steps"></a>後續步驟
+
+如果貴組織禁止使用防火牆或 Proxy 裝置來與網際網路進行網路通訊，則您需要允許存取網際網路端點。 如需詳細資訊，請參閱[網際網路存取需求](internet-endpoints.md)。

@@ -10,12 +10,12 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8b89f2dd9f60b43db5c4ce8956f843429b47bc62
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3b206c1556c2e9550ade5c2322acd65ad2b19412
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709246"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906838"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection 用戶端常見問題集
 
@@ -145,7 +145,7 @@ ms.locfileid: "81709246"
 
 -   請確定您的防毒和反間諜軟體 (Windows Defender) 使用潛在威脅的最新更新 (請參閱＜如何讓病毒和間諜軟體定義保持最新狀態？＞)。 也請確定您一律使用最新版的 Windows Defender。  
 
--   僅從信譽良好的來源下載更新。 若是 Windows 作業系統，請一律使用 [Microsoft Update](https://go.microsoft.com/fwlink/?LinkID=96304) (https://go.microsoft.com/fwlink/?LinkID=96304) ；若是其他軟體，則總是使用其生產公司或人員的合法網站。  
+-   僅從信譽良好的來源下載更新。 針對 Windows 作業系統，請一律移至 [Microsoft Update 目錄](https://catalog.update.microsoft.com) \(英文\)。  針對其他軟體，請一律使用生產該軟體之公司或人員的合法網站。
 
 -   如果您收到內含附件的電子郵件，但不確定來源，則應該立即予以刪除。 請不要從不明來源下載任何應用程式或檔案，而且與其他使用者交易檔案時請小心。  
 

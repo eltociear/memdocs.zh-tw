@@ -10,12 +10,12 @@ ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e486ddd8652529000c6ec02266f677e45669111
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cc679ec7e73e9d43902ad70e09fb2a01c95eed65
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708996"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906875"
 ---
 # <a name="customize-boot-images-with-configuration-manager"></a>使用 Configuration Manager 自訂開機映像
 
@@ -49,11 +49,7 @@ Configuration Manager 的每個版本都可支援特定版本的 Windows 評定�
 
 - **WinPE-WDS-Tools**：安裝 Windows 部署服務工具。  
 
-  另外還有其他可以新增的 Windows PE 封裝。 下列資源提供您可新增到開機映像之選用元件的詳細資訊。  
-
-- 針對 Windows PE 5，請參閱 [WinPE:Add packages (Optional Components Reference)](https://msdn.microsoft.com/library/windows/hardware/dn938382\(v=vs.85\).aspx) (WinPE：新增套件 (選用元件參考))  
-
-- 如果是 Windows PE 3.1，請參閱 Windows 7 TechNet 文件庫中的 [將封裝新增至 Windows PE 映像](https://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) 主題。  
+  另外還有其他可以新增的 Windows PE 封裝。 如需可新增到開機映像之選用元件的相關詳細資訊，請參閱 [WinPE：Add packages (Optional Components Reference)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference) (WinPE：新增套件 (選用元件參考))。
 
 > [!NOTE]
 >當您從包含您所新增之工具的自訂開機映像開機進入 WinPE，您可以從 WinPE 開啟命令提示字元，然後輸入工具的檔案名稱來執行它。 這些工具的位置會自動新增到路徑變數中。 唯有在開機映像內容的 [自訂]  索引標籤上，選取 [啟用命令支援 (僅限測試)]  設定時，才可新增命令提示字元。
@@ -76,7 +72,7 @@ Configuration Manager 的每個版本都可支援特定版本的 Windows 評定�
     其中 C:\WinPEWAIK 是包含開機映像的資料夾，而 C:\WinPEMount 是掛接資料夾。  
 
    > [!NOTE]
-   >  如需 DISM 的詳細資訊，請參閱 Windows 8.1 和 Windows 8 TechNet 文件庫中的 [DISM - Deployment Image Servicing and Management Technical Reference (DISM - 部署映像服務與管理技術參照)](https://technet.microsoft.com/library/hh824821.aspx) 主題。
+   >  如需詳細資訊，請參閱 [DISM (部署映像服務與管理) 參考](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management) \(部分機器翻譯\)。
 
 5. 在您掛接開機映像之後，請使用 DISM 將選用元件新增到開機映像。 在 Windows PE 5 中，64 位元的選用元件位於 <安裝路徑  >\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs。  
 
@@ -112,7 +108,7 @@ Configuration Manager 的每個版本都可支援特定版本的 Windows 評定�
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"**  
 
    > [!TIP]
-   >  如需您可新增到開機映像之選用元件的詳細資訊，請參閱 Windows 8.1 和 Windows 8 TechNet 文件庫中的 [Windows PE 選用元件參考](https://technet.microsoft.com/library/hh824926.aspx) 主題。  
+   >  如需您可新增到開機映像之選用元件的詳細資訊，請參閱 [Windows PE 選用元件參考](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference) \(部分機器翻譯\)。
 
 6. 視需要使用 DISM 將特定驅動程式新增到開機映像。 請輸入下列命令將驅動程式新增到開機映像：  
 
@@ -198,7 +194,7 @@ Configuration Manager 的每個版本都可支援特定版本的 Windows 評定�
     其中 C:\WinPEWAIK 是包含開機映像的資料夾，而 C:\WinPEMount 是掛接資料夾。  
 
    > [!NOTE]
-   >  如需 DISM 的詳細資訊，請參閱 Windows 7 TechNet 文件庫中的 [部署映像服務與管理技術參照](https://technet.microsoft.com/library/dd744256\(v=ws.10\).aspx) 主題。  
+   > 如需詳細資訊，請參閱 [DISM (部署映像服務與管理) 參考](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management) \(部分機器翻譯\)。
 
 5. 在您掛接開機映像之後，請使用 DISM 將選用元件新增到開機映像。 例如，在 Win PE 3.1 中，選用元件位於 <安裝路徑  >\Windows AIK\Tools\PETools\amd64\WinPE_FPs\\。  
 
@@ -228,7 +224,7 @@ Configuration Manager 的每個版本都可支援特定版本的 Windows 評定�
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-wds-tools_en-us.cab"**  
 
    > [!TIP]
-   >  如需可新增到開機映像之不同封裝的詳細資訊，請參閱 Windows 7 TechNet 文件庫中的 [將封裝新增至 Windows PE 映像](https://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) 主題。  
+   >  如需可新增到開機映像之不同套件的詳細資訊，請參閱[將套件新增至 Windows PE 映像](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10)) \(英文\)。
 
 6. 視需要使用 DISM 將特定驅動程式新增到開機映像。 如有需要，請輸入下列命令將驅動程式新增到開機映像：  
 

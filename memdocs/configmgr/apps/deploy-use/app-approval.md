@@ -2,7 +2,7 @@
 title: 核准應用程式
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 中的應用程式核准設定和行為。
-ms.date: 07/26/2019
+ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 37c556aeda37d037fa57fdd1a6be2ab0e751194a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f725c1b7dc380a84cd94e666b98dbd309df3744c
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689756"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802050"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Configuration Manager 的應用程式核准
 
@@ -45,10 +45,7 @@ ms.locfileid: "81689756"
 
 當您需要對於部署至裝置集合的核准時，應用程式不會顯示在軟體中心中。 如果您需要對於部署至使用者集合的核准，應用程式會顯示在軟體中心中。 您仍然可以使用用戶端設定，**在軟體中心中隱藏未核准的應用程式**，對使用者隱藏。 如需詳細資訊，請參閱[軟體中心用戶端設定](../../core/clients/deploy/about-client-settings.md#software-center)。
 
-在您核准應用程式以供安裝之後，仍然可以在 Configuration Manager 主控台中 [拒絕]  該要求。 這個動作並不會造成用戶端解除安裝任何裝置上的應用程式。 它會防止使用者從軟體中心安裝新的應用程式複本。  
-
-> [!Important]  
-> 從 1806 版開始，您撤銷先前核准並安裝之應用程式核准時的「行為已經變更」  。 現在，當您**拒絕**應用程式的要求時，用戶端會從使用者的裝置解除安裝該應用程式。<!--1357891-->  
+在您核准應用程式以供安裝之後，仍然可以在 Configuration Manager 主控台中 [拒絕]  該要求。 如果使用者尚未安裝應用程式，此動作會阻止其從軟體中心安裝新的應用程式複本。 如果先前已核准並安裝應用程式，則當您**拒絕**應用程式的要求時，用戶端會從使用者的裝置解除安裝該應用程式。<!--1357891-->
 
 從 1906 版開始，如果您在主控台中核准應用程式要求，隨即拒絕該要求，您現在可以再次核准。 在您核准之後，應用程式會重新安裝於用戶端。  <!-- 4224910 -->
 
@@ -90,19 +87,17 @@ ms.locfileid: "81689756"
 
 在您核准應用程式以供安裝之後，仍然可以在 Configuration Manager 主控台中 [拒絕]  該要求。 這個動作並不會造成用戶端解除安裝任何裝置上的應用程式。 它會防止使用者從軟體中心安裝新的應用程式複本。  
 
-
 ## <a name="email-notifications"></a><a name="bkmk_email-approve"></a> 電子郵件通知
 
 <!--1321550-->
 
-自 1810 版開始，設定應用程式核准要求的電子郵件通知。 當使用者要求應用程式時，您會收到一封電子郵件。 按一下電子郵件中的連結來核准或拒絕要求，而不需使用 Configuration Manager 主控台。
+您可以設定應用程式核准要求的電子郵件通知。 當使用者要求應用程式時，您會收到一封電子郵件。 按一下電子郵件中的連結來核准或拒絕要求，而不需使用 Configuration Manager 主控台。
 
 您可以在建立應用程式的新部署時，針對可核准或拒絕要求的使用者定義其電子郵件地址。 如果您之後需要變更電子郵件地址的清單，請移至 [監視]  工作區，展開 [警示]  ，然後選取 [訂用帳戶]  節點。 請從其中一個與應用程式部署相關的 [透過電子郵件核准應用程式]  訂用帳戶選取 [內容]  。
 
 如果有多個警示，您可以判斷哪個警示要搭配哪個部署。 請開啟警示內容，並檢視 [一般] 索引標籤上的 [選取的警示]  清單。即會針對此訂用帳戶以該警示啟用部署。
 
 使用者可以從軟體中心將註解新增至要求。 此註解會在 Configuration Manager 主控台的應用程式要求中顯示。 從 1902 版開始，該註解也會顯示於電子郵件中。 將此註解包含在電子郵件中，有助於核准者針對核准或拒絕要求，做出更佳的決策。<!--3594063-->
-
 
 ### <a name="prerequisites"></a>先決條件
 
@@ -114,14 +109,20 @@ ms.locfileid: "81689756"
 
 - 設定[警示的電子郵件通知](../../core/servers/manage/use-alerts-and-the-status-system.md#to-configure-email-notification-for-alerts)。  
 
-- 啟用 SMS 提供者以使用憑證。<!--SCCMDocs-pr issue 3135--> 使用下列其中一個選項：  
+    > [!NOTE]
+    > 部署應用程式的系統管理使用者需要建立警示與訂用帳戶的權限。 如果此使用者沒有這些權限，其會在 [部署軟體精靈]  的結尾看到錯誤：「您沒有執行此操作所需的安全性權限。」<!-- 2810283 -->
 
-    - 啟用[增強 HTTP](../../core/plan-design/hierarchy/enhanced-http.md) (建議選項)  
+- 在主要站台上啟用 SMS 提供者以使用憑證。<!--SCCMDocs-pr issue 3135--> 使用下列其中一個選項：  
 
-        > [!Note]  
-        > 當站台建立 SMS 提供者的憑證時，用戶端上的網頁瀏覽器不會信任它。 回應應用程式要求時，根據您的安全性設定，您可能會看到安全性警告。  
+  - (建議) 為主要站台啟用[增強式 HTTP](../../core/plan-design/hierarchy/enhanced-http.md)。
 
-    - 在 IIS 中手動將 PKI 型憑證繫結至裝載 SMS 提供者角色的伺服器連接埠 443  
+    > [!Note]  
+    > 當主要站台建立 SMS 提供者的憑證時，用戶端上的網頁瀏覽器不會信任該憑證。 回應應用程式要求時，根據您的安全性設定，您可能會看到安全性警告。  
+
+  - 在 IIS 中手動將 PKI 型憑證繫結至裝載主要站台上 SMS 提供者角色的伺服器連接埠 443。
+
+> [!NOTE]
+> 如果您在階層中有多個子主要站台，請針對要啟用此功能的每個主要站台設定這些先決條件。 電子郵件通知中的連結適用於主要站台上的系統管理服務。<!-- 7108472 -->
 
 #### <a name="to-take-action-from-internet"></a>從網際網路採取動作
 
@@ -129,36 +130,35 @@ ms.locfileid: "81689756"
 
 - 透過雲端管理閘道啟用 SMS 提供者管理服務。 在 Configuration Manager 主控台中，移至 [系統管理]  工作區，並展開 [站台設定]  ，然後選取 [伺服器和站台系統角色]  節點。 選取有 SMS 提供者角色的伺服器。 在 [詳細資料] 窗格中，選取 [SMS 提供者]  角色，然後在 [站台角色] 索引標籤的功能區中選取 [內容]  。選取 [允許系統管理服務的 Configuration Manager 雲端管理閘道流量]  選項。  
 
-    - SMS 提供者需要 **.NET 4.5.2** 或更新版本。  
+- SMS 提供者需要 **.NET 4.5.2** 或更新版本。  
 
-- [雲端管理閘道](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)  
+- 設定[雲端管理閘道](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)。
 
-- 將該網站與 [Azure 服務](../../core/servers/deploy/configure/azure-services-wizard.md)配合以進行**雲端管理**  
+- 將該站台上線至 [Azure 服務](../../core/servers/deploy/configure/azure-services-wizard.md)以進行**雲端管理**。
 
-    - 啟用 [Azure AD 使用者探索](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc)  
+- 啟用 [Azure AD 使用者探索](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc)。
 
-    - 以手動方式設定 Azure AD 中的設定：  
+- 以手動方式設定 Azure AD 中的設定：  
 
-        1. 以具有*全域管理員*權限的使用者身分移至 [Azure 入口網站](https://portal.azure.com)。 移至 [Azure Active Directory]  ，然後選取 [應用程式註冊]  。  
+    1. 以具有*全域管理員*權限的使用者身分移至 [Azure 入口網站](https://portal.azure.com)。 移至 [Azure Active Directory]  ，然後選取 [應用程式註冊]  。  
 
-        2. 選取您為 Configuration Manager **雲端管理**整合所建立的類型應用程式。  
+    1. 選取您為 Configuration Manager **雲端管理**整合所建立的類型應用程式。  
 
-        3. 在 [管理]  功能表中，選取 [驗證]  。  
+    1. 在 [管理]  功能表中，選取 [驗證]  。  
 
-            1. 在 [重新導向 URI]  區塊中，貼上以下路徑：`https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
+        1. 在 [重新導向 URI]  區塊中，貼上以下路徑：`https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
 
-            2. 使用您雲端管理閘道 (CMG) 服務的完整網域名稱 (FQDN)，取代 `<CMG FQDN>`。 例如 GraniteFalls.Contoso.com。  
+        1. 使用您雲端管理閘道 (CMG) 服務的完整網域名稱 (FQDN)，取代 `<CMG FQDN>`。 例如 GraniteFalls.Contoso.com。  
 
-            3. 然後選取 [儲存]  。  
+        1. 然後選取 [儲存]  。  
 
-        4. 在 [管理]  功能表中，選取 [資訊清單]  。  
+    1. 在 [管理]  功能表中，選取 [資訊清單]  。  
 
-            1. 在 [編輯資訊清單] 窗格中，尋找 **oauth2AllowImplicitFlow** 屬性。  
+        1. 在 [編輯資訊清單] 窗格中，尋找 **oauth2AllowImplicitFlow** 屬性。  
 
-            2. 將值變更為 **true**。 例如，整行看起來應該像下面這一行：`"oauth2AllowImplicitFlow": true,`  
+        1. 將值變更為 **true**。 例如，整行看起來應該像下面這一行：`"oauth2AllowImplicitFlow": true,`  
 
-            3. 選取 [儲存]  。  
-
+        1. 選取 [儲存]  。  
 
 ### <a name="configure-email-approval"></a>設定電子郵件核准
 
@@ -177,7 +177,6 @@ ms.locfileid: "81689756"
 > 核准或拒絕的連結僅供單次使用。 例如，您可以設定群組別名來接收通知。 Meg 會核准要求。 現在 Bruce 無法拒絕要求。  
 
 檢閱站台伺服器上的 **NotiCtrl.log** 檔案進行疑難排解。
-
 
 ## <a name="maintenance"></a>維護
 

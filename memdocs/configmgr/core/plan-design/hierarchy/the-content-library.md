@@ -10,12 +10,12 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 253de522937e48fa1f3939c7303faf7e43e4e047
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 567c03d231c145718f4f960bda7073ba4b904de2
+ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704536"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82880987"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>Configuration Manager 中的內容庫
 
@@ -196,3 +196,5 @@ Configuration Manager 在下列案例中會使用管理中心網站上的內容�
 - 若要查看是否有任何雜湊不相符，請從 Configuration Manager 主控台驗證套件。  
 
 - 重新發佈內容會是最後選擇。 此動作應該會解決大部分問題。  
+
+如需詳細資訊，請參閱[了解及針對 Configuration Manager 中的內容發佈進行疑難排解](https://support.microsoft.com/help/4482728/understand-troubleshoot-content-distribution-in-configuration-manager) \(機器翻譯\)。

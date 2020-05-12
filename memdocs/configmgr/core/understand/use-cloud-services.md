@@ -10,12 +10,12 @@ ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c191debd77502f7d594a77eb3bd0c50cd6854f66
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84cb878de3eea56dc68180a83fd4b6a32b2d1073
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706696"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906430"
 ---
 # <a name="use-cloud-services-with-configuration-manager"></a>搭配使用 Configuration Manager 與雲端服務
 
@@ -36,7 +36,7 @@ Configuration Manager 支援數個雲端式選項。 這些選項能補充您的
 
 -   如需雲端發佈點的相關資訊，請參閱[安裝雲端發佈點](../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md)。
 
--   如需 Azure 的詳細資訊，請參閱 MSDN Library 中的 [Azure](https://go.microsoft.com/fwlink/p/?LinkId=262965)。  
+-   如需 Azure 的詳細資訊，請參閱[何謂 Azure？](https://azure.microsoft.com/overview/what-is-azure/)
 
 ### <a name="azure-virtual-machines-for-cloud-based-infrastructure"></a>Azure 虛擬機器 (適用於雲端式基礎結構)  
  Configuration Manager 支援使用在 Azure 虛擬機器中執行的電腦，就像在實體公司網路中內部部署執行一樣。 您可以在下列案例使用 Azure 虛擬機器：  
@@ -78,12 +78,4 @@ Configuration Manager 支援數個雲端式選項。 這些選項能補充您的
 ##  <a name="security-for-cloud-based-services"></a><a name="BKMK_CloudSec"></a> 雲端服務的安全性  
  Configuration Manager 使用憑證來佈建與存取您在 Azure 中的內容，以及管理您使用的服務。 Configuration Manager 會將您儲存在 Azure 中的資料加密，但在 Azure 提供的安全性或資料控制項之外，不會提供額外防護。  
 
- 如需詳細資訊，請參閱不同雲端式資源案例的詳細資料。 您也可以檢視下列 Azure 安全性主題：  
-
--   [Azure：了解 Azure 中的安全性帳戶管理](https://go.microsoft.com/fwlink/p/?LinkId=262968)  
-
--   [Azure Security Overview](https://go.microsoft.com/fwlink/p/?LinkId=262970) (Azure 安全性概觀)  
-
--   [Get Past the Security Crossroads in Your Cloud Migration (解決與雲端移轉有關的安全性問題) (解決與雲端移轉有關的安全性問題)](https://go.microsoft.com/fwlink/p/?LinkId=262971)  
-
--   [Azure 資料安全性的第 1 部分 (共 2 個部分)](https://go.microsoft.com/fwlink/p/?LinkId=262974)  
+ 如需詳細資訊，請參閱不同雲端式資源案例的詳細資料。 另請參閱 [Azure 安全性簡介](https://docs.microsoft.com/azure/security/fundamentals/overview) \(部分機器翻譯\)。

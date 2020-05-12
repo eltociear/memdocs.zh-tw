@@ -10,12 +10,12 @@ ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3729bdc28cce961bd081ddb461d3d1da45d6c017
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 909f9fa603f6b979b283593da79730a97fcb9fc9
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701486"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904160"
 ---
 # <a name="pki-certificate-requirements-for-configuration-manager"></a>Configuration Manager 的 PKI 憑證需求
 
@@ -23,11 +23,7 @@ ms.locfileid: "81701486"
 
 下表列出 Configuration Manager 可能需要的公開金鑰基礎結構 (PKI) 憑證。 這項資訊假設已具備 PKI 憑證的基本知識。 如需詳細資訊，請參閱[為 Configuration Manager 部署 PKI 憑證的逐步範例：Windows Server 2008 憑證授權單位](example-deployment-of-pki-certificates.md)。
 
-如需 Active Directory 憑證服務的詳細資訊，請參閱下列文件：  
-
-- Windows Server 2012：[Active Directory 憑證服務概觀](https://go.microsoft.com/fwlink/p/?LinkId=286744)  
-
-- Windows Server 2008：[Windows Server 2008 中的 Active Directory 憑證服務](https://go.microsoft.com/fwlink/p/?LinkId=115018)
+如需 Active Directory 憑證服務的詳細資訊，請參閱 [Active Directory 憑證服務概觀](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11)) \(英文\)。
 
 如需使用新一代密碼編譯新一代 (CNG) API 憑證與 Configuration Manager 的資訊，請參閱 [CNG 憑證概觀](cng-certificates-overview.md)。
 

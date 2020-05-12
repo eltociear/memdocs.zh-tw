@@ -10,12 +10,12 @@ ms.assetid: 0317fd02-3721-4634-b18b-7c976a4e92bf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 396738fb854f859b1553bae02dd3709ef96b69ff
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: eed68d976235dbd915c46bbd2d410d7953441bd3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706096"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906869"
 ---
 # <a name="prerequisites-for-certificate-profiles-in-configuration-manager"></a>憑證設定檔在 Configuration Manager 中的先決條件
 
@@ -28,10 +28,9 @@ Configuration Manager 中的憑證設定檔具有外部相依性和產品中的�
 
 |相依性|更多資訊|  
 |----------------|----------------------|  
-|執行 Active Directory 憑證服務 (AD CS) 的企業發行憑證授權單位 (CA)。<br /><br /> 若要撤銷頂層階層的站台伺服器之電腦帳戶的憑證，需要 Configuration Manager 中憑證設定檔所使用之每個憑證範本的 *發行及管理憑證* 權限。 或者，授與憑證管理員權限以授與所有由該 CA 所使用的憑證範本權限。<br /><br /> 支援由管理員核准憑證要求。 不過，用來發行憑證的憑證範本必須針對憑證主體設定為 [在要求中提供]  ，Configuration Manager 才能自動提供這個值。|如需有關 Active Directory 憑證服務的詳細資訊，請參閱您的 Windows Server 文件。<br /><br /> Windows Server 2012：[Active Directory 憑證服務概觀](https://go.microsoft.com/fwlink/p/?LinkId=286744)<br /><br /> Windows Server 2008：[Windows Server 2008 中的 Active Directory 憑證服務](https://go.microsoft.com/fwlink/p/?LinkId=115018)|  
+|執行 Active Directory 憑證服務 (AD CS) 的企業發行憑證授權單位 (CA)。<br /><br /> 若要撤銷頂層階層的站台伺服器之電腦帳戶的憑證，需要 Configuration Manager 中憑證設定檔所使用之每個憑證範本的 *發行及管理憑證* 權限。 或者，授與憑證管理員權限以授與所有由該 CA 所使用的憑證範本權限。<br /><br /> 支援由管理員核准憑證要求。 不過，用來發行憑證的憑證範本必須針對憑證主體設定為 [在要求中提供]  ，Configuration Manager 才能自動提供這個值。|如需 Active Directory 憑證服務的詳細資訊，請參閱 [Active Directory 憑證服務概觀](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11)) \(英文\)。|  
 |使用 PowerShell 指令碼驗證，並視需要安裝網路裝置註冊服務 (NDES) 角色服務和 Configuration Manager 憑證登錄點的必要條件。 <br /><br />|指示檔案 readme_crp.txt 位於 ConfigMgrInstallDir\cd.latest\SMSSETUP\POLICYMODULE\X64 中。<br /><br />PowerShell 指令碼 Test-NDES-CRP-Prereqs.ps1 與指示位在相同的目錄中。 <br /><br /> PowerShell 指令碼必須在 NDES 伺服器本機執行。|
-|Active Directory 憑證服務的網路裝置註冊服務 (NDES) 角色服務 (在 Windows Server 2012 R2 上執行)。<br /><br /> 此外：<br /><br /> 用戶端與網路裝置註冊服務之間的通訊不支援 TCP 443 (供 HTTPS 使用) 或 TCP 80 (供 HTTP 使用) 以外的連接埠號碼。<br /><br /> 執行網路裝置註冊服務的伺服器必須位於與發行 CA 不同的伺服器上。|Configuration Manager 會在 Windows Server 2012 R2 中與網路裝置註冊服務通訊，以產生並驗證簡單憑證註冊通訊協定 (SCEP) 要求。<br /><br /> 如果您將憑證發行給從網際網路連線的使用者或裝置 (如 Microsoft Intune 所管理的行動裝置)，則這些裝置必須能夠從網際網路存取執行網路裝置註冊服務的伺服器。 例如，在周邊網路 (也稱為遮蔽式子網路) 中安裝伺服器。<br /><br /> 如果您在執行網路裝置註冊服務的伺服器和發行 CA 的伺服器之間有防火牆，就必須將防火牆設定為允許兩個伺服器之間的通訊 (DCOM)。 這項防火牆需求也適用於執行 Configuration Manager 站台伺服器和發行 CA 的伺服器，如此 Configuration Manager 才能撤銷憑證。<br /><br /> 如果網路裝置註冊服務設定為需要 SSL，則安全性最佳作法是確保連線的裝置可以存取憑證撤銷清單 (CRL) 以驗證伺服器憑證。<br /><br /> 如需 Windows Server 2012 R2 中網路裝置註冊服務的詳細資訊，請參閱 [Using a Policy Module with the Network Device Enrollment Service (使用原則模組搭配網路裝置註冊服務)](https://go.microsoft.com/fwlink/p/?LinkId=328657)。|  
-|如果發行 CA 執行 Windows Server 2008 R2，則伺服器需要適用於 SCEP 更新要求的 Hotfix。|如果 Hotfix 尚未安裝在發行 CA 電腦上，請安裝 Hotfix。 如需詳細資訊，請參閱 Microsoft 知識庫中的文章 [2483564：如果使用 NDES 管理憑證，Windows Server 2008 R2 中 SCEP 憑證的更新要求會失敗](https://go.microsoft.com/fwlink/?LinkId=311945)。|  
+|Active Directory 憑證服務的網路裝置註冊服務 (NDES) 角色服務 (在 Windows Server 2012 R2 上執行)。<br /><br /> 此外：<br /><br /> 用戶端與網路裝置註冊服務之間的通訊不支援 TCP 443 (供 HTTPS 使用) 或 TCP 80 (供 HTTP 使用) 以外的連接埠號碼。<br /><br /> 執行網路裝置註冊服務的伺服器必須位於與發行 CA 不同的伺服器上。|Configuration Manager 會在 Windows Server 2012 R2 中與網路裝置註冊服務通訊，以產生並驗證簡單憑證註冊通訊協定 (SCEP) 要求。<br /><br /> 如果您將憑證發行給從網際網路連線的使用者或裝置 (如 Microsoft Intune 所管理的行動裝置)，則這些裝置必須能夠從網際網路存取執行網路裝置註冊服務的伺服器。 例如，在周邊網路 (也稱為遮蔽式子網路) 中安裝伺服器。<br /><br /> 如果您在執行網路裝置註冊服務的伺服器和發行 CA 的伺服器之間有防火牆，就必須將防火牆設定為允許兩個伺服器之間的通訊 (DCOM)。 這項防火牆需求也適用於執行 Configuration Manager 站台伺服器和發行 CA 的伺服器，如此 Configuration Manager 才能撤銷憑證。<br /><br /> 如果網路裝置註冊服務設定為需要 SSL，則安全性最佳作法是確保連線的裝置可以存取憑證撤銷清單 (CRL) 以驗證伺服器憑證。<br /><br /> 如需網路裝置註冊服務的詳細資訊，請參閱[使用原則模組搭配網路裝置註冊服務](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11)) \(英文\)。|  
 |PKI 用戶端驗證憑證和匯出的根 CA 憑證。|此憑證會對 Configuration Manager 驗證執行網路裝置註冊服務的伺服器。<br /><br /> 如需詳細資訊，請參閱 [Configuration Manager 的 PKI 憑證需求](../../core/plan-design/network/pki-certificate-requirements.md)。|  
 |支援的裝置作業系統。|您可以將憑證設定檔部署至執行 Windows 8.1、Windows RT 8.1 和 Windows 10 的裝置上。|  
 

@@ -10,12 +10,12 @@ ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: cc7eb1a8ba721545bdee50d45887ab9d3aa8e952
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d3f01e54ba196ee9c27295d8f970a7dbe352f63f
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704696"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906184"
 ---
 # <a name="custom-locations-for-configuration-manager-site-database-files"></a>Configuration Manager 站台資料庫檔案的自訂位置
 
@@ -36,6 +36,6 @@ ms.locfileid: "81704696"
 
 -   在 Configuration Manager 站台伺服器上，停止 **SMS_Executive** 服務。  
 
--   請使用您 SQL Server 版本的相關文件，指引您如何移動使用者資料庫。 例如，您若是使用 SQL Server 2014，請參閱 TechNet 上的 [移動使用者資料庫](https://technet.microsoft.com/library/ms345483\(v=sql.120\).aspx) 。  
+-   如需如何移動使用者資料庫的詳細資訊，請參閱[移動使用者資料庫](https://docs.microsoft.com/sql/relational-databases/databases/move-user-databases?view=sql-server-2014) \(部分機器翻譯\)。  
 
 -   移動好資料庫檔案之後，請重新啟動 Configuration Manager 站台伺服器上的 **SMS_Executive** 服務。  

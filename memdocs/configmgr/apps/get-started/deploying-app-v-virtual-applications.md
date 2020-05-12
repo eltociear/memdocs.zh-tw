@@ -10,12 +10,12 @@ ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bea7c2ef5c3d77932fcd91ca8d4d2b8baa62edd2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: df6f550b21523e365055f6a4cdafadca7603c4bf
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689806"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906375"
 ---
 # <a name="deploy-app-v-virtual-applications-with-configuration-manager"></a>透過 Configuration Manager 部署 App-V 虛擬應用程式
 
@@ -31,7 +31,7 @@ ms.locfileid: "81689806"
 
 -   作業系統部署、軟體和硬體清查、軟體計量，以及 Asset Intelligence，以支援虛擬應用程式  
 
-如需如何使用 Microsoft Application Virtualization (App-V) 建立與排序應用程式的詳細資訊，請參閱 TechNet 文件庫中的 [Application Virtualization](https://technet.microsoft.com/library/cc843848.aspx)。  
+如需如何使用 Microsoft Application Virtualization (App-V) 建立及排序應用程式的詳細資訊，請參閱 TechNet 文件庫中的 [Application Virtualization 4 文件](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v4/) \(部分機器翻譯\)。  
 
 建立和部署虛擬應用程式時，除了用來建立應用程式的其他 Configuration Manager 需求和程序之外，還必須考慮下列項目：
 
@@ -49,7 +49,7 @@ ms.locfileid: "81689806"
 
 -   為了在 Configuration Manager 中部署虛擬應用程式，用戶端電腦必須安裝至少 App-V 4.6 SP1 或更新版本的用戶端。  
 
--   您必須先使用知識庫文章 [2645225](https://support.microsoft.com/kb/2645225) 中所述的 Hotfix 來更新 App-V 用戶端，才能成功部署虛擬應用程式。  
+-   在您成功部署虛擬應用程式之前，請使用最新的 Hotfix 更新 App-V 用戶端。 如需詳細資訊，請參閱[目前的 App-V 4.5 和 App-V 4.6 檔案版本清單](https://support.microsoft.com/help/2950945/current-list-of-app-v-4-5-and-app-v-4-6-file-versions) \(機器翻譯\)。
 
 -   當您在 App-V 5.0 中使用連線群組時，您已部署的虛擬應用程式便可在用戶端電腦上共用相同的檔案系統和登錄。 不同於標準的虛擬應用程式，這些應用程式可以互相共用資料。 此外，連線群組會為其所包含的應用程式保存使用者設定。 Configuration Manager 中的 App-V 虛擬環境可用來設定用戶端電腦上的連線群組。 當已安裝應用程式或是在用戶端下次評估已安裝的應用程式時，用戶端電腦上便會建立或變更虛擬環境。 您可以設定這些應用程式的優先權，當有多個應用程式嘗試變更檔案系統或登錄值時，具有最高優先權的應用程式便會優先變更。 如需詳細資訊，請參閱[建立 App-V 虛擬環境](../../apps/deploy-use/create-app-v-virtual-environments.md)。  
 
@@ -58,16 +58,16 @@ ms.locfileid: "81689806"
 
 -   **App-V 4.6**：若要在 Configuration Manager 中使用虛擬應用程式，用戶端電腦必須安裝 App-V 4.6 SP1、App-V 4.6 SP2 或 App-V 4.6 SP3 用戶端。  
 
-     您也必須先使用知識庫文章 [2645225](https://go.microsoft.com/fwlink/p/?LinkId=237322) 中所述的 Hotfix 來更新 App-V 4.6 SP1 用戶端，才能成功部署虛擬應用程式。  
+     您必須先使用最新的 Hotfix 來更新 App-V 4.6 用戶端，才能成功部署虛擬應用程式。 如需詳細資訊，請參閱[目前的 App-V 4.5 和 App-V 4.6 檔案版本清單](https://support.microsoft.com/help/2950945/current-list-of-app-v-4-5-and-app-v-4-6-file-versions) \(機器翻譯\)。  
 
--   **App-V 5、App-V 5.0 SP1、App-V 5.0 SP2、App-V 5.0 SP3 和 App-V 5.1**：若是 APP-V 5.0 SP2，您必須安裝 [Hotfix 套件 5](https://support.microsoft.com/en-us/kb/2963211) 或使用 App-V 5.0 SP3。  
+-   **App-V 5、App-V 5.0 SP1、App-V 5.0 SP2、App-V 5.0 SP3 和 App-V 5.1**：若是 APP-V 5.0 SP2，您必須安裝 [Hotfix 套件 5](https://support.microsoft.com/help/2963211) 或使用 App-V 5.0 SP3。  
 -   **App-V 5.2**：此版本內建於 Windows 10 教育版 (1607 及更新版本)、Windows 10 企業版 (1607 及更新版本) 和 Windows Server 2016。
 
 如需 Windows 10 中 App-V 的詳細資訊，請參閱下列主題：
 
-- [App-V 的新功能](https://technet.microsoft.com/itpro/windows/manage/appv-about-appv)
-- [開始使用 App-V for Windows 10](https://technet.microsoft.com/itpro/windows/manage/appv-getting-started)
-- [Upgrading to App-V for Windows 10 from an existing installation](https://technet.microsoft.com/itpro/windows/manage/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation) (從現有安裝升級至 App-V for Windows 10)
+- [App-V 的新功能](https://docs.microsoft.com/windows/application-management/app-v/appv-about-appv)
+- [開始使用 App-V for Windows 10](https://docs.microsoft.com/windows/application-management/app-v/appv-getting-started)
+- [Upgrading to App-V for Windows 10 from an existing installation](https://docs.microsoft.com/windows/application-management/app-v/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation) (從現有安裝升級至 App-V for Windows 10)
 
 ##  <a name="steps-to-manage-app-v-virtual-applications"></a>管理 App-V 虛擬應用程式的步驟  
  若要管理 App-V 虛擬應用程式，請遵循下列步驟：  
@@ -147,7 +147,7 @@ Configuration Manager 中的 App-V 虛擬環境可允許您所部署的虛擬應
 如需 App-V 動態套件組合的詳細資訊，請參閱 App-V 說明文件。  
 
 ##  <a name="converting-app-v-46-applications-to-app-v-5-applications"></a>將 App-V 4.6 應用程式轉換為 App-V 5 應用程式  
-App-V 4.6 與 App-V 5 之間的應用程式封裝格式已變更。 不再支援使用 App-V 4.6 排序的應用程式。 但是，App-V 5 提供一種可讓您用來轉換應用程式的套件轉換工具。 如需詳細資訊，請參閱 [App-V 5 說明文件](https://technet.microsoft.com/library/jj713472.aspx)。  
+App-V 4.6 與 App-V 5 之間的應用程式封裝格式已變更。 不再支援使用 App-V 4.6 排序的應用程式。 但是，App-V 5 提供一種可讓您用來轉換應用程式的套件轉換工具。 如需詳細資訊，請參閱[如何轉換在舊版 App-V 中建立的套件](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/how-to-convert-a-package-created-in-a-previous-version-of-app-v) \(部分機器翻譯\)。  
 
 利用下列步驟以轉換 App-V 4.6 應用程式為 App-V 5 應用程式：  
 
@@ -178,7 +178,7 @@ App-V 4.6 與 App-V 5 之間的應用程式封裝格式已變更。 不再支援
 
 如果您要使用 Configuration Manager 部署 App-V 5 虛擬應用程式，則在建立 App-V 5 部署類型時，這三個檔案都必須位於相同資料夾中。 如果資料夾內有多個檔案，Configuration Manager 將使用最新的檔案。  
 
-如需詳細資訊，請參閱 [App-V 5 說明文件](https://technet.microsoft.com/library/jj713466.aspx)。  
+如需詳細資訊，請參閱[關於 App-V 5.0 動態設定](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50-dynamic-configuration) \(部分機器翻譯\)。  
 
 ##  <a name="app-v-local-interaction"></a>APP-V 本機互動  
 在部分應用程式部署案例中，應用程式會本機安裝於用戶端電腦上，而其他應用程式則是當作虛擬應用程式部署至相同的用戶端電腦。 根據預設，本機上所安裝的應用程式無法偵測到虛擬應用程式並直接與其進行通訊。 這預期是 App-V 所提供的應用程式隔離行為。 本機互動是 App-V 用戶端的一項功能，您可以為每個應用程式啟用此功能，以允許在用戶端電腦上執行的本機安裝應用程式能夠查看虛擬化應用程式並與其通訊。 Configuration Manager 與 App-V 可完整支援本機互動。  
@@ -186,7 +186,7 @@ App-V 4.6 與 App-V 5 之間的應用程式封裝格式已變更。 不再支援
 如需 App-V 本機互動功能的詳細資訊，請參閱您的 App-V 說明文件。  
 
 ##  <a name="app-v-5-shared-content-store"></a>APP-V 5 共用內容存放區  
-Configuration Manager 支援 App-V 5 共用內容存放區功能。 如需詳細資訊，請參閱 [規劃 App-V 5.0 共用內容存放區 (SCS)](https://technet.microsoft.com/library/jj713431.aspx)。  
+Configuration Manager 支援 App-V 5 共用內容存放區功能。 如需詳細資訊，請參閱 [規劃 App-V 5.0 共用內容存放區 (SCS)](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/planning-for-the-app-v-50-sequencer-and-client-deployment#planning-for-the-app-v-50-shared-content-store-scs)。  
 
 ##  <a name="monitoring-virtual-applications"></a>監視虛擬應用程式  
 

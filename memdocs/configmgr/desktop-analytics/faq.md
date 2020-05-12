@@ -10,12 +10,12 @@ ms.assetid: e0db3311-2303-4013-a906-76b408172d3c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8c6b8df10a9a20c96cd2f8c1a0b6583c9c5f6e4f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 29f063da47dc26789493b2a83ad8e0cfa6885270
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708156"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693300"
 ---
 # <a name="desktop-analytics-faq"></a>電腦分析常見問題集
 
@@ -35,6 +35,9 @@ ms.locfileid: "81708156"
 - 請確定裝置正在將診斷資料傳送至電腦分析服務。 如需詳細資訊，請參閱[啟用資料共用](enable-data-sharing.md)。
 - 在 Azure AD 上佈建 [Azure AD 應用程式](troubleshooting.md#bkmk_AzureADApps)。
 - 檢查過去七天內與組織建立關聯的裝置。 在[電腦分析入口網站](https://aka.ms/desktopanalytics)中，移至 [已連線的服務]  窗格。 選取 [註冊裝置]  和 [查看最近的資料] 
+
+  > [!IMPORTANT]
+  > **檢視最近的資料**的 [電腦分析] 選項已被取代。 此動作將在未來的 [電腦分析] 服務版本中移除。 如需詳細資訊，請參閱[已淘汰的功能](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)。<!--7080949-->  
 
 如果裝置已正確設定，且您仍然看不到工作區中的資料，請[連絡 Microsoft 支援服務](https://support.microsoft.com/hub/4343728/support-for-business)。
 

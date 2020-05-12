@@ -10,12 +10,12 @@ ms.assetid: 76c220b6-1824-4e2e-8c61-a719f0b056f1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f5d59e165f2bb20ad6851f7d52c94d39e1ec9e4e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: eb9bfc252c82e477359a4c14cbe92a6dc11257bd
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700806"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906501"
 ---
 # <a name="where-to-get-installation-media-for-configuration-manager"></a>取得 Configuration Manager 安裝媒體的位置
 
@@ -25,6 +25,6 @@ ms.locfileid: "81700806"
 
 如果您有來自 EMS、Microsoft 365 或雲端解決方案提供者 (CSP) 的 Configuration Manager 授權，請參閱[產品和授權常見問題集](../../../understand/product-and-licensing-faq.md#bkmk_csp)。
 
-如果您想要購買 Configuration Manager 的大量授權，請連絡您慣用的 Microsoft 經銷商，或請參閱[如何透過大量授權購買 (英文)](https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx)。 您也可以從 [TechNet 評估中心]( https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)網站下載媒體來安裝 Configuration Manager 的評估版本。
+如果您想要購買 Configuration Manager 的大量授權，請連絡您慣用的 Microsoft 經銷商，或請參閱[如何透過大量授權購買 (英文)](https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx)。 您也可以從 [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) 網站下載媒體來安裝 Configuration Manager 的評估版本。
 
 若要了解 Configuration Manager 的基準媒體，請參閱[基準和更新版本](../../manage/updates.md#bkmk_Baselines)。

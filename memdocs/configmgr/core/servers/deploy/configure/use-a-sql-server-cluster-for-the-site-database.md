@@ -2,7 +2,7 @@
 title: SQL Server 叢集
 titleSuffix: Configuration Manager
 description: 使用 SQL Server 叢集來裝載 Configuration Manager 站台資料庫
-ms.date: 03/06/2019
+ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4e731ef2d133c2187eb9eaa98c07afeed37645fa
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d035e6fbd776a03ce38a4cd0fc12755100b60c91
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700846"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643238"
 ---
 # <a name="use-a-sql-server-cluster-for-the-site-database"></a>針對站台資料庫使用 SQL Server 叢集
 
@@ -62,9 +62,12 @@ ms.locfileid: "81700846"
 
 - 若要支援 Kerberos 驗證，請為每個 SQL Server 叢集節點的網路連線啟用 **TCP/IP** 網路通訊協定。 **具名管道**通訊協定並非必要，但可用於針對 Kerberos 驗證問題進行疑難排解。 網路通訊設定是在 [SQL Server 組態管理員]  的 [SQL Server 網路組態]  下設定。  
 
-- 如果您使用公開金鑰基礎結構 (PKI)，請參閱 [PKI 憑證需求](../../../plan-design/network/pki-certificate-requirements.md)。 當您針對站台資料庫使用 SQL Server 叢集時，有特定的憑證需求。  
+- 當您針對站台資料庫使用 SQL Server 叢集時，有特定的憑證需求。 如需詳細資訊，請參閱下列文章：
+  - [在 SQL 容錯移轉叢集設定中安裝憑證](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
+  - [Configuration Manager 的 PKI 憑證需求](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
 
-
+  > [!NOTE]
+  > 如果您沒有在 SQL 中預先佈建憑證，則 Configuration Manager 會為 SQL 建立並佈建自我簽署憑證。<!-- 7099499 -->
 
 ## <a name="limitations"></a>限制
 

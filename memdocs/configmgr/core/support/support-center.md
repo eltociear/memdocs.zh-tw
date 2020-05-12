@@ -10,12 +10,12 @@ ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 21279eb2f7d7962d1286d60a599411912d38313a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: da2fe2ad66617ffb5ad3058011f111b0aaf9e9ae
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701316"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903901"
 ---
 # <a name="support-center-for-configuration-manager"></a>適用於 Configuration Manager 的支援中心
 
@@ -52,7 +52,7 @@ ms.locfileid: "81701316"
 
 ### <a name="powershell-cmdlets"></a>PowerShell Cmdlet
 
-支援中心也包含 [Windows PowerShell Cmdlet](https://go.microsoft.com/fwlink/?linkid=397830)。 您可以使用這些 Cmdlet 建立其他 Configuration Manager 用戶端的遠端連線、設定資料收集選項，以及啟動資料收集。
+支援中心也包含 [PowerShell Cmdlet](https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps) \(部分機器翻譯\)。 您可以使用這些 Cmdlet 建立其他 Configuration Manager 用戶端的遠端連線、設定資料收集選項，以及啟動資料收集。
 
 
 ## <a name="prerequisites"></a>先決條件

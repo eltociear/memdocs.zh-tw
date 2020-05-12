@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 78fad6f17681fa9822a378844ea4838c50383c82
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ce77c43f49556b3a60e36f05127f82d4d135762a
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704816"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643268"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>設定 Configuration Manager 的界限群組
 
@@ -211,6 +211,13 @@ ms.locfileid: "81704816"
 
 如需如何進行這些設定的詳細資訊，請參閱[設定界限群組](boundary-group-procedures.md#bkmk_config)。
 
+如果裝置位於一個以上的界限群組中，下列行為適用於這些設定：
+
+- **允許此界限群組中的對等下載**：如果在任何一個界限群組中將其禁用，則用戶端將不會使用傳遞最佳化。
+- **對等下載期間，僅使用相同子網路中的對等**：如果在任何一個界限群組中將其啟用，則此設定會生效。
+- **建議使用發佈點而非相同子網路內的對等點**：如果在任何一個界限群組中將其啟用，則此設定會生效。
+- **雲端式來源優先於內部部署來源**：如果在任何一個界限群組中將其啟用，則此設定會生效。
+
 #### <a name="allow-peer-downloads-in-this-boundary-group"></a><a name="bkmk_bgoptions1"></a> 允許此界限群組中的對等下載
 
 預設會啟用此設定。 管理點會為用戶端提供內容位置清單，其中包含對等來源。 此設定也會影響套用[傳遞最佳化](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)的群組識別碼。  
@@ -220,6 +227,9 @@ ms.locfileid: "81704816"
 - 如果您的界限群組包含來自地理位置分散位置的界限，例如 VPN。 兩個用戶端可能位於相同的界限群組，因為它們可透過 VPN 來連線，但位於完全不同的位置，不適用於內容的對等共用。  
 
 - 如果您使用單一的大型界限群組進行站台指派，但未參考任何發佈點。  
+
+> [!IMPORTANT]
+> 如果裝置位於超過一個的界限群組，則請務必在裝置的所有界限群組上啟用此設定。 否則，用戶端將不會使用傳遞最佳化。 例如，其不會設定 DOGroupID 登錄機碼。
 
 #### <a name="during-peer-downloads-only-use-peers-within-the-same-subnet"></a><a name="bkmk_bgoptions2"></a> 對等下載期間，僅使用相同子網路中的對等
 

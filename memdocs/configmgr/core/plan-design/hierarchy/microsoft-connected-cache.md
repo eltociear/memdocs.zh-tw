@@ -2,7 +2,7 @@
 title: Microsoft 連線快取
 titleSuffix: Configuration Manager
 description: 使用 Configuration Manager 發佈點作為傳遞最佳化的本機快取伺服器
-ms.date: 03/20/2019
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e718e62f097a9fec20d7b29deb9f03453931188a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ab54d278caaeeb29bbd8871819de10af97dcf830
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696206"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842201"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 中的 Microsoft 連線快取
 
@@ -108,6 +108,20 @@ ms.locfileid: "81696206"
 - 手動設定發佈點內容以使用特定的磁碟機代號。
 
 - 如果設為自動，請先建立 **no_sms_on_drive.sms** 檔案。 然後，變更部分發佈點內容，以觸發設定變更。
+
+### <a name="automation"></a>自動化
+
+<!-- SCCMDocs#1911 -->
+
+您可以使用 Configuration Manager SDK 來自動設定發佈點上的 Microsoft 網內快取設定。 與所有站台角色一樣，請使用 [SMS_SCI_SysResUse WMI 類別](../../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md)。 如需詳細資訊，請參閱[站台角色的程式設計](../../../develop/osd/about-operating-system-deployment-site-role-configuration.md#programming-the-site-roles)。
+
+當您更新發佈點的 **SMS_SCI_SysResUse** 執行個體時，請設定下列屬性：
+
+- **AgreeDOINCLicense**：設定為 `1` 以接受授權條款。
+- **Flags**：啟用 `|= 4`，停用 `&= ~4`
+- **DiskSpaceDOINC**：設定為 `Percentage` 或 `GB`
+- **RetainDOINCCache**：設定為 `0` 或 `1`
+- **LocalDriveDOINC**：設定為 `Automatic` 或特定的磁碟機代號，例如 `C:` 或 `D:`
 
 ## <a name="verify"></a>確認
 

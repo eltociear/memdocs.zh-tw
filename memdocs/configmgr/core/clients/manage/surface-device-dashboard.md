@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: 08baf595199bdda121f897d507de97cb7e93e620
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f9b9c49bde16754b7a60112905f14da2cd5e48eb
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696346"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906284"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Configuration Manager 中的 Surface 裝置儀表板
 
@@ -57,11 +57,9 @@ Surface 裝置儀表板會針對您的環境顯示三個圖形。
 
 ## <a name="more-information"></a>更多資訊
 
-如需 Surface 裝置的詳細資訊，請參閱：
-- [Surface]( https://go.microsoft.com/fwlink/?linkid=861998) 網站。
+如需 Surface 裝置的詳細資訊，請參閱 [Surface](https://www.microsoft.com/surface) 網站。
 
-如需在 Configuration Manager 中部署 Surface 韌體更新的詳細資訊，請參閱：
-- [如何在 Configuration Manager 中管理 Surface 驅動程式更新]( https://support.microsoft.com/help/4098906)。
+如需在 Configuration Manager 中部署 Surface 韌體更新的詳細資訊，請參閱[如何管理 Surface 驅動程式更新](https://support.microsoft.com/help/4098906) (機器翻譯)。
 
 
 

@@ -10,12 +10,12 @@ ms.assetid: 63e08f3f-9558-4ed7-9bf3-3a185ddaac5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 96e9f7523ae8946b7756a8a39d1757e652eb3c8c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 46a320f4c6e32b57dc11beb325c34c300536381f
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696896"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693338"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>針對電腦分析進行疑難排解
 
@@ -217,3 +217,6 @@ ms.locfileid: "81696896"
 此程序通常需要 15-60 分鐘的時間。 其花費時間取決於您的工作區大小與需要處理的變更範圍。 當您要求隨選資料重新整理時，不會造成任何診斷資料變更。  如需詳細資訊，請參閱[電腦分析常見問題集](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal)。
 
 如果您在上述時間範圍內未看到變更更新，請再等候 24 小時進行下一次的每日重新整理。 如果您發現延遲時間較長，請檢查服務健康情況儀表板。 如果服務回報為狀況良好，請連絡 Microsoft 支援服務。<!-- 3896921 -->
+
+> [!IMPORTANT]
+> **檢視最近的資料**的 [電腦分析] 選項已被取代。 此動作將在未來的 [電腦分析] 服務版本中移除。 如需詳細資訊，請參閱[已淘汰的功能](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)。<!--7080949-->  

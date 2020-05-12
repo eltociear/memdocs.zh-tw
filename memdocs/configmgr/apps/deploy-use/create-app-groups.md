@@ -10,12 +10,12 @@ ms.assetid: e67c691e-62ef-4f43-9cfb-0e957d1e7a5f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a20ee62fefd401e56abbf86beed0c4685b19ea39
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f63c52fcd2aaccbfbe04160581318126bc53db12
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689736"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643121"
 ---
 # <a name="create-application-groups"></a>建立應用程式群組
 
@@ -66,3 +66,4 @@ ms.locfileid: "81689736"
 - 請不要在群組中包含任何需要重新啟動的應用程式，否則群組部署可能會失敗。
 - *1906 版*：您無法將應用程式群組部署到使用者集合。
 - *1906 版*：使用者無法在 [軟體中心] 將應用程式群組**解除安裝**。
+- 如果您刪除屬於應用程式群組一部分的應用程式，當您下一次檢視應用程式群組的屬性時，您會看到下列警告：「無法載入群組中所有應用程式的相關資訊。」 對應用程式群組進行簡單變更並加以儲存。 例如，在 [系統管理員註解]  中新增一個空格。 當您儲存變更時，其會從群組移除已刪除的應用程式。<!-- 7099542 -->

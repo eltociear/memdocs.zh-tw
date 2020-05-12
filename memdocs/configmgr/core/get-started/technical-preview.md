@@ -2,7 +2,7 @@
 title: Technical Preview 版本
 titleSuffix: Configuration Manager
 description: 了解可試用 Configuration Manager 新功能的 Technical Preview 分支。
-ms.date: 03/31/2020
+ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec49f9931240e17218c125f1fa514088c83c55fd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bfcdd74b7b5c31e3f3ab6bb38a7ea96de9d05eec
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701836"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905150"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>設定管理員的 Technical Preview
 
@@ -69,17 +69,12 @@ ms.locfileid: "81701836"
 
 Configuration Manager 的 Technical Preview 分支可支援下列產品和技術：
 
-- 它只支援下列 **SQL Server** 版本：
-
-  - SQL Server 2017 (含累計更新 2 或更新版本)
-  - SQL Server 2016 (不含 Service Pack 和更新版本)
-  - SQL Server 2014 (含 Service Pack 1 或更新版本)
-  - SQL Server 2012 (含 Service Pack 3 或更新版本)
+- 除非另有說明，否則技術預覽分支與最新分支支援相同版本的 SQL Server。 如需詳細資訊，請參閱[支援的 SQL Server 版本](../plan-design/configs/support-for-sql-server-versions.md)。
 
 - 站台支援最多 10 個用戶端，用戶端可以執行任何[支援的用戶端 OS 版本](../plan-design/configs/supported-operating-systems-for-clients-and-devices.md)。<!-- SCCMDocs#1656 -->
 
 > [!Note]
-> 在此內容中包含這些產品，並不代表可對已超過其支援週期的版本延長支援。 Configuration Manager 不支援已超過其支援週期的產品。 如需詳細資訊，請參閱 [Microsoft 週期原則](https://go.microsoft.com/fwlink/p/?LinkId=208270)。
+> 在此內容中包含這些產品，並不代表可對已超過其支援週期的版本延長支援。 Configuration Manager 不支援已超過其支援週期的產品。 如需詳細資訊，請參閱 [Microsoft 週期原則](https://support.microsoft.com/lifecycle)。
 
 ## <a name="install-and-update"></a><a name="bkmk_install"></a> 安裝及更新
 
@@ -100,7 +95,7 @@ Microsoft 支援每個 Technical Preview 版本，直到有三個連續版本可
 
 - **Technical Preview 2002 版**：Configuration Manager Technical Preview 分支 2002 版同時會以兩種形式提供：主控台內更新和新的基準版本。
 
-從 [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) 下載基準版本。
+從 [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) 下載基準版本。
 
 ## <a name="providing-feedback"></a><a name="BKMK_TPFeedback"></a> 提供意見反應
 
@@ -121,9 +116,36 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2003.md#bkmk_anchor) <!--ID-->
+<!-- - [title](2020/technical-preview-2003.md) <!--ID-->
 
 以下是最新 Configuration Manager Technical Preview 版本所提供的功能：
+
+### <a name="technical-preview-version-2004"></a>Technical Preview 2004 版
+
+- [Microsoft 端點管理員租用戶附加：ConfigMgr 用戶端詳細資料](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
+- [來自 Microsoft 的通知](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
+- [從主控台複製探索資料](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
+- [CMPivot 的改善](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
+- [PowerShell 第 7 版的支援](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
+- [格式化和分割磁碟工作順序步驟的改善](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
+- [OS 部署的管理見解規則](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
+- [適用於工作順序部署類型的 PowerShell Cmdlet](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
+
+> [!NOTE]
+> 舊版 Technical Preview 中的可用功能仍會保留在較新版本中。 同樣地，已新增至 Configuration Manager 最新分支的功能仍會保留在 Technical Preview 分支中。
+
+## <a name="features-in-recent-technical-previews"></a>最新 Technical Preview 中的功能
+
+<!-- (explanatory comment)
+This is the full list of new features in the past TP releases since the last CB release.
+Each month, add features from the list above to a new H3 section at the top of this section.
+When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
+-->
+
+下列是自最新分支 2002 版以來，Configuration Manager Technical Preview 分支所發行過的功能：
+
+> [!TIP]
+> 當新的最新分支版本推出時，於該版本中推出的功能會列在最新的新功能  文章。 如需詳細資訊，請參閱[累加版本的新功能](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)。
 
 ### <a name="technical-preview-version-2003"></a>Technical Preview 2003 版
 
@@ -136,24 +158,6 @@ bullet format:
 - [查詢傳送給 Microsoft 的意見反應](2020/technical-preview-2003.md#bkmk_smile) <!--6488450-->
 - [新增適用於工作順序進度的 SDK 方法](2020/technical-preview-2003.md#bkmk_tsapi) <!--6448458-->
 - [OS 部署的改善](2020/technical-preview-2003.md#bkmk_osd) <!--6452769-->
-
-> [!NOTE]
-> 舊版 Technical Preview 中的可用功能仍會保留在較新版本中。 同樣地，已新增至 Configuration Manager 最新分支的功能仍會保留在 Technical Preview 分支中。
-
-<!-- temp remove for 2002 CB ## Features in recent technical previews -->
-
-<!-- (explanatory comment)
-This is the full list of new features in the past TP releases since the last CB release.
-Each month, add features from the list above to a new H3 section at the top of this section.
-When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
--->
-
-<!--temp remove for 2002 CB  The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1910: -->
-
-> [!TIP]
-> 當新的最新分支版本推出時，於該版本中推出的功能會列在最新的新功能  文章。 如需詳細資訊，請參閱[累加版本的新功能](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)。
-
-<!-- ### Technical preview version 2003 -->
 
 ## <a name="features-in-previous-technical-previews"></a>舊版 Technical Preview 的功能
 

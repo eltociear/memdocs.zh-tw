@@ -10,12 +10,12 @@ ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9389f407f8bdbafd057770ff63ed9b139e6600b5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a8eed671b723091f2a43350f42ca82d90e0d9da3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704266"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906141"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-configuration-manager"></a>使用 Hotfix 安裝程式來安裝 Configuration Manager 更新
 
@@ -169,7 +169,7 @@ Configuration Manager 的每個更新配套都是可自我解壓縮 .exe 檔案 
 如果移除電腦上的 SMS 提供者之後再重新安裝，則必須在該電腦上重新安裝 SMS 提供者更新。  
 
 ###  <a name="update-clients"></a><a name="BKMK_clients"></a> 更新用戶端  
-當您安裝包含 Configuration Manager 用戶端更新的更新時，會提供您使用更新安裝自動升級用戶端的選項，或者稍後手動升級用戶端。 如需用戶端自動升級的詳細資訊，請參閱 [如何在 System Center Configuration Manager 中升級 Windows 電腦的用戶端](https://technet.microsoft.com/library/mt627885.aspx)之 Hotfix 的一般指引。  
+當您安裝包含 Configuration Manager 用戶端更新的更新時，會提供您使用更新安裝自動升級用戶端的選項，或者稍後手動升級用戶端。 如需用戶端自動升級的詳細資訊，請參閱 [如何在 System Center Configuration Manager 中升級 Windows 電腦的用戶端](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md)之 Hotfix 的一般指引。  
 
 您可以使用更新發行者或軟體部署套件來部署更新，也可選擇在每個用戶端上手動安裝更新。 如需如何使用部署安裝更新的詳細資訊，請參閱本主題中的 [部署 Configuration Manager 的更新](#BKMK_Deploy) 一節。  
 
@@ -207,7 +207,7 @@ Updates Publisher 的類別目錄名稱為 **SCUPCatalog.cab**，且可在執行
 > [!IMPORTANT]  
 > 由於 SCUPCatalog.cab 檔案是利用站台伺服器專用的更新配套安裝路徑建立的，因此不能在其他站台伺服器上使用。  
 
-完成精靈之後，可以將類別目錄匯入 Updates Publisher，然後使用 Configuration Manager 軟體更新來部署更新。 如需 Updates Publisher 的相關資訊，請參閱 System Center 2012 TechNet 文件庫中的 [Updates Publisher 2011](https://go.microsoft.com/fwlink/p/?LinkID=83449)。  
+完成精靈之後，可以將類別目錄匯入 Updates Publisher，然後使用 Configuration Manager 軟體更新來部署更新。 如需 Updates Publisher 的相關資訊，請參閱 [Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))。  
 
 請使用下列程序將 SCUPCatalog.cab 檔案匯入更新發行者並發行更新。  
 

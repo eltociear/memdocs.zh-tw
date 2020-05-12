@@ -10,12 +10,12 @@ ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9a1dcd3528f4dbaacec81837150d6f8a1ad6c455
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 652a0c5e36ce7c4bacf40531a82fdf4e16197d95
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708956"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906922"
 ---
 # <a name="customize-operating-system-images-with-configuration-manager"></a>使用 Configuration Manager 自訂作業系統映像
 
@@ -95,7 +95,7 @@ Configuration Manager 中的作業系統映像為 WIM 檔案，且代表參照�
     > [!IMPORTANT]  
     >  [Prepare Windows for Capture](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) 工作順序步驟在執行 Sysprep 之前，會試圖將參照電腦上的本機系統管理員密碼重設為空白值。 如果已啟用本機安全性原則 [密碼必須符合複雜性需求]  ，則此工作順序無法重設系統管理員密碼。 在此案例中，請先停用此原則，再執行工作順序。  
 
-     如需 Sysprep 的詳細資訊，請參閱 [系統準備 (Sysprep) 技術參考](https://go.microsoft.com/fwlink/?LinkId=280286)。  
+     如需 Sysprep 的詳細資訊，請參閱 [Sysprep (系統準備) 概觀](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview) \(部分機器翻譯\)。  
 
 -   **需要適當的工具和指令碼以減少安裝案例**  
 

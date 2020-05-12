@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f38b8662d4d7b5e7897d0c43560a5e2a4672eee6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ffee9d851f00bcac5ed7ba562bdc9db8e0fa2767
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704316"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903948"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Configuration Manager 的更新與服務
 
@@ -60,11 +60,13 @@ Configuration Manager 使用稱為**更新與服務**的主控台內服務方法
 
 | 版本 | 可用時間 | [支援結束日期](current-branch-versions-supported.md) | 基準 | 主控台內更新 |  
 |-------------|-----------|------------|--------------|------------------------|  
-| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | 2020 年 5 月 | 2021 年 10 月 1 日 | 是<sup>[附註 1](#bkmk_note1)</sup> | 是 |
+| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | 2020 年 4 月 1 日 | 2021 年 10 月 1 日 | 是<sup>[附註 1](#bkmk_note1)</sup> | 是 |
 | [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | 2019 年 11 月 29 日 | 2021 年 5 月 29 日 | 否 | 是 |
 | [**1906**](../../plan-design/changes/whats-new-in-version-1906.md)<br /> (5.00.8853) | 2019 年 7 月 26 日 | 2021 年 1 月 26 日 | 否 | 是 |
 | [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | 2019 年 3 月 27 日 | 2020 年 9 月 27 日 | 是<sup>[附註 1](#bkmk_note1)</sup> | 是 |
 | [**1810**](../../plan-design/changes/whats-new-in-version-1810.md)<br /> (5.00.8740) | 2018 年 11 月 27 日 | 2020 年 12 月 1 日 | 否 | 是 |
+
+**可用日期**是[早期更新通道](checklist-for-installing-update-2002.md#early-update-ring)的發行日期。 在更新可供全球使用之後，大量授權服務中心將提供基準媒體。
 
 <a name="bkmk_note1"></a>
 

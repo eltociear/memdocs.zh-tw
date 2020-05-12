@@ -10,12 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a23f6106a8c922b3ff4e8306fb76aec4fd26b148
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 216c61a671d7d06e434fa399bb3bae12e12f7275
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691406"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905173"
 ---
 # <a name="set-up-a-configuration-manager-lab"></a>設定 Configuration Manager 實驗室
 
@@ -31,9 +31,9 @@ ms.locfileid: "81691406"
 
 -   **實驗室環境會使用 Windows Server 2012 R2**，我們會在其中安裝 Configuration Manager。  
 
-     您可以從 [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012) 下載 Windows Server 2012 R2 評估版。  
+     您可以從 [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012) 下載 Windows Server 2012 R2 評估版。  
 
-     請考慮修改或停用 Internet Explorer 增強式安全性設定，以更輕鬆地存取這些練習過程中所參考的一些下載項目。 如需其他資訊，請參閱 [Internet Explorer：增強式安全性設定](https://technet.microsoft.com/library/dd883248\(v=ws.10\).aspx)。  
+     請考慮修改或停用 Internet Explorer 增強式安全性設定，以更輕鬆地存取這些練習過程中所參考的一些下載項目。 如需詳細資訊，請參閱 [Internet Explorer：Enhanced Security Configuration](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)) (Internet Explorer：增強型安全性設定) (不建議)。  
 
 -   針對站台資料庫，**實驗室環境會使用 SQL Server 2012 SP2**。  
 
@@ -45,7 +45,7 @@ ms.locfileid: "81691406"
 
     -   **SQL_Latin1_General_CP1_CI_AS** 作為 **SQL 定序**類別。  
 
-    -   需要 **Windows 驗證**而非 [SQL 驗證](https://technet.microsoft.com/library/ms144284.aspx)。  
+    -   需要 **Windows 驗證**而非 [SQL 驗證](https://docs.microsoft.com/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15)。  
 
     -   需要專用 **SQL Server 執行個體**。  
 
@@ -61,11 +61,11 @@ ms.locfileid: "81691406"
 
 -   **網域控制站使用 Windows Server 2008 R2**，其已安裝 Active Directory Domain Services。 網域控制站也會作為 DHCP 和 DNS 伺服器的主機，以與完整網域名稱搭配使用。  
 
-     如需其他資訊，請參閱此 [ 概觀](https://technet.microsoft.com/library/hh831484)。  
+     如需詳細資訊，請參閱 [Active Directory Domain Services 概觀](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831484(v=ws.11)) \(英文\)。  
 
 -   **Hyper-V 與一些虛擬機器搭配使用**，確認這些練習中採取的管理步驟如預期地運作。 建議最少使用三部已安裝 Windows 10 的虛擬機器。  
 
-     如需其他資訊，請參閱此 [Hyper-V 概觀](https://technet.microsoft.com/library/hh831531.aspx)。  
+     如需詳細資訊，請參閱 [Hyper-V 概觀](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)) \(英文\)。  
 
 -   這些元件都需要**系統管理員權限**。  
 
@@ -95,7 +95,7 @@ ms.locfileid: "81691406"
 後續程序會列出讓 Configuration Manager 用戶端查詢 Active Directory Domain Services 以找到站台資源所需的後續步驟。  
 
 ##  <a name="create-the-system-management-container"></a><a name="BKMK_CreateSysMgmtLab"></a> 建立系統管理容器  
- Configuration Manager 不會在延伸結構描述時，自動在 Active Directory Domain Services 中建立必要系統管理容器。 因此，您將為實驗室建立這個項目。 這個步驟將要求您[安裝 ADSI 編輯](https://technet.microsoft.com/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit)。  
+ Configuration Manager 不會在延伸結構描述時，自動在 Active Directory Domain Services 中建立必要系統管理容器。 因此，您將為實驗室建立這個項目。 這個步驟將要求您[安裝 ADSI 編輯器](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)) \(英文\)。
 
  請確定您以具有 Active Directory Domain Services 中 [系統]  容器 [建立所有子物件]  權限的帳戶登入。  
 
@@ -129,7 +129,7 @@ ms.locfileid: "81691406"
 
 5.  按一下 [確定]  關閉 [ADSI 編輯]  主控台並完成程序。  
 
-     如需此程序的其他資訊，請參閱[延伸 Configuration Manager 的 Active Directory 結構描述](../../core/plan-design/network/extend-the-active-directory-schema.md)  
+     如需詳細資訊，請參閱[針對 Configuration Manager 擴充 Active Directory 結構描述](../../core/plan-design/network/extend-the-active-directory-schema.md)  
 
 ##  <a name="extend-the-active-directory-schema-using-extadschexe"></a><a name="BKMK_ExtADSchLab"></a> 使用 extadsch.exe 延伸 Active Directory 結構描述  
  您將擴充這個實驗室的 Active Directory 結構描述，這可讓您以最少的管理成本來使用所有的 Configuration Manager 特性和功能。 延伸 Active Directory 結構描述是對每個樹系都只能執行一次的整個樹系設定。 永久延伸結構描述會修改基底 Active Directory 設定中的這組類別和屬性。 這項動作無法復原。 延伸結構描述可讓 Configuration Manager 存取元件，以允許它在實驗室環境內最有效地運作。  
@@ -139,7 +139,7 @@ ms.locfileid: "81691406"
 
 #### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>使用 extadsch.exe 延伸 Active Directory 結構描述：  
 
-1.  建立結構描述主機網域控制站系統狀態的備份。 如需備份主機網域控制站的詳細資訊，請參閱 [Windows Server 備份](https://technet.microsoft.com/library/cc770757.aspx)。  
+1.  建立結構描述主機網域控制站系統狀態的備份。 如需備份主機網域控制站的詳細資訊，請參閱 [Windows Server 備份](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770757(v=ws.11)) \(英文\)  
 
 2.  瀏覽至安裝媒體中的 **\SMSSETUP\BIN\X64** 。  
 
@@ -147,7 +147,7 @@ ms.locfileid: "81691406"
 
 4.  檢閱位於系統磁碟機的根資料夾中的 **extadsch.log**，確認已成功延伸結構描述。  
 
-     如需此程序的其他資訊，請參閱[延伸 Configuration Manager 的 Active Directory 結構描述](../../core/plan-design/network/extend-the-active-directory-schema.md)。  
+     如需詳細資訊，請參閱[針對 Configuration Manager 擴充 Active Directory 結構描述](../../core/plan-design/network/extend-the-active-directory-schema.md)。  
 
 ##  <a name="other-required-tasks"></a><a name="BKMK_OtherTasksLab"></a> 其他必要工作  
  您也需要先完成下列工作，再進行安裝。  
@@ -158,7 +158,7 @@ ms.locfileid: "81691406"
 
  **安裝 .NET 並啟動 Windows Communication Foundation**  
 
- 您將需要安裝兩個 .NET Frameworks：依序安裝 .NET 3.5.1 和 .NET 4.5.2+。 您也將需要啟動 Windows Communication Foundation (WCF)。 WCF 設計成提供分散式運算、廣泛互通性以及服務導向之直接支援的可管理方式，並透過服務導向的程式設計模型來簡化已連線應用程式的開發。 如需深入了解 WCF，請參閱 [何謂 Windows Communication Foundation？](https://technet.microsoft.com/subscriptions/ms731082\(v=vs.90\).aspx) 。  
+ 您將需要安裝兩個 .NET Frameworks：依序安裝 .NET 3.5.1 和 .NET 4.5.2+。 您也將需要啟動 Windows Communication Foundation (WCF)。 WCF 設計成提供分散式運算、廣泛互通性以及服務導向之直接支援的可管理方式，並透過服務導向的程式設計模型來簡化已連線應用程式的開發。 如需詳細資訊，請參閱[何謂 Windows Communication Foundation？](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms731082(v=vs.90)) \(部分機器翻譯\)。
 
 #### <a name="to-install-net-and-activate-windows-communication-foundation"></a>安裝 .NET 並啟動 Windows Communication Foundation：  
 
@@ -198,27 +198,15 @@ ms.locfileid: "81691406"
 
 10. 完成 .NET 基底安裝之後，請瀏覽至 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=42643) 來取得 .NET Framework 4.5.2 的 Web 安裝程式。 按一下 [下載]  按鈕，然後 [執行]  安裝程式。 它將自動偵測必要的元件並以您選取的語言進行安裝。  
 
-如需其他資訊，請參閱下列文章了解需要這些 .NET Framework 的原因：  
-
--   [.NET Framework 版本和相依性](https://technet.microsoft.com/library/bb822049.aspx)  
-
--   [.NET Framework 4 RTM 應用程式相容性逐步解說](https://technet.microsoft.com/library/dd889541.aspx)  
-
--   [如何：將 ASP.NET Web 應用程式升級至 ASP.NET 4](https://technet.microsoft.com/library/dd483478\(VS.100\).aspx)  
-
--   [Microsoft .NET Framework 支援週期原則常見問題集](https://support.microsoft.com/en-us/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)  
-
--   [CLR Inside Out - 同處理序並存](https://msdn.microsoft.com/magazine/ee819091.aspx)  
-
 **啟用 BITS、IIS 和 RDC**  
 
-[背景智慧型傳送服務 (BITS)](https://technet.microsoft.com/library/dn282296.aspx) 用於需要在用戶端與伺服器之間非同步傳送檔案的應用程式。 透過計量前景和背景的傳送流程，BITS 會保留其他網路應用程式的回應能力。 如果中斷傳送工作階段，則也會自動繼續檔案傳送。  
+[背景智慧型傳送服務 (BITS)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282296(v=ws.11)) 用於需要在用戶端與伺服器之間非同步傳送檔案的應用程式。 透過計量前景和背景的傳送流程，BITS 會保留其他網路應用程式的回應能力。 如果中斷傳送工作階段，則也會自動繼續檔案傳送。  
 
 因為這個站台伺服器也會用作管理點，所以您將安裝這個實驗室的 BITS。  
 
 Internet Information Services (IIS) 是彈性可擴充的網頁伺服器，可用來在站台上裝載任何項目。 Configuration Manager 將它用於多個站台系統角色。 如需 IIS 的其他資訊，請檢閱[站台系統伺服器的網站](../../core/plan-design/network/websites-for-site-system-servers.md)。  
 
-[遠端差異壓縮 (RDC)](https://technet.microsoft.com/library/cc754372.aspx) 是一組 API，應用程式可用來判斷是否已對一組檔案進行任何變更。 RDC 可讓應用程式僅複寫檔案的變更部分，進而保持最小網路流量。  
+[遠端差異壓縮 (RDC)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754372(v=ws.11)) 是一組 API，應用程式可用來判斷是否已對一組檔案進行任何變更。 RDC 可讓應用程式僅複寫檔案的變更部分，進而保持最小網路流量。  
 
 #### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>啟用 BITS、IIS 和 RDC 站台伺服器角色：  
 
@@ -330,7 +318,7 @@ Internet Information Services (IIS) 是彈性可擴充的網頁伺服器，可�
 
 7.  按一下 [安裝]  ，並在 [伺服器管理員]  的 [通知]  窗格中確認正確地完成安裝。  
 
-根據預設，IIS 會封鎖 HTTP 或 HTTPS 通訊存取數種類型的副檔名和位置。 若要讓這些檔案發佈至用戶端系統，您需要在發佈點上設定 IIS 的要求篩選。 如需詳細資訊，請參閱[用於發佈點的 IIS 要求篩選](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering)。  
+根據預設，IIS 會封鎖 HTTP 或 HTTPS 通訊存取數種類型的副檔名和位置。 若要讓這些檔案發佈至用戶端系統，您需要在發佈點上設定 IIS 的要求篩選。 如需詳細資訊，請參閱[發佈點的 IIS 要求篩選](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering)。  
 
 #### <a name="to-configure-iis-filtering-on-distribution-points"></a>在發佈點上設定 IIS 篩選：  
 

@@ -2,7 +2,7 @@
 title: 監視作業系統部署
 titleSuffix: Configuration Manager
 description: Configuration Manager 主控台提供警示、報告和各種狀態指標，協助您監視作業系統部署物件。
-ms.date: 10/06/2016
+ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 08085d94-295c-432f-b5e3-9736bce0193b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9d0a430a1010611bc6a7e0871e8c59ca3d1f8de7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7afab9fbbb443b2f9fb4af15a3805c0b7df7a014
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708476"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802161"
 ---
 # <a name="monitor-operating-system-deployments-in-configuration-manager"></a>在 Configuration Manager 中監視作業系統部署
 
@@ -45,6 +45,9 @@ Configuration Manager 主控台提供下列方式協助您監視作業系統部�
 3.  按一下要監視部署狀態的工作順序。  
 
 4.  在 [首頁]  索引標籤的 [部署]  群組中，按一下 [檢視狀態]  。  
+
+> [!NOTE]  
+> 起始升級後，將產生狀態訊息 52200。 這包含進行升級的使用者。  
 
 ##  <a name="operating-system-deployment-reports"></a><a name="BKMK_TSReports"></a> 作業系統部署報告  
  有許多預先定義的作業系統部署報告可供使用。 這些報告分成數種類別，可用以報告有關狀態移轉和工作順序部署的特定資訊。 除了使用預先設定的報告之外，您也可以根據企業需要建立自訂軟體更新報告。 如需詳細資訊，請參閱[報告作業和維護](../../core/servers/manage/operations-and-maintenance-for-reporting.md)。  

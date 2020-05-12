@@ -2,7 +2,7 @@
 title: 已淘汰的功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 不再支援的功能。
-ms.date: 02/25/2020
+ms.date: 05/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 899471b03169f015caef058790b9f58200976c48
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 40eda7184d7be5010bf51e3ac0d30d6d9442203c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702606"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905069"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>已移除且淘汰的 Configuration Manager 功能
 
@@ -29,8 +29,9 @@ ms.locfileid: "81702606"
 
 下列是已淘汰的功能。 您現在仍然可以使用，但 Microsoft 打算在未來結束支援。
 
-|功能|首次宣布的淘汰項目|移除的&nbsp;支援|  
-|-----------|---|--------------|  
+|功能|首次宣布的淘汰項目|移除的&nbsp;支援|
+|-----------|---|--------------|
+| [桌面分析] 選項，可**檢視裝置註冊與安全性更新的最近資料**。<!-- 7080949 --> 如需詳細資訊，請參閱[資料延遲](../../../../desktop-analytics/troubleshooting.md#data-latency)。|2020 年 5 月|2020 年 7 月|
 |從 Azure 共用內容的實作已經變更。 使用內容啟用雲端管理閘道。 未來您將無法建立傳統雲端發佈點。|2019 年 2 月|TBD<sup>[備註 1](#bkmk_note1)</sup>|
 |Azure 的傳統服務部署，用於雲端管理閘道和雲端發佈點。 如需詳細資訊，請參閱[規劃 CMG](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager)。|2018 年 11 月|TBD<sup>[備註 1](#bkmk_note1)</sup>|
 
@@ -49,7 +50,7 @@ ms.locfileid: "81702606"
 | Configuration Manager 公司入口網站應用程式 | 2019 年 5 月 21 日 | 1910 版 |
 | 應用程式類別目錄，包括兩個網站系統角色：應用程式類別目錄網站點與 Web 服務點。 如需詳細資訊，請參閱[移除應用程式類別目錄](../../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat)。 | 2019 年 5 月 21 日 | 1910 版 |
 |搭配 Configuration Manager 中 Windows Hello 企業版設定的憑證式驗證<br>如需詳細資訊，請參閱 [Windows Hello 企業版設定](../../../../protect/deploy-use/windows-hello-for-business-settings.md)。|2017 年 12 月|1910 版|
-|System Center Endpoint Protection for Mac<br>如需詳細資訊，請參閱[支援終止部落格文章](https://go.microsoft.com/fwlink/?linkid=870182)。|2018 年 10 月|2018 年 12 月 31 日|
+|System Center Endpoint Protection for Mac<br>如需詳細資訊，請參閱[支援終止部落格文章](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257)。|2018 年 10 月|2018 年 12 月 31 日|
 |內部部署條件式存取<br>如需詳細資訊，請參閱[混合式 MDM 有哪些改變？](../../../../mdm/understand/what-happened-to-hybrid.md)。|2019 年 1 月 30 日|2019 年 9 月 1 日|
 |混合式行動裝置管理 (MDM)<br>如需詳細資訊，請參閱[混合式 MDM 有哪些改變？](../../../../mdm/understand/what-happened-to-hybrid.md)。<br><br>從 1902 Intune 服務版本開始，預計在 2019 年 2 月底，新客戶將無法建立新的混合式連線。<!--Intune feature 2683117-->|2018 年 8 月 14 日|2019 年 9 月 1 日|
 |安全性內容自動化通訊協定 (SCAP) 延伸模組。 <!--3607889--><br>先前的認證版本仍可在 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=48741)取得。|2018 年 9 月|1810 版|
@@ -79,7 +80,7 @@ Configuration Manager 已從 Configuration Manager 主控台內移除 AMT 型電
 
 Configuration Manager 已移除對網路存取保護的支援。 此功能在 Windows Server 2012 R2 中已淘汰，且已從 Windows 10 移除。  
 
-如需了解網路存取保護的替代方案，請參閱 [網路原則與存取服務概觀](https://technet.microsoft.com/library/hh831683.aspx) 中的 *淘汰的功能*一節。
+如需了解網路存取保護的替代方案，請參閱 [網路原則與存取服務概觀](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)) 中的 *淘汰的功能*一節。
 
 ## <a name="see-also"></a>請參閱
 

@@ -2,7 +2,7 @@
 title: 先決條件檢查
 titleSuffix: Configuration Manager
 description: Configuration Manager 更新之特定先決條件檢查的參考。
-ms.date: 04/01/2020
+ms.date: 05/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d8fc9abfc9fc09bc3011a3fee30b258023d04c8a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9f0ed1d5913154d90242d1aa2a47efbcf7d22282
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700736"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943785"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Configuration Manager 先決條件檢查的清單
 
@@ -771,9 +771,9 @@ SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 
 當您安裝新站台時，Configuration Manager 會自動安裝 SQL Server Native Client 作為可轉散發元件。 安裝站台之後，Configuration Manager 不會升級 SQL Server Native Client。 更新 SQL Server Native Client 可能需要重新啟動，這可能會影響站台安裝程序。
 
-此檢查可確保站台具有支援的 SQL Native Client 版本。 從 1810 版開始，最低版本是 SQL 2012 SP4 (`11.*.7001.0`)。
+此檢查可確保站台伺服器具有支援的 SQL Native Client 版本。 先決條件檢查並不會驗證遠端站台系統上的 SQL Native Client 版本。
 
-這個 SQL Native Client 版本支援 TLS 1.2。 如需詳細資訊，請參閱下列文章：
+最低版本為 SQL 2012 SP4 (`11.*.7001.0`)。 這個 SQL Native Client 版本支援 TLS 1.2。 如需詳細資訊，請參閱下列文章：
 
 - [Microsoft SQL Server 的 TLS 1.2 支援](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
 

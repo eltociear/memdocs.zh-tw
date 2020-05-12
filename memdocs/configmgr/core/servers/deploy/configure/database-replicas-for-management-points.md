@@ -10,12 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8d413221f7dc4ea905844ad3b2dbe08826314a54
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: eef959182b2bada4b4e0c0395cf0e17ac255ba0d
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704666"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906549"
 ---
 # <a name="database-replicas-for-management-points-for-configuration-manager"></a>Configuration Manager 的管理點資料庫複本
 
@@ -57,7 +57,7 @@ Configuration Manager 主要站台可以使用資料庫複本，減少管理點�
 
     -   站台資料庫必須 **發佈** 資料庫複本，且每個遠端資料庫複本伺服器，都必須 **訂閱** 已發佈的資料。  
 
-    -   裝載站台資料庫與裝載資料庫複本的 SQL Server，都必須設定為支援 2 GB 的 **文字複寫大小上限** 。 如需有關如何為 SQL Server 2012 進行設定的範例，請參閱 [Configure the max text repl size Server Configuration Option (設定最大文字複寫大小伺服器設定選項)](https://go.microsoft.com/fwlink/p/?LinkId=273960)。  
+    -   裝載站台資料庫與裝載資料庫複本的 SQL Server，都必須設定為支援 2 GB 的 **文字複寫大小上限** 。 如需有關如何為 SQL Server 2012 進行設定的範例，請參閱 [Configure the max text repl size Server Configuration Option (設定最大文字複寫大小伺服器設定選項)](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15)。  
 
 -   **自我簽署憑證：** 若要設定資料庫複本，您必須在資料庫複本伺服器上建立自我簽署憑證，並讓將使用該資料庫複本伺服器的每個管理點都能使用此憑證。  
 
@@ -172,7 +172,7 @@ Configuration Manager 主要站台可以使用資料庫複本，減少管理點�
         -   如果您使用不同帳戶來執行 SQL Server Agent，請選取 [以下列 Windows 帳戶執行]  ，然後設定該帳戶。 您可以指定 Windows 帳戶或 SQ Server 帳戶。  
 
         > [!IMPORTANT]  
-        >  您必須將執行散發代理程式權限的帳戶授與發行者進行提取訂閱。 如需設定這些權限的資訊，請參閱 SQL Server TechNet 文件庫中的 [Distribution Agent Security (散發代理程式安全性)](https://go.microsoft.com/fwlink/p/?LinkId=238463) 。  
+        >  您必須將執行散發代理程式權限的帳戶授與發行者進行提取訂閱。 如需設定這些權限的資訊，請參閱[散發代理程式安全性](https://docs.microsoft.com/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15)。  
 
       - 針對 [連接到散發者]  ，請選取 [藉由模擬處理帳戶]  。  
 
@@ -457,7 +457,7 @@ Configuration Manager 主要站台可以使用資料庫複本，減少管理點�
 -   為每個使用此指令碼進行設定的後續資料庫複本，更新憑證的易記名稱。  若要執行此作業，請編輯行 **$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** ，並以新名稱取代 **ConfigMgr SQL Server Identification Certificate** ，像是  **ConfigMgr SQL Server Identification Certificate1**。  
 
 ##  <a name="manage-database-replica-configurations"></a><a name="BKMK_DBReplicaOps"></a> 管理資料庫複本組態  
- 當您在網站上使用資料庫複本時，請使用以下各節中的資訊以補充解除安裝資料庫複本、解除安裝使用資料庫複本的網站，或是將網站資料庫移至新的 SQL Server 安裝的程序。 當您利用下面各節的資訊刪除發佈時，請使用指引刪除用於資料庫複本之 SQL Server 版本的交易複寫。 例如，如果您使用 SQL Server 2008 R2，請參閱[如何：刪除發行集 (複寫 Transact-SQL 程式設計)](https://go.microsoft.com/fwlink/p/?LinkId=273934)。  
+ 當您在網站上使用資料庫複本時，請使用以下各節中的資訊以補充解除安裝資料庫複本、解除安裝使用資料庫複本的網站，或是將網站資料庫移至新的 SQL Server 安裝的程序。 當您利用下面各節的資訊刪除發佈時，請使用指引刪除用於資料庫複本之 SQL Server 版本的交易複寫。 如需詳細資訊，請參閱[刪除發行集](https://docs.microsoft.com/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15)。  
 
 > [!NOTE]  
 >  在您還原為資料庫複本設定的網站資料庫之後，必須先重新設定每個資料庫複本並重建發佈及訂閱，才能使用資料庫複本。  
