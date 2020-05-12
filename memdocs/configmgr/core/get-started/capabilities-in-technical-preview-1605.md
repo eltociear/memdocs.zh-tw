@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: c38230b44f7f18e3f60cb4c88b31a03e10a37d30
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d52725e0127f7129a3962cd3ef178d2540bb785a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705596"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905741"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-configuration-manager"></a>Configuration Manager Technical Preview 1605 中的功能
 
@@ -192,7 +192,7 @@ ms.locfileid: "81705596"
 
 #### <a name="general-prerequisites"></a>一般先決條件  
 
--   請確定您已完成[內部部署行動裝置管理的準備步驟](https://technet.microsoft.com/library/mt613153.aspx)並[註冊您的裝置](https://technet.microsoft.com/library/mt627870.aspx)。  
+-   請確定您已完成[內部部署 MDM 的準備步驟](../../mdm/plan-design/plan-on-premises-mdm.md)並[註冊您的裝置](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md)。  
 
 -   為了確保在使用公司入口網站時有最佳的應用程式安裝體驗，請確定 Configuration Manager 已連線到 Microsoft Intune。  
 
@@ -242,7 +242,7 @@ ms.locfileid: "81705596"
 
    4. 使用相同資料夾中的 **CompanyPortalOnPremisesMDM.appx**，以 Windows 應用程式套件部署類型建立 Configuration Manager 應用程式。  
 
-   5. 建立設定公司入口網站的設定項目和設定基準。  
+   5. 建立設定公司入口網站的的設定項目和設定基準。  
 
    6. 部署設定基準和應用程式，並將應用程式新增至所有發佈點。  
 
@@ -284,7 +284,7 @@ ms.locfileid: "81705596"
 
 #### <a name="to-create-a-collection-for-a-server-group"></a>建立伺服器群組的集合  
 
-1.  [建立裝置集合](https://technet.microsoft.com/library/gg712295.aspx)將伺服器群組的電腦包含在內。  
+1.  [建立裝置集合](../clients/manage/collections/create-collections.md)將伺服器群組的電腦包含在內。  
 
 2.  在 [資產與相容性]  工作區中，按一下 [裝置集合]  ，再以滑鼠右鍵按一下包含伺服器群組電腦的集合，然後按一下 [內容]  。  
 
@@ -325,9 +325,9 @@ ms.locfileid: "81705596"
 
 #### <a name="to-deploy-software-updates-to-the-server-group-and-monitor-status"></a>將軟體更新部署至伺服器群組並監視狀態  
 
-1.  在伺服器群組集合中[部署軟體更新](https://technet.microsoft.com/library/gg712304.aspx)。  
+1.  在伺服器群組集合中[部署軟體更新](../../sum/deploy-use/deploy-software-updates.md)。  
 
-2.  [監視軟體更新部署](https://technet.microsoft.com/library/gg712304.aspx)。 當用戶端等候安裝軟體更新時，除了軟體更新部署的標準監視檢視之外，也會顯示新狀態描述。 此新狀態會顯示 [正在等候鎖定]  。  
+2.  [監視軟體更新部署](../../sum/deploy-use/monitor-software-updates.md)。 當用戶端等候安裝軟體更新時，除了軟體更新部署的標準監視檢視之外，也會顯示新狀態描述。 此新狀態會顯示 [正在等候鎖定]  。  
 
 #### <a name="to-clear-the-deployment-locks-for-computers-in-a-server-group"></a>清除伺服器群組中的電腦部署鎖定  
 

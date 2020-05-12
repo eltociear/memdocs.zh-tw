@@ -10,24 +10,24 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 39039347361076ae7c8491f95419187d0af9da85
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7de7d562131f97ac21d1c394b176d3b7f4ce7747
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706746"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906444"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager 長期維護分支的支援設定
 
-適用於：System Center Configuration Manager (長期維護分支) 
+適用於：*System Center Configuration Manager (長期維護分支) 
 
 本主題中的資訊可用來了解 Configuration Manager 長期維護分支 (LTSB) 所支援的作業系統和產品相依性。
 如果未在本主題或 LTSB 特定主題中指出，則套用至最新分支 1606 版的相同設定和限制也會套用至 LTSB。  發生衝突時，請使用適用於您所使用版本的資訊。 一般而言，LTSB 比最新分支更為受限。
 
 ## <a name="general-statement-of-support"></a>一般支援陳述
-此 Configuration Manager 分支支援下列產品和技術。 不過，本內容對這些產品和技術的包含，並不代表對任何產品或版本超出產品個別支援週期的支援延伸。 已超出其支援週期的產品，不支援搭配 Configuration Manager 使用。 如需詳細資訊，請前往 [Microsoft 支援週期](https://go.microsoft.com/fwlink/p/?LinkId=208270)網站，並閱讀 [Microsoft 支援週期原則 - 常見問題集](https://go.microsoft.com/fwlink/p/?LinkId=31976)。
+此 Configuration Manager 分支支援下列產品和技術。 不過，本內容對這些產品和技術的包含，並不代表對任何產品或版本超出產品個別支援週期的支援延伸。 已超出其支援週期的產品不支援搭配 Configuration Manager 使用。 如需詳細資訊，請前往 [Microsoft 支援週期](https://support.microsoft.com/lifecycle)網站，並閱讀 Microsoft 支援週期原則常見問題集。
 
-此外，除非已在 [Enterprise Mobility + Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/) (企業行動力 + 安全性部落格) 上公告下列主題中未列出的產品和產品版本，否則不予支援。
+此外，除非已在 [Enterprise Mobility + Security Blog](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/bg-p/enterprisemobilityandsecurity) (企業行動力 + 安全性部落格) 上公告下列主題中未列出的產品和產品版本，否則不予支援。
 
 **未來支援的限制：** LTSB 具有未來伺服器和用戶端作業系統和產品相依性的有限支援。 在版本的生命週期，LTSB 的平台清單是固定的︰
 
@@ -45,11 +45,11 @@ LTSB 支援使用下列 Windows 電腦作業系統作為站台系統。  每個�
 
 **支援的作業系統：**
 - Windows Server 2016
-- Windows Server 2012 R2 (x64)：Standard、Datacenter
-- Windows Server 2012 (x64)：Standard、Datacenter
+- Windows Server 2012 R2 (x64)：标准版、数据中心版
+- Windows Server 2012 (x64)：标准版、数据中心版
 - Windows 10 Enterprise 2015 LTSB (x86、x64)
 - Windows 10 Enterprise 2016 LTSB (x86、x64)
-- Windows 8.1 (x86、x64)：專業版、企業版
+- Windows 8.1 (x86, x64)：專業版、企業版
 - Windows Server 2012 的 Server Core 安裝
 - Windows Server 2012 R2 的 Server Core 安裝
 
@@ -67,12 +67,12 @@ LTSB 支援使用下列 Windows 電腦作業系統作為站台系統。  每個�
 - Windows Storage Server 2012 (x64)
 - Windows 10 Enterprise 2015 LTSB (x86、x64)
 - Windows 10 Enterprise 2016 LTSB (x86、x64)
-- Windows 8.1 (x86、x64)：專業版、企業版
+- Windows 8.1 (x86, x64)：專業版、企業版
 - Windows Server 2012 R2 的 Server Core 安裝 (x64) (附註 2)
 - Windows Server 2012 的 Server Core 安裝 (x64) (附註 2)
 
 **(附註 1)** Datacenter 版本受到支援，但未經 Configuration Manager 認證。  
-**(附註 2)** 為了支援用戶端推入安裝，執行此作業系統版本的電腦必須執行檔案和存放服務伺服器角色的檔案伺服器角色服務。 如需在 Server Core 電腦上安裝 Windows 功能的相關資訊，請參閱 Windows Server 2012 TechNet 文件庫中的[在 Server Core 伺服器上安裝伺服器角色和功能](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)。
+**(附註 2)** 為了支援用戶端推入安裝，執行此作業系統版本的電腦必須執行檔案和存放服務伺服器角色的檔案伺服器角色服務。 如需在 Server Core 電腦上安裝 Windows 功能的相關資訊，請參閱[在 Server Core 伺服器上安裝伺服器角色和功能](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11)) \(英文\)。
 
 ### <a name="windows-embedded"></a>Windows Embedded
 您可以使用 LTSB，以在裝置上安裝用戶端軟體來管理下列 Windows Embedded 裝置。  如需詳細資訊，請參閱[規劃將用戶端部署至 Windows Embedded 裝置](../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)。
@@ -131,7 +131,7 @@ LTSB 支援使用下列 Windows 電腦作業系統作為站台系統。  每個�
 ### <a name="mac-computers"></a>Mac 電腦  
  您可以使用 LTSB，利用適用於 Mac 的 Configuration Manager 用戶端來管理 Mac OS X 電腦。
 
-Configuration Manager 媒體不提供 Mac 用戶端安裝套件。 您可以從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=525184)作為「其他作業系統的用戶端」下載的一部分來下載。  
+Configuration Manager 媒體不提供 Mac 用戶端安裝套件。 您可以從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=47719)作為「其他作業系統的用戶端」下載的一部分來下載。  
 
 Mac 作業系統支援僅限本節所列的作業系統， 並不包含最新分支之未來 Mac 用戶端安裝套件更新可能支援的其他作業系統。
 
@@ -145,7 +145,7 @@ Mac 作業系統支援僅限本節所列的作業系統， 並不包含最新分
 ## <a name="linux-and-unix-servers"></a>Linux 和 UNIX 伺服器
 您可以使用 LTSB，利用適用於 Linux 和 UNIX 的 Configuration Manager 用戶端來管理 Linux 和 UNIX 電腦。
 
-Configuration Manager 媒體不提供 Linux 和 UNIX 用戶端安裝套件。 您可以從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=525184)作為「其他作業系統的用戶端」下載的一部分來下載。 除了用戶端安裝套件外，所下載的用戶端也包括特定的安裝指令碼，可用來管理各電腦上用戶端的安裝程序。
+Configuration Manager 媒體不提供 Linux 和 UNIX 用戶端安裝套件。 您可以從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=47719)作為「其他作業系統的用戶端」下載的一部分來下載。 除了用戶端安裝套件外，所下載的用戶端也包括特定的安裝指令碼，可用來管理各電腦上用戶端的安裝程序。
 
 Linux 和 UNIX 作業系統支援僅限本節所列的作業系統， 並不包含最新分支之未來 Linux 和 UNIX 用戶端套件更新可能支援的其他作業系統。
 
@@ -186,7 +186,7 @@ Linux 和 UNIX 作業系統支援僅限本節所列的作業系統， 並不包�
 |第 6 版 x86|ccm-Universalx86.&lt;組建\>.tar|  
 |第 6 版 x64|ccm-Universalx64.&lt;組建\>.tar|  
 |第 7 版 x86|ccm-Universalx86.&lt;組建\>.tar|  
-|第 7 版 x64|ccm-Universalx64.&lt;組建\>.tar|  
+|第 7 版 x64|ccm-Universalx64.&lt;版本\>.tar|  
 |第 8 版 x86|ccm-Universalx86.&lt;組建\>.tar|  
 |第 8 版 x64|ccm-Universalx64.&lt;組建\>.tar|  
 
@@ -276,11 +276,11 @@ LTSB 支援下列作業系統執行 Configuration Manager 主控台。 裝載主
 
 **支援的作業系統：**
 - Windows Server 2016
-- Windows Server 2012 R2 (x64)：Standard、Datacenter
-- Windows Server 2012 (x64)：Standard、Datacenter
+- Windows Server 2012 R2 (x64)：标准版、数据中心版
+- Windows Server 2012 (x64)：标准版、数据中心版
 - Windows 10 Enterprise 2016 LTSB (x86、x64)
 - Windows 10 Enterprise 2015 LTSB (x86、x64)
-- Windows 8.1 (x86、x64)：專業版、企業版
+- Windows 8.1 (x86, x64)：專業版、企業版
 
 
 ## <a name="sql-server-versions-supported-for-the-site-database-and-reporting-point"></a>站台資料庫和報告點支援的 SQL Server 版本
@@ -313,5 +313,5 @@ LTSB 支援下列 SQL Server 版本來裝載站台資料庫和報告點。 針�
 - [站台和站台系統必要條件](../plan-design/configs/site-and-site-system-prerequisites.md)
 - [高可用性選項](../servers/deploy/configure/high-availability-options.md)
 - [建議的硬體](../plan-design/configs/recommended-hardware.md)
-- [Windows 功能與網路的支援](../plan-design/configs/support-for-windows-features-and-networks.md)
+- [Windows 功能和網路支援](../plan-design/configs/support-for-windows-features-and-networks.md)
 - [虛擬化環境支援](../plan-design/configs/support-for-virtualization-environments.md)

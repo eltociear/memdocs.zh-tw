@@ -10,12 +10,12 @@ ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 0896204fa994643064676b55b20d63d349c4098b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3352f8aa719e93210124d164d89791214eb20bf5
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689296"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905868"
 ---
 # <a name="management-tasks-for-configuration-manager-applications"></a>Configuration Manager 應用程式的管理工作
 
@@ -40,7 +40,7 @@ ms.locfileid: "81689296"
 |**更新統計資料**|更新 [監視]  工作區中顯示在 [部署]  節點裡的資訊，這項資訊與此應用程式的部署有關。<br /><br /> 請參閱[從 Configuration Manager 主控台監視應用程式](../../apps/deploy-use/monitor-applications-from-the-console.md)。|  
 |**恢復**|恢復之前使用 [淘汰]  管理工作所淘汰掉的應用程式。|  
 |<bpt id="p1">**</bpt>Retire<ept id="p1">**</ept>|淘汰應用程式後，就不能再部署該應用程式，但不會刪除該應用程式及其部署。 此選項不會移除此應用程式安裝在用戶端電腦上的現有複本。 對該應用程式的任何修訂內容將會在 60 天後從 Configuration Manager 中刪除。 不過，系統並不會移除該應用程式已經安裝的複本。<br /><br /> 若要刪除應用程式，必須先淘汰該應用程式、刪除所有部署、移除其他部署對該應用程式的參考，然後刪除該應用程式的所有修訂版本。<br /><br /> 請參閱[修改和取代應用程式](../../apps/deploy-use/revise-and-supersede-applications.md)。|  
-|**匯出**|開啟 [匯出應用程式精靈]  ，此精靈可讓您將選取的應用程式匯出成 .zip 檔案，之後再進行封存或安裝於另一個站台。 如果您選擇匯出應用程式內容，系統會建立一個包含該內容的資料夾。<br /><br /> 您也可以匯出應用程式相依性、取代關聯性和條件，以及應用程式的內容及其相依性。<br /><br /> Windows PowerShell Cmdlet **Export-CMApplication** 可執行相同的功能。 如需詳細資訊，請參閱 Microsoft System Center 2012 Configuration Manager SP1 Cmdlet 參考文件中的 [Export-CMApplication](https://go.microsoft.com/fwlink/p/?LinkID=258880)。|  
+|**匯出**|開啟 [匯出應用程式精靈]  ，此精靈可讓您將選取的應用程式匯出成 .zip 檔案，之後再進行封存或安裝於另一個站台。 如果您選擇匯出應用程式內容，系統會建立一個包含該內容的資料夾。<br /><br /> 您也可以匯出應用程式相依性、取代關聯性和條件，以及應用程式的內容及其相依性。<br /><br /> Windows PowerShell Cmdlet **Export-CMApplication** 可執行相同的功能。 如需詳細資訊，請參閱 [Export-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/export-cmapplication?view=sccm-ps) \(英文\)。|  
 |**刪除**|刪除目前選取的應用程式。<br /><br /> 如果某個應用程式有相依的應用程式、作用中的部署，或者相依的工作順序，您就不能刪除該應用程式。|  
 |**模擬部署**|開啟 [模擬應用程式部署精靈]  ，您不需要安裝或解除安裝應用程式，即可在此精靈中測試該應用程式在電腦中的部署結果。<br /><br /> 請參閱[模擬應用程式部署](../../apps/deploy-use/simulate-application-deployments.md)。|  
 |**部署**|開啟 [部署軟體精靈]  ，您可以在此精靈中將選取的應用程式部署至階層中的電腦集合。<br /><br /> 請參閱[部署應用程式](../../apps/deploy-use/deploy-applications.md)。|  

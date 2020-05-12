@@ -10,12 +10,12 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 241e7ed9a2195e178cc1aac2ee2a146eea60b093
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b691004742def4c126ba82b07cad1651cbe822f8
+ms.sourcegitcommit: 13ceb4e1cc8c2a10bfa199e301bf9bada8ceb268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705746"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82923434"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>建立及部署 Windows Defender 應用程式防護原則
 
@@ -25,7 +25,7 @@ ms.locfileid: "81705746"
 
 ## <a name="prerequisites"></a>先決條件
 
-若要建立及部署 Windows Defender 應用程式防護原則，必須使用 Windows 10 Fall Creators Update (1709)。 您必須使用網路隔離原則設定要部署原則的 Windows 10 裝置。 如需詳細資訊，請參閱 [Windows Defender Application Guard overview](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview) (Windows Defender 應用程式防護概觀)。
+若要建立及部署 Windows Defender 應用程式防護原則，必須使用 Windows 10 Fall Creators Update (1709)。 您必須使用[網路隔離原則](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard#network-isolation-settings) \(部分機器翻譯\) 設定要部署原則的 Windows 10 裝置。 如需詳細資訊，請參閱 [Windows Defender Application Guard overview](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview) (Windows Defender 應用程式防護概觀)。
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>建立原則並瀏覽可用的設定
 

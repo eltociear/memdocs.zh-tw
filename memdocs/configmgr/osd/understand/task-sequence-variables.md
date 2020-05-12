@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 991b3e2ab654aff56d982c587ccc4bda53694294
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e99efed5d506ddf30e818243ad8b899e8f8b8aca
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703256"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782108"
 ---
 # <a name="task-sequence-variables"></a>工作順序變數
 
@@ -177,7 +177,7 @@ ms.locfileid: "81703256"
 
 ### <a name="_smstsmdatapath"></a><a name="SMSTSMDataPath"></a> _SMSTSMDataPath
 
-指定 [SMSTSLocalDataDrive](#SMSTSLocalDataDrive) 變數所定義的路徑。 如果您在工作順序啟動之前定義 SMSTSLocalDataDrive (例如透過設定集合變數)，Configuration Manager 便會在工作順序啟動之後定義 _SMSTSMDataPath 變數。
+指定 [SMSTSLocalDataDrive](#SMSTSLocalDataDrive) 變數所定義的路徑。 此路徑指定工作順序在執行時，會將暫存快取檔案儲存在目的地電腦上的哪個位置。 如果您在工作順序啟動之前定義 SMSTSLocalDataDrive (例如透過設定集合變數)，Configuration Manager 便會在工作順序啟動之後定義 _SMSTSMDataPath 變數。
 
 ### <a name="_smstsmediatype"></a><a name="SMSTSMediaType"></a> _SMSTSMediaType
 
@@ -1592,9 +1592,9 @@ Configuration Manager 在重新嘗試從發佈點下載內容之前等待的秒�
 
 ### <a name="smstslocaldatadrive"></a><a name="SMSTSLocalDataDrive"></a> SMSTSLocalDataDrive
 
-指定工作順序在執行時，會將暫存檔案儲存在目的地電腦上的哪個位置。
+指定工作順序在執行時，會將暫存快取檔案儲存在目的地電腦上的哪個位置。
 
-請在工作順序啟動之前設定此變數，例如藉由設定集合變數。 Configuration Manager 會在工作順序啟動之後定義 [_SMSTSMDataPath](#SMSTSMDataPath) 變數。
+請在工作順序啟動之前設定此變數，例如藉由設定集合變數。 工作順序啟動之後，Configuration Manager 會根據定義 SMSTSLocalDataDrive 變數的內容，定義 [_SMSTSMDataPath](#SMSTSMDataPath) 變數。
 
 ### <a name="smstsmp"></a><a name="SMSTSMP"></a> SMSTSMP
 
@@ -1638,7 +1638,7 @@ Windows PE 對等快取為初始廣播所使用的自訂網路連接埠。 用�
 
 ### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a> SMSTSPostAction
 
-指定在工作順序完成後執行的命令。 例如，您可以指定一個可在工作順序將 OS 部署到裝置之後，在內嵌裝置上啟用寫入篩選器的指令碼。
+指定在工作順序完成後執行的命令。 例如，指定 `shutdown.exe /r /t 30 /f` 在工作順序完成後 30 秒將電腦重新開機。
 
 ### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 

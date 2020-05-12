@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2028974c166e060f445b255db6c5af707725a3f4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1365aec90093ee24ad967e1d68e7c414b4efa254
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693286"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906653"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>在 Configuration Manager 中建立設定基準
 
@@ -23,6 +23,9 @@ ms.locfileid: "81693286"
 
 
 Configuration Manager 中的設定基準包含預先定義的設定項目和 (選擇性) 其他設定基準。 建立組態基準之後，您可以將它部署至集合，讓該集合中的裝置下載組態基準，並以此評估合規性。  
+
+> [!TIP]
+> 沒有任何方法可以指定設定管理員用戶端評估基準中設定項目的順序。 其為非決定性。<!-- MEMDocs#175 -->
 
 ## <a name="configuration-baselines"></a>設定基準
 

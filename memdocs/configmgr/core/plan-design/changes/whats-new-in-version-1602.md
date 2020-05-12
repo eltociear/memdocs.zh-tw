@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fc38d0cbd70faa23f67c7089944b8b4c2cd0f7fc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2e398795a14f5073141f103d93ccd82e61d4d7a8
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078714"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904885"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Configuration Manager 1602 版中的新功能
 
@@ -42,9 +42,9 @@ Configuration Manager 1602 更新僅會以執行 1511 版之原安裝站台的�
 > [!WARNING]  
 >  在升級到 Windows Server 2012 R2 之前，您必須解除安裝伺服器的 WSUS 3.2。  
 >   
->  如需此重要步驟的資訊，請參閱 Windows Server 文件中 [Windows Server Update Services 概觀](https://technet.microsoft.com/library/hh852345.aspx)的＜新功能和變更的功能＞一節。  
+>  如需此重要步驟的相關詳細資訊，請參閱[Windows Server Update Services 概觀](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality) \(英文\) 的＜New and changed functionality＞(新功能和變更的功能) 一節。  
 
- 若要升級伺服器，請使用 Windows Server 2012 R2 的升級程序。 您不需要在升級後執行 Configuration Manager 站台伺服器還原。 如需升級程序，請參閱 Windows Server 文件中的 [Windows Server 2012 R2 的升級選項](https://technet.microsoft.com/library/dn303416.aspx) 。  
+ 若要升級伺服器，請使用 Windows Server 2012 R2 的升級程序。 您不需要在升級後執行 Configuration Manager 站台伺服器還原。 如需升級程序，請參閱 Windows Server 文件中的 [Windows Server 2012 R2 的升級選項](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) 。  
 
 ###  <a name="sql-server-alwayson-availability-groups"></a><a name="bkmk_AOAG"></a> SQL Server AlwaysOn 可用性群組  
  您可以使用 SQL Server AlwaysOn 可用性群組，於主要站台和管理中心網站裝載站台資料庫，以作為高可用性和災害復原方案。  

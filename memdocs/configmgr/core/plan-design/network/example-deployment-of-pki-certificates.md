@@ -10,12 +10,12 @@ ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 994ee2916020ecc4e6d9d3c35f41fe24d5a31405
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 45ef103645630b8e203710ec0ff36a71b3cef4cf
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701566"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904239"
 ---
 # <a name="step-by-step-example-deployment-of-the-pki-certificates-for-configuration-manager-windows-server-2008-certification-authority"></a>為 Configuration Manager 部署 PKI 憑證的逐步範例：Windows Server 2008 憑證授權單位
 
@@ -52,7 +52,7 @@ ms.locfileid: "81701566"
 |憑證需求|憑證描述|  
 |-----------------------------|-----------------------------|  
 |執行 IIS 的站台系統 Web 伺服器憑證|此憑證是用來加密資料以及對用戶端驗證伺服器。 它必須從 Configuration Manager 外部安裝在執行 Internet Information Services (IIS) 且在 Connfiguration Manager 中設定以使用 HTTPS 的站台系統伺服器上。<br /><br /> 如需設定和安裝此憑證的步驟，請參閱本主題中的[為執行 IIS 的站台系統部署 Web 伺服器憑證](#BKMK_webserver2008_cm2012)。|  
-|供用戶端連線到雲端架構發佈點的服務憑證|如需設定和安裝此憑證的步驟，請參閱本主題中的[為雲端架構的發佈點部署服務憑證](#BKMK_clouddp2008_cm2012)。<br /><br /> **重要：** 此憑證會搭配 Windows Azure 管理憑證使用。 如需管理憑證的詳細資訊，請參閱[如何建立管理憑證](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate)，以及 MSDN Library 的＜Windows Azure 平台＞一節中的[如何將管理憑證新增至 Windows Azure 訂閱](https://docs.microsoft.com/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate)。|  
+|供用戶端連線到雲端架構發佈點的服務憑證|如需設定和安裝此憑證的步驟，請參閱本主題中的[為雲端架構的發佈點部署服務憑證](#BKMK_clouddp2008_cm2012)。<br /><br /> **重要：** 此憑證會搭配 Windows Azure 管理憑證使用。 如需管理憑證的詳細資訊，請參閱[如何建立管理憑證](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate) \(部分機器翻譯\)，以及[如何將管理憑證新增至 Windows Azure 訂用帳戶](https://docs.microsoft.com/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate) \(部分機器翻譯\)。|  
 |Windows 電腦的用戶端憑證|此憑證是用來對已設定為使用 HTTPS 的站台系統驗證 Configuration Manager 用戶端電腦。 它也可用於管理點和狀態移轉點，以監視其在設定為使用 HTTPS 時的操作狀態。 它必須從 Configuration Manager 外部安裝在電腦上。<br /><br /> 如需設定和安裝此憑證的步驟，請參閱本主題中的[部署 Windows 電腦的用戶端憑證](#BKMK_client2008_cm2012)。|  
 |發佈點的用戶端憑證|此憑證有兩種用途：<br /><br /> 憑證是用來在發佈點傳送狀態訊息之前，對具備 HTTPS 功能的管理點驗證發佈點。<br /><br /> 當選取 [為用戶端啟用 PXE 支援]  散佈點選項時，憑證會傳送至 PXE 開機的電腦，使其在部署作業系統期間可連線到具備 HTTPS 功能的管理點。<br /><br /> 如需設定和安裝此憑證的步驟，請參閱本主題中的[部署發佈點的用戶端憑證](#BKMK_clientdistributionpoint2008_cm2012)。|  
 |適用於行動裝置的註冊憑證|此憑證是用來對已設定為使用 HTTPS 的站台系統驗證 Configuration Manager 行動裝置用戶端。 它必須在 Configuration Manager 上安裝為行動裝置註冊的一部分，而您要選擇已設定的憑證範本作為行動裝置用戶端設定。<br /><br /> 如需設定此憑證的步驟，請參閱本主題中的[為行動裝置部署註冊憑證](#BKMK_mobiledevices2008_cm2012)。|  

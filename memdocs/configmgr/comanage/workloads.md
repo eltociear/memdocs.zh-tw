@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 8c91ba1c2b4b5ef7072c030eddd9b97dd69933e5
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 928ef8a8ebc90807912f22901743725df9aa67e7
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075705"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842218"
 ---
 # <a name="co-management-workloads"></a>共同管理工作負載
 
@@ -75,14 +75,13 @@ Endpoint Protection 工作負載包含 Windows Defender 的反惡意程式碼保
 - Windows Defender 應用程式控制  
 - Windows Defender 資訊安全中心  
 - Windows Defender 進階威脅防護 (現在稱為 Microsoft Defender 威脅防護)
-- Windows 資訊保護  
 
 如需 Intune 功能的詳細資訊，請參閱 [Microsoft Intune 的 Endpoint Protection](https://docs.microsoft.com/intune/endpoint-protection-windows-10)。
 
 > [!Note]  
 > 當您切換此工作負載時，Configuration Manager 原則會保留在裝置上，直到 Intune 原則覆寫它們為止。 此行為可確保裝置在轉換期間仍然具有保護原則。
 >
-> Endpoint Protection 工作負載也是裝置設定的一部分。 當您切換[裝置設定](#device-configuration)工作負載時，會套用相同的行為。<!-- SCCMDocs.nl-nl issue #4 -->
+> Endpoint Protection 工作負載也是裝置設定的一部分。 當您切換[裝置設定](#device-configuration)工作負載時，會套用相同的行為。<!-- SCCMDocs.nl-nl issue #4 --> 當您切換裝置設定工作負載時，其也包含「Windows 資訊保護」功能的原則，該原則未包含在端點保護工作負載中。<!-- 4184095 -->
 >
 > 屬於 Intune 裝置設定之裝置限制設定檔類型的「Microsoft Defender 防毒軟體」設定並不包含在 Endpoint Protection 滑桿的範圍內。 若要為已啟用 Endpoint Protection 滑桿的共同管理裝置管理「Microsoft Defender 防毒軟體」，請使用 [Microsoft 端點管理員系統管理中心]   > [端點安全性]   > [防毒]  中的新防毒原則。 新原則類型提供新的且已改良的選項，並支援裝置限制設定檔中提供的所有相同設定。 <!--6609171-->
 >
@@ -97,6 +96,9 @@ Endpoint Protection 工作負載包含 Windows Defender 的反惡意程式碼保
 即使 Intune 是裝置設定授權單位，您仍可以將設定從 Configuration Manager 部署至共同管理的裝置。 這個例外可用來配置您組織所需要但 Intune 目前還沒有的設定。 在 [Configuration Manager 設定基準](../compliance/deploy-use/create-configuration-baselines.md)上，指定這個例外狀況。 啟用該選項以在建立基準時，**即使用是共同管理的用戶端也一律套用此基準**。 您可以稍後在現有基準之屬性的 [一般]  索引標籤上變更它。  
 
 如需 Intune 功能的詳細資訊，請參閱[在 Microsoft Intune 中建立裝置設定檔](https://docs.microsoft.com/intune/device-profile-create)。  
+
+> [!NOTE]
+> 當您切換裝置設定工作負載時，其也包含「Windows 資訊保護」功能的原則，該原則未包含在端點保護工作負載中。<!-- 4184095 -->
 
 ## <a name="office-click-to-run-apps"></a>Office 隨選即用應用程式
 

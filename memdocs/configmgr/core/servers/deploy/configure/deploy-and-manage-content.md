@@ -10,12 +10,12 @@ ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7478eff1a14eeffd4d12b1539df7c5573c6a7cb6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 00a44123bc074c671f9b3d73af66b8d79c3ff433
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707256"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906487"
 ---
 # <a name="deploy-and-manage-content-for-configuration-manager"></a>部署和管理 Configuration Manager 的內容
 
@@ -409,7 +409,7 @@ ms.locfileid: "81707256"
 
 只有當一般複寫內容發生問題後 (通常使用主控台的 [監視] 節點確認)，必須重新發佈內容時，才使用此方法強制複寫。   
 
-如需此 SDK 選項的詳細資訊，請參閱 MSDN.Microsoft.com 的 [RetryContentReplication Method in Class SMS_CM_UpdatePackages](https://msdn.microsoft.com/library/mt762092(CMSDK.16).aspx) (SMS_CM_UpdatePackages 類別的 RetryContentReplication 方法)。
+如需此 SDK 選項的詳細資訊，請參閱 [SMS_CM_UpdatePackages 類別中的 RetryContentReplication 方法](../../../../develop/reference/sum/retrycontentreplication-method-in-class-sms_cm_updatepackages.md)。
 
 ### <a name="remove-content"></a>移除內容
 如果您不再需要發佈點的內容，可將發佈點上的內容檔案移除。  

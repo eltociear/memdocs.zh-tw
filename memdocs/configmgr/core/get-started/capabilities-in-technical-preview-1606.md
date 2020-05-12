@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 05e7bbe6373ed91de5a2bb8e99a8425e733274f2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0513c1908b1360a50653931dda57e5d148055240
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705566"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905683"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Configuration Manager Technical Preview 1606 中的功能
 
@@ -80,9 +80,9 @@ ms.locfileid: "81705566"
 
 Device Guard 是 Windows 10 功能，它使用硬體和軟體功能來嚴格控制可在裝置上執行的功能。
 
-您可以在[此 Technet 文章](https://technet.microsoft.com/itpro/windows/whats-new/device-guard-overview)中，閱讀有關 Device Guard 功能及其運作方式的詳細概觀。
+如需詳細資訊，請參閱 [Device Guard 簡介](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) \(部分機器翻譯\)。
 
-在此版本中，Configuration Manager 可以與 Device Guard 和 [Windows AppLocker](https://technet.microsoft.com/library/dd723678(v=ws.10).aspx) 交互操作，讓使用 Configuration Manager 部署的可執行檔和 DLL 檔案自動受到信任並視為來自受管理的安裝程式，這表示它們可以在目標裝置上執行；至於其他軟體，除非其他 AppLocker 規則明確允許執行，否則將無法執行。  
+在此版本中，Configuration Manager 可以與 Device Guard 和 [Windows AppLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) 交互操作，讓使用 Configuration Manager 部署的可執行檔和 DLL 檔案自動受到信任並視為來自受管理的安裝程式，這表示它們可以在目標裝置上執行；至於其他軟體，除非其他 AppLocker 規則明確允許執行，否則將無法執行。  
 
 目前，您無法從 Configuration Manager 主控台設定這項功能。 若要設定此原則，您必須在每個用戶端上設定登錄機碼，並在用戶端上設定 Windows 服務。
 完成後，即可設定 AppLocker 原則檔案。 設定原則檔案之後，您就可以將它部署至任何相容的用戶端裝置。
@@ -93,13 +93,11 @@ Device Guard 是 Windows 10 功能，它使用硬體和軟體功能來嚴格控�
 - 稽核模式 - 應用程式已標記防止執行，但任何已封鎖的應用程式都會在記錄檔中報告 (更新版的 Configuration Manager 將提供支援)。
 - 強制啟用 - 應用程式會遭到封鎖，無法執行。
 
-如需如何搭配使用 Device Guard 和 Configuration Manager 的進一步資訊，請參閱 [Enterprise Mobility and Security 部落格](https://blogs.technet.microsoft.com/enterprisemobility/2016/06/20/configmgr-as-a-managed-installer-with-win10)。
+如需詳細資訊，請參閱下列文章：
 
-延伸閱讀：
+- [Device Guard 簡介](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-- [Device Guard 簡介](https://technet.microsoft.com/itpro/windows/keep-secure/introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies)
-- [Device Guard 憑證和相容性](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-certification-and-compliance)
-- [Device Guard 部署指南](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
+- [規劃及開始使用 Windows Defender 應用程式控制部署程序](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide) \(部分機器翻譯\)
 
   ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a> 針對內部部署行動裝置管理提供多個裝置管理點  
   在 Technical Preview 1606 中，內部部署行動裝置管理 (MDM) 支援 Windows 10 年度更新版中的一項新功能，該功能會自動設定已註冊的裝置，以提供多個可供使用的裝置管理點。 這項功能允許在通常使用的裝置無法使用時，以其他裝置管理點代替。 這項功能只適用於安裝 Windows 10 年度更新版的電腦。  
@@ -221,7 +219,7 @@ Configuration Manager 需要 Azure 管理憑證才能存取 Azure API 及設定�
 
 從 Technical Preview 1606 開始，您可以使用 Configuration Manager 用戶端代理程式設定 (而不是群組原則)，讓 Office 365 用戶端從 Configuration Manager 接收更新。 在設定這項設定並部署 Office 365 更新之後，Configuration Manager 用戶端代理程式會與 Office 365 用戶端代理程式進行通訊，從發佈點下載 Office 365 更新並安裝它們。 Configuration Manager 也採用用戶端代理程式設定的清查。
 
-如需詳細資訊，請參閱 [Manage Office 365 ProPlus updates](https://technet.microsoft.com/library/mt741983.aspx)(管理 Office 365 ProPlus 更新)。
+如需詳細資訊，請參閱 [Manage Office 365 ProPlus updates](../../sum/deploy-use/manage-office-365-proplus-updates.md)(管理 Office 365 ProPlus 更新)。
 
 ### <a name="set-the-configuration-manager-client-setting-to-manage-the-office-365-client-agent"></a>設定 Configuration Manager 用戶端設定來管理 Office 365 用戶端代理程式
 1.  在 Configuration Manager 主控台中，按一下 [管理]   > [概觀]   > [用戶端設定]  。

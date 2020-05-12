@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7a505296fe51aae996d429fe7da2033d3a787ff
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 542069b82ea4c68a48ccc47b79007fd2fa25322a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706666"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906018"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>我應該使用哪個 Configuration Manager 分支？
 
@@ -47,7 +47,7 @@ Microsoft 計劃每年發行幾次 Configuration Manager 最新分支的更新�
 
 若要將最新分支安裝為新站台，請使用[基準媒體](../servers/manage/updates.md#bkmk_Baselines)。 您也可以使用基準媒體從 System Center 2012 Configuration Manager Service Pack 2 或 System Center 2012 R2 Configuration Manager Service Pack 1 升級。 您組織授權 Configuration Manager 的方式會決定對此媒體的存取權。
 
-您也可以使用基準媒體來安裝新站台，它會是最新分支評估版。 評估版並不需要授權。 您可以使用評估版 180 天。 它支援升級為最新分支授權版。 若只要安裝評估版，請從 [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) 取得。
+您也可以使用基準媒體來安裝新站台，它會是最新分支評估版。 評估版並不需要授權。 您可以使用評估版 180 天。 它支援升級為最新分支授權版。 若只要安裝評估版，請從 [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) 加以取得。
 
 > [!NOTE]
 > 使用基準媒體安裝新 Configuration Manager 階層的站台。 如果先前已安裝基準版本，請使用主控台內更新將站台更新為新的版本。  
@@ -89,7 +89,7 @@ LTSB 是以 1606 版為基礎。 這個分支不會收到提供新功能或更�
 >  
 > 若要在大量授權服務中心 (VLSC) 中尋找 Configuration Manager 1606 版，請前往 [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) 的 [下載和金鑰]  索引標籤，並搜尋 `System Center 2016`，然後選取 **System Center 2016 Datacenter** 或 **System Center 2016 Standard**。  
 >  
-> 您也可以從 [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview) 下載 System Center 2016 評估版。  
+> 您也可以從 [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview) 下載 System Center 2016 評估版。  
 
 ### <a name="features-of-the-ltsb"></a>LTSB 的功能
 
