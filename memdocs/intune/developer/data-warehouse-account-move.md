@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95c7104f949216a6a9f7704ac9bec6a7c2dfa7aa
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 94592505806ec005fcc5abf6aead04ec89422d6e
+ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078085"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82881072"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>移動您的 Intune 資料倉儲帳戶資料 
 
@@ -83,4 +83,4 @@ Azure 入口網站檢視中的某些趨勢圖表會重設。 您可以在 **Grap
 ## <a name="next-steps"></a>後續步驟
 
 - 了解[每週的 Intune 新功能](../fundamentals/whats-new.md)。 您也可以了解即將推出的變更、關於服務的重要通知，以及過去版本的相關資訊。
-- 閱讀 [Microsoft Intune 部落格](https://go.microsoft.com/fwlink/?LinkID=273882)。
+- 閱讀 [Microsoft Intune 部落格](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/)。
