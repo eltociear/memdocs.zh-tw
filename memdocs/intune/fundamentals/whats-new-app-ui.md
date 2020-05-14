@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/05/2020
+ms.date: 05/08/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe95196da3e75dc50e585dc1c4508e8d20c7d5e3
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 17213a29d5182176fe2fd8e5802e5ca03587d8f7
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255025"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991809"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune 終端使用者應用程式的 UI 更新
 
@@ -36,6 +36,26 @@ ms.locfileid: "82255025"
 
 
 
+## <a name="week-of-may-4-2020"></a>2020 年 5 月 4 日當週  
+### <a name="company-portal-for-android-guides-users-to-get-apps-after-work-profile-enrollment----6103999---"></a>適用於 Android 的公司入口網站會引導使用者在工作設定檔註冊之後取得應用程式 <!-- 6103999 -->
+我們已改善公司入口網站中的應用程式內指導方針，讓使用者能更輕鬆地尋找並安裝應用程式。 使用者在註冊工作設定檔管理之後會收到一則訊息，說明如何在有徽章的 Google Play 版本中找到建議的應用程式。 我們已更新[使用 Android 工作設定檔註冊裝置](../user-help/enroll-device-android-work-profile.md)中的最後一個步驟以顯示新的訊息。 
+
+![公司入口網站的範例影像，其中顯示會開啟有徽章的 Google Play 版本的 [裝置] 索引標籤提示。](./media/whats-new-app-ui/updated-banner-android-2005.png)  
+
+使用者也會在左側公司入口網站選單中看到新的 [取得應用程式]  連結。 
+
+![公司入口網站左側選單的範例影像，其中已醒目提示 [取得應用程式] 功能表項目。](./media/whats-new-app-ui/updated-drawer-android-2005.png)  
+
+為了為這些新的與已改善的體驗騰出空間，已移除下圖所示的 [應用程式]  索引標籤。  
+
+![公司入口網站的範例影像，其中顯示現已移除 [應用程式] 索引標籤。](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
+
+
+
+
+
+
+
 ## <a name="week-of-march-2-2020"></a>2020 年 3 月 2 日當週   
 ### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>改善了 Android 公司入口網站登入體驗   
 我們已更新 Android 公司入口網站應用程式中數個登入畫面的版面配置，讓使用者獲得更加現代化且簡潔的體驗。 若要查看所有 Android 公司入口網站註冊指示，請移至[註冊您的 Android 裝置](../user-help/enroll-device-android-company-portal.md)或[使用 Android 工作設定檔註冊](../user-help/enroll-device-android-work-profile.md)。   
@@ -44,7 +64,7 @@ ms.locfileid: "82255025"
 |已更新|上一步|   
 |---|---|   
 |![新公司入口網站登入畫面的範例影像：[登入] 按鈕。](./media/whats-new-app-ui/intune-company-portal-sign-in-2003.png)|![前一個公司入口網站登入頁面的範例影像：顯示更忙碌的設計。](./media/whats-new-app-ui/intune-company-portal-sign-in-2002.png)| 
-|![新登入進度畫面的範例影像：顯示一個進度列。](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![前一個登入進度畫面的範例影像：顯示更忙碌的設計。](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|  
+|![新登入進度畫面的範例影像：顯示一個進度列。](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![前一個登入進度畫面的範例影像：顯示更忙碌的設計。](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|
 ## <a name="week-of-february-3-2020"></a>2020 年 2 月 3 日當週
 
 ### <a name="screen-removed-from-company-portal-android-work-profile-enrollment---6103987---"></a>已從公司入口網站 Android 工作設定檔註冊移除畫面 <!--6103987 -->
@@ -477,7 +497,7 @@ __從另一部裝置登入時的新登入體驗__
 
 ### <a name="improvements-to-app-syncing-with-windows-10-creators-update---676505--"></a>透過 Windows 10 Creators Update 改善應用程式同步處理 <!--676505-->
 
-適用於 Windows 10 的公司入口網站應用程式現在會針對具有 Windows 10 Creators Update (1709 版) 之裝置的應用程式安裝要求，自動起始同步處理。 這會減少應用程式安裝在「待同步」狀態期間出現拖延的問題。 此外，使用者將能從應用程式內手動起始同步處理。
+Windows 10 所適用公司入口網站應用程式現在會針對具有 Windows 10 Creators Update (1709 版) 的裝置，自動起始應用程式安裝要求的同步處理。 這會減少應用程式安裝在「待同步」狀態期間出現拖延的問題。 此外，使用者將能從應用程式內手動起始同步處理。
 
 ![Windows 10 公司入口網站應用程式的影像，在其中從公司入口網站應用程式市集下載 Microsoft Word 的作業處於擱置狀態。](./media/whats-new-app-ui/w10_download_pending_after_1706.png)
 
@@ -615,6 +635,6 @@ __改進後__ ![更新版本的載入畫面影像，現在會顯示安裝進度�
 
 
 ## <a name="see-also"></a>請參閱
-* [Microsoft Intune 部落格](https://go.microsoft.com/fwlink/?LinkID=273882)
+* [Microsoft Intune 部落格](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/)
 * [雲端平台藍圖](https://www.microsoft.com/cloud-platform/roadmap)
 * [Intune 的新功能](whats-new.md)

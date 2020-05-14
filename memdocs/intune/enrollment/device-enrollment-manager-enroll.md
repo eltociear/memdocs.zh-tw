@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8710043244e0b6becebef60890ac1a0ec3105971
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 80e15e78e270ae72bdf584e9db967cae81d3ac2b
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254634"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83342992"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>使用裝置註冊管理員帳戶在 Intune 中註冊裝置
 
@@ -46,6 +46,8 @@ DEM 使用者帳戶及以 DEM 使用者帳戶註冊的裝置具有下列限制�
 - 將 Azure AD 裝置限制套用至 DEM 帳戶，將會防止您達到 DEM 帳戶可以註冊的 1,000 個裝置限制。
 
 ## <a name="enrollment-methods-supported-by-dem-accounts"></a>DEM 帳戶支援的註冊方法
+
+您可以使用下列方法來使用 DEM 帳戶註冊裝置：
 
 - [Windows Autopilot](enrollment-autopilot.md)
 - [Windows 裝置大量註冊](windows-bulk-enroll.md)

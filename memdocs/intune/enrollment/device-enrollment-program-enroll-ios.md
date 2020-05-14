@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db9164d68783356faf01fe4fc4e8d74f2a4b0869
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: dd999f621375cfdbfa80bf076766be20053221dc
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023345"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269060"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>使用 Apple 的自動裝置註冊來自動註冊 iOS/iPadOS 裝置
 
@@ -148,8 +148,7 @@ iOS/iPadOS 11 中對非監督式 ADE 裝置的支援已淘汰。 在 iOS/iPadOS 
 
     ![[建立設定檔] 螢幕擷取畫面。](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. 在 [基本]  頁面上，為設定檔輸入系統管理用的**名稱**與**描述**。 使用者看不到這些詳細資料。 您可以使用此 [名稱]  欄位，在 Azure Active Directory 中建立動態群組。 設定檔名稱可用來定義 enrollmentProfileName 參數，以註冊具備此註冊設定檔的裝置。 針對使用自動裝置註冊 (含使用者親和性) 進行註冊的裝置，在裝置設定之前註冊使用者為其成員的目標 AAD 使用者群組，將會確保最快速地將原則傳遞至裝置。 將應用程式和原則其目標設為以註冊設定檔為基礎的動態群組，會導致在完成註冊流程後套用至裝置時產生一些延遲。
-深入了解 [Azure Active Directory 動態群組](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)。
+3. 在 [基本]  頁面上，為設定檔輸入系統管理用的**名稱**與**描述**。 使用者看不到這些詳細資料。 
 
     ![設定檔名稱與描述。](./media/device-enrollment-program-enroll-ios/image05.png)
 
@@ -264,6 +263,17 @@ iOS/iPadOS 11 中對非監督式 ADE 裝置的支援已淘汰。 在 iOS/iPadOS 
 16. 選擇 [下一步]  以移至 [檢閱 + 建立]  頁面。
 
 17. 若要儲存該設定檔，請選擇 [建立]  。
+
+### <a name="dynamic-groups-in-azure-active-directory"></a>Azure Active Directory 中的動態群組
+
+您可以使用註冊 [名稱]  欄位，在 Azure Active Directory 中建立動態群組。 如需詳細資訊，請參閱 [Azure Active Directory 動態群組](/azure/active-directory/users-groups-roles/groups-dynamic-membership)。
+
+您可以使用設定檔名稱來定義 [enrollmentProfileName 參數](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)，以註冊具備此註冊設定檔的裝置。
+
+若要在具備使用者親和性的 ADE 裝置上取得最快的原則傳遞，請確定註冊的使用者在裝置設定之前已經是 AAD 使用者群組的成員。 
+
+將動態群組指派至註冊設定檔，可能會在註冊後將應用程式與原則傳遞至裝置時導致些許延遲。
+
 
 ## <a name="sync-managed-devices"></a>同步受管理裝置
 由於 Intune 有管理您裝置的權限，您可以同步處理 Intune 與 Apple，以在 Azure 入口網站的 Intune 中查看受管理裝置。

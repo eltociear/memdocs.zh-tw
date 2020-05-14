@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed0194f0ace1ed1e962a8b993a4e93f7ef487bdc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: dfcedebf32c8f08450e3eaa87c99f9bc11dd7431
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084935"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906907"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>使用 Intune，透過 Windows 10 及更新版本的設定將裝置標示為相容或不相容
 
@@ -44,7 +44,7 @@ ms.locfileid: "80084935"
 ### <a name="windows-health-attestation-service-evaluation-rules"></a>Windows 運作狀況證明服務評估規則
 
 - **要求 BitLocker**：  
-   「Windows BitLocker 磁碟機加密」會將存放在 Windows 作業系統磁碟區上的所有資料都加密。 BitLocker 使用信賴平台模組 (TPM) 來協助保護 Windows 作業系統和使用者資料。 即使該電腦處於無人看管、遺失或遭竊的情況，它也能協助確保電腦不受竄改。 如果電腦配備相容的 TPM，BitLocker 會使用 TPM 來鎖定可保護資料的加密金鑰。 因此，必須等到 TPM 驗證電腦的狀態之後，才能存取金鑰。  
+   Windows BitLocker 磁碟機加密會加密儲存在 Windows 作業系統磁碟區上的所有資料。 BitLocker 使用信賴平台模組 (TPM) 來協助保護 Windows 作業系統和使用者資料。 即使該電腦處於無人看管、遺失或遭竊的情況，它也能協助確保電腦不受竄改。 如果電腦配備相容的 TPM，BitLocker 就會使用 TPM 來鎖定保護資料的加密金鑰。 因此，必須等到 TPM 驗證電腦的狀態之後，才能存取金鑰。  
 
    - [未設定]  (預設  ) - 不會評估此設定是否符合規範。
    - [需要]  - 裝置可以保護儲存在磁碟機上的資料，使其在系統關閉或是休眠時免於未經授權的存取。  
@@ -65,7 +65,7 @@ ms.locfileid: "80084935"
 其他資源：
 
 - 如需運作狀況證明服務其運作方式的詳細資料，請參閱[證明 CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp) (機器翻譯)。
-- [Support Tip: Using Device Health Attestation Settings as Part of Your Intune Compliance Policy](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643) (支援提示：使用裝置健康情況證明設定，作為您 Intune 合規性政策的一部分)。
+- [支援提示：使用裝置健康情況證明設定作為您 Intune 合規性原則的一部分](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643) \(英文\)。
 
 ## <a name="device-properties"></a>裝置內容
 
@@ -83,7 +83,7 @@ ms.locfileid: "80084935"
 
   `Microsoft Windows [Version 10.0.17134.1]`
 
-  當裝置正在使用的 OS 版本比所輸入版本更新時，便會封鎖其對組織資源的存取。 系統會要求終端使用者連絡其 IT 管理員。 直到規則變更為允許該 OS 版本前，裝置都無法存取組織資源。
+  當裝置正在使用的 OS 版本比所輸入的版本更新時，便會封鎖其對組織資源的存取。 系統會要求終端使用者連絡其 IT 管理員。 直到規則變更為允許該 OS 版本前，裝置都無法存取組織資源。
 
 - **行動裝置所需的最低 OS 版本**：  
   輸入允許的最低版本 (格式為 major.minor.build number)。
@@ -158,7 +158,7 @@ ms.locfileid: "80084935"
   > [!IMPORTANT]
   > 在 Windows 桌面上變更密碼需求時，使用者會在下次登入時受到影響，因為此時裝置會從閒置變成作用中。 系統仍會提示密碼符合需求的使用者變更其密碼。
 
-### <a name="encryption"></a>Encryption
+### <a name="encryption"></a>加密
 
 - **裝置上的資料儲存區加密**：  
   此設定適用於裝置上的所有磁碟機。
@@ -188,10 +188,20 @@ ms.locfileid: "80084935"
 - **防毒**：  
   - [未設定]  (預設  ) - Intune 不會檢查裝置上是否有任何安裝的反間諜功能解決方案。 
   - [需要]  - 使用向 [Windows 資訊安全中心](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)註冊的防毒解決方案 (例如 Symantec 和 Microsoft Defender) 來檢查合規性。
+  
+  [DeviceStatus CSP - DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp) \(部分機器翻譯\)
+
+  > [!NOTE]
+  > 「Windows 10 家用版」  不支援針對 [防毒] 使用 DeviceStatus CSP，而且會回報 [不適用]  的狀態。 Intune 小組正在努力修正。 若要針對此限制做出因應措施，請考慮在裝置合規性政策中使用 [Windows Defender](#defender) 設定。 Windows 10 家用版支援 Windows Defender 設定。  
 
 - [反間諜功能]  ：  
   - [未設定]  (預設  ) - Intune 不會檢查裝置上是否有任何安裝的反間諜功能解決方案。
   - [需要]  - 使用向 [Windows 資訊安全中心](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)註冊的反間諜功能解決方案 (例如 Symantec 和 Microsoft Defender) 來檢查合規性。  
+  
+  [DeviceStatus CSP - DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp) \(部分機器翻譯\)
+
+  > [!NOTE]
+  > 「Windows 10 家用版」  不支援針對 [反間諜功能] 使用 DeviceStatus CSP，而且會回報 [不適用]  的狀態。 Intune 小組正在努力修正。 若要針對此限制做出因應措施，請考慮在裝置合規性政策中使用 [Windows Defender](#defender) 設定。 Windows 10 家用版支援 Windows Defender 設定。 
 
 ### <a name="defender"></a>Defender
 
@@ -229,7 +239,7 @@ Windows 10 Desktop 支援下列相容性設定。
   使用此設定，以採用來自防禦威脅服務的風險評估作為合規性的條件。 選擇允許的最高威脅層級：
   - [未設定]  (預設  )  
   - [清除]  - 此選項最安全，因為裝置不能有任何威脅。 若裝置上偵測到任何等級的威脅，便會評估為不相容。
-  - [低]  - 若只有低等級的威脅，會將裝置評估為符合規範。 任何更高等級的威脅都會使裝置處於不相容狀態。
+  - [低]  - 若只有低等級的威脅，會將裝置評估為符合規範。 任何較高等級的威脅會使裝置變成不符合規範的狀態。
   - [中]  - 如果裝置上的現有威脅是低等級或中等級，會將裝置評估為符合規範。 若在裝置上偵測到高等級的威脅，便會判斷為不相容。
   - [高]  - 此選項最不安全，且允許所有威脅等級。 如果此解決方案只用於報告用途，則此設定可能很實用。
   

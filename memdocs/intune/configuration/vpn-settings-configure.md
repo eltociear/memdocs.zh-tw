@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64356bf9be0c2c439c1f4fc296a9728a7937b001
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c72d2f8d9bd6a7235845863000272f605bb41089
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086567"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943819"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>在 Intune 中建立 VPN 設定檔以連線到 VPN 伺服器
 
@@ -182,7 +182,13 @@ VPN 設定檔可以使用來自不同製造商的多種連線類型及通訊協�
 
 當您建立 VPN 設定檔時，請選擇先前在 Intune 中建立的 SCEP 或 PKCS 憑證設定檔。 這個設定檔稱為識別憑證。 此憑證可用來針對您為允許使用者裝置進行連線而建立的受信任憑證設定檔 (或*根憑證*) 進行驗證。 受信任的憑證會指派到可驗證 VPN 連線的電腦 (一般是 VPN 伺服器)。
 
+若您針對 VPN 設定檔使用以憑證為基礎的驗證，請部署 VPN 設定檔、憑證設定檔及信任的根設定檔至相同的群組，確保每個裝置都能識別您憑證授權單位的合法性。
+
 如需如何在 Intune 中建立及使用憑證設定檔的詳細資訊，請參閱[如何利用 Microsoft Intune 設定憑證](../protect/certificates-configure.md)。
+
+> [!NOTE]
+> VPN 驗證不支援使用 [PKCS 匯入的憑證]  設定檔類型新增的憑證。 VPN 驗證支援使用 [PKCS 憑證]  設定檔類型新增的憑證。
+
 
 ### <a name="user-name-and-password"></a>使用者名稱和密碼
 

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 05/08/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 839809de89d4220fa87012cd9a28e5f6b6c35dcf
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3007e9a40dd77e156f0c0a77214e819948fc01da
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79348584"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991558"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>使用 Android 工作設定檔註冊裝置
 
@@ -74,6 +74,15 @@ ms.locfileid: "79348584"
 9. 當安裝程式完成時，請按一下 [完成]  。  
 
     ![公司入口網站 [公司存取設定] 畫面的範例影像，其中顯示已完成的設定且 [完成] 按鈕已反白顯示。](./media/work-profile-done-1911.png)  
+
+10. 當系統提示您在 Google Play 中檢視組織的建議應用程式時，請選取 [開啟]  。 
+
+    ![公司入口網站的範例影像，其中顯示會開啟有徽章的 Google Play 版本的提示。](./media/get-apps-banner-android-2005.png) 
+
+    如果您尚未準備好安裝應用程式，您稍後隨時可以直接前往有徽章的 Google Play 版本來存取這些應用程式。 您也可以從公司入口網站功能表中選取 [取得應用程式]  。  
+
+    ![公司入口網站功能表的範例影像，其中醒目提示 [取得應用程式] 連結。](./media/updated-drawer-android-2005.png) 
+
 
 
 ## <a name="next-steps"></a>後續步驟  

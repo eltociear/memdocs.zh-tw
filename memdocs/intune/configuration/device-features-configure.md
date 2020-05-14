@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ffa3d11b92c38373da22e53b96fe9cf9e520b5b
-ms.sourcegitcommit: af8a3efd361a7f3fa6e98e5126dfb1391966ff76
+ms.openlocfilehash: 8e72fc48608ebf32f3e32d4a94ab7203ee418d8f
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82149178"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943802"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>在 Intune 中新增 iOS、iPadOS 或 macOS 裝置功能設定
 
@@ -153,7 +153,7 @@ AirPrint 是可讓裝置透過無線網路列印到檔案的 Apple 功能。 在
 
 在 Intune 中，使用這些設定來設定貴組織、您的識別提供者、Microsoft 或 Apple 所建立的 SSO 應用程式延伸模組。 SSO 應用程式擴充功能會為您的使用者處理驗證。 這些設定會設定重新導向類型和認證類型的 SSO 應用程式延伸模組。
 
-- 重新導向類型是專為 OAuth 和 SAML2 等新式驗證通訊協定設計的。 您可以在 macOS 裝置上使用一般重新導向擴充功能。 對於 iOS/iPadOS 裝置，您可選擇 Microsoft 的 Azure AD SSO 擴充功能 ([Microsoft 企業單一登入外掛程式](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) 和一般重新導向擴充功能。
+- 重新導向類型是專為 OpenID Connect、OAuth 與 SAML2 等新式驗證通訊協定設計的。 您可以在 macOS 裝置上使用一般重新導向擴充功能。 對於 iOS/iPadOS 裝置，您可選擇 Microsoft 的 Azure AD SSO 擴充功能 ([Microsoft 企業單一登入外掛程式](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) 和一般重新導向擴充功能。
 - 認證類型是專為挑戰和回應驗證流程所設計。 您可以在 Apple 所提供的 Kerberos 特定認證擴充功能和一般認證擴充功能之間進行選擇。
 
 如需可在 Intune 中設定的設定清單，請參閱 [iOS/iPadOS SSO 應用程式延伸模組](ios-device-features-settings.md#single-sign-on-app-extension)和 [macOS SSO 應用程式延伸模組](macos-device-features-settings.md#single-sign-on-app-extension)。

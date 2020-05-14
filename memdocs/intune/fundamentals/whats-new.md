@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/30/2020
+ms.date: 05/04/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf490c71fdc94b974e53a9d0f388a777e986f13c
-ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
+ms.openlocfilehash: 5b3c8287d9b5ca2d46094d04ee2179128bead4a8
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619571"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991751"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune 的新功能
 
@@ -51,6 +51,14 @@ ms.locfileid: "82619571"
 ### Device security
 ### Intune apps
 ### Monitor and troubleshoot
+
+<!-- ########################## -->
+## <a name="week-of-may-4-2020"></a>2020 年 5 月 4 日當週  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
+
+### <a name="company-portal-for-android-guides-users-to-get-apps-after-work-profile-enrollment----6103999---"></a>適用於 Android 的公司入口網站會引導使用者在工作設定檔註冊之後取得應用程式 <!-- 6103999 -->
+我們已改善公司入口網站中的應用程式內指導方針，讓使用者能更輕鬆地尋找並安裝應用程式。 使用者在註冊工作設定檔管理之後會收到一則訊息，說明如何在有徽章的 Google Play 版本中找到建議的應用程式。 我們已更新[使用 Android 工作設定檔註冊裝置](../user-help/enroll-device-android-work-profile.md)中的最後一個步驟以顯示新的訊息。 使用者也會在左側公司入口網站選單中看到新的 [取得應用程式]  連結。 為了為這些新的與已改善的體驗騰出空間，已移除 [應用程式]  索引標籤。 若要查看已更新的畫面，請移至 [Intune 終端使用者應用程式的 UI 更新](./whats-new-app-ui.md)。 
 
 <!-- ########################## -->
 ## <a name="week-of-april-20-2020"></a>2020 年 4 月 20 日當週

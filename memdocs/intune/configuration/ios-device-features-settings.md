@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/27/2020
+ms.date: 05/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af60c16c4a7c9d27409f82cfc53d5c345dfe1af0
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: fce26aab90989f31ee56a9abd58f617c780d9c4b
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210201"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943870"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>要在 Intune 中使用常見 iOS/iPadOS 功能用的 iOS 與 iPadOS 裝置設定
 
@@ -107,7 +107,7 @@ Intune 包含一些內建設定，可讓 iOS/iPadOS 使用者在其裝置上使�
       您最多可以為裝置 Dock 新增 **20** 個頁面。
 
 > [!NOTE]
-> 當使用 [固定] 設定新增圖示時，在主畫面與頁面上的圖示會鎖定，且無法移動。 這可能是由 iOS/iPadOS 與 Apple 的 MDM 原則所設計。
+> 當您使用 [主畫面配置] 設定來新增頁面，或是將頁面與應用程式新增到 Dock 時，系統會鎖定主畫面上的圖示與頁面。 您無法加以移動或刪除。 此行為可能是 iOS/iPadOS 與 Apple 的 MDM 原則設計使然。
 
 #### <a name="example"></a>範例
 

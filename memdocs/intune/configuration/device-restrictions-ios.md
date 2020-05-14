@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 05/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 897366ba9b7bae15050c0aa5e392ba5255a90b24
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 49ecd2a1aaa5408a721b06264703720be601c73c
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407826"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269009"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>使用 Intune 來允許或限制功能的 iOS 和 iPadOS 裝置設定
 
@@ -95,6 +95,10 @@ ms.locfileid: "80407826"
 - **啟用鎖定**：[允許]  會在受監督的 iOS/iPadOS 裝置上啟用 [啟用鎖定]。 啟用鎖定能讓遺失或遭竊的裝置較難以重新啟動。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。
 - **封鎖應用程式移除**：[封鎖]  會防止移除應用程式。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會允許使用者從裝置移除應用程式。
 - **允許裝置鎖定時使用 USB 配件**：[允許]  可讓 USB 配件與鎖定時間超過一小時的裝置交換資料。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能不會更新裝置上的 USB 受限模式，且如果超過一小時就會封鎖 USB 配件，使其無法從裝置傳送資料。
+
+  本功能適用於：  
+  - iOS/iPadOS 11.4.1 與更新版本
+
 - **強制自動設定日期和時間**：[需要]  會強制受監督裝置自動設定日期和時間。 裝置的時區會在裝置具有行動數據連線或已啟用具位置服務之 Wi-Fi 的情況下更新。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。
 - **使學生在離開教室課程前需先取得允許**：[需要]  會強制使用 Classroom 應用程式註冊非受控課程的學生，需向老師要求許才可離開課程。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能不會強制學生要求權限。
 
@@ -292,7 +296,7 @@ ms.locfileid: "80407826"
   從 iOS/iPadOS 13.0 開始，只有受監督的裝置才可使用此設定。
 
   - **從 App Store 安裝應用程式**：[封鎖]  不會在裝置主畫面上顯示應用程式。 使用者可以繼續使用 iTunes 或 Apple Configurator 來安裝應用程式。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會允許主畫面上的 App Store。
-  - **自動下載應用程式**：[封鎖]  會防止自動下載在其他裝置上購買的應用程式。 這不會影響對現有應用程式的更新。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會允許在裝置上下載於其他 iOS/iPadOS 裝置上購買的應用程式。
+  - **自動下載應用程式**：[封鎖]  會防止自動下載在其他裝置上購買的應用程式，以及防止對新應用程式進行自動更新。 這不會影響對現有應用程式的更新。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會允許在裝置上下載並更新於其他 iOS/iPadOS 裝置上購買的應用程式。
 
 - **偏激的 iTunes 音樂、播客或新聞內容**：[封鎖]  會禁止偏激的 iTunes 音樂、播客或新聞內容。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會允許裝置存取商店中評分為成人的內容。
 
@@ -324,7 +328,10 @@ ms.locfileid: "80407826"
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>設定適用於：裝置註冊、自動裝置註冊 (受監督)
 
+
 - **Spotlight 搜尋傳回網際網路上的結果**：[封鎖]  會防止 Spotlight 傳回來自網際網路搜尋的任何結果。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會允許 Spotlight 搜尋連線到網際網路，以提供搜尋結果。
+
+  此設定在 UI 中是重複的，且將會在即將推出的版本中修正。 此設定目前會套用至受監督的裝置。 在未來的版本中，此設定會套用至裝置註冊和自動化裝置註冊的裝置，且不需要監督。
 
 - **Safari Cookie**：選取裝置上處理 Cookie 的方式。 選項包括：
   - 允許
@@ -334,7 +341,7 @@ ms.locfileid: "80407826"
 
 - **Safari JavaScript**：[封鎖]  會防止在裝置上執行瀏覽器中的 JavaScript。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會允許 Java 指令碼。
 
-- **Safari 快顯視窗**：[封鎖]  會停用網頁瀏覽器中的快顯封鎖程式。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會允許快顯封鎖程式。
+- **Safari 快顯視窗**：[封鎖]  會封鎖 Safari 網頁瀏覽器中所有的快顯視窗。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會允許快顯封鎖程式。
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>設定適用於：自動裝置註冊 (受監督)
 
@@ -386,6 +393,8 @@ ms.locfileid: "80407826"
 - **對尋找我的朋友應用程式設定的變更**：[封鎖]  會防止對 [尋找我的朋友] 應用程式設定進行變更。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會允許使用者變更「尋找我的朋友」應用程式的設定。
 
 - **Spotlight 搜尋傳回網際網路上的結果**：[封鎖]  會防止 Spotlight 傳回來自網際網路搜尋的任何結果。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會允許 Spotlight 搜尋連線到網際網路，以提供搜尋結果。
+
+  此設定在 UI 中是重複的，且將會在即將推出的版本中修正。 此設定目前會套用至受監督的裝置。 在未來的版本中，此設定會套用至裝置註冊和自動化裝置註冊的裝置，且不需要監督。
 
 - **禁止從裝置移除系統應用程式**：[封鎖]  會停用從裝置移除系統應用程式的功能。 當設定為 [未設定]  (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會允許使用者移除系統應用程式。
 
@@ -586,11 +595,16 @@ ms.locfileid: "80407826"
 
   從 iOS/iPadOS 13.0 開始，只有受監督的裝置才可使用此設定。
 
-## <a name="autonomous-single-app-mode"></a>自發性單一應用程式模式
+## <a name="autonomous-single-app-mode-asam"></a>自發性單一應用程式模式 (ASAM)
 
-使用這些設定，將 iOS/iPadOS 裝置設定為在自發性單一應用程式模式中執行特定應用程式。 設定此模式且使用者啟動其中一個已設定的應用程式時，就會將裝置鎖定於該應用程式。 在使用者結束允許的應用程式之前，會停用應用程式/工作切換。
+使用這些設定，將 iOS/iPadOS 裝置設定為在自發性單一應用程式模式 (ASAM) 中執行特定應用程式。 設定此模式且使用者啟動其中一個已設定的應用程式時，就會將裝置鎖定於該應用程式。 在使用者結束允許的應用程式之前，會停用應用程式/工作切換。
 
 例如，在學校或大學環境中，新增可讓使用者在裝置上測試的應用程式。 或者，將裝置鎖定於公司入口網站應用程式，直到使用者進行驗證為止。 當使用者完成應用程式動作時，或當您移除此原則時，裝置就會回到其正常狀態。
+
+> [!NOTE]
+> 並非所有應用程式都支援自發性單一應用程式模式。 若要將應用程式置於自發性單一應用程式模式中，通常需要由應用程式設定原則傳遞的配套識別碼或索引鍵/值組。 如需詳細資訊，請參閱 Apple MDM 文件的 [`autonomousSingleAppModePermittedAppIDs`restriction](https://developer.apple.com/documentation/devicemanagement/restrictions)(autonomousSingleAppModePermittedAppIDs 限制)。 如需正在設定應用程式所需的特定設定詳細資訊，請參閱廠商文件。
+
+例如，若要在自發性單一應用程式模式中設定 Zoom Room，Zoom 會指出必須使用 `us.zoom.zpcontroller` 配套識別碼。 在此情況下，您也會在 Zoom 的入口網站中進行變更。 如需詳細資訊，請參閱 [ZOOM 說明中心](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM)。
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>設定適用於：自動裝置註冊 (受監督)
 
@@ -601,6 +615,8 @@ ms.locfileid: "80407826"
 您也可以 [匯入]  具有應用程式名稱及其套裝組 ID清單的 CSV 檔案。 或是 [匯出]  包含那些應用程式的現有清單。
 
 ## <a name="kiosk"></a>Kiosk
+
+[單一應用程式模式](https://support.apple.com/guide/mdm/mdm80a981/web)在 Intune 中稱為 Kiosk 模式。
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>設定適用於：自動裝置註冊 (受監督)
 
@@ -666,8 +682,7 @@ ms.locfileid: "80407826"
 
 iOS/iPadOS 受監督模式只能透過 Apple 的裝置註冊計劃，或使用 Apple Configurator，在初始裝置設定期間啟用。 一旦啟用受監督模式，Intune 即可設定裝置的下列功能：
 
-- App Lock (單一應用程式模式) 
-- 全域 HTTP Proxy 
+- Kiosk 模式 (單一應用程式模式)：在 [Apple 開發人員文件](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) \(英文\) 中稱為 "App Lock" (應用程式鎖定)。
 - 停用啟用鎖定 
 - 自發性單一應用程式模式 
 - 網路內容篩選 

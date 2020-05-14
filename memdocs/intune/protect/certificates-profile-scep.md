@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3da418db81a315e4102b63c34ffc557646d36f70
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: fe91e36ab5cc66fe81c77401a2a0374f6577b202
+ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126068"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82862372"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>在 Intune 中建立並指派 SCEP 憑證設定檔
 
@@ -301,7 +301,8 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 - 如果您針對 Intune 和 Configuration Manager 使用共同管理，請在 Configuration Manager 中，將資源存取原則的[工作負載滑桿設定為](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) [Intune]  或 [試驗 Intune]  。 此設定可讓 Windows 10 用戶端啟動要求憑證的流程。
 
 > [!NOTE]
-> 在 iOS/iPadOS 裝置上，當 SCEP 憑證設定檔或 PKCS 憑證設定檔與其他設定檔 (例如 Wi-Fi 或 VPN 設定檔) 建立關聯時，裝置會收到這些每個其他設定檔的憑證。 這會導致 iOS/iPadOS 裝置具有多個由 SCEP 或 PKCS 憑證要求提供的憑證。 
+> - 在 iOS/iPadOS 裝置上，當 SCEP 憑證設定檔或 PKCS 憑證設定檔與其他設定檔 (例如 Wi-Fi 或 VPN 設定檔) 建立關聯時，裝置會收到這些每個其他設定檔的憑證。 這會導致 iOS/iPadOS 裝置具有多個由 SCEP 或 PKCS 憑證要求提供的憑證。 
+> - 在 iOS 13 與 macOS 10.15 上，有一些[由 Apple 所記錄的額外安全性需求](https://support.apple.com/HT210176)需要納入考量。  
 
 
 ## <a name="next-steps"></a>後續步驟

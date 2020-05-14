@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 569a80d21efd82b6008c7aa7a613c089a10c6ff3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5b3052d8d213ce3190ed29b43f580a8de9c840b7
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357892"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943836"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Intune 網路設定需求與頻寬
 
@@ -48,8 +48,8 @@ ms.locfileid: "79357892"
 |Endpoint Protection 惡意程式碼定義更新|不定<br /><br />通常為 40 KB 到 2 MB|**每日**<br /><br />最多一天 3 次。|
 |Endpoint Protection 引擎更新|5 MB|**每月**|
 |軟體更新|不定<br /><br />大小依您部署的更新而定。|**每月**<br /><br />一般情況下，軟體更新會在每個月的第二個星期二發佈。<br /><br />剛完成註冊或部署的電腦在下載先前發行的整組更新時，可能也會佔用較大的網路頻寬。|
-|Service Pack|不定<br /><br />大小會因您部署的每個 Service Pack 而不同。|**不定**<br /><br />視您何時部署 Service Pack 而定。|
-|軟體發佈|不定<br /><br />大小依您部署的軟體而定。|**不定**<br /><br />視您何時部署軟體而定。|
+|Service Pack|不定<br /><br />大小會因您部署的每個 Service Pack 而不同。|**變動**<br /><br />視您何時部署 Service Pack 而定。|
+|軟體發佈|不定<br /><br />大小依您部署的軟體而定。|**變動**<br /><br />視您何時部署軟體而定。|
 
 ## <a name="ways-to-reduce-network-bandwidth-use"></a>減少網路頻寬用量的方式
 
@@ -64,7 +64,7 @@ Proxy 伺服器可以快取內容來減少重複的下載，並減少網際網�
 下列一般設定適用於快取 Intune 用戶端內容的 Proxy 伺服器。
 
 
-|          Setting           |           建議值           |                                                                                                  詳細資料                                                                                                  |
+|          設定           |           建議值           |                                                                                                  詳細資料                                                                                                  |
 |----------------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |         快取大小         |             5 GB 至 30 GB             | 這個值會根據網路中的用戶端電腦數目以及您使用的設定而不同。 為了避免系統太快刪除檔案，請根據您的環境調整快取的大小。 |
 | 個別快取檔案大小 |                950 MB                 |                                                                     某些快取 Proxy 伺服器可能沒有提供這項設定。                                                                     |
@@ -74,14 +74,6 @@ Proxy 伺服器可以快取內容來減少重複的下載，並減少網際網�
 
 如需有關如何使用 Proxy 伺服器快取內容的詳細資訊，請參閱您的 Proxy 伺服器解決方案的文件。
 
-### <a name="use-background-intelligent-transfer-service-bits-on-computers"></a>在電腦上使用背景智慧型傳送服務 (BITS)
-
-您可以在自己設定的小時時間內，於 Windows 電腦上使用 BITS 以減少網路頻寬。 您可以在 Intune 代理程式原則的 [網路頻寬]  頁面中設定 BITS 原則。
-
-> [!NOTE]
-> 對於 Windows 上的 MDM 管理，只有 MobileMSI 應用程式類型的作業系統管理介面會使用 BITS 進行下載。 AppX/MsiX 會使用自己的非 BITS 下載堆疊，而且 Win32 應用程式會透過 Intune 代理程式使用傳遞最佳化，而非 BITS。
-
-若要深入了解 BITS 和 Windows 電腦，請參閱 TechNet Library 中的[背景智慧型傳送服務](https://technet.microsoft.com/library/bb968799.aspx)。
 
 ### <a name="delivery-optimization"></a>傳遞最佳化
 
@@ -91,13 +83,28 @@ Proxy 伺服器可以快取內容來減少重複的下載，並減少網際網�
 
 您可以[設定傳遞最佳化](../configuration/delivery-optimization-settings.md)作為裝置組態設定檔的一部分。
 
-### <a name="use-branchcache-on-computers"></a>在電腦上使用 BranchCache
+
+### <a name="background-intelligent-transfer-service-bits-and-branchcache"></a>背景智慧型傳送服務 (BITS) 與 BranchCache 
+
+您可以使用 Microsoft Intune 來管理 Windows 電腦，以[作為具備行動裝置管理 (MDM) 的行動裝置](../enrollment/windows-enroll.md)或作為具備 Intune 軟體用戶端的電腦。 Microsoft 建議客戶盡可能[使用 MDM 管理解決方案](../enrollment/windows-enroll.md)。 以這種方式管理時，不支援 BranchCache 與 BITS。 如需詳細資訊，請參閱[比較作為電腦或行動裝置來管理 Windows 電腦](pc-management-comparison.md)。
+
+#### <a name="use-bits-on-computers-requires-intune-software-client"></a>在電腦上使用 (BITS) (需要 Intune 軟體用戶端)
+
+您可以在自己設定的小時時間內，於 Windows 電腦上使用 BITS 以減少網路頻寬。 您可以在 Intune 代理程式原則的 [網路頻寬]  頁面中設定 BITS 原則。
+
+> [!NOTE]
+> 對於 Windows 上的 MDM 管理，只有 MobileMSI 應用程式類型的作業系統管理介面會使用 BITS 進行下載。 AppX/MsiX 會使用自己的非 BITS 下載堆疊，而且 Win32 應用程式會透過 Intune 代理程式使用傳遞最佳化，而非 BITS。
+
+若要深入了解 BITS 和 Windows 電腦，請參閱 TechNet Library 中的[背景智慧型傳送服務](https://technet.microsoft.com/library/bb968799.aspx)。
+
+
+#### <a name="use-branchcache-on-computers-requires-intune-software-client"></a>在電腦上使用 BranchCache (需要 Intune 軟體用戶端)
 
 Intune 用戶端可以使用 BranchCache 來減少廣域網路 (WAN) 流量。 下列作業系統支援 BranchCache：
 
 - Windows 7
 - Windows 8.0
-- Windows 8。1
+- Windows 8.1
 - Windows 10
 
 若要使用 BranchCache，用戶端電腦必須已啟用 BranchCache，接著再完成**分散式快取模式**的設定。
@@ -106,8 +113,6 @@ Intune 用戶端可以使用 BranchCache 來減少廣域網路 (WAN) 流量。 �
 
 如果使用 BranchCache，請與組織中其他系統管理員合作管理群組原則和 Intune 防火牆原則。 請確定他們沒有部署停用 BranchCache 或防火牆例外的原則。 如需 BranchCache 的詳細資訊，請參閱 [BranchCache 概觀](https://technet.microsoft.com/library/hh831696.aspx)。
 
-> [!NOTE]
-> 您可以使用 Microsoft Intune 來管理 Windows 電腦，以[作為具備行動裝置管理 (MDM) 的行動裝置](../enrollment/windows-enroll.md)或作為具備 Intune 軟體用戶端的電腦。 Microsoft 建議客戶盡可能[使用 MDM 管理解決方案](../enrollment/windows-enroll.md)。 以這種方式管理時，不支援 BranchCache。 如需詳細資訊，請參閱[比較作為電腦或行動裝置來管理 Windows 電腦](pc-management-comparison.md)。
 
 ## <a name="next-steps"></a>後續步驟
 
