@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a72ff9947f6ca31ce2158c5c763602b34948a15c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b012dd1e7da0d6a3efb4d1cc33b8a79ef319bc0a
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075654"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268992"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>了解用戶端如何找到 Configuration Manager 的站台資源和服務
 
@@ -62,7 +62,7 @@ Configuration Manager 用戶端使用稱為*服務位置*的處理序尋找可�
 
 您可以使用慣用的管理點。 慣用的管理點都是用戶端指派的站台管理點，與用戶端用來找出站台系統伺服器的界限群組相關聯。 慣用管理點做為站台系統伺服器與界限群組之間的關聯，類似於發佈點或狀態移轉點與界限群組相關聯的方式。 當用戶端從其指派的站台使用管理點時，如果您啟用此階層慣用的管理點，它就會先嘗試使用慣用的管理點，然後才從其指派的站台使用其他管理點。  
 
-您也可以使用 TechNet.com 之[管理點親和性](https://blogs.technet.com/b/jchalfant/archive/2014/09/22/management-point-affinity-added-in-configmgr-2012-r2-cu3.aspx)部落格中的資訊，來設定管理點親和性。 管理點親和性會為指派的管理點覆寫預設行為，並讓用戶端能使用一個或多個特定的管理點。  
+您也可以使用[管理點同質](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) \(英文\) 部落格中的資訊來設定管理點同質。 管理點親和性會為指派的管理點覆寫預設行為，並讓用戶端能使用一個或多個特定的管理點。  
 
 用戶端每次需要連絡管理點時會檢查管理組件 (MP) 清單，其儲存在本機 Windows Management Instrumentation (WMI) 中。 在安裝用戶端時，它會建立初始的管理組件 (MP) 清單。 接著，用戶端會定期更新清單及階層中每個管理點的相關詳細資料。  
 
@@ -131,12 +131,12 @@ Configuration Manager 用戶端使用稱為*服務位置*的處理序尋找可�
 接下來，用戶端會隨機選擇要使用的新管理點。  
 
 ##  <a name="active-directory"></a><a name="bkmk_ad"></a> Active Directory  
-加入網域的用戶端可以使用適用於服務位置的 AD DS。 若要這麼做，需具備可 [將資料發佈至 Active Directory](https://technet.microsoft.com/library/hh696543.aspx)的網站。  
+加入網域的用戶端可以使用適用於服務位置的 AD DS。 若要這麼做，需具備可 [將資料發佈至 Active Directory](../../servers/deploy/configure/publish-site-data.md)的網站。  
 
 當下列任何條件成立時，用戶端可以使用適用於服務位置的 AD DS：  
 
-- Active Directory [架構已經過擴充](https://technet.microsoft.com/library/mt345589.aspx)，或已為 System Center 2012 Configuration Manager 進行擴充。  
-- [Active Directory 樹系設定為支援發佈](https://technet.microsoft.com/library/hh696542.aspx)，且 Configuration Manager 網站設定為可發佈項目。  
+- Active Directory [架構已經過擴充](../network/extend-the-active-directory-schema.md)，或已為 System Center 2012 Configuration Manager 進行擴充。  
+- [Active Directory 樹系設定為支援發佈](../../servers/deploy/configure/publish-site-data.md)，且 Configuration Manager 網站設定為可發佈項目。  
 - 用戶端電腦是 Active Directory 網域的成員，並可存取通用類別目錄伺服器。  
 
 如果用戶端無法從 AD DS 找到要用於服務位置的管理點，就會嘗試使用 DNS。  
@@ -148,7 +148,7 @@ Configuration Manager 用戶端使用稱為*服務位置*的處理序尋找可�
 - 未擴充 AD DS 架構以支援 Configuration Manager。
 - 內部網路上的用戶端位於未啟用 Configuration Manager 發行的樹系中。  
 - 用戶端位於工作群組電腦上，且未設定為僅限網際網路用戶端管理 (針對網際網路設定的工作群組用戶端只會與網際網路對向的管理點通訊，且不會使用適用於服務位置的 DNS)。  
-- 您可以 [設定用戶端從 DNS 尋找管理點](https://technet.microsoft.com/library/gg682055)。  
+- 您可以 [設定用戶端從 DNS 尋找管理點](../../clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md)。  
 
 若網站會將管理點的服務位置記錄發佈到 DNS：  
 

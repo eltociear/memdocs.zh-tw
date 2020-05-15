@@ -10,12 +10,13 @@ ms.assetid: 349b2a69-af46-481f-afb2-24d98774e852
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c101e45eb794ff73599e9612a5aec991be01ae6c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 8782913e40bffdcbe5a151fac8821f05b7e7fece
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701716"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268567"
 ---
 # <a name="desktop-analytics-log-collector"></a>電腦分析記錄收集器
 

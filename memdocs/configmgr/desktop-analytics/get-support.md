@@ -10,16 +10,17 @@ ms.assetid: d56742bc-a060-4714-a359-48f594c3eaff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 271a37c80db3a37b721918f3ee739b010c043c70
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: dd18355b9e472866a4d684162913795443ab07ef
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708136"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268516"
 ---
 # <a name="get-support-for-desktop-analytics"></a>取得電腦分析支援
 
-Microsoft 為電腦分析提供全球性的技術、售前、帳單及訂用帳戶支援。 付費及試用訂閱可透過網路和電話兩種途徑取得支援服務。 線上技術支援提供英文與日文服務。 電話支援與線上帳單支援另提供其他語言。
+Microsoft 為電腦分析提供全球性的技術、售前、帳單及訂用帳戶支援。 付費及試用訂用帳戶可透過網路和電話來取得支援服務。 線上技術支援提供英文與日文服務。 電話支援與線上帳單支援提供其他語言服務。
 
 > [!TIP]
 > 連絡 Microsoft 支援服務之前，請先參閱下列文章：
