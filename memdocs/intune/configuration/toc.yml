@@ -82,8 +82,12 @@
         - name: StageNow 記錄及常見問題
           href: android-zebra-mx-logs-troubleshoot.md
     - name: Android Enterprise 上的 OEMConfig
-      href: android-oem-configuration-overview.md
-      displayName: 'original equipment manufacturers, schema'
+      displayName: 'original equipment manufacturers, schema, zebra, order'
+      items:
+        - name: 開始使用
+          href: android-oem-configuration-overview.md
+        - name: Zebra 裝置上的設定檔
+          href: oemconfig-zebra-android-devices.md
     - name: Kiosks 與專用裝置
       href: kiosk-settings.md
       displayName: 'single app, multi app'

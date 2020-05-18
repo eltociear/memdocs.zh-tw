@@ -20,6 +20,7 @@
 #### 使用衍生的認證進行註冊
 ##### [使用 Entrust Datacard 註冊](enroll-android-device-entrust-datacard.md)
 ##### [使用 Intercede 註冊](enroll-android-device-intercede.md)
+##### [向 DISA Purebred 註冊](enroll-android-device-disa-purebred.md)
 ### [移至新的裝置管理設定](move-to-new-device-management-setup.md)
 ### [在裝置上使用受管理的應用程式](use-managed-apps-on-your-device-android.md)
 ### [加密您的裝置](encrypt-your-device-android.md)
