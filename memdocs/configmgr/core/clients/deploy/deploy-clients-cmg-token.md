@@ -10,16 +10,16 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3a05c10d1f73fa0817febdd591190f6bc2ff0a0e
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: bdc98febbc96162b2abe6e666c9354c342e5e913
+ms.sourcegitcommit: ed2c18e210db177eb0d5e10d74207006561b7b5d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587265"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83383716"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>雲端管理閘道的權杖型驗證
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 <!--5686290-->
 
@@ -102,6 +102,28 @@ Configuration Manager 用戶端會與管理點一起管理此權杖，因此不�
 搭配使用 `/new` 參數來指定權杖的權杖有效期間。 指定整數值 (以分鐘為單位)。 預設值為 4,320 (3 天)。 最大值為 10,080 (7 天)。
 
 範例：`BulkRegistrationTokenTool.exe /lifetime:4320`
+
+## <a name="bulk-registration-token-management"></a>大量註冊權杖管理
+
+如有需要，您可以在 Configuration Manager 主控台中查看先前建立的大量註冊權杖與其存留期，並封鎖其使用方式。 不過，站台資料庫不會儲存大量註冊權杖。
+
+#### <a name="to-review-a-bulk-registration-token"></a>檢閱大量註冊權杖
+
+1. 在 Configuration Manager 主控台中，按一下 [系統管理]。
+
+2. 在 [系統管理] 工作區中，展開 [安全性]，然後按一下 [憑證]。 主控台會在詳細資料窗格中列出所有與站台相關的憑證與大量註冊權杖。
+
+3. 選取要檢閱的大量註冊權杖。
+
+您可以根據使用者的 GUID 識別特定的大量註冊權杖。 大量註冊權杖的 GUID 會在建立權杖時顯示。 您也可以視需要篩選或排序 [類型] 欄。
+
+#### <a name="to-block-a-bulk-registration-token"></a>封鎖大量註冊權杖
+
+1. 在 Configuration Manager 主控台中，按一下 [系統管理]。
+
+2. 在 [系統管理] 工作區中，展開 [安全性]、按一下 [憑證]，然後選取要封鎖的大量註冊權杖。
+
+3. 在功能區列的 [常用] 索引標籤上或右鍵內容功能表中，選取 [封鎖]。 相反地，您可以在功能區列的 [常用] 索引標籤上或右鍵內容功能表中選取 [解除封鎖]，來解除封鎖先前已封鎖的大量註冊權杖。
 
 ## <a name="see-also"></a>請參閱
 

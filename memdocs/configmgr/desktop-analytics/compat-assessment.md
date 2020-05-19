@@ -2,7 +2,7 @@
 title: 相容性評定
 titleSuffix: Configuration Manager
 description: 了解電腦分析中針對 Windows 應用程式和驅動程式的相容性評定。
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: ea78f726-b1b3-49b0-8141-d916be48c458
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eedd33999ce17417122b2403c777a0b560e5f197
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.reviewer: acabello
+ms.openlocfilehash: 7b2bff4f8365693c86540c9b0578307340f13a49
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82109993"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268890"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>電腦分析中的相容性評定
 
@@ -29,9 +30,9 @@ ms.locfileid: "82109993"
 
 - **高**：應用程式幾乎確定會在升級期間或升級後失敗。 該應用程式可能需要補救。
 
-- **未知**：未評定應用程式。 其中沒有其他如 *MS 已知問題*等見解。
+- **未知**：未評定應用程式。 其中沒有其他如 *MS 已知問題*或 *Ready for Windows* 等見解。
 
-在部署計劃的應用程式或驅動程式資產清單中，您將會在 [相容性風險]  欄中看到每個資產的此值。
+在部署計劃的應用程式或驅動程式資產清單中，您將會在 [相容性風險] 欄中看到每個資產的此值。
 
 ## <a name="app-risk-assessment"></a>應用程式風險評定
 
@@ -40,9 +41,13 @@ ms.locfileid: "82109993"
 電腦分析會運用數種來源，產生應用程式的評定評等：
 
 - [Microsoft 已知問題](#microsoft-known-issues)
+- [Ready for Windows](#ready-for-windows)
 - [進階見解](#advanced-insights)
 
 您可以在電腦分析中的應用程式上找到每個來源的評定。 在部署計劃中的應用程式資產清單中，請選取個別應用程式來開啟其屬性飛出視窗窗格。 您將會看到整體建議和評定層級。 **相容性風險因素**區段會顯示這些評定的詳細資料。
+
+> [!TIP]
+> 如果應用程式詳細資料窗格未顯示相容性評量，可能是因為已將 [應用程式版本詳細資料] 設定為 [關閉]。 預設為關閉，並會合併所有具備相同名稱與發行者的應用程式版本。 此服務仍會針對每個版本進行相容性風險評量。 開啟 [應用程式版本詳細資料]，以查看特定應用程式版本的相容性風險評量。 如需詳細資訊，請參閱[規劃資產](about-deployment-plans.md#plan-assets)。
 
 ## <a name="microsoft-known-issues"></a>Microsoft 已知問題
 
@@ -64,8 +69,8 @@ Windows 可以部分或完全移除這些資產：
 
 在電腦分析入口網站中查看此建議：
 
-1. 在部署計劃中，選取 [準備試驗]  。
-1. 選取 [應用程式]  索引標籤。
+1. 在部署計劃中，選取 [準備試驗]。
+1. 選取 [應用程式] 索引標籤。
 1. 選取一個應用程式，然後在側邊窗格中檢視相容性風險因素和建議。
 
 [![電腦分析入口網站中的資產建議螢幕擷取畫面](media/3594545-app-removed.png)](media/3594545-app-removed.png#lightbox)
@@ -104,7 +109,7 @@ Windows 偵測到問題，可能會影響升級，但需要進一步的調查。
 
 ### <a name="multiple"></a>多個
 
-多個問題影響了應用程式。 請選取 [查詢]  ，查看 Windows 所偵測到的問題詳細資料。
+多個問題影響了應用程式。 請選取 [查詢]，查看 Windows 所偵測到的問題詳細資料。
 
 ### <a name="reinstall-application-after-upgrading"></a>請在升級後重新安裝應用程式
 
@@ -114,22 +119,44 @@ Windows 偵測到問題，可能會影響升級，但需要進一步的調查。
 
 <!-- 5746559 -->
 
-Windows 相容性資料會使用「保護」  來分類某些應用程式與驅動程式，這可能會導致更新至 Windows 10 失敗或復原。 Windows 可能也會升級，但會移除應用程式或驅動程式。 電腦分析現在可以協助您事先識別這些保護，讓您可以在部署更新之前先對資產進行補救。
+Windows 相容性資料會使用「保護」來分類某些應用程式與驅動程式，這可能會導致更新至 Windows 10 失敗或復原。 Windows 可能也會升級，但會移除應用程式或驅動程式。 電腦分析現在可以協助您事先識別這些保護，讓您可以在部署更新之前先對資產進行補救。
 
 1. 在電腦分析入口網站中，選取部署計劃。
 
-1. 在功能表中選取 [計劃資產]  ，然後切換至 [應用程式]  索引標籤。
+1. 在功能表中選取 [計劃資產]，然後切換至 [應用程式] 索引標籤。
 
 1. 篩選 [名稱] 欄以顯示值包含 `Safeguard` 文字的項目。 選取結果以查看詳細資訊。
 
     > [!NOTE]
     > 此項目不是安裝在您裝置上的實際應用程式。 其是預留位置，用來協助識別您環境中具有保護相容性標籤的應用程式或驅動程式。
 
-1. 在 [建議] 區段中，選取 [深入了解]  連結。 此連結會開啟 Windows 網站，其中包含具有保護標籤的目前應用程式或驅動程式清單。
+1. 在 [建議] 區段中，選取 [深入了解] 連結。 此連結會開啟 Windows 網站，其中包含具有保護標籤的目前應用程式或驅動程式清單。
 
 1. 比較目前已發行的清單與您環境中的資產清單。 透過更新為相容版本，來針對任何可能有問題的應用程式或驅動程式進行補救。
 
 [![電腦分析中保護應用程式的螢幕擷取畫面](media/5746559-safeguards.png)](media/5746559-safeguards.png#lightbox)
+
+## <a name="ready-for-windows"></a>Ready for Windows
+
+採用狀態會以與 Microsoft 共用資料之商業裝置的資訊為基礎。 此狀態會與軟體廠商的支援聲明整合。
+
+電腦分析則為在商業裝置中找到的每個資產版本提供採用狀態。 此狀態不包含取用者裝置的資料或不共用資料的裝置資料。 而且此狀態並不代表所有 Windows 10 裝置的採用率。
+
+可能的類別包括：
+
+- **已高度採用**：至少有 100,000 部商業 Windows 10 裝置安裝此應用程式。
+
+- **已採用**：至少有 10,000 部商業 Windows 10 裝置安裝此應用程式。
+
+- **資料不足**：共用此應用程式資訊的商業 Windows 10 裝置太少，因此 Microsoft 無法分類其採用狀況。
+
+- **連絡開發人員**：此應用程式版本可能有相容性問題。 Microsoft 建議連絡軟體提供者以深入了解。
+
+- **未知**：此應用程式的此版本沒有可用的資訊。 應用程式的其他版本可能會提供資訊。
+
+### <a name="support-statement"></a>支援聲明
+
+若軟體提供者在 Windows 10 上支援一或多個此應用程式的版本，您會在應用程式屬性窗格中看到此聲明。 請在相容性風險因素區段，查看 [支援聲明]。
 
 ## <a name="advanced-insights"></a>進階見解
 

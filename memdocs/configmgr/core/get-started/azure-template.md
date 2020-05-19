@@ -10,16 +10,16 @@ ms.assetid: 9875c443-19bf-43a0-9203-3a741f305096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd2a8b3bfb7c4b8af277616c7eaed329bc143bb7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 23cc7d0c642637a310f53280bafed6a2a28d2834
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691396"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406679"
 ---
 # <a name="create-a-configuration-manager-lab-in-azure"></a>在 Azure 中建立 Configuration Manager 實驗室
 
-適用於：  Configuration Manager (Technical Preview 分支)
+適用於：*Configuration Manager (最新分支、Technical Preview 分支)*
 
 <!--3556017-->
 
@@ -35,12 +35,12 @@ ms.locfileid: "81691396"
 ## <a name="prerequisites"></a>先決條件
 
 此程序需要 Azure 訂用帳戶，您可以在其中建立下列物件： 
-- 用於網域控制站和 MP 與 DP角色的兩個 Standard_B2s 虛擬機器。
-- 一部 Standard_B2ms 虛擬機器用於主要站台伺服器和 SQL Database 伺服器。
+- 兩部用於網域控制站、管理點與發佈點的 Standard_B2s 虛擬機器。
+- 一部用於主要站台伺服器與 SQL 資料庫伺服器的 Standard_B2ms 虛擬機器。
 - Standard_LRS 儲存體帳戶
 
 > [!Tip]  
-> 請參閱 [Azure 價格計算機](https://azure.microsoft.com/pricing/calculator/)以利判斷潛在成本。  
+> 如需協助判斷潛在成本，請參閱 [Azure 定價計算機](https://azure.microsoft.com/pricing/calculator/)。  
 
 
 
@@ -48,7 +48,7 @@ ms.locfileid: "81691396"
 
 1. 前往 [Configuration Manager 技術預覽版範本](https://azure.microsoft.com/resources/templates/sccm-technicalpreview/)或 [Configuration Manager 最新分支範本](https://azure.microsoft.com/resources/templates/sccm-currentbranch/)。  
 
-2. 選取 [部署至 Azure]  ，這會開啟 Azure 入口網站。  
+2. 選取 [部署至 Azure]，這會開啟 Azure 入口網站。  
 
 3. 以下列資訊完成 Azure 快速入門範本：
 
@@ -77,7 +77,7 @@ ms.locfileid: "81691396"
     > 
     > - **位置**：所有資源的位置
 
-4. 閱讀條款及條件。 如果您同意，請選取 [我同意上方所述的條款及條件]  。 然後選取 [購買]  以繼續。 
+4. 閱讀條款及條件。 如果您同意，請選取 [我同意上方所述的條款及條件]。 然後選取 [購買] 以繼續。 
 
 Azure 會驗證設定，接著開始部署。 請在 Azure 入口網站中檢查部署的狀態。 
 
@@ -102,7 +102,7 @@ Azure 會驗證設定，接著開始部署。 請在 Azure 入口網站中檢查
 ### `<prefix>DC01`
 
 - Active Directory 網域控制站
-- Standard_B2s，有兩個 CPU 和 4 GB 的記憶體
+- Standard_B2s，配備兩個處理器與 4 GB 的記憶體
 - Windows Server 2019 Datacenter 版
 
 #### <a name="windows-features-and-roles"></a>Windows 功能和角色
@@ -113,7 +113,7 @@ Azure 會驗證設定，接著開始部署。 請在 Azure 入口網站中檢查
 
 ### `<prefix>PS01`
 
-- Standard_B2ms，有兩個 CPU 和 8 GB 的記憶體
+- Standard_B2ms，配備兩個處理器與 8 GB 的記憶體
 - Windows Server 2016 Datacenter Edition
 - SQL Server
 - Windows 10 ADK (含 Windows PE) 
@@ -127,7 +127,7 @@ Azure 會驗證設定，接著開始部署。 請在 Azure 入口網站中檢查
 
 ### `<prefix>DPMP01`
 
-- Standard_B2s，有兩個 CPU 和 4 GB 的記憶體
+- Standard_B2s，配備兩個處理器與 4 GB 的記憶體
 - Windows Server 2019 Datacenter 版
 - 發佈點
 - 管理點

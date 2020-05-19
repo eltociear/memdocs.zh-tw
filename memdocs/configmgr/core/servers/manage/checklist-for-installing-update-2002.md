@@ -2,7 +2,7 @@
 title: 2002 的檢查清單
 titleSuffix: Configuration Manager
 description: 了解更新至 Configuration Manager 2002 版之前要採取的動作。
-ms.date: 04/01/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,26 +10,26 @@ ms.assetid: 2993032a-1204-4bd8-b5af-17a980bb0649
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a7f2abac1810b5ab40e3c253b6aee7aa970174d9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 63293c103cf8a19d006bd700cac6c370ba5e7391
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708056"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268941"
 ---
 # <a name="checklist-for-installing-update-2002-for-configuration-manager"></a>安裝 Configuration Manager 2002 版更新的檢查清單
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 當使用 Configuration Manager 的最新分支時，可以安裝 2002 版的主控台內更新，以更新舊版的階層。 <!-- baseline only statement:-->2002 版也可作為[基準媒體](updates.md#bkmk_Baselines)，所以可使用安裝媒體來安裝新階層的第一個站台。
 
 若要取得 2002 版的更新，則必須在階層的頂層站台使用服務連接點。 這個站台系統角色可以是線上或離線模式。 若要在服務連接點處於離線時下載更新，請[使用服務連接工具](use-the-service-connection-tool.md)。<!-- SCCMDocs#1946 -->
 
-您的階層從 Microsoft 下載更新套件之後，就能在主控台中找到它。 請在 [系統管理]  工作區中，選取 [更新與服務]  節點。
+您的階層從 Microsoft 下載更新套件之後，就能在主控台中找到它。 請在 [系統管理] 工作區中，選取 [更新與服務] 節點。
 
-- 當更新列為 [可用]  時，即表示更新已準備好安裝。 安裝 2002 版之前，請檢閱下列[關於安裝 2002 版更新](#about-installing-update-2002)以及[檢查清單](#checklist)的資訊，以了解開始更新之前應進行的設定。
+- 當更新列為 [可用] 時，即表示更新已準備好安裝。 安裝 2002 版之前，請檢閱下列[關於安裝 2002 版更新](#about-installing-update-2002)以及[檢查清單](#checklist)的資訊，以了解開始更新之前應進行的設定。
 
-- 如果更新顯示為 [正在下載]  且未變更，請檢閱 **hman.log** 和 **dmpdownloader.log** 中的錯誤。
+- 如果更新顯示為 [正在下載] 且未變更，請檢閱 **hman.log** 和 **dmpdownloader.log** 中的錯誤。
 
   - dmpdownloader.log 可能指出 dmpdownloader 處理序在檢查更新之前會等候間隔的時間。 若要重新開始下載更新的重新發佈檔案，請在站台伺服器上重新啟動 **SMS_Executive** 服務。
 
@@ -62,39 +62,41 @@ ms.locfileid: "81708056"
 >
 > - **用戶端升級**不會開始。 這包括自動更新用戶端與進入生產階段前的用戶端。 此外，在最後一個站台完成更新安裝之前，您無法升級到進入生產階段前的用戶端。 最後一個站台完成更新安裝之後，才會根據您的組態選擇開始用戶端更新。
 > - 您透過更新啟用的**新功能**無法使用。 此行為是為了防止 CAS 將與該功能相關的資料複寫到尚未安裝該功能支援的站台。 所有主要站台都安裝更新之後，才能夠使用該功能。
-> - CAS 與子主要站台間的**複寫連結**會顯示為未升級。 此狀態會在更新安裝狀態中顯示為 [已完成]  ，但出現 [正在監視複寫初始化] 的警告。 在主控台的 [監視]  工作區中，此狀態會顯示為 [正在設定連結]  。
+> - CAS 與子主要站台間的**複寫連結**會顯示為未升級。 此狀態會在更新安裝狀態中顯示為 [已完成]，但出現 [正在監視複寫初始化] 的警告。 在主控台的 [監視] 工作區中，此狀態會顯示為 [正在設定連結]。
 
 ### <a name="early-update-ring"></a>早期更新通道
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of December 20, 2019, version 2002 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
- -->
+從 2020 年 5 月 11 日起，2002 版可供所有客戶安裝。 如果您先前已加入宣告早期更新通道，請留意此最新分支版本的更新。
 
-目前，會針對早期更新通道發行 2002 版。 若要安裝此更新，您必須選擇加入。 下列 PowerShell 指令碼會將階層或獨立主要站台新增至 2002 版的早期更新通道：
+<!--
+At this time, version 2002 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2002:
 
-[2002 版選擇加入指令碼](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2002 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
-Microsoft 會以數位方式簽署指令碼，並將其組合在已簽署的自我解壓縮可執行檔內。
+<!--
+Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!Note]  
-> 2002 版更新僅適用於執行 1810 版或更新版本的站台。
+> The version 2002 update is only applicable to sites running version 1810 or later.
 
-若要選擇加入早期更新通道：
+To opt-in to the early update ring:
 
-1. 開啟 Windows PowerShell，並**以系統管理員身分執行**
-1. 使用下列語法執行 **EnableEarlyUpdateRing2002.ps1** 指令碼：
+1. Open Windows PowerShell and **Run as administrator**
+1. Run the **EnableEarlyUpdateRing2002.ps1** script, using the following syntax:
 
     `EnableEarlyUpdateRing2002.ps1 <SiteServer_Name> | SiteServer_IP>`
 
-    其中 `SiteServer` 指的是管理中心網站或獨立主要站台伺服器。 例如， `EnableEarlyUpdateRing2002.ps1 cmprimary01`
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2002.ps1 cmprimary01`
 
-1. 檢查更新。 如需詳細資訊，請參閱[取得可用的更新](install-in-console-updates.md#get-available-updates)。
+1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md#get-available-updates).
 
-2002 版更新現在可以在主控台中取得。
+The version 2002 update should now be available in the console.
 
 > [!Important]  
-> 此指令碼只會將站台新增至 2002 版的早期更新通道。 這不是永久變更。
+> This script only adds your site to the early update ring for version 2002. It's not a permanent change.
+ -->
 
 ## <a name="checklist"></a>檢查清單
 
@@ -104,9 +106,9 @@ Microsoft 會以數位方式簽署指令碼，並將其組合在已簽署的自�
 
 ### <a name="review-the-status-of-your-product-licensing"></a>檢閱您的產品授權狀態
 
-您必須擁有作用中的「軟體保證 (SA) 合約」或對等訂閱權限，才能安裝此更新。 當您更新此站台時，[授權]  頁面會顯示選項以確認您的 [軟體保證到期日]  。
+您必須擁有作用中的「軟體保證 (SA) 合約」或對等訂閱權限，才能安裝此更新。 當您更新此站台時，[授權] 頁面會顯示選項以確認您的 [軟體保證到期日]。
 
-這是選擇性的值。 您可以視授權到期日提醒需要加以指定。 當您安裝未來的更新時，會顯示這個日期。 您之前可能已在設定或安裝更新期間指定此值。 您也可以在 Configuration Manager 主控台中指定此值。 在 [系統管理]  工作區中，展開 [站台設定]  ，然後選取 [站台]  。 選取功能區中的 [階層設定]  ，並切換至 [授權]  索引標籤。
+這是選擇性的值。 您可以視授權到期日提醒需要加以指定。 當您安裝未來的更新時，會顯示這個日期。 您之前可能已在設定或安裝更新期間指定此值。 您也可以在 Configuration Manager 主控台中指定此值。 在 [系統管理] 工作區中，展開 [站台設定]，然後選取 [站台]。 選取功能區中的 [階層設定]，並切換至 [授權] 索引標籤。
 
 如需詳細資訊，請參閱[授權和分支](../../understand/learn-more-editions.md)。
 
@@ -230,9 +232,9 @@ Configuration Manager 無法成功更新具有已啟用管理點之資料庫複�
 
 ### <a name="run-the-setup-prerequisite-checker"></a>執行安裝程式必要條件檢查工具
 
-當主控台將更新列為 [可用]  時，您可以執行必要條件檢查程式，再安裝更新 (當您在站台上安裝更新時，會再次執行必要條件檢查工具)。
+當主控台將更新列為 [可用] 時，您可以執行必要條件檢查程式，再安裝更新 (當您在站台上安裝更新時，會再次執行必要條件檢查工具)。
 
-若要從主控台執行必要條件檢查，請前往 [管理]  工作區，然後選取 [更新與服務]  。 選取 **Configuration Manager 2002** 更新套件，然後選取功能區中的 [執行先決條件檢查]  。
+若要從主控台執行必要條件檢查，請前往 [管理] 工作區，然後選取 [更新與服務]。 選取 **Configuration Manager 2002** 更新套件，然後選取功能區中的 [執行先決條件檢查]。
 
 如需詳細資訊，請參閱[安裝主控台內更新之前](install-in-console-updates.md#bkmk_beforeinstall)中的**安裝更新之前先執行必要條件檢查工具**。
 
@@ -253,7 +255,7 @@ Configuration Manager 無法成功更新具有已啟用管理點之資料庫複�
 
 ### <a name="confirm-version-and-restart-if-necessary"></a>確認版本並重新啟動 (如有必要)
 
-請確定每個站台伺服器和站台系統角色均已更新為 2002 版。 在主控台中，將 [版本]  資料行新增至 [管理]  工作區中的 [站台]  和 [發佈點]  節點。 必要時，站台系統角色會自動重新安裝以更新為新版本。
+請確定每個站台伺服器和站台系統角色均已更新為 2002 版。 在主控台中，將 [版本] 資料行新增至 [管理] 工作區中的 [站台] 和 [發佈點] 節點。 必要時，站台系統角色會自動重新安裝以更新為新版本。
 
 請考慮將一開始未成功更新的遠端站台系統重新啟動。 檢閱您的站台基礎結構，並確保適用的站台伺服器和遠端站台系統伺服器已成功重新啟動。 通常只有在 Configuration Manager 將 .NET 安裝為站台系統角色的必要項目時，站台伺服器才會重新啟動。
 
@@ -261,9 +263,9 @@ Configuration Manager 無法成功更新具有已啟用管理點之資料庫複�
 
 在 Configuration Manager 主控台中，移至下列位置來檢視狀態，並確認複寫處於作用中：  
 
-- [監視]  工作區、[站台階層]  節點  
+- [監視] 工作區、[站台階層] 節點  
 
-- [監視]  工作區、[資料庫複寫]  節點  
+- [監視] 工作區、[資料庫複寫] 節點  
 
 如需詳細資訊，請參閱下列文章：  
 
@@ -302,10 +304,10 @@ Configuration Manager 無法成功更新具有已啟用管理點之資料庫複�
 
 <!--SCCMDocs issue 775-->
 
-請針對您使用的任何開機映像 (不論是預設還是自訂開機映像)，使用 [更新發佈點]  動作。 此動作會確保用戶端能夠使用最新版本。 即使沒有新版的 Windows ADK，Configuration Manager 用戶端元件仍可能因更新而變更。 如果您未更新開機映像和媒體，工作順序部署就可能在裝置上發生失敗。
+請針對您使用的任何開機映像 (不論是預設還是自訂開機映像)，使用 [更新發佈點] 動作。 此動作會確保用戶端能夠使用最新版本。 即使沒有新版的 Windows ADK，Configuration Manager 用戶端元件仍可能因更新而變更。 如果您未更新開機映像和媒體，工作順序部署就可能在裝置上發生失敗。
 
-當您更新站台時，Configuration Manager 會自動更新「預設」  開機映像。 它不會自動將更新過的內容散發至發佈點。 當您已準備好要將此內容散發至整個網路時，請在特定的開機映像上使用 [更新發佈點]  動作。
+當您更新站台時，Configuration Manager 會自動更新「預設」開機映像。 它不會自動將更新過的內容散發至發佈點。 當您已準備好要將此內容散發至整個網路時，請在特定的開機映像上使用 [更新發佈點] 動作。
 
-在更新站台之後，請手動更新任何「自訂」  開機映像。 此動作會為開機映像更新最少的用戶端元件 (如有必要)、視需要為其重新載入目前的 Windows PE 版本，然後將內容重新散發至發佈點。
+在更新站台之後，請手動更新任何「自訂」開機映像。 此動作會為開機映像更新最少的用戶端元件 (如有必要)、視需要為其重新載入目前的 Windows PE 版本，然後將內容重新散發至發佈點。
 
 如需詳細資訊，請參閱[使用開機映像更新發佈點](../../../osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image)。

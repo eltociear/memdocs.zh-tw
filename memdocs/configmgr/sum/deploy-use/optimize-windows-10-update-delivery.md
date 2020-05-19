@@ -2,7 +2,7 @@
 title: 將 Windows 10 更新傳遞最佳化
 titleSuffix: Configuration Manager
 description: 了解如何使用 Configuration Manager 來管理更新內容，讓 Windows 10 隨時保持最新狀態。
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,20 +10,20 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f7edd05a7b1ce105e81fd4f594d95c9dfb45f472
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 835dcd0c86244c1731cb6c6e040d577160759614
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771377"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83267785"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>使用 Configuration Manager，將 Windows 10 更新傳遞最佳化
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 對很多客戶而言，使用 Configuration Manager 並套用適當的內容發佈策略，便能成功掌握最新的 Windows 10 每月更新。 對於大型組織而言，每月品質更新的大小乃是潛在的問題。 目前有一些技術能有效減少頻寬和網路負載，以將更新傳遞最佳化。 本文將介紹並比較這些技術及提供各種建議，以協助您決定要採用的技術。  
  
-Windows 10 提供幾種更新類型。 如需詳細資訊，請參閱[商務用 Windows Update 中的更新類型](/windows/deployment/update/waas-manage-updates-wufb#types-of-updates-managed-by-windows-update-for-business)。 本文重點介紹 Windows 10「品質」  更新與 Configuration Manager 搭配使用。 
+Windows 10 提供幾種更新類型。 如需詳細資訊，請參閱[商務用 Windows Update 中的更新類型](/windows/deployment/update/waas-manage-updates-wufb#types-of-updates-managed-by-windows-update-for-business)。 本文重點介紹 Windows 10「品質」更新與 Configuration Manager 搭配使用。 
 
 
 ## <a name="express-update-delivery"></a>快速更新傳遞
@@ -54,7 +54,7 @@ Configuration Manager 支援很多點對點技術，包括：
 > [!NOTE]  
 > 「傳遞最佳化」是一種雲端管理解決方案。 若要使用「傳遞最佳化」的點對點功能，必須要能透過網際網路連線至「傳遞最佳化」雲端服務。 如需所必要網際網路端點的資訊，請參閱[傳遞最佳化的常見問題集](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)。 
 
-為了獲得最佳效果，您可能需要將「傳遞優化」[下載模式](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#download-mode)設定為**群組 (2)** 並定義「群組識別碼」  。 在群組模式中，對等互連可以讓同一群組中的不同裝置 (包含遠端辦公室的裝置) 跨越內部子網路。 使用[群組識別碼](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#select-the-source-of-group-ids)選項，以建立與網域和 AD DS 站台無關的自訂群組。 對於大部分組織而言，若要透過「傳遞最佳化」實現頻寬最佳化，建議使用群組下載模式的選項。
+為了獲得最佳效果，您可能需要將「傳遞優化」[下載模式](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#download-mode)設定為**群組 (2)** 並定義「群組識別碼」。 在群組模式中，對等互連可以讓同一群組中的不同裝置 (包含遠端辦公室的裝置) 跨越內部子網路。 使用[群組識別碼](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#select-the-source-of-group-ids)選項，以建立與網域和 AD DS 站台無關的自訂群組。 對於大部分組織而言，若要透過「傳遞最佳化」實現頻寬最佳化，建議使用群組下載模式的選項。
 
 當用戶端在不同網路中漫遊時，手動設定這些群組識別碼很麻煩。 Configuration Manager 版本 1802 增加了一個新功能，能[使用傳遞最佳化來整合界限群組](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)，以簡化此流程的管理。 當用戶端喚醒之後，會與其管理點進行溝通以取得原則，然後提供其網路和界限群組資訊。 Configuration Manager 會為每個界限群組建立獨一無二的識別碼。 站台會使用用戶端的位置資訊，以 Configuration Manager 界限識別碼來自動設定用戶端的「傳遞最佳化群組識別碼」。 當用戶端漫游到另一個界限群組時，便會與其管理點進行溝通，然後以新的界限群組識別碼來自動重新設定。 藉由此種整合，「傳遞最佳化」便可以利用 Configuration Manager 界限群組資訊來尋找可以從中下載更新的同儕節點。
 
@@ -64,14 +64,14 @@ Configuration Manager 支援很多點對點技術，包括：
 
 若要為所有 Windows 更新安裝檔案使用「傳遞最佳化」，請啟用下列[軟體更新用戶端設定](../../core/clients/deploy/about-client-settings.md#software-updates)：
 
-- 將 [讓用戶端得以在提供差異內容時，進行下載]  設定為 [是]  。
-- 將 [用戶端用於接收差異內容要求的連接埠]  設定為 8005 (預設) 或自訂連接埠號碼。
+- 將 [讓用戶端得以在提供差異內容時，進行下載] 設定為 [是]。
+- 將 [用戶端用於接收差異內容要求的連接埠] 設定為 8005 (預設) 或自訂連接埠號碼。
 
 > [!IMPORTANT]
 > - 傳遞最佳化必須啟用 (預設值)，而非略過。 如需詳細資訊，請參閱 [Windows 傳遞最佳化參考](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference) \(部分機器翻譯\)。
 > - 當您針對差異內容變更[軟體更新用戶端設定](../../core/clients/deploy/about-client-settings.md#software-updates)時，請驗證您的[傳遞最佳化用戶端設定](../../core/clients/deploy/about-client-settings.md#delivery-optimization)。
 > - 如果啟用 Office COM，傳遞最佳化無法用於 Office 365 用戶端更新。 Configuration Manager 使用 Office COM 來管理 Office 365 用戶端的更新。 您可以取消註冊 Office COM，以允許為 Office 365 更新使用傳遞最佳化。 停用 Office COM 時，Office 365 的軟體更新是由預設的 Office 自動更新2.0 排程工作所管理。 這表示 Configuration Manager 不會聽寫或監視 Office 365 更新的安裝程序。 Configuration Manager 將會繼續從硬體清查收集資訊，以在主控台中填入 Office 365 用戶端管理儀表板。 如需有關如何取消註冊 Office COM 的詳細資訊，請參閱[啟用 Office 365 用戶端以透過 Office CDN 而非 Configuration Manager 接收更新](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager)。
-> - 針對內容儲存體使用 CMG 時，如果已啟用 [下載可用的差異內容]  [用戶端設定](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available)，第三方更新的內容將不會下載至用戶端。 <!--6598587-->
+> - 針對內容儲存體使用 CMG 時，如果已啟用 [下載可用的差異內容] [用戶端設定](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available)，第三方更新的內容將不會下載至用戶端。 <!--6598587-->
 
 
 ### <a name="configuration-manager-peer-cache"></a>Configuration Manager 對等快取
@@ -131,7 +131,7 @@ Windows Update 代理程式 (WUA) 會先要求快速內容。 如果安裝快速
 
 3. CBS 之後會要求 WUA 從一個或多個快速 .psf 檔案下載所需的範圍。  
 
-4. 「傳遞最佳化」與 Configuration Manager 協調之後，從本機發佈點或同儕節點 (如果有) 下載範圍。 如果停用「傳遞最佳化」，則背景智慧型傳送服務 (BITS) 的使用方式與負責協調對等快取來源的 Configuration Manager 使用方式相同。 「傳遞最佳化」或 BITS 會將範圍傳遞給 WUA，這樣 CBS 便可以套用和安裝這些範圍。  
+4. 如果已啟用「傳遞最佳化」且探索到的對等具有所需的範圍，則用戶端將會從與 ConfigMgr 用戶端分開的對等下載。 若已停用「傳遞最佳化」或沒有任何對等具有所需的範圍，則 ConfigMgr 用戶端將會從本機發佈點 (或對等或 Microsoft Update) 下載這些範圍。 範圍會傳遞至 Windows Update 代理程式，這樣讓其可供 CBS 用來套用範圍。
 
 
 #### <a name="why-are-the-express-files-psf-so-large-when-stored-on-configuration-manager-peer-sources-in-the-ccmcache-folder"></a>快速檔案 (.psf) 儲存在 Configuration Manager 同儕節點上 ccmcache 資料夾中時，為什麼檔案會這麼大？

@@ -2,7 +2,7 @@
 title: 主控台內的文件
 titleSuffix: Configuration Manager
 description: 本文只顯示在 Configuration Manager 主控台中。
-ms.date: 04/23/2020
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: cd5c03b9b05bff253a93466eb27700685faea055
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: 1bd4ff4b25fcd4cf77366c93fcc1259ea2b5749f
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126037"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268176"
 ---
 <!-- 
 - Feature 1357546
@@ -27,7 +27,7 @@ ms.locfileid: "82126037"
 
 # <a name="microsoft-endpoint-configuration-manager-documentation"></a>Microsoft Endpoint Configuration Manager 文件
 
-*上次更新：2020 年 4 月 23 日*
+*上次更新：* 2020 年 5 月 11 日
 
 此內容可協助您學習及支援 Configuration Manager。
 
@@ -55,22 +55,22 @@ ms.locfileid: "82126037"
 
 ## <a name="trending"></a>趨勢
 
-2020 年 3 月 1 日到 3 月 30 日之間的最熱門文章。
+2020 年 4 月 1 日到 4 月 30 日之間的最熱門文章。
 
 | 網頁檢視 | 標題 |
 |------------|-------|
-| 22659 | [規劃雲端管理閘道](https://docs.microsoft.com/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
-| 16797 | [記錄檔參考](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/log-files) |
-| 16142 | [用於連線的連接埠](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/ports) |
-| 15907 | [軟體中心使用者指南](https://docs.microsoft.com/configmgr/core/understand/software-center) |
-| 14667 | [更新及服務](https://docs.microsoft.com/configmgr/core/servers/manage/updates) |
-| 14455 | [啟用傳輸層安全性 (TLS) 1.2 概觀](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 12292 | [電腦分析](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
-| 12062 | [Windows 10 裝置的共同管理](https://docs.microsoft.com/configmgr/comanage/overview) |
-| 11741 | [什麼是 Configuration Manager？](https://docs.microsoft.com/configmgr/core/understand/introduction) |
-| 11282 | [1910 版的新功能](https://docs.microsoft.com/configmgr/core/plan-design/changes/whats-new-in-version-1910) |
+| 37071 | [規劃雲端管理閘道](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 19105 | [記錄檔參考](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
+| 17942 | [用於連線的連接埠](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
+| 15564 | [更新及服務](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates) |
+| 15389 | [啟用傳輸層安全性 (TLS) 1.2 概觀](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 15316 | [Windows 10 裝置的共同管理](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
+| 15229 | [軟體中心使用者指南](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
+| 14978 | [如何在用戶端啟用傳輸層安全性 (TLS) 1.2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
+| 13522 | [電腦分析](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
+| 13017 | [用戶端設定](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings) |
 
-[Configuration Manager 中樞頁面](https://docs.microsoft.com/mem/configmgr/)在這段時間內收到 36,258 次網頁檢視。
+[Configuration Manager 中樞頁面](https://docs.microsoft.com/mem/configmgr/)在這段時間內收到 41,479 次網頁檢視。
 
 ## <a name="recently-updated"></a>最近更新
 
@@ -78,15 +78,16 @@ ms.locfileid: "82126037"
 
 | 上次檢閱日期 | 標題 |
 |---------------|-------|
-| 2020/3/30 | [維護工作的參考](https://docs.microsoft.com/configmgr/core/servers/manage/reference-for-maintenance-tasks) |
-| 2020/3/30 | [管理軟體更新的設定](https://docs.microsoft.com/configmgr/sum/get-started/manage-settings-for-software-updates) |
-| 2020/3/25 | [Endpoint Protection 反惡意程式碼原則](https://docs.microsoft.com/configmgr/protect/deploy-use/endpoint-antimalware-policies) |
-| 2020/3/23 | [適用於現有裝置的 Windows Autopilot](https://docs.microsoft.com/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices) |
-| 2020/3/12 | [如何建立部署計劃](https://docs.microsoft.com/configmgr/desktop-analytics/create-deployment-plans) |
-| 2020/3/12 | [如何部署至試驗](https://docs.microsoft.com/configmgr/desktop-analytics/deploy-pilot) |
-| 2020/3/12 | [電腦分析的新功能](https://docs.microsoft.com/configmgr/desktop-analytics/whats-new) |
-| 2020/3/3 | [相容性評定](https://docs.microsoft.com/configmgr/desktop-analytics/compat-assessment) \(部分機器翻譯\) |
-| 2020/3/3 | [電腦分析](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
+| 2020/4/30 | [技術預覽 2004](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2004) |
+| 2020/4/29 | [CMG 的權杖型驗證](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/deploy-clients-cmg-token) |
+| 2020/4/28 | [協調流程群組](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/orchestration-groups) |
+| 2020/4/15 | [應用程式核准程序](https://docs.microsoft.com/mem/configmgr/develop/apps/application-approval-process) \(英文\) |
+| 2020/4/15 | [在電腦分析中註冊裝置](https://docs.microsoft.com/mem/configmgr/desktop-analytics/enroll-devices) |
+| 2020/4/10 | [Microsoft 端點管理員租用戶附加](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) |
+| 2020/4/8 | [與 Power BI 報表伺服器整合](https://docs.microsoft.com/mem/configmgr/core/servers/manage/powerbi-report-server) |
+| 2020/4/8 | [版本資訊](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
+| 2020/4/1 | [什麼是系統管理服務](https://docs.microsoft.com/mem/configmgr/develop/adminservice/overview) \(英文\) |
+| 2020/4/1 | [2002 版的新功能](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
 
 ## <a name="troubleshooting-articles"></a>疑難排解文章
 
@@ -113,4 +114,4 @@ ms.locfileid: "82126037"
 - [KB 4552181 Configuration Manager 最新分支 (1910 版) 中的內容發佈延遲](https://support.microsoft.com/help/4552181) \(英文\)
 - [KB 4550023 在 Windows 10 就地升級復原之後，Configuration Manager 就地升級工作順序未繼續](https://support.microsoft.com/help/4550023) \(部分機器翻譯\)
 
-若要訂閱新的 Configuration Manager 支援文章的 Atom 或 RSS 通知，請參閱[支援的內容更新](https://support.microsoft.com/help/4089498/)並選取 [Microsoft Endpoint Configuration Manager]  。  
+若要訂閱新的 Configuration Manager 支援文章的 Atom 或 RSS 通知，請參閱[支援的內容更新](https://support.microsoft.com/help/4089498/)並選取 [Microsoft Endpoint Configuration Manager]。  

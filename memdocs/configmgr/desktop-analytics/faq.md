@@ -10,12 +10,13 @@ ms.assetid: e0db3311-2303-4013-a906-76b408172d3c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 29f063da47dc26789493b2a83ad8e0cfa6885270
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.reviewer: acabello
+ms.openlocfilehash: fb217a1e1ddf114155e43e8edef0c1b34842db64
+ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693300"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83381514"
 ---
 # <a name="desktop-analytics-faq"></a>電腦分析常見問題集
 
@@ -34,7 +35,7 @@ ms.locfileid: "82693300"
 - 若要確認是否已正確設定作用中裝置，請使用[連線健全狀況儀表板](monitor-connection-health.md)， 但此儀表板並不會即時更新。
 - 請確定裝置正在將診斷資料傳送至電腦分析服務。 如需詳細資訊，請參閱[啟用資料共用](enable-data-sharing.md)。
 - 在 Azure AD 上佈建 [Azure AD 應用程式](troubleshooting.md#bkmk_AzureADApps)。
-- 檢查過去七天內與組織建立關聯的裝置。 在[電腦分析入口網站](https://aka.ms/desktopanalytics)中，移至 [已連線的服務]  窗格。 選取 [註冊裝置]  和 [查看最近的資料] 
+- 檢查過去七天內與組織建立關聯的裝置。 在[電腦分析入口網站](https://aka.ms/desktopanalytics)中，移至 [已連線的服務] 窗格。 選取 [註冊裝置] 和 [查看最近的資料]
 
   > [!IMPORTANT]
   > **檢視最近的資料**的 [電腦分析] 選項已被取代。 此動作將在未來的 [電腦分析] 服務版本中移除。 如需詳細資訊，請參閱[已淘汰的功能](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)。<!--7080949-->  
@@ -47,9 +48,13 @@ ms.locfileid: "82693300"
 
 是，請執行下列流程：
 
-- 在 Configuration Manager 主控台中，移至 [系統管理]  工作區，展開 [雲端服務]  ，然後選取 [Azure 服務]  節點。 開啟與電腦分析服務建立關聯的項目屬性。
+- 在 Configuration Manager 主控台中，移至 [系統管理] 工作區，展開 [雲端服務]，然後選取 [Azure 服務] 節點。 開啟與電腦分析服務建立關聯的項目屬性。
 
-- 在 [電腦分析連線]  索引標籤上，變更**目標集合**或管理其他集合。
+- 在 [電腦分析連線] 索引標籤上，變更**目標集合**或管理其他集合。
+
+<!-- 7130169 -->
+> [!Note]
+> 不要在額外的集合清單中包含 20 個以上的集合。 請特別留意每個集合中的裝置總數。 一律包含您的[全域試驗包括與排除集合](deploy-pilot.md#bkmk_GlobalPilot)。  
 
 > [!IMPORTANT]  
 > Configuration Manager 使用設定原則來設定目標集合中的裝置。 此原則包括可讓裝置將資料傳送至 Microsoft 的診斷資料設定。 變更目標集合並不會復原裝置上的設定原則 (即使該裝置已不再位於該目標集合中)。 如果不想要讓裝置繼續傳送診斷資料，請[重新設定裝置](account-close.md#reconfigure-clients)。
@@ -72,7 +77,7 @@ ms.locfileid: "82693300"
 
 ### <a name="can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal"></a>可以減少電腦分析入口網站中重新整理資料所需的時間嗎？
 
-電腦分析入口網站中有兩種類型的資料：系統管理員資料與診斷資料。 若要依需求重新整理系統管理員資料，請開啟 [資料流通] 飛出視窗，然後選取 [套用變更]  。 此動作會立即觸發工作區的任何擱置中系統管理員變更的一次性重新整理。 這些變更會在 15 - 60 分鐘內散佈並全面套用， 其花費時間取決於工作區大小與擱置變更的範圍。 在 24 小時的期間內，可以視需要要求重新整理最多六次資料。
+電腦分析入口網站中有兩種類型的資料：系統管理員資料與診斷資料。 若要依需求重新整理系統管理員資料，請開啟 [資料流通] 飛出視窗，然後選取 [套用變更]。 此動作會立即觸發工作區的任何擱置中系統管理員變更的一次性重新整理。 這些變更會在 15 - 60 分鐘內散佈並全面套用， 其花費時間取決於工作區大小與擱置變更的範圍。 在 24 小時的期間內，可以視需要要求重新整理最多六次資料。
 
 所有資料每天會自動更新一次，即使不要求重新整理資料也一樣。 然而，您無法視需要觸發診斷資料的重新整理。 如需電腦分析中不同資料類型的詳細資訊，請參閱[資料延遲](troubleshooting.md#data-latency)。
 
@@ -155,4 +160,4 @@ ms.locfileid: "82693300"
 若要分享對電腦分析的意見反應，請選取入口網站上方的**傳送笑臉**圖示。 請一併將螢幕擷取畫面包含在其中，以協助 Microsoft 進一步了解您的意見反應。 您也可以在 [UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas?category_id=366805) 提交產品建議，並附議其他想法。
 
 > [!Note]
-> 請永遠不要透過「傳送笑臉」或 UserVoice 分享私人資訊， 這類私人資訊也包含您的租用者識別碼或商業識別碼。Microsoft 並不會透過「傳送笑臉」或 UserVoice 通道來提供支援。 若要取得電腦分析工作區的說明，請選取導覽功能表中的 [說明及支援]  連結，以開啟支援票證。
+> 請永遠不要透過「傳送笑臉」或 UserVoice 分享私人資訊， 這類私人資訊也包含您的租用者識別碼或商業識別碼。Microsoft 並不會透過「傳送笑臉」或 UserVoice 通道來提供支援。 若要取得電腦分析工作區的說明，請選取導覽功能表中的 [說明及支援] 連結，以開啟支援票證。

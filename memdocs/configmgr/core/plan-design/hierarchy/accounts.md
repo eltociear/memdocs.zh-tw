@@ -2,31 +2,31 @@
 title: 使用的帳戶
 titleSuffix: Configuration Manager
 description: 識別及管理 Configuration Manager 中使用的 Windows 群組、帳戶和 SQL 物件。
-ms.date: 10/23/2019
+ms.date: 05/08/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.technology: Configuration Manager-core
 ms.topic: conceptual
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a6808fed9fa9aaf894e3975066eb7707880b7948
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5bd1284b96e1739126b8d6ee19f20699d47e5880
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073410"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83267976"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Configuration Manager 中使用的帳戶
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 利用下列資訊可識別 Configuration Manager 中使用的 Windows 群組、帳戶和 SQL 物件、其使用方式，以及任何需求。  
 
 - [Configuration Manager 建立及使用的 Windows 群組](#bkmk_groups)  
-  - [ConfigMgr_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
-  - [ConfigMgr_DViewAccess](#configmgr_dviewaccess)  
-  - [ConfigMgr 遠端控制使用者](#configmgr-remote-control-users)  
+  - [Configuration Manager_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
+  - [Configuration Manager_DViewAccess](#configmgr_dviewaccess)  
+  - [Configuration Manager 遠端控制使用者](#configmgr_rcusers)  
   - [SMS Admins](#sms-admins)  
   - [SMS_SiteSystemToSiteServerConnection_MP_&lt;站台碼\>](#bkmk_remotemp)  
   - [SMS_SiteSystemToSiteServerConnection_SMSProv_&lt;站台碼\>](#bkmk_remoteprov)  
@@ -96,7 +96,7 @@ Configuration Manager 會自動建立，而且在許多情況下，會自動維�
 > 當 Configuration Manager 在屬於網域成員的電腦上建立群組時，群組會是本機安全性群組。 如果電腦是網域控制站，群組會是網域本機群組。 此類型的群組會在網域中所有網域控制站之間共用。  
 
 
-### <a name="configmgr_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a> ConfigMgr_CollectedFilesAccess
+### <a name="configuration-manager_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a> Configuration Manager_CollectedFilesAccess
 
 Configuration Manager 會使用此群組來授與軟體清查所收集之檔案的檢視權限。  
 
@@ -111,19 +111,19 @@ Configuration Manager 會使用此群組來授與軟體清查所收集之檔案�
 Configuration Manager 會自動管理群組成員資格。 成員資格包括系統管理使用者，會授與對指派的安全性角色中 [集合]  安全物件的 [檢視收集到的檔案]  權限。
 
 #### <a name="permissions"></a>權限
-根據預設，此群組具有站台伺服器上下列資料夾的 [讀取]  權限：`C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`  
+根據預設，此群組具有站台伺服器上下列資料夾的 [讀取] 權限：`C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`  
 
 
-### <a name="configmgr_dviewaccess"></a><a name="configmgr_dviewaccess"></a>ConfigMgr_DViewAccess  
+### <a name="configuration-manager_dviewaccess"></a><a name="configmgr_dviewaccess"></a>Configuration Manager_DViewAccess  
 
 此群組是 Configuration Manager 在子主要站台的站台資料庫伺服器或資料庫複本伺服器上建立的本機安全性群組。 當您使用分散式檢視在階層中的站台之間進行資料庫複寫時，站台會建立此群組。 它包含管理中心網站的站台伺服器和 SQL Server 電腦帳戶。
 
 如需詳細資訊，請參閱[站台間的資料傳輸](data-transfers-between-sites.md)。
 
 
-### <a name="configmgr-remote-control-users"></a>ConfigMgr 遠端控制使用者  
+### <a name="configuration-manager-remote-control-users"></a><a name="configmgr_rcusers"></a> Configuration Manager 遠端控制使用者  
 
-Configuration Manager 遠端工具使用此群組來儲存您在 [允許的檢視者]  清單中設定的帳戶和群組。 站台會將此清單指派給每個用戶端。  
+Configuration Manager 遠端工具使用此群組來儲存您在 [允許的檢視者] 清單中設定的帳戶和群組。 站台會將此清單指派給每個用戶端。  
 
 如需詳細資訊，請參閱[遠端控制簡介](../../clients/manage/remote-control/introduction-to-remote-control.md)。
 
@@ -133,14 +133,14 @@ Configuration Manager 遠端工具使用此群組來儲存您在 [允許的檢�
 停用用戶端的遠端工具後，此群組不會自動移除。 請在停用遠端工具之後手動將它刪除。
 
 #### <a name="membership"></a>成員資格
-根據預設，此群組中沒有成員。 當您將使用者新增至 [允許的檢視者]  清單時，使用者會自動新增至此群組。
+根據預設，此群組中沒有成員。 當您將使用者新增至 [允許的檢視者] 清單時，使用者會自動新增至此群組。
 
-使用 [允許的檢視者]  清單來管理此群組的成員資格，而不要直接將使用者或群組新增至此群組。
+使用 [允許的檢視者] 清單來管理此群組的成員資格，而不要直接將使用者或群組新增至此群組。
 
-除了作為允許的檢視者之外，系統管理使用者還必須具備**集合**物件的**遠端控制**權限。 使用 [遠端工具操作員]  安全性角色來指派此權限。  
+除了作為允許的檢視者之外，系統管理使用者還必須具備**集合**物件的**遠端控制**權限。 使用 [遠端工具操作員] 安全性角色來指派此權限。  
 
 #### <a name="permissions"></a>權限
-根據預設，此群組沒有存取電腦上任何位置的權限。 它只能用來保存 [允許的檢視者]  清單。  
+根據預設，此群組沒有存取電腦上任何位置的權限。 它只能用來保存 [允許的檢視者] 清單。  
 
 
 ### <a name="sms-admins"></a>SMS Admins  
@@ -161,9 +161,9 @@ Configuration Manager 使用此群組來授與透過 WMI 存取 SMS 提供者的
 Configuration Manager 會自動管理群組成員資格。 根據預設，階層中的每位系統管理使用者及站台伺服器電腦帳戶，都是站台中每部 SMS 提供者電腦的 **SMS Admins** 群組成員。
 
 #### <a name="permissions"></a>權限
-您可以在 [WMI 控制]  MMC 嵌入式管理單元中，檢視 SMS Admins 群組的權限。 預設會將 `Root\SMS` WMI 命名空間的 [啟用帳戶]  和 [遠端啟用]  權限授與此群組。 已驗證的使用者具有 **Execute Methods**、**Provider Write** 及 **Enable Account**。
+您可以在 [WMI 控制] MMC 嵌入式管理單元中，檢視 SMS Admins 群組的權限。 預設會將 `Root\SMS` WMI 命名空間的 [啟用帳戶] 和 [遠端啟用] 權限授與此群組。 已驗證的使用者具有 **Execute Methods**、**Provider Write** 及 **Enable Account**。
 
-當您使用遠端 Configuration Manager 主控台時，請同時設定站台伺服器電腦和 SMS 提供者的 [遠端啟用]  DCOM 權限。 將這些權限授與 **SMS Admins** 群組。 此動作會簡化系統管理，而不是直接將這些權限授與使用者或群組。 如需詳細資訊，請參閱[設定遠端 Configuration Manager 主控台的 DCOM 權限](../../servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole)。 
+當您使用遠端 Configuration Manager 主控台時，請同時設定站台伺服器電腦和 SMS 提供者的 [遠端啟用] DCOM 權限。 將這些權限授與 **SMS Admins** 群組。 此動作會簡化系統管理，而不是直接將這些權限授與使用者或群組。 如需詳細資訊，請參閱[設定遠端 Configuration Manager 主控台的 DCOM 權限](../../servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole)。 
 
 
 ### <a name="sms_sitesystemtositeserverconnection_mp_ltsitecode"></a><a name="bkmk_remotemp"></a> SMS_SiteSystemToSiteServerConnection_MP_&lt;站台碼\>  
@@ -179,7 +179,7 @@ Configuration Manager 會自動管理群組成員資格。 根據預設，階層
 Configuration Manager 會自動管理群組成員資格。 根據預設，成員資格包括擁有網站管理點之遠端電腦的電腦帳戶。
 
 #### <a name="permissions"></a>權限
-根據預設，此群組具有站台伺服器上下列資料夾的 [讀取]  、[讀取與執行]  及 [列出資料夾內容]  權限：`C:\Program Files\Microsoft Configuration Manager\inboxes`。 對於管理點寫入用戶端資料之 [收件匣]  下方的子資料夾，此群組具有額外的 [寫入]  權限。
+根據預設，此群組具有站台伺服器上下列資料夾的 [讀取]、[讀取與執行] 及 [列出資料夾內容] 權限：`C:\Program Files\Microsoft Configuration Manager\inboxes`。 對於管理點寫入用戶端資料之 [收件匣] 下方的子資料夾，此群組具有額外的 [寫入] 權限。
 
 
 ### <a name="sms_sitesystemtositeserverconnection_smsprov_ltsitecode"></a><a name="bkmk_remoteprov"></a> SMS_SiteSystemToSiteServerConnection_SMSProv_&lt;站台碼\>  
@@ -195,9 +195,9 @@ Configuration Manager 會自動管理群組成員資格。 根據預設，成員
 Configuration Manager 會自動管理群組成員資格。 根據預設，成員資格包括電腦帳戶或網域使用者帳戶。 它會使用此帳戶從每個遠端 SMS 提供者連線到站台伺服器。
 
 #### <a name="permissions"></a>權限
-根據預設，此群組具有站台伺服器上下列資料夾的 [讀取]  、[讀取與執行]  及 [列出資料夾內容]  權限：`C:\Program Files\Microsoft Configuration Manager\inboxes`。 此群組具有 [收件匣] 下方子資料夾的額外 [寫入]  和 [修改]  權限。 SMS 提供者需要存取這些資料夾。
+根據預設，此群組具有站台伺服器上下列資料夾的 [讀取]、[讀取與執行] 及 [列出資料夾內容] 權限：`C:\Program Files\Microsoft Configuration Manager\inboxes`。 此群組具有 [收件匣] 下方子資料夾的額外 [寫入] 和 [修改] 權限。 SMS 提供者需要存取這些資料夾。
 
-此群組也具有站台伺服器上下列子資料夾的 [讀取]  權限：`C:\Program Files\Microsoft Configuration Manager\OSD\Bin`。 
+此群組也具有站台伺服器上下列子資料夾的 [讀取] 權限：`C:\Program Files\Microsoft Configuration Manager\OSD\Bin`。 
 
 它也具有 `C:\Program Files\Microsoft Configuration Manager\OSD\boot` 下方子資料夾的下列權限：
 - **讀取**  
@@ -220,13 +220,13 @@ Configuration Manager 遠端站台系統電腦上的檔案發送管理員元件�
 Configuration Manager 會自動管理群組成員資格。 根據預設，成員資格包括電腦帳戶或網域使用者帳戶。 它會使用此帳戶從執行檔案發送管理員的每個遠端站台系統連線到站台伺服器。
 
 #### <a name="permissions"></a>權限
-根據預設，此群組具有站台伺服器上下列資料夾及其子資料夾的 [讀取]  、[讀取與執行]  及 [列出資料夾內容]  權限：`C:\Program Files\Microsoft Configuration Manager\inboxes`。 
+根據預設，此群組具有站台伺服器上下列資料夾及其子資料夾的 [讀取]、[讀取與執行] 及 [列出資料夾內容] 權限：`C:\Program Files\Microsoft Configuration Manager\inboxes`。 
 
-此群組具有站台伺服器上下列資料夾的額外 [寫入]  和 [修改]  權限：`C:\Program Files\Microsoft Configuration Manager\inboxes\statmgr.box`。
+此群組具有站台伺服器上下列資料夾的額外 [寫入] 和 [修改] 權限：`C:\Program Files\Microsoft Configuration Manager\inboxes\statmgr.box`。
 
 
 ### <a name="sms_sitetositeconnection_ltsitecode"></a><a name="bkmk_filerepl"></a> SMS_SiteToSiteConnection_&lt;站台碼\>  
-Configuration Manager 會使用此群組在階層中的站台間啟用以檔案為基礎之複寫。 對於直接將檔案傳送到這個站台的每個遠端站台，這個群組具有設定為 [檔案複寫帳戶]  的帳戶。  
+Configuration Manager 會使用此群組在階層中的站台間啟用以檔案為基礎之複寫。 對於直接將檔案傳送到這個站台的每個遠端站台，這個群組具有設定為 [檔案複寫帳戶] 的帳戶。  
 
 #### <a name="type-and-location"></a>類型和位置
 此群組為網站伺服器上建立的本機安全性群組。
@@ -237,7 +237,7 @@ Configuration Manager 會使用此群組在階層中的站台間啟用以檔案�
 當您解除安裝站台時，此群組不會自動移除。 請在解除安裝站台之後手動將它刪除。
 
 #### <a name="permissions"></a>權限
-根據預設，此群組具有下列資料夾的 [完全控制]  ：`C:\Program Files\Microsoft Configuration Manager\inboxes\despoolr.box\receive`。
+根據預設，此群組具有下列資料夾的 [完全控制]：`C:\Program Files\Microsoft Configuration Manager\inboxes\despoolr.box\receive`。
 
 
 
@@ -245,6 +245,8 @@ Configuration Manager 會使用此群組在階層中的站台間啟用以檔案�
 
 您可以為 Configuration Manager 設定下列帳戶。  
 
+> [!TIP]
+> 請勿針對您在 Configuration Manager 主控台中指定之帳戶的密碼使用百分比字元 (`%`)。 該帳戶將無法進行驗證。<!-- SCCMDocs#1032 -->
 
 ### <a name="active-directory-group-discovery-account"></a>Active Directory 群組探索帳戶  
 
@@ -288,7 +290,7 @@ Configuration Manager 會使用此群組在階層中的站台間啟用以檔案�
 
 此帳戶必須具有您要探索網路基礎結構所在之每個 Active Directory 樹系的 [讀取]  權限。  
 
-此帳戶必須具有您要發佈站台資料所在的每個 Active Directory 樹系中，[系統管理]  容器及其所有子物件的 [完全控制]  權限。 如需詳細資訊，請參閱[準備 Active Directory 以發佈站台](../network/extend-the-active-directory-schema.md)。  
+此帳戶必須具有您要發佈站台資料所在的每個 Active Directory 樹系中，[系統管理] 容器及其所有子物件的 [完全控制] 權限。 如需詳細資訊，請參閱[準備 Active Directory 以發佈站台](../network/extend-the-active-directory-schema.md)。  
 
 如需詳細資訊，請參閱 [Active Directory 樹系探索](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutForest)。
 
@@ -302,9 +304,9 @@ Configuration Manager 會使用此群組在階層中的站台間啟用以檔案�
 
 ### <a name="capture-os-image-account"></a>擷取 OS 映像帳戶  
 
-當您擷取 OS 映像時，Configuration Manager 使用**擷取 OS 映像帳戶**存取您用來儲存所擷取映像的資料夾。 如果您將 [擷取 OS 映像]  步驟新增至工作順序，就需要此帳戶。  
+當您擷取 OS 映像時，Configuration Manager 使用**擷取 OS 映像帳戶**存取您用來儲存所擷取映像的資料夾。 如果您將 [擷取 OS 映像] 步驟新增至工作順序，就需要此帳戶。  
 
-對於您儲存所擷取映像的網路共用，此帳戶必須具有 [讀取]  和 [寫入]  權限。  
+對於您儲存所擷取映像的網路共用，此帳戶必須具有 [讀取] 和 [寫入] 權限。  
 
 如果您在 Windows 中變更此帳戶的密碼，請以新密碼更新工作順序。 在用戶端接著下載用戶端原則時，Configuration Manager 用戶端會收到新的密碼。  
 
@@ -322,7 +324,7 @@ Configuration Manager 會使用此群組在階層中的站台間啟用以檔案�
 
 當您使用用戶端推入安裝方法來部署用戶端時，站台使用**用戶端推入安裝帳戶**來連線到電腦，並安裝 Configuration Manager 用戶端軟體。 如果您未指定此帳戶，站台伺服器會嘗試使用其電腦帳戶。  
 
-此帳戶必須是目標用戶端電腦上本機**系統管理員**群組的成員。 此帳戶不需要 [網域系統管理員]  權限。  
+此帳戶必須是目標用戶端電腦上本機**系統管理員**群組的成員。 此帳戶不需要 [網域系統管理員] 權限。  
 
 您可以指定多個用戶端推入安裝帳戶。 Configuration Manager 會嘗試輪流使用每個帳戶，直到其中一個成功為止。  
 
@@ -382,12 +384,12 @@ Configuration Manager 會使用此群組在階層中的站台間啟用以檔案�
 
 Configuration Manager 用戶端會先嘗試使用其電腦帳戶來下載內容。 如果失敗，則會接著嘗試網路存取帳戶。  
 
-從 1806 版開始，工作群組用戶端或加入 Azure AD 的用戶端可以安全地從發佈點存取內容，而不需要網路存取帳戶。 此行為包括從開機媒體、PXE、或軟體中心執行工作順序的 OS 部署案例。 如需詳細資訊，請參閱[Enhanced HTTP](enhanced-http.md) (增強 HTTP)。<!--1358228,1358278-->
+如果您針對 HTTPS 或[增強 HTTP](enhanced-http.md) 設定站台，工作群組或已加入 Azure AD 的用戶端就能安全地從發佈點存取內容，而不需要網路存取帳戶。 此行為包括從開機媒體、PXE、或軟體中心執行工作順序的 OS 部署案例。<!--1358228,1358278--> 如需詳細資訊，請參閱[用戶端到管理點的通訊](communications-between-endpoints.md#bkmk_client2mp)。<!-- SCCMDocs#1345 -->
 
 > [!Note]  
-> 如果您啟用 [增強 HTTP]  以不要求網路存取帳戶，發佈點必須執行 Windows Server 2012 或更新版本。 <!--SCCMDocs-pr issue #2696-->
+> 如果您啟用 [增強 HTTP] 以不要求網路存取帳戶，發佈點必須執行 Windows Server 2012 或更新版本。 <!--SCCMDocs-pr issue #2696-->
 >  
-> 請將用戶端升級為至少 1806 版，再啟用這項功能。 如果您只允許 [增強 HTTP]  連線，舊版用戶端就無法使用此方法進行驗證，因此無法從發佈點下載用戶端升級套件。 <!--vso2841213-->   
+> 請將用戶端升級為至少 1806 版，再啟用這項功能。 如果您只允許 [增強 HTTP] 連線，舊版用戶端就無法使用此方法進行驗證，因此無法從發佈點下載用戶端升級套件。 <!--vso2841213-->   
 
 #### <a name="permissions"></a>權限
 
@@ -405,11 +407,11 @@ Configuration Manager 用戶端會先嘗試使用其電腦帳戶來下載內容�
 
 #### <a name="configure-the-network-access-account"></a>設定網路存取帳戶  
 
-1.  在 Configuration Manager 主控台中，移至 [系統管理]  工作區，展開 [站台設定]  ，然後選取 [站台]  節點。 然後選取站台。  
+1.  在 Configuration Manager 主控台中，移至 [系統管理] 工作區，展開 [站台設定]，然後選取 [站台] 節點。 然後選取站台。  
 
-2.  在功能區的 [設定]  群組中，選取 [設定站台元件]  ，然後選擇 [軟體發佈]  。  
+2.  在功能區的 [設定] 群組中，選取 [設定站台元件]，然後選擇 [軟體發佈]。  
 
-3.  選擇 [網路存取帳戶]  索引標籤。設定一或多個帳戶，然後選擇 [確定]  。  
+3.  選擇 [網路存取帳戶] 索引標籤。設定一或多個帳戶，然後選擇 [確定]。  
 
 
 ### <a name="package-access-account"></a>套件存取帳戶  
@@ -424,25 +426,25 @@ Configuration Manager 用戶端會先嘗試使用其電腦帳戶來下載內容�
 
 #### <a name="manage-package-access-accounts"></a>管理套件存取帳戶  
 
-1.  在 Configuration Manager 主控台中，選擇 [軟體程式庫]  。  
+1.  在 Configuration Manager 主控台中，選擇 [軟體程式庫]。  
 
-2.  在 [軟體程式庫]  工作區中，決定您想要管理其存取帳戶的內容類型，然後遵循提供的步驟進行：  
+2.  在 [軟體程式庫] 工作區中，決定您想要管理其存取帳戶的內容類型，然後遵循提供的步驟進行：  
 
-    - **應用程式**：展開 [應用程式管理]  ，選擇 [應用程式]  ，然後選取要管理其存取帳戶的應用程式。  
+    - **應用程式**：展開 [應用程式管理]，選擇 [應用程式]，然後選取要管理其存取帳戶的應用程式。  
 
-    - **套件**：展開 [應用程式管理]  ，選擇 [套件]  ，然後選取要管理其存取帳戶的套件。  
+    - **套件**：展開 [應用程式管理]，選擇 [套件]，然後選取要管理其存取帳戶的套件。  
 
-    - **軟體更新部署套件**：展開 [軟體更新]  ，選擇 [部署套件]  ，然後選取要管理其存取帳戶的部署套件。  
+    - **軟體更新部署套件**：展開 [軟體更新]，選擇 [部署套件]，然後選取要管理其存取帳戶的部署套件。  
 
-    - **驅動程式套件**：展開 [作業系統]  ，選擇 [驅動程式套件]  ，然後選取要管理其存取帳戶的驅動程式套件。  
+    - **驅動程式套件**：展開 [作業系統]，選擇 [驅動程式套件]，然後選取要管理其存取帳戶的驅動程式套件。  
 
-    - **OS 映像**：展開 [作業系統]  ，選擇 [作業系統映像]  ，然後選取要管理其存取帳戶的作業系統映像。  
+    - **OS 映像**：展開 [作業系統]，選擇 [作業系統映像]，然後選取要管理其存取帳戶的作業系統映像。  
 
-    - **OS 升級套件**：展開 [作業系統]  ，選擇 [作業系統升級套件]  ，然後選取要管理其存取帳戶的 OS 升級套件。  
+    - **OS 升級套件**：展開 [作業系統]，選擇 [作業系統升級套件]，然後選取要管理其存取帳戶的 OS 升級套件。  
 
-    - **開機映像**：展開 [作業系統]  ，選擇 [開機映像]  ，然後選取要管理其存取帳戶的開機映像。  
+    - **開機映像**：展開 [作業系統]，選擇 [開機映像]，然後選取要管理其存取帳戶的開機映像。  
 
-3.  在選取的物件上按一下滑鼠右鍵，然後選擇 [管理存取帳戶]  。  
+3.  在選取的物件上按一下滑鼠右鍵，然後選擇 [管理存取帳戶]。  
 
 4.  在 [新增帳戶]  對話方塊中，指定將被授與存取內容權限的帳戶，然後指定與帳戶關聯的存取權限。  
 
@@ -455,10 +457,10 @@ Configuration Manager 用戶端會先嘗試使用其電腦帳戶來下載內容�
 SQL Server Reporting Services 使用 **Reporting Services 點帳戶**，從站台資料庫擷取 Configuration Manager 報告的資料。 您指定的 Windows 使用者帳戶和密碼皆經過加密，並且儲存在 SQL Server Reporting Services 資料庫中。  
 
 > [!NOTE]  
-> 您所指定帳戶在裝載 SQL Reporting Services 資料庫的電腦上，必須具有 [本機登入]  權限。
+> 您所指定帳戶在裝載 SQL Reporting Services 資料庫的電腦上，必須具有 [本機登入] 權限。
 
 > [!NOTE]  
-> 帳戶新增到 ConfigMgr 資料庫的 smsschm_users SQL Database 角色之後，會自動獲授所有必要權限。
+> 當帳戶新增到 Configuration Manager 資料庫上的 smsschm_users SQL Database 角色之後，會自動獲授所有必要權限。
 
 如需詳細資訊，請參閱[報告簡介](../../servers/manage/introduction-to-reporting.md)。
 
@@ -494,7 +496,7 @@ Configuration Manager 安裝程式會自動將此帳戶新增至 [SMS Admins](#s
 
 站台伺服器使用**站台系統安裝帳戶**來安裝、重新安裝、解除安裝和設定站台系統。 如果設定站台系統要求站台伺服器起始與此站台系統之間的連線，則安裝站台系統和任何角色後，Configuration Manager 也會使用此帳戶從站台系統系統提取資料。 每個站台系統可以有不同的安裝帳戶，但您只能設定一個安裝帳戶來管理該站台系統上的所有角色。  
 
-此帳戶需要目標站台系統的本機系統管理權限。 此外，此帳戶必須在安全性原則中具有目標站台系統的 [從網路存取這部電腦]  權限。  
+此帳戶需要目標站台系統的本機系統管理權限。 此外，此帳戶必須在安全性原則中具有目標站台系統的 [從網路存取這部電腦] 權限。  
 
 > [!TIP]  
 > 如果您有許多網域控制站，且會跨網域使用這些帳戶，請在設定站台系統之前，檢查 Active Directory 是否已複寫這些帳戶。  
@@ -546,35 +548,35 @@ Configuration Manager 安裝程式會自動將此帳戶新增至 [SMS Admins](#s
 
 移轉程序使用**來源站台帳戶**來存取來源站台的 SMS 提供者。 此帳戶需要 [讀取]  權限以讀取來源網站中的網站物件，才能收集移轉作業所需的資料。  
 
-如果您有 Configuration Manager 2007 發佈點或具有共置發佈點的次要站台，當您將其升級為 Configuration Manager (最新分支) 發佈點時，此帳戶也必須具有 [站台]  類別的 [刪除]  權限。 此權限可在升級期間成功從 Configuration Manager 2007 站台移除發佈點。  
+如果您有 Configuration Manager 2007 發佈點或具有共置發佈點的次要站台，當您將其升級為 Configuration Manager (最新分支) 發佈點時，此帳戶也必須具有 [站台] 類別的 [刪除] 權限。 此權限可在升級期間成功從 Configuration Manager 2007 站台移除發佈點。  
 
 > [!NOTE]  
-> 來源站台帳戶與[來源站台資料庫帳戶](#source-site-database-account)均識別為**移轉管理員**，其位於 Configuration Manager 主控台 [管理]  工作區的 [帳戶]  節點中。  
+> 來源站台帳戶與[來源站台資料庫帳戶](#source-site-database-account)均識別為**移轉管理員**，其位於 Configuration Manager 主控台 [管理] 工作區的 [帳戶] 節點中。  
 
 如需詳細資訊，請參閱[在階層間移轉資料](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies)。
 
 
 ### <a name="source-site-database-account"></a>來源站台資料庫帳戶  
 
-移轉程序使用**來源站台資料庫帳戶**存取來源站台的 SQL Server 資料庫。 若要從來源站台的 SQL Server 資料庫收集資料，來源站台資料庫帳戶必須具有來源站台 SQL Server 資料庫的 [讀取]  和 [執行]  權限。  
+移轉程序使用**來源站台資料庫帳戶**存取來源站台的 SQL Server 資料庫。 若要從來源站台的 SQL Server 資料庫收集資料，來源站台資料庫帳戶必須具有來源站台 SQL Server 資料庫的 [讀取] 和 [執行] 權限。  
 
 如果使用 Configuration Manager (最新分支) 電腦帳戶，請確定此帳戶的下列條件皆成立：  
   
 - 在與 Configuration Manager 2007 站台相同的網域中為 **Distributed COM Users** 安全性群組的成員  
 - 其為 **SMS Admins** 安全性群組的成員  
-- 它具有所有 Configuration Manager 2007 物件的 [讀取]  權限  
+- 它具有所有 Configuration Manager 2007 物件的 [讀取] 權限  
 
 > [!NOTE]  
-> 來源站台帳戶與[來源站台資料庫帳戶](#source-site-database-account)均識別為**移轉管理員**，其位於 Configuration Manager 主控台 [管理]  工作區的 [帳戶]  節點中。  
+> 來源站台帳戶與[來源站台資料庫帳戶](#source-site-database-account)均識別為**移轉管理員**，其位於 Configuration Manager 主控台 [管理] 工作區的 [帳戶] 節點中。  
 
 如需詳細資訊，請參閱[在階層間移轉資料](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies)。
 
 
 ### <a name="task-sequence-domain-join-account"></a>工作順序網域加入帳戶 
 
-Windows 安裝程式使用**工作順序網域加入帳戶**，將新製作映像的電腦加入網域。 您需要此帳戶，才能進行[加入網域或工作群組](../../../osd/understand/task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)工作順序步驟，並選取 [加入網域]  選項。 您也可以透過[套用網路設定](../../../osd/understand/task-sequence-steps.md#BKMK_ApplyNetworkSettings)步驟設定此帳戶，但並非必要條件。  
+Windows 安裝程式使用**工作順序網域加入帳戶**，將新製作映像的電腦加入網域。 您需要此帳戶，才能進行[加入網域或工作群組](../../../osd/understand/task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)工作順序步驟，並選取 [加入網域] 選項。 您也可以透過[套用網路設定](../../../osd/understand/task-sequence-steps.md#BKMK_ApplyNetworkSettings)步驟設定此帳戶，但並非必要條件。  
 
-此帳戶需要目標網域的 [網域加入]  權限。  
+此帳戶需要目標網域的 [網域加入] 權限。  
 
 > [!TIP]  
 > 建立一個具備最低權限的網域使用者帳戶以加入網域，並將它用於所有工作順序。  
@@ -602,7 +604,7 @@ Windows 安裝程式使用**工作順序網域加入帳戶**，將新製作映�
 
 ### <a name="task-sequence-run-as-account"></a>工作順序執行身分帳戶  
 
-工作順序引擎使用**工作順序執行身分帳戶**，透過本機系統帳戶以外的認證來執行命令列或 PowerShell 指令碼。 您需要此帳戶，才能進行[執行命令列](../../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine)及[執行 PowerShell 指令碼](../../../osd/understand/task-sequence-steps.md#BKMK_RunPowerShellScript)工作順序步驟，並選取 [以下列帳戶的身分執行此步驟]  選項。  
+工作順序引擎使用**工作順序執行身分帳戶**，透過本機系統帳戶以外的認證來執行命令列或 PowerShell 指令碼。 您需要此帳戶，才能進行[執行命令列](../../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine)及[執行 PowerShell 指令碼](../../../osd/understand/task-sequence-steps.md#BKMK_RunPowerShellScript)工作順序步驟，並選取 [以下列帳戶的身分執行此步驟] 選項。  
 
 設定具有所需最低權限的帳戶，以便執行您在工作順序中指定的命令列。 此帳戶需要互動式登入權限。 它通常需要能夠安裝軟體及存取網路資源。 針對執行 PowerShell 指令碼工作，此帳戶需要本機系統管理員權限。 
 
@@ -643,41 +645,41 @@ Configuration Manager 會自動建立和維護 SQL 中的下列使用者物件�
 
 ## <a name="database-roles-that-configuration-manager-uses-in-sql"></a><a name="bkmk_sqlroles"></a>Configuration Manager 在 SQL 中使用的資料庫角色
 <!--SCCMDocs issue #1160-->
-Configuration Manager 會自動建立和維護 SQL 中的下列角色物件。 這些角色提供對特定預存程序、資料表、檢視與函式的存取以執行每個角色所需的動作以從 ConfigMgr 資料庫擷取資料或將資料插入到其中。 這些物件位在 Configuration Manager 資料庫內的 [安全性]/[使用者]/[資料庫角色] 下。
+Configuration Manager 會自動建立和維護 SQL 中的下列角色物件。 這些角色提供對特定預存程序、資料表、檢視與函式的存取權，來執行每個角色所需的動作，以便從 Configuration Manager 資料庫擷取資料或將資料插入到其中。 這些物件位在 Configuration Manager 資料庫內的 [安全性]/[使用者]/[資料庫角色] 下。
 
 > [!IMPORTANT]  
-> 修改或移除這些物件，可能會在 Configuration Manager 環境中造成重大問題。  我們建議您不要對這些物件進行任何變更。
+> 修改或移除這些物件，可能會在 Configuration Manager 環境中造成重大問題。 請勿變更這些物件。 下列清單僅供參考。
 
 ### <a name="smsdbrole_aitool"></a>smsdbrole_AITool
 
-Asset Intelligence 大量授權匯入。 ConfigMgr 根據 RBA 存取權將此權限授與使用者帳戶，以匯入將搭配 Asset Intelligence 使用的大量授權。  此帳戶可由系統高權限管理員或資產管理員角色新增。
+Asset Intelligence 大量授權匯入。 Configuration Manager 會根據 RBA 存取權將此權限授與使用者帳戶，以便能夠匯入與 Asset Intelligence 搭配使用的大量授權。  此帳戶可由系統高權限管理員或資產管理員角色新增。
 
 ### <a name="smsdbrole_aius"></a>smsdbrole_AIUS
 
-Asset Intelligence 更新同步處理。 ConfigMgr 會將裝載 Asset Intelligence 同步處理點帳戶的存取權授與電腦帳戶，以取得 Asset Intelligence Proxy 資料及檢視擱置中的待上傳 AI 資料。
+Asset Intelligence 更新同步處理。 Configuration Manager 會將存取權授與裝載 Asset Intelligence 同步處理點帳戶的電腦帳戶，以取得 Asset Intelligence Proxy 資料並檢視擱置中的待上傳 AI 資料。
 
 ### <a name="smsdbrole_amtsp"></a>smsdbrole_AMTSP
 
 頻外管理。 此角色是由 Configuration Manager AMT 角色使用以擷取支援 Intel AMT 之裝置上的資料。
 
 > [!NOTE]  
-> 此角色在新版本的 ConfigMgr 中已過時。
+> 此角色在較新版本的 Configuration Manager 中已過時。
 
 ### <a name="smsdbrole_crp"></a>smsdbrole_CRP
 
-憑證登錄點 System Center Endpoint Protection (SCEP) 支援。 ConfigMgr 會將權限授與支援 SCEP 憑證登錄點之站台系統的電腦帳戶，以進行憑證簽署及更新的。
+支援簡單憑證註冊通訊協定 (SCEP) 的憑證登錄點。 Configuration Manager 會將權限授與支援憑證登錄點 (以提供 SCEP 支援) 的站台系統電腦帳戶，以進行憑證簽署及更新。
 
 ### <a name="smsdbrole_crppfx"></a>smsdbrole_CRPPfx
 
-憑證登錄點 PFX 支援。 ConfigMgr 會將權限授與支援針對 PFX 設定之站台系統的電腦帳戶，以進行憑證簽署及更新。
+憑證登錄點 PFX 支援。 Configuration Manager 會將權限授與支援針對 PFX 支援所設定之憑證登錄點的站台系統電腦帳戶，以進行簽署及更新。
 
 ### <a name="smsdbrole_dmp"></a>smsdbrole_DMP
 
-裝置管理點。 ConfigMgr 會將此權限授與具有 [允許行動裝置和 Mac 電腦使用此管理點] 選項 (能夠為已向 MDM 註冊的裝置提供支援) 之管理點的電腦帳戶。
+裝置管理點。 Configuration Manager 會將此權限授與具有 [允許行動裝置和 Mac 電腦使用此管理點] 選項之管理點的電腦帳戶，以便能夠支援已向 MDM 註冊的裝置。
 
 ### <a name="smsdbrole_dmpconnector"></a>smsdbrole_DmpConnector
 
-服務連接點。 ConfigMgr 會將此權限授與裝載「服務連接點」的電腦帳戶，以擷取及提供遙測資料、管理雲端服務，以及擷取服務更新。
+服務連接點。 Configuration Manager 會將此權限授與裝載服務連接點的電腦帳戶，以擷取並提供遙測資料、管理雲端服務及擷取服務更新。
 
 ### <a name="smsdbrole_dviewaccess"></a>smsdbrole_DViewAccess
 
@@ -685,11 +687,11 @@ Asset Intelligence 更新同步處理。 ConfigMgr 會將裝載 Asset Intelligen
 
 ### <a name="smsdbrole_dwss"></a>smsdbrole_DWSS
 
-資料倉儲。 ConfigMgr 會將此權限授與裝載資料倉儲角色的電腦帳戶。
+資料倉儲。 Configuration Manager 會將此權限授與裝載資料倉儲角色的電腦帳戶。
 
 ### <a name="smsdbrole_enrollsvr"></a>smsdbrole_EnrollSvr
 
- 註冊點。 ConfigMgr 會將此權限授與裝載註冊點的電腦帳戶，以允許透過 MDM 進行裝置註冊。
+ 註冊點。 Configuration Manager 會將此權限授與裝載註冊點的電腦帳戶，以允許透過 MDM 進行裝置註冊。
 
 ### <a name="smsdbrole_extract"></a>smsdbrole_extract
 
@@ -697,26 +699,26 @@ Asset Intelligence 更新同步處理。 ConfigMgr 會將裝載 Asset Intelligen
 
 ### <a name="smsdbrole_hmsuser"></a>smsdbrole_HMSUser
 
-階層管理員服務。 ConfigMgr 會將權限授與此帳戶，以管理階層中站台之間的容錯移轉狀態訊息與 SQL Server Broker 交易。
+階層管理員服務。 Configuration Manager 會將權限授與此帳戶，以管理階層中站台之間的容錯移轉狀態訊息與 SQL Server Broker 交易。
 
 > [!NOTE]  
 > smdbrole_WebPortal 角色預設是此角色的成員。
 
 ### <a name="smsdbrole_mcs"></a>smsdbrole_MCS
 
-多點傳送服務。 ConfigMgr 會將此權限授與支援多點傳送之發佈點的電腦帳戶。
+多點傳送服務。 Configuration Manager 會將此權限授與支援多點傳送之發佈點的電腦帳戶。
 
 ### <a name="smsdbrole_mp"></a>smsdbrole_MP
 
-管理點。 ConfigMgr 會將此權限授與裝載管理點角色的電腦帳戶，以提供對 ConfigMgr 用戶端的支援。
+管理點。 Configuration Manager 會將此權限授與裝載管理點角色的電腦帳戶，以支援 Configuration Manager 用戶端。
 
 ### <a name="smsdbrole_mpmbam"></a>smsdbrole_MPMBAM
 
-管理點 Microsoft BitLocker 系統管理與監視。 ConfigMgr 會將此權限授與裝載管理環境 MBAM 之管理點的電腦帳戶。
+管理點 Microsoft BitLocker 系統管理與監視。 Configuration Manager 會將此權限授與裝載管理點的電腦帳戶，該管理點可管理環境適用的 MBAM。
 
 ### <a name="smsdbrole_mpusersvc"></a>smsdbrole_MPUserSvc
 
-管理點應用程式要求。 ConfigMgr 會將此權限授與裝載管理點的電腦帳戶以支援使用者型應用程式要求。
+管理點應用程式要求。 Configuration Manager 會將此權限授與裝載管理點的電腦帳戶，以支援使用者型應用程式要求。
 
 ### <a name="smsdbrole_siteprovider"></a>smsdbrole_siteprovider
 
@@ -724,16 +726,37 @@ SMS 提供者。 Configuration Manager 會將此權限授與裝載 SMS 提供者
 
 ### <a name="smsdbrole_siteserver"></a>smsdbrole_siteserver
 
-站台伺服器。 ConfigMgr 會將此權限授與裝載主要或 CAS 站台的電腦帳戶。
+站台伺服器。 Configuration Manager 會將此權限授與裝載主要或 CAS 站台的電腦帳戶。
 
 ### <a name="smsdbrole_sup"></a>smsdbrole_SUP
 
-軟體更新點。 ConfigMgr 會將此權限授與裝載軟體更新點的電腦帳戶以處理第三方更新。
+軟體更新點。 Configuration Manager 會將此權限授與裝載軟體更新點的電腦帳戶，以處理第三方更新。
 
 ### <a name="smsdbrole_webportal"></a>smsdbrole_WebPortal
 
-應用程式類別目錄網站點。 ConfigMgr 會將此權限授與裝載應用程式類別目錄網站點的電腦帳戶以提供使用者型應用程式部署。
+應用程式類別目錄網站點。 Configuration Manager 會將此權限授與裝載應用程式類別目錄 Web 服務點的電腦帳戶，以提供使用者型應用程式部署。
 
 ### <a name="smsschm_users"></a>smsschm_users
 
-使用者報告存取權。 ConfigMgr 會授與對用於報告服務點帳戶的存取權，以允許存取 SMS 報告檢視，以顯示 Configuration Manager 報告資料。  會進一步使用 RBA 來限制資料。
+使用者報告存取權。 Configuration Manager 會將存取權授與用於 Reporting Services 點的帳戶，以允許存取 SMS 報告檢視來顯示 Configuration Manager 報告資料。  會進一步使用 RBA 來限制資料。
+
+## <a name="elevated-permissions"></a>提升的權限
+
+<!-- SCCMDocs#405 -->
+
+Configuration Manager 要求某些帳戶需具備提升的權限，才能執行進行中的作業。 例如，請參閱[安裝主要站台的必要條件](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_PrereqPri)。 下列清單摘要說明這些權限與需要這些權限的原因。
+
+- 主要站台伺服器與管理中心網站伺服器的電腦帳戶需要：
+
+  - 所有站台伺服器上的本機系統管理員權限。 此權限可用來管理、安裝及移除系統服務。 當您新增或移除角色時，站台伺服器也會更新站台系統上的本機群組。
+
+  - 可存取站台資料庫之 SQL 執行個體的系統管理員權限。 此權限可設定及管理站台的 SQL。 Configuration Manager 會與 SQL 緊密整合，而不只是資料庫。
+
+- 具有系統高權限管理員角色的使用者帳戶需要：
+
+  - 站台伺服器上的本機系統管理員權限。 此權限可檢視、編輯、移除及安裝系統服務、登錄機碼與值，以及 WMI 物件。
+
+  - 可存取站台資料庫之 SQL 執行個體的系統管理員權限。 此權限可在安裝或復原期間安裝及更新資料庫。 SQL 維護和作業也需要用到此權限。 例如，重建索引及更新統計資料。
+
+    > [!NOTE]
+    > 有些組織可能選擇移除系統管理員存取權，並且只在需要時才授與。 這種行為有時稱為「Just-In-Time (JIT) 存取」。 在此情況下，具有系統高權限管理員角色的使用者仍然有權在 Configuration Manager 資料庫上讀取、更新及執行預存程序。 這些權限讓這類使用者能夠對大部分問題進行疑難排解，而不需完整的系統管理員存取權。

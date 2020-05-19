@@ -2,7 +2,7 @@
 title: 電腦分析的新功能
 titleSuffix: Configuration Manager
 description: 電腦分析雲端服務最新每月版本中的新功能摘要。
-ms.date: 03/12/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ce882f6bfc7a0d724688d5df59051dae17d54498
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.reviewer: acabello
+ms.openlocfilehash: 1d45d115f279603fa74e143c603c116146278ffe
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693148"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268154"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>電腦分析的新功能
 
@@ -26,6 +27,16 @@ ms.locfileid: "82693148"
 
 若要在此頁面更新時收到通知，請複製下列 URL 並貼到您的 RSS 摘要讀取程式：`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="may-2020"></a>2020 年 5 月
+
+### <a name="reduce-the-number-of-apps-for-review"></a>減少要檢閱的應用程式數目
+
+<!-- 5542186 -->
+
+為協助合併並減少入口網站中資產頁面上顯示的應用程式數目，其現在會合併名稱與發行者相同的所有應用程式版本。 [值得注意的 App] 圖格中的應用程式計數會反映此設定。 例如，有一個所有版本的執行個體，而非列出數百個 Microsoft Edge 執行個體。 您可以一次針對所有版本進行決策。 如果您需要對應用程式的特定版本作出決策，可以設定此行為。
+
+如需詳細資訊，請參閱[關於資產 - 應用程式](about-assets.md#apps)。
 
 ## <a name="march-2020"></a>2020 年 3 月
 
@@ -50,7 +61,7 @@ ms.locfileid: "82693148"
 
 <!-- 5746559 -->
 
-Windows 相容性資料會使用「保護」  來分類某些應用程式與驅動程式，這可能會導致更新至 Windows 10 失敗或復原。 電腦分析現在可以協助您事先識別這些保護，讓您可以在部署更新之前先對資產進行補救。 如需詳細資訊，請參閱[相容性評定 - 保護](compat-assessment.md#safeguards)。
+Windows 相容性資料會使用「保護」來分類某些應用程式與驅動程式，這可能會導致更新至 Windows 10 失敗或復原。 電腦分析現在可以協助您事先識別這些保護，讓您可以在部署更新之前先對資產進行補救。 如需詳細資訊，請參閱[相容性評定 - 保護](compat-assessment.md#safeguards)。
 
 ## <a name="january-2020"></a>2020 年 1 月
 
@@ -106,7 +117,7 @@ Windows 相容性資料會使用「保護」  來分類某些應用程式與驅�
 
 <!-- 3587232 -->
 
-為了減少您在標註值得注意應用程式時所耗費的精力，某些類型的應用程式會自動標記為 [不重要]  。 這些應用程式的部署計劃升級決策也會標記為 [就緒]  。 下列應用程式皆相容，而且在您升級 Windows 之後應可繼續運作：
+為了減少您在標註值得注意應用程式時所耗費的精力，某些類型的應用程式會自動標記為 [不重要]。 這些應用程式的部署計劃升級決策也會標記為 [就緒]。 下列應用程式皆相容，而且在您升級 Windows 之後應可繼續運作：
 
 - Microsoft 發佈的系統應用程式和元件
 

@@ -2,7 +2,7 @@
 title: 尋找說明
 titleSuffix: Configuration Manager
 description: 尋找資源以取得 Configuration Manager 的其他資訊。
-ms.date: 04/01/2020
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6610e86c12b6f7704b65dc11c476fa09e8f2ae63
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7bae98a8df1d8b8ff843bd333083c4c6ad68848c
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707156"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343179"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>尋找使用 Configuration Manager 的說明
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 本文提供下列各節，其中包含多個資源可尋找使用 Configuration Manager 的說明：  
 
@@ -63,11 +63,11 @@ ms.locfileid: "81707156"
 請遵循下列指示，傳送您喜歡之功能的意見反應：
 
 1. 在主控台的右上角，按一下笑臉。
-2. 在下拉式功能表中，選取 [傳送笑臉]  或 [傳送苦臉]  。
+2. 在下拉式功能表中，選取 [傳送笑臉] 或 [傳送苦臉]。
 3. 使用文字方塊來說明您喜歡或不喜歡的功能。 
 4. 選擇您是否想要分享電子郵件地址和螢幕擷取畫面。
-5. 按一下 [提交意見反應] 
-     - 如果您沒有網際網路連線，請按一下底部的 [儲存]  。 請遵循[傳送您儲存以供稍後提交的意見反應](#BKMK_NoInternet)一節中的指示，將它傳送至 Microsoft。 
+5. 按一下 [提交意見反應]
+     - 如果您沒有網際網路連線，請按一下底部的 [儲存]。 請遵循[傳送您儲存以供稍後提交的意見反應](#BKMK_NoInternet)一節中的指示，將它傳送至 Microsoft。 
 
 ![在 Configuration Manager 1806 中提交回函表單](media/1806-feedback-form.png)
 
@@ -81,7 +81,7 @@ ms.locfileid: "81707156"
    - 提交成功的訊息識別碼為 53900。
    - 提交失敗的訊息識別碼為 53901。
 
-若要檢視狀態訊息，請選取 [監視]   > [系統狀態]   > [狀態訊息查詢]  。 請先從 [所有狀態訊息]  查詢開始，然後選取您的時間範圍。 當訊息載入時，按一下 [篩選訊息]  按鈕，然後篩選出訊息識別碼 53900 或 53901。
+若要檢視狀態訊息，請選取 [監視] > [系統狀態] > [狀態訊息查詢]。 請先從 [所有狀態訊息] 查詢開始，然後選取您的時間範圍。 當訊息載入時，按一下 [篩選訊息] 按鈕，然後篩選出訊息識別碼 53900 或 53901。
 
 如果您[傳送儲存的意見反應以供稍後提交](find-help.md#BKMK_NoInternet)，則不會建立狀態訊息。
 
@@ -114,7 +114,7 @@ ms.locfileid: "81707156"
 
 ### <a name="send-feedback-that-you-saved-for-later-submission"></a><a name="BKMK_NoInternet"></a> 您儲存以供稍後提交的意見反應
 
-1. 在 [提供意見反應]  視窗底部，按一下 [儲存]  。 
+1. 在 [提供意見反應] 視窗底部，按一下 [儲存] 。 
 2. 儲存 .zip 檔案。 如果本機電腦沒有網際網路存取，請將檔案複製到連線到網際網路的電腦。 
 3. 如有需要，請複製位於 `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\` 的 [UploadOfflineFeedback] 資料夾
     - 如需 cd.latest 資料夾的詳細資訊，請參閱 [CD.Latest 資料夾](../servers/manage/the-cd.latest-folder.md)
@@ -127,6 +127,13 @@ ms.locfileid: "81707156"
         - `-s --silent`：未記錄到主控台 (無法結合 --verbose)
         - `-v, --verbose`：將詳細資訊記錄輸出到主控台 (無法結合 --silent)
         - `--help`：顯示 [說明] 畫面
+    
+    - 從 1910 版開始，UploadOfflineFeedback 公用程式支援使用 Proxy 伺服器。 您可以指定下列參數：
+        - `-x, --proxy`：指定要連線網際網路的 Proxy 伺服器。
+        - `-o, --port`：針對要連線網際網路的 Proxy 伺服器指定連接埠。
+        - `-u, --user`：針對要連線網際網路的 Proxy 伺服器指定使用者名稱。
+        - `-w, --password`：針對要連線網際網路的 Proxy 伺服器指定密碼。 輸入星號 (&#42;) 以產生密碼的提示。 當您在密碼提示字元中輸入密碼時，不會顯示該密碼。 強烈建議您使用星號 (&#42;) 來產生密碼輸入的提示，因為命令列上的純文字較不安全。
+        - `-i`：略過連線檢查：略過網路連線檢查，只上傳具有指定設定的意見反應。
 
 ## <a name="confirmation-of-console-feedback"></a><a name="bkmk_feedbackid"></a> 確認主控台的意見反應
 
@@ -135,7 +142,7 @@ ms.locfileid: "81707156"
 
 - 若要複製**意見反應識別碼**，請選取識別碼旁邊的複製圖示，或使用 **CTRL** + **C** 快速鍵。
   - 此識別碼不會儲存在您的電腦上，因此請務必先予以複製，再關閉視窗。
-- 按一下 [不要再顯示此訊息]  會隱藏此對話方塊，使其不會在未來顯示。
+- 按一下 [不要再顯示此訊息] 會隱藏此對話方塊，使其不會在未來顯示。
 
    ![在 Configuration Manager 1902 中透過主控台確認意見反應](media/1902-feedback-id-example.png)
 - 除非使用 -s 或 --silent，否則 **UploadOfflineFeedback** 命令工具會將 **FeedbackID** 寫入主控台。
@@ -144,7 +151,7 @@ ms.locfileid: "81707156"
 
 ##  <a name="product-feedback-for-versions-1802-and-earlier"></a><a name="BKMK_FeedbackHub"></a> 產品意見反應 (適用於 1802 版和更新版本)
 
-透過 Windows 10 內建的[意見反應中樞應用程式](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app)，來回報潛在的產品瑕疵。 當您 [新增意見反應]  時，請務必選取 [企業管理]  類別，然後選擇下列其中一個子類別：
+透過 Windows 10 內建的[意見反應中樞應用程式](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app)，來回報潛在的產品瑕疵。 當您 [新增意見反應] 時，請務必選取 [企業管理] 類別，然後選擇下列其中一個子類別：
 - Configuration Manager 用戶端
 - Configuration Manager 主控台
 - Configuration Manager 作業系統部署

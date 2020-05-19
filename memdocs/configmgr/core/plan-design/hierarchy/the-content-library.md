@@ -10,16 +10,16 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 567c03d231c145718f4f960bda7073ba4b904de2
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: d7432b3522d5292e2c2afc1dac6b8db3382cca12
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82880987"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343162"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>Configuration Manager 中的內容庫
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 內容庫是 Configuration Manager 中內容的單一執行個體存放區。 站台使用它來減少您所發佈內容的合併主體整體大小。 內容庫會儲存軟體部署的所有內容檔案，例如：軟體更新、應用程式和 OS 部署。  
 
@@ -44,7 +44,7 @@ Configuration Manager 會將內容檔案複製到優先順序最高的磁碟機�
 如需如何設定發佈點之磁碟機設定的詳細資訊，請參閱[管理內容和內容基礎結構](../../servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
 > [!IMPORTANT]
-> 若要在安裝後將內容庫移至發佈點上的不同位置，請使用 Configuration Manager 工具中的 [內容庫傳輸]  工具。 如需詳細資訊，請參閱[內容庫傳輸工具](../../support/content-library-transfer.md)。  
+> 若要在安裝後將內容庫移至發佈點上的不同位置，請使用 Configuration Manager 工具中的 [內容庫傳輸] 工具。 如需詳細資訊，請參閱[內容庫傳輸工具](../../support/content-library-transfer.md)。  
 
 
 ## <a name="about-the-content-library-on-the-central-administration-site"></a>關於管理中心網站上的內容庫
@@ -64,7 +64,7 @@ Configuration Manager 在下列案例中會使用管理中心網站上的內容�
 
 - 若要避免將內容庫安裝在特定磁碟機，請建立名為 **no_sms_on_drive.sms**的空白檔案。 在建立內容庫之前，將該檔案複製到磁碟機的根目錄。  
 
-- 建立內容庫之後，請使用 Configuration Manager 工具中的 [內容庫傳輸]  工具來管理內容庫的位置。 如需詳細資訊，請參閱[內容庫傳輸工具](../../support/content-library-transfer.md)。  
+- 建立內容庫之後，請使用 Configuration Manager 工具中的 [內容庫傳輸] 工具來管理內容庫的位置。 如需詳細資訊，請參閱[內容庫傳輸工具](../../support/content-library-transfer.md)。  
 
 > [!Note]  
 > 雲端發佈點不會使用單一執行個體儲存體。 站台會先將套件加密再傳送至 Azure，而且每個套件都有唯一的加密金鑰。 即使兩個檔案相同，加密版本也不會完全一樣。  
@@ -91,6 +91,8 @@ Configuration Manager 在下列案例中會使用管理中心網站上的內容�
 
 - 站台伺服器不能有發佈點角色。 發佈點也會使用內容庫，且此角色不支援遠端內容庫。 移動內容庫之後，您即無法將發佈點角色新增至站台伺服器。  
 
+- 適用於內容庫的遠端系統必須位於受信任的網域中。
+
 > [!Important]  
 > 請勿在多個站台之間重複使用共用網路位置。 例如，請勿針對管理中心網站和子主要站台使用相同的路徑。 此設定可能會損毀內容庫，而需要您加以重建。<!--SCCMDocs-pr issue 2764-->  
 
@@ -101,34 +103,34 @@ Configuration Manager 在下列案例中會使用管理中心網站上的內容�
     > [!Warning]  
     > 請勿重複使用具有內容的現有資料夾。 例如，請勿使用與封裝來源相同的資料夾。 複製內容庫之前，設定管理員會從您指定的位置移除任何現有內容。  
 
-2. 在 Configuration Manager 主控台中，切換至 [系統管理]  工作區。 展開 [站台設定]  ，選取 [站台]  節點，然後選取站台。 在詳細資料窗格底部的 [摘要]  索引標籤上，留意到 [內容庫]  會有一個新欄位。  
+2. 在 Configuration Manager 主控台中，切換至 [系統管理] 工作區。 展開 [站台設定]，選取 [站台] 節點，然後選取站台。 在詳細資料窗格底部的 [摘要] 索引標籤上，留意到 [內容庫] 會有一個新欄位。  
 
-3. 選取功能區上的 [管理內容庫]  。  
+3. 選取功能區上的 [管理內容庫]。  
 
-4. 在 [管理內容庫] 視窗中，[目前的位置]  欄位顯示本機磁碟機和路徑。 針對 [新增位置]  輸入有效的網路路徑。 此路徑是站台移動內容庫的目標位置。 它必須包含共用上已存在的資料夾名稱，例如 `\\server\share\folder`。 選取 [確定]  。  
+4. 在 [管理內容庫] 視窗中，[目前的位置] 欄位顯示本機磁碟機和路徑。 針對 [新增位置] 輸入有效的網路路徑。 此路徑是站台移動內容庫的目標位置。 它必須包含共用上已存在的資料夾名稱，例如 `\\server\share\folder`。 選取 [確定]。  
 
-5. 請注意到詳細資料窗格之 [摘要] 索引標籤上 [內容庫] 欄位中的 [狀態]  值。 它會更新以顯示站台移動內容庫的進度。  
+5. 請注意到詳細資料窗格之 [摘要] 索引標籤上 [內容庫] 欄位中的 [狀態] 值。 它會更新以顯示站台移動內容庫的進度。  
 
-   - **進行中**時，[移動進度 (%)]  值會顯示完成百分比。  
+   - **進行中**時，[移動進度 (%)] 值會顯示完成百分比。  
 
         > [!Note]  
         > 如果您有一個大型的內容庫，您可能會在主控台中看到一段時間的 `0%` 進度。 例如，對於 1 TB的內容庫，它必須在顯示 `1%` 之前複製 10 GB。 檢閱 **distmgr.log**，其中顯示了複製的檔案和位元組數目。 從 1810 版開始，記錄檔也會顯示預估的剩餘時間。
 
    - 發生錯誤狀態時，狀態會顯示錯誤。 常見的錯誤包含**拒絕存取**或**磁碟已滿**。  
 
-   - 完成時，它會顯示 [完成]  。  
+   - 完成時，它會顯示 [完成]。  
 
      如需詳細資料，請參閱 **distmgr.log**。 如需詳細資訊，請參閱[站台伺服器與站台系統伺服器記錄檔](log-files.md#BKMK_SiteSiteServerLog)。  
 
 如需此程序的詳細資訊，請參閱[流程圖 - 管理內容庫](manage-content-library-flowchart.md)。
 
-站台實際將內容庫檔案「複製」  到遠端位置。 此程序不會刪除站台伺服器上原始位置的內容庫檔案。 若要釋放空間，系統管理員必須手動刪除這些原始檔案。
+站台實際將內容庫檔案「複製」到遠端位置。 此程序不會刪除站台伺服器上原始位置的內容庫檔案。 若要釋放空間，系統管理員必須手動刪除這些原始檔案。
 
 如果原始內容庫跨越兩個磁碟機，則它將合併到新目的地的單一資料夾中。
 
 從 1810 版開始，在複製過程中，**Despooler** 和**發佈管理員**元件不會處理新的套件。 此動作可確保移動時不會將內容新增至內容庫中。 不論如何，請在系統維護期間排定這項變更。
 
-如果您需要將內容庫移回站台伺服器，請重複此程序，但針對 [新增位置]  輸入本機磁碟機和路徑。 它必須包含磁碟機上已存在的資料夾名稱，例如 `D:\SCCMContentLib`。 如果原始內容仍然存在，此程序會快速將設定移至站台伺服器的本機位置。
+如果您需要將內容庫移回站台伺服器，請重複此程序，但針對 [新增位置] 輸入本機磁碟機和路徑。 它必須包含磁碟機上已存在的資料夾名稱，例如 `D:\SCCMContentLib`。 如果原始內容仍然存在，此程序會快速將設定移至站台伺服器的本機位置。
 
 > [!Tip]  
 > 若要將內容移至站台伺服器上的另一個磁碟機，請使用**內容庫傳輸**工具。 如需詳細資訊，請參閱[內容庫傳輸工具](../../support/content-library-transfer.md)。  
@@ -150,7 +152,7 @@ Configuration Manager 在下列案例中會使用管理中心網站上的內容�
 ![Configuration Manager 內容庫的圖表概觀](media/content-library-overview.png)
 
 > [!Tip]  
-> 使用 Configuration Manager 工具中的 [內容庫總管]  工具來瀏覽內容庫的內容。 您無法使用此工具來修改內容。 它提供呈現內容的見解，並允許進行驗證和重新發佈。 如需詳細資訊，請參閱[內容庫總管](../../support/content-library-explorer.md)。  
+> 使用 Configuration Manager 工具中的 [內容庫總管] 工具來瀏覽內容庫的內容。 您無法使用此工具來修改內容。 它提供呈現內容的見解，並允許進行驗證和重新發佈。 如需詳細資訊，請參閱[內容庫總管](../../support/content-library-explorer.md)。  
 
 ### <a name="package-library"></a>套件庫
 
@@ -176,7 +178,7 @@ Configuration Manager 在下列案例中會使用管理中心網站上的內容�
 
 當您選擇磁碟機時，請選取主要和次要磁碟機。 站台會將所有中繼資料儲存在主要磁碟機上。 它只會跨越檔案庫到次要磁碟機。 次要磁碟機的資料夾共用名稱包含磁碟機代號。 例如，如果 D: 和 E: 是內容庫的次要磁碟機，則共用名稱為 **SCCMContentLibD$** 和 **SCCMContentLibE$** 。
 
-如果您選擇 [自動]  選項，Configuration Manager 會選取具備最多可用空間的磁碟機作為其主要磁碟機。 它會將所有中繼資料儲存在此磁碟機上。 站台只會跨越檔案庫到次要磁碟機。
+如果您選擇 [自動] 選項，Configuration Manager 會選取具備最多可用空間的磁碟機作為其主要磁碟機。 它會將所有中繼資料儲存在此磁碟機上。 站台只會跨越檔案庫到次要磁碟機。
 
 您可以在設定期間指定保留空間量。 Configuration Manager 會在最佳可用的磁碟只剩下此保留空間量可用時，嘗試使用次要磁碟。 每次選取要使用的新磁碟機時，都會選取具備最多可用空間的磁碟機。
 

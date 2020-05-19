@@ -10,16 +10,16 @@ ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8362dbf5cf7264c19f683ce5a224f1e0ec348b36
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a7f7853b006d4ac8b11a30217d1b05b1eedd69dc
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700666"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268975"
 ---
 # <a name="prerequisites-for-installing-configuration-manager-sites"></a>安裝 Configuration Manager 站台的必要條件
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 開始站台安裝之前，請先了解安裝不同類型 Configuration Manager 站台的必要條件。
 
@@ -50,6 +50,9 @@ ms.locfileid: "81700666"
         > [!IMPORTANT]  
         > 當 Configuration Manager 安裝完成之後，站台伺服器電腦帳戶都必須保留 SQL Server 的 sysadmin 權限。 請不要從此帳戶移除 SQL sysadmin 權限。  
 
+    > [!NOTE]
+    > 如需安裝完成之後需要這些權限的詳細資訊，請參閱[提升的權限](../../../plan-design/hierarchy/accounts.md#elevated-permissions)。
+
 - 如果您正在安裝主要站台，則需要下列額外的權限：  
 
     - 位於您安裝初始管理點與發佈點之其他伺服器上的**系統管理員** (如果不在站台伺服器上)  
@@ -58,7 +61,7 @@ ms.locfileid: "81700666"
 
     - 裝載管理中心網站之伺服器上的**系統管理員**  
 
-    - Configuration Manager 內以角色為基礎的系統管理權限，相當於 [基礎結構系統管理員]  或 [系統高權限管理員]  安全性角色  
+    - Configuration Manager 內以角色為基礎的系統管理權限，相當於 [基礎結構系統管理員] 或 [系統高權限管理員] 安全性角色  
 
 - 使用正確的安裝來源檔案，並從該位置執行安裝程式。 如需用來安裝不同類型站台之正確來源檔案的相關資訊，請參閱[安裝不同類型站台的選項](prepare-to-install-sites.md#bkmk_options)。  
 
@@ -98,7 +101,7 @@ ms.locfileid: "81700666"
 
 裝載新管理中心網站之伺服器的電腦帳戶，必須是獨立主要站台伺服器的**系統管理員**群組成員。
 
-若要成功擴充獨立主要站台，新管理中心網站的電腦帳戶必須具有獨立主要站台的 [系統管理員]  權限。 這只有在站台擴充期間才需要這個做。 站台擴充完成之後，您可以從主要站台的使用者群組中移除該帳戶。  
+若要成功擴充獨立主要站台，新管理中心網站的電腦帳戶必須具有獨立主要站台的 [系統管理員] 權限。 這只有在站台擴充期間才需要這個做。 站台擴充完成之後，您可以從主要站台的使用者群組中移除該帳戶。  
 
 #### <a name="installation-account-permissions"></a>安裝帳戶權限
 
@@ -134,11 +137,11 @@ Configuration Manager 僅在階層的頂層站台支援這些角色。 擴充獨
 - [商務用 Microsoft Store](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 - [雲端管理閘道](../../../clients/manage/cmg/plan-cloud-management-gateway.md)
 
-在 1806 版和更新版本上，更新 Azure Active Directory 租用戶秘密金鑰。 如需詳細資訊，請參閱[更新秘密金鑰](../configure/azure-services-wizard.md#bkmk_renew)。
+最簡單的方法是更新 Azure Active Directory 租用戶祕密金鑰。 如需詳細資訊，請參閱[更新秘密金鑰](../configure/azure-services-wizard.md#bkmk_renew)。
 
 或者，移除後再重新建立與該服務的連線：
 
-1. 在 Configuration Manager 主控台中，刪除 [Azure 服務]  節點中的 Azure 服務。  
+1. 在 Configuration Manager 主控台中，刪除 [Azure 服務] 節點中的 Azure 服務。  
 
 2. 在 Azure 入口網站中，從 Azure Active Directory 租用戶節點上刪除已與服務建立關聯的租用戶。 這個動作也會刪除已與服務建立關聯的 Azure AD Web 應用程式。  
 
@@ -151,7 +154,7 @@ Configuration Manager 僅在階層的頂層站台支援這些角色。 擴充獨
 
 - 必須安裝所需的 Windows Server 角色、功能和 Windows 元件。 如需詳細資訊，請參閱[站台系統必要條件](../../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012secpreq)  
 
-- 在 Configuration Manager 主控台中設定安裝次要站台的系統管理員，必須具備以角色為基礎的系統管理權限，相當於 [基礎結構系統管理員]  或 [系統高權限管理員]  安全性角色。  
+- 在 Configuration Manager 主控台中設定安裝次要站台的系統管理員，必須具備以角色為基礎的系統管理權限，相當於 [基礎結構系統管理員] 或 [系統高權限管理員] 安全性角色。  
 
 - 父主要站台的電腦帳戶必須是次要站台伺服器上的**系統管理員**。  
 

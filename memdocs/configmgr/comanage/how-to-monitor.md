@@ -2,7 +2,7 @@
 title: 監視共同管理
 titleSuffix: Configuration Manager
 description: 使用共同管理儀表板來檢閱共同管理裝置的相關資訊。
-ms.date: 07/26/2019
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 64d34cef57a3d5f141093d2b099c0b352604be42
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e4516ca9baa7398322c204908c25248921a69d25
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688696"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268057"
 ---
 # <a name="how-to-monitor-co-management-in-configuration-manager"></a>如何在 Configuration Manager 中監視共同管理
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 啟用共同管理之後，您可以使用下列方法監視共同管理裝置：
 
@@ -33,7 +33,7 @@ ms.locfileid: "81688696"
 
 從 1802 版開始，檢視具有共同管理相關資訊的儀表板。 該儀表板可協助您檢閱在環境中共同受管理的機器。 圖形有助於識別可能需要注意的裝置。<!--1356648-->
 
-在 Configuration Manager 主控台中，前往 [監視]  工作區，然後選取 [共同管理]  節點。
+在 Configuration Manager 主控台中，前往 [監視] 工作區，然後選取 [共同管理] 節點。
 
 從 1810 版開始，共同管理儀表板已使用更多詳細資訊予以增強。 <!--1358980-->
 
@@ -109,7 +109,7 @@ ms.locfileid: "81688696"
 - 暫止的使用者登入  
 
     > [!Note]  
-    > 從 1906 版開始，若要降低處於此擱置狀態的裝置數目，新的共同管理裝置現在會根據其 Azure AD「裝置」  權杖自動註冊到 Microsoft Intune 服務。 不需要等待使用者登入裝置以啟動自動註冊。 若要支援此行為，裝置需要執行 Windows 10 1803 版或更新版本。
+    > 從 1906 版開始，若要降低處於此擱置狀態的裝置數目，新的共同管理裝置現在會根據其 Azure AD「裝置」權杖自動註冊到 Microsoft Intune 服務。 不需要等待使用者登入裝置以啟動自動註冊。 若要支援此行為，裝置需要執行 Windows 10 1803 版或更新版本。
     >
     > 如果裝置權杖失敗，則會透過使用者權杖回復為先前的行為。 請查看 **ComanagementHandler.log** 以取得下列項目的資訊：`Enrolling device with RegisterDeviceWithManagementUsingAADDeviceCredentials`
 
@@ -167,13 +167,13 @@ ms.locfileid: "81688696"
 
 ## <a name="deployment-policies"></a>部署原則
 
-[監視]  工作區的 [部署]  節點中會建立兩個原則。 一個用於試驗群組，另一個用於生產。 這些原則只會報告 Configuration Manager 已套用原則的裝置數目。 它們不會考慮在 Intune 中註冊了多少部裝置，這是共同受控裝置的需求。  
+[監視] 工作區的 [部署] 節點中會建立兩個原則。 一個用於試驗群組，另一個用於生產。 這些原則只會報告 Configuration Manager 已套用原則的裝置數目。 它們不會考慮在 Intune 中註冊了多少部裝置，這是共同受控裝置的需求。  
 
-生產原則 (CoMgmtSettingsProd) 會以 [所有系統]  集合為目標。 它具有能檢查 OS 類型和版本的適用性條件。 如果用戶端是伺服器 OS 或非 Windows 10，系統將不會套用該原則，且不會採取任何動作。
+生產原則 (CoMgmtSettingsProd) 會以 [所有系統] 集合為目標。 它具有能檢查 OS 類型和版本的適用性條件。 如果用戶端是伺服器 OS 或非 Windows 10，系統將不會套用該原則，且不會採取任何動作。
 
 ## <a name="wmi-device-data"></a>WMI 裝置資料
 
-查詢 **SMS_Client_ComanagementState** WMI 類別。 您可以在 Configuration Manager 中建立自訂集合，以協助判斷共同管理部署的狀態。 如需建立自訂集合的詳細資訊，請參閱[如何建立集合](../core/clients/manage/collections/create-collections.md)。
+在站台伺服器上的 **ROOT\SMS\site_&lt;SITECODE>** 命名空間中，查詢 **SMS_Client_ComanagementState** WMI 類別。 您可以在 Configuration Manager 中建立自訂集合，以協助判斷共同管理部署的狀態。 如需建立自訂集合的詳細資訊，請參閱[如何建立集合](../core/clients/manage/collections/create-collections.md)。
 
 WMI 類別中的可用欄位如下：  
 
@@ -185,4 +185,4 @@ WMI 類別中的可用欄位如下：
 
 - **ComgmtPolicyPresent**：指定用戶端上是否有 Configuration Manager 共同管理原則。 如果 **MDMEnrolled** 值是 **0**，則裝置不受共同管理，無論用戶端上是否有共同管理原則。  
 
-當 [MDMEnrolled]  欄位和 [ComgmtPolicyPresent]  欄位的值都是 **1** 時，裝置受共用管理。  
+當 [MDMEnrolled] 欄位和 [ComgmtPolicyPresent] 欄位的值都是 **1** 時，裝置受共用管理。  

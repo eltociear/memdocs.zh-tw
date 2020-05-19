@@ -2,7 +2,7 @@
 title: 2002 版有什麼新功能
 titleSuffix: Configuration Manager
 description: 取得 Configuration Manager 最新分支 2002 版所引進的變更與新功能詳細資料。
-ms.date: 04/01/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f760e70b1896700fa08bdb27c68794d2dec8c192
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1aca9058b0f095b7f25b345c15eed1446dcf61d2
+ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702306"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83381548"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager 最新分支 2002 版的新功能
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
-Configuration Manager 最新分支的更新 2002 可透過主控台內更新的方式取得。 在執行 1806 版或更新版本的站台上套用此更新。 <!-- baseline only statement:-->在安裝新站台時，也可以基準版本的形式取得。 本文摘要說明 Configuration Manager 2002 版的變更和新功能。
+Configuration Manager 最新分支的更新 2002 可透過主控台內更新的方式取得。 在執行 1810 版或更新版本的站台上套用此更新。 <!-- baseline only statement:-->在安裝新站台時，也可以基準版本的形式取得。 本文摘要說明 Configuration Manager 2002 版的變更和新功能。
 
 請一律檢閱適用於安裝此更新的最新檢查清單。 如需詳細資訊，請參閱[安裝更新 2002 的檢查清單](../../servers/manage/checklist-for-installing-update-2002.md)。 更新站台之後，也請檢閱[更新後的檢查清單](../../servers/manage/checklist-for-installing-update-2002.md#post-update-checklist)。
 
@@ -34,7 +34,7 @@ Configuration Manager 最新分支的更新 2002 可透過主控台內更新的�
 
 ### <a name="device-sync-and-device-actions"></a><a name="bkmk_attach"></a> 裝置同步及裝置動作
 <!--3555758-->
-Microsoft Endpoint Manager 是一個整合的解決方案，可用於管理您的所有裝置。 Microsoft 將 Configuration Manager 和 Intune 整合到稱為 **Microsoft 端點管理員系統管理中心**的單一主控台。 從這個版本開始，您可以將 Configuration Manager 裝置上傳至雲端服務，並從系統管理中心的 [裝置]  刀鋒視窗中採取動作。
+Microsoft Endpoint Manager 是一個整合的解決方案，可用於管理您的所有裝置。 Microsoft 將 Configuration Manager 和 Intune 整合到稱為 **Microsoft 端點管理員系統管理中心**的單一主控台。 從這個版本開始，您可以將 Configuration Manager 裝置上傳至雲端服務，並從系統管理中心的 [裝置] 刀鋒視窗中採取動作。
 
 如需詳細資訊，請參閱 [Microsoft 端點管理員租用戶附加](../../../tenant-attach/device-sync-actions.md)。
 
@@ -79,7 +79,7 @@ Microsoft Endpoint Manager 是一個整合的解決方案，可用於管理您�
 - 為整個站台啟用增強的 HTTP
 - 手動將 PKI 型憑證繫結至裝載 SMS 提供者角色的伺服器上 IIS
 
-從這個版本開始，系統管理服務會自動使用站台的自我簽署憑證。 這項變更有助於減少摩擦以更易於使用系統管理服務。 站台一律會產生此憑證。 [Use Configuration Manager-generated certificates for HTTP site systems] \(針對 HTTP 站台系統使用 Configuration Manager 產生的憑證\)  的增強 HTTP 站台設定，其僅控制站台系統是否使用此憑證。 現在系統管理服務會忽略此站台設定，因為此服務一律使用站台的憑證，即使目前沒有其他站台系統使用增強的 HTTP 也一樣。 您仍然可以使用 PKI 型的伺服器驗證憑證。
+從這個版本開始，系統管理服務會自動使用站台的自我簽署憑證。 這項變更有助於減少摩擦以更易於使用系統管理服務。 站台一律會產生此憑證。 [Use Configuration Manager-generated certificates for HTTP site systems] \(針對 HTTP 站台系統使用 Configuration Manager 產生的憑證\) 的增強 HTTP 站台設定，其僅控制站台系統是否使用此憑證。 現在系統管理服務會忽略此站台設定，因為此服務一律使用站台的憑證，即使目前沒有其他站台系統使用增強的 HTTP 也一樣。 您仍然可以使用 PKI 型的伺服器驗證憑證。
 
 如需詳細資訊，請參閱下列新文章：
 
@@ -190,13 +190,13 @@ Microsoft Endpoint Manager 是一個整合的解決方案，可用於管理您�
 在具有需求規則或適用性清單的物件上所支援 OS 版本清單中，已提供**所有 Windows 10 (ARM64)** 平台。
 
 > [!NOTE]
-> 如果您先前已選取最上層的 **Windows 10** 平台，則此動作會自動選取 [所有 Windows 10 (64 位元)]  和 [所有 Windows 10 (32位元)]  。 系統不會自動選取這個新平台。 如果想要新增 [所有 Windows 10 (ARM64)]  ，請在清單中手動選取該選項。
+> 如果您先前已選取最上層的 **Windows 10** 平台，則此動作會自動選取 [所有 Windows 10 (64 位元)] 和 [所有 Windows 10 (32位元)]。 系統不會自動選取這個新平台。 如果想要新增 [所有 Windows 10 (ARM64)]，請在清單中手動選取該選項。
 
 如需 Configuration Manager 支援 ARM64 裝置的詳細資訊，請參閱 [ARM64 上的 Windows 10](../configs/support-for-windows-10.md#bkmk_arm64)。
 
 ### <a name="track-configuration-item-remediations"></a>追蹤設定項目補救
 <!--4261411-->
-現在可根據設定項目合規性規則使用 [Track remediation history when supported] \(在支援時追蹤補救歷程記錄\)  。 啟用此選項時，任何針對設定項目在用戶端上發生的補救都會產生狀態訊息。 該歷程記錄會儲存於 Configuration Manager 資料庫中。
+現在可根據設定項目合規性規則使用 [Track remediation history when supported] \(在支援時追蹤補救歷程記錄\)。 啟用此選項時，任何針對設定項目在用戶端上發生的補救都會產生狀態訊息。 該歷程記錄會儲存於 Configuration Manager 資料庫中。
 
 [如何為 Configuration Manager 用戶端所管理的 Windows 桌上型電腦和伺服器電腦建立自訂設定項目](../../../compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md#bkmk_track)。
 
@@ -353,7 +353,7 @@ Configuration Manager 已擴展將裝置上線至 Microsoft Defender ATP 的支�
 
 <!--6521835-->
 
-為了協助對具有界限群組的裝置行為進行更完善疑難排解，您現在可以檢視特定裝置的界限群組。 在 [裝置]  節點中，或當顯示 [裝置集合]  的成員時，將新的 [界限群組]  資料行新增至清單檢視。
+為了協助對具有界限群組的裝置行為進行更完善疑難排解，您現在可以檢視特定裝置的界限群組。 在 [裝置] 節點中，或當顯示 [裝置集合] 的成員時，將新的 [界限群組] 資料行新增至清單檢視。
 
 如需詳細資訊，請參閱[界限群組](../../servers/deploy/configure/boundary-groups.md#bkmk_show-boundary)。
 
@@ -376,7 +376,7 @@ Configuration Manager 已擴展將裝置上線至 Microsoft Defender ATP 的支�
 
 <!--5891241-->
 
-類似於舊版的改善功能，您現在可以從 [設定項目]  和 [設定基準]  節點使用 [所有子資料夾]  搜尋選項。
+類似於舊版的改善功能，您現在可以從 [設定項目] 和 [設定基準] 節點使用 [所有子資料夾] 搜尋選項。
 
 ## <a name="tools"></a><a name="bkmk_tools"></a> 工具
 
@@ -411,9 +411,9 @@ OneTrace 現在支援可自訂的記錄群組，與支援中心的功能類似�
 
 如需管理服務 REST API 變更的詳細資訊，請參閱[管理服務版本資訊](../../../develop/adminservice/release-notes.md#bkmk_2002)。
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/nnnnn).
+除了新功能之外，此版本也包含錯誤修正等其他變更。 如需詳細資訊，請參閱 [Configuration Manager 最新分支 2002 版中變更的摘要](https://support.microsoft.com/help/4556203) \(機器翻譯\)。
 
+<!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 
 -->
@@ -433,8 +433,9 @@ The following additional hotfixes are available to address specific issues:
 
 ## <a name="next-steps"></a>後續步驟
 
-目前，會針對早期更新通道發行 2002 版。 若要安裝此更新，您必須選擇加入。 如需詳細資訊，請參閱[早期更新通道](../../servers/manage/checklist-for-installing-update-2002.md#early-update-ring)。
-<!-- As of December 20, 2019, version 2002 is globally available for all customers to install. -->
+<!-- At this time, version 2002 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2002.md#early-update-ring). -->
+
+從 2020 年 5 月 11 日起，2002 版可供所有客戶安裝。
 
 當準備安裝此版本時，請參閱[安裝 Configuration Manager 的更新](../../servers/manage/updates.md)，以及[安裝更新 2002 的檢查清單](../../servers/manage/checklist-for-installing-update-2002.md)。
 
