@@ -53,7 +53,7 @@ ms.locfileid: "80085804"
 5. 鍵入名稱或電子郵件地址來選取使用者。 按一下 [選取]  。 在 [疑難排解] 窗格中，會顯示使用者的疑難排解資訊。 下表說明該資訊。
 
 > [!Note]  
-> 您也可以將瀏覽器指向  [來存取 [疑難排解]https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting) 窗格。
+> 您也可以將瀏覽器指向 [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting)來存取 [疑難排解] 窗格。
 
 ## <a name="areas-of-troubleshooting-dashboard"></a>疑難排解儀表板的區域
 

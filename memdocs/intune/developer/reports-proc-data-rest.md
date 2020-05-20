@@ -45,7 +45,7 @@ ms.locfileid: "79360024"
 2. 選取 [新增應用程式註冊]  。
 3. 鍵入應用程式詳細資料。
     1. 在 [名稱]  中，鍵入易記名稱 (例如 Intune 資料倉儲用戶端)。
-    2. 在 [應用程式類型]  中，選取 [原生]  。
+    2. 在 [應用程式類型] 中，選取 [原生]。
     3. 在 [登入 URL]  中，鍵入 URL。 [登入 URL] 將取決於特定案例；不過，如果您計劃使用 Postman，請鍵入 `https://www.getpostman.com/oauth2/callback`。 向 Azure AD 進行驗證時，您將使用回呼進行用戶端驗證步驟。
 4. 選取 [建立]  。
 
@@ -58,8 +58,8 @@ ms.locfileid: "79360024"
 您現在已在 Azure 中定義應用程式。 將存取權從原生應用程式授與 Microsoft Intune API。
 
 1. 選取原生應用程式。 您已將應用程式命名為 **Intune 資料倉儲用戶端**這類名稱。
-2. 在 [設定]  窗格選取 [必要權限] 
-3. 在 [必要權限]  窗格中選取 [新增]  。
+2. 在 [設定] 窗格選取 [必要權限]
+3. 在 [必要權限] 窗格中選取 [新增]。
 4. 選取 [選取 API]  。
 5. 搜尋 Web 應用程式名稱。 它會命名為 **Microsoft Intune API**。
 6. 選取清單中的應用程式。
@@ -96,7 +96,7 @@ ms.locfileid: "79360024"
 您也需要端點。 若要取得資料倉儲端點，您需要自訂摘要 URL。 您可以從 [資料倉儲] 窗格取得 OData 端點。
 
 1. 登入 [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)。
-3. 選取 [Microsoft Intune - 概觀]  刀鋒視窗右側 [其他工作]  下方的 [資料倉儲] 連結，以開啟 [Intune 資料倉儲]  窗格。
+3. 選取 [Microsoft Intune - 概觀] 刀鋒視窗右側 [其他工作] 下方的 [資料倉儲] 連結，以開啟 [Intune 資料倉儲] 窗格。
 4. 複製 [使用協力廠商報表服務]  之下的自訂摘要 URL。 這應該看起來像這樣：`https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 
 端點會遵循下列格式：`https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`
@@ -116,7 +116,7 @@ ms.locfileid: "79360024"
 3. 將端點 URL 貼入位址中。 它應該看起來像這樣：  
 
     `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
-4. 選擇 [授權]  索引標籤，然後從 [類型]  清單中選取 [OAuth 2.0]  。
+4. 選擇 [授權] 索引標籤，然後從 [類型] 清單中選取 [OAuth 2.0]。
 5. 選取 [取得新存取權杖]  。
 6. 確認您已經在 Azure 中將回呼 URL 新增至應用程式。 回呼 URL 是 `https://www.getpostman.com/oauth2/callback`。
 7. 在 [權杖名稱]  中，鍵入 [持有人]。
@@ -127,7 +127,7 @@ ms.locfileid: "79360024"
 
      `https://login.microsoftonline.com/common/oauth2/token`
 
-10. 從您已在 Azure 中建立並命名為  **的原生應用程式中，新增 [用戶端識別碼]** `Intune Data Warehouse Client`。 它應該看起來像這樣：  
+10. 從您已在 Azure 中建立並命名為 `Intune Data Warehouse Client` 的原生應用程式中，新增 [用戶端識別碼]。 它應該看起來像這樣：  
 
      `88C8527B-59CB-4679-A9C8-324941748BB4`
 

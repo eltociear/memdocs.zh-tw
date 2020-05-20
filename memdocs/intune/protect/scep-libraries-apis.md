@@ -100,7 +100,7 @@ SCEP 管理解決方案也包含報告。 系統管理員可以取得有關 SCEP
 
 ### <a name="java-library-api"></a>Java 程式庫 API
 
-Java 程式庫會實作為 Maven 專案，它會在建立時提取其相依性。 API 由 `com.microsoft.intune.scepvalidation` 類別實作在 `IntuneScepServiceClient` 命名空間下。
+Java 程式庫會實作為 Maven 專案，它會在建立時提取其相依性。 API 由 `IntuneScepServiceClient` 類別實作在 `com.microsoft.intune.scepvalidation` 命名空間下。
 
 #### <a name="intunescepserviceclient-class"></a>IntuneScepServiceClient 類別
 

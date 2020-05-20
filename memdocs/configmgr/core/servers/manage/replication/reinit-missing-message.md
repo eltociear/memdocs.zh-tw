@@ -72,7 +72,7 @@ INNER JOIN RCM_DrsInitializationTracking it ON rd.ReplicationGroup = it.Replicat
 WHERE it.RequestTrackingGUID=@trackingGuid
 ```
 
-然後搭配下列值使用 `InitializeData` WMI 類別上的 `SMS_ReplicationGroup` 方法：
+然後搭配下列值使用 `SMS_ReplicationGroup` WMI 類別上的 `InitializeData` 方法：
 
 - ReplicationGroupID：來自上述 SQL 查詢
 - SiteCode1：父站台

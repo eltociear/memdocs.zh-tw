@@ -70,7 +70,7 @@ URL 包含下列元素：
 
 `DateKey` 範圍篩選條件可用來針對具有 `dateKey` 作為索引鍵屬性的部分集合，限制要下載的資料量。 `DateKey` 篩選條件可用來藉由提供下列 `$filter` 查詢參數，將服務效能最佳化：
 
-1. 在 `DateKey` 中的單獨 `$filter`，支援 `lt/le/eq/ge/gt` 運算子和使用邏輯運算子 `and` 聯結，可以對應到開始日期和/或結束日期。
+1. 在 `$filter` 中的單獨 `DateKey`，支援 `lt/le/eq/ge/gt` 運算子和使用邏輯運算子 `and` 聯結，可以對應到開始日期和/或結束日期。
 2. `maxhistorydays` 提供作為自訂查詢選項。<br>
 
 ## <a name="filter-examples"></a>篩選條件範例

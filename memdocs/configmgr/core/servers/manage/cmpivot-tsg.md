@@ -95,7 +95,7 @@ Put message succeeded for message id 22f00adf-181e-4bad-b35e-d18912f39f89
 CRelayMsgMgrHandler::HandleMessage(): ExecuteTask() succeeded
 </code></pre>
 
-在 [ 上啟用](../../plan-design/hierarchy/about-log-files.md#bkmk_logoptions)詳細資訊記錄`SMS_MESSAGE_PROCESSING_ENGINE.log`時，會處理用戶端結果。 使用您在 `MP_RelayMsgMgr.log` 中找到的訊息識別碼。 處理記錄項目類似下列範例：
+在 `SMS_MESSAGE_PROCESSING_ENGINE.log` 上啟用[詳細資訊記錄](../../plan-design/hierarchy/about-log-files.md#bkmk_logoptions)時，會處理用戶端結果。 使用您在 `MP_RelayMsgMgr.log` 中找到的訊息識別碼。 處理記錄項目類似下列範例：
 
 <pre><code lang="Log">Processing 2 messages with type Instant and IDs <b>22f00adf-181e-4bad-b35e-d18912f39f89[19]</b>, 434d80ae-09d4-4d84-aebf-28a4a29a9852[20]...
 Processed 2 messages with type Instant. Failed to process 0 messages. All message IDs <b>22f00adf-181e-4bad-b35e-d18912f39f89[19]</b>, 434d80ae-09d4-4d84-aebf-28a4a29a9852[20]
