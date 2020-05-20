@@ -58,7 +58,7 @@ ms.locfileid: "79345555"
 
 Intune SDK 依賴 [Active Directory 驗證程式庫 (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) \(部分機器翻譯\) 進行其[驗證](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) \(部分機器翻譯\) 與條件式啟動情節，在這些情況下，必須為應用程式設定 [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)。 
 
-如果您的應用程式已設定為使用 ADAL 或 MSAL，且具有自己的自訂用戶端識別碼來用以向 Azure Active Directory 進行驗證，則請務必遵循步驟為 Intune 行動應用程式管理 (MAM) 服務提供您的 Xamarin 應用程式權限。 使用[開始使用 Intune SDK 指南](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)的＜[將您的應用程式存取權授與 Intune 應用程式保護服務](app-sdk-get-started.md)＞一節中的指示。
+如果您的應用程式已設定為使用 ADAL 或 MSAL，且具有自己的自訂用戶端識別碼來用以向 Azure Active Directory 進行驗證，則請務必遵循步驟為 Intune 行動應用程式管理 (MAM) 服務提供您的 Xamarin 應用程式權限。 使用[開始使用 Intune SDK 指南](app-sdk-get-started.md)的＜[將您的應用程式存取權授與 Intune 應用程式保護服務](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)＞一節中的指示。
 
 ## <a name="security-considerations"></a>安全性考量
 

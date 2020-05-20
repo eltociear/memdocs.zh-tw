@@ -38,7 +38,7 @@ Intune 裝置合規性政策指定裝置必須符合的規則和設定，才能�
 
 ## <a name="sign-in-to-intune"></a>登入 Intune
 
-以[全域管理員](https://go.microsoft.com/fwlink/?linkid=2109431)或 Intune [服務管理員](../fundamentals/users-add.md#types-of-administrators)身分登入 [Microsoft 端點管理員系統管理中心](../fundamentals/users-add.md#types-of-administrators)。
+以[全域管理員](../fundamentals/users-add.md#types-of-administrators)或 Intune [服務管理員](../fundamentals/users-add.md#types-of-administrators)身分登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 ## <a name="create-a-device-compliance-policy"></a>建立裝置相容性原則
 

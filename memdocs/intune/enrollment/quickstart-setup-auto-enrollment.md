@@ -58,7 +58,7 @@ ms.locfileid: "79344970"
 
     ![從清單中選擇 Microsoft Intune](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-03.png)
 
-4. 從 [MDM 使用者範圍]  選取 [部分]  ，使用 MAM 自動註冊來管理您員工 Windows 裝置上的企業資料。 將會針對已加入 AAD 的裝置和自備裝置案例設定 MDM 自動註冊。
+4. 從 [MDM 使用者範圍] 選取 [部分]，使用 MAM 自動註冊來管理您員工 Windows 裝置上的企業資料。 將會針對已加入 AAD 的裝置和自備裝置案例設定 MDM 自動註冊。
 
     ![從 [設定] 清單選取 [部分]](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-04.png)
 
@@ -66,7 +66,7 @@ ms.locfileid: "79344970"
 
     ![選取要註冊的群組](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-05.png)
 
-6. 從 [MAM 使用者範圍]  選取 [部分]  來管理您員工裝置上的資料。
+6. 從 [MAM 使用者範圍] 選取 [部分] 來管理您員工裝置上的資料。
 
     ![選取要註冊的群組](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-06.png)
 

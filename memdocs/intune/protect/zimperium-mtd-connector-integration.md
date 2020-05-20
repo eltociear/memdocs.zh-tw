@@ -61,7 +61,7 @@ Zimperium 應用程式授權程序如下：
 
 - 允許 Zimperium 應用程式使用 Azure AD SSO 登入。
 
-如需同意與 Azure Active Directory 應用程式的詳細資訊，請參閱 Azure Active Directory 文章「Azure Active Directory v2.0 端點中的權限及同意」  中的[向目錄管理員要求權限](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin)。
+如需同意與 Azure Active Directory 應用程式的詳細資訊，請參閱 Azure Active Directory 文章「Azure Active Directory v2.0 端點中的權限及同意」中的[向目錄管理員要求權限](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin)。
 
 
 ## <a name="to-set-up-zimperium-integration"></a>設定 Zimperium 整合
@@ -72,7 +72,7 @@ Zimperium 應用程式授權程序如下：
 
 3. 選擇 [MDM設定]  索引標籤。
 
-4. 選擇 [新增 MDM]  ，然後從 [MDM 提供者]  清單中選取 [Microsoft Intune]  。
+4. 選擇 [新增 MDM]，然後從 [MDM 提供者] 清單中選取 [Microsoft Intune]。
 
 5. 您將 Microsoft Intune 設定為 MDM 服務後，隨即快顯 [Microsoft Intune 設定]  視窗，請針對每個選項選擇 [新增 Azure Active Directory]  ：**Zimperium zConsole**、**zIPS iOS 和 Android 應用程式**授權 Zimperium 透過 Azure AD 單一登入與 Intune 和 Azure AD 進行通訊。
 

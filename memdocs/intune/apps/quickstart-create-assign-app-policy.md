@@ -37,7 +37,7 @@ ms.locfileid: "79343852"
 
 ## <a name="sign-in-to-intune"></a>登入 Intune
 
-請以[全域管理員或 Intune 服務管理員](https://aka.ms/intuneportal)身分登入 [Intune](../fundamentals/users-add.md#types-of-administrators)。 如果您已建立 Intune 試用版訂閱，則用來建立訂閱的帳戶是全域管理員。
+請以[全域管理員或 Intune 服務管理員](../fundamentals/users-add.md#types-of-administrators)身分登入 [Intune](https://aka.ms/intuneportal)。 如果您已建立 Intune 試用版訂閱，則用來建立訂閱的帳戶是全域管理員。
 
 ## <a name="create-an-app-protection-policy"></a>建立應用程式保護原則
 

@@ -65,7 +65,7 @@ ms.locfileid: "80324592"
     ![在指派應用程式時包含應用程式指派](./media/apps-inc-exl-assignments/apps-inc-exl-01.png)
 
 5. 選取 [新增群組]  新增獲指派應用程式的使用者群組。 
-6. 從 [新增群組]  窗格中，從可用的指派類型中選取 [指派類型]  。
+6. 從 [新增群組] 窗格中，從可用的指派類型中選取 [指派類型]。
 7. 選取 [無論註冊與否均可使用]  為指派類型。
 
     ![Intune 應用程式指派 - 新增群組](./media/apps-inc-exl-assignments/apps-inc-exl-02.png)

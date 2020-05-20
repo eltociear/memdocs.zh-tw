@@ -42,7 +42,7 @@ ms.locfileid: "80359404"
 
 ## <a name="what-you-need-to-know"></a>您必須知道的事項
 
-- 使用 **Apple Configurator** 建立組態設定檔時，請確定您所匯出的設定與裝置上的 iOS/iPadOS 版本相容。 如需解決不相容設定的資訊，請在 **Apple Developer** (Apple 開發人員) 網站上搜尋 **Configuration Profile Reference** (組態設定檔參考) 和 [Mobile Device Management Protocol Reference](https://developer.apple.com/) (行動裝置管理通訊協定參考)。
+- 使用 **Apple Configurator** 建立組態設定檔時，請確定您所匯出的設定與裝置上的 iOS/iPadOS 版本相容。 如需解決不相容設定的資訊，請在 [Apple Developer](https://developer.apple.com/) (Apple 開發人員) 網站上搜尋 **Configuration Profile Reference** (組態設定檔參考) 和 **Mobile Device Management Protocol Reference** (行動裝置管理通訊協定參考)。
 
 - 使用 **Apple Profile Manager** 時，請確定：
 
@@ -52,7 +52,7 @@ ms.locfileid: "80359404"
 
     下載並儲存此檔案。 您將在 Intune 設定檔中輸入此檔案。
 
-  - 確定您從 Apple Profile Manager 匯出的設定與裝置上的 iOS/iPadOS 版本相容。 如需解決不相容設定的資訊，請在 **Apple Developer** (Apple 開發人員) 網站上搜尋 **Configuration Profile Reference** (組態設定檔參考) 和 [Mobile Device Management Protocol Reference](https://developer.apple.com/) (行動裝置管理通訊協定參考)。
+  - 確定您從 Apple Profile Manager 匯出的設定與裝置上的 iOS/iPadOS 版本相容。 如需解決不相容設定的資訊，請在 [Apple Developer](https://developer.apple.com/) (Apple 開發人員) 網站上搜尋 **Configuration Profile Reference** (組態設定檔參考) 和 **Mobile Device Management Protocol Reference** (行動裝置管理通訊協定參考)。
 
 ## <a name="custom-configuration-profile-settings"></a>自訂組態設定檔設定
 

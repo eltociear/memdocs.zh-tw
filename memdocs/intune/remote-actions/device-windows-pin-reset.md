@@ -55,7 +55,7 @@ ms.locfileid: "80326265"
 
 **使用裝置原則** - `./Device/Vendor/MSFT/PassportForWork/*tenant ID*/Policies/EnablePinRecovery`
 
-以您 Azure AD 目錄的識別碼取代*租用戶識別碼*，這會列在 **Azure 入口網站**中 Azure Active Directory 的[屬性](https://portal.azure.com)裡。
+以您 Azure AD 目錄的識別碼取代*租用戶識別碼*，這會列在 [Azure 入口網站](https://portal.azure.com)中 Azure Active Directory 的**屬性**裡。
 
 針對此 CSP 將值設定為 **True**。
 

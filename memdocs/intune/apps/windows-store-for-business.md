@@ -61,7 +61,7 @@ ms.locfileid: "80323390"
 
 1. 確定您登入[商務用 Microsoft Store](https://www.microsoft.com/business-store) 的租用戶帳戶，與您用來登入 Intune 的帳戶相同。
 2. 在商務用市集中，選擇 [管理]  索引標籤，選取 [設定]  ，然後選擇 [散發]  索引標籤。
-3. 如果您未特別將 **Microsoft Intune** 設定為行動裝置管理工具，請選擇 [新增管理工具]  以新增 **Microsoft Intune**。 如果您未啟用 **Microsoft Intune** 作為行動裝置管理工具，請按一下 [Microsoft Intune]  旁邊的 [啟用]  。 請注意，您應該啟用 [Microsoft Intune]  ，而不是 [Microsoft Intune 註冊]  。
+3. 如果您未特別將 **Microsoft Intune** 設定為行動裝置管理工具，請選擇 [新增管理工具]  以新增 **Microsoft Intune**。 如果您未啟用 **Microsoft Intune** 作為行動裝置管理工具，請按一下 [Microsoft Intune] 旁邊的 [啟用]。 請注意，您應該啟用 [Microsoft Intune]  ，而不是 [Microsoft Intune 註冊]  。
 
 > [!NOTE]
 > 您先前可能只建立了某個用來指派應用程式的管理工具與商務用 Microsoft 網上商店的關聯。 現在，您可以建立多個管理工具 (如 Intune 和 Configuration Manager) 與市集之間的關聯。

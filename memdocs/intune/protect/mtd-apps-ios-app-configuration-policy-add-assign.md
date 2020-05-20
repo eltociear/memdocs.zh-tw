@@ -47,7 +47,7 @@ ms.locfileid: "80084852"
 
 針對 iOS 裝置，您需要有 [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to)，讓使用者可以透過 Azure AD 檢查其身分識別。 此外，您需要 iOS 應用程式設定原則來設定要搭配 Intune 使用的 MTD iOS 應用程式。
 
-請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 設定 [應用程式資訊]  時，請使用此 [Microsoft Authenticator 應用程式市集 URL](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8)。
+請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 設定 [應用程式資訊] 時，請使用此 [Microsoft Authenticator 應用程式市集 URL](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8)。
 
 ## <a name="configure-mtd-applications"></a>設定 MTD 應用程式
 
@@ -65,10 +65,10 @@ ms.locfileid: "80084852"
 ### <a name="configure-lookout-for-work-apps"></a>設定 Lookout for Work 應用程式
 
 - **Android**
-  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 針對 [Appstore URL]  ，請使用 [Lookout for Work Google 應用程式市集 URL](https://play.google.com/store/apps/details?id=com.lookout.enterprise)。
+  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 針對 [Appstore URL]，請使用 [Lookout for Work Google 應用程式市集 URL](https://play.google.com/store/apps/details?id=com.lookout.enterprise)。
 
 - **iOS**
-  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 針對 [Appstore URL]  ，請使用 [Lookout for Work iOS 應用程式市集 URL](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8)。
+  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 針對 [Appstore URL]，請使用 [Lookout for Work iOS 應用程式市集 URL](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8)。
 
 - **Apple Store 之外的 Lookout for Work 應用程式**
   - 您必須重新簽署 iOS 版的 Lookout for Work 應用程式。 Lookout 會將其 Lookout for Work iOS 應用程式散發到 iOS App Store 之外。 發佈應用程式之前，您必須使用 iOS 企業開發人員憑證重新簽署應用程式。  
@@ -96,58 +96,58 @@ ms.locfileid: "80084852"
 ### <a name="configure-symantec-endpoint-protection-mobile-apps"></a>設定 Symantec Endpoint Protection Mobile 應用程式
 
 - **Android**
-  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 針對 [Appstore URL]  ，請使用 [SEP Mobile 應用程式市集 URL](https://play.google.com/store/apps/details?id=com.skycure.skycure)。  對於 [最基本的作業系統]  ，選取 [Android 4.0 (Ice Cream Sandwich)]  。
+  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 針對 [Appstore URL]，請使用 [SEP Mobile 應用程式市集 URL](https://play.google.com/store/apps/details?id=com.skycure.skycure)。  對於 [最基本的作業系統]  ，選取 [Android 4.0 (Ice Cream Sandwich)]  。
 
 - **iOS**
-  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 針對 [Appstore URL]  ，請使用 [SEP Mobile 應用程式市集 URL](https://itunes.apple.com/us/app/skycure/id695620821?mt=8)。
+  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 針對 [Appstore URL]，請使用 [SEP Mobile 應用程式市集 URL](https://itunes.apple.com/us/app/skycure/id695620821?mt=8)。
 
 ### <a name="configure-check-point-sandblast-mobile-apps"></a>設定 Check Point SandBlast Mobile 應用程式
 
 - **Android**  
-  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 針對 [Appstore URL]  請使用 [Check Point SandBlast Mobile 應用程式市集 URL](https://play.google.com/store/apps/details?id=com.lacoon.security.fox)。
+  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 針對 [Appstore URL]，請使用 [Check Point SandBlast Mobile 應用程式市集 URL](https://play.google.com/store/apps/details?id=com.lacoon.security.fox)。
 
 - **iOS**
-  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 針對 [Appstore URL]  ，請使用 [Check Point SandBlast Mobile 應用程式市集 URL](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797)。  
+  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 針對 [Appstore URL]，請使用 [Check Point SandBlast Mobile 應用程式市集 URL](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797)。  
 
 ### <a name="configure-zimperium-apps"></a>設定 Zimperium 應用程式
 
 - **Android**
-  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 針對 [Appstore URL]  請使用 [Google Play 的 Zimperium URL](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en)。
+  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 針對 [Appstore URL]請使用 [Google Play 的 Zimperium URL](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en)。
 
 - **iOS**
-  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 針對 [Appstore URL]  ，請使用 [Zimperium 應用程式市集 URL](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8)。  
+  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 針對 [Appstore URL]請使用 [Google Play 的 Zimperium URL](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8)。  
  
 ### <a name="configure-pradeo-apps"></a>設定 Pradeo 應用程式
 
 - **Android**
-  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 針對 [Appstore URL]  ，請使用 [Pradeo 應用程式市集 URL](https://play.google.com/store/apps/details?id=net.pradeo.service&hl=en_US)。
+  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 針對 [Appstore URL]，請使用 [Pradeo 應用程式市集 URL](https://play.google.com/store/apps/details?id=net.pradeo.service&hl=en_US)。
 
 - **iOS**
-  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 針對 [Appstore URL]  ，請使用 [Pradeo 應用程式市集 URL](https://itunes.apple.com/us/app/pradeo-agent/id547979360?mt=8)。
+  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 針對 [Appstore URL]，請使用 [Pradeo 應用程式市集 URL](https://itunes.apple.com/us/app/pradeo-agent/id547979360?mt=8)。
 
 ### <a name="configure-better-mobile-apps"></a>設定 Better Mobile 應用程式
 
 - **Android**
-  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 針對 [Appstore URL]  ，請使用 [Active Shield 應用程式市集 URL](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise)。
+  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 針對 [Appstore URL]，請使用 [Active Shield 應用程式市集 URL](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise)。
 
 - **iOS**
-  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 針對 [Appstore URL]  ，請使用 [Active Shield 應用程式市集 URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4)。
+  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 針對 [Appstore URL]，請使用 [ 應用程式市集 URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4)。
 
 ### <a name="configure-sophos-apps"></a>設定 Sophos 應用程式
 
 - **Android**
-  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 針對 [Appstore URL]  ，請使用 [Sophos 應用程式市集 URL](https://play.google.com/store/apps/details?id=com.sophos.smsec)。
+  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 針對 [Appstore URL]，請使用 [Sophos 應用程式市集 URL](https://play.google.com/store/apps/details?id=com.sophos.smsec)。
 
 - **iOS**
-  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 針對 [Appstore URL]  ，請使用 [ 應用程式市集 URL](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8)。
+  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 針對 [Appstore URL]，請使用 [ 應用程式市集 URL](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8)。
 
 ### <a name="configure-wandera-apps"></a>設定 Wandera 應用程式
 
 - **Android**
-  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 針對 [Appstore URL]  ，請使用 [Wandera Mobile 應用程式市集 URL](https://play.google.com/store/apps/details?id=com.wandera.android)。 針對 [最基本的作業系統]  ，選取 [Android 5.0]  。
+  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 針對 [Appstore URL]，請使用 [Wandera Mobile 應用程式市集 URL](https://play.google.com/store/apps/details?id=com.wandera.android)。 針對 [最基本的作業系統]  ，選取 [Android 5.0]  。
 
 - **iOS**
-  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 針對 [Appstore URL]  ，請使用 [Wandera Mobile 應用程式市集 URL](https://itunes.apple.com/app/wandera/id605469330)。
+  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 針對 [Appstore URL]，請使用 [Wandera Mobile 應用程式市集 URL](https://itunes.apple.com/app/wandera/id605469330)。
 
 ## <a name="configure-your-mtd-apps-with-an-ios-app-configuration-policy"></a>使用 iOS 應用程式設定原則來設定您的 MTD 應用程式
 

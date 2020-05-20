@@ -40,7 +40,7 @@ ms.locfileid: "80438751"
 1. 使用您的系統管理員帳戶，登入[商務用 Microsoft Store](https://www.microsoft.com/business-store)。
 2. 選取靠近視窗頂端的 [管理]  索引標籤。
 3. 在左窗格中，選取 [設定]  。
-4. 在 [購物體驗]  下方，將 [顯示離線應用程式]  設定為 [開啟]  。  
+4. 在 [購物體驗] 下方，將 [顯示離線應用程式] 設定為 [開啟]。  
     隨即顯示離線授權應用程式。
 
 ## <a name="get-the-offline-company-portal-app"></a>取得離線公司入口網站應用程式

@@ -568,7 +568,7 @@ catch {
 
 若要邀請使用者成為您租用戶的來賓：
 
-1. 從 [快速工作]  面板中選擇 [新增來賓使用者]  。
+1. 從 [快速工作] 面板中選擇 [新增來賓使用者]。
 
     <img src="../media/azure-ad-add-guest.png" width="448" height="138" alt="Use Quick Tasks to add a guest user" />
 

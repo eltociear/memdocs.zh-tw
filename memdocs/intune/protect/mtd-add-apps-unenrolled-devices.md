@@ -46,7 +46,7 @@ ms.locfileid: "79339250"
 
 使用 Intune 應用程式防護原則搭配 Mobile Threat Defense 時，Intune 會引導使用者安裝、登入，並向 Microsoft Authenticator (iOS) 註冊其裝置。
 
-不過，如果您想要透過 Intune 公司入口網站將應用程式提供給使用者，請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 當您完成＜設定應用程式資訊＞  一節時，請使用此 [Microsoft Authenticator - iOS App Store URL](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8)。 在最後一個步驟中，請記得[使用 Intune 將應用程式指派給群組](../apps/apps-deploy.md)。
+不過，如果您想要透過 Intune 公司入口網站將應用程式提供給使用者，請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 當您完成＜設定應用程式資訊＞一節時，請使用此 [Microsoft Authenticator - iOS App Store URL](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8)。 在最後一個步驟中，請記得[使用 Intune 將應用程式指派給群組](../apps/apps-deploy.md)。
 
 > [!NOTE]
 > 針對 iOS 裝置，您需要有 [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to)，讓使用者可以透過 Azure AD 檢查其身分識別。 Intune 公司入口網站可作為 Android 裝置上的代理程式，讓使用者可以透過 Azure AD 檢查其身分識別。
@@ -63,10 +63,10 @@ ms.locfileid: "79339250"
 ### <a name="making-lookout-for-work-available-to-end-users"></a>將 Lookout for Work 提供給使用者
 
 - **Android**  
-  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 當您完成＜設定應用程式資訊＞  一節時，請使用此 [Lookout for Work - Play Store URL](https://play.google.com/store/apps/details?id=com.lookout.enterprise)。
+  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 當您完成＜設定應用程式資訊＞一節時，請使用此 [Lookout for Work - Play Store URL](https://play.google.com/store/apps/details?id=com.lookout.enterprise)。
 
 - **iOS**
-  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 當您完成＜設定應用程式資訊＞  一節時，請使用此 [Lookout for Work - iOS App Store URL](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8)。
+  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 當您完成＜設定應用程式資訊＞一節時，請使用此 [Lookout for Work - iOS App Store URL](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8)。
 
 <!-- ### Making Symantec Endpoint Protection Mobile available to end users
 - **Android**
@@ -85,9 +85,9 @@ ms.locfileid: "79339250"
 ### <a name="making-zimperium-available-to-end-users"></a>將 Zimperium 提供給使用者
 
 - **Android**
-  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 當您完成＜設定應用程式資訊＞  一節時，請使用此 [Zimperium - Play Store URL](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en)。
+  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 當您完成＜設定應用程式資訊＞一節時，請使用此 [Zimperium - Play Store URL](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en)。
 - **iOS**
-  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 當您完成＜設定應用程式資訊＞  一節時，請使用此 [Zimperium - App Store URL](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8)。
+  - 請參閱[將 iOS 市集應用程式新增至 Microsoft Intune](../apps/store-apps-ios.md) 的指示。 當您完成＜設定應用程式資訊＞一節時，請使用此 [Zimperium - App Store URL](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8)。
 
 <!-- ### Making Pradeo available to end users
 - **Android**
@@ -99,7 +99,7 @@ ms.locfileid: "79339250"
 ### <a name="making-better-mobile-available-to-end-users"></a>將 Better Mobile 提供給使用者
 
 - **Android**
-  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 當您完成＜設定應用程式資訊＞  一節時，請使用此 [Active Shield - Play Store URL](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise)。
+  - 請參閱[將 Android 市集應用程式新增至 Microsoft Intune](../apps/store-apps-android.md) 的指示。 當您完成＜設定應用程式資訊＞一節時，請使用此 [Active Shield - Play Store URL](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise)。
 
 <!-- - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield - App Store URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) when completing the **Configure app information** section. -->

@@ -53,7 +53,7 @@ ms.locfileid: "79359881"
 
 Power BI [Intune 合規性 (資料倉儲)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) 應用程式包含您租用戶的資訊，以及一組根據資料倉儲資料模型預先建置的報表。
 
-1. 請瀏覽至 [Intune 合規性 (資料倉儲)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) 應用程式的 [AppSource]  頁面來開始安裝程序。
+1. 請瀏覽至 [Intune 合規性 (資料倉儲)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) 應用程式的 [AppSource] 頁面來開始安裝程序。
 2. 按一下 [立即取得]  按鈕，然後按一下 [繼續]  。
 3. 當收到提示要求安裝 Power BI 應用程式時，請按一下 [安裝]  。
 4. 安裝完成之後，請按一下 [Intune Compliance (Data Warehouse)] \(Intune 合規性 (資料倉儲)\)  應用程式磚。
@@ -76,7 +76,7 @@ Power BI [Intune 合規性 (資料倉儲)](https://aka.ms/intune/datawarehouseap
 使用向 Azure AD 驗證的用戶端，OData URL 會連線至資料倉儲 API 中向報告用戶端公開資料模型的 RESTful 端點。 請遵循這些指示，使用 Power BI Desktop 連線並建立您自己的報表。 您不是只能使用 Power BI Desktop，但可以搭配使用最愛的分析工具與 OData URL，但前提是用戶端支援 OAUTH2.0 驗證和 OData 4.0 版標準。
 
 1. 登入 [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)。
-2. 在 [概觀] 刀鋒視窗右側的 [其他工作]  區段中，按一下 [設定 Intune 資料倉儲]  。 將會顯示 [Intune 資料倉儲]  刀鋒視窗。
+2. 在 [概觀] 刀鋒視窗右側的 [其他工作] 區段中，按一下 [設定 Intune 資料倉儲]。 將會顯示 [Intune 資料倉儲]  刀鋒視窗。
 3. 從報告刀鋒視窗中擷取自訂摘要 URL，例如：<br>
     `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 4. 開啟 [Power BI Desktop]  。

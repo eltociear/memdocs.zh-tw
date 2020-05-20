@@ -103,13 +103,13 @@ Updates Publisher 只提供英文版，但可以管理其他語言的更新。 �
 -   西班牙文
 
 ## <a name="install-updates-publisher"></a>安裝 Updates Publisher
-從 **Microsoft 下載中心**取得用於安裝 System Center Updates Publisher 的 [UpdatesPubliser.msi](https://www.microsoft.com/download/details.aspx?id=55543)。
+從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=55543)取得用於安裝 System Center Updates Publisher 的 **UpdatesPubliser.msi**。
 
-若要安裝 Updates Publisher，請在符合「先決條件」  的裝置上執行 *UpdatesPublisher.msi*。 安裝程式會建立下列資料夾來包含執行 Updates Publisher 所需的檔案：%PROGRAMFILES%\Microsoft\UpdatesPublisher*。
+若要安裝 Updates Publisher，請在符合「先決條件」的裝置上執行 **UpdatesPublisher.msi**。 安裝程式會建立下列資料夾來包含執行 Updates Publisher 所需的檔案：%PROGRAMFILES%\Microsoft\UpdatesPublisher*。
 
 因為此資料夾包含所有使用 Updates Publisher 所需的檔案，您可以將資料及其內容夾複製到新的位置或電腦，並從該位置執行 Updates Publisher。 不過，新的位置或電腦必須符合執行 Updates Publisher 的先決條件。
 
-安裝完成之後，請執行 [UpdatesPublisher]  資料夾中的 *UpdatesPublisher.exe* 來啟動 Updates Publisher。
+安裝完成之後，請執行 [UpdatesPublisher] 資料夾中的 **UpdatesPublisher.exe** 來啟動 Updates Publisher。
 
 ## <a name="next-steps"></a>後續步驟
  安裝 Updates Publisher 之後，建議您[設定 Updates Publisher 的選項](updates-publisher-options.md)。 在可以使用 Updates Publisher 的某些功能之前，您必須先設定一些選項。

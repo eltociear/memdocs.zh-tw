@@ -36,9 +36,9 @@ ms.locfileid: "80323681"
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 選取 [所有服務]  ，然後選擇 [M365 Azure Active Directory]  來切換儀表板。
 3. 選取 [Azure Active Directory]  。
-4. 選擇 [管理]  群組中的 [行動性 (MDM 與 MAM)]  。
+4. 選擇 [管理] 群組中的 [行動性 (MDM 與 MAM)]。
 5. 按一下 [Microsoft Intune]  。
-6. 在 [設定]  窗格上的 [還原預設的 MAM URL]  群組中進行設定。
+6. 在 [設定] 窗格上的 [還原預設的 MAM URL] 群組中進行設定。
 
    **MAM 使用者範圍**  
    使用 MAM 自動註冊來管理您員工之 Windows 裝置上的企業資料。 將會針對攜帶您自己的裝置案例設定 MAM 自動註冊。<ul><li>**無**<br>若所有使用者都不能在 MAM 中註冊，請選取此選項。</li><li>**部分**<br>選取包含將要在 MAM 中註冊之使用者的 Azure AD 群組。</li><li>**全部**<br>若所有使用者都可以在 MAM 中註冊，請選取此選項。</li></ul>

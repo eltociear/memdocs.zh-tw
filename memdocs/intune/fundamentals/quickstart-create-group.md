@@ -41,7 +41,7 @@ ms.locfileid: "79356904"
 
 ## <a name="sign-in-to-intune-in-the-microsoft-endpoint-manager"></a>在 Microsoft 端點管理員中登入 Intune
 
-以[全域管理員或 Intune 服務管理員身分](https://go.microsoft.com/fwlink/?linkid=2109431)登入 [Microsoft 端點管理員系統管理中心](users-add.md#types-of-administrators)。 如果您已建立 Intune 試用版訂閱，則用來建立訂閱的帳戶是全域管理員。
+以[全域管理員或 Intune 服務管理員身分](users-add.md#types-of-administrators)登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 如果您已建立 Intune 試用版訂閱，則用來建立訂閱的帳戶是全域管理員。
 
 ## <a name="create-a-group"></a>建立群組
 

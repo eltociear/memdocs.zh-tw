@@ -44,7 +44,7 @@ Azure Active Directory (Azure AD) 採用 OAuth 2.0，可讓您授予 Azure AD �
 
 1. 登入 [Azure 入口網站](https://portal.azure.com)。
 2. 使用 Azure 入口網站頂端附近的 [搜尋資源、服務及文件]  欄位，搜尋 **Azure Active Directory**。
-3. 在下拉式功能表中，選取 [服務]  下的 [Azure Active Directory]  。
+3. 在下拉式功能表中，選取 [服務] 下的 [Azure Active Directory]。
 4. 選取 [應用程式註冊]  。
 5. 按一下 [新增應用程式註冊]  以顯示 [建立]  刀鋒視窗。
 6. 在 [建立]  刀鋒視窗中，新增您的應用程式詳細資訊：
@@ -53,10 +53,10 @@ Azure Active Directory (Azure AD) 採用 OAuth 2.0，可讓您授予 Azure AD �
     - [應用程式類型]  。 選取 [Web 應用程式/API]  以新增代表 Web 應用程式、Web API 或兩者的應用程式。
     - 應用程式的 [登入 URL]  。 這是使用者在驗證流程期間會自動前往的位置。 系統會要求使用者證明其所宣稱的身分。 如需詳細資訊，請參閱[什麼是搭配 Azure Active Directory 的應用程式存取和單一登入？](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis)
 
-7. 按一下 [建立]  刀鋒視窗底端的 [建立]  。
+7. 按一下 [建立] 刀鋒視窗底端的 [建立]。
 
     >[!NOTE] 
-    > 複製 [註冊的應用程式]  中的 [應用程式識別碼]  以供稍後使用。
+    > 複製 [註冊的應用程式] 中的 [應用程式識別碼] 以供稍後使用。
 
 ## <a name="create-a-key"></a>建立金鑰
 
@@ -64,7 +64,7 @@ Azure Active Directory (Azure AD) 採用 OAuth 2.0，可讓您授予 Azure AD �
 
 1. 在 [應用程式註冊]  刀鋒視窗上，選取新建立的應用程式，以顯示應用程式刀鋒視窗。
 2. 選取刀鋒視窗頂端附近的 [設定]  ，以顯示 [設定]  刀鋒視窗。
-3. 選取 [設定]  刀鋒視窗上的 [金鑰]  。
+3. 選取 [設定] 刀鋒視窗上的 [金鑰]。
 4. 新增金鑰 [描述]  、[到期日]  持續時間，及金鑰的 [值]  。
 5. 按一下 [儲存]  來儲存及更新應用程式的金鑰。
 6. 您必須複製產生的金鑰值 (Base64 編碼)。
@@ -79,11 +79,11 @@ Azure Active Directory (Azure AD) 採用 OAuth 2.0，可讓您授予 Azure AD �
 1. 在 [設定]  刀鋒視窗上，選取 [必要權限]  。
 2. 按一下 [加入]  。
 3. 選取 [新增 API]  以顯示 [選取 API]  刀鋒視窗。
-4. 選取 [Microsoft Intune API (MicrosoftIntuneAPI)]  ，然後按一下 [選取 API]  刀鋒視窗中的 [選取]  。 選取了 [選取權限]  步驟，並顯示 [啟用存取]  刀鋒視窗。
-5. 選擇 [應用程式權限]  區段中的 [從 Microsoft Intune 取得資料倉儲資訊]  選項。
-6. 按一下 [啟用存取]  刀鋒視窗中的 [選取]  。
-7. 按一下 [新增 API 存取]  刀鋒視窗中的 [完成]  。
-8. 按一下 [必要權限]  刀鋒視窗中的 [授與權限]  。當系統提示更新此應用程式所擁有的任何現有權限時，請按一下 [是]  。
+4. 選取 [Microsoft Intune API (MicrosoftIntuneAPI)]，然後按一下 [選取 API] 刀鋒視窗中的 [選取]。 選取了 [選取權限]  步驟，並顯示 [啟用存取]  刀鋒視窗。
+5. 選擇 [應用程式權限] 區段中的 [從 Microsoft Intune 取得資料倉儲資訊] 選項。
+6. 按一下 [啟用存取] 刀鋒視窗中的 [選取]。
+7. 按一下 [新增 API 存取] 刀鋒視窗中的 [完成]。
+8. 按一下 [必要權限] 刀鋒視窗中的 [授與權限]。當系統提示更新此應用程式所擁有的任何現有權限時，請按一下 [是]。
 
 ## <a name="generate-token"></a>產生權杖
 
