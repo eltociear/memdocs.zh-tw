@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 518954457ba58656aeb1986689a3cf74ce918c02
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6ccfb523cc1abc3a64d396f32d55a4dc4551987c
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693606"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428602"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>關於 Configuration Manager 中的用戶端安裝參數和屬性
 
@@ -109,7 +109,7 @@ CCMSetup.exe 及其支援檔案位於站台伺服器上 Configuration Manager �
 - 執行下列命令：
 
     ```PowerShell
-    (Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP`
+    (Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP
     ```
 
 - 附加 `https://` 首碼以與 **/mp** 參數搭配使用。

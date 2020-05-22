@@ -28,12 +28,14 @@
       href: terms-and-conditions-create.md
     - name: 限制
       href: enrollment-restrictions-set.md
+    - name: 了解 Intune 與 Azure AD 裝置限制
+      href: device-limit-intune-azure.md
     - name: Apple MDM Push Certificate
       href: apple-mdm-push-certificate-get.md
     - name: 公司識別碼
       href: corporate-identifiers-add.md
       displayName: COD
-    - name: '[Multi-Factor Authentication]'
+    - name: Multi-Factor Authentication
       href: multi-factor-authentication.md
       displayName: mfa; multifactor
     - name: 裝置註冊管理員

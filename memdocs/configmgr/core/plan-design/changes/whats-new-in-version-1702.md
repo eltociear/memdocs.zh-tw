@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6c6ff51edbd04a6d68f2770af123b1ac431542d2
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: eacf64245f4cfc779dc92be73e8d7e387b34f909
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904710"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427929"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Configuration Manager 1702 版中的新功能
 
@@ -191,7 +191,7 @@ Configuration Manager 更新 1702 版的最新分支以主控台內的更新形�
 從 1702 版開始，針對工作順序的可用部署，您可以選擇使用預先快取內容。 預先快取內容可讓您選擇允許用戶端在一收到部署時，就只下載適用的內容。 因此，當使用者在軟體中心按一下 [安裝]  時，由於內容是在本機硬碟上，因此內容已就緒且安裝會快速開始。 如需詳細資料，請參閱[設定預先快取內容](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#configure-pre-cache-content)。
 
 ### <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>在就地升級期間從 BIOS 轉換至 UEFI
-Windows 10 Creators Update 引進一個簡單的轉換工具，能夠為支援 UEFI 的硬體自動執行硬碟重新分割程序，並將轉換工具整合至 Windows 7 到 Windows 10 的就地升級程序中。 當您將此工具與您的作業系統升級工作順序，以及將韌體從 BIOS 轉換至 UEFI 的 OEM 工具結合時，您可以在就地升級至 Windows 10 Creators Update 的期間，將您的電腦從 BIOS 轉換至 UEFI。 如需詳細資訊，請參閱[管理 BIOS 到 UEFI 轉換的工作順序步驟](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade)。
+Windows 10 Creators Update 引進一個簡單的轉換工具，能夠為支援 UEFI 的硬體自動執行硬碟重新分割程序，並將轉換工具整合至 Windows 7 到 Windows 10 的就地升級程序中。 當您將此工具與您的作業系統升級工作順序，以及將韌體從 BIOS 轉換至 UEFI 的 OEM 工具結合時，您可以在就地升級至 Windows 10 Creators Update 的期間，將您的電腦從 BIOS 轉換至 UEFI。 如需詳細資訊，請參閱[管理 BIOS 到 UEFI 轉換的工作順序步驟](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu)。
 
 ### <a name="improvements-to-the-install-applications-task-sequence-step"></a>對安裝應用程式工作順序步驟的改進
 此版本已導入下列各項改進：

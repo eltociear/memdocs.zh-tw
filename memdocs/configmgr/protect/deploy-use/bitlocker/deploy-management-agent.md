@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 96594731ef64577d30267376d3bcb93268e59a9e
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: ebd847e44c1acd87c316514ec9919f8a6690a647
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075008"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428581"
 ---
 # <a name="deploy-bitlocker-management"></a>部署 BitLocker 管理
 
@@ -205,7 +205,7 @@ Configuration Manager 不會重新加密已經使用 BitLocker 磁碟機加密�
 
 如需有關使用 Intune 來管理 BitLocker 的詳細資訊，請參閱下列文章：
 
-- [搭配 Intune 使用裝置加密](../../../../intune/protect/encrypt-devices.md#bitlocker-encryption-for-windows-10)
+- [搭配 Intune 使用裝置加密](../../../../intune/protect/encrypt-devices.md)
 - [針對 Microsoft Intune 中的 BitLocker 原則進行疑難排解](../../../../intune/protect/troubleshoot-bitlocker-policies.md)
 
 ## <a name="next-steps"></a>後續步驟

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d06bda9d07a53e022de27afc68f40f9ce706867f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: fb13844dd05049b9186909884aa0c457a8cfacd9
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076147"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428417"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Configuration Manager Technical Preview 1703 中的功能
 
@@ -130,7 +130,7 @@ Technical Preview 1703 引入**設定 Azure 服務**精靈。 此精靈取代個
 在主控台中，移至 [管理]   > [概觀]   > [雲端服務管理]   > [Azure]   > [Azure 服務]  ，然後選擇 [設定 Azure 服務]  ，再選取雲端服務並接著選擇 [內容]  。
 
 ## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>在就地升級期間從 BIOS 轉換至 UEFI
-Windows 10 Creators Update 引進一個簡單的轉換工具，能夠為支援 UEFI 的硬體自動執行硬碟重新分割程序，並將轉換工具整合至 Windows 7 到 Windows 10 的就地升級程序中。 當您將此工具與您的作業系統升級工作順序，以及將韌體從 BIOS 轉換至 UEFI 的 OEM 工具結合時，您可以在就地升級至 Windows 10 Creators Update 的期間，將您的電腦從 BIOS 轉換至 UEFI。 如需詳細資訊，請參閱[管理 BIOS 到 UEFI 轉換的工作順序步驟](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade)。
+Windows 10 Creators Update 引進一個簡單的轉換工具，能夠為支援 UEFI 的硬體自動執行硬碟重新分割程序，並將轉換工具整合至 Windows 7 到 Windows 10 的就地升級程序中。 當您將此工具與您的作業系統升級工作順序，以及將韌體從 BIOS 轉換至 UEFI 的 OEM 工具結合時，您可以在就地升級至 Windows 10 Creators Update 的期間，將您的電腦從 BIOS 轉換至 UEFI。 如需詳細資訊，請參閱[管理 BIOS 到 UEFI 轉換的工作順序步驟](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu)。
 
 ## <a name="collapsible-task-sequence-groups"></a>可摺疊的工作順序群組
 此版本引入展開和摺疊工作順序群組的功能。 您可以個別或一次展開或摺疊所有群組。

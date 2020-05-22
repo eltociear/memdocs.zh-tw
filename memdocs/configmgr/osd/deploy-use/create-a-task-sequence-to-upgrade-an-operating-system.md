@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b11e0a1747cb8303c14f5971b98d337ae7b2a834
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8d87b2cde9a9fadb7326939b7fe473ba2a757e91
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707296"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83430126"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>在 Configuration Manager 中建立工作順序以升級 OS
 
@@ -261,7 +261,7 @@ Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupd
 
 ### <a name="convert-from-bios-to-uefi"></a>從 BIOS 轉換至 UEFI
 
-如果您想要在此工作順序期間將裝置從 BIOS 變更為 UEFI，請參閱[在就地升級期間從 BIOS 轉換至 UEFI](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade)。  
+如果您想要在此工作順序期間將裝置從 BIOS 變更為 UEFI，請參閱[在就地升級期間從 BIOS 轉換至 UEFI](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu)。  
 
 ### <a name="manage-bitlocker"></a>管理 BitLocker
 

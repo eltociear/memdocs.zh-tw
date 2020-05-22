@@ -10,12 +10,12 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d604095ec3097581289a05cd306b865dbd7da99a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8bfb45ba835851c33d6017f7f0a884bd2c1e9421
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703326"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429328"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-configuration-manager"></a>使用 Configuration Manager 將 Windows 升級為最新版
 
@@ -85,7 +85,7 @@ ms.locfileid: "81703326"
 
   - 變更磁碟分割
   - 將系統架構從 x86 變更為 x64
-  - 實作 UEFI (如需可能選項的詳細資訊，請參閱[在就地升級期間從 BIOS 轉換至 UEFI](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade))。
+  - 實作 UEFI (如需可能選項的詳細資訊，請參閱[在就地升級期間從 BIOS 轉換至 UEFI](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu))。
   - 修改基本 OS 語言  
 
 - 您有自訂需求，包括使用自訂基底映像、使用協力廠商磁碟加密，或需要 WinPE 離線作業。  

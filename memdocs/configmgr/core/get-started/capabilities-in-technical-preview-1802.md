@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: cf6980def8a4f61248bd676edc0ca93f2546816e
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 94208da3eda33cba69f04bbbf42edd08b585c1c4
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905274"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428198"
 ---
 # <a name="capabilities-in-technical-preview-1802-for-configuration-manager"></a>Configuration Manager Technical Preview 1802 中的功能
 
@@ -112,7 +112,7 @@ Windows 10 就地升級的預設工作順序範本現在包含其他群組，其
    - 提早在**準備升級**群組中新增第二個**升級作業系統**步驟。 將其命名為「升級評估」  。 指定相同的升級套件，然後啟用**執行 Windows 安裝程式相容性掃描但不啟動升級**的選項。 啟用 [選項] 索引標籤上的 [發生錯誤時繼續]  。 
    - 緊接這個*升級評估*步驟，新增**執行命令列**步驟。 指定下列命令列：</br> `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`</br>在 [選項]  索引標籤上，新增下列條件： </br>`Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400` </br>此傳回碼是 MOSETUP_E_COMPAT_SCANONLY (0xC1900210) 的十進位對等項，表示此為成功的相容性掃描，沒有任何問題。 如果*升級評估*步驟成功並傳回此代碼，即可略過此步驟。 否則，如果評估步驟傳回任何其他傳回碼，此步驟就會使用Windows 安裝程式相容性掃描的傳回碼來使工作順序失敗。
    - 如需詳細資訊，請參閱[升級作業系統](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS)。
-- 如果您想要在此工作順序期間將裝置從 BIOS 變更為 UEFI，請參閱[在就地升級期間從 BIOS 轉換至 UEFI](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade)。
+- 如果您想要在此工作順序期間將裝置從 BIOS 變更為 UEFI，請參閱[在就地升級期間從 BIOS 轉換至 UEFI](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu)。
 
 如果您有進一步的建議，請從功能區的 [首頁]  索引標籤傳送**意見反應**。
 
