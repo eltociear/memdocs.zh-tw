@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 05/23/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8f533a04e9865b4d841bee1a2764eef2fbbbcda9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2a005730220633184b25ead68b6f7ba8a3efd52b
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079377"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881365"
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>針對 iOS 裝置問題將錯誤傳送給公司支援人員
 有時您可能會在於 iOS 裝置上使用公司入口網站應用程式時遇到錯誤。 當發生這種情況時，您可以透過電子郵件將錯誤相關詳細資料傳送給公司的支援人員。 這些詳細資料將提供為您進行問題疑難排解所需的內容。

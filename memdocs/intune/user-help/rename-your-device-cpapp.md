@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/07/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 88c9b6789f4475a95201e975d3492acecde3927e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8c71ef5e1abfcccfdeec6c01551a23bf1d1750bd
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79336416"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881153"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>透過 Windows 版公司入口網站應用程式重新命名裝置
 重新命名裝置，以使其更容易從其他裝置辨識。 Windows 版公司入口網站應用程式可讓您重新命名下列類型的已連線裝置：  

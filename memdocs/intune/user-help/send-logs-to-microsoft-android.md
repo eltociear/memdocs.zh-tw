@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/12/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 533c0117b73883776e3dbdd4628fda7630a3a15a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7a842e97e0c276926c07f615a7f9089a64132b50
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79347453"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881050"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-android-devices"></a>將記錄傳送給公司入口網站 Android 裝置開發人員
 
