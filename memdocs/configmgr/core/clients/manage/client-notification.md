@@ -10,16 +10,16 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8a00f77a5a902728a7c41905314511cffcfa81a5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7680c8f955773f169d56f36eb9bbe6507d2d7ce6
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694956"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427814"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Configuration Manager 中的用戶端通知
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 若要對遠端用戶端立即採取行動，請從 Configuration Manager 主控台傳送用戶端通知動作。 在個別裝置或裝置集合上啟動這些動作。
 
@@ -29,7 +29,7 @@ ms.locfileid: "81694956"
 
 ### <a name="install-client"></a>安裝用戶端
 
-開啟 [安裝用戶端精靈]  。 此精靈會使用用戶端推入安裝來安裝 Configuration Manager 用戶端。 如需詳細資訊，請參閱[用戶端推入安裝](../deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush)。
+開啟 [安裝用戶端精靈]。 此精靈會使用用戶端推入安裝來安裝 Configuration Manager 用戶端。 如需詳細資訊，請參閱[用戶端推入安裝](../deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush)。
 
 #### <a name="permissions---install-client"></a>權限 - 安裝用戶端
 
@@ -47,7 +47,7 @@ ms.locfileid: "81694956"
 
 ### <a name="run-script"></a>執行指令碼
 
-開啟 [執行指令碼] 精靈  ，以在集合內的所有用戶端上執行 PowerShell 指令碼。 如需詳細資訊，請參閱[建立及執行 PowerShell 指令碼](../../../apps/deploy-use/create-deploy-scripts.md)。
+開啟 [執行指令碼] 精靈，以在集合內的所有用戶端上執行 PowerShell 指令碼。 如需詳細資訊，請參閱[建立及執行 PowerShell 指令碼](../../../apps/deploy-use/create-deploy-scripts.md)。
 
 #### <a name="permissions---run-script"></a>權限 - 執行指令碼
 
@@ -69,18 +69,18 @@ ms.locfileid: "81694956"
 
 這個動作需要和[執行指令碼](#run-script)動作相同的權限。
 
-從 1906 版本開始，您可以在 [集合]  物件上使用 [執行 CMPivot]  權限。
+從 1906 版本開始，您可以在 [集合] 物件上使用 [執行 CMPivot] 權限。
 
 ## <a name="client-notification"></a>用戶端通知
 
-這些動作位在 [用戶端通知]  功能表下，[常用] 索引標籤的裝置或集合群組功能區中。
+這些動作位在 [用戶端通知] 功能表下，[常用] 索引標籤的裝置或集合群組功能區中。
 
-在 1806 版和較舊版本中，[用戶端通知]  選項僅從 [裝置集合] 節點，或是檢視 [裝置集合] 的成員資格時提供。 從 1810 版開始，您可以直接從 [裝置]  節點啟動 [用戶端通知]  。 不需要再從集合成員資格檢視中執行。 <!--SCCMDocs-pr issue 2972-->
+在 1806 版和較舊版本中，[用戶端通知] 選項僅從 [裝置集合] 節點，或是檢視 [裝置集合] 的成員資格時提供。 從 1810 版開始，您可以直接從 [裝置] 節點啟動 [用戶端通知]。 不需要再從集合成員資格檢視中執行。 <!--SCCMDocs-pr issue 2972-->
 
 #### <a name="permissions---client-notification"></a>權限 - 用戶端通知
 
 <!--SCCMDocs-pr issue #2972-->
-從 1810 版開始，用戶端通知動作現在需要 Collection 物件的**通知資源**權限。 此權限適用於 [用戶端通知]  功能表下的所有動作。
+從 1810 版開始，用戶端通知動作現在需要 Collection 物件的**通知資源**權限。 此權限適用於 [用戶端通知] 功能表下的所有動作。
 
 下列內建角色預設具有此權限：
 
@@ -136,7 +136,7 @@ ms.locfileid: "81694956"
 ## <a name="client-diagnostics"></a>用戶端診斷
 <!--4433455-->
 
-從 1910 版開始，Configuration Manager 主控台中有 [用戶端診斷]  的新裝置動作。 已新增下列動作：
+從 1910 版開始，Configuration Manager 主控台中有 [用戶端診斷] 的新裝置動作。 已新增下列動作：
 
 - **啟用詳細資訊記錄**：將 CCM 元件的全域記錄層級變更為 [詳細資訊]，並啟用 [偵錯記錄]。
 - **停用詳細資訊記錄**：將全域記錄層級變更為預設值，並停用偵錯記錄。
@@ -154,6 +154,9 @@ ms.locfileid: "81694956"
 
 在用戶端的 **diagnostics.log** 中追蹤工作狀態。 收集用戶端記錄檔後，系統會將其他資訊記錄在管理點的 **MP_SinvCollFile.log** 及站台伺服器的 **sinvproc.log** 中。
 
+> [!Tip]
+> 收集的用戶端記錄檔會根據軟體清查檔案收集設定來儲存。 這些檔案會儲存在 **Inboxes\sinv.box\FileCol** 目錄中的站台伺服器上。 版本數目沒有已定義的限制。 [刪除過時收集檔案](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-collected-files)的站台維護工作會依排程刪除檔案，其預設為每 90 天。
+
 ### <a name="prerequisites---client-diagnostics"></a>必要條件 - 用戶端診斷
 
 - 將目標用戶端更新為最新版本。
@@ -170,7 +173,7 @@ ms.locfileid: "81694956"
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
 
-下列動作位在 [Endpoint Protection]  功能表下。 此功能表位於 [常用] 索引標籤的集合群組功能區中。當您選取一或多部裝置時，這些動作是位在功能區 [選取的物件]  索引標籤。
+下列動作位在 [Endpoint Protection] 功能表下。 此功能表位於 [常用] 索引標籤的集合群組功能區中。當您選取一或多部裝置時，這些動作是位在功能區 [選取的物件] 索引標籤。
 
 如需詳細資訊，請參閱 [Configuration Manager 中的 Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md)。
 
@@ -188,11 +191,11 @@ ms.locfileid: "81694956"
 
 ### <a name="full-scan"></a>完整掃描
 
-觸發 Endpoint Protection 或 Windows Defender 以執行「完整」  反惡意程式碼軟體掃描。  
+觸發 Endpoint Protection 或 Windows Defender 以執行「完整」反惡意程式碼軟體掃描。  
 
 ### <a name="quick-scan"></a>快速掃描
 
-觸發 Endpoint Protection 或 Windows Defender 以執行「快速」  反惡意程式碼軟體掃描。  
+觸發 Endpoint Protection 或 Windows Defender 以執行「快速」反惡意程式碼軟體掃描。  
 
 ### <a name="download-definition"></a>下載定義
 

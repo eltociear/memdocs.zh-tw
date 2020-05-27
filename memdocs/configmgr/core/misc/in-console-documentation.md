@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 1bd4ff4b25fcd4cf77366c93fcc1259ea2b5749f
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 678f19d4ec69bea2bc5b3863e3e2a8332c10f3be
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268176"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551599"
 ---
 <!-- 
 - Feature 1357546
@@ -107,11 +107,12 @@ ms.locfileid: "83268176"
 
 ## <a name="new-and-updated-support-articles"></a>新增與更新的支援文章
 
-2020 年 2 月 21 日至 3 月 19 日期間新增或更新的支援文章。
+2020 年 3 月 20 日至 5 月 15 日期間新增或更新的支援文章。
 
-- [KB 4552430 協力廠商更新類別同步處理在 Configuration Manager 中重設為預設值](https://support.microsoft.com/help/4552430)
-- [KB 4551013 已修訂協力廠商更新在 Configuration Manager 中無法下載](https://support.microsoft.com/help/4551013) \(英文\)
-- [KB 4552181 Configuration Manager 最新分支 (1910 版) 中的內容發佈延遲](https://support.microsoft.com/help/4552181) \(英文\)
-- [KB 4550023 在 Windows 10 就地升級復原之後，Configuration Manager 就地升級工作順序未繼續](https://support.microsoft.com/help/4550023) \(部分機器翻譯\)
+- [KB 4561494 在 Configuration Manager 中建立 Microsoft Edge 應用程式失敗](https://support.microsoft.com/help/4561494)
+- [KB 4551059 遠端 Configuration Manager 主控台每 10 分鐘暫停 20 秒](https://support.microsoft.com/help/4551059)
+- [KB 4556203 Microsoft 端點設定管理員目前分支 (版本 2002) 的變更摘要](https://support.microsoft.com/help/4556203)
+- [KB 4553501 Microsoft 端點 Configuration Manager 版本 2002 更新 (早期更新響鈴)](https://support.microsoft.com/help/4553501)
+- [KB 4561945 當服務連線工具下載 ConfigMgr.AdminUIContent.cab 檔案時，出現「基礎連線已關閉」錯誤](https://support.microsoft.com/help/4561945)
 
 若要訂閱新的 Configuration Manager 支援文章的 Atom 或 RSS 通知，請參閱[支援的內容更新](https://support.microsoft.com/help/4089498/)並選取 [Microsoft Endpoint Configuration Manager]。  

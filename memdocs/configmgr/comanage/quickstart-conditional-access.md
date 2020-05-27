@@ -10,16 +10,16 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d35f36b6578359f62f21b4e2208a70ace22cf0d9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 94f002ecd12d08ffd5f3d4767e315e0d83714929
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691256"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764045"
 ---
 # <a name="conditional-access-with-co-management"></a>搭配共同管理的條件式存取
 
-條件式存取可確保只有受信任的使用者能透過受信任裝置上的受信任應用程式存取組織資源。 它是在雲端中從頭建立。 無論您是使用 Intune 來管理裝置，還是搭配共同管理來延伸 Configuration Manager 部署，其運作方式皆相同。
+條件式存取可確保只有受信任使用者能透過受信任裝置上的受信任應用程式來存取組織資源。 它是在雲端中從頭建立。 無論您是使用 Intune 來管理裝置，還是搭配共同管理來延伸 Configuration Manager 部署，其運作方式皆相同。
 
 在下列影片中，資深專案經理 Joey Glocke 與產品行銷經理 Locky Ainley 會討論並示範搭配共同管理的條件式存取：
 
@@ -41,18 +41,18 @@ Microsoft 企業副總裁 Brad Anderson 在 Ignite 2018 重點演說期間，搭
 
 > [!VIDEO https://www.youtube.com/embed/7tDbUhVCX_I?start=1071]
 
-條件式存取也能提供集中式的位置，以查看所有已連線至網路之裝置的健康情況。 您能取得雲端規模的優點，這在測試 Configuration Manager 生產環境執行個體上特別有價值。
+條件式存取也能提供集中式的位置，以查看所有已連線至網路的裝置健全狀況。 您能取得雲端規模的優點，這在測試 Configuration Manager 生產環境執行個體上特別有價值。
 
 
 ## <a name="benefits"></a>優點
 
-所有 IT 團隊皆無比重視網路安全性。 您必須在每個裝置能存取您的網路之前，確定其符合您的安全性與商務需求。 透過條件式存取，您可以決定下列因素： 
+所有 IT 團隊皆無比重視網路安全性。 您必須在每個裝置能存取您的網路之前，確定其符合您的安全性與商務需求。 透過條件式存取，您可決定下列因素： 
 - 每個裝置是否皆已加密  
 - 是否已安裝惡意程式碼  
 - 其設定是否已更新  
 - 其是否已越獄或 Root  
 
-條件式存取能結合對組織資料的精確控制，以及能在位於任何位置的任何裝置上最大化員工生產力的使用者體驗。
+條件式存取能結合對組織資料的精確控制，以及能在位於任何位置的任何裝置上最大化員工生產力此類使用者體驗。
 
 下列影片示範[進階威脅防護](https://www.microsoft.com/windowsforbusiness/windows-atp) (ATP) 能如何整合至您經常會體驗到的常見案例：
 
@@ -60,17 +60,17 @@ Microsoft 企業副總裁 Brad Anderson 在 Ignite 2018 重點演說期間，搭
 
 透過共同管理，Intune 可以納入 Configuration Manager 在評量您針對必要更新或應用程式的安全性標準合規性上的責任。 對於想要繼續使用 Configuration Manager 來進行複雜應用程式和修補程式管理的所有 IT 組織來說，此行為至關重要。
 
-條件式存取也是開發[零信任網路](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/14/building-zero-trust-networks-with-microsoft-365/) \(英文\) 架構的重要元件。 透過條件式存取，符合規範的裝置存取控制會涵蓋零信任網路的基本層。 此功能會在您於未來保護組織的方法中扮演重要的角色。
+條件式存取也是開發[零信任網路](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/14/building-zero-trust-networks-with-microsoft-365/) (英文) 架構的重要元件。 透過條件式存取，符合規範的裝置存取控制會涵蓋零信任網路其基本層。 此功能會在您於未來保護組織的方法中扮演重要的角色。
 
-如需詳細資訊，請參閱關於 [Enhancing conditional access with machine-risk data from Microsoft Defender Advanced Threat Protection](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Enhancing-conditional-access-with-machine-risk-data-from-Windows/ba-p/250559) (從 Microsoft Defender 進階威脅防護搭配電腦風險資料強化條件式存取) 的部落格文章。
+如需詳細資訊，請參閱關於[從 Microsoft Defender 進階威脅防護搭配電腦風險資料強化條件式存取](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Enhancing-conditional-access-with-machine-risk-data-from-Windows/ba-p/250559) (英文) 的部落格文章。
 
 
 
 ## <a name="case-studies"></a>案例研究
 
-IT 顧問公司 Wipro 使用條件式存取來保護並管理全體 91,000 個員工所使用的裝置。 在近日的案例研究中，Wipro 的 IT 副總裁表示：
+IT 顧問公司 Wipro 使用條件式存取來保護並管理全體 91,000 名員工所使用的裝置。 在近日的案例研究中，Wipro 的 IT 副總裁表示：
 
-> *達成條件式存取是 Wipro 的一大勝利。現在，我們所有員工都可以藉由行動方式隨需存取資訊。* 
+> *實現條件式存取對於 Wipro 是一大成功。現在，我們所有員工都可以藉由行動方式隨需存取資訊。* 
 > *我們加強了安全性狀態及員工生產力。現在 91,000 名員工可以受益於隨時隨地從任何裝置存取超過 100 個應用程式，且非常安全。*
 
 <!-- waiting for the case study to be public
@@ -86,7 +86,7 @@ For more information, see [Wipro drives mobile productivity with Microsoft cloud
 Intune 也已和 Cisco ISE、Aruba Clear Pass 與 Citrix NetScaler 等合作夥伴完全整合。 透過這些合作夥伴，您可以根據 Intune 註冊和這些其他平台上的裝置合規性狀態來維持存取控制。
 
 如需詳細資訊，請參閱下列影片：
-- [Brad Anderson 詳細示範條件式存取](https://youtu.be/8321obNofgM?t=547) \(英文\)  
+- [Brad Anderson 詳細示範條件式存取](https://youtu.be/8321obNofgM?t=547) (英文)  
 - [來自 Endpoint Zone 1805 的額外詳細資料](https://youtu.be/f-ILlEuBFZg?t=196) \(英文\)  
 
 
@@ -94,25 +94,25 @@ Intune 也已和 Cisco ISE、Aruba Clear Pass 與 Citrix NetScaler 等合作夥�
 
 透過條件式存取和 ATP 整合，您將能強化所有 IT 組織的基礎元件：安全的雲端存取。
 
-在超過 63% 的資料外洩中，攻擊者都是透過脆弱、預設或遭竊的使用者認證來取得組織網路的存取權。 由於條件式存取是專注在保護使用者身分識別上，它能限制對認證的竊取。 條件式存取能管理並保護您的身分識別，無論其是否具有特殊權限。 這是保護裝置及其所保存之資料的最佳方式。
+在超過 63% 的資料外洩中，攻擊者都是透過脆弱、預設或遭竊的使用者認證來取得組織網路的存取權。 由於條件式存取是專注在保護使用者身分識別上，其能夠限制對認證的竊取。 無論其是否具有特殊權限，條件式存取都能管理並保護身分識別。 這是保護裝置及其所保存之資料的最佳方式。
 
-由於條件式存取是 Enterprise Mobility + Security (EMS) 的核心元件，因此不需要任何內部部署設定或架構。 透過 Intune 和 Azure Active Directory (Azure AD)，您可以快速在雲端中設定條件式存取。 如果您正在使用 Configuration Manager，則可以透過共同管理輕鬆地將您的環境延伸至雲端，並立即開始使用。
+由於條件式存取是 Enterprise Mobility + Security (EMS) 的核心元件，因此不需要任何內部部署設定或架構。 透過 Intune 和 Azure Active Directory (Azure AD)，您可快速在雲端中設定條件式存取。 如果您正在使用 Configuration Manager，則可以透過共同管理輕鬆地將您的環境延伸至雲端，並立即開始使用。
 
-如需 ATP 整合的詳細資訊，請參閱這篇 [Microsoft Defender ATP device risk score exposes new cyberattack, drives Conditional access to protect networks](https://cloudblogs.microsoft.com/microsoftsecure/2018/11/28/windows-defender-atp-device-risk-score-exposes-new-cyberattack-drives-conditional-access-to-protect-networks/) (Microsoft Defender ATP 裝置風險分數公開新的網路攻擊，並驅動條件式存取以保護網路) 部落格文章。 它會詳述進階駭客群組使用前所未見工具的方式。 Microsoft 雲端之所以能成功偵測並阻止它們，是因為目標使用者擁有條件式存取。 該入侵啟動了該裝置的風險型條件式存取原則。 雖然攻擊者已經成功入侵網路，系統順利地自動限制被入侵的電腦，使其無法存取由 Azure AD 管理的組織服務與資料。
+如需 ATP 整合的詳細資訊，請參閱這篇 [Microsoft Defender ATP 裝置風險分數公開新的網路攻擊，並驅動條件式存取以保護網路](https://cloudblogs.microsoft.com/microsoftsecure/2018/11/28/windows-defender-atp-device-risk-score-exposes-new-cyberattack-drives-conditional-access-to-protect-networks/) (英文) 部落格文章。 它會詳述進階駭客群組使用前所未見工具的方式。 Microsoft 雲端所以能成功偵測並阻止這些攻擊，是因為目標使用者擁有條件式存取。 該入侵啟動了該裝置的風險型條件式存取原則。 雖然攻擊者已經成功入侵網路，系統順利地自動限制被入侵的電腦，使其無法存取由 Azure AD 管理的組織服務與資料。
 
 
 
 ## <a name="configure"></a>設定
 
-當您[啟用共同管理](how-to-enable.md)時，條件式存取非常容易使用。 它需要您將**合規性原則**工作負載移至 Intune。 如需詳細資訊，請參閱[如何將 Configuration Manager 工作負載切換至 Intune](how-to-switch-workloads.md)。 
+當[啟用共同管理](how-to-enable.md)時，條件式存取非常容易使用。 它需要您將**合規性原則**工作負載移至 Intune。 如需詳細資訊，請參閱[如何將 Configuration Manager 工作負載切換至 Intune](how-to-switch-workloads.md)。 
 
 如需使用條件式存取的詳細資訊，請參閱下列文章： 
 
-- [Azure AD 中的條件式存取](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)  
+- [Azure AD 中的條件式存取](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)  
 
 - [Intune 裝置合規性原則](https://docs.microsoft.com/intune/device-compliance)  
 
-- [搭配 Intune 使用應用程式型條件式存取](https://docs.microsoft.com/intune/app-based-conditional-access-intune)  
+- [搭配 Intune 使用以應用程式為基礎的條件式存取](https://docs.microsoft.com/intune/app-based-conditional-access-intune)  
 
 > [!Note]  
 > 條件式存取功能可立即供已加入混合式 Azure AD 的裝置使用。 這些功能包括多重要素驗證和混合式 Azure AD Join 存取控制。 此行為是因為它們是以 Azure AD 屬性為基礎。 若要運用來自 Intune 和 Configuration Manager 以設定為基礎的評量，請啟用共同管理。 此設定能讓您直接從 Intune 對合規裝置進行存取控制。 它也能提供 Intune 的合規性原則評估功能。  

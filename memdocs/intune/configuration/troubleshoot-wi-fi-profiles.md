@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 02/18/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40eaf6be1b5f6cdb0222fc5bd79e8e5a5b72a947
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 82706356f82008798dc8c9b9de02ad55606ee87b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078204"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83987859"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>針對 Microsoft Intune 中的 Wi-Fi 裝置組態設定檔進行疑難排解
 

@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bdc98febbc96162b2abe6e666c9354c342e5e913
-ms.sourcegitcommit: ed2c18e210db177eb0d5e10d74207006561b7b5d
+ms.openlocfilehash: c6b33027d67329b883f401168795c1b466ded1a7
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83383716"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709380"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>雲端管理閘道的權杖型驗證
 
@@ -25,7 +25,7 @@ ms.locfileid: "83383716"
 
 雲端管理閘道 (CMG) 支援許多類型的用戶端，但即便使用[增強 HTTP](../../plan-design/hierarchy/enhanced-http.md)，這些用戶端還是需要[用戶端驗證憑證](../manage/cmg/certificates-for-cloud-management-gateway.md#for-internet-based-clients-communicating-with-the-cloud-management-gateway)。 對於以網際網路為基礎的用戶端而言，若不常連線至內部網路、則無法加入 Azure Active Directory (Azure AD)，且沒有方法可安裝 PKI 發行憑證，則可能難以佈建此憑證需求。
 
-從 2002 版開始，Configuration Manager 使用下列方法擴充其裝置支援：
+為了克服這些困難，從 2002 版開始，Configuration Manager 使用下列方法擴充其裝置支援：
 
 - 在內部網路註冊以取得唯一權杖
 
@@ -101,7 +101,7 @@ Configuration Manager 用戶端會與管理點一起管理此權杖，因此不�
 
 搭配使用 `/new` 參數來指定權杖的權杖有效期間。 指定整數值 (以分鐘為單位)。 預設值為 4,320 (3 天)。 最大值為 10,080 (7 天)。
 
-範例：`BulkRegistrationTokenTool.exe /lifetime:4320`
+範例：`BulkRegistrationTokenTool.exe /lifetime 4320`
 
 ## <a name="bulk-registration-token-management"></a>大量註冊權杖管理
 

@@ -10,19 +10,19 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 30cd61240b09f821d8b18c37e6accc7450f35817
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 35379aed71544a25a98ec4dfa421be70c1bae851
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701666"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427696"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>安裝 Configuration Manager 的雲端發佈點
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 > [!Important]  
-> 從 Azure 共用內容的實作已經變更。 藉由啟用 [允許使用 CMG 當作雲端發佈點及處理來自 Azure 儲存體的內容]  選項，來使用啟用內容的雲端管理閘道。 如需詳細資訊，請參閱[修改 CMG](../../../clients/manage/cmg/setup-cloud-management-gateway.md#modify-a-cmg)。
+> 從 Azure 共用內容的實作已經變更。 藉由啟用 [允許使用 CMG 當作雲端發佈點及處理來自 Azure 儲存體的內容] 選項，來使用啟用內容的雲端管理閘道。 如需詳細資訊，請參閱[修改 CMG](../../../clients/manage/cmg/setup-cloud-management-gateway.md#modify-a-cmg)。
 >
 > 未來您將無法建立傳統雲端發佈點。 如需詳細資訊，請參閱[已移除和已淘汰的功能](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)。
 
@@ -48,7 +48,7 @@ ms.locfileid: "81701666"
 
 - 要使用的 **Azure 環境**。 例如，Azure 公用雲端或 Azure 美國政府雲端。  
 
-- 從 1806 版開始，「建議」  使用 **Azure Resource Manager 部署**。 其需求如下：<!--1322209-->  
+- 從 1806 版開始，「建議」使用 **Azure Resource Manager 部署**。 其需求如下：<!--1322209-->  
 
     - 與 [Azure Active Directory](azure-services-wizard.md) 整合以進行**雲端管理**。 不需要 Azure AD 使用者探索。  
 
@@ -66,9 +66,9 @@ ms.locfileid: "81701666"
     > 要求使用此服務名稱的伺服器驗證憑證之前，請確認想要的 Azure 網域名稱是唯一的。 例如，*WallaceFalls.CloudApp.Net*。
     >
     > 1. 登入 [Azure 入口網站](https://portal.azure.com)。
-    > 1. 選取 [所有資源]  ，然後選取 [新增]  。
-    > 1. 搜尋**雲端服務**。 選取 [建立]  。
-    > 1. 在 [DNS 名稱]  欄位中輸入您想要的前置詞，例如 *WallaceFalls*。 介面將會反映網域名稱可用或已由另一個服務使用。
+    > 1. 選取 [所有資源]，然後選取 [新增]。
+    > 1. 搜尋**雲端服務**。 選取 [建立]。
+    > 1. 在 [DNS 名稱] 欄位中輸入您想要的前置詞，例如 *WallaceFalls*。 介面將會反映網域名稱可用或已由另一個服務使用。
     >
     > 請勿在入口網站中建立服務，只要使用此程序檢查名稱可用性。
 
@@ -102,22 +102,22 @@ ms.locfileid: "81701666"
 
 視您的[設計](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_topology)而定，在裝載此雲端發佈點的站台上執行此程序。  
 
-1. 在 Configuration Manager 主控台中，移至 [系統管理]  工作區中，展開 [雲端服務]  ，然後選取 [雲端發佈點]  。 在功能區中，選取 [建立雲端發佈點]  。  
+1. 在 Configuration Manager 主控台中，移至 [系統管理] 工作區中，展開 [雲端服務]，然後選取 [雲端發佈點]。 在功能區中，選取 [建立雲端發佈點]。  
 
-2. 在 [建立雲端發佈點精靈] 的 [一般]  頁面上，設定下列設定：  
+2. 在 [建立雲端發佈點精靈] 的 [一般] 頁面上，設定下列設定：  
 
     1. 先指定 **Azure 環境**。  
 
-    2. 從 1806 版開始，「建議」  選取 [Azure Resource Manager 部署]  作為部署方法。 選取 [登入]  ，使用 Azure 訂用帳戶系統管理員帳戶進行驗證。 精靈會使用 Azure AD 整合先決條件期間所儲存的資訊，自動填入其餘欄位。 如果您擁有多個訂用帳戶，請選取需要使用的訂用帳戶的**訂用帳戶識別碼**。  
+    2. 從 1806 版開始，「建議」選取 [Azure Resource Manager 部署] 作為部署方法。 選取 [登入]，使用 Azure 訂用帳戶系統管理員帳戶進行驗證。 精靈會使用 Azure AD 整合先決條件期間所儲存的資訊，自動填入其餘欄位。 如果您擁有多個訂用帳戶，請選取需要使用的訂用帳戶的**訂用帳戶識別碼**。  
 
     > [!Note]  
     > 從 1810 版開始，Configuration Manager 已淘汰 Azure 的傳統服務部署。
     >
-    > 如果您需要使用傳統服務部署，請在此頁面上選取該選項。 首先，輸入您的 Azure **訂用帳戶識別碼**。 然後選取 [瀏覽]  並選取 Azure 管理憑證的 .PFX 檔案。  
+    > 如果您需要使用傳統服務部署，請在此頁面上選取該選項。 首先，輸入您的 Azure **訂用帳戶識別碼**。 然後選取 [瀏覽] 並選取 Azure 管理憑證的 .PFX 檔案。  
 
-3. 選取 [下一步]  。 等待站台測試 Azure 的連線。  
+3. 選取 [下一步]。 等待站台測試 Azure 的連線。  
 
-4. 在 [設定]  頁面上指定下列設定，然後選取 [下一步]  ：  
+4. 在 [設定] 頁面上指定下列設定，然後選取 [下一步]：  
 
     - **區域**：選取您要建立雲端發佈點所在的 Azure 區域。  
 
@@ -129,12 +129,12 @@ ms.locfileid: "81701666"
 
     - **主要站台**：選取要將內容發佈至此發佈點的主要站台。
 
-    - **憑證檔案**：選取 [瀏覽]  ，然後選取此雲端發佈點之伺服器驗證憑證的 .PFX 檔案。 此憑證的通用名稱會填入所需的 [服務 FQDN]  和 [服務名稱]  欄位。  
+    - **憑證檔案**：選取 [瀏覽]，然後選取此雲端發佈點之伺服器驗證憑證的 .PFX 檔案。 此憑證的通用名稱會填入所需的 [服務 FQDN] 和 [服務名稱] 欄位。  
 
         > [!NOTE]  
-        > 雲端發佈點伺服器驗證憑證支援萬用字元。 如果您使用萬用字元憑證，請將 [服務 FQDN]  欄位中的星號 (`*`) 取代為服務所需的主機名稱。  
+        > 雲端發佈點伺服器驗證憑證支援萬用字元。 如果您使用萬用字元憑證，請將 [服務 FQDN] 欄位中的星號 (`*`) 取代為服務所需的主機名稱。  
 
-5. 在 [警示]  頁面上，設定儲存配額、傳輸配額，以及您想讓 Configuration Manager 產生警示的這些配額百分比。 然後選取 [下一步]  。  
+5. 在 [警示] 頁面上，設定儲存配額、傳輸配額，以及您想讓 Configuration Manager 產生警示的這些配額百分比。 然後選取 [下一步]。  
 
 6. 完成精靈。  
 
@@ -151,37 +151,37 @@ ms.locfileid: "81701666"
 
 使用下列方法確認雲端發佈點安裝已完成：  
 
-- 在 Configuration Manager 主控台中，移至 [系統管理]  工作區。 展開 [雲端服務]  ，然後選取 [雲端發佈點]  節點。 在清單中尋找新的雲端發佈點。 [狀態] 資料行應為 [就緒]  。  
+- 在 Configuration Manager 主控台中，移至 [系統管理] 工作區。 展開 [雲端服務]，然後選取 [雲端發佈點] 節點。 在清單中尋找新的雲端發佈點。 [狀態] 資料行應為 [就緒]。  
 
-- 在 Configuration Manager 主控台中，按一下 [監視]  工作區。 展開 [系統狀態]  ，然後選取 [元件狀態]  節點。 顯示 **SMS_CLOUD_SERVICES_MANAGER** 元件的所有訊息，然後尋找狀態訊息識別碼 **9409**。  
+- 在 Configuration Manager 主控台中，按一下 [監視] 工作區。 展開 [系統狀態]，然後選取 [元件狀態] 節點。 顯示 **SMS_CLOUD_SERVICES_MANAGER** 元件的所有訊息，然後尋找狀態訊息識別碼 **9409**。  
 
-- 如有必要，請前往 Azure 入口網站。 雲端發佈點的 [部署]  顯示狀態為 [就緒]  。  
+- 如有必要，請前往 Azure 入口網站。 雲端發佈點的 [部署] 顯示狀態為 [就緒]。  
 
 
 ## <a name="configure-dns"></a><a name="bkmk_dns"></a> 設定 DNS  
 
-用戶端必須能夠將雲端發佈點的名稱解析成 Azure 所管理的 IP 位址，才能使用雲端發佈點。 管理點會為其提供雲端發佈點的 [服務 FQDN]  。 雲端發佈點在 Azure 中是以 [服務名稱]  表示。 您可以在雲端發佈點內容的 [設定]  索引標籤上，查看這些值。
+用戶端必須能夠將雲端發佈點的名稱解析成 Azure 所管理的 IP 位址，才能使用雲端發佈點。 管理點會為其提供雲端發佈點的 [服務 FQDN]。 雲端發佈點在 Azure 中是以 [服務名稱] 表示。 您可以在雲端發佈點內容的 [設定] 索引標籤上，查看這些值。
 
 > [!Note]  
-> 主控台中的 [雲端發佈點]  節點包含名為 [服務名稱]  的資料行，但實際上會顯示 [服務 FQDN]  值。 若要查看這兩個值，請開啟雲端發佈點的 [內容]  ，然後切換至 [設定]  索引標籤。  
+> 主控台中的 [雲端發佈點] 節點包含名為 [服務名稱] 的資料行，但實際上會顯示 [服務 FQDN] 值。 若要查看這兩個值，請開啟雲端發佈點的 [內容]，然後切換至 [設定] 索引標籤。  
 
 <!-- Remove based on feedback from RoYork
 If you issue the server authentication certificate from your PKI, you may directly specify the Azure **Service name**. For example, `WallaceFalls.cloudapp.net`. When you specify this certificate in the Create Cloud Distribution Point Wizard, both the **Service FQDN** and **Service name** properties are the same. In this scenario, you don't need to configure DNS. The name that clients receive from the management point is the same name as the service in Azure.  
 -->
 
-伺服器驗證憑證通用名稱應該包含您的網域名稱。 當您購買來自公用提供者的憑證時，需要此名稱。 這是您從 PKI 發行此憑證時的建議做法。 例如 `WallaceFalls.contoso.com`。 當您在 [建立雲端發佈點精靈] 中指定此憑證時，通用名稱會填入 [服務 FQDN]  內容 (`WallaceFalls.contoso.com`)。 [服務名稱]  會接受相同的主機名稱 (`WallaceFalls`)，並將它附加至 Azure 網域名稱 (`cloudapp.net`)。 在此案例中，用戶端需要將您網域的 [服務 FQDN]  (`WallaceFalls.contoso.com`) 解析成 Azure [服務名稱]  (`WallaceFalls.cloudapp.net`)。 建立對應至這些名稱的 CNAME 別名。
+伺服器驗證憑證通用名稱應該包含您的網域名稱。 當您購買來自公用提供者的憑證時，需要此名稱。 這是您從 PKI 發行此憑證時的建議做法。 例如 `WallaceFalls.contoso.com`。 當您在 [建立雲端發佈點精靈] 中指定此憑證時，通用名稱會填入 [服務 FQDN] 內容 (`WallaceFalls.contoso.com`)。 [服務名稱] 會接受相同的主機名稱 (`WallaceFalls`)，並將它附加至 Azure 網域名稱 (`cloudapp.net`)。 在此案例中，用戶端需要將您網域的 [服務 FQDN] (`WallaceFalls.contoso.com`) 解析成 Azure [服務名稱] (`WallaceFalls.cloudapp.net`)。 建立對應至這些名稱的 CNAME 別名。
 
 ### <a name="create-cname-alias"></a>建立 CNAME 別名
 
-在貴組織的公用網際網路對向 DNS 中建立正式名稱記錄 (CNAME)。 此記錄會為用戶端接收之雲端發佈點的 [服務 FQDN]  內容，建立對應至 Azure [服務名稱]  的別名。 例如，建立新的 CNAME 記錄，將 `WallaceFalls.contoso.com` 對應至 `WallaceFalls.cloudapp.net`。  
+在貴組織的公用網際網路對向 DNS 中建立正式名稱記錄 (CNAME)。 此記錄會為用戶端接收之雲端發佈點的 [服務 FQDN] 內容，建立對應至 Azure [服務名稱] 的別名。 例如，建立新的 CNAME 記錄，將 `WallaceFalls.contoso.com` 對應至 `WallaceFalls.cloudapp.net`。  
 
 ### <a name="client-name-resolution-process"></a>用戶端名稱解析程序
 
 下列程序說明用戶端如何解析雲端發佈點的名稱：  
 
-1. 用戶端在內容來源清單中取得雲端發佈點的 [服務 FQDN]  。 例如 `WallaceFalls.contoso.com`。  
+1. 用戶端在內容來源清單中取得雲端發佈點的 [服務 FQDN]。 例如 `WallaceFalls.contoso.com`。  
 
-2. 它查詢 DNS，這會使用 CNAME 別名將 [服務 FQDN] 解析成 Azure [服務名稱]  。 例如 `WallaceFalls.cloudapp.net`。  
+2. 它查詢 DNS，這會使用 CNAME 別名將 [服務 FQDN] 解析成 Azure [服務名稱]。 例如 `WallaceFalls.cloudapp.net`。  
 
 3. 它再次查詢 DNS，這會將 Azure 服務名稱解析成 Azure 公用 IP 位址。  
 
@@ -205,9 +205,9 @@ If you issue the server authentication certificate from your PKI, you may direct
 
 預設用戶端設定會自動啟用用戶端以使用雲端發佈點。 您可以使用下列用戶端設定，控制對您階層中所有雲端發佈點的存取：  
 
-- 在 [用戶端設定]  群組中，修改 [允許存取雲端發佈點]  設定。  
+- 在 [用戶端設定] 群組中，修改 [允許存取雲端發佈點] 設定。  
 
-    - 此設定預設會設定為 [是]  。  
+    - 此設定預設會設定為 [是]。  
 
     - 請為使用者和裝置修改及部署此設定。  
 
@@ -215,6 +215,8 @@ If you issue the server authentication certificate from your PKI, you may direct
 ## <a name="manage-and-monitor"></a><a name="bkmk_monitor"></a> 管理和監視  
 
 監視您發佈至雲端發佈點的內容，其方式與任何其他內部部署發佈點相同。 如需詳細資訊，請參閱[監視內容](monitor-content-you-have-distributed.md)。
+
+當在主控台中檢視雲端發佈點清單時，您可在清單中新增其他欄。 例如，[資料輸出] 欄會顯示過去 30 天內用戶端從服務下載的資料數量。<!-- SCCMDocs#755 -->
 
 ### <a name="alerts"></a><a name="bkmk_alerts"></a> 警示  
 
@@ -229,7 +231,7 @@ Configuration Manager 會定期檢查 Azure 服務。 如果該服務並未啟�
     > [!IMPORTANT]  
     > Configuration Manager 會監視資料傳輸，但不會在資料傳輸量超出指定的傳輸警示閾值時停止傳輸資料。  
 
-在安裝期間指定每個雲端發佈點的閾值，或使用雲端發佈點內容的 [警示]  索引標籤。  
+在安裝期間指定每個雲端發佈點的閾值，或使用雲端發佈點內容的 [警示] 索引標籤。  
 
 > [!NOTE]  
 > 雲端發佈點的警示因 Azure 的使用量統計資料而有所不同，最長可能要 24 小時後才能使用。 如需 Azure 儲存體分析的詳細資訊，請參閱 [Storage Analytics](https://docs.microsoft.com/rest/api/storageservices/storage-analytics) (儲存體分析)。  
@@ -242,7 +244,7 @@ Configuration Manager 會定期檢查 Azure 服務。 如果該服務並未啟�
 
 ## <a name="modify"></a><a name="bkmk_modify"></a> 修改
 
-在 Configuration Manager 主控台的 [系統管理]  工作區中，於 [雲端服務]  的 [雲端發佈點]  節點中，檢視發佈點的高階資訊。 選取發佈點，然後選取 [內容]  以檢視更多詳細資料。  
+在 Configuration Manager 主控台的 [系統管理] 工作區中，於 [雲端服務] 的 [雲端發佈點] 節點中，檢視發佈點的高階資訊。 選取發佈點，然後選取 [內容] 以檢視更多詳細資料。  
 
 當您編輯雲端發佈點的內容時，下列索引標籤包含可供編輯的設定：  
 
@@ -291,8 +293,8 @@ Configuration Manager 會定期檢查 Azure 服務。 如果該服務並未啟�
 > [!Tip]  
 > 判斷雲端發佈點目前的部署模型：<!--SCCMDocs issue #611-->  
 >
-> 1. 在設定管理員主控台中，移至 [系統管理]  工作區，展開 [雲端服務]  ，然後選取 [雲端發佈點]  節點。  
-> 2. 將 [部署模型]  屬性當作資料行新增至清單檢視。 若是 Resource Manager 部署，此屬性會是 [Azure Resource Manager]  。  
+> 1. 在設定管理員主控台中，移至 [系統管理] 工作區，展開 [雲端服務]，然後選取 [雲端發佈點] 節點。  
+> 2. 將 [部署模型] 屬性當作資料行新增至清單檢視。 若是 Resource Manager 部署，此屬性會是 [Azure Resource Manager]。  
 
 ### <a name="stop-or-start-the-cloud-service-on-demand"></a>依需求停止或啟動雲端服務
 
@@ -302,15 +304,15 @@ Configuration Manager 會定期檢查 Azure 服務。 如果該服務並未啟�
 
 使用下列程序可停止雲端發佈點：  
 
-1. 在 Configuration Manager 主控台中，移至 [系統管理]  工作區。 展開 [雲端服務]  ，然後選取 [雲端發佈點]  節點。  
+1. 在 Configuration Manager 主控台中，移至 [系統管理] 工作區。 展開 [雲端服務]，然後選取 [雲端發佈點] 節點。  
 
-2. 選取雲端發佈點。 若要停止在 Azure 中執行的雲端服務，請選取功能區中的 [停止服務]  。  
+2. 選取雲端發佈點。 若要停止在 Azure 中執行的雲端服務，請選取功能區中的 [停止服務]。  
 
-3. 選取 [啟動服務]  以重新啟動雲端發佈點。  
+3. 選取 [啟動服務] 以重新啟動雲端發佈點。  
 
 ### <a name="delete-a-cloud-distribution-point"></a>刪除雲端發佈點
 
-若要解除安裝雲端發佈點，請在 Configuration Manager 主控台中選取發佈點，然後選取 [刪除]  。  
+若要解除安裝雲端發佈點，請在 Configuration Manager 主控台中選取發佈點，然後選取 [刪除]。  
 
 當您從階層中刪除雲端發佈點時，Configuration Manager 會從 Azure 中的雲端服務移除內容。
 

@@ -5,17 +5,17 @@ description: 了解如何準備 Windows 10 網際網路型裝置以進行共同�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/24/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 59ca1006d8700e52b3f3fb703f8896ce9fa8b9b7
-ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
+ms.openlocfilehash: e6582599a02f4a8196ee739ca875df4d158a993e
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82137910"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427801"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>如何準備網際網路型裝置以進行共同管理
 
@@ -33,11 +33,11 @@ ms.locfileid: "82137910"
 
 使用 Configuration Manager 來收集和報告 Intune 所需的裝置資訊。 此資訊包括裝置序號、Windows 產品識別碼及硬體識別碼。 它用於在 Intune 中註冊裝置以支援 Windows Autopilot。
 
-1. 在 Configuration Manager 主控台中，移至 [監視]  工作區，依序展開 [報表]  節點和 [報表]  ，然後選取 [硬體 - 一般]  節點。  
+1. 在 Configuration Manager 主控台中，移至 [監視] 工作區，依序展開 [報表] 節點和 [報表]，然後選取 [硬體 - 一般] 節點。  
 
 2. 執行報表 **Windows AutoPilot 裝置資訊**，然後檢視結果。  
 
-3. 在報表檢視器中選取 [匯出]  圖示，然後選擇 [CSV (逗號分隔)]  選項。  
+3. 在報表檢視器中選取 [匯出] 圖示，然後選擇 [CSV (逗號分隔)] 選項。  
 
 4. 儲存檔案之後，將資料上傳至 Intune。  
 
@@ -59,11 +59,11 @@ ms.locfileid: "82137910"
 
 ### <a name="get-the-command-line-from-configuration-manager"></a>從 Configuration Manager 取得命令列
 
-1. 在 Configuration Manager 主控台中，移至 [系統管理]  工作區，展開 [雲端服務]  ，然後選取 [共同管理]  節點。  
+1. 在 Configuration Manager 主控台中，移至 [系統管理] 工作區，展開 [雲端服務]，然後選取 [共同管理] 節點。  
 
-2. 選取共同管理物件，然後在功能區中選擇 [屬性]  。  
+2. 選取共同管理物件，然後在功能區中選擇 [屬性]。  
 
-3. 在 [啟用]  索引標籤上，複製命令列。 將它貼到 [記事本] 並儲存，以準備供下一個程序使用。  
+3. 在 [啟用] 索引標籤上，複製命令列。 將它貼到 [記事本] 並儲存，以準備供下一個程序使用。  
 
 下列命令列是一個範例：`CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC"`
 
@@ -104,11 +104,11 @@ ms.locfileid: "82137910"
 
 ### <a name="create-the-app-in-intune"></a>在 Intune 中建立應用程式
 
-1. 移至 [Azure 入口網站](https://portal.azure.com)，然後開啟 [Intune] 頁面。  
+1. 前往 [Microsoft 端點管理員系統管理中心](https://endpoint.microsoft.com)，然後展開左側的瀏覽窗格。  
 
-2. 選取 [用戶端應用程式]   > [應用程式]   > [新增]  。  
+2. 選取 [應用程式] > [所有應用程式] > [新增]。  
 
-3. 在 [其他]  下，選取 [企業營運應用程式]  。  
+3. 在 [其他] 下，選取 [企業營運應用程式]。  
 
 4. 上傳 **ccmsetup.msi** 應用程式套件檔案。 在 Configuration Manager 站台伺服器上的下列資料夾中尋找此檔案：`<ConfigMgr installation directory>\bin\i386`。  
 

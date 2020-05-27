@@ -2,7 +2,7 @@
 title: Accessibility
 titleSuffix: Configuration Manager
 description: 深入了解可供所有人使用的 Configuration Manager 功能。
-ms.date: 03/27/2019
+ms.date: 05/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,16 +10,17 @@ ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f04b777f030f9e55e1d5b17ace9ec8b83d9f8679
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1b25b0137e24212cbad2ba688735e45d9fe9aac0
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906125"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556025"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Configuration Manager 的協助工具功能
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 
 Configuration Manager 包含協助所有人使用的功能。
@@ -45,17 +46,25 @@ Configuration Manager 包含協助所有人使用的功能。
 |Ctrl + 4|  系統管理|
 
 
-### <a name="other-keyboard-shortcuts"></a>其他鍵盤快速鍵
+### <a name="other-console-shortcuts"></a>其他主控台快速鍵
 
 |鍵盤快速鍵|  目的|
 |--------|--------|  
 |Ctrl + M|將焦點設定在主要 (中央) 窗格上。|
 |Ctrl + T|將焦點設定至瀏覽窗格中的最上層節點。 如果焦點已經在該窗格中，則會將焦點設定至您瀏覽的最後一個節點。|
 |Ctrl + I|將焦點設定至功能區下的階層連結列。|
-|Ctrl + L|將焦點設定至 [搜尋]  欄位 (如果可用)。|
+|Ctrl + L|將焦點設定至 [搜尋] 欄位 (如果可用)。|
 |Ctrl + D|將焦點設定至 [詳細資料] 窗格 (如果可用)。|
 |Alt     |在功能區內外切換焦點。|
 
+### <a name="cmpivot-shortcuts"></a><a name="bkmk_cmpshortcuts"></a> CMPivot 快速鍵
+
+大部分的[網頁瀏覽器鍵盤快速鍵](https://support.microsoft.com/help/17456/windows-internet-explorer-ease-of-access-options)都可以在 CMPivot 中使用。
+
+|鍵盤快速鍵|目的|
+|--------|--------|  
+|Ctrl + 1|將焦點設定於第一個索引標籤上。|
+|Alt + &lt;|返回位址|
 
 
 ## <a name="other-accessibility-features"></a>其他協助工具功能
@@ -85,7 +94,7 @@ Configuration Manager 包含協助所有人使用的功能。
 ## <a name="see-also"></a>請參閱
 
 如需巡覽 Configuration Manager 使用者介面之基本概念的相關詳細資訊，請參閱下列文章：
-- [使用 Configuration Manager 主控台](../servers/manage/admin-console.md)  
+- [使用 Configuration Manager 主控台](../servers/manage/admin-console.md)
 - [軟體中心使用者指南](software-center.md)
 
 > [!NOTE]  

@@ -10,18 +10,18 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e99efed5d506ddf30e818243ad8b899e8f8b8aca
-ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.openlocfilehash: b3ddd1a4b59ba750e9fca5f8386762b4a5dddb13
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82782108"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429846"
 ---
 # <a name="task-sequence-variables"></a>工作順序變數
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
-本文是所有可用變數 (依字母順序排列) 的參考。 請使用瀏覽器 [尋找]  功能 (通常是 **CTRL** + **F**) 來尋找特定變數。 變數會註明它是否是特定步驟的特定變數。 [工作順序步驟](task-sequence-steps.md)文章包含了每個步驟的特定變數清單。
+本文是所有可用變數 (依字母順序排列) 的參考。 請使用瀏覽器 [尋找] 功能 (通常是 **CTRL** + **F**) 來尋找特定變數。 變數會註明它是否是特定步驟的特定變數。 [工作順序步驟](task-sequence-steps.md)文章包含了每個步驟的特定變數清單。
 
 如需詳細資訊，請參閱[使用工作順序變數](using-task-sequence-variables.md)。
 
@@ -298,87 +298,87 @@ ms.locfileid: "82782108"
 
 ### <a name="_ts_crmemory"></a><a name="TSCRMEMORY"></a> _TS_CRMEMORY
 
-「從 2002 版開始」  <!--6005561-->  
-「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」 
+「從 2002 版開始」 <!--6005561-->  
+「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」
 
-[記憶體下限 (MB)]  檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
+[記憶體下限 (MB)] 檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
 
 ### <a name="_ts_crspeed"></a><a name="TSCRSPEED"></a> _TS_CRSPEED
 
-「從 2002 版開始」  <!--6005561-->  
-「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」 
+「從 2002 版開始」 <!--6005561-->  
+「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」
 
-[最低處理器速度 (MHz)]  檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
+[最低處理器速度 (MHz)] 檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
 
 ### <a name="_ts_crdisk"></a><a name="TSCRDISK"></a> _TS_CRDISK
 
-「從 2002 版開始」  <!--6005561-->  
-「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」 
+「從 2002 版開始」 <!--6005561-->  
+「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」
 
-[最小可用磁碟空間 (MB)]  檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
+[最小可用磁碟空間 (MB)] 檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
 
 ### <a name="_ts_crostype"></a><a name="TSCROSTYPE"></a> _TS_CROSTYPE
 
-「從 2002 版開始」  <!--6005561-->  
-「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」 
+「從 2002 版開始」 <!--6005561-->  
+「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」
 
-[要重新整理的目前 OS 為]  檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
+[要重新整理的目前 OS 為] 檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
 
 ### <a name="_ts_crarch"></a><a name="TSCRARCH"></a> _TS_CRARCH
 
-「從 2002 版開始」  <!--6005561-->  
-「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」 
+「從 2002 版開始」 <!--6005561-->  
+「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」
 
-[目前 OS 的架構]  檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
+[目前 OS 的架構] 檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
 
 ### <a name="_ts_crminosver"></a><a name="TSCRMINOSVER"></a> _TS_CRMINOSVER
 
-「從 2002 版開始」  <!--6005561-->  
-「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」 
+「從 2002 版開始」 <!--6005561-->  
+「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」
 
-[最低 OS 版本]  檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
+[最低 OS 版本] 檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
 
 ### <a name="_ts_crmaxosver"></a><a name="TSCRMAXOSVER"></a> _TS_CRMAXOSVER
 
-「從 2002 版開始」  <!--6005561-->  
-「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」 
+「從 2002 版開始」 <!--6005561-->  
+「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」
 
-[最高 OS 版本]  檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
+[最高 OS 版本] 檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
 
 ### <a name="_ts_crclientminver"></a><a name="TSCRCLIENTMINVER"></a> _TS_CRCLIENTMINVER
 
-「從 2002 版開始」  <!--6005561-->  
-「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」 
+「從 2002 版開始」 <!--6005561-->  
+「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」
 
-[用戶端最低版本]  檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
+[用戶端最低版本] 檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
 
 ### <a name="_ts_croslanguage"></a><a name="TSCROSLANGUAGE"></a> _TS_CROSLANGUAGE
 
-「從 2002 版開始」  <!--6005561-->  
-「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」 
+「從 2002 版開始」 <!--6005561-->  
+「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」
 
-[目前 OS 的語言]  檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
+[目前 OS 的語言] 檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
 
 ### <a name="_ts_cracpower"></a><a name="TSCRACPOWER"></a> _TS_CRACPOWER
 
-「從 2002 版開始」  <!--6005561-->  
-「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」 
+「從 2002 版開始」 <!--6005561-->  
+「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」
 
-[AC 電源已插入]  檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
+[AC 電源已插入] 檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
 
 ### <a name="_ts_crnetwork"></a><a name="TSCRNETWORK"></a> _TS_CRNETWORK
 
-「從 2002 版開始」  <!--6005561-->  
-「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」 
+「從 2002 版開始」 <!--6005561-->  
+「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」
 
-[網路介面卡已連線]  檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
+[網路介面卡已連線] 檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
 
 ### <a name="_ts_crwired"></a><a name="TSCRWIRED"></a> _TS_CRWIRED
 
-「從 2002 版開始」  <!--6005561-->  
-「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」 
+「從 2002 版開始」 <!--6005561-->  
+「適用於[檢查整備程度](task-sequence-steps.md#BKMK_CheckReadiness)步驟。」
 
-[網路介面卡並非無線]  檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
+[網路介面卡並非無線] 檢查是否已傳回 True (`1`) 或 False (`0`) 的唯讀變數。 若未啟用該檢查，則此唯讀變數的值為空白。
 
 ### <a name="_tsappinstallstatus"></a><a name="TSAppInstallStatus"></a> _TSAppInstallStatus
 
@@ -394,7 +394,7 @@ ms.locfileid: "82782108"
 
 ### <a name="_tssecureboot"></a><a name="TSSecureBoot"></a> _TSSecureBoot
 
-「從 2002 版開始」  <!--5842295-->  
+「從 2002 版開始」 <!--5842295-->  
 
 請使用此變數來判斷安全開機在已啟用 UEFI 裝置上的狀態。 這個變數可具有下列其中一個值：
 
@@ -408,11 +408,11 @@ ms.locfileid: "82782108"
 
 (input)
 
-這個工作順序變數是「陣列」  變數。 陣列中的每個項目都代表電腦上單一網路介面卡的設定。 藉由合併具有以零為起始之網路介面卡索引的陣列變數名稱與屬性名稱，存取每個介面卡的設定。
+這個工作順序變數是「陣列」變數。 陣列中的每個項目都代表電腦上單一網路介面卡的設定。 藉由合併具有以零為起始之網路介面卡索引的陣列變數名稱與屬性名稱，存取每個介面卡的設定。
 
-如果 [套用網路設定] 步驟會設定多個網路介面卡，它會使用變數名稱中的索引 **1** 來定義「第二個」  網路介面卡的內容。 例如：OSDAdapter1EnableDHCP、OSDAdapter1IPAddressList 及 OSDAdapter1DNSDomain。
+如果 [套用網路設定] 步驟會設定多個網路介面卡，它會使用變數名稱中的索引 **1** 來定義「第二個」網路介面卡的內容。 例如：OSDAdapter1EnableDHCP、OSDAdapter1IPAddressList 及 OSDAdapter1DNSDomain。
 
-請使用下列變數名稱來定義此步驟要設定之「第一個」  網路介面卡的內容：
+請使用下列變數名稱來定義此步驟要設定之「第一個」網路介面卡的內容：
 
 #### <a name="osdadapter0enabledhcp"></a>OSDAdapter0EnableDHCP
 
@@ -571,7 +571,7 @@ WINS 伺服器 IP 位址清單 (以逗號分隔)。 除非 **EnableWINS** 設定
 
 (input)
 
-驅動程式類別目錄類別唯一識別碼清單 (以逗號分隔)。 [自動套用驅動程式]  步驟只會考慮至少在其中一個指定類別中的驅動程式。 此值為選擇性，預設並不會設定此值。 列舉站台上的 **SMS_CategoryInstance** 物件清單，即可取得可用的類別識別碼。
+驅動程式類別目錄類別唯一識別碼清單 (以逗號分隔)。 [自動套用驅動程式] 步驟只會考慮至少在其中一個指定類別中的驅動程式。 此值為選擇性，預設並不會設定此值。 列舉站台上的 **SMS_CategoryInstance** 物件清單，即可取得可用的類別識別碼。
 
 ### <a name="osdbitlockerrebootcount"></a><a name="OSDBitLockerRebootCount"></a> OSDBitLockerRebootCount
 
@@ -601,7 +601,7 @@ WINS 伺服器 IP 位址清單 (以逗號分隔)。 除非 **EnableWINS** 設定
 
 (input)
 
-[啟用 BitLocker]  步驟會使用指定的值作為修復密碼，而不會產生隨機修復密碼。 值必須是有效的數值 BitLocker 修復密碼。
+[啟用 BitLocker] 步驟會使用指定的值作為修復密碼，而不會產生隨機修復密碼。 值必須是有效的數值 BitLocker 修復密碼。
 
 ### <a name="osdbitlockerstartupkey"></a><a name="OSDBitLockerStartupKey"></a> OSDBitLockerStartupKey
 
@@ -609,7 +609,7 @@ WINS 伺服器 IP 位址清單 (以逗號分隔)。 除非 **EnableWINS** 設定
 
 (input)
 
-[啟用 BitLocker]  步驟會使用信賴平台模組 (TPM) 作為啟動金鑰，而不是針對金鑰管理選項 [僅 USB 上的啟動金鑰]  產生隨機啟動金鑰。 值必須是有效的 256 位元 Base64 編碼的 BitLocker 啟動金鑰。
+[啟用 BitLocker] 步驟會使用信賴平台模組 (TPM) 作為啟動金鑰，而不是針對金鑰管理選項 [僅 USB 上的啟動金鑰] 產生隨機啟動金鑰。 值必須是有效的 256 位元 Base64 編碼的 BitLocker 啟動金鑰。
 
 ### <a name="osdcaptureaccount"></a><a name="OSDCaptureAccount"></a> OSDCaptureAccount
 
@@ -716,16 +716,16 @@ WINS 伺服器 IP 位址清單 (以逗號分隔)。 除非 **EnableWINS** 設定
 ### <a name="osddonotlogcommand"></a><a name="OSDDoNotLogCommand"></a> OSDDoNotLogCommand
 
 <!--1358493-->
-適用於[安裝套件](task-sequence-steps.md#BKMK_InstallPackage)步驟。 
+適用於[安裝套件](task-sequence-steps.md#BKMK_InstallPackage)步驟。
 
-從 1902 版開始   
+從 1902 版開始  
 *適用於[執行命令列](task-sequence-steps.md#BKMK_RunCommandLine)步驟。*
 
 (input)
 
-若要防止顯示或記錄潛在的機密資料，請將此變數設定為 `TRUE`。 此變數會在 [安裝套件]  步驟期間，為 **smsts.log** 中的程式名稱加上遮罩。
+若要防止顯示或記錄潛在的機密資料，請將此變數設定為 `TRUE`。 此變數會在 [安裝套件] 步驟期間，為 **smsts.log** 中的程式名稱加上遮罩。
 
-從 1902 版開始，當您將此變數設為 `TRUE` 時，它也會隱藏記錄檔的 [執行命令列]  步驟中的命令列。<!--3654172-->
+從 1902 版開始，當您將此變數設為 `TRUE` 時，它也會隱藏記錄檔的 [執行命令列] 步驟中的命令列。<!--3654172-->
 
 ### <a name="osdenabletcpipfiltering"></a><a name="OSDEnableTCPIPFiltering"></a> OSDEnableTCPIPFiltering
 
@@ -794,7 +794,7 @@ WINS 伺服器 IP 位址清單 (以逗號分隔)。 除非 **EnableWINS** 設定
 
 指定套用驅動程式套件時，要新增至 DISM 命令列的額外選項。 工作順序不會驗證命令列選項。
 
-若要使用此變數，請在 [套用驅動程式套件]  步驟上，啟用 [透過以遞迴選項執行 DISM 的套件安裝驅動程式]  設定。
+若要使用此變數，請在 [套用驅動程式套件] 步驟上，啟用 [透過以遞迴選項執行 DISM 的套件安裝驅動程式] 設定。
 
 如需詳細資訊，請參閱 [Windows 10 DSIM 命令列選項](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options) \(英文\)。
 
@@ -895,17 +895,17 @@ WINS 伺服器 IP 位址清單 (以逗號分隔)。 除非 **EnableWINS** 設定
 
 (input)
 
-指定本機系統管理員帳戶密碼。 如果您啟用 [隨機產生本機系統管理員密碼並在所有支援的平台上停用帳戶]  選項，則此步驟會忽略這個變數。 指定的值必須介於 1 到 255 個字元。
+指定本機系統管理員帳戶密碼。 如果您啟用 [隨機產生本機系統管理員密碼並在所有支援的平台上停用帳戶] 選項，則此步驟會忽略這個變數。 指定的值必須介於 1 到 255 個字元。
 
 ### <a name="osdlogpowershellparameters"></a><a name="OSDLogPowerShellParameters"></a> OSDLogPowerShellParameters
 
 <!--3556028-->
-從 1902 版開始   
-適用於[執行 PowerShell 指令碼](task-sequence-steps.md#BKMK_RunPowerShellScript)步驟。 
+從 1902 版開始  
+適用於[執行 PowerShell 指令碼](task-sequence-steps.md#BKMK_RunPowerShellScript)步驟。
 
 (input)
 
-為了防止可能記錄敏感資料，[執行 PowerShell 指令碼]  步驟不會在 **smsts.log** 檔案中記錄指令碼參數。 若要在工作順序記錄中包含指令碼參數，請將此變數設定為 [TRUE]  。
+為了防止可能記錄敏感資料，[執行 PowerShell 指令碼] 步驟不會在 **smsts.log** 檔案中記錄指令碼參數。 若要在工作順序記錄中包含指令碼參數，請將此變數設定為 [TRUE]。
 
 ### <a name="osdmigrateadaptersettings"></a><a name="OSDMigrateAdapterSettings"></a> OSDMigrateAdapterSettings
 
@@ -1030,7 +1030,7 @@ WINS 伺服器 IP 位址清單 (以逗號分隔)。 除非 **EnableWINS** 設定
 
 (input)
 
-如果 [OSDMigrateLocalAccounts](#OSDMigrateLocalAccounts) 變數為 `true`，此變數就必須包含指派給「所有」  已移轉之本機帳戶的密碼。 USMT 會將相同的密碼指派給所有已移轉的本機帳戶。 將此密碼視為暫時性的密碼，並在稍後以某種其他方法變更。
+如果 [OSDMigrateLocalAccounts](#OSDMigrateLocalAccounts) 變數為 `true`，此變數就必須包含指派給「所有」已移轉之本機帳戶的密碼。 USMT 會將相同的密碼指派給所有已移轉的本機帳戶。 將此密碼視為暫時性的密碼，並在稍後以某種其他方法變更。
 
 ### <a name="osdmigratemode"></a><a name="OSDMigrateMode"></a> OSDMigrateMode
 
@@ -1119,7 +1119,7 @@ WINS 伺服器 IP 位址清單 (以逗號分隔)。 除非 **EnableWINS** 設定
 
 此工作順序變數是磁碟分割設定的陣列變數。 陣列中的每個項目都代表硬碟上單一磁碟分割的設定。 藉由合併具有以零為起始之磁碟分割編號的陣列變數名稱與屬性名稱，存取為每個磁碟分割所定義的設定。
 
-請使用下列變數名稱來定義此步驟在硬碟上所建立「第一個」  磁碟分割的屬性：
+請使用下列變數名稱來定義此步驟在硬碟上所建立「第一個」磁碟分割的屬性：
 
 #### <a name="osdpartitions0type"></a>OSDPartitions0Type
 
@@ -1153,7 +1153,7 @@ WINS 伺服器 IP 位址清單 (以逗號分隔)。 除非 **EnableWINS** 設定
 
 當此步驟建立磁碟分割時，一律會使用 Windows PE 中的下一個可用磁碟機代號。 使用這個選擇性屬性來指定另一個工作順序變數的名稱。 步驟會使用這個變數來儲存新的磁碟機代號，供日後參考。
 
-如果您使用此工作順序步驟來定義多個磁碟分割，則會使用變數名稱中的 **1**索引來定義「第二個」  磁碟分割的屬性。 例如：**OSDPartitions1Type**、**OSDPartitions1FileSystem**、**OSDPartitions1Bootable**、**OSDPartitions1QuickFormat** 及 **OSDPartitions1VolumeName**。
+如果您使用此工作順序步驟來定義多個磁碟分割，則會使用變數名稱中的 **1**索引來定義「第二個」磁碟分割的屬性。 例如：**OSDPartitions1Type**、**OSDPartitions1FileSystem**、**OSDPartitions1Bootable**、**OSDPartitions1QuickFormat** 及 **OSDPartitions1VolumeName**。
 
 ### <a name="osdpartitionstyle"></a><a name="OSDPartitionStyle"></a> OSDPartitionStyle
 
@@ -1689,10 +1689,10 @@ Windows PE 對等快取為初始廣播所使用的自訂網路連接埠。 用�
 
 ### <a name="smstsruncommandlineasuser"></a><a name="SMSTSRunCommandLineAsUser"></a> SMSTSRunCommandLineAsUser
 
-「從 2002 版開始」  <!-- 5573175 -->  
+「從 2002 版開始」 <!-- 5573175 -->  
 *適用於[執行命令列](task-sequence-steps.md#BKMK_RunCommandLine)步驟。*
 
-使用工作順序變數以設定 [執行命令列]  步驟的使用者內容。 您不需要使用預留位置帳戶來設定 [執行命令列]  步驟，即可使用 [SMSTSRunCommandLineUserName](task-sequence-variables.md#SMSTSRunCommandLineUserName) 和 [SMSTSRunCommandLineUserPassword](task-sequence-variables.md#SMSTSRunCommandLineUserPassword) 變數。
+使用工作順序變數以設定 [執行命令列] 步驟的使用者內容。 您不需要使用預留位置帳戶來設定 [執行命令列] 步驟，即可使用 [SMSTSRunCommandLineUserName](task-sequence-variables.md#SMSTSRunCommandLineUserName) 和 [SMSTSRunCommandLineUserPassword](task-sequence-variables.md#SMSTSRunCommandLineUserPassword) 變數。
 
 使用下列其中一個值來設定 `SMSTSRunCommandLineAsUser`：
 
@@ -1711,7 +1711,7 @@ Windows PE 對等快取為初始廣播所使用的自訂網路連接埠。 用�
 > [!NOTE]
 > 從 2002 版開始，請使用 [SMSTSRunCommandLineAsUser](task-sequence-variables.md#SMSTSRunCommandLineAsUser) 變數搭配此變數來設定此步驟的使用者內容。
 >
-> 在 1910 版和更早版本中，請使用 [以下列帳戶的身分執行此步驟]  的設定來設定 [執行命令列]  步驟。 當您啟用此選項時，如果您要使用變數來設定使用者名稱與密碼，請指定帳戶的任何值。
+> 在 1910 版和更早版本中，請使用 [以下列帳戶的身分執行此步驟] 的設定來設定 [執行命令列] 步驟。 當您啟用此選項時，如果您要使用變數來設定使用者名稱與密碼，請指定帳戶的任何值。
 
 如需有關工作順序執行身分帳戶的詳細資訊，請參閱[帳戶](../../core/plan-design/hierarchy/accounts.md#task-sequence-run-as-account)。
 
@@ -1725,33 +1725,33 @@ Windows PE 對等快取為初始廣播所使用的自訂網路連接埠。 用�
 
 ### <a name="smstsrunpowershellasuser"></a><a name="SMSTSRunPowerShellAsUser"></a> SMSTSRunPowerShellAsUser
 
-「從 2002 版開始」  <!-- 5573175 -->  
-適用於[執行 PowerShell 指令碼](task-sequence-steps.md#BKMK_RunPowerShellScript)步驟。 
+「從 2002 版開始」 <!-- 5573175 -->  
+適用於[執行 PowerShell 指令碼](task-sequence-steps.md#BKMK_RunPowerShellScript)步驟。
 
-使用工作順序變數以設定 [執行 PowerShell 指令碼]  步驟的使用者內容。 您不需要使用預留位置帳戶來設定 [執行 PowerShell 指令碼]  步驟，即可使用 [SMSTSRunPowerShellUserName](task-sequence-variables.md#SMSTSRunPowerShellUserName) 和 [SMSTSRunPowerShellUserPassword](task-sequence-variables.md#SMSTSRunPowerShellUserPassword) 變數。
+使用工作順序變數以設定 [執行 PowerShell 指令碼] 步驟的使用者內容。 您不需要使用預留位置帳戶來設定 [執行 PowerShell 指令碼] 步驟，即可使用 [SMSTSRunPowerShellUserName](task-sequence-variables.md#SMSTSRunPowerShellUserName) 和 [SMSTSRunPowerShellUserPassword](task-sequence-variables.md#SMSTSRunPowerShellUserPassword) 變數。
 
 使用下列其中一個值來設定 `SMSTSRunPowerShellAsUser`：
 
-- `true`：任何進一步的 [執行 PowerShell 指令碼]  步驟都會在 `SMSTSRunPowerShellUserName` 中所指定的使用者內容中執行。
+- `true`：任何進一步的 [執行 PowerShell 指令碼] 步驟都會在 `SMSTSRunPowerShellUserName` 中所指定的使用者內容中執行。
 
-- `false`：任何進一步的 [執行 PowerShell 指令碼]  步驟都會在您於此步驟上所設定的內容中執行。
+- `false`：任何進一步的 [執行 PowerShell 指令碼] 步驟都會在您於此步驟上所設定的內容中執行。
 
 ### <a name="smstsrunpowershellusername"></a><a name="SMSTSRunPowerShellUserName"></a> SMSTSRunPowerShellUserName
 
-適用於[執行 PowerShell 指令碼](task-sequence-steps.md#BKMK_RunPowerShellScript)步驟。 
+適用於[執行 PowerShell 指令碼](task-sequence-steps.md#BKMK_RunPowerShellScript)步驟。
 
 (input)
 
 指定用來執行 PowerShell 指令碼的帳戶。 值是「使用者名稱」或「網域\使用者名稱」形式的字串。 使用 [SMSTSRunPowerShellUserPassword](#SMSTSRunPowerShellUserPassword) 變數來指定帳戶密碼。
 
 > [!NOTE]
-> 若要使用這些變數，請使用設定來設定 [執行 PowerShell 指令碼]  步驟，以 [以下列帳戶的身分執行此步驟]  。 當您啟用此選項時，如果您要使用變數來設定使用者名稱與密碼，請指定帳戶的任何值。
+> 若要使用這些變數，請使用設定來設定 [執行 PowerShell 指令碼] 步驟，以 [以下列帳戶的身分執行此步驟]。 當您啟用此選項時，如果您要使用變數來設定使用者名稱與密碼，請指定帳戶的任何值。
 
 如需有關工作順序執行身分帳戶的詳細資訊，請參閱[帳戶](../../core/plan-design/hierarchy/accounts.md#task-sequence-run-as-account)。
 
 ### <a name="smstsrunpowershelluserpassword"></a><a name="SMSTSRunPowerShellUserPassword"></a> SMSTSRunPowerShellUserPassword
 
-適用於[執行 PowerShell 指令碼](task-sequence-steps.md#BKMK_RunPowerShellScript)步驟。 
+適用於[執行 PowerShell 指令碼](task-sequence-steps.md#BKMK_RunPowerShellScript)步驟。
 
 (input)
 
@@ -1825,13 +1825,17 @@ Windows PE 對等快取為初始廣播所使用的自訂網路連接埠。 用�
 
 ### <a name="tsprogressinfolevel"></a><a name="TSProgressInfoLevel"></a> TSProgressInfoLevel
 
-「從 2002 版開始」 <!--5932692-->  
+「從 2002 版開始」<!--5932692-->  
 
 指定此變數來控制工作順序進度視窗所顯示的資訊類型。 針對此變數使用下列值：
 
 - `1`：將目前步驟與步驟總數包含在進度文字中。 例如，**2/10**。
 - `2`：將目前步驟、步驟總數以及已完成的百分比包含在其中。 例如，**2/10 (完成20%)** 。
 - `3`：將已完成的百分比包含在其中。 例如， **(完成20%)** 。
+
+### <a name="tsuefidrive"></a><a name="TSUEFIDrive"></a> TSUEFIDrive
+
+用於 [變數] 欄位中的 FAT32 磁碟分割屬性。 當工作順序偵測到此變數時，即會準備轉換為 UEFI 的磁碟，然後重新啟動電腦。 如需詳細資訊，請參閱[管理將 BIOS 轉換為 UEFI 的工作順序步驟](../deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md)。
 
 ### <a name="workingdirectory"></a><a name="WorkingDirectory"></a> WorkingDirectory
 
@@ -1864,7 +1868,7 @@ Windows PE 對等快取為初始廣播所使用的自訂網路連接埠。 用�
 >
 > 在 OS 部署期間，Windows 安裝程式預設會決定要使用的最佳磁碟機代號 (通常是 C:)。
 
-*先前的行為*：套用映像時，OSDPreserveDriveLetter 變數會決定工作順序是否要使用映像檔 (WIM) 中所擷取的磁碟機代號。 將此變數的值設定為 `false`，即可使用您在 [套用作業系統]  工作順序步驟中為 [目的地]  設定指定的位置。 如需詳細資訊，請參閱[套用 OS 映像](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)。
+*先前的行為*：套用映像時，OSDPreserveDriveLetter 變數會決定工作順序是否要使用映像檔 (WIM) 中所擷取的磁碟機代號。 將此變數的值設定為 `false`，即可使用您在 [套用作業系統] 工作順序步驟中為 [目的地] 設定指定的位置。 如需詳細資訊，請參閱[套用 OS 映像](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)。
 
 
 ## <a name="see-also"></a>請參閱

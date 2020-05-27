@@ -10,16 +10,16 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1166d4c674207ed3590901465ca90a98ce3ae78f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4403c8d0c57fba8fb63e3df729fb8a48ff123362
+ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075059"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732868"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>使用 Configuration Manager 管理開機映像
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 Configuration Manager 中的開機映像是 OS 部署期間所使用的 [Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-intro) \(英文\) (WinPE) 映像。 開機映像可用來啟動 WinPE 中的電腦。 這個基本的 OS 包含有限的元件和服務。 Configuration Manager 會使用 WinPE 來準備要安裝 Windows 的目的地電腦。
 
@@ -54,21 +54,21 @@ Configuration Manager 提供兩種預設開機映像：一種支援 x86 平台�
 
 ### <a name="update-distribution-points-with-the-boot-image"></a>使用開機映像更新發佈點
 
-當您在主控台中從 [開機映像]  節點使用 [更新發佈點]  動作時，站台會使用用戶端元件、驅動程式及自訂來更新目標開機映像。
+當您在主控台中從 [開機映像] 節點使用 [更新發佈點] 動作時，站台會使用用戶端元件、驅動程式及自訂來更新目標開機映像。
 
-您可以從 Windows ADK 安裝目錄重新載入具有最新 WinPE 版本的開機映像。 「更新發佈點」精靈的 [一般]  頁面會提供下列資訊：
+您可以從 Windows ADK 安裝目錄重新載入具有最新 WinPE 版本的開機映像。 「更新發佈點」精靈的 [一般] 頁面會提供下列資訊：
 
 - 站台伺服器上目前安裝的 Windows ADK 版本
 - 目前的生產環境用戶端版本
 - 開機映像中 WinPE 的 Windows ADK 版本
 - 開機映像中的 Configuration Manager 用戶端版本
 
-如果開機映像中的版本過時，請使用 [從 Windows ADK 重新載入具備目前 Windows PE 版本的此開機映像]  的選項。
+如果開機映像中的版本過時，請使用 [從 Windows ADK 重新載入具備目前 Windows PE 版本的此開機映像] 的選項。
 
 > [!Important]  
 > 此動作適用於預設和自訂開機映像。 在這個重新載入開機映像的流程中，站台不會保留任何在 Configuration Manager 以外手動進行的自訂。 這些自訂包括協力廠商延伸模組。 此選項會使用最新的 WinPE 版本和最新的用戶端版本來重建開機映像。 系統只會重新套用您在開機映像屬性中指定的設定。 <!--SCCMDocs issue #1283-->
 
-[開機映像]  節點也包括一個新的 (**用戶端版本**) 資料行。 您可以使用此資料行來快速檢視每個開機映像中的 Configuration Manager 用戶端版本。
+[開機映像] 節點也包括一個新的 (**用戶端版本**) 資料行。 您可以使用此資料行來快速檢視每個開機映像中的 Configuration Manager 用戶端版本。
 
 ## <a name="customize-a-boot-image"></a><a name="BKMK_BootImageCustom"></a> 自訂開機映像  
 
@@ -84,7 +84,7 @@ Configuration Manager 提供兩種預設開機映像：一種支援 x86 平台�
 |---------|---------|
 | Windows ADK 版本 | Windows ADK for Windows 10 |
 | 可從 Configuration Manager 主控台自訂之開機映像的 Windows PE 版本 | Windows PE 10 |
-| 「無法」  從 Configuration Manager 主控台自訂的開機映像所支援的 Windows PE 版本 | - Windows PE 3.1<sup>[附註 1](#bkmk_note1)</sup> <br> - Windows PE 5 |
+| 「無法」從 Configuration Manager 主控台自訂的開機映像所支援的 Windows PE 版本 | - Windows PE 3.1<sup>[附註 1](#bkmk_note1)</sup> <br> - Windows PE 5 |
 
 例如，使用 Configuration Manager 主控台來根據 Windows PE 10 (來自適用於 Windows 10 的 Windows ADK) 自訂開機映像。 針對以 Windows PE 5 為基礎的開機映像，請使用來自適用於 Windows 8 之 Windows ADK 的 DISM 版本，從不同電腦來自訂它。 接著，將自訂的開機映像新增到 Configuration Manager 主控台。 如需詳細資訊，請參閱下列文章：
 
@@ -97,32 +97,32 @@ Configuration Manager 提供兩種預設開機映像：一種支援 x86 平台�
 > [!NOTE]
 > **附註 1：支援 Windows PE 3.1**
 >
-> 只會根據 Windows PE「3.1 版」  ，將開機映像新增至 Configuration Manager。 請使用適用於 Windows 7 SP1 的 Windows AIK 補充元件 (以 Windows PE 3.1 為基礎) 來升級適用於 Windows 7 的 Windows AIK (以 Windows PE 3.0 為基礎)。 請從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=5188)下載適用於 Windows 7 SP1 的 Windows AIK 補充元件。  
+> 只會根據 Windows PE「3.1 版」，將開機映像新增至 Configuration Manager。 請使用適用於 Windows 7 SP1 的 Windows AIK 補充元件 (以 Windows PE 3.1 為基礎) 來升級適用於 Windows 7 的 Windows AIK (以 Windows PE 3.0 為基礎)。 請從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=5188)下載適用於 Windows 7 SP1 的 Windows AIK 補充元件。  
 
-1. 在 Configuration Manager 主控台中，前往 [軟體程式庫]  工作區，展開 [作業系統]  ，然後選取 [開機映像]  節點。  
+1. 在 Configuration Manager 主控台中，前往 [軟體程式庫] 工作區，展開 [作業系統]，然後選取 [開機映像] 節點。  
 
-2. 在功能區 [常用]  索引標籤上的 [建立]  群組中，選取 [新增開機映像]  。 此動作會啟動 [新增開機映像精靈]。  
+2. 在功能區 [常用] 索引標籤上的 [建立] 群組中，選取 [新增開機映像]。 此動作會啟動 [新增開機映像精靈]。  
 
-3. 在 [資料來源]  頁面上，指定下列選項：  
+3. 在 [資料來源] 頁面上，指定下列選項：  
 
     - 在 [路徑]  方塊中，指定開機映像 WIM 檔案的路徑。 指定的路徑必須是使用 UNC 格式的有效網路路徑。 例如：`\\ServerName\ShareName\BootImageName.wim`
 
     - 從 [開機映像]  下拉式清單選取開機映像。 如果 WIM 檔案包含多個開機映像，請選取適當的映像。  
 
-4. 在 [一般]  頁面上，指定下列選項：  
+4. 在 [一般] 頁面上，指定下列選項：  
 
     - 在 [名稱]  方塊中，為開機映像指定唯一的名稱。  
 
     - 在 [版本]  方塊中，指定開機映像的版本號碼。  
 
-    - 在 [註解]  方塊中，指定您如何使用開機映像的簡單描述。  
+    - 在 [註解] 方塊中，指定您如何使用開機映像的簡單描述。  
 
 5. 完成精靈。  
 
-開機映像現在會列在 [開機映像]  節點中。 使用開機映像部署 OS 之前，先將開機映像發佈至發佈點。
+開機映像現在會列在 [開機映像] 節點中。 使用開機映像部署 OS 之前，先將開機映像發佈至發佈點。
 
 > [!Tip]  
-> 在主控台的 [開機映像]  節點中，[大小 (KB)]  欄會顯示每個開機映像解壓縮後的大小。 當站台透過網路傳送開機映像時，會傳送已壓縮的複本。 此複本通常小於 [大小 (KB)]  欄中所列的大小。  
+> 在主控台的 [開機映像] 節點中，[大小 (KB)] 欄會顯示每個開機映像解壓縮後的大小。 當站台透過網路傳送開機映像時，會傳送已壓縮的複本。 此複本通常小於 [大小 (KB)] 欄中所列的大小。  
 
 ## <a name="distribute-boot-images"></a><a name="BKMK_DistributeBootImages"></a> 發佈開機映像  
 
@@ -150,33 +150,33 @@ Configuration Manager 提供兩種預設開機映像：一種支援 x86 平台�
 
 ### <a name="modify-the-properties-of-a-boot-image"></a>修改開機映像的屬性  
 
-1. 在 Configuration Manager 主控台中，前往 [軟體程式庫]  工作區，展開 [作業系統]  ，然後選取 [開機映像]  節點。  
+1. 在 Configuration Manager 主控台中，前往 [軟體程式庫] 工作區，展開 [作業系統]，然後選取 [開機映像] 節點。  
 
 2. 選取要修改的開機映像。  
 
-3. 在功能區 [常用]  索引標籤的 [內容]  群組中，選取 [內容]  。  
+3. 在功能區 [常用] 索引標籤的 [內容] 群組中，選取 [內容]。  
 
 4. 設定下列其中一個設定以變更開機映像的行為：  
 
 #### <a name="images"></a>映像
 
-在 [映像]  索引標籤上，如果您使用外部工具來變更開機映像屬性，請選取 [重新載入]  。  
+在 [映像] 索引標籤上，如果您使用外部工具來變更開機映像屬性，請選取 [重新載入]。  
 
 #### <a name="drivers"></a>驅動程式
 
-在 [驅動程式]  索引標籤上，新增啟動 WinPE 所需的 Windows 裝置驅動程式。 新增裝置驅動程式時，請考量下列幾點：  
+在 [驅動程式] 索引標籤上，新增啟動 WinPE 所需的 Windows 裝置驅動程式。 新增裝置驅動程式時，請考量下列幾點：  
 
 - 確定您新增到開機映像中的驅動程式符合開機映像的架構。  
 
-- 若只要顯示適用於開機映像架構的驅動程式，請選取 [隱藏不符合開機映像架構的驅動程式]  。 驅動程式的架構會以製造商在 INF 中所回報的架構為準。  
+- 若只要顯示適用於開機映像架構的驅動程式，請選取 [隱藏不符合開機映像架構的驅動程式]。 驅動程式的架構會以製造商在 INF 中所回報的架構為準。  
 
 - WinPE 已經隨附許多內建的驅動程式。 只需新增 WinPE 中未包括的網路和存放裝置驅動程式。  
 
 - 除非 WinPE 中需要其他驅動程式，否則，只需在開機映像中新增網路和存放裝置驅動程式。  
 
-- 若只要顯示存放裝置和網路驅動程式，請選取 [隱藏不在儲存體或網路類別中的驅動程式 (針對開機映像)]  。 此選項也會隱藏開機映像通常不需要的其他驅動程式，例如影片或數據機驅動程式。  
+- 若只要顯示存放裝置和網路驅動程式，請選取 [隱藏不在儲存體或網路類別中的驅動程式 (針對開機映像)]。 此選項也會隱藏開機映像通常不需要的其他驅動程式，例如影片或數據機驅動程式。  
 
-- 若要隱藏未具有效數位簽章的驅動程式，請選取 [隱藏未數位簽署的驅動程式]  。  
+- 若要隱藏未具有效數位簽章的驅動程式，請選取 [隱藏未數位簽署的驅動程式]。  
 
 > [!NOTE]  
 > 先將裝置驅動程式匯入至驅動程式類別目錄，然後才能將它們新增至開機映像。 如需如何匯入裝置驅動程式的相關資訊，請參閱[管理驅動程式](manage-drivers.md)。  
@@ -185,7 +185,7 @@ Configuration Manager 提供兩種預設開機映像：一種支援 x86 平台�
 
 在 [自訂]  索引標籤上，選取下列其中一項設定：  
 
-- 選取 [啟用啟動前置命令]  選項，以指定要在工作順序執行前執行的命令。 啟用此選項時，請一併指定命令列來執行命令所需的任何支援檔案。  
+- 選取 [啟用啟動前置命令] 選項，以指定要在工作順序執行前執行的命令。 啟用此選項時，請一併指定命令列來執行命令所需的任何支援檔案。  
 
     > [!WARNING]  
     > 在命令列的開頭加上 `cmd /c`。 如果未指定 `cmd /c`，則命令就不會在執行之後關閉。 部署會繼續等待命令完成，而不會開始執行任何其他已設定的命令或動作。  
@@ -201,17 +201,12 @@ Configuration Manager 提供兩種預設開機映像：一種支援 x86 平台�
 
 - **設定 WinPE 中的預設鍵盤配置**： <!--4910348-->從 1910 版開始，請設定開機映像的預設鍵盤配置。 如果您選取 en-us 以外的語言，Configuration Manager 仍會在可用的輸入地區設定中包含 en-us。 在裝置上，初始鍵盤配置是選取的地區設定，但使用者可以視需要將裝置切換為 en-us。
 
-    > [!Tip]
-    > [Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) PowerShell Cmdlet 現在包含新的參數 `-InputLocale`。 例如：
-    >
-    > ```PowerShell
-    > # Set boot image keyboard layout to Russian (Russia)
-    > Set-CMBootimage -Id "CM100004" -InputLocale "ru-ru"`
-    > ```
+> [!Tip]
+> 使用 [Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) PowerShell Cmdlet 從指令碼中進行這些設定。
 
 #### <a name="optional-components"></a>選擇性元件
 
-在 [選用元件]  索引標籤上，指定已新增至 Windows PE 以搭配 Configuration Manager 使用的元件。 如需可用選用元件的詳細資訊，請參閱 [WinPE:Add packages (Optional Components Reference)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference) (WinPE：新增套件 (選用元件參考))。  
+在 [選用元件] 索引標籤上，指定已新增至 Windows PE 以搭配 Configuration Manager 使用的元件。 如需可用選用元件的詳細資訊，請參閱 [WinPE:Add packages (Optional Components Reference)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference) (WinPE：新增套件 (選用元件參考))。  
 
 下列元件均為 Configuration Manager 的必要項，一律會新增到開機映像：
 
@@ -220,7 +215,7 @@ Configuration Manager 提供兩種預設開機映像：一種支援 x86 平台�
 - 網路 (WinPE-WDS-Tools)
 - 指令碼 (WinPE-WMI)
 
-[元件]  清單會顯示其他已新增至此開機映像的項目。 若要新增更多元件，請選取金色星號。 若要移除元件，從清單中選取它，然後選取紅色的 X。
+[元件] 清單會顯示其他已新增至此開機映像的項目。 若要新增更多元件，請選取金色星號。 若要移除元件，從清單中選取它，然後選取紅色的 X。
 
 客戶通常會使用下列元件：
 
@@ -234,33 +229,33 @@ Configuration Manager 提供兩種預設開機映像：一種支援 x86 平台�
 
 在 [資料來源]  索引標籤上，更新下列其中一項設定：  
 
-- 若要變更開機映像的來源檔案，請設定 [映像路徑]  和 [映像索引]  。  
+- 若要變更開機映像的來源檔案，請設定 [映像路徑] 和 [映像索引]。  
 
-- 若要建立站台更新開機映像的排程，請選取 [按照排程更新發佈點]  。  
+- 若要建立站台更新開機映像的排程，請選取 [按照排程更新發佈點]。  
 
-- 如果不想要讓此套件的內容在用戶端快取中因到期而被清除以將空間騰出給其他內容使用，請選取 [將內容保存在用戶端快取中]  。  
+- 如果不想要讓此套件的內容在用戶端快取中因到期而被清除以將空間騰出給其他內容使用，請選取 [將內容保存在用戶端快取中]。  
 
-- 若要指定站台在更新發佈點上的開機映像套件時只發佈已變更的檔案，請選取 [啟用二進位差異複寫]  (BDR)。 此設定可將站台間的網路流量降到最低。 當開機映像套件很大而變更相對較小時，BDR 特別有用。  
+- 若要指定站台在更新發佈點上的開機映像套件時只發佈已變更的檔案，請選取 [啟用二進位差異複寫] (BDR)。 此設定可將站台間的網路流量降到最低。 當開機映像套件很大而變更相對較小時，BDR 特別有用。  
 
-- 如果您是在支援 PXE 的部署中使用開機映像，請選取 [從支援 PXE 的發佈點部署此開機映像]  。 如需詳細資訊，請參閱[使用 PXE 透過網路部署 Windows](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md)。  
+- 如果您是在支援 PXE 的部署中使用開機映像，請選取 [從支援 PXE 的發佈點部署此開機映像]。 如需詳細資訊，請參閱[使用 PXE 透過網路部署 Windows](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md)。  
 
 #### <a name="data-access"></a>資料存取
 
-在 [資料存取]  索引標籤上，您可以設定套件共用設定。 如果您的環境中需要，請將選項設定為 [將此套件中的內容複製到發佈點上的套件共用]  。 您接著會有 [針對套件共用使用自訂名稱]  的其他選項，並指定自訂的**共用名稱**。 當您啟用此選項時，發佈點上需要額外的磁碟空間。 它適用於所有接收此開機映像的發佈點。
+在 [資料存取] 索引標籤上，您可以設定套件共用設定。 如果您的環境中需要，請將選項設定為 [將此套件中的內容複製到發佈點上的套件共用]。 您接著會有 [針對套件共用使用自訂名稱] 的其他選項，並指定自訂的**共用名稱**。 當您啟用此選項時，發佈點上需要額外的磁碟空間。 它適用於所有接收此開機映像的發佈點。
 
 #### <a name="distribution-settings"></a>發佈設定
 
 在 [發佈設定]  索引標籤上，選取下列其中一項設定：  
 
-- 在 [發佈優先順序]  清單中，指定優先順序層級。 當站台將多個套件發佈至相同的發佈點時，Configuration Manager 會使用此優先順序清單。  
+- 在 [發佈優先順序] 清單中，指定優先順序層級。 當站台將多個套件發佈至相同的發佈點時，Configuration Manager 會使用此優先順序清單。  
 
-- 如果您想要對慣用發佈點啟用隨選內容發佈，請選取 [啟用隨選發佈]  。 啟用此設定時，如果用戶端要求套件的內容，而所有發佈點上都沒有該內容時，則管理點會發佈該內容。 如需詳細資訊，請參閱[依需求散發內容](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#on-demand-content-distribution)。  
+- 如果您想要對慣用發佈點啟用隨選內容發佈，請選取 [啟用隨選發佈]。 啟用此設定時，如果用戶端要求套件的內容，而所有發佈點上都沒有該內容時，則管理點會發佈該內容。 如需詳細資訊，請參閱[依需求散發內容](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#on-demand-content-distribution)。  
 
-- 若要指定要讓站台如何將開機映像發佈至已針對預先設置的內容啟用的發佈點，請設定 [預先設置的發佈點設定]  。 如需預先設置內容的詳細資訊，請參閱 [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_prestage)。  
+- 若要指定要讓站台如何將開機映像發佈至已針對預先設置的內容啟用的發佈點，請設定 [預先設置的發佈點設定]。 如需預先設置內容的詳細資訊，請參閱 [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_prestage)。  
 
 #### <a name="content-locations"></a>內容位置
 
-在 [內容位置]  索引標籤上，選取發佈點或發佈點群組，並執行下列動作：  
+在 [內容位置] 索引標籤上，選取發佈點或發佈點群組，並執行下列動作：  
 
 - **驗證**：檢查所選取的發佈點或發佈點群組上開機映像套件的完整性。  
 
@@ -270,26 +265,26 @@ Configuration Manager 提供兩種預設開機映像：一種支援 x86 平台�
 
 #### <a name="security"></a>安全性
 
-在 [安全性]  索引標籤上，檢視具備此物件權限的系統管理使用者。
+在 [安全性] 索引標籤上，檢視具備此物件權限的系統管理使用者。
 
 ## <a name="configure-a-boot-image-for-pxe"></a><a name="BKMK_BootImagePXE"></a> 設定適用於 PXE 的開機映像  
 
 您需要設定開機映像以從支援 PXE 的發佈點進行部署，才能使用開機映像進行支援 PXE 的部署。  
 
-1. 在 Configuration Manager 主控台中，前往 [軟體程式庫]  工作區，展開 [作業系統]  ，然後選取 [開機映像]  節點。  
+1. 在 Configuration Manager 主控台中，前往 [軟體程式庫] 工作區，展開 [作業系統]，然後選取 [開機映像] 節點。  
 
 2. 選取要修改的開機映像。  
 
-3. 在功能區 [常用]  索引標籤的 [內容]  群組中，選取 [內容]  。  
+3. 在功能區 [常用] 索引標籤的 [內容] 群組中，選取 [內容]。  
 
-4. 在 [資料來源]  索引標籤上，選取 [從支援 PXE 的發佈點部署此開機映像]  。 如需詳細資訊，請參閱[使用 PXE 透過網路部署 Windows](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md)。  
+4. 在 [資料來源]  索引標籤上，選取 [從支援 PXE 的發佈點部署此開機映像] 。 如需詳細資訊，請參閱[使用 PXE 透過網路部署 Windows](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md)。  
 
 ## <a name="configure-multiple-languages"></a><a name="BKMK_BootImageLanguage"></a> 設定多個語言
 
 > [!TIP]
 > 從 1910 版開始，請在開機映像的屬性上設定預設鍵盤配置。 如需詳細資訊，請參閱[自訂](#customization)。<!--4910348-->
 
-開機映像與語言無關。 此功能可讓您在 WinPE 中時，使用一個開機映像以多種語言顯示工作順序文字。 請從開機映像 [選用元件]  索引標籤，納入適當的語言支援。接著，設定適當的工作順序變數以包含要顯示的語言。 所部署 OS 的語言不會受到 WinPE 中的語言所影響。 WinPE 向使用者顯示的語言取決於下列因素：  
+開機映像與語言無關。 此功能可讓您在 WinPE 中時，使用一個開機映像以多種語言顯示工作順序文字。 請從開機映像 [選用元件] 索引標籤，納入適當的語言支援。接著，設定適當的工作順序變數以包含要顯示的語言。 所部署 OS 的語言不會受到 WinPE 中的語言所影響。 WinPE 向使用者顯示的語言取決於下列因素：  
 
 - 當使用者從現有 OS 執行工作順序時，Configuration Manager 會自動使用為該使用者所設定的語言。 當工作順序因為強制部署期限的結果而自動執行時，Configuration Manager 會使用 OS 的語言。  
 

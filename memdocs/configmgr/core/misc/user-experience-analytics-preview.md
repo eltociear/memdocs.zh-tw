@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 6f481fa54a8018137a4b45bc62f6fde9c1f1165b
-ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
+ms.openlocfilehash: c7a99931db27b6a55c9e0722cc12c1d7a9cc9e80
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83381568"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764232"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a> 端點分析預覽
 
@@ -102,6 +102,8 @@ ms.locfileid: "83381568"
 
 針對主動式補救，使用者需要 [裝置設定] 類別底下適用於其角色的權限。  如果使用者只使用主動式補救，則不需要 [端點分析] 目錄中的權限。
 
+第一次使用主動式補救之前，需要透過 [Intune 服務管理員](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions)確認授權需求。
+
 ## <a name="start-gathering-data"></a><a name="bkmk_uea_start"></a> 開始收集資料
 - 如果您只要註冊 Intune 受控裝置，請跳到[在端點分析入口網站中上線](#bkmk_uea_onboard)一節。
 
@@ -112,7 +114,7 @@ ms.locfileid: "83381568"
 
 ### <a name="enroll-devices-managed-by-configuration-manager"></a><a name="bkmk_uea_cm_enroll"></a> 註冊由 Configuration Manager 管理的裝置
 <!--6051638, 5924760-->
-在您註冊 Configuration Manager 裝置之前，請先確認包括啟用 [Microsoft Endpoint Manager 租用戶附加](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) \(部分機器翻譯\) 在內的[必要條件](#bkmk_uea_prereq)。 如果您只要註冊 Intune 受控裝置，請跳到[在端點分析入口網站中上線](#bkmk_uea_onboard)一節。
+在您註冊 Configuration Manager 裝置之前，請先確認包括啟用 [Microsoft Endpoint Manager 租用戶附加](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) \(部分機器翻譯\) 在內的[必要條件](#bkmk_uea_prereq)。 
 
 #### <a name="enable-endpoint-analytics-data-collection-in-configuration-manager"></a><a name="bkmk_uea_cm_enable"></a> 在 Configuration Manager 中啟用端點分析資料收集
 
@@ -238,7 +240,7 @@ Microsoft Intune 為使用者提供數項生產力優勢，包括即使公司資
 [啟動效能] 頁面具有可為見解提供支援的 [報表] 索引標籤，包括：
 1. [型號效能]。 此索引標籤可讓您依裝置型號查看開機與登入效能，有助於您識別效能問題是否僅限於特定型號。
 1. [裝置效能]。 此索引標籤提供所有裝置的開機與登入計量。 您可以依特定計量 (例如 GP 登入時間) 排序，以查看哪些裝置的該計量分數最差，以協助進行疑難排解。 您也可以依名稱搜尋裝置。 如果您按一下裝置，便可以看到其開機與登入歷程，有助於您識別是否有最近的迴歸
-1. [啟動處理序]。 此索引標籤 (若有顯示；因為我們仍在開發這項功能，所以我們只會對某些人員發行小眾測試版) 會顯示哪些處理序正在影響登入「回應式桌面的時間」階段；這會將桌面轉譯後的 CPU 維持在 50% 以上。
+1. [啟動處理序]。 啟動處理序可能會增加使用者必須等候桌面回應的時間，而對使用者體驗造成負面影響。 此索引標籤 (若有顯示；因為我們仍在開發這項功能，所以我們只會對某些人員發行小眾測試版) 會顯示哪些處理序正在影響登入「回應式桌面的時間」階段；這會將桌面轉譯後的 CPU 維持在 50% 以上。 此表格只會在租用戶中列出影響最少 10 部裝置的處理序。  
 
 ## <a name="proactive-remediations"></a><a name="bkmk_uea_prs"></a> 主動式補救
 

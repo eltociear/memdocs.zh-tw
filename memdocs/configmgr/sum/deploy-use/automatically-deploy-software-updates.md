@@ -5,17 +5,17 @@ description: 使用自動部署規則 (ADR) 來自動部署軟體更新。
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/11/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: d1b4329def3aee97e1684935c0c8f889c3e4e513
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: bf172c4cb34a17ac793ea5568b0505505baf97a0
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269026"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709429"
 ---
 #  <a name="automatically-deploy-software-updates"></a>自動部署軟體更新  
 
@@ -49,7 +49,7 @@ ms.locfileid: "83269026"
 
          - [Office 365 用戶端更新] 範本提供在部署 Office 365 Pro Plus 用戶端的更新時所要使用的一般設定。
              > [!Note]
-             > 從 2020 年 4 月 21 日開始，「Office 365 專業增強版」會重新命名為「Microsoft 365 Apps 企業版」。 如果您的 ADR 依賴 [標題] 屬性，您就必須從 2020 年 6 月 9 日開始編輯該屬性。 `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` 是新標題的一個範例。 如需詳細資訊，請參閱 [Office 365 專業增強版的名稱變更](https://docs.microsoft.com/deployoffice/name-change) \(部分機器翻譯\)。
+             > 從 2020 年 4 月 21 日開始，「Office 365 專業增強版」會重新命名為「Microsoft 365 Apps 企業版」。 如果您的 ADR 依賴 [標題] 屬性，您就必須從 2020 年 6 月 9 日開始編輯該屬性。 `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` 是新標題的一個範例。 如需針對標題變更修改 ADR 的詳細資訊，請參閱 [Microsoft 365 Apps 的更新通道](manage-office-365-proplus-updates.md#bkmk_channel)。 如需名稱變更的詳細資訊，請參閱 [Office 365 ProPlus 的名稱變更](https://docs.microsoft.com/deployoffice/name-change) (機器翻譯)。
 
          - [SCEP 與 Windows Defender 防毒軟體更新] 範本提供在部署 Endpoint Protection 定義更新時所要使用的一般設定。  
 

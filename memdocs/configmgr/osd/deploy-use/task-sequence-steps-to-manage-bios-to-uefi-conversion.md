@@ -1,8 +1,8 @@
 ---
-title: 用於管理 BIOS 轉換到 UEFI 的工作順序步驟
+title: 將 BIOS 轉換為 UEFI
 titleSuffix: Configuration Manager
-description: 了解如何自訂作業系統部署工作順序，以準備轉換到 UEFI 的 FAT32 磁碟分割。
-ms.date: 03/24/2017
+description: 了解如何自訂作業系統部署工作順序，為轉換至 UEFI 準備 FAT32 磁碟分割。
+ms.date: 05/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,54 +10,91 @@ ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b9bd8f8102cbf6c814956127fc95a5f3961779c0
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 0118dd448520a6f0c21bfeea5f8509bd8e49fd46
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906954"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429434"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>用於管理 BIOS 轉換到 UEFI 的工作順序步驟
-Windows 10 提供許多新安全性功能，都需要啟用 UEFI 的裝置。 您可能有支援 UEFI，不過是使用傳統 BIOS 的新型 Windows 電腦。 在過去，將裝置轉換為 UEFI 需要您實際操作每部電腦，重新分割硬碟，並重新設定韌體。 透過使用 Configuration Manager 中的工作順序，您可以準備硬碟以進行 BIOS 至 UEFI 轉換，以就地升級程序之一部分的方式從 BIOS 轉換至 UEFI，並以硬體清查之一部分的方式收集 UEFI 資訊。
+
+Windows 10 提供許多新安全性功能，都需要啟用 UEFI 的裝置。 您可能擁有支援 UEFI、但使用傳統 BIOS 的較新 Windows 裝置。 在過去，將裝置轉換為 UEFI 需要您實際操作每部裝置，重新分割硬碟，並重新設定韌體。
+
+使用 Configuration Manager，即可將下列動作自動化：
+
+- 準備硬碟以將 BIOS 轉換為 UEFI
+- 在就地升級的流程期間，將 BIOS 轉換為 UEFI
+- 執行硬體清查時收集 UEFI 資訊
 
 ## <a name="hardware-inventory-collects-uefi-information"></a>硬體清查會收集 UEFI 資訊
-從 1702 版開始，新的硬體清查類別 (**SMS_Firmware**) 和屬性 (**UEFI**) 都可以協助您判斷電腦是否是以 UEFI 模式啟動。 以 UEFI 模式啟動電腦時，**UEFI** 屬性設為 [TRUE]  。 在硬體清查中，預設會啟用此項目。 如需硬體清查的詳細資訊，請參閱[如何設定硬體清查](../../core/clients/manage/inventory/configure-hardware-inventory.md)。
 
-## <a name="create-a-custom-task-sequence-to-prepare-the-hard-drive-for-bios-to-uefi-conversion"></a>建立自訂工作順序，以為硬碟進行 BIOS 至 UEFI 轉換的準備
-從 Configuration Manager 1610 版開始，您現在可以使用新變數 TSUEFIDrive 來自訂作業系統部署工作順序，如此一來，[重新啟動電腦]  步驟就會在硬碟上準備用於轉換成 UEFI 的 FAT32 磁碟分割。 下列程序提供範例，說明如何建立工作順序步驟，以準備用於將 BIO 轉換成 UEFI 的硬碟。
+硬體清查類別 (**SMS_Firmware**) 與屬性 (**UEFI**) 都可有助判斷電腦是否以 UEFI 模式啟動。 以 UEFI 模式啟動電腦時，**UEFI** 屬性設為 [TRUE]。 硬體清查預設會啟用此類別。 如需硬體清查的詳細資訊，請參閱[如何設定硬體清查](../../core/clients/manage/inventory/configure-hardware-inventory.md)。
 
-### <a name="to-prepare-the-fat32-partition-for-the-conversion-to-uefi"></a>若要準備用於轉換成 UEFI 的 FAT32 磁碟分割：
-在安裝作業系統的現有工作順序中，您將新增具有執行 BIOS 轉換成 UEFI 之步驟的新群組。
+## <a name="create-a-custom-task-sequence-to-prepare-the-hard-drive"></a>建立自訂工作順序來準備硬碟
 
-1. 在擷取檔案和設定的步驟之後，以及安裝作業系統的步驟之前，建立新的工作順序群組。 例如，在 [擷取檔案和設定]  之後，建立名為 **BIOS-to-UEFI** 的群組。
-2. 在新群組的 [選項]  索引標籤中，新增工作順序變數作為條件，其中 **_SMSTSBootUEFI** **不等於** **true**。 當電腦已在 UEFI 模式時，這會防止執行群組中的步驟。
+您可使用 **TSUEFIDrive** 變數來自訂作業系統部署工作順序。 [重新啟動電腦] 步驟會在硬碟上準備 FAT32 磁碟分割，以便執行轉換為 UEFI。 下列程序可提供範例，說明如何建立工作順序步驟，以執行此動作。
 
-   ![BIOS to UEFI 群組](../../core/get-started/media/BIOS-to-UEFI-group.png)
-3. 在新群組底下，新增 [重新啟動電腦]  工作順序步驟。 在 [指定重新啟動後執行的項目]  中，選取 [指派給此工作順序的開機映像]  以在 Windows PE 中啟動電腦。  
-4. 在 [選項]  索引標籤上，新增工作順序變數作為條件，其中 **_SMSTSInWinPE 等於 false**。 如果電腦已在 Windows PE 中，這會防止執行此步驟。
+### <a name="prepare-the-fat32-partition-for-the-conversion-to-uefi"></a>準備用於轉換為 UEFI 的 FAT32 磁碟分割
 
-   ![重新啟動電腦步驟](../../core/get-started/media/restart-in-windows-pe.png)
-5. 新增啟動 OEM 工具的步驟，以將韌體從 BIOS 轉換成 UEFI。 這通常會是 [執行命令列]  工作順序步驟，其中包含啟動 OEM 工具的命令列。
-6. 新增 [格式化和分割磁碟] 工作順序步驟，對硬碟進行分割與格式化。 在此步驟中，執行下列動作：
-   1. 安裝作業系統之前，先建立將轉換成 UEFI 的 FAT32 磁碟分割。 選擇 [GPT]  作為 [磁碟類型]  。
-    ![格式化和分割磁碟步驟](../media/format-and-partition-disk.png)
-   2. 移至 FAT32 的 [磁碟分割內容]。 在 [變數]  欄位中輸入 **TSUEFIDrive**。 當工作順序偵測到此變數時，它會準備 UEFI 轉換，再重新啟動電腦。
-    ![磁碟分割內容](../../core/get-started/media/partition-properties.png)
-   3. 建立工作順序引擎用來儲存其狀態及存放記錄檔的 NTFS 磁碟分割。
-7. 新增 [重新啟動電腦]  工作順序步驟。 在 [指定重新啟動後執行的項目]  中，選取 [指派給此工作順序的開機映像]  以在 Windows PE 中啟動電腦。  
+在安裝作業系統的現有工作順序中，新增包含執行將 BIOS 轉換為 UEFI 其步驟的新群組。
 
-## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>在就地升級期間從 BIOS 轉換至 UEFI
-Windows 10 Creators Update 引進一個簡單的轉換工具，能夠為支援 UEFI 的硬體自動執行硬碟重新分割程序，並將轉換工具整合至 Windows 7 到 Windows 10 的就地升級程序中。 當您將此工具與您的作業系統升級工作順序，以及將韌體從 BIOS 轉換至 UEFI 的 OEM 工具結合時，您可以在就地升級至 Windows 10 Creators Update 的期間，將您的電腦從 BIOS 轉換至 UEFI。
+1. 在擷取檔案和設定的步驟之後，並在安裝作業系統的步驟之前，建立新工作順序群組。 例如，在 [擷取檔案和設定] 之後，建立名為 **BIOS-to-UEFI** 的群組。
 
-**需求**：
-- Windows 10 Creators Update
+1. 在新群組的 [選項] 索引標籤中，新增工作順序變數作為條件。 設定 [_SMSTSBootUEFI 不等於 True]。 在此情況下，工作順序只會在 BIOS 裝置上執行這些步驟。
+
+    :::image type="content" source="media/bios-to-uefi-group.png" alt-text="BIOS 轉換為 UEFI 群組的條件":::
+
+1. 在新群組底下，新增 [重新啟動電腦] 工作順序步驟。 在 [指定重新啟動後執行的項目] 中，選取 [已選取指派給此工作順序的開機映像]。 此動作會在 Windows PE 中重新啟動電腦。
+
+1. 在 [選項] 索引標籤上，新增工作順序變數作為條件。 設定 [_SMSTSInWinPE 等於 False]。 在此情況下，如果電腦已經在 Windows PE 中，工作順序就不會執行此步驟。
+
+    :::image type="content" source="media/restart-in-windows-pe.png" alt-text="重新啟動電腦步驟的條件":::
+
+1. 新增啟動 OEM 工具的步驟，以將韌體從 BIOS 轉換為 UEFI。 此步驟通常為 [執行命令列]，並具有執行 OEM 工具的命令。
+
+1. 新增 [格式化和分割磁碟] 工作順序步驟。 在此步驟中設定下列選項：
+
+    1. 在安裝作業系統之前，請先建立 FAT32 磁碟分割以轉換為 UEFI。 選擇 [GPT] 作為 [磁碟類型]。
+
+        :::image type="content" source="media/format-and-partition-disk.png" alt-text="格式化與分割磁碟設定步驟":::
+
+    1. 移至 FAT32 的 [磁碟分割內容]。 在 [變數] 欄位中，輸入 `TSUEFIDrive`。 當工作順序偵測到此變數時，便會準備供 UEFI 轉換的磁碟分割，然後重新啟動電腦。
+
+        :::image type="content" source="media/partition-properties.png" alt-text="FAT32 磁碟分割屬性設定":::
+
+    1. 建立工作順序用來儲存其狀態及存放記錄檔的 NTFS 磁碟分割。
+
+1. 新增另一個 [重新啟動電腦] 工作順序步驟。 在 [指定重新啟動後執行的項目] 中，選取 [指派給此工作順序的開機映像] 以在 Windows PE 中啟動電腦。
+
+    > [!TIP]
+    > 根據預設，EFI 磁碟分割大小為 500 MB。 在某些環境中，會因為開機映像太大而無法儲存在此磁碟分割上。 若要解決此問題，請增加 EFI 磁碟分割的大小。 例如，將其設定為 1 GB。<!-- SCCMDocs#1024 -->
+
+## <a name="convert-from-bios-to-uefi-during-in-place-upgrade"></a><a name="bkmk_ipu"></a> 在就地升級期間將 BIOS 轉換為 UEFI
+
+Windows 10 包含簡單的轉換工具，**MBR2GPT**。 此工具會針對已啟用 UEFI 的硬體來自動重新分割硬碟。 您可將此轉換工具整合至 Windows 10 的就地升級流程中。 將升級工作順序、以及可將韌體從 BIOS 轉換為 UEFI 的 OEM 工具與此工具結合在一起。
+
+### <a name="requirements"></a>需求
+
+- 支援的 Windows 10 版本
 - 支援 UEFI 的電腦
 - 可將電腦韌體從 BIOS 轉換至 UEFI 的 OEM 工具
 
-### <a name="to-convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>在就地升級期間從 BIOS 轉換至 UEFI
-1. 建立能就地升級至 Windows 10 Creators Update 的作業系統升級工作順序。
-2. 編輯工作順序。 在 [後置處理群組]  中，新增下列工作順序步驟：
-   1. 在 [一般] 中，新增 [執行命令列]  步驟。 您將新增 MBR2GPT 工具的命令列，此工具會在不修改或刪除磁碟資料的情況下，將磁碟從 MBR 轉換至 GPT。 在命令列中，鍵入下列命令：**MBR2GPT /convert /disk:0 /AllowFullOS**。 您也可以選擇在 Windows PE (而非完整作業系統) 中執行 MBR2GPT.EXE 工具。 若要這麼做，您可以在執行 MBR2GPT.EXE 工具的步驟之前，新增將電腦重新啟動至 WinPE 的步驟，並從命令列移除 /AllowFullOS 選項。 如需工具和可用選項的相關詳細資料，請參閱 [MBR2GPT.EXE (英文)](https://docs.microsoft.com/windows/deployment/mbr-to-gpt)。
-   2. 新增啟動 OEM 工具的步驟，以將韌體從 BIOS 轉換成 UEFI。 這通常會是「執行命令列」工作順序步驟，其中包含啟動 OEM 工具的命令列。
-   3. 在 [一般] 中，新增 [重新啟動電腦]  步驟。 如需指定重新啟動後要執行的項目，請選取 [目前安裝的預設作業系統]  。
-3. 部署工作順序。
+### <a name="process-to-convert-from-bios-to-uefi-during-an-in-place-upgrade-task-sequence"></a>在就地升級工作順序期間將 BIOS 轉換為 UEFI 的流程
+
+1. [建立工作順序以升級 OS](create-a-task-sequence-to-upgrade-an-operating-system.md)
+
+1. 編輯工作順序。 在 [後續處理] 群組中，進行下列變更：
+
+    1. 新增 [執行命令列] 步驟。 指定 MBR2GPT 工具的命令列。 在完整作業系統中執行時，請將其設定為將磁碟從 MBR 轉換為 GPT，而不修改或刪除資料。 在**命令列**中，輸入下列命令：`MBR2GPT.exe /convert /disk:0 /AllowFullOS`
+
+    > [!TIP]
+    > 您也可以選擇在 Windows PE (而非完整作業系統) 中執行 MBR2GPT.EXE 工具。 在執行 MBR2GPT.EXE 工具的步驟之前，請新增將電腦重新啟動為 Windows PE 的步驟。 然後從命令列中移除 **/AllowFullOS** 選項。
+
+    如需工具與可用選項的詳細資訊，請參閱 [MBR2GPT.EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt) (機器翻譯)。
+
+    1. 新增執行 OEM 工具的步驟，以將韌體從 BIOS 轉換為 UEFI。 此步驟通常為 [執行命令列]，並具有執行 OEM 工具的命令列。
+
+    1. 新增 [重新啟動電腦] 步驟，然後選取 [目前安裝的預設作業系統]。
+
+1. 部署工作順序。

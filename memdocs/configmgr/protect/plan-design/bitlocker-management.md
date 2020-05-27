@@ -10,16 +10,16 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 460c9dd503861ba9f45e85f471bb1cb1274754a0
-ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.openlocfilehash: 2523d06034f4a7effe769235cb5a4ede4df7e167
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82782107"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764113"
 ---
 # <a name="plan-for-bitlocker-management"></a>BitLocker 管理規劃
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 <!-- 3601034 -->
 
@@ -74,7 +74,7 @@ Configuration Manager 提供下列適用於 BitLocker 磁碟機加密的管理�
 
 - 若要建立 BitLocker 管理原則，則需要在 Configuration Manager 中具備**系統高權限管理員**角色。
 
-- BitLocker金鑰服務需要 HTTPS，才能從 Configuration Manager 用戶端將網路上的修復金鑰加密至管理點。 有兩個選項：
+- BitLocker 復原服務需要 HTTPS，才能從 Configuration Manager 用戶端將網路上的修復金鑰加密至管理點。 有兩個選項：
 
   - 針對在管理點上裝載復原服務的 IIS 網站啟用 HTTPS。 此選項僅適用於 Configuration Manager 2002 版。<!-- 5925660 -->
 
@@ -99,7 +99,7 @@ Configuration Manager 提供下列適用於 BitLocker 磁碟機加密的管理�
 - 虛擬機器 (VM) 或伺服器 OS 上不支援 BitLocker 管理。 因此，某些功能在虛擬機器或伺服器 OS 上可能無法如預期般運作。 例如，在虛擬機器上，BitLocker 管理不會在虛擬機器的固定式磁碟機上啟動加密。 虛擬機器中的其他固定式磁碟機可能會顯示為符合規範，即使其並未加密也一樣。
 
 > [!TIP]
-> 根據預設，**啟用 BitLocker** 工作順序步驟只會加密磁碟機上「已使用的空間」  。 BitLocker 管理使用「完整磁碟」  加密。 設定此工作順序步驟以啟用**使用完整磁碟加密**的選項。 如需詳細資訊，請參閱[工作順序步驟 - 啟用 BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker)。
+> 根據預設，**啟用 BitLocker** 工作順序步驟只會加密磁碟機上「已使用的空間」。 BitLocker 管理使用「完整磁碟」加密。 設定此工作順序步驟以啟用**使用完整磁碟加密**的選項。 如需詳細資訊，請參閱[工作順序步驟 - 啟用 BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker)。
 
 ## <a name="next-steps"></a>後續步驟
 

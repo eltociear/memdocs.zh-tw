@@ -10,16 +10,16 @@ ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 229a8c7980933480a243278b2679d55f012490ce
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 36e62ea5198824a6b3466853cdbcfc3057d1829e
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693416"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428731"
 ---
 # <a name="prerequisites-for-migration-in-configuration-manager"></a>Configuration Manager 中的移轉必要條件
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 若要從支援的來源階層移轉，您必須能夠存取每個可用的 Configuration Manager 來源站台，並且具備 Configuration Manager 目的地站台內設定和執行移轉作業的權限。  
 
@@ -72,7 +72,7 @@ ms.locfileid: "81693416"
 
 - **在 Configuration Manager 主控台中設定、執行和監視移轉：**  
 
-   在目的地站台中，您的帳戶必須擁有指派的 [基礎結構系統管理員]  之以角色為基礎的系統管理安全性角色。 此安全性角色會授與管理所有移轉作業的權限，包括建立移轉作業、清理、監控，以及共用和升級發佈點的動作。  
+   在目的地站台中，您的帳戶必須擁有指派的 [基礎結構系統管理員] 之以角色為基礎的系統管理安全性角色。 此安全性角色會授與管理所有移轉作業的權限，包括建立移轉作業、清理、監控，以及共用和升級發佈點的動作。  
 
 - **資料收集：**  
 
@@ -80,24 +80,26 @@ ms.locfileid: "81693416"
 
   -   **來源站台帳戶：** 這個帳戶可用來存取來源站台的 SMS 提供者。  
 
-      -   若是 Configuration Manager 2007 SP2 來源站台，此帳戶需要所有來源站台物件的 [讀取]  權限。  
+      -   若是 Configuration Manager 2007 SP2 來源站台，此帳戶需要所有來源站台物件的 [讀取] 權限。  
 
-      -   若是 System Center 2012 Configuration Manager 或 Configuration Manager 最新分支來源站台，此帳戶需要所有來源站台物件的 [讀取]  權限。您可以使用角色為基礎的系統管理將此權限授與帳戶。 如需如何使用以角色為基礎之系統管理的相關資訊，請參閱 [Configuration Manager 角色型系統管理的基礎](../../core/understand/fundamentals-of-role-based-administration.md)。  
+      -   若是 System Center 2012 Configuration Manager 或 Configuration Manager 最新分支來源站台，此帳戶需要所有來源站台物件的 [讀取] 權限。您可以使用角色為基礎的系統管理將此權限授與帳戶。 如需如何使用以角色為基礎之系統管理的相關資訊，請參閱 [Configuration Manager 角色型系統管理的基礎](../../core/understand/fundamentals-of-role-based-administration.md)。  
 
-  -   **來源站台資料庫帳戶：** 此帳戶可用於存取來源站台的 SQL Server 資料庫，而且需要來源站台資料庫的 [連線]  、[執行]  及 [選取]  權限。  
+  -   **來源站台資料庫帳戶：** 此帳戶可用於存取來源站台的 SQL Server 資料庫，而且需要來源站台資料庫的 [連線]、[執行] 及 [選取] 權限。  
 
   您可以在設定新的來源階層、其他來源站台的資料收集，或重新設定來源站台的認證時，設定這些帳戶。 這些帳戶可以使用網域使用者帳戶，您也可以指定目的地階層中頂層站台的電腦帳戶。  
 
   > [!IMPORTANT]  
-  >  如果您使用 Configuration Manager 電腦帳戶作為任一個存取帳戶，請確定這個帳戶是來源站台所在網域中 [分散式 COM 使用者]  安全性群組的成員。  
+  >  如果您使用 Configuration Manager 電腦帳戶作為任一個存取帳戶，請確定這個帳戶是來源站台所在網域中 [分散式 COM 使用者] 安全性群組的成員。  
 
   收集資料時，會使用下列網路通訊協定和連接埠：  
 
-  -   NetBIOS/SMB - 445 (TCP)  
+  - NetBIOS/SMB - 445 (TCP)  
 
-  -   RPC (WMI) - 135 (TCP)  
+  - RPC (WMI) - 135 (TCP & UDP)  
 
-  -   SQL Server - 來源和目的地站台資料庫使用的 TCP 連接埠。  
+  - 動態 RPC。 動態連接埠會使用由作業系統版本定義的連接埠號碼範圍。 這些連接埠也稱為暫時連接埠。 如需有關預設連接埠範圍的詳細資訊，請參閱 [Windows Server 系統的服務概觀和網路連接埠需求](https://support.microsoft.com/help/832017/service-overview-and-network-port-requirements-for-windows)。<!-- SCCMDocs#1053 -->
+
+  - SQL Server - 來源和目的地站台資料庫使用的 TCP 連接埠。  
 
 - **移轉軟體更新：**  
 
@@ -109,15 +111,15 @@ ms.locfileid: "81693416"
 
    每一個來源站台上，只會共用安裝在以 FQDN 設定之站台系統伺服器上的發佈點。  
 
-   此外，若要從 System Center 2012 Configuration Manager 或 Configuration Manager 最新分支來源站台共用發佈點，[來源站台帳戶]  \(存取來源站台伺服器的 SMS 提供者) 在來源站台上必須具備 [站台]  物件的 [修改]  權限。 您可以使用角色為基礎的系統管理將此權限授與帳戶。 如需如何使用以角色為基礎之系統管理的相關資訊，請參閱 [Configuration Manager 角色型系統管理的基礎](../../core/understand/fundamentals-of-role-based-administration.md)。  
+   此外，若要從 System Center 2012 Configuration Manager 或 Configuration Manager 最新分支來源站台共用發佈點，[來源站台帳戶]\(存取來源站台伺服器的 SMS 提供者) 在來源站台上必須具備 [站台] 物件的 [修改] 權限。 您可以使用角色為基礎的系統管理將此權限授與帳戶。 如需如何使用以角色為基礎之系統管理的相關資訊，請參閱 [Configuration Manager 角色型系統管理的基礎](../../core/understand/fundamentals-of-role-based-administration.md)。  
 
 
 - **升級或重新指派發佈點：**  
 
    設定用來從來源站台的 SMS Provider 收集資料的 [來源站台存取帳戶]  必須具備下列權限：  
 
-  - 若要升級 Configuration Manager 2007 發佈點，帳戶需要 Configuration Manager 2007 站台伺服器上 [站台]  類別的 [讀取]  、[執行]  和 [刪除]  權限，才能成功從 Configuration Manager 2007 來源站台移除發佈點。  
+  - 若要升級 Configuration Manager 2007 發佈點，帳戶需要 Configuration Manager 2007 站台伺服器上 [站台] 類別的 [讀取]、[執行] 和 [刪除] 權限，才能成功從 Configuration Manager 2007 來源站台移除發佈點。  
 
-  - 若要重新指派 System Center 2012 Configuration Manager 或 Configuration Manager 最新分支發佈點，帳戶在來源站台上必須具備 [站台]  物件的 [修改]  權限。 您可以使用角色為基礎的系統管理將此權限授與帳戶。 如需如何使用以角色為基礎之系統管理的相關資訊，請參閱 [Configuration Manager 角色型系統管理的基礎](../../core/understand/fundamentals-of-role-based-administration.md)。  
+  - 若要重新指派 System Center 2012 Configuration Manager 或 Configuration Manager 最新分支發佈點，帳戶在來源站台上必須具備 [站台] 物件的 [修改] 權限。 您可以使用角色為基礎的系統管理將此權限授與帳戶。 如需如何使用以角色為基礎之系統管理的相關資訊，請參閱 [Configuration Manager 角色型系統管理的基礎](../../core/understand/fundamentals-of-role-based-administration.md)。  
 
     若要成功升級或重新指派發佈點至新階層，針對管理來源階層中發佈點之站台的用戶端要求所設定的連接埠，必須與針對將管理發佈點之目的地站台的用戶端要求所設定的連接埠相符。 如需用戶端要求連接埠的資訊，請參閱[如何設定用戶端通訊連接埠](../../core/clients/deploy/configure-client-communication-ports.md)。  
