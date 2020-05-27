@@ -5,18 +5,18 @@ description: 了解如何搜尋 Intune 文件、提供文件意見反應，以�
 ms.date: 03/03/2020
 ms.service: microsoft-intune
 ms.subservice: fundamentals
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: e6e44225-cc9e-47c2-913b-1e629ba9a71e
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3892da4f3783e8b169bff576a9945f34cc47c356
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3d5d8d2d9882c033f3fbb726db937ba48d67fdc8
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81726051"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988182"
 ---
 # <a name="using-the-intune-docs"></a>使用 Intune 文件
 
@@ -36,23 +36,23 @@ ms.locfileid: "81726051"
 
 - 使用符合使用者介面和線上文件中術語的搜尋字詞。 請避免您可能會在社群內容中看到的非官方字詞或縮寫。
 
-- 若要在目前檢視的文章中搜尋，請使用瀏覽器的 [尋找]  功能。 使用大多數的新式網頁瀏覽器時，您可以按 **Ctrl**+**F**，然後輸入搜尋文字。  
+- 若要在目前檢視的文章中搜尋，請使用瀏覽器的 [尋找] 功能。 使用大多數的新式網頁瀏覽器時，您可以按 **Ctrl**+**F**，然後輸入搜尋文字。  
 
 - docs.microsoft.com 上的每篇文章都包含下列欄位，可協助搜尋內容：  
 
-  - 右上角的 [搜尋]  。 若要搜尋所有文章，請在此欄位中輸入字詞。 搜尋會自動包含 Intune 搜尋範圍。
+  - 右上角的 [搜尋]。 若要搜尋所有文章，請在此欄位中輸入字詞。 搜尋會自動包含 Intune 搜尋範圍。
 
-  - 左目錄上方的 [依標題篩選]  。 若要搜尋目前的目錄，請在此欄位中輸入字詞。 此欄位只會比對目前節點的文章標題中所顯示的字詞。 搜尋結果中的最後一個項目可讓您選擇在所有 Intune 文件中搜尋字詞。
+  - 左目錄上方的 [依標題篩選]。 若要搜尋目前的目錄，請在此欄位中輸入字詞。 此欄位只會比對目前節點的文章標題中所顯示的字詞。 搜尋結果中的最後一個項目可讓您選擇在所有 Intune 文件中搜尋字詞。
 
 - 尋找時發生問題嗎？ [歡迎提出意見反應！](#provide-doc-feedback) 當您提出問題時，請提供所使用的搜尋引擎、嘗試的關鍵字和目標文件。 您的意見反應可協助 Microsoft 最佳化內容，以確保更有效率的搜尋。  
 
 ## <a name="provide-doc-feedback"></a>提供文件意見反應
 
-[意見反應] 區段位於每篇文章的底部。 按一下任何文章右上方的 [意見反應]  連結，以移至此節。 意見反應已與「GitHub 問題」整合。 如需整合 GitHub 問題的詳細資訊，請參閱此 [Docs 平台部落格文章](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs)。
+[意見反應] 區段位於每篇文章的底部。 按一下任何文章右上方的 [意見反應] 連結，以移至此節。 意見反應已與「GitHub 問題」整合。 如需整合 GitHub 問題的詳細資訊，請參閱此 [Docs 平台部落格文章](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs)。
 
-若要分享有關 Intune 服務 (而非文件) 的意見反應，請按一下 [產品意見反應]  。
+若要分享有關 Intune 服務 (而非文件) 的意見反應，請按一下 [產品意見反應]。
 
-若要提供文件的意見反應，您必須具備 [GitHub 帳戶](https://github.com/join)。 一旦您登入之後，即會有 Microsoft Docs 的一次性授權。 接著，當您按一下 [內容意見反應]  時，請輸入標題和意見，然後選取 [提交意見反應]  。 這個動作會在 [Intune GitHub 存放庫](https://github.com/MicrosoftDocs/intunedocs/issues)中的目標文件提出一個新問題。
+若要提供文件的意見反應，您必須具備 [GitHub 帳戶](https://github.com/join)。 一旦您登入之後，即會有 Microsoft Docs 的一次性授權。 接著，當您按一下 [內容意見反應] 時，請輸入標題和意見，然後選取 [提交意見反應]。 這個動作會在 [Intune GitHub 存放庫](https://github.com/MicrosoftDocs/intunedocs/issues)中的目標文件提出一個新問題。
 
 您也會看到目標文章的現有未結案或已結案問題。 如果有的話，請先檢閱這些內容後，再提交新的問題。 如果您找到相關的問題，可按一下笑臉圖示新增回應，或展開問題即可新增意見。
 
@@ -78,15 +78,15 @@ Intune 文件 (如 docs.microsoft.com 上的大部分內容) 都是開放原始�
 
 ### <a name="basic-steps-to-contribute-to-docs"></a>參與 docs 的基本步驟
 
-1. 從目標文件中，按一下 [編輯]  。 這個動作會在 GitHub 中開啟來源檔案。  
+1. 從目標文件中，按一下 [編輯]。 這個動作會在 GitHub 中開啟來源檔案。  
 
 2. 若要編輯來源檔案，請按一下鉛筆圖示。  
 
 3. 在 Markdown 來源中進行變更。 如需詳細資訊，請參閱[如何使用 Markdown 來撰寫 Docs](https://docs.microsoft.com/contribute/contribute-how-to-write-use-markdown)。  
 
-4. 在 [提議檔案變更] 區段中，輸入公開修訂的意見，以說明您要變更的「具體內容」  。 然後，按一下 [提議檔案變更]  。  
+4. 在 [提議檔案變更] 區段中，輸入公開修訂的意見，以說明您要變更的「具體內容」。 然後，按一下 [提議檔案變更]。  
 
-5. 向下捲動並確認您所做的變更。 按一下 [建立提取要求]  以開啟表單。 請說明要進行這項變更的「具體原因」  。 按一下 [建立提取要求]  。
+5. 向下捲動並確認您所做的變更。 按一下 [建立提取要求] 以開啟表單。 請說明要進行這項變更的「具體原因」。 按一下 [建立提取要求]。
 
 撰寫小組將會收到您的提取要求、將項目指派給適當作者、檢閱文字並對其進行快速編輯，並核准並合併變更，或與您聯繫以取得有關更新的詳細資訊。  
 

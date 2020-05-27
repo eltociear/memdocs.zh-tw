@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 716925f077b7433eab06a6ea2f557c7653d0b03d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 951293ff723ff0243d4068656497cbe0bca27ef9
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551431"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989174"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>在 Microsoft Intune 中設定裝置限制設定
 
@@ -36,13 +36,10 @@ Intune 包含裝置限制原則，可協助系統管理員控制 Android、iOS/i
 
 本文會示範如何建立裝置限制設定檔。 您也可以查看適用於不同平台的所有可用設定。
 
-> [!NOTE]
-> Intune 使用者介面 (UI) 正在更新為全螢幕體驗，而且可能需要數週的時間。 在您的租用戶收到此更新之前，當您建立或編輯此文章中所述的設定時，您的工作流程將略有不同。
-
 ## <a name="create-the-profile"></a>建立設定檔
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取 [裝置] > [組態設定檔] > [建立設定檔]。
 3. 輸入下列內容：
 
     - **平台**：選擇您的裝置平台。 選項包括：  
@@ -55,19 +52,19 @@ Intune 包含裝置限制原則，可協助系統管理員控制 Android、iOS/i
         - **Windows 8.1 及更新版本**
         - **Windows Phone 8.1**
 
-    - **設定檔**：選取 [裝置限制]  。
+    - **設定檔**：選取 [裝置限制]。
 
-        若想要建立像是 Surface Hub 等 Windows 10 團隊版裝置的裝置限制設定檔，選擇 [裝置限制 (Windows 10 團隊版)]  。
+        若想要建立像是 Surface Hub 等 Windows 10 團隊版裝置的裝置限制設定檔，選擇 [裝置限制 (Windows 10 團隊版)]。
 
-4. 選取 [建立]  。
-5. 在 [基本資訊]  中，輸入下列內容：
+4. 選取 [建立]。
+5. 在 [基本資訊] 中，輸入下列內容：
 
     - **名稱**：輸入政策的描述性名稱。 為您的設定檔命名，以方便之後能夠輕鬆識別。 例如，良好的原則名稱為 **iOS/iPadOS：Block camera on devices**。
     - **描述**：輸入政策的描述。 這是選擇性設定，但建議執行。
 
-6. 選取 [下一步]  。
+6. 選取 [下一步]。
 
-7. 在 [組態設定]  中，您可進行的設定會根據您選擇的平台而不同。 選擇您平台來進行詳細設定：
+7. 在 [組態設定] 中，您可進行的設定會根據您選擇的平台而不同。 選擇您平台來進行詳細設定：
 
     - [Android 裝置系統管理員](device-restrictions-android.md)
     - [Android Enterprise](device-restrictions-android-for-work.md)
@@ -79,16 +76,16 @@ Intune 包含裝置限制原則，可協助系統管理員控制 Android、iOS/i
     - [Windows 10 團隊版](device-restrictions-windows-10-teams.md)
     - [Windows Holographic for Business](device-restrictions-windows-holographic.md)
 
-8. 選取 [下一步]  。
-9. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+8. 選取 [下一步]。
+9. 在 [範圍標籤] (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
 
-    選取 [下一步]  。
+    選取 [下一步]。
 
-10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
+10. 在 [指派] 中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
 
-    選取 [下一步]  。
+    選取 [下一步]。
 
-11. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立]  時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
+11. 在 [檢閱 + 建立] 中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 ## <a name="next-steps"></a>後續步驟
 

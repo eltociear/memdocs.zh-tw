@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: reference
+ms.date: 05/05/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cb8cea30b53c5619580b289f73529668d71e909
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ebf65ecc6dbe5059adbd6fec70833bf2fcab9de7
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551499"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988663"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>使用 Microsoft Intune 將屬性清單檔新增至 macOS 裝置
 
@@ -44,31 +45,32 @@ ms.locfileid: "80551499"
 - 只有部分應用程式能使用受控喜好設定，而這些應用程式可能不允許管理所有設定。
 - 請務必上傳以裝置通道設定為目標的屬性清單檔，而不是以使用者通道設定為目標的屬性清單檔。 以整個裝置為目標的屬性清單檔。
 
-> [!NOTE]
-> Intune 使用者介面 (UI) 正在更新為全螢幕體驗，而且可能需要數週的時間。 在您的租用戶收到此更新之前，當您建立或編輯此文章中所述的設定時，您的工作流程將略有不同。
-
 ## <a name="create-the-profile"></a>建立設定檔
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取 [裝置] > [組態設定檔] > [建立設定檔]。
 3. 輸入下列內容：
 
-    - **平台**：選取 [macOS] 
-    - **設定檔**：選取 [喜好設定檔案]  。
+    - **平台**：選取 [macOS]
+    - **設定檔**：選取 [喜好設定檔案]。
 
-4. 選取 [建立]  。
-5. 在 [基本資訊]  中，輸入下列內容：
+4. 選取 [建立]。
+5. 在 [基本資訊] 中，輸入下列內容：
 
     - **名稱**：輸入政策的描述性名稱。 為您的設定檔命名，以方便之後能夠輕鬆識別。 例如，良好的原則名稱是 **macOS：新增喜好設定檔案，以在裝置上設定 Microsoft Defender ATP**。
     - **描述**：輸入政策的描述。 這是選擇性設定，但建議執行。
 
-6. 選取 [下一步]  。
+6. 選取 [下一步]。
 
-7. 在 [組態設定]  中進行設定：
+7. 在 [組態設定] 中進行設定：
 
-    - **喜好設定網域名稱**：屬性清單檔通常用於網頁瀏覽器 (Microsoft Edge)、[Microsoft Defender 進階威脅防護](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (機器翻譯) 和自訂應用程式。 當建立喜好設定網域時，也會建立套件組合識別碼。 輸入套件組合識別碼，例如 `com.company.application`。 例如，輸入 `com.Contoso.applicationName`、`com.Microsoft.Edge` 或 `com.microsoft.wdav`。
+    - **喜好設定網域名稱**：輸入套件組合識別碼，例如 `com.company.application`。 例如，輸入 `com.Contoso.applicationName`、`com.Microsoft.Edge` 或 `com.microsoft.wdav`。
+
+      屬性清單檔通常用於網頁瀏覽器 (Microsoft Edge)、[Microsoft Defender 進階威脅防護](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (機器翻譯) 和自訂應用程式。 當建立喜好設定網域時，也會建立套件組合識別碼。
+
     - **屬性清單檔**：選取與應用程式建立關聯的屬性清單檔。 請確定它是 `.plist` 或 `.xml` 檔案。 例如，上傳 `YourApp-Manifest.plist` 或 `YourApp-Manifest.xml` 檔案。
-    - **檔案內容**：會顯示屬性清單檔中的索引鍵資訊。 如果需要變更索引鍵資訊，請在另一個編輯器中開啟清單檔，然後在 Intune 中重新上傳該檔案。
+
+      會顯示屬性清單檔中的索引鍵資訊。 如果需要變更索引鍵資訊，請在另一個編輯器中開啟清單檔，然後在 Intune 中重新上傳該檔案。
 
     請確定檔案格式正確。 檔案應該只有索引鍵值組，且不應包裝在 `<dict>`、`<plist>`或 `<xml>` 標籤中。 例如，屬性清單檔應該類似下列檔案：
 
@@ -80,19 +82,19 @@ ms.locfileid: "80551499"
     ...
     ```
 
-8. 選取 [下一步]  。
-9. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+8. 選取 [下一步]。
+9. 在 [範圍標籤] (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
 
-    選取 [下一步]  。
+    選取 [下一步]。
 
-10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
+10. 在 [指派] 中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
 
-    選取 [下一步]  。
+    選取 [下一步]。
 
-11. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立]  時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
+11. 在 [檢閱 + 建立] 中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 ## <a name="next-steps"></a>後續步驟
 
-設定檔已建立，但還不會執行任何動作。 接下來，[指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
+[指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
 
 如需 Microsoft Edge 喜好設定檔案的詳細資訊，請參閱[使用 .plist 針對 macOS 設定 Microsoft Edge 原則設定](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac)。

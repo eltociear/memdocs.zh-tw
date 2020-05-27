@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a4d468c62132c6af4477ba48f17ac9b21013e51
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 997a2db8917da1443531d8446176c21db3a5dbf6
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022732"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709446"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune 資料倉儲集合
 
@@ -193,6 +193,8 @@ ms.locfileid: "82022732"
 | OSVersion                  | 作業系統版本。                                                                                                                                                                          |
 | JB 破解                 | 裝置是否已越獄或刷機。                                                                                                                                         |
 | DeviceCategoryKey          | 此裝置的裝置類別屬性索引鍵。                                                                                                                                    |
+
+
 ## <a name="deviceregistrationstates"></a>deviceRegistrationStates
 **DeviceRegistrationState** 實體代表其他資料倉儲集合所參考的註冊類型。 
 
@@ -222,7 +224,6 @@ ms.locfileid: "82022732"
 | DeviceRegistrationState    | 此裝置的用戶端註冊狀態屬性索引鍵。                                                                                                                      |
 | OwnerTypeKey               | 此裝置的擁有者類型屬性索引鍵：公司、個人或未知。                                                                                                    |
 | EnrolledDateTime           | 裝置註冊的日期與時間。                                                                                                                                         |
-| EthernetMacAddress           | 此裝置的唯一網路識別碼。                                                                                                                                        |
 | LastSyncDateTime           | 使用 Intune 簽入的最後一部已知裝置。                                                                                                                                              |
 | ManagementAgentKey         | 與此裝置相關聯的管理代理程式索引鍵。                                                                                                                             |
 | ManagementStateKey         | 與此裝置相關聯的管理狀態索引鍵，指出遠端動作的最新狀態，或是否已 JB 破解/刷機。                                                |
@@ -244,16 +245,12 @@ ms.locfileid: "82022732"
 | MEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | 裝置的受監督狀態                                                                                                                                                               |
 | FreeStorageSpaceInBytes    | 可用的儲存體 (以位元組為單位)。                                                                                                                                                                 |
-| TotalStorageSpaceInBytes   | 儲存體容量總計 (以位元組為單位)。                                                                                                                                                                |
 | EncryptionState            | 裝置的加密狀態。                                                                                                                                                      |
 | SubscriberCarrier          | 裝置的用戶載波                                                                                                                                                       |
 | PhoneNumber                | 裝置的電話號碼                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | 裝置的行動電話通訊技術                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
-| 型號                      | 裝置型號。                                                                                                                                                                      |
-| Office365Version           | 安裝於裝置上的 Office 365 版本。                                                                                                                             |
-| PhysicalMemoryInBytes      | 實體記憶體 (以位元組為單位)。                                                                                                                                                          |
 
 
 ## <a name="devicetypes"></a>deviceTypes
@@ -674,7 +671,7 @@ MobileAppInstallState 實體代表行動應用程式在被指派至包含裝置�
 |    description    |    這些條款及條件的描述。     |         |
 |    title    |    這些條款及條件的標題。     |    裝置管理公司原則        |
 |    summaryOfTerms    |    提供給使用者的條款摘要。     |    我同意這些條款及條件。    |
-|    termsAndConditionsBodyText    |    這些條款及條件的內文。       |    「裝置加密」  強制使用 6 位數 PIN    |
+|    termsAndConditionsBodyText    |    這些條款及條件的內文。       |    「裝置加密」強制使用 6 位數 PIN    |
 |    isDeleted    |    指出是否已刪除此值的 True 或 False 值。     |    False    |
 |    startDateInclusiveUTC    |    這些條款及條件的開始日期。     |    8/23/2018 4:01:34 AM    |
 |    endDateEclusiveUTC    |    這些條款及條件的結束日期。     |    12/31/9999 12:00:00 AM    |

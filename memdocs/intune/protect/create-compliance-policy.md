@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: de23dc438ac176383cf5f5fbfac4da22f91bd4b2
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551374"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988822"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>在 Microsoft Intune 中建立合規性政策
 
@@ -52,70 +52,67 @@ ms.locfileid: "80551374"
   - iOS
   - macOS
   - Windows 10
-  - Windows 8。1
-  - Windows Phone 8。1
+  - Windows 8.1
+  - Windows Phone 8.1
 
 - 在 Intune 中註冊裝置 (查看合規性狀態所必需)
 
 - 向一位使用者註冊裝置，或者在沒有主要使用者的情況下進行註冊。 不支援向多位使用者註冊裝置。
 
-> [!NOTE]
-> Intune 使用者介面 (UI) 正在更新為全螢幕體驗，而且可能需要數週的時間。 在您的租用戶收到此更新之前，當您建立或編輯此文章中所述的設定時，您的工作流程將略有不同。
-
 ## <a name="create-the-policy"></a>建立政策
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 選取 [裝置]   > [合規性政策]   > [政策]   > [建立政策]  。
+2. 選取 [裝置] > [合規性政策] > [政策] > [建立政策]。
 
-3. 從下列選項中，選取此原則的 [平台]  ：
+3. 從下列選項中，選取此原則的 [平台]：
    - *Android 裝置系統管理員*
    - *Android Enterprise*
    - *iOS/iPadOS*
    - *macOS*
    - *Windows Phone 8.1*
    - *Windows 8.1 及更新版本*
-   - *Windows 10 及更新版本*
+   - *Windows 10 及以上版本*
 
-    針對 [Android 企業]  ，您也可以選取 [原則類型]  ：
+    針對 [Android 企業]，您也可以選取 [原則類型]：
      - *Android 裝置擁有者合規性原則*
      - *Android 公司設定檔合規性原則*
 
-    接著，選取 [建立]  以開啟 [建立原則]  設定視窗。
+    接著，選取 [建立] 以開啟 [建立原則] 設定視窗。
 
-4. 在 [基本]  索引標籤上，指定可協助您之後識別的 [名稱]  。 例如，**將 iOS/iPadOS 越獄裝置標記為不符合規範**是一個不錯的政策名稱。
+4. 在 [基本] 索引標籤上，指定可協助您之後識別的 [名稱]。 例如，**將 iOS/iPadOS 越獄裝置標記為不符合規範**是一個不錯的政策名稱。
 
-   您也可以選擇指定 [描述]  。
+   您也可以選擇指定 [描述]。
   
-5. 在 [合規性設定]  索引標籤上，展開可用的類別，並設定原則的設定。  下列文章會描述每個平台的設定︰
+5. 在 [合規性設定] 索引標籤上，展開可用的類別，並設定原則的設定。  下列文章會描述每個平台的設定︰
    - [Android 裝置系統管理員](compliance-policy-create-android.md)
    - [Android Enterprise](compliance-policy-create-android-for-work.md)
    - [iOS/iPadOS](compliance-policy-create-ios.md)
    - [macOS](compliance-policy-create-mac-os.md)
    - [Windows Phone 8.1，Windows 8.1 和更新版本](compliance-policy-create-windows-8-1.md)
-   - [Windows 10 及更新版本](compliance-policy-create-windows.md)  
+   - [Windows 10 及以上版本](compliance-policy-create-windows.md)  
 
-6. 在 [位置]  索引標籤上，您可以根據裝置的位置，強制執行合規性。 從現有的位置中選擇。 如果您還沒有可用的位置，請參閱[使用位置 (網路柵欄)](use-network-locations.md) 以取得指引。
+6. 在 [位置] 索引標籤上，您可以根據裝置的位置，強制執行合規性。 從現有的位置中選擇。 如果您還沒有可用的位置，請參閱[使用位置 (網路柵欄)](use-network-locations.md) 以取得指引。
    > [!TIP]
-   > [位置]  僅適用於 [Android 裝置系統管理員]  平台。
+   > [位置] 僅適用於 [Android 裝置系統管理員] 平台。
 
-7. 在 [因不符合規範而採取的動作]  索引標籤上，指定要自動套用至不符合此合規性政策之裝置的動作順序。
+7. 在 [因不符合規範而採取的動作] 索引標籤上，指定要自動套用至不符合此合規性政策之裝置的動作順序。
 
-   您可以新增多個動作，並設定一些動作的排程和其他詳細資料。 例如，您可能會將預設動作 [標記裝置不合規]  的排程變更為一天後發生。 接著，您可以新增動作，以便在裝置不符合規範時，傳送電子郵件給使用者，以警告他們該狀態。 您也可以新增能夠鎖定或淘汰不符合規範之裝置的動作。
+   您可以新增多個動作，並設定一些動作的排程和其他詳細資料。 例如，您可能會將預設動作 [標記裝置不合規] 的排程變更為一天後發生。 接著，您可以新增動作，以便在裝置不符合規範時，傳送電子郵件給使用者，以警告他們該狀態。 您也可以新增能夠鎖定或淘汰不符合規範之裝置的動作。
 
    如需您可以設定之動作的相關資訊，請參閱[為不符合規範的裝置新增動作](actions-for-noncompliance.md)，包括如何建立要傳送給使用者的通知電子郵件。
 
    另一個範例包括使用位置，其中至少要將一個位置新增至合規性政策。 在此情況下，當您選取至少一個位置時，則會套用不符合規範的預設動作。 如果裝置未連線到所選取的任何位置，則會視為不符合規範。 您可以設定排程以提供使用者寬限期，例如一天。
 
-8. 在 [範圍標籤]  索引標籤上，選取標籤以協助篩選特定群組的原則，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 新增設定之後，您也可以將範圍標籤新增至合規性政策。 
+8. 在 [範圍標籤] 索引標籤上，選取標籤以協助篩選特定群組的原則，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 新增設定之後，您也可以將範圍標籤新增至合規性政策。 
 
    如需有關使用範圍標籤的詳細資訊，請參閱[使用範圍標籤篩選原則](../fundamentals/scope-tags.md)。
 
-9. 在 [指派]  索引標籤上，將原則指派給您的群組。  
+9. 在 [指派] 索引標籤上，將原則指派給您的群組。  
 
-   選取 [+ 選取要納入的群組]  ，然後將原則指派給一或多個群組。 當您在下一個步驟之後儲存原則時，該原則會套用到這些群組。 
+   選取 [+ 選取要納入的群組]，然後將原則指派給一或多個群組。 當您在下一個步驟之後儲存原則時，該原則會套用到這些群組。 
 
-10. 在 [檢閱 + 建立]  索引標籤上，檢閱設定，並在準備好儲存合規性政策時，選取 [建立]  。  
+10. 在 [檢閱 + 建立] 索引標籤上，檢閱設定，並在準備好儲存合規性政策時，選取 [建立]。  
 
     當您的原則設為目標的使用者或裝置使用 Intune 簽入時，會評估其合規性。
 
@@ -162,11 +159,11 @@ Intune 會使用各種重新整理循環來檢查合規性原則的更新。 如
 
 如果裝置有多個合規性原則，且裝置的兩個或更多個已指派的合規性原則具有不同的合規性狀態，系統就會指派單一的最終合規性狀態。 此指派會以指派至各合規性狀態的概念嚴重性等級為準。 每個合規性狀態均具下列嚴重性等級：
 
-|Status  |嚴重性  |
+|狀態  |嚴重性  |
 |---------|---------|
 |Unknown     |1|
 |NotApplicable     |2|
-|相容|3|
+|符合標準|3|
 |InGracePeriod|4|
 |NonCompliant|5|
 |錯誤|6|

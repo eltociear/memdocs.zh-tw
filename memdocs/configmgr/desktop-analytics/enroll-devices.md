@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: acb8900a57408152133637ead3b8a0cf4732b4a7
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: c10e3c1cb2a0044003415d8f55a0a4ac85058656
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268720"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633315"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>如何在電腦分析中註冊裝置
 
@@ -81,9 +81,9 @@ Configuration Manager 提供整合式體驗，可讓您管理這些設定並將�
 
 若要變更這些設定，請使用下列程序：
 
-1. 在 Configuration Manager 主控台中，移至 [系統管理]  工作區，展開 [雲端服務]  ，然後選取 [Azure 服務]  節點。 選取與電腦分析的連線，然後選擇功能區中的 [屬性]  。
+1. 在 Configuration Manager 主控台中，移至 [系統管理] 工作區，展開 [雲端服務]，然後選取 [Azure 服務] 節點。 選取與電腦分析的連線，然後選擇功能區中的 [屬性]。
 
-2. 在 [診斷資料]  頁面上，視需要對下列設定進行變更：  
+2. 在 [診斷資料] 頁面上，視需要對下列設定進行變更：  
 
     - **商業識別碼**：此值應該會自動填入組織識別碼。 如果沒有，請先確定 Proxy 伺服器已設定為允許所有必要的[端點](enable-data-sharing.md#endpoints)並繼續。 您也可以從[電腦分析入口網站](monitor-connection-health.md#bkmk_ViewCommercialID)，手動擷取您的商業識別碼。
 
@@ -91,17 +91,17 @@ Configuration Manager 提供整合式體驗，可讓您管理這些設定並將�
 
     - **允許診斷資料中的裝置名稱**：如需詳細資訊，請參閱[裝置名稱](#device-name)。  
 
-    當對此頁面進行變更時，[可用的功能]  頁面會顯示電腦分析功能的預覽，以及選取的診斷資料設定。  
+    當對此頁面進行變更時，[可用的功能] 頁面會顯示電腦分析功能的預覽，以及選取的診斷資料設定。  
 
-3. 在 [電腦分析連線]  頁面上，視需要對下列設定進行變更：
+3. 在 [電腦分析連線] 頁面上，視需要對下列設定進行變更：
 
     - **顯示名稱**：電腦分析入口網站會使用此名稱來顯示此 Configuration Manager 連線。  
 
     - **目標集合**：此集合包含 Configuration Manager 使用商業識別碼與診斷資料設定來進行設定的所有裝置。 這是一組由 Configuration Manager 連線至電腦分析服務的完整裝置。  
 
-    - **目標集合中的裝置使用使用者已驗證 Proxy 進行輸出通訊**：根據預設，此值為 [否]  。 視環境需要，請將其設定為 **Yes**。 如需詳細資訊，請參閱 [Proxy 伺服器驗證](enable-data-sharing.md#proxy-server-authentication)。
+    - **目標集合中的裝置使用使用者已驗證 Proxy 進行輸出通訊**：根據預設，此值為 [否]。 視環境需要，請將其設定為 **Yes**。 如需詳細資訊，請參閱 [Proxy 伺服器驗證](enable-data-sharing.md#proxy-server-authentication)。
 
-    - **選取特定集合並與電腦分析同步處理**：選取 [新增]  以包含**目標集合**階層中的其他集合。 這些集合可以在電腦分析入口網站中使用，並與部署計劃組成群組。 請確保此新增包含試驗與試驗排除集合。  <!-- 4097528 -->
+    - **選取特定集合並與電腦分析同步處理**：選取 [新增] 以包含**目標集合**階層中的其他集合。 這些集合可以在電腦分析入口網站中使用，並與部署計劃組成群組。 請確保此新增包含試驗與試驗排除集合。  <!-- 4097528 -->
 
         > [!IMPORTANT]
         > 這些集合會隨著成員資格的變更，持續同步。 例如，部署計劃使用含有 Windows 7 成員資格規則的集合。 當這些裝置升級至 Windows 10 時，Configuration Manager 會評定集合成員資格，而這些裝置將會從集合與部署計劃中移出。
@@ -120,15 +120,15 @@ Configuration Manager 提供整合式體驗，可讓您管理這些設定並將�
 
 ![顯示「不明」名稱的電腦分析裝置清單](media/unknown-device-name.png)
 
-在 Configuration Manager 設定中，有一個選項可供電腦分析設定此選項：[允許診斷資料中的裝置名稱]  。 此 Configuration Manager 設定控制 [Windows 原則設定](group-policy-settings.md) **AllowDeviceNameInTelemetry**。
+在 Configuration Manager 設定中，有一個選項可供電腦分析設定此選項：[允許診斷資料中的裝置名稱]。 此 Configuration Manager 設定控制 [Windows 原則設定](group-policy-settings.md) **AllowDeviceNameInTelemetry**。
 
 ### <a name="conflict-resolution"></a>衝突解決
 
 一般而言，請使用 Configuration Manager 集合來針對處理電腦分析設定與註冊。 使用直接成員資格或查詢，以包含或排除集合中的裝置。 如需詳細資訊，請參閱[如何建立集合](../core/clients/manage/collections/create-collections.md)。
 
-Configuration Manager 只有在值不存在時，才會進行 Windows 設定。 如果需要為唯一的一組裝置進行不同設定，則可使用[群組原則](group-policy-settings.md)。 群組原則所針對的設定會優先於 Configuration Manager 設定。
+Configuration Manager 只有在值不存在時，才會進行 Windows 設定。 如果需要為唯一的一組裝置進行不同設定，則可使用[群組原則](group-policy-settings.md)。 群組原則所針對的設定會優先於 Configuration Manager 設定。 群組原則的目標裝置可能無法正確反映 [連線健全狀況](monitor-connection-health.md) 儀表板中狀態。
 
-當設定診斷資料層級時，您可以設定裝置的界限。 根據預設，在 Windows 10 1803 版和更新版本中，使用者可以選擇設定較低的層級。 您可以使用 [Configure telemetry opt-in setting user interface] \(設定遙測加入設定使用者介面\)此群組原則設定來控制此行為  。 如需詳細資訊，請參閱[電腦分析的群組原則設定](group-policy-settings.md)。
+當設定診斷資料層級時，您可以設定裝置的界限。 根據預設，在 Windows 10 1803 版和更新版本中，使用者可以選擇設定較低的層級。 您可以使用 [Configure telemetry opt-in setting user interface] \(設定遙測加入設定使用者介面\)此群組原則設定來控制此行為。 如需詳細資訊，請參閱[電腦分析的群組原則設定](group-policy-settings.md)。
 
 ### <a name="proxy-settings"></a>Proxy 設定
 

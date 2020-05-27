@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/01/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97d3c4ee2e1ad173b8fff238f072b1b36c3ed1cb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24663f8338f03fab53369689b4a61b5bd1bec63f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80536925"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991223"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-iosipados-devices-in-intune"></a>在 Intune 中設定 iOS/iPadOS 裝置的個別應用程式虛擬私人網路 (VPN)
 
@@ -71,21 +71,21 @@ Zscaler Private Access (ZPA) 與 Azure Active Directory (Azure AD) 整合以便�
 將 CA 發行的 VPN 伺服器根憑證匯入在 Intune 中建立的設定檔。 受信任憑證設定檔會指示 iOS/iPadOS 裝置自動信任 VPN 伺服器顯示的 CA。
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取 [裝置] > [組態設定檔] > [建立設定檔]。
 3. 輸入下列內容：
 
-    - **平台**：選取 [iOS/iPadOS]  。
-    - **設定檔類型**：選取 [信任的憑證]  。
+    - **平台**：選取 [iOS/iPadOS]。
+    - **設定檔**：選取 [信任的憑證]。
 
-4. 選取 [建立]  。
-5. 在 [基本資訊]  中，輸入下列內容：
+4. 選取 [建立]。
+5. 在 [基本資訊] 中，輸入下列內容：
 
     - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，良好設定檔名稱為**適用於整家公司的 iOS/iPadOS 受信任憑證 VPN 設定檔**。
     - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
 
-6. 選取 [下一步]  。
-7. 在 [組態設定]  中，選取資料夾圖示，然後瀏覽至從您 VPN 管理主控台匯出的 VPN 憑證 (.cer 檔案)。
-8. 選取 [下一步]  ，然後繼續建立設定檔。 如需詳細資訊，請參閱[建立 VPN 設定檔](vpn-settings-configure.md#create-the-profile)。
+6. 選取 [下一步]。
+7. 在 [組態設定] 中，選取資料夾圖示，然後瀏覽至從您 VPN 管理主控台匯出的 VPN 憑證 (.cer 檔案)。
+8. 選取 [下一步]，然後繼續建立設定檔。 如需詳細資訊，請參閱[建立 VPN 設定檔](vpn-settings-configure.md#create-the-profile)。
 
     > [!div class="mx-imgBorder"]
     > ![在 Microsoft Intune 中，針對 iOS/iPadOS 裝置建立信任的憑證設定檔](./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png)
@@ -99,7 +99,7 @@ Zscaler Private Access (ZPA) 與 Azure Active Directory (Azure AD) 整合以便�
 - [設定基礎結構以支援 SCEP 與 Intune](../protect/certificates-scep-configure.md)
 - [透過 Intune 設定並管理 PKCS 憑證](../protect/certficates-pfx-configure.md)
 
-請務必設定用戶端驗證的憑證。 您可以在 SCEP 憑證設定檔中直接設定用戶端憑證 ([擴充金鑰使用方法]  清單 > [用戶端驗證]  )。 若是 PKCS，請在憑證授權單位 (CA) 的憑證範本中設定用戶端驗證。
+請務必設定用戶端驗證的憑證。 您可以在 SCEP 憑證設定檔中直接設定用戶端憑證 ([擴充金鑰使用方法] 清單 > [用戶端驗證])。 若是 PKCS，請在憑證授權單位 (CA) 的憑證範本中設定用戶端驗證。
 
 > [!div class="mx-imgBorder"]
 > ![在 Microsoft Intune 中建立 SCEP 憑證設定檔，包括主體名稱格式、金鑰使用方法、擴充金鑰使用方法等](./media/vpn-setting-configure-per-app/vpn-per-app-create-scep-cert.png)
@@ -108,54 +108,54 @@ Zscaler Private Access (ZPA) 與 Azure Active Directory (Azure AD) 整合以便�
 
 VPN 設定檔包含具有用戶端認證、VPN 連線資訊，以及個別應用程式 VPN 旗標的 SCEP 或 PKCS 憑證，該旗標會啟用 iOS/iPadOS 應用程式所使用的個別應用程式 VPN。
 
-1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選取 [裝置] > [組態設定檔] > [建立設定檔]。
+2. 選取 [裝置] > [組態設定檔] > [建立設定檔]。
 3. 輸入下列內容：
 
-    - **平台**：選取 [iOS/iPadOS]  。
-    - **設定檔類型**：選取 [VPN]  。
+    - **平台**：選取 [iOS/iPadOS]。
+    - **設定檔**：選取 [VPN]。
 
-4. 選取 [建立]  。
-5. 在 [基本資訊]  中，輸入下列內容：
+4. 選取 [建立]。
+5. 在 [基本資訊] 中，輸入下列內容：
 
     - **名稱**：為自訂設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，良好設定檔名稱為**適用於整家公司的 iOS/iPadOS 各個應用程式 VPN 設定檔**。
     - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
 
-6. 在 [組態設定]  中，進行下列設定：
+6. 在 [組態設定] 中，進行下列設定：
 
     - **連線類型**：選取您的 VPN 用戶端應用程式。
     - **基底 VPN**：進行設定。 [iOS/iPadOS VPN 設定](vpn-settings-ios.md)會列出並描述所有設定。 使用個別應用程式 VPN 時，請務必設定下列屬性：
 
-      - **驗證方法**：選取 [憑證]  。 
-      - **驗證憑證**：選取現有的 SCEP 或 PKCS 憑證 > [確定]  。
-      - **分割通道**：選取 [停用]  可在 VPN 連線為使用中時，強制所有流量使用 VPN 通道。 
+      - **驗證方法**：選取 [憑證]。 
+      - **驗證憑證**：選取現有的 SCEP 或 PKCS 憑證 > [確定]。
+      - **分割通道**：選取 [停用] 可在 VPN 連線為使用中時，強制所有流量使用 VPN 通道。 
 
       > [!div class="mx-imgBorder"]
       > ![在個別應用程式 VPN 設定檔中，輸入連線、IP 位址或 FQDN、驗證方法，並在 Microsoft Intune 中分割通道](./media/vpn-setting-configure-per-app/vpn-per-app-create-vpn-profile.png)
 
     如需其他設定的資訊，請參閱 [iOS/iPadOS VPN 設定](vpn-settings-ios.md)。
 
-    - [自動 VPN]   > [自動 VPN 類型]   > [個別應用程式 VPN] 
+    - [自動 VPN] > [自動 VPN 類型] > [個別應用程式 VPN]
 
       > [!div class="mx-imgBorder"]
       > ![在 Intune 中，將 [自動 VPN] 設定為 iOS/iPadOS 裝置上的個別應用程式 VPN](./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png)
 
-7. 選取 [下一步]  ，然後繼續建立設定檔。 如需詳細資訊，請參閱[建立 VPN 設定檔](vpn-settings-configure.md#create-the-profile)。
+7. 選取 [下一步]，然後繼續建立設定檔。 如需詳細資訊，請參閱[建立 VPN 設定檔](vpn-settings-configure.md#create-the-profile)。
 
 ## <a name="associate-an-app-with-the-vpn-profile"></a>建立應用程式與 VPN 設定檔的關聯
 
 在新增 VPN 設定檔之後，請對設定檔建立應用程式與 Azure AD 群組的關聯。
 
-1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選取 [應用程式]   > [所有應用程式]  。
-2. 從清單中選取應用程式 > [屬性]   > [指派]   > [新增群組]  。
-3. 在 [指派類型]  中，選取 [必要]  或 [適用於已註冊的裝置]  。
-4. 選取 [包含的群組]   > [選取要包含的群組]  > 選取您在本文中[建立](#create-a-group-for-your-vpn-users)的群組 > [選取]  。
-5. 在 [VPN]  中，選取您在本文中[建立](#create-a-per-app-vpn-profile)的個別應用程式 VPN 設定檔。
+1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選取 [應用程式] > [所有應用程式]。
+2. 從清單中選取應用程式 > [屬性] > [指派] > [新增群組]。
+3. 在 [指派類型] 中，選取 [必要] 或 [適用於已註冊的裝置]。
+4. 選取 [包含的群組] > [選取要包含的群組] > 選取您在本文中[建立](#create-a-group-for-your-vpn-users)的群組 > [選取]。
+5. 在 [VPN] 中，選取您在本文中[建立](#create-a-per-app-vpn-profile)的個別應用程式 VPN 設定檔。
 
     > [!div class="mx-imgBorder"]
     > ![在 Microsoft Intune 中，將應用程式指派給個別應用程式 VPN 設定檔](./media/vpn-setting-configure-per-app/vpn-per-app-app-to-vpn.png)
 
-6. 選取 [確定]   > [儲存]  。
+6. 選取 [確定] > [儲存]。
 
 在下次裝置簽入期間，當下列所有條件皆成立時，會移除應用程式與設定檔之間的關聯：
 
@@ -177,13 +177,13 @@ VPN 設定檔包含具有用戶端認證、VPN 連線資訊，以及個別應用
 ### <a name="before-you-attempt-to-connect"></a>嘗試連線前
 
 - 請確定您將上述提到的所有原則都部署到相同群組。 否則，個別應用程式 VPN 體驗將無法運作。
-- 如果您使用 Pulse Secure VPN 應用程式或自訂 VPN 用戶端應用程式，您可以選擇使用應用程式層或封包層通道。 若是應用程式層通道，請將 [ProviderType]  值設定為 [應用程式 Proxy]  ，若是封包層通道，則設定為 [封包通道]  。 請參閱您 VPN 提供者的文件，以確定您使用的值正確。
+- 如果您使用 Pulse Secure VPN 應用程式或自訂 VPN 用戶端應用程式，您可以選擇使用應用程式層或封包層通道。 若是應用程式層通道，請將 [ProviderType] 值設定為 [應用程式 Proxy]，若是封包層通道，則設定為 [封包通道]。 請參閱您 VPN 提供者的文件，以確定您使用的值正確。
 
 ### <a name="connect-using-the-per-app-vpn"></a>使用個別應用程式 VPN 來連線
 
 在不選取 VPN 或鍵入認證的情況下連線，來驗證零觸控體驗。 零觸控體驗意味著：
 
-- 裝置不會要求您信任 VPN 伺服器。 也就是說，使用者不會看到 [動態信任]  對話方塊。
+- 裝置不會要求您信任 VPN 伺服器。 也就是說，使用者不會看到 [動態信任] 對話方塊。
 - 使用者無須鍵入認證。
 - 當使用者開啟其中一個相關聯的應用程式時，使用者的裝置已連線到 VPN。
 

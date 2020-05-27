@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
-ms.topic: conceptual
+ms.date: 05/18/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feb211b1de15aa0400e9ff71b428e2db02ef4b03
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ddbb82d3cd5c86ff32917013edd4f16b303678fe
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551355"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990087"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>在 Intune 中使用自訂設定建立設定檔
 
@@ -32,13 +32,10 @@ Microsoft Intune 包含許多內建設定，可控制裝置上的不同功能。
 
 此文章示範如何建立 Android 裝置系統管理員、Android Enterprise、iOS/iPadOS、macOS 和 Windows 的自訂設定檔。 您也可以查看適用於不同平台的所有可用設定。
 
-> [!NOTE]
-> Intune 使用者介面 (UI) 正在更新為全螢幕體驗，而且可能需要數週的時間。 在您的租用戶收到此更新之前，當您建立或編輯此文章中所述的設定時，您的工作流程將略有不同。
-
 ## <a name="create-the-profile"></a>建立設定檔
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取 [裝置] > [組態設定檔] > [建立設定檔]。
 3. 輸入下列內容：
 
     - **平台**：選擇您的裝置平台。 選項包括：  
@@ -50,17 +47,17 @@ Microsoft Intune 包含許多內建設定，可控制裝置上的不同功能。
         - **Windows 10 及以上版本**
         - **Windows Phone 8.1**
 
-    - **設定檔**：選取 [自訂]  。
+    - **設定檔**：選取 [自訂]。
 
-4. 選取 [建立]  。
-5. 在 [基本資訊]  中，輸入下列內容：
+4. 選取 [建立]。
+5. 在 [基本資訊] 中，輸入下列內容：
 
     - **名稱**：輸入政策的描述性名稱。 為您的設定檔命名，以方便之後能夠輕鬆識別。 例如，一個良好的原則名稱是 **Windows 10：自訂可啟用 AllowVPNOverCellular 自訂 OMA-URI 的設定檔**。
     - **描述**：輸入政策的描述。 這是選擇性設定，但建議執行。
 
-6. 選取 [下一步]  。
+6. 選取 [下一步]。
 
-7. 在 [組態設定]  中，您可進行的設定會根據您選擇的平台而不同。 選擇您平台來進行詳細設定：
+7. 在 [組態設定] 中，您可進行的設定會根據您選擇的平台而不同。 選擇您平台來進行詳細設定：
 
     - [Android 裝置系統管理員](custom-settings-android.md)
     - [Android Enterprise](custom-settings-android-for-work.md)
@@ -70,16 +67,16 @@ Microsoft Intune 包含許多內建設定，可控制裝置上的不同功能。
     - [Windows Holographic for Business](custom-settings-windows-holographic.md)
     - [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
 
-8. 選取 [下一步]  。
-9. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+8. 選取 [下一步]。
+9. 在 [範圍標籤] (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
 
-    選取 [下一步]  。
+    選取 [下一步]。
 
-10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
+10. 在 [指派] 中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
 
-    選取 [下一步]  。
+    選取 [下一步]。
 
-11. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立]  時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
+11. 在 [檢閱 + 建立] 中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 ## <a name="example"></a>範例
 

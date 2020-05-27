@@ -6,8 +6,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
-ms.topic: conceptual
+ms.date: 05/21/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb5a04b8db382345cbf8f3e86feab8b3cea9efd9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 06e975e386b0d754b03e75ffeda456a432a6dc4b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615686"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984993"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>使用 Intune 建立 Mobile Threat Defense (MTD) 裝置合規性原則
 
@@ -44,13 +44,13 @@ ms.locfileid: "81615686"
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 選取 [裝置]   > [合規性原則]   > [建立原則]  。
+2. 選取 [裝置] > [合規性原則] > [建立原則]。
 
-3. 指定裝置合規性原則的 [名稱]  、[描述]  ，選取 [平台]  ，然後選取 [設定]  區段下的 [設定]  。
+3. 指定裝置合規性原則的 [名稱]、[描述]，選取 [平台]，然後選取 [設定] 區段下的 [設定]。
 
-4. 在 [相容性原則]  窗格中，選擇 [裝置健全狀況]  。
+4. 在 [相容性原則] 窗格中，選擇 [裝置健全狀況]。
 
-5. 在 [裝置健全狀況]  窗格中，從 [裝置須等於或低於裝置威脅等級]  的下拉式清單中選擇行動威脅等級。
+5. 在 [裝置健全狀況] 窗格中，從 [裝置須等於或低於裝置威脅等級] 的下拉式清單中選擇行動威脅等級。
 
    - **安全**：這個層級最安全。 裝置不能在具有任何威脅的同時還能存取公司資源。 發現任何威脅時，即會將裝置評估為不相容。
 
@@ -60,12 +60,7 @@ ms.locfileid: "81615686"
 
    - **高**：這個層級最不安全。 這會允許所有威脅等級，並只將 Mobile Threat Defense 用於回報用途。 裝置必須要有使用此裝置啟用的 MTD 應用程式。
 
-   > [!IMPORTANT]
-   > 若您是 Android Enterprise 裝置的擁有人，則在建立及儲存原則之後，便無法再編輯原則來修改威脅等級。 所有對**要求裝置等同於或低於裝置威脅等級**之裝置健康情況設定的變更皆不會生效。 若要變更威脅等級值，必須先刪除目前的原則，然後再建立新原則，以設定所需的威脅等級。
-   >
-   > 這是已知的問題，將會在後續的 Intune 更新中解決。
-
-6. 選取 [確定]  兩次，然後選取 [建立]  來建立原則。
+6. 選取 [確定] 兩次，然後選取 [建立] 來建立原則。
 
 > [!IMPORTANT]
 > 如果您針對 Office 365 或其他服務建立條件式存取原則，就會評估裝置合規性評估，並封鎖不符合規範的裝置，使其無法存取公司資源，直到裝置中的威脅獲得解決為止。
@@ -76,9 +71,9 @@ ms.locfileid: "81615686"
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 選取 [裝置]   > [合規性原則]  。
+2. 選取 [裝置] > [合規性原則]。
 
-3. 選取您想要指派給使用者的原則，然後選取 [指派]  。 使用可用的選項來「包括」  及「排除」  接收此原則的群組。  
+3. 選取您想要指派給使用者的原則，然後選取 [指派]。 使用可用的選項來「包括」及「排除」接收此原則的群組。  
 
 4. 選取 [儲存] 以完成指派。 當您儲存指派時，原則便會部署至選取的使用者，且系統會針對他們的裝置進行合規性評估。
 
