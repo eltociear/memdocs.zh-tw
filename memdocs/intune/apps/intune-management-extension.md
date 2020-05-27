@@ -6,7 +6,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/06/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 749377ceecf29d9b900cff108fc4b736d6b8d0f2
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
+ms.openlocfilehash: a8d75208de7cc6697699d79e3a52df742f605fdb
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605162"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990726"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>在 Intune 的 Windows 10 裝置上使用 PowerShell 指令碼
 

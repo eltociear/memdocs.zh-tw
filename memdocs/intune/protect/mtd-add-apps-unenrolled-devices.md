@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 02/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c85816c36427727416f531effa695e7d2eec66aa
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6eea60eec6f36a5ab8a97b5e4402d75b4a8eb54b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79339250"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991151"
 ---
 # <a name="add-mobile-threat-defense-apps-to-unenrolled-devices"></a>將 Mobile Threat Defense 應用程式新增至尚未註冊的裝置
 

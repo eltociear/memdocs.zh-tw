@@ -6,7 +6,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/23/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0fb8f9e4f779acc9f77327d3fdeee20ae02c6924
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: dc7f16c1de015488ada01cba4c30044bac769114
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324115"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990683"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>將 Android 企業營運應用程式新增至 Microsoft Intune
 
