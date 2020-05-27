@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/01/2020
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0c9bf96188e27afeaf66e7b2897f8cda19f9df37
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 82272fd4239b50657b887bf6c310b280eeecae7a
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551645"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880073"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>使用公司入口網站來註冊您的裝置  
 註冊您個人或公司擁有的 Android 裝置，以安全地存取公司電子郵件、應用程式和資料。 公司入口網站支援執行 Android 4.4 及更新版本的 Android 裝置 (包括 Samsung Knox)。  

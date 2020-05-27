@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/25/2016
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8508ff89ae26c06b79e0753b058dca7b64322885
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e58151c01af1e8013ae9e15997186158d037d368
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077031"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879750"
 ---
 # <a name="what-happens-if-you-reset-your-windows-device-using-the-company-portal"></a>使用公司入口網站重設您的 Windows 裝置會發生什麼情況？
 
