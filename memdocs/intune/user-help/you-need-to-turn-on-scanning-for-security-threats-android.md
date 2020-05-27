@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 664384a03839b85be3ff01731a988315b61342c3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6825a6b6dbab206d528d6063afb818510c75971d
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334661"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882495"
 ---
 # <a name="enable-security-threat-scans-on-your-device"></a>在您的裝置上啟用安全性威脅掃描 
 如果您在不知情的情況下安裝了不安全的應用程式，您的裝置資料可能會有風險。 若要保護您的裝置上的資料，建議您： 
