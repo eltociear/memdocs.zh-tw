@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 783323c3e9218b34b1f2b7f3c7d9bb13eea44e2e
-ms.sourcegitcommit: ed2c18e210db177eb0d5e10d74207006561b7b5d
+ms.openlocfilehash: 8c585473ec80ad4c6dfe49d22e527e99175bfbb4
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83383715"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877420"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>設定 Configuration Manager 的雲端管理閘道
 
@@ -223,11 +223,11 @@ Configuration Manager 用戶端會自動判斷它是位於內部網路還是網�
 
 - 系統符合下列其中一個條件：
 
- - 每個系統都具有先前核發給該系統之有效、唯一且受信任的用戶端驗證憑證。
- 
- - 已加入 Azure AD 網域
- 
- - 已加入混合式 Azure AD 網域。
+  - 每個系統都具有先前核發給該系統之有效、唯一且受信任的用戶端驗證憑證。
+
+  - 已加入 Azure AD 網域
+
+  - 已加入混合式 Azure AD 網域。
 
 - 您不希望或無法完全重新安裝現有的用戶端代理程式。
 

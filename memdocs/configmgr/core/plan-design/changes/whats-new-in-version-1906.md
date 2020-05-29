@@ -10,16 +10,16 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c7ad4e96d9afba7e52d2ff2e5dd3f4f6be0b9a98
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2db1a719aaf1cb79973f1af8e2de3c1bbb91d605
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078697"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879081"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Configuration Manager 最新分支 1906 版的新功能
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 Configuration Manager 最新分支的更新 1906 可以透過主控台內更新的方式取得。 在執行 1802 版或更新版本的站台上套用此更新。 <!-- baseline only statement:When installing a new site, it's also available as a baseline version.--> 本文摘要說明 Configuration Manager 1906 版的變更和新功能。  
 
@@ -69,7 +69,7 @@ Configuration Manager 最新分支的更新 1906 可以透過主控台內更新�
 
 - 如果資料庫升級遭到封鎖，則您將會收到**進行中，需要注意**的警告。
    - cmupdate.log 會從封鎖資料庫升級的 SQL 中記錄程式名稱和 sessionid。
-- 當資料庫升級不再受到封鎖時，狀態將會重設為 [進行中]  或 [完成]  。
+- 當資料庫升級不再受到封鎖時，狀態將會重設為 [進行中] 或 [完成]。
    - 當資料庫升級受到封鎖時，會每隔 5 分鐘檢查一次以查看是否仍受到封鎖。
 
    ![安裝期間的資料庫升級監視](./media/4200581-database-upgrade-monitoring.png)
@@ -186,7 +186,7 @@ Configuration Manager 最新分支的更新 1906 可以透過主控台內更新�
 ### <a name="use-your-distribution-point-as-an-in-network-cache-server-for-delivery-optimization"></a>使用您的發佈點作為傳遞最佳化的網路內快取伺服器
 
 <!--3555764-->
-您現在可以在發佈點上安裝傳遞最佳化的網路內快取 (DOINC) 伺服器。 藉由快取此內部部署內容，您的用戶端就可以受益於傳遞最佳化功能，但您可以協助保護 WAN 連結。
+您現在可以在發佈點上安裝傳遞最佳化的網路內快取伺服器。 藉由快取此內部部署內容，您的用戶端就可以受益於傳遞最佳化功能，但您可以協助保護 WAN 連結。
 
 此快取伺服器可視需要以透明方式快取傳遞最佳化所下載的內容。 使用用戶端設定可確保只將此伺服器提供給本機 Configuration Manager 界限群組的成員。
 
@@ -223,10 +223,10 @@ OneTrace 是支援中心的新記錄檢視器。 其運作方式與 CMTrace 相�
 ### <a name="configure-client-cache-minimum-retention-period"></a>設定用戶端快取保留期間下限
 
 <!--4485509-->
-您現在可以指定 Configuration Manager 用戶端保留快取內容的時間下限。 此用戶端設定定義 Configuration Manager 代理程式在將內容從快取中移除之前應等候的最小時間量。 在用戶端設定的 [用戶端快取設定]  群組中，進行下列設定：**可移除快取內容之前的持續時間下限 (分鐘)** 。
+您現在可以指定 Configuration Manager 用戶端保留快取內容的時間下限。 此用戶端設定定義 Configuration Manager 代理程式在將內容從快取中移除之前應等候的最小時間量。 在用戶端設定的 [用戶端快取設定] 群組中，進行下列設定：**可移除快取內容之前的持續時間下限 (分鐘)** 。
 
 > [!Note]  
-> 在相同的用戶端設定群組中，[Enable Configuration Manager client in full OS to share content] \(在完整作業系統中啟用 Configuration Manager 用戶端以共用內容\)  的現有設定現在已重新命名為 [Enable as peer cache source] \(啟用為對等快取來源\)  。 此設定的行為不會變更。  
+> 在相同的用戶端設定群組中，[Enable Configuration Manager client in full OS to share content] \(在完整作業系統中啟用 Configuration Manager 用戶端以共用內容\) 的現有設定現在已重新命名為 [Enable as peer cache source] \(啟用為對等快取來源\)。 此設定的行為不會變更。  
 
 如需詳細資訊，請參閱[用戶端快取設定](../../clients/deploy/about-client-settings.md#client-cache-settings)。
 
@@ -235,7 +235,7 @@ OneTrace 是支援中心的新記錄檢視器。 其運作方式與 CMTrace 相�
 
 ### <a name="improvements-to-co-management-auto-enrollment"></a>共同管理自動註冊的改進
 
-- 新的共同管理裝置現在會根據其 Azure Active Directory (Azure AD)「裝置」  權杖自動註冊到 Microsoft Intune 服務。 不需要等待使用者登入裝置以啟動自動註冊。 此變更有助於減少[註冊狀態](../../../comanage/how-to-monitor.md#co-management-enrollment-status)為*擱置使用者登入*的裝置數目。<!-- 4454491 -->
+- 新的共同管理裝置現在會根據其 Azure Active Directory (Azure AD)「裝置」權杖自動註冊到 Microsoft Intune 服務。 不需要等待使用者登入裝置以啟動自動註冊。 此變更有助於減少[註冊狀態](../../../comanage/how-to-monitor.md#co-management-enrollment-status)為*擱置使用者登入*的裝置數目。<!-- 4454491 -->
 
 - 針對已將裝置註冊到共同管理的客戶，新的裝置現在會在符合必要條件之後立即註冊。 例如，一旦裝置加入至 Azure AD 之後，就會安裝 Configuration Manager 用戶端。<!--4321130-->
 
@@ -246,10 +246,10 @@ OneTrace 是支援中心的新記錄檢視器。 其運作方式與 CMTrace 相�
 <!--3555750-->
 您現在可以為每個共同管理工作負載設定不同的試驗集合。 使用不同的試驗集合，可讓您在轉移工作負載時採取更細微的方法。
 
-- 您現在可以在 [啟用]  索引標籤上指定 [Intune 自動註冊]  集合。
-    - [Intune 自動註冊]  集合應包含所有要上架到共同管理的用戶端。 其就本質上而言，是其他暫存集合的超集。
+- 您現在可以在 [啟用] 索引標籤上指定 [Intune 自動註冊] 集合。
+    - [Intune 自動註冊] 集合應包含所有要上架到共同管理的用戶端。 其就本質上而言，是其他暫存集合的超集。
 
-- 在 [暫存]  索引標籤上，您現在可以為每個工作負載選擇個別的集合，而不是將一個試驗集合用於所有工作負載。
+- 在 [暫存] 索引標籤上，您現在可以為每個工作負載選擇個別的集合，而不是將一個試驗集合用於所有工作負載。
 
     ![共同管理索引標籤可讓您為每個工作負載選擇集合](./media/3555750-co-management-staging-tab.png)
 
@@ -268,7 +268,7 @@ OneTrace 是支援中心的新記錄檢視器。 其運作方式與 CMTrace 相�
 ### <a name="filter-applications-deployed-to-devices"></a>篩選部署至裝置的應用程式
 
 <!--4451056-->
-裝置導向應用程式部署的使用者類別現在會在軟體中心內顯示為篩選。 在應用程式屬性的 [軟體中心]  頁面上，指定該應用程式的**使用者類別**。 接著在軟體中心開啟該應用程式，並查看可用的篩選。
+裝置導向應用程式部署的使用者類別現在會在軟體中心內顯示為篩選。 在應用程式屬性的 [軟體中心] 頁面上，指定該應用程式的**使用者類別**。 接著在軟體中心開啟該應用程式，並查看可用的篩選。
 
 如需詳細資訊，請參閱[手動指定應用程式資訊](../../../apps/deploy-use/create-applications.md#bkmk_manual-app)。
 
@@ -302,7 +302,7 @@ OneTrace 是支援中心的新記錄檢視器。 其運作方式與 CMTrace 相�
 
 - 如果您在主控台中核准應用程式要求，隨即拒絕該要求，您現在可以再次核准。 在您核准之後，應用程式會重新安裝於用戶端。  
 
-- 在 Configuration Manager 主控台中，[軟體程式庫]  工作區的 [應用程式管理]  下方，已將 [核准要求]  節點重新命名為 [應用程式要求]  。<!-- SCCMDocs-pr#4028 -->
+- 在 Configuration Manager 主控台中，[軟體程式庫] 工作區的 [應用程式管理] 下方，已將 [核准要求] 節點重新命名為 [應用程式要求]。<!-- SCCMDocs-pr#4028 -->
 
 - 有一個新的 WMI 方法：**DeleteInstance** 可移除應用程式核准要求。 此動作不會解除安裝該裝置上的應用程式。 如果未安裝，使用者將無法從軟體中心安裝應用程式。
 
@@ -327,7 +327,7 @@ OneTrace 是支援中心的新記錄檢視器。 其運作方式與 CMTrace 相�
 ### <a name="clear-app-content-from-client-cache-during-task-sequence"></a>在工作順序期間從用戶端快取清除應用程式內容
 
 <!--4485675-->
-在 [安裝應用程式]  工作順序步驟中，您現在可以在執行步驟後從用戶端快取中刪除應用程式內容。
+在 [安裝應用程式] 工作順序步驟中，您現在可以在執行步驟後從用戶端快取中刪除應用程式內容。
 
 如需詳細資訊，請參閱[關於工作順序步驟](../../../osd/understand/task-sequence-steps.md#BKMK_InstallApplication)。
 
@@ -362,7 +362,7 @@ OneTrace 是支援中心的新記錄檢視器。 其運作方式與 CMTrace 相�
 
     - **Set-CMTSStepRunTaskSequence**
 
-- 您現在可以更輕鬆地在執行工作順序時編輯變數。 當您在 [工作順序精靈] 視窗選取工作順序後，用於編輯工作順序變數的頁面會包含 [編輯]  按鈕。<!-- 4668846 --> 如需詳細資訊，請參閱[如何使用工作順序變數](../../../osd/understand/using-task-sequence-variables.md#bkmk_set-tswiz)。
+- 您現在可以更輕鬆地在執行工作順序時編輯變數。 當您在 [工作順序精靈] 視窗選取工作順序後，用於編輯工作順序變數的頁面會包含 [編輯] 按鈕。<!-- 4668846 --> 如需詳細資訊，請參閱[如何使用工作順序變數](../../../osd/understand/using-task-sequence-variables.md#bkmk_set-tswiz)。
 
 - **停用 BitLocker** 工作順序步驟有一個新的重新啟動計數器。 使用此選項來指定重新啟動次數，以確保 BitLocker 停用。 此變更可協助您簡化工作順序。 您可以使用單一步驟，而不是新增此步驟的多個執行個體。 <!--4512937--> 如需詳細資訊，請參閱[停用 BitLocker](../../../osd/understand/task-sequence-steps.md#BKMK_DisableBitLocker)。
 
@@ -416,7 +416,7 @@ OneTrace 是支援中心的新記錄檢視器。 其運作方式與 CMTrace 相�
 
 <!--3976435-->
 
-終端使用者現在會透過間歇倒數計時通知，更頻繁地收到重新啟動擱置中的提醒。 您可以在 [電腦重新啟動]  頁面上的 [用戶端設定]  中，定義間歇通知的間隔時間。 變更 [指定電腦重新啟動倒數通知的延遲持續時間 (分鐘)]  的值，以設定在最後一個倒數計時通知發生之前，使用者收到關於擱置重新啟動之提醒的頻率。
+終端使用者現在會透過間歇倒數計時通知，更頻繁地收到重新啟動擱置中的提醒。 您可以在 [電腦重新啟動] 頁面上的 [用戶端設定] 中，定義間歇通知的間隔時間。 變更 [指定電腦重新啟動倒數通知的延遲持續時間 (分鐘)] 的值，以設定在最後一個倒數計時通知發生之前，使用者收到關於擱置重新啟動之提醒的頻率。
 
 此外，**向使用者顯示短暫的通知，指出使用者登出或電腦重新啟動之前間隔 (分鐘)** 的最大值，已從 1440 分鐘 (24 小時) 增加到 20160 分鐘 (兩週)。
 
@@ -434,7 +434,7 @@ OneTrace 是支援中心的新記錄檢視器。 其運作方式與 CMTrace 相�
 
 字串 `CustomTab1` 是順序中的第一個自訂標籤。
 
-舉例來說，在 Windows [執行]  視窗中鍵入此 URL。
+舉例來說，在 Windows [執行] 視窗中鍵入此 URL。
 
 您也可以使用此語法在軟體中心內開啟預設索引標籤：
 
@@ -465,7 +465,7 @@ OneTrace 是支援中心的新記錄檢視器。 其運作方式與 CMTrace 相�
 
 <!--3734426-->
 
-您現在可以指定時間上限，要求軟體更新安裝必須在這段時間內完成。 您可以在軟體更新點的 [執行時間上限]  索引標籤中指定下列項目：
+您現在可以指定時間上限，要求軟體更新安裝必須在這段時間內完成。 您可以在軟體更新點的 [執行時間上限] 索引標籤中指定下列項目：
 
 - **Windows 功能更新的執行時間上限 (分鐘)**
 - **Office 365 更新與 Windows 非功能更新的執行時間上限 (分鐘數)**
@@ -497,13 +497,13 @@ OneTrace 是支援中心的新記錄檢視器。 其運作方式與 CMTrace 相�
 ### <a name="drill-through-required-updates"></a>鑽研需要的更新
 
 <!--4224414-->
-您現在可以鑽研合規性統計資料，以了解哪些裝置需要特定的軟體更新。 若要檢視裝置清單，您需要檢視更新及裝置所屬集合的權限。 若要向下切入至裝置清單，請在更新的 [摘要]  索引標籤中，選取圓形圖旁的 [需要檢視]  超連結。 按一下超連結，即會帶您前往 [裝置]  下方的臨時節點，以查看需要更新的裝置。
+您現在可以鑽研合規性統計資料，以了解哪些裝置需要特定的軟體更新。 若要檢視裝置清單，您需要檢視更新及裝置所屬集合的權限。 若要向下切入至裝置清單，請在更新的 [摘要] 索引標籤中，選取圓形圖旁的 [需要檢視] 超連結。 按一下超連結，即會帶您前往 [裝置] 下方的臨時節點，以查看需要更新的裝置。
 
-[需要檢視]  超連結可用於下列位置：
+[需要檢視] 超連結可用於下列位置：
 
-   - [軟體程式庫]   > [軟體更新]   > [所有軟體更新] 
-   - [軟體程式庫]   > [Windows 10 服務]   > [所有 Windows 10 更新] 
-   - [軟體程式庫]   > [Office 365 用戶端管理]   > [Office 365 更新] 
+   - [軟體程式庫] > [軟體更新] > [所有軟體更新]
+   - [軟體程式庫] > [Windows 10 服務] > [所有 Windows 10 更新]
+   - [軟體程式庫] > [Office 365 用戶端管理] > [Office 365 更新]
 
 如需詳細資訊，請參閱[監視軟體更新](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates)、[管理 Windows 即服務](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)及[管理 Office 365 ProPlus 更新](../../../sum/deploy-use/manage-office-365-proplus-updates.md#drill-through-required-office-365-updates)。
 
@@ -514,7 +514,7 @@ OneTrace 是支援中心的新記錄檢視器。 其運作方式與 CMTrace 相�
 
 <!--4021125-->
 
-為了協助您判斷哪些裝置已準備好升級至 Office 365 ProPlus，需要一個新的整備儀表板。 它包含 Configuration Manager 最新分支 1902 版中發行的 **Office 365 ProPlus 升級整備**圖格。 在 Configuration Manager 主控台中，移至 [軟體程式庫]  工作區，展開 [Office 365 用戶端管理]  ，然後選取 [Office 365 ProPlus 升級整備]  節點。
+為了協助您判斷哪些裝置已準備好升級至 Office 365 ProPlus，需要一個新的整備儀表板。 它包含 Configuration Manager 最新分支 1902 版中發行的 **Office 365 ProPlus 升級整備**圖格。 在 Configuration Manager 主控台中，移至 [軟體程式庫] 工作區，展開 [Office 365 用戶端管理]，然後選取 [Office 365 ProPlus 升級整備] 節點。
 
 如需儀表板、必要條件和使用此資料的詳細資訊，請參閱[與 Office 365 ProPlus 整備的整合](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash)。
 
@@ -536,14 +536,14 @@ OneTrace 是支援中心的新記錄檢視器。 其運作方式與 CMTrace 相�
 
 <!--3600867-->
 
-您現在可以在資料夾上設定安全性範圍。 如果您在資料夾中擁有物件的存取權，但沒有資料夾的存取權，您將無法看到物件。 同樣地，如果您有資料夾存取權，但沒有其中物件的存取權，您將無法看到該物件。 以滑鼠右鍵按一下資料夾、選擇 [設定安全性範圍]  ，然後選擇您想要套用的安全性範圍。
+您現在可以在資料夾上設定安全性範圍。 如果您在資料夾中擁有物件的存取權，但沒有資料夾的存取權，您將無法看到物件。 同樣地，如果您有資料夾存取權，但沒有其中物件的存取權，您將無法看到該物件。 以滑鼠右鍵按一下資料夾、選擇 [設定安全性範圍]，然後選擇您想要套用的安全性範圍。
 
 如需詳細資訊，請參閱[使用 Configuration Manager 主控台](../../servers/manage/admin-console.md#tips)和[設定以角色為基礎的系統管理](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder)。
 
 ### <a name="add-smbios-guid-column-to-device-and-device-collection-nodes"></a>將 SMBIOS GUID 資料行新增至裝置和裝置集合節點
 
 <!--4526580-->
-在 [裝置]  和 [裝置集合]  節點中，您現在可以新增 [SMBIOS GUID]  的新資料行。 這個值與系統資源類別的 **BIOS GUID** 屬性相同。 這是裝置硬體的唯一識別碼。
+在 [裝置] 和 [裝置集合] 節點中，您現在可以新增 [SMBIOS GUID] 的新資料行。 這個值與系統資源類別的 **BIOS GUID** 屬性相同。 這是裝置硬體的唯一識別碼。
 
 ### <a name="administration-service-support-for-security-nodes"></a>對安全性節點的系統管理服務支援
 
@@ -553,49 +553,49 @@ OneTrace 是支援中心的新記錄檢視器。 其運作方式與 CMTrace 相�
 如需詳細資訊，請參閱[系統管理服務](../hierarchy/plan-for-the-sms-provider.md#bkmk_admin-service)。
 
 > [!Note]
-> 從 1906 版開始，站台屬性上的 [用戶端電腦通訊]  索引標籤現在稱為**通訊安全性**。<!-- SCCMDocs#1645 -->  
+> 從 1906 版開始，站台屬性上的 [用戶端電腦通訊] 索引標籤現在稱為**通訊安全性**。<!-- SCCMDocs#1645 -->  
 
 ### <a name="collections-tab-in-devices-node"></a>裝置節點中的 [集合] 索引標籤
 
 <!--4616810-->
-在 [資產與合規性]  工作區中，前往 [裝置]  節點，然後選取裝置。 在詳細資料窗格中，切換到新的 [集合]  索引標籤。此索引標籤清單會列出包含此裝置的集合。
+在 [資產與合規性] 工作區中，前往 [裝置] 節點，然後選取裝置。 在詳細資料窗格中，切換到新的 [集合] 索引標籤。此索引標籤清單會列出包含此裝置的集合。
 
 > [!Note]  
-> - 此索引標籤目前無法從 [裝置集合]  節點下的裝置子節點使用。 例如，當您在集合上選取選項來 [顯示成員]  時。
-> - 針對某些使用者，此索引標籤可能不會如預期般填入。 若要查看裝置所屬集合的完整清單，您必須擁有 [系統高權限管理員]  安全性角色。 這是已知的問題。 <!--5107309-->
+> - 此索引標籤目前無法從 [裝置集合] 節點下的裝置子節點使用。 例如，當您在集合上選取選項來 [顯示成員] 時。
+> - 針對某些使用者，此索引標籤可能不會如預期般填入。 若要查看裝置所屬集合的完整清單，您必須擁有 [系統高權限管理員] 安全性角色。 這是已知的問題。 <!--5107309-->
 
 ### <a name="task-sequences-tab-in-applications-node"></a>應用程式節點中的工作順序索引標籤
 
 <!--4616810-->
-在 [軟體程式庫]  工作區中，展開 [應用程式管理]  ，前往 [應用程式]  節點，然後選取應用程式。 在詳細資料窗格中，切換到新的 [工作順序]  索引標籤。此索引標籤會列出參考此應用程式的工作順序。
+在 [軟體程式庫] 工作區中，展開 [應用程式管理]，前往 [應用程式] 節點，然後選取應用程式。 在詳細資料窗格中，切換到新的 [工作順序] 索引標籤。此索引標籤會列出參考此應用程式的工作順序。
 
 ### <a name="show-collection-name-for-scripts"></a>顯示指令碼的集合名稱
 
 <!--4616810-->
-在 [監視]  工作區中，選取 [指令碼狀態]  節點。 它現在除了識別碼之外，還會列出 [集合名稱]  。
+在 [監視] 工作區中，選取 [指令碼狀態] 節點。 它現在除了識別碼之外，還會列出 [集合名稱]。
 
 ### <a name="real-time-actions-from-device-lists"></a>從裝置清單進行即時動作
 
 <!--4616810-->
-有數種方式可以顯示 [資產與合規性]  工作區中 [裝置]  節點下的裝置清單。
+有數種方式可以顯示 [資產與合規性] 工作區中 [裝置] 節點下的裝置清單。
 
-- 在 [資產與合規性]  工作區中，選取 [裝置集合]  節點。 選取裝置集合，然後選擇動作來 [顯示成員]  。 此動作會開啟 [裝置]  節點的子節點，並具有該集合的裝置清單。  
+- 在 [資產與合規性] 工作區中，選取 [裝置集合] 節點。 選取裝置集合，然後選擇動作來 [顯示成員]。 此動作會開啟 [裝置] 節點的子節點，並具有該集合的裝置清單。  
 
-  - 當您選取集合的子節點時，您現在可以從功能區的 [集合] 群組啟動  。  
+  - 當您選取集合的子節點時，您現在可以從功能區的 [集合] 群組啟動 。  
 
-- 在 [監視]  工作區中，選取 [部署]  節點。 選取任一部署，然後在功能區中選擇 [檢視狀態]  動作。 在部署狀態窗格中，按兩下總資產來鑽研裝置清單。  
+- 在 [監視] 工作區中，選取 [部署] 節點。 選取任一部署，然後在功能區中選擇 [檢視狀態] 動作。 在部署狀態窗格中，按兩下總資產來鑽研裝置清單。  
 
-  - 當您選取此清單中的裝置時，您現在可以從功能區的 [裝置] 群組啟動 [CMPivot]  及 [執行指令碼]  。  
+  - 當您選取此清單中的裝置時，您現在可以從功能區的 [裝置] 群組啟動 [CMPivot] 及 [執行指令碼]。  
 
 ### <a name="order-by-program-name-in-task-sequence"></a>在工作順序中依照程式名稱排序
 
 <!--4616810-->
-在 [軟體程式庫]  工作區中，展開 [作業系統]  ，然後選取 [工作順序]  節點。 編輯工作順序，然後選取或新增[安裝套件](../../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage)步驟。 若套件擁有超過一個程式，下拉式清單現在會根據程式名稱的字母順序進行排序。
+在 [軟體程式庫] 工作區中，展開 [作業系統]，然後選取 [工作順序] 節點。 編輯工作順序，然後選取或新增[安裝套件](../../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage)步驟。 若套件擁有超過一個程式，下拉式清單現在會根據程式名稱的字母順序進行排序。
 
 ### <a name="correct-names-for-client-operations"></a>用戶端作業的正確名稱
 
 <!--4616810-->
-在 [監視]  工作區中，選取 [用戶端作業]  。 [切換至下一個軟體更新點]  的選項現在已正確命名。
+在 [監視] 工作區中，選取 [用戶端作業]。 [切換至下一個軟體更新點] 的選項現在已正確命名。
 
 
 ## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a> 已淘汰的功能和作業系統

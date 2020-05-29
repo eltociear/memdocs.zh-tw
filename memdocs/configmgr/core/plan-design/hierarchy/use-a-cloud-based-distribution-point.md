@@ -10,19 +10,19 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7a14b79a9e7fd91b6470836b4271a669725065bd
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 52c2b70d2b094d5a89d80aafa61f1db67a53816f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771159"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83987709"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>使用 Configuration Manager 的雲端發佈點
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 > [!Important]  
-> 從 Azure 共用內容的實作已經變更。 藉由啟用 [允許使用 CMG 當作雲端發佈點及處理來自 Azure 儲存體的內容]  選項，來使用啟用內容的雲端管理閘道。 如需詳細資訊，請參閱[修改 CMG](../../clients/manage/cmg/setup-cloud-management-gateway.md#modify-a-cmg)。
+> 從 Azure 共用內容的實作已經變更。 藉由啟用 [允許使用 CMG 當作雲端發佈點及處理來自 Azure 儲存體的內容] 選項，來使用啟用內容的雲端管理閘道。 如需詳細資訊，請參閱[修改 CMG](../../clients/manage/cmg/setup-cloud-management-gateway.md#modify-a-cmg)。
 >
 > 未來您將無法建立傳統雲端發佈點。 如需詳細資訊，請參閱[已移除和已淘汰的功能](../changes/deprecated/removed-and-deprecated-cmfeatures.md)。
 
@@ -138,7 +138,7 @@ Configuration Manager 不會將現有的傳統雲端發佈點移轉至 Azure Res
 
 - 站台伺服器需要**網際網路存取**來部署和管理雲端服務。  
 
-- 使用 **Azure Resource Manager** 部署方法時，請將 Configuration Manager 與 [Azure AD](../../servers/deploy/configure/azure-services-wizard.md) 整合於**雲端管理**。 不需要 Azure AD 「使用者探索」  。  
+- 使用 **Azure Resource Manager** 部署方法時，請將 Configuration Manager 與 [Azure AD](../../servers/deploy/configure/azure-services-wizard.md) 整合於**雲端管理**。 不需要 Azure AD 「使用者探索」。  
 
 - **伺服器驗證憑證**。 如需詳細資訊，請參閱下面的[憑證](#bkmk_certs)一節。  
 
@@ -151,7 +151,7 @@ Configuration Manager 不會將現有的傳統雲端發佈點移轉至 Azure Res
     >
     > 自 1810 版開始淘汰傳統部署方法。  
 
-- 將 [雲端服務]  群組中的用戶端設定 [允許存取雲端發佈點]  設為 [是]  。 根據預設，此值是設為 [否]  。  
+- 將 [雲端服務] 群組中的用戶端設定 [允許存取雲端發佈點] 設為 [是]。 根據預設，此值是設為 [否] 。  
 
 - 用戶端裝置需要**網際網路連線能力**，而且必須使用 **IPv4**。  
 
@@ -168,15 +168,17 @@ Configuration Manager 不會將現有的傳統雲端發佈點移轉至 Azure Res
 
     > [!Important]  
     > - 雖然 Configuration Manager 主控台不會封鎖將 Microsoft 軟體更新發佈到雲端發佈點的作業，但您需要支付 Azure 成本來儲存用戶端未使用的內容。 以網際網路為基礎的用戶端一律會從 Microsoft Update 雲端服務取得 Microsoft 軟體更新內容。 請勿將 Microsoft 軟體更新發佈到雲端發佈點。
-    > - 使用 CMG 來儲存內容時，如果已啟用 [Download delta content when available] \(在提供差異內容時下載\)  的[用戶端設定](../../clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available)，協力廠商更新的內容就不會下載至用戶端。 <!--6598587--> 
+    > - 使用 CMG 來儲存內容時，如果已啟用 [Download delta content when available] \(在提供差異內容時下載\) 的[用戶端設定](../../clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available)，協力廠商更新的內容就不會下載至用戶端。 <!--6598587--> 
 
 - 從 1806 版開始，設定提取發佈點以使用雲端發佈點作為來源。 如需詳細資訊，請參閱[關於來源發佈點](use-a-pull-distribution-point.md#about-source-distribution-points)。<!--1321554-->  
 
 ### <a name="deployment-settings"></a>部署設定
 
-- 當您使用 [視執行工作順序所需，將內容下載到本機]  選項部署工作順序時，管理點不會包含雲端發佈點作為內容位置。 若要讓用戶端使用雲端發佈點，請使用 [啟動工作順序之前下載所有內容到本機]  選項部署工作順序。  
+- **視執行工作順序所需，將內容下載到本機**。 從 1910 版開始，工作順序引擎就可以從已啟用內容的 CMG 或雲端發佈點下載套件。 此變更為您的 Windows 10 就地升級部署提供額外的彈性，現在支援範圍擴大到以網際網路為基礎的裝置。
 
-- 雲端發佈點不支援使用 [從發佈點執行程式]  選項的套件部署。 請使用 [從發佈點下載內容並在本機執行]  部署選項。  
+- **啟動工作順序之前下載所有內容到本機**。 在 Configuration Manager 1906 版和更早版本中，其他選項 (例如**視執行工作順序所需，將內容下載到本機**) 在此案例中無法運作。 工作順序引擎無法從雲端來源下載內容。 Configuration Manager 用戶端必須先從雲端來源下載內容，才能啟動工作順序。 如有需要，您仍然可以在 1910 版中使用此選項，以符合您的需求。
+
+- 雲端發佈點不支援使用 [從發佈點執行程式] 選項的套件部署。 請使用 [從發佈點下載內容並在本機執行] 部署選項。  
 
 ### <a name="limitations"></a>限制  
 
@@ -325,7 +327,7 @@ Azure 儲存體服務支援單一檔案每秒 500 個要求。 單一雲端發�
 
 ### <a name="server-authentication-certificate"></a>伺服器驗證憑證
 
-所有雲端發佈點部署都需要此憑證。 
+所有雲端發佈點部署都需要此憑證。
 
 如需詳細資訊，請參閱 [CMG 伺服器驗證憑證](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_serverauth)，並視需要參閱下列子章節：  
 

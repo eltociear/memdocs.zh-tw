@@ -10,16 +10,16 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 849dd0bdb0f6583d525df8af3f6d46f8a4a9aecf
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: a52b70b0a753036c506e5d515cbac048d6771295
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904679"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879061"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Configuration Manager 最新分支 1910 版的新功能
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 Configuration Manager 最新分支的更新 1910 可以透過主控台內更新的方式取得。 在執行 1806 版或更新版本的站台上套用此更新。 <!-- baseline only statement:When installing a new site, it's also available as a baseline version.--> 本文摘要說明 Configuration Manager 1910 版的變更和新功能。
 
@@ -58,9 +58,9 @@ Microsoft Endpoint Manager 是一個整合的解決方案，可用於管理您�
 
 在 1910 版中，除了名稱變更之外，Configuration Manager 的運作方式仍然相同。 某些名稱的變更，可能會影響對下列元件的使用：
 
-- **Configuration Manager 主控台**：尋找主控台的捷徑，以及 [Microsoft 端點管理員]  資料夾中 Windows [開始] 功能表下方的 [遠端控制檢視器]  。
+- **Configuration Manager 主控台**：尋找主控台的捷徑，以及 [Microsoft 端點管理員] 資料夾中 Windows [開始] 功能表下方的 [遠端控制檢視器]。
 
-- **軟體中心**：尋找 [Microsoft 端點管理員]  資料夾中 Windows [開始] 功能表下方的 [軟體中心] 捷徑。
+- **軟體中心**：尋找 [Microsoft 端點管理員] 資料夾中 Windows [開始] 功能表下方的 [軟體中心] 捷徑。
 
 ![Microsoft 端點管理員 [開始] 功能表圖示](media/microsoft-endpoint-manager-start-menu.png)
 
@@ -123,7 +123,7 @@ Microsoft Endpoint Manager 是一個整合的解決方案，可用於管理您�
 如需詳細資訊，請參閱 [Configuration Manager 中的 Microsoft 連線快取](../hierarchy/microsoft-connected-cache.md#bkmk_intune)。
 
 > [!NOTE]
-> Configuration Manager 最新分支 1906 版包含[傳遞最佳化的網路內快取](../hierarchy/microsoft-connected-cache.md) (DOINC)，其為安裝在 Windows Server 的開發中應用程式。 從最新分支 1910 版開始，這項功能現在稱為 Microsoft 已連線快取。
+> Configuration Manager 最新分支 1906 版包含[傳遞最佳化的網路內快取](../hierarchy/microsoft-connected-cache.md)，其為安裝在 Windows Server 的開發中應用程式。 從最新分支 1910 版開始，這項功能現在稱為 Microsoft 已連線快取。
 >
 > 當在 Configuration Manager 發佈點上安裝已連線快取時，其會將傳遞最佳化服務流量卸載至本機來源。 已連線快取會以位元組範圍層級，有效率地快取內容來執行此行為。
 
@@ -132,7 +132,7 @@ Microsoft Endpoint Manager 是一個整合的解決方案，可用於管理您�
 ### <a name="include-custom-configuration-baselines-as-part-of-compliance-policy-assessment"></a>在合規性政策評定中納入自訂設定基準
 <!--3608345-->
 
-您現在可以將自訂設定基準的評估新增為合規性政策評定規則。 在建立或編輯設定基準時，您現在可以使用 [在合規性政策評定期間評估此基準]  選項。 在新增或編輯合規性政策規則時，您會有一個稱為 [在合規性政策評定中納入已設定的基準]  的條件。
+您現在可以將自訂設定基準的評估新增為合規性政策評定規則。 在建立或編輯設定基準時，您現在可以使用 [在合規性政策評定期間評估此基準] 選項。 在新增或編輯合規性政策規則時，您會有一個稱為 [在合規性政策評定中納入已設定的基準] 的條件。
 
 針對共同管理的裝置，以及當設定 Intune 以將 Configuration Manager 合規性評估結果作為整體合規性狀態的一部分時，此資訊將會傳送至 Azure Active Directory。 您接著即可將其用於 Office 365 資源的條件式存取。
 
@@ -144,7 +144,7 @@ Microsoft Endpoint Manager 是一個整合的解決方案，可用於管理您�
 
 Configuration Manager 最新分支 1906 版引進了為 [Windows 虛擬桌面](../configs/supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop)的支援。 此 Microsoft Azure 環境支援數個 OS 版本，其中某些版本可允許多個並行作用中的使用者工作階段。 例如，Windows 10 企業版多工作階段便是這些作業系統版本的其中之一。
 
-如果您需要這些多工作階段裝置的使用者原則，也能接受任何潛在的效能影響，您現在即可設定用戶端設定以啟用使用者原則。 在 [用戶端原則]  群組中，設定 [啟用多個使用者工作階段的使用者原則]  設定。
+如果您需要這些多工作階段裝置的使用者原則，也能接受任何潛在的效能影響，您現在即可設定用戶端設定以啟用使用者原則。 在 [用戶端原則] 群組中，設定 [啟用多個使用者工作階段的使用者原則] 設定。
 
 如需詳細資訊，請參閱[如何設定用戶端設定](../../clients/deploy/configure-client-settings.md)。
 
@@ -166,7 +166,7 @@ Configuration Manager 最新分支 1906 版引進了為 [Windows 虛擬桌面](.
 
 從最新分支版本 1906 開始，您可以建立作為單一部署傳送給裝置集合的應用程式群組。 此版本改善了此功能：
 
-- 使用者可以在軟體中心內針對應用程式群組選取 [解除安裝]  。
+- 使用者可以在軟體中心內針對應用程式群組選取 [解除安裝]。
 - 您可以將映程式群組部署到**使用者集合**。
 
 如需更多一般資訊，請參閱[建立應用程式群組](../../../apps/deploy-use/create-app-groups.md)。
@@ -209,7 +209,7 @@ Configuration Manager 最新分支 1906 版引進了為 [Windows 虛擬桌面](.
 
 <!--4910348-->
 
-設定開機映像的預設鍵盤配置。 在開機映像的 [自訂]  索引標籤上，使用新的 [設定 WinPE 中的預設鍵盤配置]  選項。 如果您選取 en-us 以外的語言，則 Configuration Manager 仍會在可用的輸入地區設定中包含 en-us。 在裝置上，初始鍵盤配置是選取的地區設定，但使用者可以視需要將裝置切換為 en-us。
+設定開機映像的預設鍵盤配置。 在開機映像的 [自訂] 索引標籤上，使用新的 [設定 WinPE 中的預設鍵盤配置] 選項。 如果您選取 en-us 以外的語言，則 Configuration Manager 仍會在可用的輸入地區設定中包含 en-us。 在裝置上，初始鍵盤配置是選取的地區設定，但使用者可以視需要將裝置切換為 en-us。
 
 如需詳細資訊，請參閱[管理開機映像](../../../osd/get-started/manage-boot-images.md#customization)。
 
@@ -217,7 +217,7 @@ Configuration Manager 最新分支 1906 版引進了為 [Windows 虛擬桌面](.
 
 <!--4931110-->
 
-匯入 OS 升級套件時，您可以使用 [從選取的升級套件的 install.wim 檔案中擷取特定的映像索引]  選項。 此行為類似於 [OS 映像](../../../osd/get-started/manage-operating-system-images.md#BKMK_AddOSImages)，但會覆寫作業系統升級套件中的現有 install.wim。 此選項會將映像索引擷取至暫存位置，然後再將其移至原始來源目錄。
+匯入 OS 升級套件時，您可以使用 [從選取的升級套件的 install.wim 檔案中擷取特定的映像索引] 選項。 此行為類似於 [OS 映像](../../../osd/get-started/manage-operating-system-images.md#BKMK_AddOSImages)，但會覆寫作業系統升級套件中的現有 install.wim。 此選項會將映像索引擷取至暫存位置，然後再將其移至原始來源目錄。
 
 如需詳細資訊，請參閱[管理 OS 升級套件](../../../osd/get-started/manage-operating-system-upgrade-packages.md#BKMK_AddOSUpgradePkgs)。
 
@@ -225,7 +225,7 @@ Configuration Manager 最新分支 1906 版引進了為 [Windows 虛擬桌面](.
 
 <!--user story 4977616/bug 4798352-->
 
-[執行命令列]  步驟現在包含 [輸出為工作順序變數]  選項。 當您啟用此選項時，工作順序會將命令的輸出儲存到您指定的自訂工作順序變數。
+[執行命令列] 步驟現在包含 [輸出為工作順序變數] 選項。 當您啟用此選項時，工作順序會將命令的輸出儲存到您指定的自訂工作順序變數。
 
 如需詳細資訊，請參閱[執行命令列](../../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine)。
 
@@ -283,7 +283,7 @@ Configuration Manager 最新分支 1906 版引進了為 [Windows 虛擬桌面](.
 
 ### <a name="additional-software-update-filter-for-adrs"></a>適用於 ADR 的其他軟體更新篩選器
 <!--4852033-->
-現在您可以使用 [已部署]  作為自動部署規則 (ADR) 的更新篩選器。 此篩選器可協助識別可能需要部署至試驗或測試集合的新更新。
+現在您可以使用 [已部署] 作為自動部署規則 (ADR) 的更新篩選器。 此篩選器可協助識別可能需要部署至試驗或測試集合的新更新。
 
 如需詳細資訊，請參閱[自動部署軟體更新](../../../sum/deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process)。
 
@@ -317,10 +317,10 @@ Configuration Manager 現在提供下列適用於 BitLocker 磁碟機加密的�
 
 ### <a name="view-active-consoles-and-message-administrators-through-console-connections"></a>透過主控台連線來檢視使用中的主控台及傳送訊息給系統管理員
 <!--4923997-->
-我們已對 [主控台連線]  做出下列改善：
+我們已對 [主控台連線] 做出下列改善：
 
 - 能夠透過 Microsoft Teams 向其他 Configuration Manager 系統管理員傳送訊息的能力。
-- [上次主控台活動訊號]  欄已取代 [上次連線時間]  欄。
+- [上次主控台活動訊號] 欄已取代 [上次連線時間] 欄。
   - 前景中的開放主控台會每 10 分鐘傳送一次訊號，以判斷哪些主控台連線目前為作用中。
 
 如需詳細資訊，請參閱[檢視最近連線的主控台](../../servers/manage/admin-console.md#bkmk_viewconnected)和[訊息管理員](../../servers/manage/admin-console.md#bkmk_message)。
@@ -329,9 +329,9 @@ Configuration Manager 現在提供下列適用於 BitLocker 磁碟機加密的�
 
 <!--4433455-->
 
-Configuration Manager 主控台中有 [用戶端診斷]  的新裝置動作：
+Configuration Manager 主控台中有 [用戶端診斷] 的新裝置動作：
 
-- **啟用詳細資訊記錄：** 將 CCM 元件的全域記錄層級變更為 [詳細資訊]  ，並啟用 [偵錯記錄]。
+- **啟用詳細資訊記錄：** 將 CCM 元件的全域記錄層級變更為 [詳細資訊]，並啟用 [偵錯記錄]。
 - **停用詳細資訊記錄：** 將全域記錄層級變更為*預設值*，並停用偵錯記錄。
 
 如需詳細資訊，請參閱[用戶端診斷](../../clients/manage/client-notification.md#client-diagnostics)。
@@ -341,8 +341,8 @@ Configuration Manager 主控台中有 [用戶端診斷]  的新裝置動作：
 
 此版本包含下列 Configuration Manager 主控台中搜尋的改善：
 
-- 您現在可以 [驅動程式套件]  與 [查詢]  節點使用 [所有子資料夾]  搜尋選項。<!--2841181,5424892-->
-- 當搜尋傳回超過 1,000 個結果時，請選取通知列上的 [確定]  以檢視更多結果。<!--4640570-->
+- 您現在可以 [驅動程式套件] 與 [查詢] 節點使用 [所有子資料夾] 搜尋選項。<!--2841181,5424892-->
+- 當搜尋傳回超過 1,000 個結果時，請選取通知列上的 [確定] 以檢視更多結果。<!--4640570-->
 
 ## <a name="other-updates"></a>其他更新
 

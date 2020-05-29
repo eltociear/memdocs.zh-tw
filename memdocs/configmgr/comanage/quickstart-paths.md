@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7a670660bcf7b3f5cb8209aaf6d0b59eb0f343e4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 27994107c32fac87a465240f07b68d57fddfc140
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691236"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983818"
 ---
 # <a name="paths-to-co-management"></a>共同管理的路徑
 
@@ -45,7 +45,6 @@ ms.locfileid: "81691236"
         - 適用於同盟網域
 - 混合式 Azure AD Join 的用戶端代理程式設定
 - 設定針對 Intune 自動註冊裝置
-- 指派 Intune 使用者授權
 - 在 Configuration Manager 中啟用共同管理
 
 如需此路徑的教學課程，請參閱[教學課程：針對現有 Configuration Manager 用戶端啟用共同管理](tutorial-co-manage-clients.md)。

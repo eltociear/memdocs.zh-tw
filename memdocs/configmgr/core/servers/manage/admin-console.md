@@ -10,12 +10,12 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 58b66639094a602206114cd75a724504618ad38c
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: ac5b3ca8e8e2231bb421838fa56b20253ddfcb74
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110027"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878381"
 ---
 # <a name="how-to-use-the-configuration-manager-console"></a>如何使用 Configuration Manager 主控台
 
@@ -228,7 +228,7 @@ Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
 - 主控台版本不符 (重大)：主控台版本與站台的版本不符  
 - 站台升級可供使用 (警告)：有新的更新套件可供使用  
 
-如需詳細資訊和疑難排解協助，請參閱主控台電腦上的 **SmsAdminUI.log** 檔案。 根據預設，這個記錄檔位於下列路徑：`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog\SmsAdminUI.log`。
+如需詳細資訊和疑難排解協助，請參閱主控台電腦上的 **SmsAdminUI.log** 檔案。 根據預設，這個記錄檔位於下列路徑：`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog\SmsAdminUI.log`。
 
 
 ## <a name="in-console-documentation-dashboard"></a><a name="bkmk_doc-dashboard"></a> 主控台內的文件儀表板
