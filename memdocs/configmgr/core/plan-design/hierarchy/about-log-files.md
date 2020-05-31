@@ -10,16 +10,16 @@ ms.assetid: b1751e3c-a60c-4ab7-a943-2595df1eb612
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d6be23adc7ac082545bffeef59ed52d3455d9931
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 588bccc533909f2438dc61d6f25b39c3a582c71b
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703746"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879019"
 ---
 # <a name="about-log-files-in-configuration-manager"></a>關於 Configuration Manager 中的記錄檔
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 在 Configuration Manager 中，用戶端和站台伺服器元件會在個別記錄檔中記錄處理程序資訊。 利用這些記錄檔中的資訊，可幫助您針對可能發生的問題進行疑難排解。 根據預設，Configuration Manager 會針對用戶端和伺服器元件啟用記錄。
 
@@ -84,21 +84,21 @@ Configuration Manager 中大部分程序會將操作資訊寫入該程序專用�
 
 #### <a name="modify-logging-for-a-component"></a>修改元件的記錄  
 
-1. 在 Configuration Manager 主控台中，移至 [監視]  工作區、展開 [系統狀態]  ，然後選取 [站台狀態]  或 [元件狀態]  節點。  
+1. 在 Configuration Manager 主控台中，移至 [監視] 工作區、展開 [系統狀態]，然後選取 [站台狀態] 或 [元件狀態] 節點。  
 
-2. 在功能區中，選取 [開始]  ，然後選取 [Configuration Manager Service Manager]  。  
+2. 在功能區中，選取 [開始]，然後選取 [Configuration Manager Service Manager]。  
 
-3. Configuration Manager Service Manager 開啟時，連線至您要管理的站台。 如果未顯示您要管理的站台，請依序選取 [站台]  和 [連線]  ，然後輸入正確站台的站台伺服器名稱。  
+3. Configuration Manager Service Manager 開啟時，連線至您要管理的站台。 如果未顯示您要管理的站台，請依序選取 [站台] 和 [連線]，然後輸入正確站台的站台伺服器名稱。  
 
-4. 展開站台，然後根據您要管理之元件所在的位置，移至 [元件]  或 [伺服器]  。  
+4. 展開站台，然後根據您要管理之元件所在的位置，移至 [元件] 或 [伺服器]。  
 
 5. 在右側窗格中，選取一個或多個元件。  
 
-6. 在 [元件]  功能表上，選取 [記錄]  。  
+6. 在 [元件] 功能表上，選取 [記錄]。  
 
 7. 在 [Configuration Manager 元件記錄]  對話方塊中，完成您選取的可用設定選項。  
 
-8. 選取 [確定]  儲存設定。  
+8. 選取 [確定] 儲存設定。  
 
 ### <a name="configure-logging-options-by-using-the-windows-registry"></a><a name="bkmk_logoptions-registry"></a> 使用 Windows 登錄設定記錄選項
 
@@ -211,7 +211,10 @@ DebugLogging 設定可讓伺服器記錄用於疑難排解的低階資訊。 請
 
 若要變更 Configuration Manager 主控台的 AdminUI.log 詳細資訊層級，請使用下列程序：
 
-1. 在 XML 編輯器 (如 [記事本]) 中，開啟主控台設定檔 **Microsoft.ConfigurationManagement.exe.config**。 預設設定檔位於下列位置：`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+1. 在 XML 編輯器 (如 [記事本]) 中，開啟主控台設定檔 **Microsoft.ConfigurationManagement.exe.config**。 預設設定檔位於下列位置：`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+
+    > [!IMPORTANT]
+    > 從 1910 版開始，此路徑已變更為使用 `Microsoft Endpoint Manager` 資料夾。 請確定您不會使用可能存在於另一個資料夾中的較舊版本檔案。
 
 1. 在 **system.diagnostics** > **sources** > **source** 元素底下，將 **switchValue** 屬性從 `Error` 變更為 `Verbose`。 例如：
 
@@ -225,9 +228,9 @@ DebugLogging 設定可讓伺服器記錄用於疑難排解的低階資訊。 請
 
 從 1910 版開始，從主控台啟用或停用用戶端或集合的詳細資訊記錄：
 
-1. 在 Configuration Manager 主控台中，移至 [資產與合規性]  工作區，選取 [裝置]  節點，然後選擇目標裝置。
+1. 在 Configuration Manager 主控台中，移至 [資產與合規性] 工作區，選取 [裝置] 節點，然後選擇目標裝置。
 
-1. 在功能區的 [常用]  索引標籤上 [裝置]  群組中，選取 [用戶端診斷]  。 選擇其中一個可用的動作。
+1. 在功能區的 [常用] 索引標籤上 [裝置] 群組中，選取 [用戶端診斷]。 選擇其中一個可用的動作。
 
 如需詳細資訊，請參閱[用戶端診斷](../../clients/manage/client-notification.md#client-diagnostics)。
 
@@ -240,7 +243,7 @@ Configuration Manager 和相依元件會將記錄檔儲存在不同的位置。 
 - 用戶端：`C:\Windows\CCM\logs`
 - 伺服器：`C:\Program Files\Microsoft Configuration Manager\Logs`
 - 管理點：`C:\SMS_CCM\Logs`
-- Configuration Manager 主控台：`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog`
+- Configuration Manager 主控台：`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog`
 - IIS：`C:\inetpub\logs\logfiles\w3svc1`
 
 ### <a name="task-sequence-log-locations"></a>工作順序記錄檔位置

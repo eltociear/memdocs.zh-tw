@@ -10,12 +10,12 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5be6158a2ed7d79af2bee72c81a462e4d83b68e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a8c975798c506339a981e8648003387dc1e9838
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700866"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878106"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>在 Configuration Manager 中針對 Microsoft 連線快取進行疑難排解
 
@@ -184,7 +184,7 @@ DO 快取伺服器會安裝及設定 IIS [應用程式要求路由 (ARR)](https:
 
 ### <a name="allowed-server-variables"></a>允許的伺服器變數
 
-在您安裝 DO 快取伺服器之後，預設的網站會有下列「本機」  伺服器變數：
+在您安裝 DO 快取伺服器之後，預設的網站會有下列「本機」伺服器變數：
 
 - HTTP_HOST
 - QUERY_STRING

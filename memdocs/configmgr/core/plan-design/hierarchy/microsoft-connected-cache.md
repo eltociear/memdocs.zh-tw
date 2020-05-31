@@ -10,16 +10,16 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ab54d278caaeeb29bbd8871819de10af97dcf830
-ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
+ms.openlocfilehash: 4dead573e1744a5c8b84ff954e85be43af644486
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82842201"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878501"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 中的 Microsoft 連線快取
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 <!--3555764-->
 
@@ -71,17 +71,17 @@ ms.locfileid: "82842201"
 
 ## <a name="enable-connected-cache"></a>啟用連線快取
 
-1. 在 Configuration Manager 主控台中，移至 [系統管理]  工作區，然後選取 [發佈點]  節點。
+1. 在 Configuration Manager 主控台中，移至 [系統管理] 工作區，然後選取 [發佈點] 節點。
 
-1. 選取「內部部署」  發佈點，然後在功能區中選取 [內容]  。
+1. 選取「內部部署」發佈點，然後在功能區中選取 [內容]。
 
-1. 在發佈點角色屬性的 [一般]  索引標籤上，進行下列設定：  
+1. 在發佈點角色屬性的 [一般] 索引標籤上，進行下列設定：  
 
-    1. 啟用 [Enable this distribution point to be used as Microsoft Connected Cache server] \(允許將此發佈點用作 Microsoft 連線快取伺服器\)  選項  
+    1. 啟用 [Enable this distribution point to be used as Microsoft Connected Cache server] \(允許將此發佈點用作 Microsoft 連線快取伺服器\) 選項  
 
         請檢視並接受授權條款。
 
-    2. **要使用的本機磁碟機**：選取用於快取的磁碟。 [自動]  是預設值，會使用可用空間最多的磁碟。<sup>[備註 1](#bkmk_note1)</sup>  
+    2. **要使用的本機磁碟機**：選取用於快取的磁碟。 [自動] 是預設值，會使用可用空間最多的磁碟。<sup>[備註 1](#bkmk_note1)</sup>  
 
         > [!Note]  
         > 您之後可以變更此磁碟機。 除非您將所有快取的內容都複製到新的磁碟機，否則將會遺失。
@@ -95,11 +95,11 @@ ms.locfileid: "82842201"
 
     4. **停用連線快取伺服器時保留快取**：如果您移除快取伺服器並啟用這個選項，伺服器會將快取內容保留在磁碟上。  
 
-1. 在用戶端設定的 [傳遞最佳化]  群組中，設定為 [Enable devices managed by Configuration Manager to use Microsoft Connected Cache servers for content download] \(允許 Configuration Manager 所管理裝置使用 Microsoft 連線快取伺服器來下載內容\)  。  
+1. 在用戶端設定的 [傳遞最佳化] 群組中，設定為 [Enable devices managed by Configuration Manager to use Microsoft Connected Cache servers for content download] \(允許 Configuration Manager 所管理裝置使用 Microsoft 連線快取伺服器來下載內容\)。  
 
 ### <a name="note-1-about-drive-selection"></a><a name="bkmk_note1"></a> 附註 1：關於選取磁碟機
 
-如果您選取 [自動]  ，則當 Configuration Manager 安裝連線快取元件時，會接受 **no_sms_on_drive.sms** 檔案。 例如，發佈點具有 `C:\no_sms_on_drive.sms` 檔案。 即使 C: 磁碟機有最多的可用空間，Configuration Manager 仍會設定連線快取使用其他磁碟機來進行快取。
+如果您選取 [自動]，則當 Configuration Manager 安裝連線快取元件時，會接受 **no_sms_on_drive.sms** 檔案。 例如，發佈點具有 `C:\no_sms_on_drive.sms` 檔案。 即使 C: 磁碟機有最多的可用空間，Configuration Manager 仍會設定連線快取使用其他磁碟機來進行快取。
 
 如果您選取已有 **no_sms_on_drive.sms** 檔案的特定磁碟機，則 Configuration Manager 會忽略此檔案。 設定連線快取使用該磁碟機為明確的意圖。 例如，發佈點具有 `F:\no_sms_on_drive.sms` 檔案。 當明確設定發佈點內容來使用 **F:** 磁碟機時，Configuration Manager 會設定連線快取使用 F: 磁碟機來進行快取。
 
@@ -157,7 +157,7 @@ ms.locfileid: "82842201"
 - 用戶端裝置必須至少擁有 4 GB 的記憶體。
 
     > [!TIP]
-    > 使用下列群組原則設定：[電腦設定] > [系統管理範本] > [Windows 元件] > [傳遞最佳化] > [啟用對等快取所需的最小 (含) RAM 容量 (以 GB 為單位)]  。
+    > 使用下列群組原則設定：[電腦設定] > [系統管理範本] > [Windows 元件] > [傳遞最佳化] > [啟用對等快取所需的最小 (含) RAM 容量 (以 GB 為單位)]。
 
 #### <a name="site"></a>網站
 
@@ -189,7 +189,7 @@ ms.locfileid: "82842201"
   - 應用程式的大小必須至少為 100 MB。
   
     > [!TIP]
-    > 使用下列群組原則設定：[電腦設定] > [系統管理範本] > [Windows 元件] > [傳遞最佳化] > [最小對等快取內容檔案大小 (以 MB 為單位)]  。
+    > 使用下列群組原則設定：[電腦設定] > [系統管理範本] > [Windows 元件] > [傳遞最佳化] > [最小對等快取內容檔案大小 (以 MB 為單位)]。
 
 ## <a name="see-also"></a>請參閱
 

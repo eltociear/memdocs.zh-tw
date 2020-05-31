@@ -2,7 +2,7 @@
 title: 版本資訊
 titleSuffix: Configuration Manager
 description: 了解產品中尚未修正或 Microsoft 支援知識庫文章尚未涵蓋的緊急問題。
-ms.date: 04/08/2020
+ms.date: 05/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: da0b9fc5600a957680ad22e54edc176c892527a6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 131b6104d5724c8a4eeb0bb68c4afd9a5319abb7
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700646"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83823957"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager 的版本資訊
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 針對 Configuration Manager，產品版本資訊僅限於緊急問題。 這些是在產品中尚未修正，或在 Microsoft 知識庫文章中尚未詳述的問題。  
 
@@ -33,6 +33,8 @@ ms.locfileid: "81700646"
 - [1910 版的新功能](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [1906 版的新功能](../../../plan-design/changes/whats-new-in-version-1906.md)  
 - [1902 版的新功能](../../../plan-design/changes/whats-new-in-version-1902.md)
+
+如需電腦分析中新功能的詳細資訊，請參閱[電腦分析中的新功能](../../../../desktop-analytics/whats-new.md)。
 
 > [!Tip]  
 > 若要在此頁面更新時收到通知，請複製下列 URL 並貼到您的 RSS 摘要讀取程式：`https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
@@ -151,11 +153,11 @@ ms.locfileid: "81700646"
 - **應用程式部署管理員**  
 - **軟體更新管理員**  
 
-[應用程式作者]  角色可能有一些階段式部署權限，但應該無法建立部署。
+[應用程式作者] 角色可能有一些階段式部署權限，但應該無法建立部署。
 
 具有這些角色其中之一的使用者可以啟動 [建立階段式部署精靈]，並可查看應用程式或軟體更新的階段式部署。 他們無法完成精靈或對現有的部署進行任何變更。
 
-若要解決此問題，請建立自訂安全性角色。 複製現有的安全性角色，並在 [階段式部署]  物件類別上新增下列權限：
+若要解決此問題，請建立自訂安全性角色。 複製現有的安全性角色，並在 [階段式部署] 物件類別上新增下列權限：
 
 - 建立  
 - 刪除  
@@ -165,6 +167,15 @@ ms.locfileid: "81700646"
 如需詳細資訊，請參閱[建立自訂安全性角色](../configure/configure-role-based-administration.md#BKMK_CreateSecRole)
 
 ## <a name="desktop-analytics"></a>電腦分析
+
+### <a name="an-extended-security-update-for-windows-7-causes-them-to-show-as-unable-to-enroll"></a><a name="dawin7-diagtrack"></a> Windows 7 的延伸安全性更新導致其顯示為**無法註冊**
+
+<!-- 7283186 -->
+適用於：_Configuration Manager 1902、1906、1910 與 2002 版_
+
+Windows 7 2020 年 4 月延伸安全性更新 (ESU) 已將所需的最低 diagtrack.dll 版本從 10586 變更為 10240。 此變更會導致 Windows 7 裝置在 Desktop Analytics [連接健康狀態] 儀表板中顯示為**無法註冊**。 當您向下切入裝置檢視以檢視此狀態時，[DiagTrack 服務設定] 屬性會顯示下列狀態：`Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
+
+此問題不需要任何因應措施。 請勿解除安裝四月份 ESU。 若已正確設定，則 Windows 7 裝置仍會將診斷資料回報給電腦分析服務，而且仍會顯示在入口網站中。
 
 ### <a name="if-you-use-hardware-inventory-for-distributed-views-you-cant-onboard-to-desktop-analytics"></a>如果您針對分散式檢視使用硬體清查，則無法上架至電腦分析
 
@@ -180,11 +191,11 @@ ms.locfileid: "81700646"
 ### <a name="console-unexpectedly-closes-when-removing-collections"></a>主控台會在移除集合時無預警關閉
 
 <!-- 4749443 -->
-適用於：  含更新彙總套件的 Configuration Manager 1902 版
+適用於：含更新彙總套件的 Configuration Manager 1902 版
 
 當您將站台連線至[電腦分析](../../../../desktop-analytics/connect-configmgr.md)之後，您可以**選取要與電腦分析同步處理的特定集合**。 如果您移除集合並套用變更，立即新增集合就會導致未處理的例外狀況。 主控台無預警關閉。
 
-若要解決此問題，當移除集合時，請選取 [確定]  以關閉 [屬性] 視窗。 接著，再次開啟 [屬性]，以便在 [電腦分析連線]  索引標籤上新增集合。
+若要解決此問題，當移除集合時，請選取 [確定] 以關閉 [屬性] 視窗。 接著，再次開啟 [屬性]，以便在 [電腦分析連線] 索引標籤上新增集合。
 
 ### <a name="pilot-status-tile-shows-some-devices-as-undefined"></a>[試驗狀態] 磚顯示有些裝置為「未定義」
 
@@ -217,7 +228,7 @@ Select Environment, Name, TenantID From AAD_Tenant_Ex
 
 *適用於 1906、1910 版早期更新通道*
 
-如果將雲端管理閘道 (CMG) 啟用為 [作為雲端發佈點來運作並處理來自 Azure 儲存體的內容]  和 [強制執行 TLS 1.2]  ，您可能會看到內容下載失敗。
+如果將雲端管理閘道 (CMG) 啟用為 [作為雲端發佈點來運作並處理來自 Azure 儲存體的內容] 和 [強制執行 TLS 1.2]，您可能會看到內容下載失敗。
 
 下列錯誤會顯示在用戶端的 DataTransferService.log 中：
 

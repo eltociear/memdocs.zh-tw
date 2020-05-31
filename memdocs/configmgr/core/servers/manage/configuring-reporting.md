@@ -10,16 +10,16 @@ ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4ba67fee260867494302e49b7c9d3a97480e236b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b7ada6f54a7642817a321937a4d7128994d5538
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708376"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83823974"
 ---
 # <a name="configure-reporting-in-configuration-manager"></a>在 Configuration Manager 中設定報告
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 您必須先完成數個設定工作，才能在 Configuration Manager 主控台中建立、修改和執行報告。 使用本文來協助您在 Configuration Manager 階層中設定報告。  
 
@@ -45,22 +45,22 @@ SQL Server Reporting Services 是一個以伺服器為基礎的報告平台，�
 
 使用下列程序，確認是否已安裝及正確執行 SQL Server Reporting Services。
 
-1. 移至站台系統上的 [開始]  功能表，然後開啟 [Reporting Services 組態管理員]  。 您可以在 [Microsoft SQL Server]  群組的 [組態工具]  區段中找到它。
+1. 移至站台系統上的 [開始] 功能表，然後開啟 [Reporting Services 組態管理員]。 您可以在 [Microsoft SQL Server] 群組的 [組態工具] 區段中找到它。
 
-2. 在 [Reporting Services 組態連接]  視窗中，輸入裝載 SQL Server Reporting Services 的伺服器名稱。 選取您已安裝 SQL Reporting Services 的 SQL Server 執行個體。 然後選取 [連線]  以開啟 Reporting Services 組態管理員。  
+2. 在 [Reporting Services 組態連接] 視窗中，輸入裝載 SQL Server Reporting Services 的伺服器名稱。 選取您已安裝 SQL Reporting Services 的 SQL Server 執行個體。 然後選取 [連線] 以開啟 Reporting Services 組態管理員。  
 
-3. 在 [報表伺服器狀態]  頁面上，確認 [報表伺服器狀態]  為 [已啟動]  。 如果它不是處於此狀態，請選取 [啟動]  。  
+3. 在 [報表伺服器狀態] 頁面上，確認 [報表伺服器狀態] 為 [已啟動]。 如果它不是處於此狀態，請選取 [啟動]。  
 
-4. 在 [Web 服務 URL]  頁面上，選取 [報表伺服器 Web 服務 URL]  中的 URL。 此動作會測試針對報告資料夾的連線。 瀏覽器可能會提示您輸入認證。 確認已順利開啟該網頁。
+4. 在 [Web 服務 URL] 頁面上，選取 [報表伺服器 Web 服務 URL] 中的 URL。 此動作會測試針對報告資料夾的連線。 瀏覽器可能會提示您輸入認證。 確認已順利開啟該網頁。
 
-5. 在 [資料庫]  頁面上，確認 [報表伺服器模式]  已設定為 [原生]  。  
+5. 在 [資料庫] 頁面上，確認 [報表伺服器模式] 已設定為 [原生]。  
 
-6. 在 [報表管理員 URL]  頁面上，選取 [報表管理員網站識別]  中的 URL。 此動作會測試報表管理員針對虛擬目錄的連線。 瀏覽器可能會提示您輸入認證。 確認已順利開啟該網頁。
+6. 在 [報表管理員 URL] 頁面上，選取 [報表管理員網站識別] 中的 URL。 此動作會測試報表管理員針對虛擬目錄的連線。 瀏覽器可能會提示您輸入認證。 確認已順利開啟該網頁。
 
     > [!NOTE]  
     > Configuration Manager 中的報告並不需要 Reporting Services 報表管理員。 您只有在想要於瀏覽器中執行報告，或是使用報表管理員來管理報告時才會需要它。  
 
-7. 選取 [結束]  來關閉 Reporting Services 組態管理員。  
+7. 選取 [結束] 來關閉 Reporting Services 組態管理員。  
 
 ## <a name="configure-reporting-to-use-report-builder-30"></a>設定報告以使用報表產生器 3.0
 
@@ -68,9 +68,9 @@ SQL Server Reporting Services 是一個以伺服器為基礎的報告平台，�
 
 2. 瀏覽至 `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\ConfigMgr10\AdminUI\Reporting` 。
 
-3. 開啟 [ReportBuilderApplicationManifestName]  機碼以編輯值資料。  
+3. 開啟 [ReportBuilderApplicationManifestName] 機碼以編輯值資料。  
 
-4. 將此值變更為 `ReportBuilder_3_0_0_0.application`，然後選取 [確定]  以儲存。
+4. 將此值變更為 `ReportBuilder_3_0_0_0.application`，然後選取 [確定] 以儲存。
 
 5. 關閉 Windows 登錄編輯程式。  
 
@@ -100,26 +100,26 @@ SQL Server Reporting Services 是一個以伺服器為基礎的報告平台，�
 
 如需設定站台系統的詳細資訊，請參閱[安裝站台系統角色](../deploy/configure/install-site-system-roles.md)。  
 
-1. 在 Configuration Manager 主控台中，移至 [系統管理]  工作區，並展開 [站台設定]  ，然後選取 [伺服器和站台系統角色]  節點。  
+1. 在 Configuration Manager 主控台中，移至 [系統管理] 工作區，並展開 [站台設定]，然後選取 [伺服器和站台系統角色] 節點。  
 
 1. 將 Reporting Services 點加入新的或現有的站台系統伺服器：  
 
-    - *新增站台系統*：在功能區的 [常用]  索引標籤上，於 [建立]  群組中，選取 [建立站台系統伺服器]  。 隨即開啟 [建立站台系統伺服器精靈]  。  
+    - *新增站台系統*：在功能區的 [常用] 索引標籤上，於 [建立] 群組中，選取 [建立站台系統伺服器]。 隨即開啟 [建立站台系統伺服器精靈]  。  
 
-    - *現有的站台系統*：選取目標伺服器。 在功能區的 [常用]  索引標籤上，於 [伺服器]  群組中，選取 [新增站台系統角色]  。 隨即開啟 [新增站台系統角色精靈]  。  
+    - *現有的站台系統*：選取目標伺服器。 在功能區的 [常用] 索引標籤上，於 [伺服器] 群組中，選取 [新增站台系統角色]。 隨即開啟 [新增站台系統角色精靈]  。  
 
 1. 在 [一般]  頁面上，指定網站系統伺服器的一般設定。 將 Reporting Services 點加入現有伺服器時，請確認您之前設定的值。  
 
-1. 在 [系統角色選取]  頁面上，於可用角色清單中選取 [Reporting Services 點]  ，然後選取 [下一步]  。  
+1. 在 [系統角色選取] 頁面上，於可用角色清單中選取 [Reporting Services 點]，然後選取 [下一步]。  
 
-1. 在 [Reporting Services 點]  頁面上，設定下列設定：  
+1. 在 [Reporting Services 點] 頁面上，設定下列設定：  
 
     - **站台資料庫伺服器名稱**：指定裝載 Configuration Manager 站台資料庫的伺服器名稱。 精靈通常會擷取伺服器的完整網域名稱 (FQDN)。 若要指定資料庫執行個體，請使用 &lt;*伺服器名稱*>\&lt;*執行個體名稱*> 的格式。 例如 `sqlserver\named1`。
 
-    - **資料庫名稱**：指定 Configuration Manager 站台資料庫名稱。 選取 [確認]  以確認精靈可以存取站台資料庫。  
+    - **資料庫名稱**：指定 Configuration Manager 站台資料庫名稱。 選取 [確認] 以確認精靈可以存取站台資料庫。  
 
         > [!IMPORTANT]  
-        > 您用來建立 Reporting Services 點的使用者帳戶必須具有站台資料庫的**讀取**存取權限。 如果連線測試失敗，則會顯示紅色警告圖示。 圖示上的內容相關暫留文字具有失敗的詳細資料。 更正錯誤，然後再次選取 [測試]  。  
+        > 您用來建立 Reporting Services 點的使用者帳戶必須具有站台資料庫的**讀取**存取權限。 如果連線測試失敗，則會顯示紅色警告圖示。 圖示上的內容相關暫留文字具有失敗的詳細資料。 更正錯誤，然後再次選取 [測試]。  
 
     - **資料夾名稱**：指定要在 Reporting Services 中建立及用於 Configuration Manager 報告的資料夾名稱。  
 
@@ -128,9 +128,9 @@ SQL Server Reporting Services 是一個以伺服器為基礎的報告平台，�
         > [!IMPORTANT]  
         > Configuration Manager 會以目前使用者的內容對選取站台系統上的 WMI 建立連線。 它會使用此連線來擷取 Reporting Services 的 SQL Server 執行個體。 目前的使用者必須擁有站台系統上 WMI 的**讀取**權限，否則精靈會無法取得 Reporting Services 執行個體。  
 
-    - **Reporting Services 點帳戶**：選取 [設定]  ，然後選取要使用的帳戶。 Reporting Services 點上的 SQL Server Reporting Services 會使用此帳戶來連線至 Configuration Manager 站台資料庫。 此連線是用來擷取報告的資料。 選取 [現有的帳戶]  來指定您先前設定為 Configuration Manager 帳戶的 Windows 使用者帳戶。 選取 [新增帳戶]  來指定目前尚未設定使用的 Windows 使用者帳戶。 Configuration Manager 會自動授與指定之使用者存取站台資料庫的權限。  
+    - **Reporting Services 點帳戶**：選取 [設定]，然後選取要使用的帳戶。 Reporting Services 點上的 SQL Server Reporting Services 會使用此帳戶來連線至 Configuration Manager 站台資料庫。 此連線是用來擷取報告的資料。 選取 [現有的帳戶] 來指定您先前設定為 Configuration Manager 帳戶的 Windows 使用者帳戶。 選取 [新增帳戶] 來指定目前尚未設定使用的 Windows 使用者帳戶。 Configuration Manager 會自動授與指定之使用者存取站台資料庫的權限。  
 
-        執行 Reporting Services 的帳戶必須屬於網域本機安全性群組 [Windows Authorization Access Group]  。 它也需要將 [Read tokenGroupsGlobalAndUniversal]  權限設定為 [允許]  。 針對位於和 Reporting Services 點帳戶不同網域的使用者，需要在網域之間建立雙向信任，他們才能成功執行報告。
+        執行 Reporting Services 的帳戶必須屬於網域本機安全性群組 [Windows Authorization Access Group]。 這會授與帳戶網域內所有使用者物件上之 **tokenGroupsGlobalAndUniversal** 屬性的 [允許讀取] 權限。 針對位於和 Reporting Services 點帳戶不同網域的使用者，需要在網域之間建立雙向信任，他們才能成功執行報告。
 
         指定的 Windows 使用者帳戶和密碼會經過加密，並儲存於 Reporting Services 資料庫中。 Reporting Services 會使用此帳戶和密碼，擷取來自站台資料庫的報告資料。  
 
@@ -142,7 +142,7 @@ SQL Server Reporting Services 是一個以伺服器為基礎的報告平台，�
 在精靈完成之後，Configuration Manager 會在 Reporting Services 中建立報告資料夾。 它接著會將其報告複製到指定的報告資料夾。  
 
 > [!TIP]  
-> 若只要列出裝載 Reporting Services 點站台角色的站台系統，請以滑鼠右鍵按一下 [伺服器和站台系統角色]  ，然後選取 [Reporting Services 點]  。  
+> 若只要列出裝載 Reporting Services 點站台角色的站台系統，請以滑鼠右鍵按一下 [伺服器和站台系統角色]，然後選取 [Reporting Services 點]。  
 
 ### <a name="languages-for-reports"></a><a name="bkmk_languages" /> 報表的語言
 
@@ -185,21 +185,21 @@ Configuration Manager 會執行下列動作，以安裝 Reporting Services 點�
 
 - 在 Reporting Services 中建立 Configuration Manager 根資料夾。  
 
-- 在 Reporting Services 中新增 [ConfigMgr 報告使用者]  和 [ConfigMgr 報告系統管理員]  安全性角色。  
+- 在 Reporting Services 中新增 [ConfigMgr 報告使用者] 和 [ConfigMgr 報告系統管理員] 安全性角色。  
 
 - 建立子資料夾，然後將站台伺服器上 `%ProgramFiles%\SMS_SRSRP` 中的 Configuration Manager 報告部署到 Reporting Services。  
 
-- 將 Reporting Services 中的 [ConfigMgr 報告使用者]  角色新增至 Configuration Manager 中具有 [站台讀取]  權限之所有使用者帳戶的根目錄。  
+- 將 Reporting Services 中的 [ConfigMgr 報告使用者] 角色新增至 Configuration Manager 中具有 [站台讀取] 權限之所有使用者帳戶的根目錄。  
 
-- 將 Reporting Services 中的 [ConfigMgr 報告系統管理員]  角色新增至 Configuration Manager 中具有 [站台修改]  權限之所有使用者帳戶的根目錄。  
+- 將 Reporting Services 中的 [ConfigMgr 報告系統管理員] 角色新增至 Configuration Manager 中具有 [站台修改] 權限之所有使用者帳戶的根目錄。  
 
 - 擷取報告資料夾及 Configuration Manager 安全物件類型之間的對應。 Configuration Manager 會在站台資料庫中維護此對應。  
 
 - 將 Configuration Manager 中系統管理使用者的下列權限，設定至 Reporting Services 中的特定報告資料夾：  
 
-  - 新增使用者，並將 [ConfigMgr 報告使用者]  角色指派給針對 Configuration Manager 物件具有 [執行報告]  權限之系統管理使用者的相關聯報告資料夾。  
+  - 新增使用者，並將 [ConfigMgr 報告使用者] 角色指派給針對 Configuration Manager 物件具有 [執行報告] 權限之系統管理使用者的相關聯報告資料夾。  
 
-  - 新增使用者，並將 [ConfigMgr 報告系統管理員]  角色指派給針對 Configuration Manager 物件具有 [修改報告]  權限之系統管理使用者的相關聯報告資料夾。  
+  - 新增使用者，並將 [ConfigMgr 報告系統管理員] 角色指派給針對 Configuration Manager 物件具有 [修改報告] 權限之系統管理使用者的相關聯報告資料夾。  
 
 Configuration Manager 會連接至 Reporting Services，並設定使用者對 Configuration Manager 及 Reporting Services 根資料夾與特定報告資料夾的權限。 在 Reporting Services 點初始安裝完成後，Configuration Manager 每 10 分鐘會連線至 Reporting Services 一次，以確認報告資料夾上所設定的使用者權限會與針對 Configuration Manager 使用者所設定的權限相關聯。 使用 Reporting Services 報表管理員在報告資料夾上新增使用者或修改使用者權限時，Configuration Manager 會使用儲存在站台資料庫中以角色為基礎的指派來覆寫這些變更。 Configuration Manager 也會移除在 Configuration Manager 中沒有報告權限的使用者。  
 
@@ -216,17 +216,17 @@ Configuration Manager 會連接至 Reporting Services，並設定使用者對 Co
 查看特定狀態訊息及記錄檔項目，來確認 Reporting Services 點的安裝。 利用下列程序確認 Reporting Services 點安裝成功。  
 
 > [!Note]  
-> 如果您在 Configuration Manager 主控台 [監視]  工作區之 [報告]  節點的 [報告]  子資料夾中看見報告，則可略過這個程序。
+> 如果您在 Configuration Manager 主控台 [監視] 工作區之 [報告] 節點的 [報告] 子資料夾中看見報告，則可略過這個程序。
 
 ### <a name="verify-installation-by-status-message"></a>依狀態訊息確認安裝
 
-1. 在 Configuration Manager 主控台中，移至 [監視]  工作區，展開 [系統狀態]  ，然後選取 [元件狀態]  節點。  
+1. 在 Configuration Manager 主控台中，移至 [監視] 工作區，展開 [系統狀態]，然後選取 [元件狀態] 節點。  
 
 1. 選取 **SMS_SRS_REPORTING_POINT** 元件。  
 
-1. 在功能區的 [常用]  索引標籤上，於 [元件]  群組中，選取 [顯示訊息]  ，然後選擇 [全部]  。  
+1. 在功能區的 [常用] 索引標籤上，於 [元件] 群組中，選取 [顯示訊息]，然後選擇 [全部]。  
 
-1. 指定安裝 Reporting Services 點之前某一段期間的日期及時間，然後選取 [確定]  。  
+1. 指定安裝 Reporting Services 點之前某一段期間的日期及時間，然後選取 [確定]。  
 
 1. 確認狀態訊息識別碼 **1015**。 此狀態訊息表示 Reporting Services 點已成功安裝。
 
@@ -245,22 +245,22 @@ Configuration Manager 會連接至 Reporting Services，並設定使用者對 Co
 
 Configuration Manager 會在站台伺服器及任何 SMS 提供者角色上自動安裝憑證。 當您從這些伺服器之一執行 Configuration Manager 主控台時，便可以從中建立或編輯報告。
 
-當您從不同電腦上的 Configuration Manager 主控台建立或修改報告時，請從站台伺服器匯出憑證。 特定憑證的易記名稱是本機電腦 [受信任的人]  憑證存放區中站台伺服器的 FQDN。 在執行 Configuration Manager 主控台之電腦上的 [受信任的人]  憑證存放區中新增此憑證。  
+當您從不同電腦上的 Configuration Manager 主控台建立或修改報告時，請從站台伺服器匯出憑證。 特定憑證的易記名稱是本機電腦 [受信任的人] 憑證存放區中站台伺服器的 FQDN。 在執行 Configuration Manager 主控台之電腦上的 [受信任的人] 憑證存放區中新增此憑證。  
 
 ## <a name="modify-reporting-services-point-settings"></a>修改 Reporting Services 點設定
 
 安裝此角色之後，您可以在 Reporting Services 點的內容中修改站台資料庫連接及驗證設定。
 
-1. 在 Configuration Manager 主控台中，移至 [系統管理]  工作區，展開 [站台設定]  ，然後選取 [伺服器和站台系統角色]  節點。  
+1. 在 Configuration Manager 主控台中，移至 [系統管理] 工作區，展開 [站台設定]，然後選取 [伺服器和站台系統角色] 節點。  
 
     > [!TIP]  
-    > 若只要列出裝載 Reporting Services 點的站台系統，請以滑鼠右鍵按一下 [伺服器和站台系統角色]  節點，然後選取 [Reporting Services 點]  。  
+    > 若只要列出裝載 Reporting Services 點的站台系統，請以滑鼠右鍵按一下 [伺服器和站台系統角色] 節點，然後選取 [Reporting Services 點]。  
 
-1. 選取裝載 Reporting Services 點的站台系統。 然後在詳細資料窗格中選取 [Reporting Services 點]  站台系統角色。
+1. 選取裝載 Reporting Services 點的站台系統。 然後在詳細資料窗格中選取 [Reporting Services 點] 站台系統角色。
 
-1. 在功能區的 [站台角色]  索引標籤上，於 [內容]  群組中，選取 [內容]  。  
+1. 在功能區的 [站台角色] 索引標籤上，於 [內容] 群組中，選取 [內容]。  
 
-1. 您可以在 [Reporting Services 點內容]  中修改下列設定：  
+1. 您可以在 [Reporting Services 點內容] 中修改下列設定：  
 
     - **站台資料庫伺服器名稱**
 
@@ -268,7 +268,7 @@ Configuration Manager 會在站台伺服器及任何 SMS 提供者角色上自�
 
     - **使用者帳戶**
 
-1. 選取 [確定]  以儲存變更並關閉內容。  
+1. 選取 [確定] 以儲存變更並關閉內容。  
 
 如需這些設定的詳細資訊，請參閱[在站台系統上安裝 Reporting Services 點](#bkmk_install)一節中的描述。
 
@@ -286,11 +286,11 @@ Configuration Manager 會在站台伺服器及任何 SMS 提供者角色上自�
 
 您可以選取用來管理報告的預設 Reporting Services 點。 站台可以有多個 Reporting Services 點，但它只會使用預設的伺服器來管理報告。 利用下列程序設定站台的報告選項。  
 
-1. 在 Configuration Manager 主控台中，移至 [監視]  工作區，展開 [報告]  ，然後選取 [報告]  節點。  
+1. 在 Configuration Manager 主控台中，移至 [監視] 工作區，展開 [報告]，然後選取 [報告] 節點。  
 
-1. 在功能區的 [常用]  索引標籤上，於 [設定]  群組中，選取 [報告選項]  。  
+1. 在功能區的 [常用] 索引標籤上，於 [設定] 群組中，選取 [報告選項]。  
 
-1. 在清單中選取預設報告伺服器，然後選取 [確定]  。
+1. 在清單中選取預設報告伺服器，然後選取 [確定]。
 
 如果未顯示任何伺服器，請確認您已在站台中安裝及設定 Reporting Services 點。 如需詳細資訊，請參閱[確認安裝](#bkmk_verify)。
 

@@ -10,16 +10,16 @@ ms.assetid: cb616925-bb94-4b7c-a867-b3d95aef4d5e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f9d2a7d4a16f85e9a5f78dd6251754d86527da87
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 05110714d3aa8ca48ff9384f0116338b0092fde1
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688976"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877630"
 ---
 # <a name="troubleshoot-package-conversion-manager"></a>針對套件轉換管理員進行疑難排解
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 <!--1357861-->
 
@@ -37,20 +37,20 @@ ms.locfileid: "81688976"
 
 ## <a name="package-readiness"></a>套件整備
 
-將套件轉換為應用程式之前，先使用套件轉換管理員的**分析**功能來分析套件。 分析之後，在 Configuration Manager 主控台的 [套件]  節點中，新增**整備**欄。 套件清單會顯示已分析套件的下列其中一個整備狀態：
+將套件轉換為應用程式之前，先使用套件轉換管理員的**分析**功能來分析套件。 分析之後，在 Configuration Manager 主控台的 [套件] 節點中，新增**整備**欄。 套件清單會顯示已分析套件的下列其中一個整備狀態：
 
-- **自動**：套件可以使用 [轉換]  功能直接進行轉換。      
+- **自動**：套件可以使用 [轉換] 功能直接進行轉換。      
 
   > [!NOTE]  
   > 自動轉換不會將 WQL 查詢轉換為應用程式需求。 使用**修正並轉換**程序來轉換這些查詢。  
 
-- **手動**：套件需要一些新增或變更，才能使用 [修正並轉換]  功能進行轉換。  
+- **手動**：套件需要一些新增或變更，才能使用 [修正並轉換] 功能進行轉換。  
 
 - **不適用**：套件不適合進行轉換。 請更正封裝的任何問題，或繼續部署成封裝。  
 
 - **錯誤**：套件包含錯誤。 先手動更正這些錯誤，然後您才能分析並轉換它。  
 
-Configuration Manager 主控台中 [套件]  節點的詳細資料窗格會顯示任何整備問題。 選取套件，然後在詳細資料窗格中選取 [摘要]  索引標籤。
+Configuration Manager 主控台中 [套件] 節點的詳細資料窗格會顯示任何整備問題。 選取套件，然後在詳細資料窗格中選取 [摘要]  索引標籤。
 
 
 
@@ -58,10 +58,13 @@ Configuration Manager 主控台中 [套件]  節點的詳細資料窗格會顯�
 
 ### <a name="enable-logging"></a>啟用記錄
 
-當您針對套件轉換管理員啟用記錄時，它會記錄它的所有動作、例外狀況和錯誤。 
+當您針對套件轉換管理員啟用記錄時，它會記錄它的所有動作、例外狀況和錯誤。
 
 若要在 Configuration Manager 中啟用此元件的記錄，請修改 **Microsoft.ConfigurationManagement.exe.Config**。根據預設，此設定檔位於下列路徑：  
-`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`  
+`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`  
+
+> [!IMPORTANT]
+> 從 1910 版開始，此路徑已變更為使用 `Microsoft Endpoint Manager` 資料夾。 請確定您不會使用可能存在於另一個資料夾中的較舊版本檔案。
 
 在最後一個 **sources** 元素之後的 **system.diagnostics** 元素中，插入下列 **switches** 和 **trace** XML 元素：
 

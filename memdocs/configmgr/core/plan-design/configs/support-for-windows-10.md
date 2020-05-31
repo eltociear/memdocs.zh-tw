@@ -2,7 +2,7 @@
 title: Windows 10 的支援
 titleSuffix: Configuration Manager
 description: 針對搭配 Configuration Manager 作為用戶端或用於 OSD 的狀況，了解支援的 Windows 10 版本
-ms.date: 04/01/2020
+ms.date: 05/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7241db0220bf4adf9b55341514afb03de33c2589
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a67a22f788af39dacb9f3a39e91e0f28444c6988
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688596"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879063"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Configuration Manager 對於 Windows 10 的支援  
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 了解 Configuration Manager 支援的 Windows 10 版本，包括：
 
@@ -53,11 +53,12 @@ Configuration Manager 會在每個新的 Windows 10 版本推出之後，盡快�
 | **Enterprise 2015 LTSB** <!--10/14/2025-->   | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) |
 | **Enterprise 2016 LTSB** <!--10/13/2026-->   | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) |
 | **Enterprise LTSC 2019** <!--01/09/2029-->   | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) |
-| **1709**<br>(10.0.16299)   <!--04/14/2020-->   | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) |
+| **1709**<br>(10.0.16299)   <!--10/13/2020-->   | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) |
 | **1803**<br>(10.0.17134)   <!--11/10/2020-->   | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) |
 | **1809**<br>(10.0.17763)   <!--05/11/2021-->   | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) |
 | **1903**<br>(10.0.18362)   <!--12/08/2020-->   | ![不支援](media/Red_X.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) |
-| **1909**<br>(10.0.18363)   <!--05/11/2021-->   | ![不支援](media/Red_X.png) | ![不支援](media/Red_X.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) |
+| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![不支援](media/Red_X.png) | ![不支援](media/Red_X.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) |
+| **2004**<br>(10.0.19041)   <!--??/??/2021-->   | ![不支援](media/Red_X.png) | ![不支援](media/Red_X.png) | ![不支援](media/Red_X.png) | ![不支援](media/Red_X.png) | ![支援](media/green_check.png) |
 
 <!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
@@ -83,7 +84,7 @@ Configuration Manager 支援 Windows 10 ARM64 裝置上的用戶端。 不支援
 從 2002 版開始，<!--5954175--> 在具有需求規則或適用性清單的物件上支援 OS 版本的清單中，已提供**所有 Windows 10 (ARM64)** 平台。
 
 > [!NOTE]
-> 如果您先前已選取最上層的 **Windows 10** 平台，則此動作會自動選取 [所有 Windows 10 (64 位元)]  和 [所有 Windows 10 (32位元)]  。 系統不會自動選取這個新平台。 如果想要新增 [所有 Windows 10 (ARM64)]  ，請在清單中手動選取該選項。
+> 如果您先前已選取最上層的 **Windows 10** 平台，則此動作會自動選取 [所有 Windows 10 (64 位元)] 和 [所有 Windows 10 (32位元)]。 系統不會自動選取這個新平台。 如果想要新增 [所有 Windows 10 (ARM64)]，請在清單中手動選取該選項。
 
 ### <a name="support-for-windows-insider"></a><a name="bkmk_WIfB-support"></a> Windows 測試人員的支援
 
@@ -112,6 +113,7 @@ Configuration Manager 支援 Windows 10 ARM64 裝置上的用戶端。 不支援
 | **1803**<br>(10.1.17134) | ![回溯相容](media/blue_compat.png) | ![回溯相容](media/blue_compat.png) | ![不支援](media/Red_X.png) | ![不支援](media/Red_X.png) | ![不支援](media/Red_X.png) |
 | **1809**<br>(10.1.17763) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![回溯相容](media/blue_compat.png) | ![回溯相容](media/blue_compat.png) | ![不支援](media/Red_X.png) |
 | **1903**<br>(10.1.18362) | ![不支援](media/Red_X.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) | ![支援](media/green_check.png) |
+| **2004**<br>(10.1.19041) | ![不支援](media/Red_X.png) | ![不支援](media/Red_X.png) | ![不支援](media/Red_X.png) | ![不支援](media/Red_X.png) | ![支援](media/green_check.png) |
 
 |機碼|
 |--|

@@ -10,12 +10,12 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7680c8f955773f169d56f36eb9bbe6507d2d7ce6
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: cb7cc71618ad0f86abce3ab76d6344e0d23bfc58
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427814"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153428"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Configuration Manager 中的用戶端通知
 
@@ -140,7 +140,7 @@ ms.locfileid: "83427814"
 
 - **啟用詳細資訊記錄**：將 CCM 元件的全域記錄層級變更為 [詳細資訊]，並啟用 [偵錯記錄]。
 - **停用詳細資訊記錄**：將全域記錄層級變更為預設值，並停用偵錯記錄。
-- **收集用戶端記錄** (自 2002 版開始)：用戶端通知訊息會傳送至選取的用戶端，以收集 CCM 記錄。 系統會使用軟體清查檔案收集來傳回記錄。 <!--4226618-->
+- **收集用戶端記錄** (自 2002 版開始)：網站會將用戶端通知訊息傳送到選取的用戶端，以收集 CCM 記錄。 用戶端會使用與軟體清查檔案集合相同的通道，將記錄傳送到管理點。 <!--4226618--> 您不需要在用戶端設定中啟用軟體清查。<!-- MEMDocs#305 -->
    - 壓縮的用戶端記錄檔大小限制為 100 MB。 <!--6366098-->
    - 使用[資源總管](inventory/use-resource-explorer-to-view-software-inventory.md#bkmk_diag)管理及檢視這些檔案。
 

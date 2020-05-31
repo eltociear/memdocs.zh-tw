@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: e9031b09fa6749d619c8048e70331a6f7c67d472
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: b280661c4de9282d3907b7d480477fc67f6a8dc5
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633355"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824059"
 ---
 # <a name="what-is-desktop-analytics"></a>什麼是電腦分析？
 
@@ -94,7 +94,7 @@ ms.locfileid: "83633355"
     > 電腦分析支援多個向單一 Azure AD 租用戶報告的 Configuration Manager 階層。<!-- 4814075 --> 如果您的環境中有多個階層，則有下列選項：
     >
     > - 使用不同的商業識別碼與 Azure AD 租用戶。
-    > - 將兩個階層設定為使用相同的商業識別碼，以共用 Azure AD 租用戶與電腦分析執行個體。 使用[不同的應用程式](connect-configmgr.md#bkmk_connect)來將每個階層連線。 中斷與階層的連線後，入口網站最多可能需要 30 分鐘的時間來反映變更。 
+    > - 將兩個階層設定為使用相同的商業識別碼，以共用 Azure AD 租用戶與電腦分析執行個體。 使用[不同的應用程式](connect-configmgr.md#bkmk_connect)來將每個階層連線。 中斷與階層的連線後，入口網站最多可能需要 30 天的時間來反映變更。 
 
 - 執行 Windows 7、Windows 8.1 或 Windows 10 的裝置  
 

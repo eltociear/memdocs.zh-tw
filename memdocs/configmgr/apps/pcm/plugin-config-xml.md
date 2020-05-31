@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ced1cc1347167451d4efb789b40746ff849710ee
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9178b595ba67723c623979b4c29290e42fe5f6ac
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689076"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877741"
 ---
 # <a name="technical-reference-for-the-package-conversion-manager-plug-in-configuration-xml"></a>套件轉換管理員外掛程式設定 XML 的技術參考
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 <!--1357861-->
 
@@ -44,7 +44,10 @@ ms.locfileid: "81689076"
 ## <a name="sample-configuration-xml"></a>範例設定 XML
 
 本節提供 Configuration Manager 設定檔 **Microsoft.ConfigurationManagement.exe.config** 中套件轉換管理員設定 XML 元素的範例。根據預設，這個檔案位於下列路徑：  
-`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+
+> [!IMPORTANT]
+> 從 1910 版開始，此路徑已變更為使用 `Microsoft Endpoint Manager` 資料夾。 請確定您不會使用可能存在於另一個資料夾中的較舊版本檔案。 
 
 在此範例中，與套件轉換管理員相關的元素位於下列元素內：`Microsoft.ConfigurationManagement.UserCentric.Workflow.Properties.Settings`
 

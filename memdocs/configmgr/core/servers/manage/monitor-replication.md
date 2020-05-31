@@ -10,27 +10,27 @@ ms.assetid: 69550b35-bcdb-4b47-bbec-b3c8bc92bb7b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 96cce5d4aaa352177b1c24ff78cf15e90ea6e823
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4a9ae791582911f91e5f76b841248ad5085d8170
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694406"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879827"
 ---
 # <a name="monitor-database-replication"></a>監視資料庫複寫
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
-使用 Configuration Manager 主控台 [監視]  工作區中的 [資料庫複寫]  節點來監視資料庫複寫的詳細資料。 您可以監視站台間複寫連結的狀態。 它也會顯示所連線站台之複寫群組的初始化和複寫。  
+使用 Configuration Manager 主控台 [監視] 工作區中的 [資料庫複寫] 節點來監視資料庫複寫的詳細資料。 您可以監視站台間複寫連結的狀態。 它也會顯示所連線站台之複寫群組的初始化和複寫。  
 
 > [!TIP]  
-> 雖然 [資料庫複寫]  節點也會顯示在 [系統管理]  工作區中的 [階層設定]  節點底下，您並無法從該位置檢視資料庫複寫連結的複寫狀態。  
+> 雖然 [資料庫複寫] 節點也會顯示在 [系統管理] 工作區中的 [階層設定] 節點底下，您並無法從該位置檢視資料庫複寫連結的複寫狀態。  
 
 ## <a name="replication-link-status"></a><a name="BKMK_MonitorReplicationLinks"></a> 複寫連結狀態  
 
-站台間的資料庫複寫會涉及多組資訊的複寫，稱為「複寫群組」  。 每個複寫群組都會傳送及接收不同優先順序的資料。 根據預設，您無法修改複寫群組中所包含的資料及複寫的頻率。  
+站台間的資料庫複寫會涉及多組資訊的複寫，稱為「複寫群組」。 每個複寫群組都會傳送及接收不同優先順序的資料。 根據預設，您無法修改複寫群組中所包含的資料及複寫的頻率。  
 
-當複寫連結為作用中，且其狀態非失敗或已降級時，所有群組都會快速複寫。 若有一個或多個群組無法在預期的時間內完成複寫，該連結會顯示為「已降級」  。 已降級的連結仍然可以運作，但您應該監視它們以確保它們會返回作用中狀態。 請調查它們以確保不會發生額外的降級或複寫失敗。  
+當複寫連結為作用中，且其狀態非失敗或已降級時，所有群組都會快速複寫。 若有一個或多個群組無法在預期的時間內完成複寫，該連結會顯示為「已降級」。 已降級的連結仍然可以運作，但您應該監視它們以確保它們會返回作用中狀態。 請調查它們以確保不會發生額外的降級或複寫失敗。  
 
 針對每個複寫連結，請指定不成功的已複寫群組可以重試的次數。 在重試此次數之後，站台便會將該連結的狀態設定為已降級或失敗。 即使只有一個群組沒有成功複寫，站台仍然會將該連結的狀態設定為已降級或失敗。 設定此狀態的原因是因為有單一複寫群組無法在指定的嘗試次數內完成複寫。 如需詳細資訊，請參閱[資料庫複寫閾值](../../plan-design/hierarchy/database-replication.md#BKMK_DBRepThresholds)。  
 
@@ -57,7 +57,7 @@ ms.locfileid: "81694406"
 
 ## <a name="monitor-replication-status"></a><a name="BKMK_MonitorReplicationStatus"></a> 監視複寫狀態
 
-使用 [監視]  工作區中的 [資料庫複寫]  節點來檢視複寫連結的狀態。 檢視複寫連結上每個站台之資料庫的詳細資料。 您也可以檢視與複寫群組相關的詳細資料。 若要檢視這些詳細資料，請選取複寫連結，然後針對您要檢視的複寫狀態選取適當的索引標籤。
+使用 [監視] 工作區中的 [資料庫複寫] 節點來檢視複寫連結的狀態。 檢視複寫連結上每個站台之資料庫的詳細資料。 您也可以檢視與複寫群組相關的詳細資料。 若要檢視這些詳細資料，請選取複寫連結，然後針對您要檢視的複寫狀態選取適當的索引標籤。
 
 下列小節會提供複寫狀態之不同索引標籤的詳細資料：
 
@@ -65,7 +65,7 @@ ms.locfileid: "81694406"
 
 檢視連結上兩個站台間的站台資料及全域資料之複寫的高階資訊。  
 
-選取 [檢視歷史流量資料的報告]  以檢視顯示該連結上的複寫所使用之網路頻寬詳細資料的報告。  
+選取 [檢視歷史流量資料的報告] 以檢視顯示該連結上的複寫所使用之網路頻寬詳細資料的報告。  
 
 ### <a name="parent-site"></a>父站台
 
@@ -95,7 +95,7 @@ ms.locfileid: "81694406"
 
 檢視透過連結進行複寫之群組的初始化狀態。 此資訊可協助您識別初始化複寫資料正在進行中或已失敗。  
 
-使用此資訊來識別站台可能處於「互通性模式」  的時機。 互通性模式會在子站台與父站台使用不同版本的 Configuration Manager 時發生。  
+使用此資訊來識別站台可能處於「互通性模式」的時機。 互通性模式會在子站台與父站台使用不同版本的 Configuration Manager 時發生。  
 
 ### <a name="replication-detail"></a>複寫詳細資料
 
@@ -120,9 +120,12 @@ Configuration Manager 包含**複寫連結分析師** (RLA)，可用來分析及
 
 在 Configuration Manager 主控台或命令提示字元中執行 RLA：  
 
-- 在 Configuration Manager 主控台中執行：移至 [監視]  工作區，然後選取 [資料庫複寫]  節點。 選取想要分析的複寫連結，然後選取功能區中的 [複寫連結分析師]  。  
+- 在 Configuration Manager 主控台中執行：移至 [監視] 工作區，然後選取 [資料庫複寫] 節點。 選取想要分析的複寫連結，然後選取功能區中的 [複寫連結分析師]。  
 
-- 若要在命令提示字元中執行，請輸入下列命令：`%ProgramFiles(x86)%\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+- 若要在命令提示字元中執行，請輸入下列命令：`%ProgramFiles(x86)%\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+
+    > [!IMPORTANT]
+    > 從 1910 版開始，此路徑已變更為使用 `Microsoft Endpoint Manager` 資料夾。 請確定您不會使用可能存在於另一個資料夾中的較舊版本檔案。
 
 當您執行 RLA 時，它會使用一系列診斷規則和檢查來偵測問題。 您可以檢視該工具所識別的問題。 當有可用來解決某個問題的指示時，它便會顯示它們。 如果 RLA 能自動補救某個問題，它會向您顯示該選項。
 
@@ -151,7 +154,7 @@ RLA 會記錄所有調查和補救動作，以提供其不會在精靈中顯示�
 - 涉及複寫連結之每個 SQL Server 資料庫上的 sysadmin 權限。  
 
 > [!Note]  
-> 帳戶不需要特定 Configuration Manager 以角色為基礎的系統管理安全性角色。 具備 [資料庫複寫]  節點存取權的系統管理使用者可以在 Configuration Manager 主控台中執行該工具。 具備每部電腦之足夠權限的系統管理員可以在命令提示字元執行該工具。  
+> 帳戶不需要特定 Configuration Manager 以角色為基礎的系統管理安全性角色。 具備 [資料庫複寫] 節點存取權的系統管理使用者可以在 Configuration Manager 主控台中執行該工具。 具備每部電腦之足夠權限的系統管理員可以在命令提示字元執行該工具。  
 
 ### <a name="rla-known-issue"></a>RLA 已知問題
 
@@ -162,14 +165,14 @@ RLA 會針對從 System Center 2012 Configuration Manager 升級的主要站台�
 
 ### <a name="monitor-high-level-site-to-site-database-replication-status"></a>監視高階站台對站台資料庫複寫狀態
 
-1. 在 Configuration Manager 主控台中，按一下 [監視]  工作區。  
+1. 在 Configuration Manager 主控台中，按一下 [監視] 工作區。  
 
-2. 選取 [站台階層]  節點以開啟 [階層圖]  檢視。  
+2. 選取 [站台階層] 節點以開啟 [階層圖] 檢視。  
 
 3. 將滑鼠指標暫留在兩個站台之間的線條上。 檢視這些站台的全域及站台資料複寫的狀態。  
 
 ### <a name="monitor-the-status-of-a-replication-link"></a>監視複寫連結的狀態
 
-1. 在 Configuration Manager 主控台中，按一下 [監視]  工作區。  
+1. 在 Configuration Manager 主控台中，按一下 [監視] 工作區。  
 
-2. 選取 [資料庫複寫]  節點，然後選取您要監視的複寫連結。 然後選取適當的索引標籤以檢視該連結之複寫狀態的各種不同詳細資料。  
+2. 選取 [資料庫複寫] 節點，然後選取您要監視的複寫連結。 然後選取適當的索引標籤以檢視該連結之複寫狀態的各種不同詳細資料。  

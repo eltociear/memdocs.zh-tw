@@ -157,6 +157,10 @@
               href: intune-endpoints.md
             - name: Intune 美國政府端點
               href: intune-us-government-endpoints.md
+            - name: 中國端點
+              href: china-endpoints.md
+            - name: Intune 在中國由 21Vianet 營運
+              href: china.md
         - name: 登入 Intune
           href: account-sign-up.md
         - name: 設定網域
