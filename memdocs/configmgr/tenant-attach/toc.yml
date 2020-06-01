@@ -6,3 +6,9 @@
       href: device-sync-actions.md
     - name: 針對裝置動作進行疑難排解
       href: technical-reference.md
+- name: 租用戶連結裝置的 CMPivot (預覽)
+  items:
+    - name: CMPivot 概觀
+      href: cmpivot-overview-attached.md
+    - name: CMPivot 範例指令碼
+      href: cmpivot-samples-attached.md
