@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c10e3c1cb2a0044003415d8f55a0a4ac85058656
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: 22b5461df3a560449316009471ea029967118f5d
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633315"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864885"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>如何在電腦分析中註冊裝置
 
@@ -37,10 +37,10 @@ ms.locfileid: "83633315"
 | OS 版本 | Appraiser | DiagTrack |
 | --------------| ----------------------- | -------------------|
 | Windows 10 1909 | 包含<sup>[附註 1](#bkmk_note1)</sup> | [最新的累積更新](https://support.microsoft.com/help/4529964) |
-| Windows 10 1903 | 包含 | [最新的累積更新](https://support.microsoft.com/help/4498140) |
-| Windows 10 1809 | 包含 | [最新的累積更新](https://support.microsoft.com/help/4464619) |
-| Windows 10 1803 | 包含 | [最新的累積更新](https://support.microsoft.com/help/4099479) |
-| Windows 10 1709 | 包含 | [最新的累積更新](https://support.microsoft.com/help/4043454) |
+| Windows 10 1903 | 包含<sup>[附註 1](#bkmk_note1)</sup> | [最新的累積更新](https://support.microsoft.com/help/4498140) |
+| Windows 10 1809 | 包含<sup>[附註 1](#bkmk_note1)</sup> | [最新的累積更新](https://support.microsoft.com/help/4464619) |
+| Windows 10 1803 | 包含<sup>[附註 1](#bkmk_note1)</sup> | [最新的累積更新](https://support.microsoft.com/help/4099479) |
+| Windows 10 1709 | 包含<sup>[附註 1](#bkmk_note1)</sup> | [最新的累積更新](https://support.microsoft.com/help/4043454) |
 | Windows 8.1 | [KB 2976978](https://support.microsoft.com/help/2976978)<sup>[附註 2](#bkmk_note2)</sup> | [最新的每月彙總](https://support.microsoft.com/help/4009470) |
 | Windows 7 SP1 | [KB 2952664](https://support.microsoft.com/help/2952664)<sup>[附註 3](#bkmk_note3)</sup> | [最新的每月彙總](https://support.microsoft.com/help/4009469) |
 
@@ -51,7 +51,7 @@ ms.locfileid: "83633315"
 
 ### <a name="note-1-windows-10"></a><a name="bkmk_note1"></a> 附註 1：Windows 10
 
-雖然 Windows 10 預設會包含這些元件，但 Windows 10 裝置仍需要最新的累積更新，才能獲取電腦分析的完整功能。 例如，評估裝置與最新 OS 版本的相容性，以及獲取部署與註冊狀態幾近即時的資訊。
+雖然 Windows 10 預設會包含這些元件，但 Windows 10 裝置仍需要最新的累積更新，才能取得電腦分析的完整功能，例如評定裝置與最新版 OS 的相容性。
 
 ### <a name="note-2-windows-81"></a><a name="bkmk_note2"></a> 附註 2：Windows 8.1
 

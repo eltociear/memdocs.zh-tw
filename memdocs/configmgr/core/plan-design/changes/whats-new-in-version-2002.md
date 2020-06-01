@@ -2,7 +2,7 @@
 title: 2002 版有什麼新功能
 titleSuffix: Configuration Manager
 description: 取得 Configuration Manager 最新分支 2002 版所引進的變更與新功能詳細資料。
-ms.date: 05/11/2020
+ms.date: 05/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1aca9058b0f095b7f25b345c15eed1446dcf61d2
-ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
+ms.openlocfilehash: afdcc608133d306042c9c6dc817396bb2fc3f387
+ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83381548"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84126476"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager 最新分支 2002 版的新功能
 
@@ -328,6 +328,15 @@ Configuration Manager 現在會偵測服務堆疊更新 (SSU) 是否為多個更
 
 <!-- 5229962 -->
 Configuration Manager 已擴展將裝置上線至 Microsoft Defender ATP 的支援。 如需詳細資訊，請參閱 [Microsoft Defender 進階威脅防護](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices)。
+
+## <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> 透過 Microsoft 端點管理員系統管理中心將 Configuration Manager 用戶端上線至 Microsoft Defender ATP
+<!--5691658-->
+現在可以將 Microsoft Defender ATP 端點偵測及回應 (EDR) 上線原則部署到 Configuration Manager 受控用戶端。 這些用戶端不需要 Azure AD 或 MDM 註冊，且原則會將目標放在 ConfigMgr 集合而不是 Azure AD 群組。
+
+此功能可讓客戶從單一管理體驗的 Microsoft Endpoint Manager 系統管理中心，管理 Intune MDM 和 Configuration Manager 用戶端 EDR/ATP 上線。 如需詳細資訊，請參閱 [Intune 中端點安全性的端點偵測與回應原則](../../../../intune/protect/endpoint-security-edr-policy.md)。
+
+> [!Important]
+> 針對此功能，您將需要安裝在您的環境中的 Hotfix 彙總套件 [KB4563473](https://support.microsoft.com/help/4563473)。
 
 ### <a name="improvements-to-bitlocker-management"></a>BitLocker 管理的改善
 

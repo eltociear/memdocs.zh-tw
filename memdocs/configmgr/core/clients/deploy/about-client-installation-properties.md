@@ -10,18 +10,18 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ccfb523cc1abc3a64d396f32d55a4dc4551987c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 12fee834e4f384cc180658a8e58cf3920a907831
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428602"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153443"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>關於 Configuration Manager 中的用戶端安裝參數和屬性
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
-使用 CCMSetup.exe 命令來安裝設定管理員用戶端。 如果在命令列上提供用戶端安裝「參數」  ，則這些參數會修改安裝行為。 如果在命令列上提供用戶端安裝「屬性」  ，則這些屬性會修改所安裝用戶端代理程式的初始組態。
+使用 CCMSetup.exe 命令來安裝設定管理員用戶端。 如果在命令列上提供用戶端安裝「參數」，則這些參數會修改安裝行為。 如果在命令列上提供用戶端安裝「屬性」，則這些屬性會修改所安裝用戶端代理程式的初始組態。
 
 ## <a name="about-ccmsetupexe"></a><a name="aboutCCMSetup"></a> 關於 CCMSetup.exe
 
@@ -36,9 +36,9 @@ CCMSetup.exe 命令會下載所需的檔案，以從管理點或來源位置安�
 > [!NOTE]
 > 您無法直接安裝 client.msi。  
 
-CCMSetup.exe 提供命令列「參數」  來自訂安裝。 參數前面會加上斜線 (`/`)，且依慣例會採用小寫。 您可在必要時指定參數值，方法是使用冒號 (`:`)，後面緊接著值。 如需詳細資訊，請參閱 [CCMSetup.exe 命令列參數](#ccmsetupexe-command-line-parameters)。
+CCMSetup.exe 提供命令列「參數」來自訂安裝。 參數前面會加上斜線 (`/`)，且依慣例會採用小寫。 您可在必要時指定參數值，方法是使用冒號 (`:`)，後面緊接著值。 如需詳細資訊，請參閱 [CCMSetup.exe 命令列參數](#ccmsetupexe-command-line-parameters)。
 
-您也可以在 CCMSetup.exe 命令列提供「屬性」  來修改 client.msi 的行為。依慣例，屬性會採用大寫。 指定屬性值的方式是使用等號 (`=`)，後面緊接著值。 如需詳細資訊，請參閱 [Client.msi 屬性](#clientMsiProps)。
+您也可以在 CCMSetup.exe 命令列提供「屬性」來修改 client.msi 的行為。依慣例，屬性會採用大寫。 指定屬性值的方式是使用等號 (`=`)，後面緊接著值。 如需詳細資訊，請參閱 [Client.msi 屬性](#clientMsiProps)。
 
 > [!IMPORTANT]  
 > 請先指定 CCMSetup 參數，再指定 client.msi 的屬性。  
@@ -80,6 +80,8 @@ CCMSetup.exe 及其支援檔案位於站台伺服器上 Configuration Manager �
 
 指定檔案的下載位置。 使用本機或 UNC 路徑。 裝置會利用伺服器訊息區 (SMB) 通訊協定下載檔案。 若要使用 **/source**，則進行用戶端安裝的 Windows 使用者帳戶需要該位置的**讀取**權限。
 
+如需 ccmsetup 如何下載內容的詳細資訊，請參閱[界限群組 - 用戶端安裝](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup)。 如果您同時使用 **/mp** 與 **/source** 參數，該文章也會包含 ccmsetup 行為的詳細資料。
+
 > [!TIP]  
 > 您可以在命令列中多次使用 **/source** 參數來指定替代的下載位置。  
 
@@ -89,8 +91,10 @@ CCMSetup.exe 及其支援檔案位於站台伺服器上 Configuration Manager �
 
 指定電腦要連線的來源管理點。 電腦會使用此管理點來尋找安裝檔案的最接近發佈點。 如果沒有發佈點或電腦在 4 小時後仍無法從發佈點下載檔案，它們便會從指定的管理點下載檔案。  
 
+如需 ccmsetup 如何下載內容的詳細資訊，請參閱[界限群組 - 用戶端安裝](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup)。 如果您同時使用 **/mp** 與 **/source** 參數，該文章也會包含 ccmsetup 行為的詳細資料。
+
 > [!IMPORTANT]  
-> 此參數會指定可供電腦尋找下載來源的初始管理點，且可以是任何站台中的任何管理點。 不會將用戶端「指派」  給指定的管理點。
+> 此參數會指定可供電腦尋找下載來源的初始管理點，且可以是任何站台中的任何管理點。 不會將用戶端「指派」給指定的管理點。
 
 電腦會根據用戶端連線的網站系統角色設定，透過 HTTP 或 HTTPS 連線下載檔案。 如有設定，您也可以使用 BITS 節流進行下載。 如果將所有發佈點和管理點設為僅供 HTTPS 用戶端連線，請確認用戶端電腦具備有效的用戶端憑證。  
 
@@ -281,19 +285,19 @@ CCMSetup.exe 命令會提供下列傳回碼。 若要進行疑難排解，請檢
 
 ## <a name="clientmsi-properties"></a><a name="clientMsiProps"></a> Client.msi 屬性
 
-下列屬性可以修改 ccmsetup.exe 所安裝 client.msi 的安裝行為。 如果使用[用戶端推入安裝方法](plan/client-installation-methods.md#client-push-installation)，請在 Configuration Manager 主控台其 [用戶端推入安裝內容]  的 [用戶端]  索引標籤中指定這些屬性。
+下列屬性可以修改 ccmsetup.exe 所安裝 client.msi 的安裝行為。 如果使用[用戶端推入安裝方法](plan/client-installation-methods.md#client-push-installation)，請在 Configuration Manager 主控台其 [用戶端推入安裝內容] 的 [用戶端] 索引標籤中指定這些屬性。
 
 ### <a name="aadclientappid"></a>AADCLIENTAPPID
 
-指定 Azure Active Directory (Azure AD) 用戶端應用程式識別碼。 當為雲端管理[設定 Azure 服務](../../servers/deploy/configure/azure-services-wizard.md)時，可建立或匯入用戶端應用程式。 Azure 系統管理員可以從 Azure 入口網站取得此屬性的值。 如需詳細資訊，請參閱[取得應用程式識別碼](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。 針對 **AADCLIENTAPPID** 屬性，此應用程式識別碼適用於 [原生]  應用程式類型。
+指定 Azure Active Directory (Azure AD) 用戶端應用程式識別碼。 當為雲端管理[設定 Azure 服務](../../servers/deploy/configure/azure-services-wizard.md)時，可建立或匯入用戶端應用程式。 Azure 系統管理員可以從 Azure 入口網站取得此屬性的值。 如需詳細資訊，請參閱[取得應用程式識別碼](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。 針對 **AADCLIENTAPPID** 屬性，此應用程式識別碼適用於 [原生] 應用程式類型。
 
 範例：`ccmsetup.exe AADCLIENTAPPID=aa28e7f1-b88a-43cd-a2e3-f88b257c863b`
 
 ### <a name="aadresourceuri"></a>AADRESOURCEURI
 
-指定 Azure AD 伺服器應用程式識別碼。 當為雲端管理[設定 Azure 服務](../../servers/deploy/configure/azure-services-wizard.md)時，可建立或匯入伺服器應用程式。 當建立伺服器應用程式時，在 [建立伺服器應用程式] 視窗中，此屬性是 [App 識別碼 URI]  。
+指定 Azure AD 伺服器應用程式識別碼。 當為雲端管理[設定 Azure 服務](../../servers/deploy/configure/azure-services-wizard.md)時，可建立或匯入伺服器應用程式。 當建立伺服器應用程式時，在 [建立伺服器應用程式] 視窗中，此屬性是 [App 識別碼 URI]。
 
-Azure 系統管理員可以從 Azure 入口網站取得此屬性的值。 在 **Azure Active Directory** 中，於 [應用程式註冊]  下尋找伺服器應用程式。 尋找應用程式類型 [Web 應用程式/API]  。 開啟應用程式，選取 [設定]  ，然後選取 [屬性]  。 針對此 **AADRESOURCEURI** 用戶端安裝屬性，使用 [App 識別碼 URI]  值。
+Azure 系統管理員可以從 Azure 入口網站取得此屬性的值。 在 **Azure Active Directory** 中，於 [應用程式註冊] 下尋找伺服器應用程式。 尋找應用程式類型 [Web 應用程式/API]。 開啟應用程式，選取 [設定]，然後選取 [屬性]。 針對此 **AADRESOURCEURI** 用戶端安裝屬性，使用 [App 識別碼 URI] 值。
 
 範例：`ccmsetup.exe AADRESOURCEURI=https://contososerver`
 
@@ -338,7 +342,7 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 
 ### <a name="ccmalwaysinf"></a>CCMALWAYSINF
 
-若要指定用戶端一律是以網際網路為基礎，且永遠不會連線到內部網路，請將此屬性值設定為 `1`。 用戶端的連線類型會顯示 [永遠為網際網路]  。  
+若要指定用戶端一律是以網際網路為基礎，且永遠不會連線到內部網路，請將此屬性值設定為 `1`。 用戶端的連線類型會顯示 [永遠為網際網路] 。  
 
 搭配 [**CCMHOSTNAME**](#ccmhostname) 使用此屬性來指定以網際網路為基礎管理點的 FQDN。 您也可以將其與 CCMSetup 參數 [ **/UsePKICert**](#usepkicert) 及站台碼 ([**SMSSITECODE**](#smssitecode)) 搭配使用。
 
@@ -393,7 +397,7 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 
 ### <a name="ccmcertstore"></a>CCMCERTSTORE
 
-如果用戶端安裝程式在電腦的預設 [個人]  憑證存放區中找不到有效的憑證，請使用此屬性來指定替代憑證存放區名稱。
+如果用戶端安裝程式在電腦的預設 [個人] 憑證存放區中找不到有效的憑證，請使用此屬性來指定替代憑證存放區名稱。
 
 範例：`CCMSetup.exe /UsePKICert CCMCERTSTORE="ConfigMgr"`  
 
@@ -581,7 +585,7 @@ Configuration Manager 預設會啟用記錄。
 
 1. [建立非 OS 部署工作順序](../../../osd/deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)來安裝應用程式、安裝軟體更新，以及進行設定。
 
-1. [部署此工作順序](../../../osd/deploy-use/deploy-a-task-sequence.md)到 [所有佈建裝置]  這個新的內建集合。 請記下工作順序部署識別碼，例如 `PRI20001`。
+1. [部署此工作順序](../../../osd/deploy-use/deploy-a-task-sequence.md)到 [所有佈建裝置] 這個新的內建集合。 請記下工作順序部署識別碼，例如 `PRI20001`。
 
 1. 在裝置上[安裝 Configuration Manager 用戶端](deploy-clients-to-windows-computers.md#BKMK_Manual)，並包含下列屬性：`PROVISIONTS=PRI20001`。 請將此屬性的值設定為工作順序部署識別碼。
 
@@ -626,9 +630,9 @@ Configuration Manager 預設會啟用記錄。
 
 #### <a name="values-for-the-smscacheflags-property"></a>SMSCACHEFLAGS 屬性的值
 
-- **PERCENTDISKSPACE**:以「總」  磁碟空間的百分比來設定快取大小。 如果指定此屬性，請同時將 [**SMSCACHESIZE**](#smscachesize) 設定為百分比值。
+- **PERCENTDISKSPACE**:以「總」磁碟空間的百分比來設定快取大小。 如果指定此屬性，請同時將 [**SMSCACHESIZE**](#smscachesize) 設定為百分比值。
 
-- **PERCENTFREEDISKSPACE**：以「可用」  磁碟空間的百分比來設定快取大小。 如果指定此屬性，請同時將 [**SMSCACHESIZE**](#smscachesize) 設定為百分比值。 例如，磁碟的可用空間為 10 MB，且指定 `SMSCACHESIZE=50`。 用戶端安裝程式會將快取大小設定為 5 MB。 此屬性無法搭配 **PERCENTDISKSPACE** 屬性使用。
+- **PERCENTFREEDISKSPACE**：以「可用」磁碟空間的百分比來設定快取大小。 如果指定此屬性，請同時將 [**SMSCACHESIZE**](#smscachesize) 設定為百分比值。 例如，磁碟的可用空間為 10 MB，且指定 `SMSCACHESIZE=50`。 用戶端安裝程式會將快取大小設定為 5 MB。 此屬性無法搭配 **PERCENTDISKSPACE** 屬性使用。
 
 - **MAXDRIVE**：在最大的可用磁碟上安裝快取。 如果使用 [**SMSCACHEDIR**](#smscachedir) 屬性指定路徑，則用戶端安裝程式會忽略這個值。
 

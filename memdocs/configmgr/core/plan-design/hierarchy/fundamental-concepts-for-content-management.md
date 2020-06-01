@@ -10,16 +10,16 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1355b6d670e94d985717dfb32386f579cba42a0
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: cb91e62c4ffce37068b2de5e125865e28ff8c53b
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078663"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878944"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager 中的內容管理基本概念
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 Configuration Manager 支援健全的工具和選項系統來管理軟體內容。 應用程式、套件、軟體更新和 OS 部署等軟體部署都需要內容。 Configuration Manager 會將內容同時儲存在站台伺服器和發佈點上。 在位置之間傳輸此內容時會需要大量的網路頻寬。 若要有效規劃及使用內容管理基礎結構，請先了解可用的選項與設定。 然後考量如何使用它們，才能最滿足您的網路環境和內容部署需求。  
 
@@ -59,7 +59,7 @@ Configuration Manager 支援健全的工具和選項系統來管理軟體內容�
 
 ## <a name="binary-differential-replication"></a>二進位差異複寫
 
-Configuration Manager 會使用二進位差異複寫 (BDR) 來更新您先前發佈至其他站台或遠端發佈點的內容。 若要支援 BDR 降低頻寬使用量，請在發佈點上安裝 [遠端差異壓縮]  功能。 如需詳細資訊，請參閱[發佈點必要條件](../configs/site-and-site-system-prerequisites.md#bkmk_2012dppreq)。
+Configuration Manager 會使用二進位差異複寫 (BDR) 來更新您先前發佈至其他站台或遠端發佈點的內容。 若要支援 BDR 降低頻寬使用量，請在發佈點上安裝 [遠端差異壓縮] 功能。 如需詳細資訊，請參閱[發佈點必要條件](../configs/site-and-site-system-prerequisites.md#bkmk_2012dppreq)。
 
 BDR 可將用來傳送所發佈內容更新的網路頻寬降到最低。 每當您變更內容來源檔案時，它只會重新傳送新的或已變更的內容，而不會傳送整組檔案。  
 
@@ -71,25 +71,25 @@ BDR 可將用來傳送所發佈內容更新的網路頻寬降到最低。 每當
 
 系統支援階層中每個父子站台之間的 BDR。 在站台內的站台伺服器與其標準發佈點之間可支援 BDR。 不過，提取發佈點和雲端發佈點則不支援使用 BDR 來傳輸內容。 提取發佈點支援檔案層級的差異、傳送新的檔案，但不支援檔案內的區塊。
 
-應用程式會一律使用二進位差異複寫。 BDR 對套件而言是選用的，預設不會啟用。 若要針對套件使用 BDR，請為每個套件啟用此功能。 當您建立或編輯套件時，請選取 [啟用二進位差異複寫]  選項。
+應用程式會一律使用二進位差異複寫。 BDR 對套件而言是選用的，預設不會啟用。 若要針對套件使用 BDR，請為每個套件啟用此功能。 當您建立或編輯套件時，請選取 [啟用二進位差異複寫] 選項。
 
 
 ### <a name="bdr-or-delta-replication"></a>BDR 或差異複寫
 
 <!-- SCCMDocs#1209 -->
-下列清單摘要說明「二進位差異複寫」  (BDR) 與「差異複寫」  之間的不同。
+下列清單摘要說明「二進位差異複寫」(BDR) 與「差異複寫」之間的不同。
 
 #### <a name="summary-of-binary-differential-replication"></a>二進位差異複寫摘要
 
-- Configuration Manager 對 Windows「遠端差異壓縮」  的稱呼
-- 「區塊」  層級的差異
+- Configuration Manager 對 Windows「遠端差異壓縮」的稱呼
+- 「區塊」層級的差異
 - 針對應用程式一律啟用
 - 在舊版套件上為選用
 - 如果檔案已經存在於發佈點上而有變更，站台就會使用 BDR 來複寫區塊層級的變更，而不會複寫整個檔案。
 
 #### <a name="summary-of-delta-replication"></a>差異複寫摘要
 
-- 「檔案」  層級的差異
+- 「檔案」層級的差異
 - 預設為開啟，無法設定
 - 當套件發生變更時，站台會檢查對個別檔案的變更，而不會檢查對整個套件的變更。
     - 如果檔案發生變更，請使用 BDR 來進行工作
@@ -190,7 +190,7 @@ Windows Low Extra Delay Background Transport (LEDBAT) 是 Windows Server 的一�
 
 如需 Windows LEDBAT 的一般詳細資訊，請參閱 [New transport advancements](https://techcommunity.microsoft.com/t5/Networking-Blog/Announcing-Transport-Features-and-Performance-Advancements-in/ba-p/339726) (新的傳輸功能改善) 部落格文章。
 
-當您[設定一般的發佈點設定](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-general)時，如需如何搭配 Configuration Manager 發佈點使用 Windows LEDBAT 的詳細資訊，請參閱 [調整下載速度來使用未使用的網路頻寬 (Windows LEDBAT)]  設定。
+當您[設定一般的發佈點設定](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-general)時，如需如何搭配 Configuration Manager 發佈點使用 Windows LEDBAT 的詳細資訊，請參閱 [調整下載速度來使用未使用的網路頻寬 (Windows LEDBAT)] 設定。
 
 
 ## <a name="client-locations"></a>用戶端位置
@@ -303,7 +303,7 @@ Configuration Manager 最新分支在關於用戶端如何尋找具有內容的�
 
 用戶端如果無法從與其目前界限群組關聯的發佈點中找到內容，可切換回使用與鄰近界限群組關聯的內容來源位置。 鄰近界限群組必須與用戶端的目前界限群組具有已定義的關聯性，才能用於後援。 此關聯性包括一段設定的時間，而用戶端必須在此時間內在本機找不到內容，才能將來自鄰近界限群組的內容來源納入其搜尋範圍。
 
-不再使用慣用發佈點概念，也不再提供或強制執行 [允許內容的後援來源位置]  設定。
+不再使用慣用發佈點概念，也不再提供或強制執行 [允許內容的後援來源位置] 設定。
 
 如需詳細資訊，請參閱[界限群組](../../servers/deploy/configure/boundary-groups.md)。
 
@@ -332,7 +332,7 @@ Configuration Manager 最新分支在關於用戶端如何尋找具有內容的�
 
 依需求發佈內容是一個適用於個別應用程式和套件部署的選項。 此選項可讓您依需求將內容發佈至慣用的伺服器。  
 
-- 若要為部署啟用這項設定，請啟用：[將此套件的內容發佈至慣用發佈點]  。  
+- 若要為部署啟用這項設定，請啟用：[將此套件的內容發佈至慣用發佈點]。  
 
 - 如果您啟用此選項進行部署，而用戶端要求該內容，但用戶端的任何慣用發佈點上皆未提供內容，則 Configuration Manager 會自動將該內容發佈到用戶端的慣用發佈點。  
 
