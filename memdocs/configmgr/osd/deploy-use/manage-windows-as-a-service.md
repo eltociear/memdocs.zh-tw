@@ -25,7 +25,7 @@ ms.locfileid: "81690326"
 
 如需 Windows 10 服務選項的詳細資訊，請參閱 [Windows 即服務概觀](/windows/deployment/update/waas-overview#servicing-channels)。
 
-使用下列章節來管理 Windos 即服務。
+使用下列各節來管理 Windows 即服務。
 
 ## <a name="prerequisites"></a><a name="BKMK_Prerequisites"></a> 先決條件
 
