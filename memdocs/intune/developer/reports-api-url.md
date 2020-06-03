@@ -6,7 +6,7 @@ keywords: Intune 資料倉儲
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04521681ee6e262f4634cfc96560a5922ce1b8c0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ef0ba25d697bca6d6a6af7aad3565e6c2c70841e
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79360232"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165935"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Intune 資料倉儲 API 端點
 
@@ -79,7 +79,7 @@ URL 包含下列元素：
 > 篩選條件範例假設今天是 2019 年 2 月 21 日。
 
 |                             篩選器                             |           效能最佳化           |                                          Description                                          |
-|:--------------------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------------------------------------------------------:|
+|----------------------------------------------------------------|----------------------------------------------|-----------------------------------------------------------------------------------------------|
 |    `maxhistorydays=7`                                            |    完整                                      |    傳回 `DateKey` 在 20180214 和 20180221 之間的資料。                                     |
 |    `$filter=DateKey eq 20180214`                                 |    完整                                      |    傳回 `DateKey` 等於 20180214 的資料。                                                    |
 |    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    完整                                      |    傳回 `DateKey` 在 20180214 和 20180220 之間的資料。                                     |
