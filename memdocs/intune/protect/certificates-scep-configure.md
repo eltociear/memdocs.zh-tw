@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45f649a99f6b3d632fea9e46dfdaee89450ebd23
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5939d12003df78b459ebc12c294434826194b931
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989281"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166122"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>設定基礎結構以支援 SCEP 與 Intune
 
@@ -34,7 +34,7 @@ Intune 支援使用簡單憑證註冊通訊協定 (SCEP) 來[驗證與您應用�
 
 ## <a name="prerequisites-for-using-scep-for-certificates"></a>將 SCEP 用於憑證的必要條件
 
-在您繼續之前，請確認您已為將使用 SCEP 憑證設定檔的裝置[建立並部署「受信任憑證」  設定檔](certificates-configure.md#export-the-trusted-root-ca-certificate)。 SCEP 憑證設定檔會直接參考您用於透過受信任根 CA 憑證來佈建裝置的受信任憑證設定檔。
+在您繼續之前，請確認您已為將使用 SCEP 憑證設定檔的裝置[建立並部署「受信任憑證」設定檔](certificates-configure.md#export-the-trusted-root-ca-certificate)。 SCEP 憑證設定檔會直接參考您用於透過受信任根 CA 憑證來佈建裝置的受信任憑證設定檔。
 
 ### <a name="servers-and-server-roles"></a>伺服器與伺服器角色
 
@@ -101,9 +101,9 @@ Intune 支援使用簡單憑證註冊通訊協定 (SCEP) 來[驗證與您應用�
 |物件    |詳細資料    |
 |----------|-----------|
 |**SCEP 憑證範本**         |您將在發行 CA 上設定的範本，用於滿足裝置 SCEP 要求。 |
-|**用戶端驗證憑證** |從您的發行 CA 或公用 CA 要求。<br /> 您在裝載 NDES 服務的電腦上安裝此憑證，並由 Intune 憑證連接器使用。<br /> 如果憑證在您用於發行此憑證的 CA 範本上具有「用戶端」  和「伺服器驗證」  金鑰使用方式集合 (**增強金鑰使用方法**)。 您即可使用相同的憑證來進行伺服器和用戶端驗證。 |
-|**伺服器驗證憑證** |從發行 CA 或公用 CA 要求的網頁伺服器認證。<br /> 您在裝載 NDES 之電腦上的 IIS 中安裝並繫結此 SSL 憑證。<br />如果憑證在您用於發行此憑證的 CA 範本上具有「用戶端」  和「伺服器驗證」  金鑰使用方式集合 (**增強金鑰使用方法**)。 您即可使用相同的憑證來進行伺服器和用戶端驗證。 |
-|**可信任的根 CA 憑證**       |若要使用 SCEP 憑證設定檔，裝置必須信任您的受信任根憑證授權單位 (CA)。 使用 Intune 中的「受信任憑證設定檔」  ，將受信任的根 CA 憑證佈建給使用者和裝置。 <br/><br/> **-** 針對每個作業系統平台使用單一受信任根 CA 憑證，並將該憑證與您建立的每個受信任根憑證設定檔建立關聯。 <br /><br /> **-** 您可以在需要時使用其他受信任根 CA 憑證。 例如，當您需要向 CA 提供信任，使其為您簽署 Wi-Fi 存取點的伺服器驗證憑證時，您可能會使用其他的憑證。 針對發行 CA 建立其他受信任的根 CA 憑證。  在 Intune 中建立的 SCEP 憑證設定檔中，請確認您為發行 CA 指定受信任的根 CA 設定檔。<br/><br/> 如需受信任憑證設定檔的資訊，請參閱＜在 Intune 中使用憑證以進行驗證＞  中的[＜匯出受信任的根 CA 憑證＞](certificates-configure.md#export-the-trusted-root-ca-certificate)和[＜建立受信任的憑證設定檔＞](certificates-configure.md#create-trusted-certificate-profiles)。 |
+|**用戶端驗證憑證** |從您的發行 CA 或公用 CA 要求。<br /> 您在裝載 NDES 服務的電腦上安裝此憑證，並由 Intune 憑證連接器使用。<br /> 如果憑證在您用於發行此憑證的 CA 範本上具有「用戶端」和「伺服器驗證」金鑰使用方式集合 (**增強金鑰使用方法**)。 您即可使用相同的憑證來進行伺服器和用戶端驗證。 |
+|**伺服器驗證憑證** |從發行 CA 或公用 CA 要求的網頁伺服器認證。<br /> 您在裝載 NDES 之電腦上的 IIS 中安裝並繫結此 SSL 憑證。<br />如果憑證在您用於發行此憑證的 CA 範本上具有「用戶端」和「伺服器驗證」金鑰使用方式集合 (**增強金鑰使用方法**)。 您即可使用相同的憑證來進行伺服器和用戶端驗證。 |
+|**可信任的根 CA 憑證**       |若要使用 SCEP 憑證設定檔，裝置必須信任您的受信任根憑證授權單位 (CA)。 使用 Intune 中的「受信任憑證設定檔」，將受信任的根 CA 憑證佈建給使用者和裝置。 <br/><br/> **-** 針對每個作業系統平台使用單一受信任根 CA 憑證，並將該憑證與您建立的每個受信任根憑證設定檔建立關聯。 <br /><br /> **-** 您可以在需要時使用其他受信任根 CA 憑證。 例如，當您需要向 CA 提供信任，使其為您簽署 Wi-Fi 存取點的伺服器驗證憑證時，您可能會使用其他的憑證。 針對發行 CA 建立其他受信任的根 CA 憑證。  在 Intune 中建立的 SCEP 憑證設定檔中，請確認您為發行 CA 指定受信任的根 CA 設定檔。<br/><br/> 如需受信任憑證設定檔的資訊，請參閱＜在 Intune 中使用憑證以進行驗證＞中的[＜匯出受信任的根 CA 憑證＞](certificates-configure.md#export-the-trusted-root-ca-certificate)和[＜建立受信任的憑證設定檔＞](certificates-configure.md#create-trusted-certificate-profiles)。 |
 
 ## <a name="configure-the-certification-authority"></a>設定憑證授權單位
 
@@ -118,38 +118,38 @@ Intune 支援使用簡單憑證註冊通訊協定 (SCEP) 來[驗證與您應用�
 
 1. 使用具有權限管理 CA 的網域帳戶來登入您的發行 CA。
 
-2. 開啟憑證授權單位 Microsoft Management Console (MMC)。 您可以**執行** 'certsrv.msc'，或在 [伺服器管理員]  中按一下 [工具]  ，然後按一下 [憑證授權單位]  。
+2. 開啟憑證授權單位 Microsoft Management Console (MMC)。 您可以**執行** 'certsrv.msc'，或在 [伺服器管理員] 中按一下 [工具]，然後按一下 [憑證授權單位]。
 
-3. 選取 [憑證範本]  節點，按一下 [動作]   > [管理]  。
+3. 選取 [憑證範本] 節點，按一下 [動作] > [管理]。
 
 ### <a name="create-the-scep-certificate-template"></a>建立 SCEP 憑證範本
 
 1. 建立 v2 憑證範本 (具有 Windows 2003 相容性) 以用作 SCEP 憑證範本。 您可以：
 
-   - 使用 [憑證範本]  嵌入式管理單元來建立新的自訂範本。
+   - 使用 [憑證範本] 嵌入式管理單元來建立新的自訂範本。
    - 複製現有範本 (例如使用者範本) 並更新複本以用作 NDES 範本。
 
 2. 在範本的指定索引標籤上進行下列設定：
 
    - **一般**：
 
-     - 取消選取 [在 Active Directory 中發佈憑證]  。
-     - 指定易記的 [範本顯示名稱]  ，以便您稍後識別此範本。
+     - 取消選取 [在 Active Directory 中發佈憑證]。
+     - 指定易記的 [範本顯示名稱]，以便您稍後識別此範本。
 
    - **主體名稱**：
 
-     - 選取 [在要求中提供]  。 安全性由 NDES 的 Intune 原則模組實施。
+     - 選取 [在要求中提供]。 安全性由 NDES 的 Intune 原則模組實施。
 
        ![範本, 主體名稱索引標籤](./media/certificates-scep-configure/scep-ndes-subject-name.jpg)
 
    - **延伸模組**：
 
-     - 確認 [應用程式原則描述]  包含 [用戶端驗證]  。
+     - 確認 [應用程式原則描述] 包含 [用戶端驗證]。
 
        > [!IMPORTANT]
        > 僅新增您需要的應用程式原則。 向您的安全性系統管理員確認您的選擇。
 
-     - 針對 iOS/iPadOS 和 macOS 憑證範本，另請編輯 [金鑰使用方法]  ，並確保未選取 [簽章是原件證明]  。
+     - 針對 iOS/iPadOS 和 macOS 憑證範本，另請編輯 [金鑰使用方法]，並確保未選取 [簽章是原件證明]。
 
      ![範本, 延伸索引標籤](./media/certificates-scep-configure/scep-ndes-extensions.jpg)  
 
@@ -177,7 +177,7 @@ Intune 支援使用簡單憑證註冊通訊協定 (SCEP) 來[驗證與您應用�
 
 ### <a name="create-the-client-certificate-template"></a>建立用戶端憑證範本
 
-Intune 憑證連接器需要具有「用戶端驗證」  增強金鑰使用方法的憑證，以及等同於安裝連接器之電腦 FQDN 的主體名稱。 具有下列屬性的範本是必要的：
+Intune 憑證連接器需要具有「用戶端驗證」增強金鑰使用方法的憑證，以及等同於安裝連接器之電腦 FQDN 的主體名稱。 具有下列屬性的範本是必要的：
 
 - **延伸模組** > **應用程式原則**必須包含**用戶端驗證**
 - **主體名稱** > **在要求中提供**。
@@ -200,9 +200,9 @@ Intune 憑證連接器需要具有「用戶端驗證」  增強金鑰使用方�
 
 在 Intune 憑證連接器上，您可以使用 NDES 伺服器**系統帳戶**或特定帳戶 (例如 **NDES 服務帳戶**)。
 
-1. 在憑證授權單位主控台上，以右鍵按一下 CA 名稱並選取 [屬性]  。
+1. 在憑證授權單位主控台上，以右鍵按一下 CA 名稱並選取 [屬性]。
 
-2. 在 [安全性]  索引標籤中按一下 [新增]  。
+2. 在 [安全性] 索引標籤中按一下 [新增]。
 
 3. 授與**發行與管理憑證**權限：
 
@@ -213,7 +213,7 @@ Intune 憑證連接器需要具有「用戶端驗證」  增強金鑰使用方�
 
 修改憑證範本的有效期間為選擇性。  
 
-在您[建立 SCEP 憑證範本](#create-the-scep-certificate-template)後，您即可編輯範本以檢閱 [一般]  索引標籤上的**有效期間**。
+在您[建立 SCEP 憑證範本](#create-the-scep-certificate-template)後，您即可編輯範本以檢閱 [一般] 索引標籤上的**有效期間**。
 
 根據預設，Intune 使用範本中所設定的值。 不過，您可以設定 CA 以允許要求者輸入不同的值，然後就可以從 Intune 主控台內設定該值。
 
@@ -224,11 +224,11 @@ Intune 憑證連接器需要具有「用戶端驗證」  增強金鑰使用方�
 
 1. 在 CA 上執行下列命令：
 
-   -**certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**
-   -**net stop certsvc**
-   -**net start certsvc**
+   **certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**  
+   **net stop certsvc**  
+   **net start certsvc**    
 
-2. 在發行的 CA 上使用 [憑證授權單位] 嵌入式管理單元來發行憑證範本。 選取 [憑證範本]  節點，選取 [動作]   > [新增]   > [要發行的憑證範本]  ，然後選取您上一節中建立的憑證範本。
+2. 在發行的 CA 上使用 [憑證授權單位] 嵌入式管理單元來發行憑證範本。 選取 [憑證範本] 節點，選取 [動作] > [新增] > [要發行的憑證範本]，然後選取您上一節中建立的憑證範本。
 
 3. 檢視**憑證範本**資料夾中的發行範本來加以驗證。
 
@@ -240,24 +240,24 @@ Intune 憑證連接器需要具有「用戶端驗證」  增強金鑰使用方�
 
 1. 在將裝載 NDES 服務的伺服器上，以**企業系統管理員**的身分登入，然後使用[新增角色及功能精靈](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11))來安裝 NDES：
 
-   1. 在精靈中，選取 [Active Directory 憑證服務]  以存取 AD CS 角色服務。 選取 [網路裝置註冊服務]  ，取消選取 [憑證授權單位]  ，然後完成精靈。
+   1. 在精靈中，選取 [Active Directory 憑證服務]  以存取 AD CS 角色服務。 選取 [網路裝置註冊服務]，取消選取 [憑證授權單位]，然後完成精靈。
 
       > [!TIP]
-      > 在 [安裝進度]  中，不要選取 [關閉]  。 相反地，請選取 [設定目的地伺服器上的 Active Directory 憑證服務]  連結。 [AD CS 設定精靈]  隨即開啟，可讓您用來進行本文中的下一個程序：「設定 NDES 服務」  。 [AD CS 設定] 開啟之後，您可以關閉 [新增角色及功能精靈]。
+      > 在 [安裝進度] 中，不要選取 [關閉]。 相反地，請選取 [設定目的地伺服器上的 Active Directory 憑證服務] 連結。 [AD CS 設定精靈] 隨即開啟，可讓您用來進行本文中的下一個程序：「設定 NDES 服務」。 [AD CS 設定] 開啟之後，您可以關閉 [新增角色及功能精靈]。
 
    2. 當 NDES 加入至伺服器時，精靈也會安裝 IIS。 請確認 IIS 具有下列設定：
 
-      - [Web 伺服器]   > [安全性]   > [要求篩選] 
-      - [網頁伺服器]   > [應用程式開發]   > [ASP.NET 3.5] 
+      - [Web 伺服器] > [安全性] > [要求篩選]
+      - [網頁伺服器] > [應用程式開發] > [ASP.NET 3.5]
 
-        安裝 ASP.NET 3.5 時會安裝 .NET Framework 3.5。 安裝 .NET Framework 3.5 時，請安裝核心 [.NET Framework 3.5]  功能和 [HTTP 啟動]  。
+        安裝 ASP.NET 3.5 時會安裝 .NET Framework 3.5。 安裝 .NET Framework 3.5 時，請安裝核心 [.NET Framework 3.5]  功能和 [HTTP 啟動] 。
 
-      - [網頁伺服器]   > [應用程式開發]   > [ASP.NET 4.5] 
+      - [網頁伺服器] > [應用程式開發] > [ASP.NET 4.5]
 
-        安裝 ASP.NET 4.5 時會安裝 .NET Framework 4.5。 安裝 .NET Framework 4.5 時，請安裝核心 [.NET Framework 4.5]  功能、[ASP.NET 4.5]  與 [WCF 服務]   > [HTTP 啟動]  功能。
+        安裝 ASP.NET 4.5 時會安裝 .NET Framework 4.5。 安裝 .NET Framework 4.5 時，請安裝核心 [.NET Framework 4.5] 功能、[ASP.NET 4.5] 與 [WCF 服務] > [HTTP 啟動] 功能。
 
-      - [管理工具]   > [IIS 6 管理相容性]   > [IIS 6 Metabase 相容性] 
-      - [管理工具]   > [IIS 6 管理相容性]   > [IIS 6 WMI 相容性] 
+      - [管理工具] > [IIS 6 管理相容性] > [IIS 6 Metabase 相容性]
+      - [管理工具] > [IIS 6 管理相容性] > [IIS 6 WMI 相容性]
       - 在伺服器上，新增 NDES 服務帳戶作為本機 **IIS_IUSR** 群組的成員。
 
 2. 在裝載 NDES 服務的電腦上，於提升權限的命令提示字元中執行下列命令。 下列命令會設定 NDES 服務帳戶的 SPN：
@@ -270,22 +270,22 @@ Intune 憑證連接器需要具有「用戶端驗證」  增強金鑰使用方�
 
 ### <a name="configure-the-ndes-service"></a>設定 NDES 服務
 
-1. 在裝載 NDES 服務的電腦上，開啟 [AD CS 設定精靈]  ，然後進行下列更新：
+1. 在裝載 NDES 服務的電腦上，開啟 [AD CS 設定精靈]，然後進行下列更新：
 
    > [!TIP]
    > 如果您是從上一個程序繼續進行，並按一下**在目的地伺服器上設定 Active Directory 憑證服務**連結，則此精靈應該已經開啟。 否則，開啟 [伺服器管理員] 來存取 Active Directory 憑證服務的部署後組態。
 
-   - 在 [角色服務]  中選取 [網路裝置註冊服務]  。
-   - 在 [NDES 的服務帳戶]  中指定 NDES 服務帳戶。
-   - 在 [NDES 的 CA]  中，按一下 [選取]  ，然後選取您設定憑證範本的發行 CA。
-   - 在 [NDES 的密碼編譯]  中，設定符合您公司需求的金鑰長度。
-   - 在 [確認]  中，選取 [設定]  來完成精靈。
+   - 在 [角色服務] 中選取 [網路裝置註冊服務]。
+   - 在 [NDES 的服務帳戶] 中指定 NDES 服務帳戶。
+   - 在 [NDES 的 CA] 中，按一下 [選取]，然後選取您設定憑證範本的發行 CA。
+   - 在 [NDES 的密碼編譯] 中，設定符合您公司需求的金鑰長度。
+   - 在 [確認] 中，選取 [設定]  來完成精靈。
 
 2. 精靈完成之後，在裝載 NDES 服務的電腦上更新下列登錄機碼：
 
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\`
 
-   若要更新此機碼，請指出憑證範本的 [用途]  (可以在其 [要求處理]  索引標籤上找到)。 接著，使用您在[建立憑證範本](#create-the-scep-certificate-template)時所指定的憑證範本名稱 (而非範本的顯示名稱) 來取代現有資料，以更新對應的登錄項目。
+   若要更新此機碼，請指出憑證範本的 [用途] (可以在其 [要求處理] 索引標籤上找到)。 接著，使用您在[建立憑證範本](#create-the-scep-certificate-template)時所指定的憑證範本名稱 (而非範本的顯示名稱) 來取代現有資料，以更新對應的登錄項目。
 
    下表會將憑證範本目的對應到登錄中的值：
 
@@ -295,18 +295,18 @@ Intune 憑證連接器需要具有「用戶端驗證」  增強金鑰使用方�
    |加密              |EncryptionTemplate       |金鑰加密  |
    |簽章和加密|GeneralPurposeTemplate   |金鑰加密 <br/> 數位簽章 |
 
-   例如，如果您的憑證範本目的是 [加密]  ，則請將 **EncryptionTemplate** 值編輯為憑證範本的名稱。
+   例如，如果您的憑證範本目的是 [加密] ，則請將 **EncryptionTemplate** 值編輯為憑證範本的名稱。
 
 3. 設定 IIS 要求篩選，以在 IIS 中為 NDES 服務所接收的長 URL (查詢) 新增支援。
 
-   1. 在 IIS 管理員中，選取 [預設的網站]   > [要求篩選]   > [編輯功能設定]  以開啟 [編輯要求篩選設定]  頁面。
+   1. 在 IIS 管理員中，選取 [預設的網站] > [要求篩選] > [編輯功能設定] 以開啟 [編輯要求篩選設定] 頁面。
 
    2. 進行以下設定：
 
       - **URL 長度上限 (位元組)** = 65534
       - **查詢字串上限 (位元組)** = 65534
 
-   3. 選取 [確定]  以儲存這項設定並關閉 IIS 管理員。
+   3. 選取 [確定] 以儲存這項設定並關閉 IIS 管理員。
 
    4. 檢視下列登錄機碼以確認其具有已指出的值來驗證此設定：
 
@@ -328,7 +328,7 @@ Intune 憑證連接器需要具有「用戶端驗證」  增強金鑰使用方�
 ### <a name="install-and-bind-certificates-on-the-server-that-hosts-ndes"></a>在裝載 NDES 的伺服器上安裝並繫結憑證
 
 > [!TIP]
-> 在下列程序中，您可以將單一憑證用於「伺服器驗證」  和「用戶端驗證」  (當該憑證設定為符合這兩種用途的準則時)。 下列程序的步驟 1 和 3，將描述每種用途的準則。
+> 在下列程序中，您可以將單一憑證用於「伺服器驗證」和「用戶端驗證」(當該憑證設定為符合這兩種用途的準則時)。 下列程序的步驟 1 和 3，將描述每種用途的準則。
 
 1. 從您的內部 CA 或公用 CA 要求**伺服器驗證**憑證，然後將憑證安裝在伺服器上。
 
@@ -339,11 +339,11 @@ Intune 憑證連接器需要具有「用戶端驗證」  增強金鑰使用方�
 
 2. 在 IIS 中繫結伺服器驗證憑證：
 
-   1. 安裝伺服器驗證憑證之後，請開啟 [IIS 管理員]  並選取 [預設的網站]  。 在 [動作]  窗格中，選取 [繫結]  。
+   1. 安裝伺服器驗證憑證之後，請開啟 [IIS 管理員] 並選取 [預設的網站]。 在 [動作] 窗格中，選取 [繫結]。
 
-   1. 選取下 [新增]  ，將 [類型]  設定為 [https]  ，然後確認連接埠是 [443]  。
+   1. 選取下 [新增]，將 [類型] 設定為 [https]，然後確認連接埠是 [443]。
    
-   1. 針對 [SSL 憑證]  ，指定伺服器驗證憑證。
+   1. 針對 [SSL 憑證] ，指定伺服器驗證憑證。
 
 3. 在 NDES 伺服器上，從內部 CA 或公開憑證授權單位，要求並安裝 **用戶端驗證** 憑證。
 
@@ -362,7 +362,7 @@ Microsoft Intune 憑證連接器會安裝在執行 NDES 服務的伺服器上。
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 選取 [租用戶系統管理]   > [連接器與權杖]   > [憑證連接器]   > [新增]  。
+2. 選取 [租用戶系統管理] > [連接器與權杖] > [憑證連接器] > [新增]。
 
 3. 下載並儲存 SCEP 檔案的連接器。 請將它儲存到可從將安裝連接器的伺服器存取的位置。
 
@@ -376,9 +376,9 @@ Microsoft Intune 憑證連接器會安裝在執行 NDES 服務的伺服器上。
 
       當您為獨立版 Intune 安裝 NDES 時，CRP 服務會自動與 Certificate Connector 一起安裝。
 
-5. 當系統提示您提供憑證連接器的用戶端憑證時，請選擇 [選取]  ，並選取您在本文先前[在裝載 NDES 的伺服器上安裝並繫結憑證](#install-and-bind-certificates-on-the-server-that-hosts-ndes)程序中步驟 #3 期間在 NDES 伺服器上所安裝**用戶端驗證**憑證。
+5. 當系統提示您提供憑證連接器的用戶端憑證時，請選擇 [選取]，並選取您在本文先前[在裝載 NDES 的伺服器上安裝並繫結憑證](#install-and-bind-certificates-on-the-server-that-hosts-ndes)程序中步驟 #3 期間在 NDES 伺服器上所安裝**用戶端驗證**憑證。
 
-   選取用戶端驗證憑證之後，您會回到 [Microsoft Intune Certificate Connector 的用戶端憑證]  介面。 雖然不會顯示您選取的憑證，但請選取 [下一步]  以檢視該憑證的屬性。 選取 [下一步]  [安裝]  。
+   選取用戶端驗證憑證之後，您會回到 [Microsoft Intune Certificate Connector 的用戶端憑證] 介面。 雖然不會顯示您選取的憑證，但請選取 [下一步] 以檢視該憑證的屬性。 選取 [下一步] [安裝]。
 
 > [!NOTE]
 > 啟動 Intune 憑證連接器之前，必須對 GCC High 租用戶進行下列變更。
@@ -406,7 +406,7 @@ Microsoft Intune 憑證連接器會安裝在執行 NDES 服務的伺服器上。
 >
 > 如果這些編輯未完成，GCC High 租用戶將會收到錯誤：「拒絕存取」「您未獲授權檢視此頁面。」
 
-6. 在精靈完成後，但在關閉精靈之前，按一下 [啟動 Certificate Connector UI]  。
+6. 在精靈完成後，但在關閉精靈之前，按一下 [啟動 Certificate Connector UI]。
 
    如果在啟動憑證連接器 UI 之前關閉精靈，您可以藉由執行下列命令重新加以開啟：
 
@@ -414,19 +414,19 @@ Microsoft Intune 憑證連接器會安裝在執行 NDES 服務的伺服器上。
 
 7. 在 **Certificate Connector** UI 中：
 
-   1. 選取 [登入]  並輸入您的 Intune 服務系統管理員認證，或擁有全域系統管理權限的租用戶管理員認證。
+   1. 選取 [登入] 並輸入您的 Intune 服務系統管理員認證，或擁有全域系統管理權限的租用戶管理員認證。
 
    2. 您所使用帳戶必須獲指派有效的 Intune 授權。
 
    3. 在您登入之後，Intune 憑證連接器會從 Intune 下載憑證。 此憑證用於連接器與 Intune 之間的驗證。 如果您使用的帳戶沒有 Intune 授權，連接器 (NDESConnectorUI.exe) 就無法從 Intune 取得憑證。  
 
-      如果您的組織使用 Proxy 伺服器，而且 NDES 伺服器需要該 Proxy 以存取網際網路，請選取 [使用 Proxy 伺服器]  。 然後輸入 Proxy 伺服器名稱、連接埠，以及用以連線的帳戶認證。
+      如果您的組織使用 Proxy 伺服器，而且 NDES 伺服器需要該 Proxy 以存取網際網路，請選取 [使用 Proxy 伺服器]。 然後輸入 Proxy 伺服器名稱、連接埠，以及用以連線的帳戶認證。
 
-   4. 選取 [進階]  索引標籤，然後輸入對您的發行憑證授權單位具有 [發行及管理憑證]  權限的帳戶認證。 **套用**您的變更。  
+   4. 選取 [進階] 索引標籤，然後輸入對您的發行憑證授權單位具有 [發行及管理憑證] 權限的帳戶認證。 **套用**您的變更。  
 
     5. 您現在可以關閉 Certificate Connector UI。
 
-8. 開啟命令提示字元，輸入 **services.msc** **Enter**。 以滑鼠右鍵按一下 [Intune 連接器服務]   > [重新啟動]  。
+8. 開啟命令提示字元，輸入 **services.msc** **Enter**。 以滑鼠右鍵按一下 [Intune 連接器服務] > [重新啟動]。
 
 若要驗證服務正在執行，請開啟瀏覽器並輸入下列 URL。 這應該會傳回 **403** 錯誤：`https://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll`
 
