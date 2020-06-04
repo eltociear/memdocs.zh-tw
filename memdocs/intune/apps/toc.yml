@@ -145,6 +145,8 @@
               href: app-configuration-policies-outlook.md
             - name: 設定 Android 版 Google Chrome
               href: apps-configure-chrome-android.md
+            - name: 針對 Android Enterprise 設定 VPN
+              href: app-configuration-vpn-ae.md
         - name: 大量採購應用程式與書籍
           items:
             - name: 大量採購概觀

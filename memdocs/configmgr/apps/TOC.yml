@@ -77,10 +77,6 @@
           href: deploy-use/create-app-v-virtual-environments.md
         - name: 匯入和匯出應用程式
           href: deploy-use/import-export-applications.md
-    - name: 更新和淘汰應用程式
-      items:
-        - name: 更新和淘汰應用程式
-          href: deploy-use/update-and-retire-applications.md
         - name: 修改和取代應用程式
           href: deploy-use/revise-and-supersede-applications.md
         - name: 解除安裝應用程式
