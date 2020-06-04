@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/22/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4dd0b1702b06f3efbed07a70b13a59b271816f8
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 6e99922c920966f4f0bb1037b5fc74799cfca7c5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023005"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988794"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Microsoft Intune 的應用程式設定原則
 
@@ -49,7 +49,7 @@ ms.locfileid: "82023005"
 >
 > 使用受控裝置作為 Android 裝置的註冊類型時，您只會看到來自[受控 Google Play 商店](https://play.google.com/work) (而不是 [Google Play 商店](https://play.google.com/store/apps)) 的應用程式。 受控 Google Play 商店 (也稱為 Android for Work (AfW)) 和 Android Enterprise 是工作設定檔中的應用程式，其中包含支援應用程式設定的應用程式版本。
 
-您可以使用[包含與排除指派的組合](apps-inc-exl-assignments.md)，將應用程式設定原則指派給一群終端使用者和裝置。 新增應用程式設定原則後，就可以設定指派應用程式設定原則。 當您設定原則指派時，您可以選擇包含與排除要套用原則的終端使用者[群組](../fundamentals/groups-add.md)。 當您選擇要包含一或多個群組時，您可以選擇選取要包含特定群組或選取內建群組。 內建群組包括 [所有使用者]  、[所有裝置]  和 [所有使用者及所有裝置]  。
+您可以使用[包含與排除指派的組合](apps-inc-exl-assignments.md)，將應用程式設定原則指派給一群終端使用者和裝置。 新增應用程式設定原則後，就可以設定指派應用程式設定原則。 當您設定原則指派時，您可以選擇包含與排除要套用原則的終端使用者[群組](../fundamentals/groups-add.md)。 當您選擇要包含一或多個群組時，您可以選擇選取要包含特定群組或選取內建群組。 內建群組包括 [所有使用者]、[所有裝置] 和 [所有使用者及所有裝置]。
 
 您有兩個選項來使用 Intune 的應用程式設定原則：
 - **受控裝置** - Intune 以行動裝置管理 (MDM) 提供者身分管理裝置。 應用程式必須設計為支援應用程式設定。
@@ -66,7 +66,7 @@ ms.locfileid: "82023005"
 ### <a name="managed-apps"></a>受管理的應用程式
 將 [Intune App SDK](../developer/app-sdk.md) 併入應用程式，或在使用 [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md) 開發應用程式之後包裝應用程式，就可以準備好企業營運應用程式。 Intune App SDK 會盡力將應用程式開發人員所需的程式碼變更數量減到最少。 如需詳細資訊，請參閱 [Intune App SDK 概觀](../developer/app-sdk.md)。 如需 Intune App SDK 與 Intune 應用程式包裝工具之間的比較，請參閱[準備應用程式保護原則的企業營運應用程式](../developer/apps-prepare-mobile-application-management.md#feature-comparison)。
 
-選取 [受控應用程式]  作為 [裝置註冊類型]  具體上是指未在裝置管理中註冊之裝置上由 Intune 設定原則所設定的應用程式，而**受控裝置**適用於透過 MDM 通道部署的應用程式，因此由 Intune 管理。 請根據這些描述來選取適當的選擇。 
+選取 [受控應用程式] 作為 [裝置註冊類型] 具體上是指未在裝置管理中註冊之裝置上由 Intune 設定原則所設定的應用程式，而**受控裝置**適用於透過 MDM 通道部署的應用程式，因此由 Intune 管理。 請根據這些描述來選取適當的選擇。 
 
 ![裝置註冊類型](./media/app-configuration-policies-overview/device-enrollment-type.png)
 
@@ -93,13 +93,13 @@ ms.locfileid: "82023005"
 
    1. 在裝置上可見。 目標應用程式是否展現出應用程式設定原則中所套用的行為？
    2. 透過診斷記錄 (請參閱下面的＜診斷記錄＞一節)。
-   3. 在 Intune 入口網站中。 原則的 [監視]  區段可以提供相關的狀態：
+   3. 在 Intune 入口網站中。 原則的 [監視] 區段可以提供相關的狀態：
 
       ![裝置安裝狀態的第一個螢幕擷取畫面](./media/app-configuration-policies-overview/device-install-status-1.png)
 
       ![裝置安裝狀態的第二個螢幕擷取畫面](./media/app-configuration-policies-overview/device-install-status-2.png)
 
-      此外，在畫面左側的 [Intune]   -> [裝置]   -> [所有裝置]  下方，[應用程式設定]  選項會顯示所有指派的原則及其狀態：
+      此外，在畫面左側的 [Intune] -> [裝置] -> [所有裝置] 下方，[應用程式設定] 選項會顯示所有指派的原則及其狀態：
 
       ![應用程式設定的螢幕擷取畫面](./media/app-configuration-policies-overview/app-configuration.png)
 
@@ -107,12 +107,12 @@ ms.locfileid: "82023005"
 
 ### <a name="iosipados-configuration-on-unmanaged-devices"></a>非受控裝置上的 iOS/iPadOS 設定
 
-您可以在非受控裝置上使用 [Intune 診斷記錄]  針對受控應用程式設定驗證 iOS/iPadOS 設定。 除了下列步驟之外，您可以使用 Microsoft Edge 來存取受控應用程式記錄。 如需詳細資訊，請參閱[在 iOS/iPadOS 上使用 Microsoft Edge 來存取受控應用程式記錄](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)。
+您可以在非受控裝置上使用 [Intune 診斷記錄] 針對受控應用程式設定驗證 iOS/iPadOS 設定。 除了下列步驟之外，您可以使用 Microsoft Edge 來存取受控應用程式記錄。 如需詳細資訊，請參閱[使用 iOS 與 Android 版 Edge 來存取受控應用程式記錄檔](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs)。
 
 1. 如果尚未在裝置上安裝，請從 App Store 下載並安裝 **Microsoft Edge**。 如需詳細資訊，請參閱[受 Microsoft Intune 保護的應用程式](apps-supported-intune-apps.md)。
-2. 啟動 [Microsoft Edge]  並從導覽列中選取 [關於]   > [intunehelp]  。
-3. 按一下 [開始使用]  。
-4. 按一下 [共用記錄]  。
+2. 啟動 [Microsoft Edge] 並從導覽列中選取 [關於] > [intunehelp]。
+3. 按一下 [開始使用]。
+4. 按一下 [共用記錄]。
 5. 使用您選擇的電子郵件應用程式傳送記錄給您自己，方便您在自己的電腦上檢視。 
 6. 使用您的文字檔檢視器檢閱 **IntuneMAMDiagnostics.txt** 檔案。
 7. 搜尋 `ApplicationConfiguration`。 結果看起來像這樣：
@@ -151,19 +151,19 @@ ms.locfileid: "82023005"
 
 ### <a name="iosipados-configuration-on-managed-devices"></a>受控裝置上的 iOS/iPadOS 設定
 
-您可以在受控裝置上使用 [Intune 診斷記錄]  針對受控應用程式設定驗證 iOS/iPadOS 設定。
+您可以在受控裝置上使用 [Intune 診斷記錄] 針對受控應用程式設定驗證 iOS/iPadOS 設定。
 
 1. 如果尚未在裝置上安裝，請從 App Store 下載並安裝 **Microsoft Edge**。 如需詳細資訊，請參閱[受 Microsoft Intune 保護的應用程式](apps-supported-intune-apps.md)。
-2. 啟動 [Microsoft Edge]  並從導覽列中選取 [關於]   > [intunehelp]  。
-3. 按一下 [開始使用]  。
-4. 按一下 [共用記錄]  。
+2. 啟動 [Microsoft Edge] 並從導覽列中選取 [關於] > [intunehelp]。
+3. 按一下 [開始使用]。
+4. 按一下 [共用記錄]。
 5. 使用您選擇的電子郵件應用程式傳送記錄給您自己，方便您在自己的電腦上檢視。 
 6. 使用您的文字檔檢視器檢閱 **IntuneMAMDiagnostics.txt** 檔案。
 7. 搜尋 `AppConfig`。 您的結果應該與您為租用戶所設定的應用程式設定原則相符。
 
 ### <a name="android-configuration-on-managed-devices"></a>受控裝置上的 Android 設定
 
-您可以在受控裝置上，使用 [Intune 診斷記錄]  針對受控應用程式設定驗證 Android 設定。
+您可以在受控裝置上，使用 [Intune 診斷記錄] 針對受控應用程式設定驗證 Android 設定。
 
 若要收集 Android 裝置的記錄，您或終端使用者必須透過 USB 連線 (或裝置上的**檔案總管**同等功能) 從裝置下載記錄。 步驟如下：
 
