@@ -10,12 +10,12 @@ ms.assetid: 8adbe2e2-de26-4a80-8bbd-a5f34b8bac79
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 693f661f2a2db59335ec8e463842a0ad03c977f3
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: f9fafcc4b5462afb1b8e528837ea6ba61203e73d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724782"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347132"
 ---
 # <a name="manage-apps-for-on-premises-mdm-in-configuration-manager"></a>在 Configuration Manager 中管理內部部署 MDM 的應用程式
 
@@ -61,4 +61,4 @@ Configuration Manager 支援下列適用于 Windows mobile 裝置的應用程式
 
 ## <a name="next-step"></a>後續步驟
 
-若要進行變更、卸載，或將已部署的應用程式取代為新的應用程式，請使用 Configuration Manager 中的任何應用程式來進行管理。 如需詳細資訊，請參閱[更新和淘汰應用程式](../../apps/deploy-use/update-and-retire-applications.md)。
+若要進行變更、卸載，或將已部署的應用程式取代為新的應用程式，請使用 Configuration Manager 中的任何應用程式來進行管理。 如需詳細資訊，請參閱[修改和取代應用程式](../../apps/deploy-use/revise-and-supersede-applications.md)。
