@@ -2,7 +2,7 @@
 title: Technical Preview 版本
 titleSuffix: Configuration Manager
 description: 了解可試用 Configuration Manager 新功能的 Technical Preview 分支。
-ms.date: 04/30/2020
+ms.date: 05/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bfcdd74b7b5c31e3f3ab6bb38a7ea96de9d05eec
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e4c0842a3e23eb8503c945073a4be35db5173086
+ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905150"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84226248"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>設定管理員的 Technical Preview
 
-適用於：  Configuration Manager (Technical Preview 分支)
+適用於：Configuration Manager (Technical Preview 分支)
 
 本文提供有關 Configuration Manager 每月 Technical Preview 分支的詳細資料。 Technical Preview 會導入 Microsoft 正致力於開發的新功能。 它會導入 Configuration Manager 最新分支中尚未包含的新功能。 這些功能最後可能會包含於最新分支的更新中。 在我們完成功能之前，希望您能親身體驗它們並提供意見反應給我們。
 
@@ -27,7 +27,7 @@ ms.locfileid: "82905150"
 
 此資訊適用於所有版本的 Configuration Manager Technical Preview 分支。 本文列出每個新功能以及該功能第一次出現的 Technical Preview 版本。 例如，**2001** 版代表 2020 (`20`) 年一月 (`01`)。 專屬於每個預覽版的個別文章都會詳細說明各個功能。
 
-如需 Configuration Manager「最新分支」  的新功能相關資訊，請參閱 [Configuration Manager 累加版本的新功能](../plan-design/changes/whats-new-incremental-versions.md)。
+如需 Configuration Manager「最新分支」的新功能相關資訊，請參閱 [Configuration Manager 累加版本的新功能](../plan-design/changes/whats-new-incremental-versions.md)。
 
 > [!Tip]
 > 若要在此頁面更新時收到通知，請複製下列 URL 並貼到您的 RSS 摘要讀取程式：`https://docs.microsoft.com/api/search/rss?search=%22technical+preview+releases+-+Configuration+Manager%22&locale=en-us`
@@ -63,7 +63,7 @@ ms.locfileid: "82905150"
 - 不支援從這個預覽分支更新到最新分支。
 
     > [!Note]
-    > 為預覽版提供可用更新時，您仍然可以從 Configuration Manager 主控台的 [更新與服務]  節點尋找並安裝更新。 如需在主控台中進行升級程序的影片，請參閱 youtube.com 上的[安裝 Configuration Mananger 更新套件](https://www.youtube.com/embed/KBd_EGFbUT8) \(英文\)。
+    > 為預覽版提供可用更新時，您仍然可以從 Configuration Manager 主控台的 [更新與服務] 節點尋找並安裝更新。 如需在主控台中進行升級程序的影片，請參閱 youtube.com 上的[安裝 Configuration Mananger 更新套件](https://www.youtube.com/embed/KBd_EGFbUT8) \(英文\)。
 
 - 它只支援獨立的主要站台。 不支援管理中心網站、多個主要站台或次要站台。
 
@@ -116,20 +116,28 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2003.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2005.md) <!--ID-->
 
 以下是最新 Configuration Manager Technical Preview 版本所提供的功能：
 
-### <a name="technical-preview-version-2004"></a>Technical Preview 2004 版
+### <a name="technical-preview-version-2005"></a>2005 技術預覽版
 
-- [Microsoft 端點管理員租用戶附加：ConfigMgr 用戶端詳細資料](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
-- [來自 Microsoft 的通知](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
-- [從主控台複製探索資料](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
-- [CMPivot 的改善](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
-- [PowerShell 第 7 版的支援](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
-- [格式化和分割磁碟工作順序步驟的改善](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
-- [OS 部署的管理見解規則](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
-- [適用於工作順序部署類型的 PowerShell Cmdlet](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
+- [租用戶連結：系統管理中心的裝置時間軸](2020/technical-preview-2005.md#bkmk_timeline) <!--7141381-->
+- [租用戶連結：從系統管理中心安裝應用程式](2020/technical-preview-2005.md#bkmk_apps) <!--6024389-->
+- [租用戶連結：系統管理中心的 CMPivot](2020/technical-preview-2005.md#bkmk_cmpivot) <!--6024392-->
+- [租用戶連結：從系統管理中心執行指令碼](2020/technical-preview-2005.md#bkmk_scripts) <!--6234688-->
+- [VPN 界限類型](2020/technical-preview-2005.md#bkmk_vpn) <!--7020519-->
+- [軟體中心的 Azure AD 驗證](2020/technical-preview-2005.md#bkmk_availapp) <!--6935376-->
+- [在計量付費連線上安裝及升級用戶端](2020/technical-preview-2005.md#bkmk_meter) <!--6976145-->
+- [雲端式內容的工作順序媒體支援](2020/technical-preview-2005.md#bkmk_tsmedia) <!--6209223-->
+- [雲端管理閘道 Cmdlet 的改善](2020/technical-preview-2005.md#bkmk_pwshcmg) <!--6978300-->
+- [社群中樞和 GitHub](2020/technical-preview-2005.md#community-hub-and-github) <!--3555935-->
+- [Microsoft 365 Apps 企業版](2020/technical-preview-2005.md#bkmk_365_apps) <!--6298093-->
+- [向 Microsoft 回報設定及升級失敗](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) <!--5622909-->
+- [Azure AD 應用程式秘密金鑰到期通知](2020/technical-preview-2005.md#bkmk_alertkey) <!--6386392-->
+- [BitLocker 工作順序步驟的改善](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
+- [內容庫清理工具的改善](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
+- [在 Windows 10 就地升級期間移除命令提示字元](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
 
 > [!NOTE]
 > 舊版 Technical Preview 中的可用功能仍會保留在較新版本中。 同樣地，已新增至 Configuration Manager 最新分支的功能仍會保留在 Technical Preview 分支中。
@@ -145,7 +153,18 @@ When there's a new CB, add any features not in that CB to the table in H2 "Featu
 下列是自最新分支 2002 版以來，Configuration Manager Technical Preview 分支所發行過的功能：
 
 > [!TIP]
-> 當新的最新分支版本推出時，於該版本中推出的功能會列在最新的新功能  文章。 如需詳細資訊，請參閱[累加版本的新功能](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)。
+> 當新的最新分支版本推出時，於該版本中推出的功能會列在最新的新功能文章。 如需詳細資訊，請參閱[累加版本的新功能](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)。
+
+### <a name="technical-preview-version-2004"></a>Technical Preview 2004 版
+
+- [Microsoft 端點管理員租用戶附加：ConfigMgr 用戶端詳細資料](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
+- [來自 Microsoft 的通知](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
+- [從主控台複製探索資料](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
+- [CMPivot 的改善](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
+- [PowerShell 第 7 版的支援](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
+- [格式化和分割磁碟工作順序步驟的改善](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
+- [OS 部署的管理見解規則](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
+- [適用於工作順序部署類型的 PowerShell Cmdlet](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
 
 ### <a name="technical-preview-version-2003"></a>Technical Preview 2003 版
 
