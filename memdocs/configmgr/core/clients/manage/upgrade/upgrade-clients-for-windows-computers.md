@@ -2,7 +2,7 @@
 title: 升級 Windows 用戶端
 titleSuffix: Configuration Manager
 description: 在 Configuration Manager 中升級 Windows 電腦上的用戶端。
-ms.date: 08/27/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b3849f360b2f22f2f48bbe49159b610399158b29
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 8b0a69b07a3be633434203f93b0724cec4ea88a3
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427769"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347131"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>如何在 Configuration Manager 中升級 Windows 電腦的用戶端
 
@@ -59,9 +59,6 @@ ms.locfileid: "83427769"
 > 若要識別您階層中不同版本的 Configuration Manager 用戶端，請使用 [站台 - 用戶端資訊] 報告資料夾中的 [依用戶端版本列出的 Configuration Manager 用戶端計數] 報告。  
 
 Configuration Manager 預設會建立升級套件。 它會自動將套件傳送至階層中的所有發佈點。 如果您對 CAS 上的用戶端套件進行變更，Configuration Manager 會自動更新套件，並重新發佈它。 範例變更如：新增用戶端語言套件。 如果您已啟用自動用戶端升級，則每個用戶端都會自動安裝新的用戶端語言套件。
-
-> [!NOTE]  
-> Configuration Manager 不會自動將用戶端升級套件傳送至 Configuration Manager 雲端發佈點。  
 
 在您的整個階層啟用自動用戶端升級。 此設定可讓您的用戶端以較少的投入量來保持最新狀態。  
 

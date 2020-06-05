@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: b280661c4de9282d3907b7d480477fc67f6a8dc5
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: a2829c5bd86192c4f2421550af9f27aef64aa353
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824059"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428648"
 ---
 # <a name="what-is-desktop-analytics"></a>什麼是電腦分析？
 
@@ -70,9 +70,6 @@ ms.locfileid: "83824059"
 ### <a name="technical"></a>技術
 
 - 具有[全域管理員](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions)權限的使用中全球 Azure 訂用帳戶。 不支援 [Microsoft 帳戶](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts)。  
-
-    > [!Important]  
-    > 電腦分析目前需要您在 Azure AD 租用戶中部署 Office 365 服務。 未來將不會有此需求。
 
     - [工作區擁有者] 權限以完成 [設定您的工作區] 步驟，以及下列角色：  
 

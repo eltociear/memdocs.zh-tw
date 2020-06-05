@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 69694fa39375daf436abf59fcd48edda41a9fc62
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: cfd329b7edb695c1e7316323555bfc18a2fd479e
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268244"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428579"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>針對電腦分析進行疑難排解
 
@@ -40,7 +40,7 @@ ms.locfileid: "83268244"
 
 ## <a name="monitor-connection-health"></a>監視連線健康情況
 
-使用 Configuration Manager 中的 [連線健全狀況]  儀表板，依裝置健全狀況向下切入到各類別。 在 Configuration Manager 主控台中，前往 [軟體程式庫]  工作區，展開 [電腦分析服務]  節點，然後選取 [連線健全狀況]  儀表板。  
+使用 Configuration Manager 中的 [連線健全狀況] 儀表板，依裝置健全狀況向下切入到各類別。 在 Configuration Manager 主控台中，前往 [軟體程式庫] 工作區，展開 [電腦分析服務] 節點，然後選取 [連線健全狀況] 儀表板。  
 
 如需詳細資訊，請參閱[監視連線健全狀況](monitor-connection-health.md)。
 
@@ -58,7 +58,7 @@ ms.locfileid: "83268244"
 ### <a name="enable-verbose-logging"></a>啟用詳細資訊記錄
 
 1. 在服務連接點上，移至下列登錄機碼：`HKLM\Software\Microsoft\SMS\Tracing\SMS_SERVICE_CONNECTOR`  
-2. 將 [LoggingLevel]  值設定為 `0`  
+2. 將 [LoggingLevel] 值設定為 `0`  
 
 ## <a name="azure-ad-applications"></a><a name="bkmk_AzureADApps"></a> Azure AD 應用程式
 
@@ -68,11 +68,11 @@ ms.locfileid: "83268244"
 
 - **MALogAnalyticsReader**：監視 Azure Log Analytics 工作區以確保成功複製每日快照集。 如需詳細資訊，請參閱 [MALogAnalyticsReader 應用程式角色](#bkmk_MALogAnalyticsReader)。  
 
-- **Office365 用戶端系統管理員**：讓 Configuration Manager 從電腦分析擷取部署計劃資訊和裝置整備狀態。
+- **電腦分析**：讓 Configuration Manager 從電腦分析擷取部署計劃資訊和裝置整備狀態。
 
-如果您需要在完成設定之後佈建這些應用程式，請移至 [已連線的服務]  窗格。 選取 [Configure users and apps access] \(設定使用者與應用程式存取\)  ，然後佈建應用程式。  
+如果您需要在完成設定之後佈建這些應用程式，請移至 [已連線的服務] 窗格。 選取 [Configure users and apps access] \(設定使用者與應用程式存取\)，然後佈建應用程式。  
 
-- **適用於 Configuration Manager 的 Azure AD 應用程式**。 如果您需要在完成設定之後佈建，或針對連線問題進行疑難排解，請參閱[建立和匯入適用於 Configuration Manager 的應用程式](#create-and-import-app-for-configuration-manager)。 此應用程式需要 **Configuration Manager 服務** API 上的 [寫入 CM 集合資料]  和 [讀取 CM 集合資料]  。  
+- **適用於 Configuration Manager 的 Azure AD 應用程式**。 如果您需要在完成設定之後佈建，或針對連線問題進行疑難排解，請參閱[建立和匯入適用於 Configuration Manager 的應用程式](#create-and-import-app-for-configuration-manager)。 此應用程式需要 **Configuration Manager 服務** API 上的 [寫入 CM 集合資料] 和 [讀取 CM 集合資料]。  
 
 ### <a name="create-and-import-app-for-configuration-manager"></a>建立和匯入適用於 Configuration Manager 的應用程式
 
@@ -80,9 +80,9 @@ ms.locfileid: "83268244"
 
 #### <a name="create-app-in-azure-ad"></a>在 Azure AD 中建立應用程式
 
-1. 以具有「全域管理員」  權限的使用者身分開啟 [Azure 入口網站](https://portal.azure.com)，移至 [Azure Active Directory]  ，並選取 [應用程式註冊]  。 然後選取 [新增註冊]  。  
+1. 以具有「全域管理員」權限的使用者身分開啟 [Azure 入口網站](https://portal.azure.com)，移至 [Azure Active Directory]，並選取 [應用程式註冊]。 然後選取 [新增註冊]。  
 
-2. 在 [建立]  面板中，進行下列設定：  
+2. 在 [建立] 面板中，進行下列設定：  
 
     - **名稱**：用來識別應用程式的唯一名稱，例如：`Desktop-Analytics-Connection`  
 
@@ -92,62 +92,62 @@ ms.locfileid: "83268244"
 
     <!--     - **Sign-on URL**: this value isn't used by Configuration Manager, but required by Azure AD. Enter a unique and valid URL, for example: `https://configmgrapp`   -->
   
-    選取 [註冊]  。  
+    選取 [註冊]。  
 
-3. 選取應用程式，並記下 [應用程式 (用戶端) 識別碼]  和 [目錄 (租用戶) 識別碼]  。 這些值是用來設定 Configuration Manager 連線的 GUID。  
+3. 選取應用程式，並記下 [應用程式 (用戶端) 識別碼] 和 [目錄 (租用戶) 識別碼]。 這些值是用來設定 Configuration Manager 連線的 GUID。  
 
-4. 在 [管理]  功能表中，選取 [憑證及祕密]  。 選取 [新增用戶端密碼]  。 輸入 [描述]  ，指定到期期間，然後選取 [新增]  。 複製金鑰的 [值]  ，該值可用來設定 Configuration Manager 連線。
+4. 在 [管理] 功能表中，選取 [憑證及祕密]。 選取 [新增用戶端密碼]。 輸入 [描述]，指定到期期間，然後選取 [新增]。 複製金鑰的 [值]，該值可用來設定 Configuration Manager 連線。
 
     > [!Important]  
     > 這是複製金鑰值的唯一機會。 如果您現在未複製，則需要建立另一個金鑰。  
     >
     > 將金鑰值儲存在安全的位置。  
 
-5. 在 [管理]  功能表中，選取 [API 權限]  。  
+5. 在 [管理] 功能表中，選取 [API 權限]。  
 
-    1. 在 [API 權限]  面板上，選取 [新增權限]  。  
+    1. 在 [API 權限] 面板上，選取 [新增權限]。  
 
-    2. 在 [要求 API 權限]  面板中，切換至 [我的組織使用的 API]  。  
+    2. 在 [要求 API 權限] 面板中，切換至 [我的組織使用的 API]。  
 
     3. 搜尋並選取 **Configuration Manager 微服務** API。  
 
-    4. 選取 [應用程式權限]  群組。 展開 [CmCollectionData]  ，然後選取下列兩個權限：[寫入 CM 集合資料]  和 [讀取 CM 集合資料]  。  
+    4. 選取 [應用程式權限] 群組。 展開 [CmCollectionData]，然後選取下列兩個權限：[寫入 CM 集合資料] 和 [讀取 CM 集合資料]。  
 
-    5. 選取 [新增權限]  。  
+    5. 選取 [新增權限]。  
 
-6. 在 [API 權限]  面板上，選取 [授與管理員同意...]  。選取 [是]  。  
+6. 在 [API 權限] 面板上，選取 [授與管理員同意...]。選取 [是]。  
 
 #### <a name="import-app-in-configuration-manager"></a>在 Configuration Manager 中匯入應用程式
 
-1. 在 Configuration Manager 主控台中，移至 [系統管理]  工作區，展開 [雲端服務]  ，然後選取 [Azure 服務]  節點。 選取功能區中的 [設定 Azure 服務]  。  
+1. 在 Configuration Manager 主控台中，移至 [系統管理] 工作區，展開 [雲端服務]，然後選取 [Azure 服務] 節點。 選取功能區中的 [設定 Azure 服務]。  
 
-2. 在 [Azure 服務精靈] 的 [Azure 服務]  頁面上，進行下列設定：  
+2. 在 [Azure 服務精靈] 的 [Azure 服務] 頁面上，進行下列設定：  
 
-    - 為 Configuration Manager 中的物件指定 [名稱]  。  
+    - 為 Configuration Manager 中的物件指定 [名稱]。  
 
-    - 指定選用 [描述]  以協助您識別服務。  
+    - 指定選用 [描述] 以協助您識別服務。  
 
-    - 從可用的服務清單中選取 [電腦分析]  。  
+    - 從可用的服務清單中選取 [電腦分析]。  
   
-   選取 [下一步]  。  
+   選取 [下一步]。  
 
-3. 在 [應用程式]  頁面上，選取適當的 [Azure 環境]  。 然後針對 Web 應用程式選取 [匯入]  。 在 [匯入應用程式]  視窗中進行下列設定：  
+3. 在 [應用程式] 頁面上，選取適當的 [Azure 環境]。 然後針對 Web 應用程式選取 [匯入]。 在 [匯入應用程式] 視窗中進行下列設定：  
 
     - **Azure AD 租用戶名稱**：此名稱是其在 Configuration Manager 中的命名方式  
 
-    - **Azure AD 租用戶識別碼**：您從 Azure AD 複製的 [目錄識別碼]   
+    - **Azure AD 租用戶識別碼**：您從 Azure AD 複製的 [目錄識別碼]  
 
-    - **用戶端識別碼**：您從 Azure AD 應用程式複製的 [應用程式識別碼]   
+    - **用戶端識別碼**：您從 Azure AD 應用程式複製的 [應用程式識別碼]  
 
-    - **祕密金鑰**：您從 Azure AD 應用程式複製的金鑰 [值]   
+    - **祕密金鑰**：您從 Azure AD 應用程式複製的金鑰 [值]  
 
     - **祕密金鑰的到期日**：與金鑰的到期日相同  
 
     - **App 識別碼 URI**：這項設定應該會自動填入下列值：`https://cmmicrosvc.manage.microsoft.com/`  
   
-   選取 [驗證]  ，然後選取 [確定]  ，關閉 [匯入應用程式] 視窗。 在 [Azure 服務精靈] 的 [應用程式] 頁面上，選取 [下一步]  。  
+   選取 [驗證]，然後選取 [確定]，關閉 [匯入應用程式] 視窗。 在 [Azure 服務精靈] 的 [應用程式] 頁面上，選取 [下一步]。  
 
-若要在 [診斷資料]  頁面上繼續進行精靈的其餘部分，請參閱[連線到服務](connect-configmgr.md#bkmk_connect)。
+若要在 [診斷資料] 頁面上繼續進行精靈的其餘部分，請參閱[連線到服務](connect-configmgr.md#bkmk_connect)。
 
 #### <a name="troubleshoot-app-in-configuration-manager"></a>針對 Configuration Manager 中的應用程式進行疑難排解
 
@@ -161,7 +161,7 @@ ms.locfileid: "83268244"
 
 - 確認使用者可以透過一般方式登入 Azure。 此動作可判斷是否有任何一般 Azure AD 驗證問題。
 
-- 檢查有關「電腦分析背景工作角色」  的 **SMS_SERVICE_CONNECTOR** 元件狀態訊息。
+- 檢查有關「電腦分析背景工作角色」的 **SMS_SERVICE_CONNECTOR** 元件狀態訊息。
 
 ### <a name="maloganalyticsreader-application-role"></a><a name="bkmk_MALogAnalyticsReader"></a> MALogAnalyticsReader 應用程式角色
 
@@ -169,11 +169,11 @@ ms.locfileid: "83268244"
 
 如果此程序在設定期間發生問題，請使用下列程序手動新增此權限：
 
-1. 前往 [Azure 入口網站](https://portal.azure.com)，然後選取 [所有資源]  。 選取 [Log Analytics]  類型的工作區。  
+1. 前往 [Azure 入口網站](https://portal.azure.com)，然後選取 [所有資源]。 選取 [Log Analytics] 類型的工作區。  
 
-2. 在工作區功能表中，選取 [存取控制 (IAM)]  ，然後選取 [新增]  。  
+2. 在工作區功能表中，選取 [存取控制 (IAM)]，然後選取 [新增]。  
 
-3. 在 [新增權限]  面板中，進行下列設定：  
+3. 在 [新增權限] 面板中，進行下列設定：  
 
     - **角色**：**讀取者**  
 
@@ -181,7 +181,7 @@ ms.locfileid: "83268244"
 
     - **選取**：**MALogAnalyticsReader**  
 
-4. 選取 [儲存]  。
+4. 選取 [儲存]。
 
 入口網站會顯示已新增角色指派的通知。
 
@@ -201,7 +201,7 @@ ms.locfileid: "83268244"
 
 在電腦分析入口網站中，有兩種類型的資料：**系統管理員資料**與**診斷資料**：
 
-- **系統管理員資料**是指您對工作區設定所做的任何變更。 例如，當您變更資產的 [升級決策]  或 [重要性]  時，您將變更系統管理員資料。 這些變更通常具有複合效應，因為可能會改變已安裝問題資產的裝置整備狀態。
+- **系統管理員資料**是指您對工作區設定所做的任何變更。 例如，當您變更資產的 [升級決策] 或 [重要性] 時，您將變更系統管理員資料。 這些變更通常具有複合效應，因為可能會改變已安裝問題資產的裝置整備狀態。
 
 - **診斷資料**是指從用戶端裝置上傳到 Microsoft 的系統中繼資料。 此資料會驅動電腦分析。 其中包含裝置清查之類的屬性，以及安全性和功能更新狀態。
 
@@ -211,7 +211,7 @@ ms.locfileid: "83268244"
 
 ![電腦分析入口網站中資料流通飛出視窗索引標籤的螢幕擷取畫面](media/data-currency-flyout.png)
 
-然後選取 [套用變更]  ：
+然後選取 [套用變更]：
 
 ![電腦分析入口網站中已展開資料流通飛出視窗的螢幕擷取畫面](media/data-currency-flyout-expand.png)
 
