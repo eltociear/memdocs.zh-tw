@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: dd970dc1517a6fcc197b2bf39a141871b4999a02
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 82c8495391dcc22aa2784657bc1461887e412577
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268414"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223657"
 ---
 # <a name="desktop-analytics-data-privacy"></a>電腦分析資料隱私權
 
@@ -55,7 +55,7 @@ ms.locfileid: "83268414"
 
     4. 您將相容性更新部署到所有目標裝置。  
 
-3. 裝置將診斷資料傳送至適用於 Windows 的 Microsoft 診斷資料管理服務。 這項服務裝載於美國。  
+3. 裝置將診斷資料傳送至適用於 Windows 的 Microsoft 診斷資料管理服務。 所有診斷資料都會透過 HTTPS 加密，並在從裝置傳輸到此服務期間使用憑證釘選。 Microsoft 資料管理服務裝載於美國。
 
 4. Microsoft 每天都會產生以 IT 為主的見解快照集。 此快照集結合了來自 Windows 的診斷資料與已註冊裝置的輸入。 此程序會在只有電腦分析能使用的暫時性儲存體中進行。 該暫時性儲存體裝載於美國的 Microsoft 資料中心。 所有資料都是透過 SSL (HTTPS) 加密通道來傳送。 快照集會依商業識別碼來分隔。  
 
