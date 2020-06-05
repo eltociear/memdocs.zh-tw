@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a05e36a2da42bf88e2d9d7e94a67e2d81b8f1271
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 08d53bd7ffedc2679fca675b88e021301d15fb62
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078272"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989018"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>在 Microsoft Intune 中指派使用者和裝置設定檔
 
@@ -33,7 +33,7 @@ ms.locfileid: "82078272"
 > [!NOTE]  
 > 當設定檔已移除或不再指派給裝置時，可能會發生不同的情況，視設定檔中的設定而定。 這些設定是以 CSP 為基礎，而每個 CSP 可以不同的方式來處理設定檔移除。 例如，設定可能會維持現有的值，而不會還原回預設值。 此行為是由作業系統中的每個 CSP 所控制。 如需 Windows CSP 的清單，請參閱[設定服務提供者 (CSP) 參考](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) \(部分機器翻譯\)。
 >
-> 若要將設定變更為不同的值，請建立新的設定檔，將設定設為 [未設定]  ，然後指派設定檔。 套用至裝置之後，使用者應該可以控制將設定變更為其慣用的值。
+> 若要將設定變更為不同的值，請建立新的設定檔，將設定設為 [未設定]，然後指派設定檔。 套用至裝置之後，使用者應該可以控制將設定變更為其慣用的值。
 >
 > 進行這些設定時，建議您部署到試驗群組。 如需更多 Intune 首度發行建議，請參閱[建立首度發行計畫](../fundamentals/planning-guide-rollout-plan.md)。
 
@@ -44,22 +44,22 @@ ms.locfileid: "82078272"
 ## <a name="assign-a-device-profile"></a>指派裝置設定檔
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置]   > [組態設定檔]  。 隨即列出所有設定檔。
-3. 選取您想要指派的設定檔 > [指派]  。
-4. 選擇 [包含]  群組或 [排除]  群組，然後選取您的群組。 當您選取群組時，會選擇 Azure AD 群組。 若要選取多個群組，請按住 **Ctrl** 鍵，然後選取您的群組。
+2. 選取 [裝置] > [組態設定檔]。 隨即列出所有設定檔。
+3. 選取您想要指派的設定檔 > [指派]。
+4. 選擇 [包含] 群組或 [排除] 群組，然後選取您的群組。 當您選取群組時，會選擇 Azure AD 群組。 若要選取多個群組，請按住 **Ctrl** 鍵，然後選取您的群組。
 
-    ![在設定檔指派中包含或排除群組的選項螢幕擷取畫面](./media/device-profile-assign/group-include-exclude.png)
+    :::image type="content" source="./media/device-profile-assign/group-include-exclude.png" alt-text="在 Microsoft Intune 設定檔指派中包含或排除群組的選項螢幕擷取畫面":::
 
-5. [儲存]  變更。
+5. [儲存] 變更。
 
 ### <a name="evaluate-how-many-users-are-targeted"></a>評估設定為目標的使用者人數
 
 當您指派設定檔時，您也可以**評估**有多少使用者受到影響。 此功能會計算使用者，但不會計算裝置。
 
-1. 在系統管理中心內，選取 [裝置]   > [組態設定檔]  。
-2. 選取設定檔 > [指派]   > [評估]  。 此時會出現一個訊息，向您顯示此設定檔設定為目標的使用者人數。
+1. 在系統管理中心內，選取 [裝置] > [組態設定檔]。
+2. 選取設定檔 > [指派] > [評估]。 此時會出現一個訊息，向您顯示此設定檔設定為目標的使用者人數。
 
-如果 [評估]  按鈕呈現灰色，請確認該設定檔已指派給一或多個群組。
+如果 [評估] 按鈕呈現灰色，請確認該設定檔已指派給一或多個群組。
 
 ## <a name="use-scope-tags-or-applicability-rules"></a>使用範圍標籤或適用性規則
 
@@ -109,7 +109,7 @@ Intune 裝置組態設定檔可讓您從設定檔指派包含與排除群組。
 
 當您指派設定檔時，請在包含和排除群組時使用下表。 核取記號表示支援該指派：
 
-![從設定檔指派包含或排除群組所支援的選項](./media/device-profile-assign/include-exclude-user-device-groups.png)
+:::image type="content" source="./media/device-profile-assign/include-exclude-user-device-groups.png" alt-text="在設定檔指派中包含或排除群組的支援選項":::
 
 ### <a name="what-you-should-know"></a>您應該知道的事項
 
@@ -118,11 +118,11 @@ Intune 裝置組態設定檔可讓您從設定檔指派包含與排除群組。
   - 包含使用者群組與排除使用者群組
   - 包含裝置群組與排除裝置群組
 
-  例如，您可以將裝置設定檔指派給 [所有公司使用者]  使用者群組，但排除 [資深管理層]  使用者群組中的成員。 因為這兩個群組都是使用者群組，所以 [所有公司使用者]  會取得設定檔，但 [資深管理人員]  除外。
+  例如，您可以將裝置設定檔指派給 [所有公司使用者] 使用者群組，但排除 [資深管理層] 使用者群組中的成員。 因為這兩個群組都是使用者群組，所以 [所有公司使用者] 會取得設定檔，但 [資深管理人員] 除外。
 
 - Intune 不會評估使用者對裝置群組關聯性。 如果您將設定檔指派給混合群組，結果可能不是您想要或預期的。
 
-  例如，您可以將裝置設定檔指派給 [所有使用者]  使用者群組，但排除 [所有個人裝置]  裝置群組。 在此混合群組設定檔指派中，[所有使用者]  會取得設定檔。 排除不適用。
+  例如，您可以將裝置設定檔指派給 [所有使用者] 使用者群組，但排除 [所有個人裝置] 裝置群組。 在此混合群組設定檔指派中，[所有使用者] 會取得設定檔。 排除不適用。
 
   因此，不建議將設定檔指派給混合群組。
 

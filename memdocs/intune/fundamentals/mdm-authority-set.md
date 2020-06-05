@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 08/16/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eee979ad22a501f8545b93c85790d37ca9648cf7
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 7244872fa888aaee164187e62a2355a94f793499
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077898"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985189"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>設定行動裝置管理授權單位
 
@@ -36,16 +36,16 @@ ms.locfileid: "82077898"
 
 - **Intune 共同管理** - Windows 10 裝置的 Intune 雲端解決方案與 Configuration Manager 整合版。 您可以使用 Configuration Manager 主控台設定 Intune。 [設定針對 Intune 自動註冊裝置](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune)。 
 
-- **Office 365 的行動裝置管理** - Office 365 與 Intune 雲端解決方案的整合版。 您可以從 Microsoft 365 系統管理中心設定 Intune。 包含 Intune 獨立版提供的功能子集。 在 Microsoft 365 系統管理中心中設定 MDM 授權單位。
+- **Office 365 的行動裝置管理** - Office 365 與 Intune 雲端解決方案的整合版。 您可以從 Microsoft 365 系統管理中心設定 Intune。 包含 Intune 獨立版提供的功能子集。 請參閱[在 Microsoft 365 中設定行動裝置管理 (MDM)](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)
 
-- **Office 365 MDM 共存**：您可以在租用戶上同時啟動並使用適用於 Office 365 的 MDM 與 Intune，並針對每個使用者將管理授權單位設定為 Intune 或適用於 Office 365 的 MDM，以指示將使用哪個服務來管理其行動裝置。 使用者的管理授權單位會根據指派給使用者的授權來定義。 如需詳細資訊，請參閱 [Microsoft Intune 與適用於 Office 365 的 MDM 共存](https://blogs.technet.microsoft.com/configmgrdogs/2016/01/04/microsoft-intune-co-existence-with-mdm-for-office-365) \(英文\)
+- **Office 365 MDM 共存**：您可以在租用戶上同時啟動並使用 MDM for Office 和 Intune，並為每位使用者將管理授權單位設定為 Intune 或 MDM for Office，指示使用哪項服務管理其 MDM 註冊裝置。 每位使用者的管理授權單位會根據指派給使用者的授權來定義：如果使用者只有 Microsoft 365 Basic 或 Standard 的授權，其裝置就會由 MDM for Office 管理。 如果使用者擁有 Intune 授權，其裝置就會由 Intune 管理。 如果您將 Intune 授權新增至先前由 MDM for Office 管理的使用者，其裝置就會切換為 Intune 管理。 將使用者切換至 Intune 之前，請務必將 Intune 設定指派給使用者，以取代 MDM for Office，否則其裝置會遺失 MDM for Office 設定，而且不會收到替換的 Intune。
 
 ## <a name="set-mdm-authority-to-intune"></a>將 MDM 授權單位設為 Intune
 
 如果您尚未設定 MDM 授權單位，請遵循下列步驟。
 
-1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選取橙色橫幅以開啟 [行動裝置管理授權單位]  設定。 只有在您尚未設定 MDM 授權單位時，才會顯示橙色橫幅。
-2. 在 [行動裝置管理授權單位]  下，從下列選項中選擇您的 MDM 授權單位：
+1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選取橙色橫幅以開啟 [行動裝置管理授權單位] 設定。 只有在您尚未設定 MDM 授權單位時，才會顯示橙色橫幅。
+2. 在 [行動裝置管理授權單位] 下，從下列選項中選擇您的 MDM 授權單位：
    - **Intune MDM 授權單位**
    - **無**
 
@@ -70,14 +70,6 @@ ms.locfileid: "82077898"
 - 裝置在變更後必須與服務連線，新的 MDM 授權單位 (Intune 獨立部署) 的設定才能取代裝置上的現有設定。
 - 在您變更 MDM 授權單位之後，部分來自先前 MDM 授權單位的基本設定 (例如設定檔)，將會在裝置上保留最多七天的時間，或直到裝置首次連線至服務為止。 建議您盡快在新的 MDM 授權單位中設定應用程式及設定 (原則、設定檔、應用程式等)，並針對擁有現有已註冊裝置的使用者，將設定部署至包含這些使用者的使用者群組。 在 MDM 授權單位變更之後，裝置在連線至服務時便會立即接收到來自新 MDM 授權單位的新設定，以避免管理及保護上出現間隙。
 - 裝置若無相關聯的使用者 (通常發生在 iOS/iPadOS 裝置註冊計劃或大量註冊的案例)，便不會遷移至新的 MDM 授權單位。 針對這些裝置，您需要連絡支援人員來取得協助，以便將這些裝置移至新的 MDM 授權單位。
-
-## <a name="change-mdm-authority-to-office-365"></a>將 MDM 授權單位變更為 Office 365
-
-若要啟用 Office 365 MDM (或除了您現有的 Intune 服務之外，啟動 MDM 共存)，請移至 [https://protection.office.com](https://protection.office.com)，然後選擇 [資料外洩防護]   >  [裝置安全性原則]   >  [檢視受控裝置清單]   >  [讓我們開始吧]  。
-
-如需詳細資訊，請參閱[在 Office 365 中設定行動裝置管理 (MDM)](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)。
-
-如果您只想透過 Office 365 MDM 管理終端使用者，請移除啟用 Office 365 MDM 之後所指派的任何 Intune 及/或 EMS 授權。
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>MDM 憑證到期後的行動裝置清除
 

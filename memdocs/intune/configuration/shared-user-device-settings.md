@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 179314f363c8f086239b2c926c4bed8d09c68204
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4f85c30c9472849d26802c8cdccd7a95006a3e4a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364158"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984003"
 ---
 # <a name="control-access-accounts-and-power-features-on-shared-pc-or-multi-user-devices-using-intune"></a>使用 Intune 控制共用電腦或多重使用者裝置上的存取權、帳戶和電源功能
 
@@ -43,21 +43,42 @@ ms.locfileid: "79364158"
 ## <a name="create-the-profile"></a>建立設定檔
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取 [裝置] > [組態設定檔] > [建立設定檔]。
 3. 輸入下列內容：
+
+   - **平台**：選取 [Windows 10 及更新版本]。
+   - **設定檔**：選取 [共用的多重使用者裝置]。
+
+4. 選取 [建立]。
+5. 在 [基本資訊] 中，輸入下列內容：
 
    - **名稱**：為新的設定檔輸入描述性名稱。
    - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
-   - **平台**：選取 [Windows 10 及更新版本]  。
-   - **設定檔類型**：選取 [共用的多重使用者裝置]  。
 
-4. 設定 [Windows 10 和更新版本](shared-user-device-settings-windows.md)或 [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) 的設定。
+6. 選取 [下一步]。
+7. 在 [組態設定] 中，您可進行的設定會根據您選擇的平台而不同。 選擇您平台來進行詳細設定：
 
-5. 選取 [確定]   > [建立]  儲存您的變更。
+    - [Windows 10 及以上版本](shared-user-device-settings-windows.md)
+    - [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md)
 
-您的設定檔已建立並顯示於清單中，但還不會執行任何動作。 請務必對您組織中的裝置群組[指派設定檔](device-profile-assign.md)。
+8. 選取 [下一步]。
+
+9. 在 [範圍標籤] (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+
+    選取 [下一步]。
+
+10. 在 [指派] 中，選取接收設定檔的裝置群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
+
+    選取 [下一步]。
+
+    > [!NOTE]
+    > 請務必將此設定檔指派到您組織中的裝置群組。
+
+11. 在 [檢閱 + 建立] 中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
+
+當每個裝置下次簽入時，就會套用原則。
 
 ## <a name="next-steps"></a>後續步驟
 
 - 請參閱 [Windows 10 和更新版本](shared-user-device-settings-windows.md)以及 [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) 的所有設定。
-- [指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
+- [指派設定檔](device-profile-assign.md)後，[監視其狀態](device-profile-monitor.md)。

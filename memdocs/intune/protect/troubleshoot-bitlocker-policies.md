@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac6650f06abddd2633e73f39a6bf72d54e344a61
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 92d1e1c5d1e2a66ed036d0ed7a5a75d40c737bf3
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079190"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428980"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>針對 Microsoft Intune 中的 BitLocker 原則進行疑難排解
 
@@ -33,7 +33,7 @@ BitLocker 磁碟機加密是 Microsoft Windows 作業系統所提供的服務，
 
 使用 Microsoft Intune，您可以透過下列方法來管理 Windows 10 裝置上的 BitLocker：
 
-- **裝置設定原則** - 當您建立裝置組態設定檔以管理端點保護時，Intune 中會提供一些內建原則選項。 若要尋找這些選項，請[建立端點保護的裝置設定檔](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings)、針對 [平台]  選取 [Windows 10 和更高版本]  ，然後針對 [設定]  選取 [Windows 加密]  類別。 
+- **裝置設定原則** - 當您建立裝置組態設定檔以管理端點保護時，Intune 中會提供一些內建原則選項。 若要尋找這些選項，請[建立端點保護的裝置設定檔](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings)、針對 [平台] 選取 [Windows 10 和更高版本]，然後針對 [設定] 選取 [Windows 加密] 類別。 
 
    您可以在這裡閱讀可用選項與功能的相關資訊：[Windows 加密](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption) \(部分機器翻譯\)。
 
@@ -68,15 +68,15 @@ BitLocker 設定也可能可以透過其他方式 (例如群組原則) 來管理
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 選取 [裝置]   > [組態設定檔]  ，然後選取包含 BitLocker 設定的設定檔。
+2. 選取 [裝置] > [組態設定檔]，然後選取包含 BitLocker 設定的設定檔。
 
-3. 選取您想要檢視的設定檔之後，請選取 [裝置狀態]  。 系統會列出指派給設定檔的裝置，而 [裝置狀態]  欄會指出裝置是否已成功部署設定檔。
+3. 選取您想要檢視的設定檔之後，請選取 [裝置狀態]。 系統會列出指派給設定檔的裝置，而 [裝置狀態] 欄會指出裝置是否已成功部署設定檔。
 
 請記住，接收 BitLocker 原則的裝置與完全加密的磁碟機之間可能會有延遲。  
 
 ### <a name="use-control-panel-on-the-client"></a>在用戶端上使用控制台  
 
-在已啟用 BitLocker 且已加密磁碟機的裝置上，您可以從裝置 [控制台] 檢視 BitLocker 狀態。 在裝置上，開啟 [控制台]   > [系統及安全性]   > [BitLocker 磁碟機加密]  。 確認隨即出現，如下圖所示。  
+在已啟用 BitLocker 且已加密磁碟機的裝置上，您可以從裝置 [控制台] 檢視 BitLocker 狀態。 在裝置上，開啟 [控制台] > [系統及安全性] > [BitLocker 磁碟機加密]。 確認隨即出現，如下圖所示。  
 
 ![控制台中的 BitLocker 已開啟](./media/troubleshooting-bitlocker-policies/control-panel.png)
 
@@ -87,9 +87,9 @@ BitLocker 設定也可能可以透過其他方式 (例如群組原則) 來管理
 
 在下列範例中：
 
-- [BitLocker 保護]  為 [開啟] 
-- [加密的百分比]  為 [100%] 
-- [加密方法]  為 [XTS-AES 256] 
+- [BitLocker 保護] 為 [開啟]
+- [加密的百分比] 為 [100%]
+- [加密方法] 為 [XTS-AES 256]
 
 您也可以執行下列命令來檢查**金鑰保護裝置**：
 
@@ -116,7 +116,7 @@ Confirm-SecureBootUEFI
 
 ### <a name="check-the-mdm-diagnostics-report"></a>檢查 MDM 診斷報告
 
-在已啟用 BitLocker 的裝置上，您可以從目標裝置產生 MDM 診斷報告並檢視，以確認 BitLocker 原則存在。 如果您可以看到報告中的原則設定，則表示該原則已成功部署。 下列連結中的 Microsoft 協助  影片說明如何從 Windows 裝置擷取 MDM 診斷報告。
+在已啟用 BitLocker 的裝置上，您可以從目標裝置產生 MDM 診斷報告並檢視，以確認 BitLocker 原則存在。 如果您可以看到報告中的原則設定，則表示該原則已成功部署。 下列連結中的 Microsoft 協助影片說明如何從 Windows 裝置擷取 MDM 診斷報告。
 
 > [!VIDEO https://www.youtube.com/embed/WKxlcjV4TNE]
 
@@ -169,18 +169,18 @@ EncryptionMethodWithXtsRdvDropDown: 6 (The value 6 refers to the 128 bit encrypt
      
 **Bitlocker 加密不會以無訊息方式執行** - 您已設定 Endpoint Protection 原則，將 [其他磁碟加密的警告] 設定設為 [封鎖]，而加密精靈仍然會出現：
 
-- **確認 Windows 版本支援無訊息加密** 這要求 1803 版的最低版本。 如果使用者不是裝置上的系統管理員，則其需要 1809 版的最低版本。 此外，針對不支援新式待命的裝置，1809 已新增支援
+- **確認 Windows 版本支援無訊息加密** 這要求 1803 版的最低版本。 如果使用者不是裝置的系統管理員，則至少需要 1809 版。 此外，針對不支援新式待命的裝置，1809 已新增支援
 
 **Bitlocker 加密裝置針對 Intune 合規性政策顯示為 [不符合規範]** - 當 BitLocker 加密未完成時，就會發生此問題。 根據磁碟大小、檔案數目和 BitLocker 設定等因素，BitLocker 加密可能需要很長的時間。 加密完成後，裝置便會顯示為 [符合規範]。 裝置也可能在最近安裝 Windows Update 後，隨即暫時不符合規範。
 
-**當原則指定 256 位元時，使用 128 位元演算法對裝置進行加密** -- 根據預設，Windows 10 會使用 XTS-AES 128 位元加密來將磁碟機加密。 請參閱這篇[在 Autopilot 期間為 BitLocker 設定 256 位元加密](https://techcommunity.microsoft.com/t5/intune-customer-success/setting-256-bit-encryption-for-bitlocker-during-autopilot-with/ba-p/323791#) \(英文\) 的指南。
+**當原則指定 256 位元時，裝置會使用 128 位元的演算法加密** -- 根據預設，Windows 10 會使用 XTS-AES 128 位元加密來加密磁碟機。 請參閱這篇[在 Autopilot 期間為 BitLocker 設定 256 位元加密](https://techcommunity.microsoft.com/t5/intune-customer-success/setting-256-bit-encryption-for-bitlocker-during-autopilot-with/ba-p/323791#) \(英文\) 的指南。
 
 
 **範例調查**
 
-- 您會將 BitLocker 原則部署到 Windows 10 裝置，而 [加密裝置]  設定會在入口網站中顯示 [錯誤]  狀態。
+- 您會將 BitLocker 原則部署到 Windows 10 裝置，而 [加密裝置] 設定會在入口網站中顯示 [錯誤] 狀態。
 
-- 如其名所示，此設定可讓系統管理員使用 [BitLocker] > [裝置加密]  來要求開啟加密。 使用稍早所述的疑難排解祕訣，您首先要檢查 MDM 診斷報告。 此報告會確認裝置上已部署正確的原則：
+- 如其名所示，此設定可讓系統管理員使用 [BitLocker] > [裝置加密] 來要求開啟加密。 使用稍早所述的疑難排解祕訣，您首先要檢查 MDM 診斷報告。 此報告會確認裝置上已部署正確的原則：
 
   ![報表確認裝置上已部署正確的原則](./media/troubleshooting-bitlocker-policies/mdm-report.png)
 
@@ -194,7 +194,7 @@ EncryptionMethodWithXtsRdvDropDown: 6 (The value 6 refers to the 128 bit encrypt
 
 - 由於 BitLocker 仰賴 TPM，因此您可以得出的結論是，BitLocker 不會因為 Intune 或原則問題而失敗，而是因為裝置本身沒有 TPM 晶片或在 BIOS 中停用了 TPM。
 
-  另一個祕訣是，您可以在 [應用程式和服務記錄檔]   > [Microsoft]   > [Windows]   > [BitLocker API]  下的 [Windows 事件檢視器] 中確認同樣的事。 在 **BitLocker API** 事件記錄檔中，您會發現事件識別碼 853，表示 TPM 無法使用：
+  另一個祕訣是，您可以在 [應用程式和服務記錄檔] > [Microsoft] > [Windows] > [BitLocker API] 下的 [Windows 事件檢視器] 中確認同樣的事。 在 **BitLocker API** 事件記錄檔中，您會發現事件識別碼 853，表示 TPM 無法使用：
 
   ![事件識別碼 853](./media/troubleshooting-bitlocker-policies/event-error.png)
 

@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
-ms.topic: conceptual
+ms.date: 5/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,25 +16,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8d4b866ca2086ae11efa10f1967b08f12e55919
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: d1b13d29f42778d73d4df4a86127b070db5dc601
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881021"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989814"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>在 Microsoft Intune 中使用衍生認證
 
 *本文適用於 iOS/iPadOS，以及執行 7.0 版和更新版本的 Android Enterprise 完全受控裝置*
 
-在需要智慧卡進行驗證或加密和簽署的環境中，您現在可以使用 Intune，透過衍生自使用者智慧卡的憑證來佈建行動裝置。 該憑證稱為「衍生認證」  。 Intune [支援數個衍生認證簽發者](#supported-issuers)，但您一次只能針對每個租用戶使用單一簽發者。
+在需要智慧卡進行驗證或加密和簽署的環境中，您現在可以使用 Intune，透過衍生自使用者智慧卡的憑證來佈建行動裝置。 該憑證稱為「衍生認證」。 Intune [支援數個衍生認證簽發者](#supported-issuers)，但您一次只能針對每個租用戶使用單一簽發者。
 
 衍生認證是適用於衍生個人識別驗證 (PIV) 認證的國家標準暨技術研究院 (NIST) 指導方針實作，是特殊發行集 (SP) 800-157 的一部分。
 
 **使用 Intune 的實作**：
 
 - Intune 管理員會將其租用戶設定為與支援的衍生認證簽發者搭配使用。 您不需要在衍生認證簽發者的系統中設定任何 Intune 特定設定。
-- Intune 管理員會指定衍生認證作為下列物件的驗證方法：  
+- Intune 管理員會指定衍生認證作為下列物件的驗證方法：
   
   **針對 iOS/iPadOS**：
   - 常用的設定檔類型，例如 Wi-Fi、VPN 和電子郵件，其中包括 iOS/iPadOS 原生郵件應用程式
@@ -63,7 +63,7 @@ Intune 支援下列平台上的衍生認證：
 
 Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intune 與下列簽發者搭配使用：
 
-- **DISA Purebred** (僅限 iOS)：https:\//cyber.mil/pki-pke/purebred/
+- **DISA Purebred** (僅限 iOS)： https://public.cyber.mil/pki-pke/purebred/
 - **Entrust Datacard**： https://www.entrustdatacard.com/
 - **Intercede**： https://www.intercede.com/
 
@@ -112,6 +112,7 @@ Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intun
 針對您將搭配衍生認證使用的裝置，檢閱平台專屬的使用者工作流程。
 
 - [iOS 與 iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
+- [Android Enterprise 完全受控裝置](https://docs.microsoft.com/mem/intune/user-help/enroll-android-device-disa-purebred)
 
 **主要需求包括**：
 
@@ -188,14 +189,14 @@ Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intun
 在您建立需要使用衍生認證的原則之前，請先在 Intune 主控台中設定認證簽發者。 衍生認證簽發者是整個租用戶的設定。 租用戶一次只支援單一簽發者。
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [租用戶系統管理]   > [連接器與權杖]   > [衍生認證]  。
+2. 選取 [租用戶系統管理] > [連接器與權杖] > [衍生認證]。
 
     > [!div class="mx-imgBorder"]
     > ![在主控台中設定衍生認證](./media/derived-credentials/configure-provider.png)
 
 3. 針對衍生認證簽發者原則指定易記的**顯示名稱**。  您的裝置使用者不會看到此名稱。
 
-4. 針對**衍生認證簽發者**，請選取您為租用戶選擇的衍生認證簽發者：
+4. 針對**衍生認證簽發者**，請選取您為租使用者選擇的衍生認證簽發者：
    - DISA Purebred (僅限 iOS)
    - Entrust Datacard
    - Intercede  
@@ -210,13 +211,13 @@ Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intun
    - 當目前的認證接近到期時，取得新的衍生認證。
    - 使用衍生認證搭配[支援的物件](#supported-objects)。
 
-7. 準備好時，請選取 [儲存]  以完成衍生認證簽發者的設定。
+7. 準備好時，請選取 [儲存] 以完成衍生認證簽發者的設定。
 
-儲存設定之後，除了 [衍生認證簽發者]  以外，您可以對所有欄位進行變更。  若要變更簽發者，請參閱[變更衍生認證簽發者](#change-the-derived-credential-issuer)。
+儲存設定之後，除了 [衍生認證簽發者] 以外，您可以對所有欄位進行變更。  若要變更簽發者，請參閱[變更衍生認證簽發者](#change-the-derived-credential-issuer)。
 
 ## <a name="deploy-the-disa-purebred-app"></a>部署 DISA Purebred 應用程式
 
-本節僅適用於使用 DISA Purebred 時  。
+本節僅適用於使用 DISA Purebred 時。
 
 若要使用 **DISA Purebred** 作為 Intune 的衍生認證簽發者，您必須取得 DISA Purebred 應用程式，然後使用 Intune 將應用程式部署至裝置。 裝置使用者會在其裝置上使用應用程式，以向 DISA Purebred 要求衍生認證。
 
@@ -226,7 +227,10 @@ Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intun
   
 1. 下載 DISA Purebred 應用程式：https:\//cyber.mil/pki-pke/purebred/。
 
-2. 在 Intune 中部署 DISA Purebred 應用程式。 請參閱[將 iOS 企業營運應用程式新增至 Microsoft Intune](../apps/lob-apps-ios.md)。
+2. 在 Intune 中部署 DISA Purebred 應用程式。 
+
+   - 請參閱[將 iOS 企業營運應用程式新增至 Microsoft Intune](../apps/lob-apps-ios.md)。
+   - 請參閱[將 Android 企業營運應用程式新增至 Microsoft Intune](../apps/lob-apps-android.md)
 
 3. 針對 DISA Purebred 應用程式[建立個別應用程式 VPN](../configuration/vpn-settings-configure.md)。
 
@@ -246,7 +250,7 @@ Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intun
   - [iOS 與 iPadOS](../configuration/wi-fi-settings-ios.md)
   - [Android Enterprise](../configuration/wi-fi-settings-android-enterprise.md)
 
-  針對 Wi-Fi 設定檔，只有在 [EAP 類型]  設定為下列其中一個值時，才可以使用驗證方法  ：
+  針對 Wi-Fi 設定檔，只有在 [EAP 類型] 設定為下列其中一個值時，才可以使用驗證方法：
   - EAP – TLS
   - EAP-TTLS
   - PEAP
@@ -256,24 +260,24 @@ Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intun
 針對網站和應用程式使用衍生認證進行憑證型驗證。 傳遞衍生認證進行應用程式驗證：
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取 [裝置] > [組態設定檔] > [建立設定檔]。
 3. 輸入下列設定：
 
    針對 iOS 與 iPadOS：
    - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，**iOS 裝置設定檔的衍生認證**是良好的設定檔名稱。
    - **描述**：輸入描述來概述設定和其他重要的詳細資料。
-   - **平台**：選取 [iOS/iPadOS]  。
-   - **設定檔類型**：選取 [衍生認證]  。
+   - **平台**：選取 [iOS/iPadOS]。
+   - **設定檔類型**：選取 [衍生認證]。
 
    針對 Android Enterprise：
    - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，**Android Enterprise 裝置設定檔的衍生認證**是不錯的設定檔名稱。
    - **描述**：輸入描述來概述設定和其他重要的詳細資料。
-   - **平台**：選取 [Android 企業]  。
-   - **設定檔類型**：在 [僅限裝置擁有者]  之下，選取 [衍生認證]  。
+   - **平台**：選取 [Android 企業]。
+   - **設定檔類型**：在 [僅限裝置擁有者] 之下，選取 [衍生認證]。
 
-4. 按一下 [確定]  以儲存您的變更。
-5. 完成時，選取 [確定]   > [建立]  以建立 Intune 設定檔。 完成時，您的設定檔會顯示在 [裝置 - 設定檔]  清單中。
-6. 選取您的新設定檔 > [指派]  。 選取應接收原則的群組。
+4. 按一下 [確定] 以儲存您的變更。
+5. 完成時，選取 [確定] > [建立] 以建立 Intune 設定檔。 完成時，您的設定檔會顯示在 [裝置 - 設定檔] 清單中。
+6. 選取您的新設定檔 > [指派]。 選取應接收原則的群組。
 
 使用者會根據您在設定衍生認證簽發者時所指定的設定，接收應用程式或電子郵件通知。 通知會通知使用者啟動公司入口網站，以便處理衍生認證原則。
 
@@ -297,13 +301,13 @@ Intune 支援每一租用戶單一衍生認證簽發者。 您可以設定 Intun
 > 如果您刪除簽發者並立即重新設定相同的簽發者，您仍然必須更新設定檔和裝置，以使用來自該簽發者的衍生認證。 在您刪除簽發者之前取得的衍生認證已不再有效。
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [租用戶系統管理]   > [連接器與權杖]   > [衍生認證]  。
-3. 選取 [刪除]  以移除目前的衍生認證簽發者。
+2. 選取 [租用戶系統管理] > [連接器與權杖] > [衍生認證]。
+3. 選取 [刪除] 以移除目前的衍生認證簽發者。
 4. 設定新的簽發者。
 
 ### <a name="update-profiles-that-use-derived-credentials"></a>更新使用衍生認證的設定檔
 
-當您刪除簽發者，然後新增一個新的之後，請編輯每個使用衍生認證的設定檔。 即使您還原先前的簽發者，也適用此規則。 設定檔的任何編輯都會觸發更新，包括針對設定檔 [描述]  進行簡單編輯。
+當您刪除簽發者，然後新增一個新的之後，請編輯每個使用衍生認證的設定檔。 即使您還原先前的簽發者，也適用此規則。 設定檔的任何編輯都會觸發更新，包括針對設定檔 [描述] 進行簡單編輯。
 
 ### <a name="update-derived-credentials-on-devices"></a>更新裝置上的衍生認證
 

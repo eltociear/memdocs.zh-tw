@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,22 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29b30d46fc5998c69059c743c3f469e198cee1ef
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f6cafadbecbb0e0f0287b8a6ac4db5a1168e5e84
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325126"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983098"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>使用 Intune 從遠端鎖定裝置
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-[遠端鎖定]  裝置動作會鎖定裝置。 裝置擁有者輸入密碼才能解除鎖定裝置。 您可以從遠端鎖定已設定 PIN 或密碼的裝置。 沒有 PIN 或密碼的裝置無法從遠端鎖定。
+[遠端鎖定] 裝置動作會鎖定裝置。 裝置擁有者輸入密碼才能解除鎖定裝置。 您可以從遠端鎖定已設定 PIN 或密碼的裝置。 沒有 PIN 或密碼的裝置無法從遠端鎖定。
 
 ## <a name="supported-platforms"></a>支援的平台
 
-下列平台支援 [遠端鎖定]  ：
+下列平台支援 [遠端鎖定]：
 
 - Android
 - Android 企業 kiosk 裝置
@@ -45,15 +45,16 @@ ms.locfileid: "80325126"
 - Windows 10 Desktop
 
 > [!NOTE]
-> macOS 裝置要設定 6 位數的修復 PIN。 裝置鎖定時，[裝置概觀]  會顯示 PIN，直到傳送另一個裝置動作為止。
+> macOS 裝置要設定 6 位數的修復 PIN。 裝置鎖定時，[裝置概觀] 會顯示 PIN，直到傳送另一個裝置動作為止。 PIN 只會在遠端鎖定命令傳送之後的 7 天內提供，因此請務必記下 PIN。 7 天後，Intune 將不再保留 PIN。 此外，在使用原始 PIN 成功解除鎖定裝置之前，請不要再對相同裝置起始這個命令。 您應該傳送這個命令、記下 PIN，並在使用此 PIN 成功進入 macOS 裝置之前，不要再次將此命令傳送至相同的裝置。  
+
 
 ## <a name="remote-lock-a-device"></a>遠端鎖定裝置
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-3. 選取 [裝置]   > [所有裝置]  。
-4. 在裝置清單中選取裝置，然後選取 [遠端鎖定]  動作。
+3. 選取 [裝置] > [所有裝置]。
+4. 在裝置清單中選取裝置，然後選取 [遠端鎖定] 動作。
 
 ## <a name="next-steps"></a>後續步驟
 
-- 若要查看此動作的狀態，請選取 [Microsoft Intune]   > [裝置]   > [裝置動作]  。 
+- 若要查看此動作的狀態，請選取 [Microsoft Intune] > [裝置] > [裝置動作]。 
 - 如需協助您管理裝置的更多動作，請參閱[可用動作](device-management.md)。

@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df5c33e1e8e589f430fe8265ee4762b4755f3618
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 28dfeecf841eb1b9c69f46b2002b350c83514e1d
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086459"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990578"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>使用自訂裝置設定檔，在 Intune 中建立包含預先共用金鑰的 WiFi 設定檔
 
@@ -49,15 +49,20 @@ ms.locfileid: "80086459"
 ## <a name="create-a-custom-profile"></a>建立自訂設定檔
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取 [裝置] > [組態設定檔] > [建立設定檔]。
 3. 輸入下列內容：
+
+    - **平台**：選擇平台。
+    - **設定檔**：選取 [自訂]。
+
+4. 選取 [建立]。
+5. 在 [基本資訊] 中，輸入下列內容：
 
     - **名稱**：輸入政策的描述性名稱。 為您的設定檔命名，以方便之後能夠輕鬆識別。 例如，**適用於 Android 裝置系統管理員裝置的自訂 OMA-URI Wi-Fi 設定檔設定**就是一個良好的原則名稱。
     - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
-    - **平台**：選擇平台。
-    - **設定檔類型**：選取 [自訂]  。
 
-4. 在 [設定]  中，選取 [新增]  。 輸入具有下列屬性的新 OMA-URI 設定：
+6. 選取 [下一步]。
+7. 在 [組態設定] 中，選取 [新增]。 輸入具有下列屬性的新 OMA-URI 設定：
 
     1. **名稱**：輸入 OMA-URI 設定的名稱。
     2. **描述**：輸入 OMA-URI 設定的描述。 這是選擇性設定，但建議執行。
@@ -71,13 +76,25 @@ ms.locfileid: "80086459"
 
         SSID 是所要建立原則的 SSID。 例如，如果將 Wi-Fi 命名為 `Hotspot-1`，請輸入 `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`。
 
-    4. **資料類型**：選取 [字串]  。
+    4. **資料類型**：選取 [字串]。
 
     5. **值**：貼上 XML 程式碼。 請參閱本文中的[範例](#android-or-windows-wi-fi-profile-example)。 更新每個值使符合您的網路設定。 程式碼的註解區段包含一些指標。
+    6. 選取 [新增] 以儲存您的變更。
 
-5. 當您完成時，請選取 [確定]   > [建立]  儲存變更。
+8. 選取 [下一步]。
 
-設定檔會顯示在設定檔清單中。 接著，請[指派此設定檔](device-profile-assign.md)給使用者群組。 此原則僅能指派給使用者群組。
+9. 在 [範圍標籤] (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+
+    選取 [下一步]。
+
+10. 在 [指派] 中，選取將會收到您設定檔的使用者或使用者群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
+
+    > [!NOTE]
+    > 此原則僅能指派給使用者群組。
+
+    選取 [下一步]。
+
+11. 在 [檢閱 + 建立] 中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 每個裝置下一次簽入時，都會套用此原則，並在裝置上建立 Wi-Fi 設定檔。 然後裝置就可以自動連線到網路。
 
@@ -228,7 +245,7 @@ xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
 您也可以從現有的 Wi-Fi 連線建立 XML 檔案。 在 Windows 電腦上，使用下列步驟：
 
 1. 為匯出的 Wi-Fi 設定檔建立本機資料夾，例如 c:\WiFi。
-2. 以系統管理員身分開啟命令提示字元 (以滑鼠右鍵按一下 `cmd` > [以系統管理員​​身分執行]  )。
+2. 以系統管理員身分開啟命令提示字元 (以滑鼠右鍵按一下 `cmd` > [以系統管理員​​身分執行])。
 3. 執行 `netsh wlan show profiles`。 隨即列出所有設定檔的名稱。
 4. 執行 `netsh wlan export profile name="YourProfileName" folder=c:\Wifi`。 此命令會在 c:\Wifi 中建立名為 `Wi-Fi-YourProfileName.xml` 的檔案。
 
@@ -238,7 +255,7 @@ xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
 
         `key=clear` 會以純文字匯出金鑰，這是成功使用設定檔的必要條件。
 
-在您擁有 XML 檔案之後，將 XML 語法複製並貼到 OMA-URI 設定 > [資料類型]  中。 [建立自訂設定檔](#create-a-custom-profile) (在本文中) 會列出步驟。
+在您擁有 XML 檔案之後，將 XML 語法複製並貼到 OMA-URI 設定 > [資料類型] 中。 [建立自訂設定檔](#create-a-custom-profile) (在本文中) 會列出步驟。
 
 > [!TIP]
 > `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}` 也會以 XML 格式包含所有設定檔。

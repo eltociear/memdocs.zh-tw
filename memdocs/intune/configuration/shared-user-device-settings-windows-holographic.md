@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b7e77933134dae3523edaf45f8b345aca4fc162
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 49d1b8f407814fd368a7ff45bb94bc4c5ef7fd9d
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79343345"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556280"
 ---
 # <a name="windows-holographic-for-business-settings-to-manage-shared-devices-using-intune"></a>使用 Intune 管理共用裝置的 Windows Holographic for Business 設定
 
@@ -36,24 +36,33 @@ Windows Holographic for Business 裝置 (例如 Microsoft HoloLens) 可供多位
 
 ## <a name="before-your-begin"></a>開始之前
 
-[建立設定檔](shared-user-device-settings.md)。
+[建立 Windows 10 共用的多重使用者裝置組態設定檔](shared-user-device-settings.md)。
+
+當您建立 Windows 10 共用的使用者裝置組態設定檔時，設定會比本文所列的更多。 Windows Holographic for Business 裝置支援本文中的設定。
 
 ## <a name="shared-multi-user-device-settings"></a>共用的多重使用者裝置設定
 
 > [!NOTE]
-> 執行 Windows Holographic for Business 的裝置 (包括 Microsoft HoloLens) 只支援 [帳戶管理]  設定。 如果您設定 Intune 中所顯示的任何其他設定 (包括 [共用電腦模式]  )，則不會對這些裝置造成任何影響。
+> 執行 Windows Holographic for Business 的裝置 (包括 Microsoft HoloLens) 只支援 [帳戶管理] 設定。 如果您設定 Intune 中所顯示的任何其他設定 (包括 [共用電腦模式])，則不會對這些裝置造成任何影響。
 
-- **帳戶管理**：設定為 [啟用]  可自動刪除來賓所建立的本機帳戶，以及 AD 和 Azure AD 中的帳戶。 當使用者登出裝置或系統維護執行時，就會刪除這些帳戶。 啟用時，亦請設定：
-  - **帳戶刪除**：選擇何時刪除帳戶：[At storage space threshold] \(達到儲存空間閾值\)  、[At storage space threshold and inactive threshold] \(達到儲存空間閾值和非使用中閾值\)  或 [Immediately after log-out] \(登出後立即\)  。另請輸入：
+- **帳戶管理**：選擇是否自動刪除帳戶。 選項包括：
+  - **未設定** (預設值)：自動刪除來賓建立的本機帳戶，以及 AD 和 Azure AD 中的帳戶。 當使用者登出裝置或系統維護執行時，就會刪除這些帳戶。
+
+    另請輸入：
+
+    - **帳戶刪除**：選擇何時刪除帳戶：
+      - **達到儲存體空間閾值時**
+      - **達到儲存體空間閾值及非使用中的閾值時**
+      - **登出後立刻刪除**
+
+    另請輸入：
+
     - **開始刪除閾值 (%)** ：輸入磁碟空間百分比 (0-100)。 當總磁碟/儲存空間低於您輸入的值時，則會刪除快取的帳戶。 它會繼續刪除帳戶以回收磁碟空間。 非使用中時間最長的帳戶會最先遭到刪除。
     - **停止刪除閾值 (%)** ：輸入磁碟空間百分比 (0-100)。 當總磁碟/儲存空間達到您輸入的值時，則會停止刪除。
 
-  設定為 [停用]  可保留來賓所建立的本機、AD 和 Azure AD 帳戶。
-
-  > [!NOTE]
-  > Microsoft HoloLens 裝置只支援 [帳戶管理]  設定。
+  - **停用**：來賓建立的本機、AD 和 Azure AD 帳戶會保留在裝置上，不予刪除。
 
 ## <a name="next-steps"></a>後續步驟
 
 - [指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
-- 請參閱 [Windows 10 和更新版本](shared-user-device-settings-windows.md)的設定。
+- 如需共用的使用者裝置設定，請參閱 [Windows 10 和更新版本](shared-user-device-settings-windows.md)。

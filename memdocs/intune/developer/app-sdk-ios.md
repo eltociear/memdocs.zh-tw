@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 242ec66ef79195533e7362694efb00928769b305
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 379eacee731c8cdd773fc7a15f556ab85e409f7c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078170"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989884"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK for iOS 開發人員指南
 
@@ -97,32 +97,32 @@ Intune App SDK for iOS 的目標是以最少的程式碼變更，將管理功能
 
 若要啟用 Intune App SDK，請遵循下列步驟：
 
-1. **選項 1 - 架構 (建議)** ：如果您使用 Xcode 10.2+，而應用程式/延伸模組包含 Swift 代碼，請將 `IntuneMAMSwift.framework` 和 `IntuneMAMSwiftStub.framework` 連結至您的目標：將 `IntuneMAMSwift.framework` 和 `IntuneMAMSwiftStub.framework` 拖曳到專案目標的 [內嵌二進位檔案]  清單。
+1. **選項 1 - 架構 (建議)** ：如果您使用 Xcode 10.2+，而應用程式/延伸模組包含 Swift 代碼，請將 `IntuneMAMSwift.framework` 和 `IntuneMAMSwiftStub.framework` 連結至您的目標：將 `IntuneMAMSwift.framework` 和 `IntuneMAMSwiftStub.framework` 拖曳到專案目標的 [內嵌二進位檔案] 清單。
 
-    否則，請將 `IntuneMAM.framework` 連結至您的目標：將 `IntuneMAM.framework` 拖曳至專案目標的 [內嵌的二進位檔案]  清單。
+    否則，請將 `IntuneMAM.framework` 連結至您的目標：將 `IntuneMAM.framework` 拖曳至專案目標的 [內嵌的二進位檔案] 清單。
 
    > [!NOTE]
    > 如果您使用架構，則必須先手動去除通用架構中的模擬器架構，再將應用程式提交至 App Store。 請參閱[將應用程式提交至 App Store](#submit-your-app-to-the-app-store) 以取得詳細資料。
 
-   **選項 2 - 靜態程式庫**：此選項僅適用於不包含 Swift 代碼或以 10.2 版之前的 Xcode 建置的應用程式/延伸模組。 連結至 `libIntuneMAM.a` 程式庫。 將 `libIntuneMAM.a` 程式庫拖曳至專案目標的 「Linked Frameworks and Libraries」 (連結架構和程式庫)  清單中。
+   **選項 2 - 靜態程式庫**：此選項僅適用於不包含 Swift 代碼或以 10.2 版之前的 Xcode 建置的應用程式/延伸模組。 連結至 `libIntuneMAM.a` 程式庫。 將 `libIntuneMAM.a` 程式庫拖曳至專案目標的 「Linked Frameworks and Libraries」 (連結架構和程式庫) 清單中。
 
     ![Intune App SDK iOS：連結的架構和程式庫](./media/app-sdk-ios/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
 
     將 `-force_load {PATH_TO_LIB}/libIntuneMAM.a` 新增至下列任一項中，並以 Intune App SDK 位置取代 `{PATH_TO_LIB}` ：
    * 專案的 `OTHER_LDFLAGS` 組建組態設定。
-   * Xcode UI 的 [Other Linker Flags] \(其他連結器旗標\)  。
+   * Xcode UI 的 [Other Linker Flags] \(其他連結器旗標\)。
 
      > [!NOTE]
-     > 若要尋找 `PATH_TO_LIB`，請選取 `libIntuneMAM.a` 檔案，然後從 [檔案]  功能表中選擇 [取得資訊]  。 從 [資訊]  視窗的 [一般]  區段，複製並貼上 [位置]  資訊 (路徑) 。
+     > 若要尋找 `PATH_TO_LIB`，請選取 `libIntuneMAM.a` 檔案，然後從 [檔案] 功能表中選擇 [取得資訊]。 從 [資訊] 視窗的 [一般] 區段，複製並貼上 [位置] 資訊 (路徑) 。
 
-     拖曳 [Build Phases] (建置階段)  的 [Copy Bundle Resources] (複製配套資源)  下的資源配套，將 `IntuneMAMResources.bundle` 資源配套新增至專案。
+     拖曳 [Build Phases] (建置階段) 的 [Copy Bundle Resources] (複製配套資源) 下的資源配套，將 `IntuneMAMResources.bundle` 資源配套新增至專案。
 
      ![Intune App SDK iOS：複製配套資源](./media/app-sdk-ios/intune-app-sdk-ios-copy-bundle-resources.png)
          
 2. 將下列 iOS 架構新增至專案：  
 -  MessageUI.framework  
 -  Security.framework  
--  MobileCoreServices.framework  
+-  CoreServices.framework  
 -  SystemConfiguration.framework  
 -  libsqlite3.tbd  
 -  libc++.tbd  
@@ -132,7 +132,7 @@ Intune App SDK for iOS 的目標是以最少的程式碼變更，將管理功能
 -  QuartzCore.framework  
 -  WebKit.framework
 
-3. 如果尚未啟用 Keychain 共用，請在每個專案目標中選擇 [功能]  ，然後啟用 「Keychain Sharing」 (Keychain 共用)  參數來加以啟用。 您必須共用 Keychain 才能繼續進行下一個步驟。
+3. 如果尚未啟用 Keychain 共用，請在每個專案目標中選擇 [功能]，然後啟用 「Keychain Sharing」 (Keychain 共用) 參數來加以啟用。 您必須共用 Keychain 才能繼續進行下一個步驟。
 
    > [!NOTE]
    > 您的佈建設定檔必須能夠支援新的 Keychain 共用值。 Keychain 存取群組應該支援萬用字元。 若要確認這項作業，請在文字編輯器中開啟 .mobileprovision 檔案，並搜尋 **keychain-access-groups**，然後確認是否有萬用字元。 例如：
@@ -248,7 +248,7 @@ MSAL - 開發人員必須在 AAD 中以[此處](https://github.com/AzureAD/micro
 設定  | 類型  | 定義 | 必要？
 --       |  --   |   --       |  --
 ADALClientId  | 字串  | 應用程式的 Azure AD 用戶端識別碼。 | 所有使用 MSAL 的應用程式，以及任何存取非 Intune AAD 資源的 ADAL 應用程式都需要。 |
-ADALAuthority | 字串 | 應用程式的使用中 Azure AD 授權單位。 您應該使用已設定 AAD 帳戶的專屬環境。 | 如果應用程式使用 ADAL 或 MSAL 來存取非 Intune AAD 資源，則為必要。 如果此值不存在，則會使用 Intune 預設值。|
+ADALAuthority | 字串 | 應用程式的使用中 Azure AD 授權單位。 您應該使用已設定 AAD 帳戶的專屬環境。 | 選擇性。 如果應用程式是專為在單一組織/AAD 租用戶內使用而建置的自訂企業營運應用程式，則建議使用這個選項。 如果此值不存在，則會使用一般 AAD 授權單位。|
 ADALRedirectUri  | 字串  | 應用程式的 Azure AD 重新導向 URI。 | 所有使用 MSAL 的應用程式，以及任何存取非 Intune AAD 資源的 ADAL 應用程式，都需要 ADALRedirectUri 或 ADALRedirectScheme。  |
 ADALRedirectScheme  | 字串  | 應用程式的 Azure AD 重新導向配置。 如果應用程式的重新導向 URI 格式為 `scheme://bundle_id`，則這可以用來代替 ADALRedirectUri。 | 所有使用 MSAL 的應用程式，以及任何存取非 Intune AAD 資源的 ADAL 應用程式，都需要 ADALRedirectUri 或 ADALRedirectScheme。 |
 ADALLogOverrideDisabled | 布林值  | 指定 SDK 是否會將所有 ADAL/MSAL 記錄 (包括任何來自應用程式的 ADAL 呼叫) 路由傳送至自己的記錄檔。 預設為 [否]。 如果應用程式將設定自己的 ADAL/MSAL 記錄回呼，請設定為 [是]。 | 選擇性。 |
@@ -766,7 +766,7 @@ SDK 會追蹤本機檔案擁有者的身分識別，並據以套用原則。 建
 
 ### <a name="are-all-of-the-apis-addressable-through-native-swift-or-the-objective-c-and-swift-interoperability"></a>是否可透過原生 Swift 或 Objective-C 以及 Swift 互通性定址所有 API？
 
-Intune App SDK API 僅限於 Objective-C 且不支援原生  Swift。 必須有 Swift 與 Objective-C 的互通性。
+Intune App SDK API 僅限於 Objective-C 且不支援原生 Swift。 必須有 Swift 與 Objective-C 的互通性。
 
 ### <a name="do-all-users-of-my-application-need-to-be-registered-with-the-app-we-service"></a>是否需要向 APP-WE 服務註冊應用程式的所有使用者？
 

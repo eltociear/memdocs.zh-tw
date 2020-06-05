@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
-ms.topic: conceptual
+ms.date: 05/21/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9fa14dd54a820ed20f8b3b504a836392c7f428f
-ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
+ms.openlocfilehash: 559d9a704f0b33e3fda3adf628626b56ff263de3
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538168"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989714"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>在裝置上設定規則可在您的組織中使用 Intune 存取資源
 
@@ -64,11 +64,17 @@ Remember that you need to implement Conditional Access policies in addition to c
 
 ## <a name="device-compliance-policies-work-with-azure-ad"></a>裝置合規性政策會與 Azure AD 一起運作
 
-Intune 會使用 Azure Active Directory (AD) [條件式存取](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) (開啟另一個 Docs 網站)，來協助強制執行合規性。 當裝置在 Intune 中註冊之後，Azure AD 註冊程序便會開始，而且裝置資訊會在 Azure AD 中更新。 其中一項關鍵的資訊就是裝置合規性狀態。 條件式存取原則會使用此合規性狀態，來封鎖或允許對電子郵件及其他組織資源的存取。
+Intune 會使用[條件式存取](../protect/conditional-access.md)協助強制執行合規性。 條件式存取是一項 Azure Active Directory (Azure AD) 技術。
 
-- [什麼是 Azure Active Directory 中的裝置管理](https://docs.microsoft.com/azure/active-directory/device-management-introduction)是不錯的資源，可了解在 Azure AD 中註冊裝置的原因和方式。
+當裝置在 Intune 中註冊之後，Azure AD 註冊程序便會開始，而且裝置資訊會在 Azure AD 中更新。 其中一項關鍵的資訊就是裝置合規性狀態。 條件式存取原則會使用此合規性狀態，來封鎖或允許對電子郵件及其他組織資源的存取。
 
-- [條件式存取](conditional-access.md)和[使用條件式存取的常見方式](conditional-access-intune-common-ways-use.md)描述這項功能，因為它與 Intune 相關。
+了解條件式存取和 Intune：
+
+- [搭配 Intune 使用條件式存取的常見方式](conditional-access-intune-common-ways-use.md)
+
+了解 Azure AD 文件中的條件式存取：
+  - [何謂條件式存取](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+  - [何謂裝置身分識別](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
 
 ## <a name="ways-to-use-device-compliance-policies"></a>使用裝置合規性政策的方式
 
@@ -86,24 +92,24 @@ Intune 會使用 Azure Active Directory (AD) [條件式存取](https://docs.micr
 
 Intune 也包含一組內建的合規性政策設定。 下列內建政策會在 Intune 中註冊的所有裝置上進行評估：
 
-- **將未指派合規性原則的裝置標記為**：此屬性有兩個值：
+- **將未指派合規性原則的裝置標記為**：這是不相容時的預設動作。 此屬性有兩個值：
 
-  - **符合規範** (預設值  )：關閉安全性功能
+  - **符合規範** (預設值)：關閉安全性功能
   - **不符合規範**：開啟安全性功能
 
-  如果裝置未獲指派合規性政策，則預設會將此裝置視為不符合規範。 如果您搭配合規性政策使用條件式存取，建議您將預設設定變更為 [不符合規範]  。 如果使用者因為未指派政策而不符合規範，[公司入口網站應用程式](../apps/company-portal-app.md)就會顯示 `No compliance policies have been assigned`。
+  如果裝置未獲指派合規性政策，則預設會將此裝置視為不符合規範。 如果您搭配合規性政策使用條件式存取，建議您將預設設定變更為 [不符合規範]。 如果使用者因為未指派政策而不符合規範，[公司入口網站應用程式](../apps/company-portal-app.md)就會顯示 `No compliance policies have been assigned`。
 
-- **加強的越獄偵測**：啟用時，此設定會造成 iOS/iPadOS 裝置上更頻繁發生越獄裝置狀態。 此設定只會影響以封鎖越獄裝置之合規性政策為目標的裝置。 啟用此屬性會使用裝置的位置服務，並可能影響電池使用量。 Intune 不會儲存使用者的位置資料，此資料只會用來在背景中更頻繁地觸發越獄偵測。 
+- **加強的越獄偵測** (適用於 *iOS/iPadOS*)：啟用時，此設定會造成 iOS/iPadOS 裝置上更頻繁發生越獄裝置狀態。 此設定只會影響以封鎖越獄裝置之合規性政策為目標的裝置。 啟用此屬性會使用裝置的位置服務，並可能影響電池使用量。 Intune 不會儲存使用者的位置資料，此資料只會用來在背景中更頻繁地觸發越獄偵測。 
 
   啟用此設定會要求裝置：
   - 啟用 OS 層級的位置服務。
   - 一律允許公司入口網站使用位置服務。
 
-  您可以透過開啟公司入口網站應用程式，或將裝置實際移動約 500 公尺以上的顯著距離來觸發評估。 在 iOS 13 和更新版上，只要裝置提示使用者繼續允許公司入口網站在背景中使用其位置，此功能會要求使用者選取 [一律允許]。 如果使用者不一律允許位置存取，且有設定此設定的原則，則其裝置會標示為不相容。 請注意，Intune 無法保證每次顯著的位置變更都會執行越獄偵測檢查，因為這取決於裝置當時的網路連線。
+  加強型偵測可透過位置服務運作。 您可以透過開啟公司入口網站應用程式，或將裝置實際移動約 500 公尺以上的顯著距離來觸發評估。 在 iOS 13 和更新版上，只要裝置提示使用者繼續允許公司入口網站在背景中使用其位置，此功能會要求使用者選取 [一律允許]。 如果使用者不一律允許位置存取，且有設定此設定的原則，則其裝置會標示為不相容。 請注意，Intune 無法保證每次顯著的位置變更都會執行越獄偵測檢查，因為這取決於裝置當時的網路連線。
 
-- **合規性狀態有效期限 (天)** ：輸入一段期間，裝置要在期間內回報所有收到的合規性政策狀態。 未在此期間內傳回狀態的裝置將被視為不相容。 預設值是 30 天。 最小值是 1 天。
+- **合規性狀態有效期限 (天)** ：輸入一段期間，裝置要在期間內回報所有收到的合規性政策狀態。 未在此期間內傳回狀態的裝置將被視為不相容。 預設值是 30 天。 最大值為 120 天。 最小值是 1 天。
 
-  當預設合規性政策 ([裝置]   > [監視器]   > [設定合規性]  ) 為 [使用中]  時，就會顯示此設定。 此原則的背景工作每天執行一次。
+  當預設合規性政策 ([裝置] > [監視器] > [設定合規性]) 為 [使用中] 時，就會顯示此設定。 此原則的背景工作每天執行一次。
 
 您可以使用這些內建政策來監視這些設定。 Intune 也會在不同的時間間隔[重新整理或檢查更新](create-compliance-policy.md#refresh-cycle-times)，端視裝置平台而定。 [對於 Microsoft Intune 中的裝置政策和設定檔的常見疑問、問題和解決方式](../configuration/device-profile-troubleshoot.md)是不錯的資源。
 

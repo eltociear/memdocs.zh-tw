@@ -6,8 +6,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2020
-ms.topic: conceptual
+ms.date: 05/20/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9657353dd877b380d506e588934e3f6fd29b51c1
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: 205c892c885682d10877aae4c92429cf59adb0ac
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587030"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989152"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>使用 Intune 將電子郵件設定新增至裝置
 
@@ -29,9 +29,9 @@ Microsoft Intune 包含不同的電子郵件設定，可部署到您組織中的
 
 您可以使用電子郵件設定檔，針對下列裝置設定內建電子郵件設定：
 
-- Samsung Knox Standard 4.0 和更新版本上的 Android 裝置系統管理員
+- Samsung Knox Standard 5.0 和更新版本上的 Android 裝置系統管理員
 - Android 企業
-- iOS 8.0 及更新版本
+- iOS 11.0 與更新版本
 - iPadOS 13.0 和更新版本
 - Windows Phone 8.1 及更新版本
 - Windows 10 桌面版與 Windows 10 行動裝置版
@@ -41,7 +41,7 @@ Microsoft Intune 包含不同的電子郵件設定，可部署到您組織中的
 ## <a name="create-the-profile"></a>建立設定檔
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取 [裝置] > [組態設定檔] > [建立設定檔]。
 3. 輸入下列內容：
 
     - **平台**：選擇您的裝置平台。 選項包括：  
@@ -52,17 +52,17 @@ Microsoft Intune 包含不同的電子郵件設定，可部署到您組織中的
         - **Windows 10 及以上版本**
         - **Windows Phone 8.1**
 
-    - **設定檔**：選取 [電子郵件]  。
+    - **設定檔**：選取 [電子郵件]。
 
-4. 選取 [建立]  。
-5. 在 [基本資訊]  中，輸入下列內容：
+4. 選取 [建立]。
+5. 在 [基本資訊] 中，輸入下列內容：
 
     - **名稱**：輸入政策的描述性名稱。 為您的設定檔命名，以方便之後能夠輕鬆識別。 例如，一個良好的原則名稱是 **Windows 10：適用於所有 Windows 10 裝置的電子郵件設定**。
     - **描述**：輸入政策的描述。 這是選擇性設定，但建議執行。
 
-6. 選取 [下一步]  。
+6. 選取 [下一步]。
 
-7. 在 [組態設定]  中，您可進行的設定會根據您選擇的平台而不同。 選擇您平台來進行詳細設定：
+7. 在 [組態設定] 中，您可進行的設定會根據您選擇的平台而不同。 選擇您平台來進行詳細設定：
 
     - [Android 裝置系統管理員 (Samsung Knox Standard)](email-settings-android.md)
     - [Android Enterprise](email-settings-android-enterprise.md)
@@ -70,22 +70,22 @@ Microsoft Intune 包含不同的電子郵件設定，可部署到您組織中的
     - [Windows 10](email-settings-windows-10.md)
     - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
 
-8. 選取 [下一步]  。
-9. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+8. 選取 [下一步]。
+9. 在 [範圍標籤] (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
 
-    選取 [下一步]  。
+    選取 [下一步]。
 
-10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
+10. 在 [指派] 中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
 
-    選取 [下一步]  。
+    選取 [下一步]。
 
-11. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立]  時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
+11. 在 [檢閱 + 建立] 中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 ## <a name="remove-an-email-profile"></a>移除電子郵件設定檔
 
 電子郵件設定檔會指派給裝置群組，而不是使用者群組。 您可以透過不同的方式從裝置移除電子郵件設定檔，即使裝置上只有一個電子郵件設定檔也一樣：
 
-- **選項 1**：開啟電子郵件設定檔 ([裝置]   > [組態設定檔]  > 選取設定檔)，然後選擇 [指派]  。 [包含]  索引標籤顯示獲指派設定檔的群組。 以滑鼠右鍵按一下群組 > [移除]  。 請務必**儲存**您的變更。
+- **選項 1**：開啟電子郵件設定檔 ([裝置] > [組態設定檔] > 選取設定檔)，然後選擇 [指派]。 [包含] 索引標籤顯示獲指派設定檔的群組。 以滑鼠右鍵按一下群組 > [移除]。 請務必**儲存**您的變更。
 
 - **選項 2**：[抹除或淘汰裝置](../remote-actions/devices-wipe.md)。 您可以使用這些動作選擇性或完全移除資料和設定。
 
@@ -105,7 +105,7 @@ Microsoft Intune 包含不同的電子郵件設定，可部署到您組織中的
 
 如果使用者已設定電子郵件帳戶，則會根據平台，以不同方式指派電子郵件設定檔。
 
-- **iOS/iPadOS**：依據主機名稱和電子郵件地址，偵測到重複的現有電子郵件設定檔。 重複的電子郵件設定檔會封鎖 Intune 設定檔的指派。 在此情況下，公司入口網站應用程式會通知使用者其不符合規範，並提示終端使用者手動移除已設定的設定檔。 為協助避免此情況，請指示終端使用者「先」  註冊，然後再安裝電子郵件設定檔，以允許 Intune 設定該設定檔。
+- **iOS/iPadOS**：依據主機名稱和電子郵件地址，偵測到重複的現有電子郵件設定檔。 重複的電子郵件設定檔會封鎖 Intune 設定檔的指派。 在此情況下，公司入口網站應用程式會通知使用者其不符合規範，並提示終端使用者手動移除已設定的設定檔。 為協助避免此情況，請指示終端使用者「先」註冊，然後再安裝電子郵件設定檔，以允許 Intune 設定該設定檔。
 
 - **Windows：** 依據主機名稱和電子郵件地址，偵測到重複的現有電子郵件設定檔。 Intune 會覆寫終端使用者所建立的現有電子郵件設定檔。
 

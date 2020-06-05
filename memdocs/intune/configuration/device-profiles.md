@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: conceptual
+ms.date: 05/07/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3437a1b9fe3c663844d366bbfda6c0bcb463c3ab
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359301"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983798"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>在 Microsoft Intune 中使用裝置設定檔將功能和設定套用至您的裝置
 
@@ -59,8 +59,8 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 - Android 企業
 - iOS/iPadOS
 - macOS
-- Windows Phone 8。1
-- Windows 8。1
+- Windows Phone 8.1
+- Windows 8.1
 - Windows 10 及更新版本
 
 ## <a name="custom-profile"></a>自訂設定檔
@@ -73,11 +73,11 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 - Android 企業
 - iOS/iPadOS
 - macOS
-- Windows Phone 8。1
+- Windows Phone 8.1
 
 ## <a name="delivery-optimization"></a>傳遞最佳化
 
-[傳遞最佳化](delivery-optimization-windows.md) 提供傳遞軟體更新的更棒體驗。 這些設定將取代 [軟體更新]   > [Windows 10 更新通道]  設定。
+[傳遞最佳化](delivery-optimization-windows.md) 提供傳遞軟體更新的更棒體驗。 這些設定將取代 [軟體更新] > [Windows 10 更新通道] 設定。
 
 使用這些設定來控制軟體更新如何下載到您組織中的裝置。 例如，您可以讓使用者取得其自己的更新，或在裝置設定檔中使用傳遞最佳化雲端服務取得更新。
 
@@ -140,7 +140,7 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 
 - Windows 10 及更新版本
 
-## <a name="education"></a>教育
+## <a name="education"></a>Education
 
 [教育設定 - Windows 10](education-settings-configure.md) 設定 [Windows「進行測驗」應用程式](https://docs.microsoft.com/education/windows/take-tests-in-windows-10)的選項。 當您設定這些選項時，裝置將無法執行其他應用程式，直到測驗結束為止。
 
@@ -155,7 +155,7 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 - Android 裝置管理員
 - Android 企業
 - iOS/iPadOS
-- Windows Phone 8。1
+- Windows Phone 8.1
 - Windows 10 及更新版本
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
@@ -177,9 +177,9 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 
 - Windows 10 Fall Creators Update 和更新版本
 
-## <a name="extensions"></a>擴充功能
+## <a name="extensions"></a>延伸模組
 
-[核心延伸模組](kernel-extensions-overview-macos.md)讓管理員能夠在 macOS 裝置的核心層級上新增功能或程式。 設定這些設定，以信任特定開發人員或合作夥伴的所有延伸模組，或允許特有的核心延伸模組。
+[macOS 系統延伸模組和核心延伸模組](kernel-extensions-overview-macos.md)允許系統管理員新增可擴充作業系統原生功能的功能或程式。 設定這些設定，以信任特定開發人員或合作夥伴的所有延伸模組，或允許特定的延伸模組。
 
 這項功能支援：
 
@@ -270,8 +270,8 @@ MacOS 裝置上的[喜好設定檔案](preference-file-settings-macos.md)包含�
 - Android 企業
 - iOS/iPadOS
 - macOS
-- Windows Phone 8。1
-- Windows 8。1
+- Windows Phone 8.1
+- Windows 8.1
 - Windows 10 及更新版本
 
 ## <a name="wi-fi"></a>Wi-Fi

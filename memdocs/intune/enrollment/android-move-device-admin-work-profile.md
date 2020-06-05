@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 685f2a51c7a2bfacbc95fb2a7615f0e459b97245
+ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80624920"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84126510"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>將 Android 裝置從裝置系統管理員移至工作設定檔管理
 
@@ -59,19 +59,23 @@ ms.locfileid: "80624920"
     ![封鎖裝置](./media/android-move-device-admin-work-profile/block-devices.png)
 
 5. 在 [位置] 頁面上，視需要新增位置 > [下一步]。
-6. 在 [因不符合規範而採取的動作] 上，您可以設定 [傳送電子郵件給使用者] 動作。
 
-    ![傳送電子郵件](./media/android-move-device-admin-work-profile/send-email.png)
+6. 在 [因不符合規範而採取的動作] 索引標籤上，您可以設定[不符合規範時可用的動作](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance)，以自訂此流程的終端使用者體驗。
 
+    ![不合規動作](media/android-move-device-admin-work-profile/noncompliance-actions.png)
 
-    在電子郵件中，您可以在給使用者的訊息中包含下列 URL。 此 URL 將啟動 Android 公司入口網站，並移至 [更新裝置設定] 頁面。 此頁面會啟動其流程以移至工作設定檔管理。
-    - `https://portal.manage.microsoft.com/UpdateSettings.aspx`。
-    - 針對美國政府，您可以改為使用此連結：`https://portal.manage.microsoft.us/UpdateSettings.aspx`。
+    以下是一些建議動作：
+
+    - **將裝置標示為不合規**：根據預設，此動作設定為零 (0) 天，因此會立即將裝置標示為不合規。 若將此值變更為較大的天數，使用者就會有一段寬限期，在這段期間，他們可以看到移至工作設定檔管理的流程，但尚未標示為不合規。 例如，將此值設定為 14 天，使用者即可有兩週時間從裝置系統管理員移到工作設定檔管理，而不會有遺失資源存取權的風險。
+    - **傳送推播通知給終端使用者**：您可以進行此設定，將推播通知傳送至裝置系統管理員的裝置。 使用者選取通知時，即會開啟 Android 公司入口網站的 [更新裝置設定] 頁面，以供使用者啟動移至工作設定檔管理的流程。
+    - **傳送電子郵件給終端使用者**：您可以進行此設定，將電子郵件傳送給使用者，以說明如何從裝置系統管理員移至工作設定檔管理。 您可以在電子郵件中提供下列 URL，使用者選取時即會開啟 Android 公司入口網站的 [更新裝置設定] 頁面，以供使用者啟動移至工作設定檔管理的流程。
+      - `https://portal.manage.microsoft.com/UpdateSettings.aspx`。
+      - 針對美國政府，您可以改為使用此連結：`https://portal.manage.microsoft.us/UpdateSettings.aspx`。
   
-    > [!NOTE]
-    > - 當然，您可以在與使用者通訊的連結中，使用使用者易記的超文字。 但是，不要使用 URL 短網址，因為若該方式變更，連結可能無法正常作用。
-    > - 如果 Android 公司入口網站已開啟且在背景中，則當使用者點選連結時，可能會改為前往其已開啟的最後一個頁面。
-    > - 使用者必須在 Android 裝置上點選連結。 如果改為貼入瀏覽器，就不會啟動 Android 公司入口網站。 
+      > [!NOTE]
+      > - 當然，您可以在與使用者通訊的連結中，使用使用者易記的超文字。 但是，不要使用 URL 短網址，因為若該方式變更，連結可能無法正常作用。
+      > - 如果 Android 公司入口網站已開啟且在背景中，則當使用者點選連結時，可能會改為前往其已開啟的最後一個頁面。
+      > - 使用者必須在 Android 裝置上點選連結。 如果改為貼入瀏覽器，就不會啟動 Android 公司入口網站。 
 
     選擇 [下一步]。
 

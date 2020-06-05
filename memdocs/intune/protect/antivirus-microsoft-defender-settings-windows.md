@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/05/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 7d8ea221b6c1768055e3ca1839c20ed64e2e3838
-ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
+ms.openlocfilehash: be850b2351de138ddacb087b2acf198e164dcd67
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82802016"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83430102"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Microsoft Intune 中 Windows 10 Microsoft Defender 防毒軟體原則的設定
 
-在 Microsoft Intune 中，檢視您可以為適用於 Windows 10 的 Microsoft Defender 防毒軟體設定檔設定的防毒軟體原則設定。
+檢視您可在[端點安全性原則](../protect/endpoint-security-policy.md)中，在 Microsoft Intune 為 Windows 10 的 Microsoft Defender 防毒軟體設定檔進行的端點安全性防毒原則設定。
 
 ## <a name="cloud-protection"></a>雲端保護
 
@@ -54,7 +54,7 @@ ms.locfileid: "82802016"
 
 ## <a name="microsoft-defender-antivirus-exclusions"></a>Microsoft Defender 防毒軟體排除
 
-針對此群組中的每個設定，您可以展開設定、選取 [新增]  ，然後為排除指定一個值。
+針對此群組中的每個設定，您可以展開設定、選取 [新增]，然後為排除指定一個值。
 
 - **Defender 要排除的處理序**  
   CSP：[ExcludedProcesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
@@ -94,7 +94,7 @@ ms.locfileid: "82802016"
   CSP：[Defender/RealTimeScanDirection](https://go.microsoft.com/fwlink/?linkid=2113943)
 
   進行此設定，以判斷要監視的 NTFS 檔案和程式活動。
-  - **監視所有檔案** (「預設」  )
+  - **監視所有檔案** (「預設」)
   - **只監視傳入檔案**
   - **只監視傳出檔案**
 
@@ -161,7 +161,7 @@ ms.locfileid: "82802016"
 
 - **提交同意範例**  
 
-  - [未設定]  (預設  )
+  - [未設定] (預設)
   - **自動傳送安全的樣本**
   - **一律提示**
   - **一律不傳送**
@@ -188,7 +188,7 @@ ms.locfileid: "82802016"
   - **高嚴重性**
   - **嚴重的嚴重性**
 
-  針對每個等級，指定要採取的動作。 每個嚴重性等級的預設值都是 [未設定]  。
+  針對每個等級，指定要採取的動作。 每個嚴重性等級的預設值都是 [未設定]。
 
   - **未設定**
   - **清理** - 服務會嘗試復原檔案，並嘗試消毒。
@@ -254,7 +254,7 @@ ms.locfileid: "82802016"
   CSP：[ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053)
 
   選取 Defender 快速掃描執行的當日時間。
-  根據預設，此為 [未設定] 
+  根據預設，此為 [未設定]
 
 - **掃描類型**  
   CSP：[ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045)

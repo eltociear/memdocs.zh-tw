@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/25/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 391fa20cf7ba53af649f9f614d9ca02c653c278b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5ed491fd379879369ead35ceb2c618def91d3e53
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079309"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985938"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>使用 Microsoft Intune 進行 Windows 10 應用程式部署 
 
@@ -75,8 +75,8 @@ Microsoft Intune 支援 Windows 10 裝置上的各種應用程式類型和部署
 若要分類商務用 Microsoft Store 應用程式： 
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [應用程式]   > [所有應用程式]  。 
-3. 選取商務用 Microsoft Store 應用程式。 然後選取 [屬性]   > [應用程式資訊]   > [類別]  。 
+2. 選取 [應用程式] > [所有應用程式]。 
+3. 選取商務用 Microsoft Store 應用程式。 然後選取 [屬性] > [應用程式資訊] > [類別]。 
 4. 選取一個類別。
 
 ## <a name="install-apps-on-windows-10-devices"></a>在 Windows 10 裝置上安裝應用程式
@@ -92,7 +92,9 @@ Microsoft Intune 支援 Windows 10 裝置上的各種應用程式類型和部署
 > [!NOTE]
 > 針對建置為 [雙螢幕模式] 的 Win32 應用程式，系統管理員必須選擇應用程式是否會針對所有與該執行個體建立關聯的指派作為 [使用者模式] 或 [機器模式] 應用程式運作。 部署內容無法根據每個指派進行變更。  
 
-只有在裝置及 Intune 應用程式類型支援的情況下，才可以在裝置內容中安裝應用程式。 您可以在裝置內容中安裝下列應用程式類型，並將這些應用程式指派至裝置群組：
+只有在裝置及 Intune 應用程式類型支援的情況下，才可以在裝置內容中安裝應用程式。 Windows 10 電腦和 Surface Hub 等 Teams 裝置都支援裝置內容安裝。 但執行 Windows Holographic for Business 的裝置，例如 Microsoft HoloLens，就不支援。
+
+您可以在裝置內容中安裝下列應用程式類型，並將這些應用程式指派至裝置群組：
 
 - Win32 應用程式
 - 離線授權的商務用 Microsoft Store 應用程式

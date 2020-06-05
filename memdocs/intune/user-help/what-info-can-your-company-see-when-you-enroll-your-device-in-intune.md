@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/31/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: ed3f9f6f01c8dc2df3a89daee991d9f8c61056b9
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 028a568b9a588697139f97f292c70c50347217f3
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210310"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882088"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>當我註冊裝置時，我的組織可以看到哪些資訊？
 
@@ -51,11 +51,18 @@ ms.locfileid: "82210310"
 - IMEI
 
  > [!NOTE]
- > 針對 Android Enterprise 完全受控和專用裝置，您將無法看到所有應用程式清查。    
+ > 針對 Android Enterprise 完全受控和專用裝置，您將無法看到所有應用程式清查。
+ 
+ > [!NOTE]
+ > 以下列其中一種方式安裝的應用程式會被視為**受控應用程式**：
+ > 1. 在 Intune 系統管理員發佈為**可用**後，使用者從公司入口網站應用程式進行安裝的應用程式。
+ > 2. Intune 系統管理員將此應用程式發佈為**必要**，且安裝在裝置上。 
+ >
+ > 若您是組織中的 IT 系統管理員或支援人員，而且想要了解在 Intune 中管理應用程式的詳細資訊，請參閱[了解非受控應用程式、受控應用程式和 MAM 應用程式的功能](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/understanding-the-capabilities-of-unmanaged-apps-managed-apps/ba-p/249164) (英文)。
     
 **組織可能會看到的資訊：**
 
-- 電話號碼：針對公司所擁有的裝置，組織可以看到您完整的電話號碼。 如果是個人所擁有的裝置，組織便只能看到電話號碼的最後四個數字。 您可在個別裝置的 [裝置詳細資料]  頁面上看到每個個別裝置的所有權類型。
+- 電話號碼：針對公司所擁有的裝置，組織可以看到您完整的電話號碼。 如果是個人所擁有的裝置，組織便只能看到電話號碼的最後四個數字。 您可在個別裝置的 [裝置詳細資料] 頁面上看到每個個別裝置的所有權類型。
 - 裝置儲存空間：如果您無法安裝必要的應用程式，組織可以查看裝置儲存空間，以了解是否是空間不足。  
 - 位置：組織一律無法看到裝置的位置，除非您需要復原某個已遺失的受監督 iOS 裝置。 請瀏覽 [Apple iOS 文件](https://go.microsoft.com/fwlink/?linkid=853816)，以深入了解受監督的裝置。  
 - 應用程式清查詳細資料：如果您的組織使用 Mobile Threat Defense，他們將能夠檢視您 iOS 裝置上應用程式的相關詳細資料。 深入了解 [Mobile Threat Defense](set-up-mobile-threat-defense.md)。 如果是個人裝置，組織只能看到您的受控應用程式清查。 如果是公司擁有的裝置，組織可以看到所有的應用程式清查。

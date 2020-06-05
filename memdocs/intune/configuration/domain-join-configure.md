@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 207b3983c214ad4e166ae58ea0ccd18ea23bf418
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 211722a02183d3b86525468f907d4093331d9de6
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364392"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988423"
 ---
 # <a name="configuration-domain-join-settings-for-hybrid-azure-ad-joined-devices-in-microsoft-intune"></a>Microsoft Intune 中混合式 Azure AD 加入裝置的設定網域加入設定
 
@@ -39,15 +39,20 @@ ms.locfileid: "79364392"
 ## <a name="create-the-profile"></a>建立設定檔
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取 [裝置] > [組態設定檔] > [建立設定檔]。
 3. 輸入下列內容：
+
+    - **平台**：選取 [Windows 10 及更新版本]。
+    - **設定檔**：選取 [網域加入 (預覽)]。
+
+4. 選取 [建立]。
+5. 在 [基本資訊] 中，輸入下列內容：
 
     - **名稱**：輸入政策的描述性名稱。 為您的設定檔命名，以方便之後能夠輕鬆識別。 例如，一個良好的原則名稱是 **Windows 10：包含內部部署網域資訊的網域加入設定檔，以透過 Windows Autopilot 來註冊混合式 AD 加入裝置**。
     - **描述**：輸入政策的描述。 這是選擇性設定，但建議執行。
-    - **平台**：選取 [Windows 10 及更新版本]  。
-    - **設定檔類型**：選取 [網域加入 (預覽)]  。
 
-4. 選取 [設定]  。 輸入下列內容：
+6. 選取 [下一步]。
+7. 在 [組態設定] 中，輸入下列內容：
 
     - **電腦名稱前置詞**：輸入裝置名稱的前置詞。 電腦名稱稱長度為 15 個字元。 前置詞後方的剩餘 15 個字元會隨機產生。
     - **網域名稱**：輸入裝置要加入的完整網域名稱 (FQDN)。 例如，輸入 `americas.corp.contoso.com.`
@@ -55,12 +60,22 @@ ms.locfileid: "79364392"
 
       如需此設定的詳細資訊和建議，請參閱[部署混合式 Azure AD 加入裝置](../enrollment/windows-autopilot-hybrid.md)。
 
-5. 當您完成時，請選取 [確定]   > [建立]  儲存變更。
+8. 選取 [下一步]。
 
-設定檔隨即建立，並顯示在設定檔清單上。 您現在可以[使用 Intune 和 Windows Autopilot 部署混合式 Azure AD 加入裝置](../enrollment/windows-autopilot-hybrid.md)。
+9. 在 [範圍標籤] (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+
+    選取 [下一步]。
+
+10. 在 [指派] 中，選取將接收您設定檔的使用者或使用者群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
+
+    選取 [下一步]。
+
+11. 在 [檢閱 + 建立] 中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
+
+您現在可以[使用 Intune 和 Windows Autopilot 部署混合式 Azure AD 加入裝置](../enrollment/windows-autopilot-hybrid.md)。
 
 ## <a name="next-steps"></a>後續步驟
 
-建立設定檔之後即可加以指派。 接下來，[指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
+[指派](device-profile-assign.md)設定檔之後，請[監視其狀態](device-profile-monitor.md)。
 
 [使用 Intune 和 Windows Autopilot 部署混合式 Azure AD 加入裝置](../enrollment/windows-autopilot-hybrid.md)

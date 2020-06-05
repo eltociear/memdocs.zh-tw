@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 019cd47a469f8a19713f56805350e0e99119013a
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: fdf4fb6499299cd09fcac5673e252dd064120620
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83267853"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764249"
 ---
 # <a name="microsoft-intune-licensing"></a>Microsoft Intune 授權
 針對不同的客戶需求和組織規模，從適用於學校和小型企業的簡單易用管理體驗，到企業客戶所需的較進階功能，都有 Microsoft Intune 可供使用。 大多數包含 Microsoft Intune 的授權也會授與使用 Microsoft Endpoint Configuration Manager 的權限，只要訂用帳戶保持使用中的狀態即可。 系統管理員必須獲指派授權，才能管理 Intune。
@@ -33,7 +33,7 @@ ms.locfileid: "83267853"
 - Microsoft 365 E3
 - 企業行動力 + 安全性 E5
 - 企業行動力 + 安全性 E3
-- Microsoft 365 商務版
+- Microsoft 365 商務進階版
 - Microsoft 365 F1
 - Microsoft 365 F3
 - Microsoft 365 政府版 G5

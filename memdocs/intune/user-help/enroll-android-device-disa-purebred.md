@@ -1,14 +1,15 @@
 ---
-title: 使用 Microsoft Intune 應用程式和 Entrust Datacard 來註冊 Android 裝置
-description: 註冊 Android 裝置，以及使用 Entrust Datacard 設定衍生的認證驗證。
+title: 使用 Microsoft Intune 應用程式和 DISA Purebred 註冊 Android 裝置
+description: 了解如何註冊 Android 裝置，並使用 DISA Purebred 設定衍生認證的驗證。
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 05/15/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,16 +19,16 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16d14a802c82918656741c137da672e501ddd41a
+ms.openlocfilehash: 584392891320f96eed16863225ffb323dc240594
 ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879374"
+ms.locfileid: "83880625"
 ---
-# <a name="set-up-android-device-with-company-portal-and-entrust-datacard"></a>使用公司入口網站和 Entrust Datacard 設定 Android 裝置
+# <a name="set-up-android-device-with-the-microsoft-intune-app-and-disa-purebred"></a>使用 Microsoft Intune 應用程式和 DISA Purebred 設定 Android 裝置
 
-使用 Microsoft Intune 應用程式註冊您的裝置，以安全地使用行動裝置存取您組織的電子郵件、檔案和應用程式。 您的裝置註冊之後，它就變成「受控」。 您的組織可以透過 Intune 等行動裝置管理 (MDM) 提供者將原則和應用程式指派給裝置。
+使用 Microsoft Intune 應用程式註冊您的裝置，以安全地使用行動裝置存取您組織的電子郵件、檔案和應用程式。 您的裝置註冊之後，它就變成「受控」。 您的組織可以透過 Intune 等行動裝置管理 (MDM) 提供者將原則和應用程式指派給裝置。  
 
 在註冊期間，您也會在裝置上安裝衍生的認證。 組織可能會要求在存取資源或簽署和加密電子郵件時，使用衍生認證作為驗證方法。
 
@@ -39,7 +40,7 @@ ms.locfileid: "83879374"
 在本文中，您將：
 
 * 使用 Intune 應用程式來註冊行動 Android 裝置
-* 藉由安裝組織的衍生認證提供者 [Entrust Datacard](https://www.entrustdatacard.com/) 所衍生的認證，來設定您的智慧卡
+* 透過您組織的衍生認證提供者 [DISA Purebred](https://public.cyber.mil/pki-pke/purebred/) 安裝衍生認證，以設定智慧卡
 
 ## <a name="what-are-derived-credentials"></a>什麼是衍生認證？
 
@@ -54,12 +55,15 @@ ms.locfileid: "83879374"
 
 ## <a name="prerequisites"></a>先決條件
 
- 若要完成註冊，則必須具備：
+若要完成註冊，則必須具備：
 
 * 學校或公司提供的智慧卡
 * 可使用智慧卡登入的電腦或 Kiosk 存取權
-* 可執行 Android 7.0 或更新版本之全新或重設成原廠設定的裝置
+* 可執行 Android 7.0 或更新版本之全新或重設成原廠設定的裝置 
 * 安裝有 Microsoft Intune 應用程式的裝置
+* 安裝在您裝置上的 Purebred 應用程式 (裝置設定完成後不久，應用程式應會自動安裝。) 如未安裝，請連絡 IT 支援人員)。
+
+您也必須在設定期間連絡 Purebred 專員或代表。
 
 ## <a name="enroll-device"></a>註冊裝置  
 
@@ -97,7 +101,7 @@ ms.locfileid: "83879374"
    > [!div class="mx-imgBorder"]
    > ![公司入口網站之 [輸入代碼] 提示的螢幕擷取畫面。](./media/enter-code-intercede.png)
 
-10. 插入智慧卡以進行登入。  
+10. 插入智慧卡以進行登入。 
 
 11. 在登入畫面中，選取您的公司或學校帳戶。 切換回您的行動裝置。 
 
@@ -107,17 +111,17 @@ ms.locfileid: "83879374"
 
 13. 若要在您的裝置上安裝公司應用程式，請點選 [安裝]。 安裝完成後，請點選 [下一步]。  
 
-       ![設定您公司電話畫面的範例影像，其中已醒目提示 [安裝] 按鈕。](./media/fully-managed-intune-app-11.png)    
+       ![設定您公司電話畫面的範例影像，其中已醒目提示 [安裝] 按鈕。](./media/fully-managed-intune-app-11.png)   
 
 14. 點選 [開始]，以開啟 Microsoft Intune 應用程式。 
 
     ![設定您公司電話畫面的範例影像，其中已醒目提示 [啟動] 按鈕。](./media/fully-managed-intune-app-17.png)   
- 
+
 15. 返回您行動裝置上的 Intune 應用程式，然後遵循螢幕上的指示，直到完成註冊為止。 
 
     ![設定存取 [註冊裝置] 畫面的範例影像，其中醒目提示 [完成] 按鈕。](./media/fully-managed-intune-app-19.png)   
 
-16. 繼續閱讀本文中的[設定您的智慧卡](enroll-android-device-entrust-datacard.md#set-up-smart-card)一節，以完成您裝置的設定。  
+16. 繼續閱讀本文中的[設定您的智慧卡](enroll-android-device-disa-purebred.md#set-up-smart-card)一節，以完成您裝置的設定。  
 
 ### <a name="qr-code-enrollment"></a>QR 代碼註冊  
 在本節中，您將會掃描您公司提供的 QR 代碼。  當您完成時，我們會將您重新導向回裝置註冊步驟。     
@@ -134,7 +138,7 @@ ms.locfileid: "83879374"
 ### <a name="token-enrollment"></a>權杖註冊  
 在本節中，您將會輸入您公司提供的權杖。 當您完成時，我們會將您重新導向回裝置註冊步驟。  
 
-1. 在 Google 登入畫面的 [電子郵件或電話] 方塊中，鍵入 **afw#setup**。 然後點選 [下一步]。 
+1. 在 Google 登入畫面的 [電子郵件或電話] 方塊中，鍵入 **afw#setup**。 點選 [下一步]。 
 
    ![Google 登入畫面的範例影像，其中顯示已在欄位中鍵入 "afw#setup"。](./media/token-intune-app-01.png)   
 
@@ -150,64 +154,61 @@ ms.locfileid: "83879374"
 
 6. 返回[註冊裝置](#enroll-device)的步驟 4 來繼續安裝。
 
+
 ## <a name="set-up-smart-card"></a>設定智慧卡  
+
+> [!NOTE]
+> 必須要有 Purebred 應用程式才能完成這些步驟，其會在裝置註冊完成後自動進行安裝。 若稍後仍未安裝此應用程式，請連絡 IT 支援人員。  
 
 1. 註冊完成之後，Intune 應用程式會通知您設定智慧卡。 點選通知。 如果沒有收到通知，請檢查電子郵件。
 
    > [!div class="mx-imgBorder"]
-   > ![裝置主畫面之公司入口網站推播通知的範例螢幕擷取畫面。](./media/action-required-in-app-android.png)
+   > ![裝置主畫面上 Intune 應用程式推播通知的螢幕擷取畫面。](./media/action-required-in-app-android.png)
 
 2. 在**設定智慧卡**畫面上：
 
-   1. 點選組織其設定指示的連結。 如果組織未提供其他指示，則會將您送往這篇文章。
+   1. 點選組織設定指示的連結以進行檢閱。 如果組織未提供其他指示，則會將您送往這篇文章。
 
-   2. 點選 [開始]。 
+   2. 點選 [開始]。   
 
    > [!div class="mx-imgBorder"]
-   > ![公司入口網站之設定行動智慧卡存取畫面的範例螢幕擷取畫面。](./media/smart-card-open-entrust-android.png)
+   > ![Intune 應用程式「設定智慧卡」畫面的螢幕擷取畫面。](./media/smart-card-open-disa-purebred-android.png)
 
-3. 切換至啟用智慧卡的裝置，然後開啟 IdentityGuard。
+3. 在**取得憑證**畫面上，點選 [啟動 PUREBRED] 開啟 Purebred 應用程式。 (此應用程式應已自動安裝於裝置上。 如未安裝，請連絡支援人員。)  
 
-4. 尋找 [智慧認證登入] 區域，然後選取 [登入] 按鈕。
+   > [!div class="mx-imgBorder"]
+   > ![Intune 應用程式提示開啟 DISA Purebred 應用程式的螢幕擷取畫面。](./media/open-app-prompt-disa-purbred-android.png)  
 
-5. 當收到提示要求選取憑證時，請挑選智慧卡認證。 然後選取 [確定]。
+4. 您可能需提供額外權限，Purebred 應用程式才能正常執行。 出現提示時，請點選 [允許] 或 [一律允許]。 如需為何需要這些權限的詳細資訊，請洽詢支援人員或 Purebred 客服專員。  
 
-6. 輸入智慧卡 PIN。
+5. 進入 Purebred 應用程式後，請洽詢您組織的 Purebred 客服專員，以下載並安裝存取公司或學校資源所需的憑證。
 
-7. 系統會要求從動作清單中選擇。 選取可讓您註冊衍生行動智慧認證的項目。 連結或按鈕可能會顯示**我想要註冊衍生行動智慧卡認證**。
+    > [!IMPORTANT]
+    > 在此過程中若出現提示，請點選 [確定] 或 [安裝]。 請勿變更任何憑證授權單位 (CA) 名稱或提示您安裝的憑證名稱。    
 
-8. 選取已成功下載及安裝的啟用智慧認證應用程式。 然後繼續前往下個畫面。
-
-9. 輸入衍生智慧卡認證的相關資訊：
-
-    1. 針對 [身分識別名稱]，輸入任何名稱，例如 *Entrust Derived Cred*。  
-    2. 在下拉式功能表中，選取 [Entrust IdentityGuard 行動智慧認證]。
-
-    3. 繼續前往下個畫面。 您將會看到一個 QR 代碼，其下方包含數字密碼。
-
-10. 返回您的 Android 裝置。 在 Intune 應用程式 > [取得 QR 代碼] 畫面上，點選 [下一步]。
+6. 安裝完成後，您會收到憑證已就緒的通知。 請點選通知以返回 Intune 應用程式。
 
     > [!div class="mx-imgBorder"]
-    > ![公司入口網站之取得 QR 代碼畫面的範例螢幕擷取畫面。](./media/get-qr-code-entrust-android.png)
+    > ![「允許存取憑證」畫面的螢幕擷取畫面](./media/certificates-ready-prompt-disa-purbred-android.png)
 
-11. 如有提示允許 Intune 應用程式使用您的相機時，請點選 [允許]。
+7. 在**允許存取憑證**畫面中，您會授權 Intune 應用程式存取從 DISA Purebred 取得的衍生認證。 此步驟可確保您存取受保護的公司或學校資源時，組織能驗證您的身分識別。  
 
-12. 掃描支援智慧卡裝置上的 QR 代碼影像。
+    1. 點選 [下一步]。
 
-13. 在 [需要密碼] 畫面上，輸入出現在 QR 代碼底下的密碼。
+       > [!div class="mx-imgBorder"]
+       > ![「憑證已就緒」提示的螢幕擷取畫面](./media/certificates-access-disa-purbred-android.png)
+
+    2. 提示您**選擇憑證**時，請勿變更選取項目。 已選取正確的憑證，點選 [選取] 或 [確定] 即可。  
+
+       > [!div class="mx-imgBorder"]
+       > ![「選擇憑證」提示的螢幕擷取畫面](./media/choose-certificates-prompt-disa-purbred-android.png)
+
+    3. 因為您的衍生認證由多項憑證組成，所以可能會出現多次**選擇憑證**提示。 請重複上一個步驟，直到不再出現提示為止。  
+
+8. 處理完所有憑證之後，請等待 Intune 應用程式完成您的裝置設定。 當出現**設定完成** 畫面時，表示設定已完成。  
 
     > [!div class="mx-imgBorder"]
-    > ![公司入口網站 [需要密碼] 畫面的範例螢幕擷取畫面。](./media/password-required-entrust-android.png)  
-
-14. Intune 應用程式會開始下載，並安裝存取公司或學校資源所需的憑證。 此程序需要一些時間，視您的網際網路連線而定。 在這段期間內，請勿關閉應用程式。
-
-    > [!div class="mx-imgBorder"]
-    > ![公司入口網站之「下載及安裝憑證」畫面的範例螢幕擷取畫面](./media/install-certificates-entrust-android.png)
-
-15. 處理完所有憑證之後，請等待 Intune 應用程式完成您的裝置設定。 當出現**設定完成** 畫面時，表示設定已完成。
-
-    > [!div class="mx-imgBorder"]
-    > ![設定完成的範例螢幕擷取畫面](./media/all-set-android.png)
+    > ![「您已就緒」畫面的螢幕擷取畫面](./media/all-set-android.png)
 
 ## <a name="next-steps"></a>後續步驟
 
@@ -215,5 +216,6 @@ ms.locfileid: "83879374"
 
 * [在裝置上使用受管理的應用程式](use-managed-apps-on-your-device-android.md)  
 * [從公司入口網站網站管理應用程式](manage-apps-cpweb.md)  
+
 
 是否仍需要協助？ 請連絡您公司的支援人員。 如需連絡資訊，請查看[公司入口網站](https://go.microsoft.com/fwlink/?linkid=2010980)。

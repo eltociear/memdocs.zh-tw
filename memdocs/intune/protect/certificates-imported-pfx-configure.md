@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/22/2020
-ms.topic: conceptual
+ms.date: 05/20/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9a3e2c2a2c50f2d0fde264eedc2096d34f815a9
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 13824c82b426e1efb00dce2db7c9f4a2dd5bb9ee
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023175"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990327"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>透過 Intune 設定並使用匯入的 PKCS 憑證
 
@@ -89,7 +89,7 @@ S/MIME 加密很具挑戰性，因為電子郵件是以特定憑證加密：
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 選取 [租用戶系統管理]   > [連接器與權杖]   > [憑證連接器]   > [新增]  。
+2. 選取 [租用戶系統管理] > [連接器與權杖] > [憑證連接器] > [新增]。
 
    ![下載適用於 Microsoft Intune 的 PFX 憑證連接器](./media/certificates-imported-pfx-configure/download-imported-pfxconnector.png)
 
@@ -99,14 +99,14 @@ S/MIME 加密很具挑戰性，因為電子郵件是以特定憑證加密：
    - 當您接受預設安裝位置時，連接器會安裝到 `Program Files\Microsoft Intune\PFXCertificateConnector`。
    - 連接器服務會以本機系統帳戶執行。 如果網際網路存取需要 Proxy，請確認本機服務帳戶可以存取伺服器上的 Proxy 設定。
 
-5. 適用於 Microsoft Intune 的 PFX 憑證連接器隨即會在安裝之後開啟 [註冊]  索引標籤。 若要啟用 Intune 的連線，請 [登入]  ，並輸入具有 Azure 全域管理員或 Intune 系統管理員權限的帳戶。
+5. 適用於 Microsoft Intune 的 PFX 憑證連接器隨即會在安裝之後開啟 [註冊] 索引標籤。 若要啟用 Intune 的連線，請 [登入]，並輸入具有 Azure 全域管理員或 Intune 系統管理員權限的帳戶。
 
    > [!WARNING]
-   > 根據預設，在 Windows Server 中，[IE 增強式安全性設定]  已設定為 [開啟]  ，這可能會造成登入 Office 365 發生問題。
+   > 根據預設，在 Windows Server 中，[IE 增強式安全性設定] 已設定為 [開啟]，這可能會造成登入 Office 365 發生問題。
 
 6. 關閉視窗。
 
-7. 在 Microsoft 端點管理員系統管理中心內，返回 [租用戶系統管理]   > [連接器與權杖]   > [憑證連接器]  。 在幾分鐘後會出現綠色的核取記號，且連線狀態會更新。 連接器伺服器現在可以與 Intune 通訊。
+7. 在 Microsoft 端點管理員系統管理中心內，返回 [租用戶系統管理] > [連接器與權杖] > [憑證連接器]。 在幾分鐘後會出現綠色的核取記號，且連線狀態會更新。 連接器伺服器現在可以與 Intune 通訊。
 
 ## <a name="import-pfx-certificates-to-intune"></a>將 PFX 憑證匯入至 Intune
 
@@ -124,15 +124,15 @@ S/MIME 加密很具挑戰性，因為電子郵件是以特定憑證加密：
 
 2. 移至 `.\Intune-Resource-Access-develop\src\PFXImportPowershell\`，並透過 Visual Studio 使用 **PFXImportPS.sln** 檔案來開啟專案。
 
-3. 在頂端，從 [偵錯]  變更為 [發行]  。
+3. 在頂端，從 [偵錯] 變更為 [發行]。
 
-4. 移至 [建置]  ，然後選取 [建置 PFXImportPS]  。 幾分鐘後，您會看到 [建置成功]  確認通知出現在 Visual Studio 的左下方。
+4. 移至 [建置]，然後選取 [建置 PFXImportPS]。 幾分鐘後，就會看到 [建置成功] 確認通知出現在 Visual Studio 的左下方。
 
    ![Visual Studio [建置] 選項](./media/certificates-imported-pfx-configure/vs-build-release.png)
 
 5. 建置程序會使用位於 `.\Intune-Resource-Access-develop\src\PFXImportPowershell\PFXImportPS\bin\Release` 的 PowerShell 模組來建立新的資料夾。
 
-   您將使用此 [發行]  資料夾進行後續步驟。
+   您將使用此 [發行] 資料夾進行後續步驟。
 
 ### <a name="create-the-encryption-public-key"></a>建立加密公開金鑰
 
@@ -142,13 +142,13 @@ PowerShell 模組提供了使用 Windows 密碼編譯建立金鑰的方法。 �
 
 #### <a name="to-create-the-encryption-key-using-windows-cryptography"></a>使用 Windows 密碼編譯建立加密金鑰
 
-1. 將 Visual Studio 建立的 [發行]  資料夾複製到您安裝**適用於 Microsoft Intune 的 PFX 憑證連接器**的伺服器。 此資料夾包含 PowerShell 模組。
+1. 將 Visual Studio 建立的 [發行] 資料夾複製到您安裝**適用於 Microsoft Intune 的 PFX 憑證連接器**的伺服器。 此資料夾包含 PowerShell 模組。
 
-2. 在伺服器上，以系統管理員身分開啟 *PowerShell*，然後瀏覽至包含 PowerShell 模組的 [發行]  資料夾。
+2. 在伺服器上，以系統管理員身分開啟 *PowerShell*，然後瀏覽至包含 PowerShell 模組的 [發行] 資料夾。
 
 3. 若要匯入模組，請執行 `Import-Module .\IntunePfxImport.psd1` 來匯入模組。
 
-4. 接下來，執行 `Add-IntuneKspKey "Microsoft Software Key Storage Provider" "PFXEncryptionKey"`
+4. 接下來，執行 `Add-IntuneKspKey -ProviderName "Microsoft Software Key Storage Provider" -KeyName "PFXEncryptionKey"`
 
    > [!TIP]
    > 當您匯入 PFX 憑證時，必須再次選取您所使用的提供者。 雖然支援使用不同的提供者，但您可以使用 **Microsoft 軟體金鑰儲存體提供者**。 金鑰名稱也作為範例提供，且您可以使用您選擇的不同金鑰名稱。
@@ -183,16 +183,16 @@ PowerShell 模組提供了使用 Windows 密碼編譯建立金鑰的方法。 �
 
 1. 遵循提供者的文件，從任何憑證授權單位 (CA) 匯出憑證。  針對 Microsoft Active Directory 憑證服務，您可以使用[此範例指令碼](https://gallery.technet.microsoft.com/Export-CMPfxCertificatesFro-d55f687b)。
 
-2. 在伺服器上，以系統管理員身分開啟 *PowerShell*，然後瀏覽至包含 PowerShell 模組的 [發行]  資料夾。
+2. 在伺服器上，以系統管理員身分開啟 *PowerShell*，然後瀏覽至包含 PowerShell 模組的 [發行] 資料夾。
 
 3. 若要匯入模組，請執行 `Import-Module .\IntunePfxImport.psd1`
 
-4. 若要向 Intune Graph 進行驗證，請執行 `$authResult = Get-IntuneAuthenticationToken -AdminUserName "<Admin-UPN>"`
+4. 若要向 Intune Graph 進行驗證，請執行 `Set-IntuneAuthenticationToken  -AdminUserName "<Admin-UPN>"`
 
    > [!NOTE]
    > 當針對 Graph 執行驗證時，您必須向 AppID 提供權限。 如果這是您第一次使用此公用程式，則需要*全域系統管理員*。 Powershell Cmdlet 會使用與 [PowerShell Intune 範例](https://github.com/microsoftgraph/powershell-intune-samples) \(英文\) 搭配使用的同一個 AppID。
 
-5. 透過執行 `$SecureFilePassword = ConvertTo-SecureString -String "<PFXPassword>" -AsPlainText -Force`來針對要匯入的每個 PFX 檔案將其密碼都轉換成安全字串。
+5. 執行 `$SecureFilePassword = ConvertTo-SecureString -String "<PFXPassword>" -AsPlainText -Force` 將您要匯入的每個 PFX 檔案密碼都轉換成安全字串。
 
 6. 若要建立 **UserPFXCertificate** 物件，請執行 `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>"`
 
@@ -200,10 +200,15 @@ PowerShell 模組提供了使用 Windows 密碼編譯建立金鑰的方法。 �
 
    > [!NOTE]
    > 當您從安裝連接器的伺服器以外的系統匯入憑證時，必須使用包含金鑰檔案路徑的下列命令：`$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>" "<File path to public key file>"`
+   >
+   > 不支援使用 *VPN* 作為 IntendedPurpose。 
 
-7. 透過執行 `Import-IntuneUserPfxCertificate -AuthenticationResult $authResult -CertificateList $userPFXObject` 將 **UserPFXCertificate** 物件匯入至 Intune
 
-8. 若要驗證憑證是否已匯入，請執行 `Get-IntuneUserPfxCertificate -AuthenticationResult $authResult -UserList "<UserUPN>"`
+7. 透過執行 `Import-IntuneUserPfxCertificate -CertificateList $userPFXObject` 將 **UserPFXCertificate** 物件匯入至 Intune
+
+8. 若要驗證憑證是否已匯入，請執行 `Get-IntuneUserPfxCertificate -UserList "<UserUPN>"`
+
+9.  最佳做法是執行 `Remove-IntuneAuthenticationToken`，清除 AAD 權杖快取，不待其自行過期
 
 如需其他可用命令的詳細資訊，請參閱 [GitHub 上的 PFXImport PowerShell 專案](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell) \(英文\) 中的讀我檔案。
 
@@ -212,25 +217,25 @@ PowerShell 模組提供了使用 Windows 密碼編譯建立金鑰的方法。 �
 將憑證匯入至 Intune 之後，請建立 **PKCS 匯入憑證**設定檔，並將它指派給 Azure Active Directory 群組。
 
 > [!NOTE]
-> 建立已匯入 PKCS 的憑證設定檔之後，設定檔中的 [預期用途]  和 [金鑰儲存提供者]  (KSP) 值是唯讀的而無法編輯。 如果這兩個設定中有任何一個需要不同的值，請建立並部署新的設定檔。 
+> 建立已匯入 PKCS 的憑證設定檔之後，設定檔中的 [使用目的] 和 [金鑰儲存提供者] (KSP) 值是唯讀的且無法編輯。 如果這兩個設定中有任何一個需要不同的值，請建立並部署新的設定檔。 
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 選取並移至 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取並移至 [裝置] > [組態設定檔] > [建立設定檔]。
 
 3. 輸入下列內容：
    - **平台**：選擇您的裝置平台。
-   - **設定檔**：選取 [PKCS 匯入憑證] 
+   - **設定檔**：選取 [PKCS 匯入憑證]
 
-4. 選取 [建立]  。
+4. 選取 [建立]。
 
-5. 在 [基本資訊]  中，輸入下列內容：
+5. 在 [基本資訊] 中，輸入下列內容：
    - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，良好設定檔名稱為*適用於整家公司的 PKCS 匯入憑證設定檔*。
    - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
 
-6. 選取 [下一步]  。
+6. 選取 [下一步]。
 
-7. 在 [組態設定]  中，輸入下列內容：
+7. 在 [組態設定] 中，輸入下列內容：
 
    - **使用目的**：指定此設定檔匯入之憑證的使用目的。 系統管理員可以匯入使用目的不同 (例如 S/MIME 簽署或 S/MIME 加密) 的憑證。 憑證設定檔中選取的使用目的符合含有正確匯入憑證的憑證設定檔。 使用目的是將匯入的憑證分組的標記，並不保證使用該標記匯入的憑證會符合使用目的。  
 
@@ -239,23 +244,23 @@ PowerShell 模組提供了使用 Windows 密碼編譯建立金鑰的方法。 �
    -->
    - **金鑰儲存提供者 (KSP)** ：針對 Windows，選取要在裝置上儲存金鑰的位置。
 
-8. 選取 [下一步]  。
+8. 選取 [下一步]。
 
-9. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+9. 在 [範圍標籤] (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
 
-   選取 [下一步]  。
+   選取 [下一步]。
 
-10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
+10. 在 [指派] 中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
 
-    選取 [下一步]  。
+    選取 [下一步]。
 
-11. (*僅適用於 Windows 10*) 在 [適用性規則]  中，指定適用性規則以精簡此設定檔的指派。 您可以根據作業系統版本或裝置版本，選擇指派或不指派設定檔。
+11. (*僅適用於 Windows 10*) 在 [適用性規則] 中，指定適用性規則以精簡此設定檔的指派。 您可以根據作業系統版本或裝置版本，選擇指派或不指派設定檔。
 
     如需詳細資訊，請參閱*在 Microsoft Intune 中建立裝置設定檔*中的[適用性規則](../configuration/device-profile-create.md#applicability-rules)。
 
-    選取 [下一步]  。
+    選取 [下一步]。
 
-12. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
+12. 在 [檢閱 + 建立] 中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 ## <a name="support-for-third-party-partners"></a>協力廠商合作夥伴的支援
 

@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e44dbb8e29da829e3455121700e8901a3b3fc98
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 63000a7285b2d1d6505a739f186dc9168e7f3fca
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81007618"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853582"
 ---
 # <a name="review-client-app-protection-logs"></a>檢閱用戶端應用程式保護記錄
 
 深入了解應用程式防護記錄中您可以檢閱的設定。 藉由在行動用戶端上啟用 Intune 診斷來存取記錄。 
 
 啟用及收集記錄的流程會因平台而有所不同：
-- **iOS/iPadOS 裝置** - 使用適用於 iOS/iPadOS 的 Microsoft Edge 來收集記錄。 如需詳細資料，請參閱[透過搭配 Microsoft Intune 使用 Microsoft Edge 來管理 Web 存取](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)。 
+- **iOS/iPadOS 裝置** - 使用適用於 iOS/iPadOS 的 Microsoft Edge 來收集記錄。 如需詳細資訊，請參閱[使用 iOS 與 Android 版 Edge 來存取受控應用程式記錄檔](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs)。
 - **Windows 10 裝置** - 使用 *MDMDiag* 及事件記錄。 請參閱 Windows 用戶端管理內容中的[診斷 Windows 10 中的 MDM 失敗](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) \(部分機器翻譯\)，以及部落格[針對 Windows 10 Intune 原則失敗進行疑難排解](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) \(英文\)。
-- **Android 裝置** - 使用適用於 Android 的 Microsoft Edge 來收集記錄。 如需詳細資料，請參閱[透過搭配 Microsoft Intune 使用 Microsoft Edge 來管理 Web 存取](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)。 
+- **Android 裝置** - 使用適用於 Android 的 Microsoft Edge 來收集記錄。 如需詳細資訊，請參閱[使用 iOS 與 Android 版 Edge 來存取受控應用程式記錄檔](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs)。
 
   > [!Note]
   > 在 Android 完全受控裝置上，有時候，Intune 公司入口網站應用程式會顯示在 [所有應用程式] 底下。 未安裝或未啟動與應用程式保護原則建立關聯的應用程式時，就可能發生這種情況。 

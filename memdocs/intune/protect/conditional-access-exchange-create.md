@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/15/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36b39d20e666015ae040a1fa058dca1d167686e4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 530d6de8194a1ca74b72567c98c5d2afcb327170
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739896"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990324"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>設定 Intune 的 Exchange 內部部署存取
 
@@ -54,7 +54,7 @@ ms.locfileid: "81739896"
 
 - Intune 和 Office 365 客戶會自動啟用 Azure AD 裝置註冊服務 (DRS)。 已經部署 ADFS 裝置註冊服務的客戶，不會在其內部部署 Active Directory 中看到已註冊的裝置。 **這不適用於 Windows 電腦和 Windows Phone 裝置**。
 
-- 「符合」  部署到該裝置的合規性原則。
+- 「符合」部署到該裝置的合規性原則。
 
 - 若裝置不符合條件式存取設定，就會在使用者登入時，對使用者顯示下列其中一則訊息：
   - 如果裝置未向 Intune 註冊，或未在 Azure Active Directory 中註冊，就會顯示一則訊息，其中包含如何安裝公司入口網站應用程式、註冊裝置及啟動電子郵件的指示。 此程序也會將裝置的 Exchange ActiveSync 識別碼與 Azure Active Directory 中的裝置記錄相關聯。
@@ -66,7 +66,10 @@ ms.locfileid: "81739896"
 - **iOS/iPadOS 的原生電子郵件應用程式** - 若要建立條件式存取原則，請參閱[建立條件式存取原則](../protect/create-conditional-access-intune.md)
 - **Android 4 或更新版本的 EAS 電子郵件用戶端，如 Gmail** - 若要建立條件式存取原則，請參閱[建立條件式存取原則](../protect/create-conditional-access-intune.md)
 
+- **Android 裝置之 EAS 電子郵件用戶端的系統管理員** - 若要建立條件式存取原則，請參閱[建立條件式存取原則](../protect/create-conditional-access-intune.md)
+
 - **Android 公司設定檔裝置的 EAS 電子郵件用戶端** - Android 公司設定檔裝置只支援 *Gmail* 和 *Nine Work for Android Enterprise*。 若要搭配 Android 公司設定檔使用條件式存取，除了必須部署 *Gmail* 或 *Nine Work for Android Enterprise* 應用程式的電子郵件設定檔之外，還必須將這些應用程式部署為必要安裝。 部署應用程式之後，您可以設定裝置型條件式存取。
+
 
 #### <a name="to-set-up-conditional-access-for-android-work-profile-devices"></a>設定 Android 公司設定檔裝置的條件式存取
 
@@ -74,13 +77,13 @@ ms.locfileid: "81739896"
   
   2. 將 Gmail 或 Nine Work 應用程式部署為**必要**。
 
-  3. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  ，輸入設定檔的**名稱**和**描述**。
+  3. 選取 [裝置] > [組態設定檔] > [建立設定檔]，輸入設定檔的**名稱**和**描述**。
 
-  4. 選取 [平台]  中的 [Android 企業]  ，在 [設定檔類型]  中選取 [電子郵件]  。
+  4. 選取 [平台] 中的 [Android 企業]，在 [設定檔類型] 中選取 [電子郵件]。
 
   5. 設定[電子郵件的設定檔設定](https://docs.microsoft.com/intune/configuration/email-settings-android-enterprise#android-enterprise)。
 
-  6. 當您完成時，請選取 [確定]   > [建立]  儲存變更。
+  6. 當您完成時，請選取 [確定] > [建立] 儲存變更。
 
   7. 建立電子郵件設定檔之後，[將其指派給群組](https://docs.microsoft.com/intune/device-profile-assign)。
 
@@ -99,58 +102,58 @@ Windows 8.1 及更新版本上原生的**郵件**應用程式 (在使用 Intune 
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 移至 [租用戶系統管理]   > [Exchange 存取]  ，然後選取 [Exchange 內部部署存取]  。
+2. 移至 [租用戶系統管理] > [Exchange 存取]，然後選取 [Exchange 內部部署存取]。
 
-3. 在 [Exchange 內部部署存取]  窗格中選擇 [是]  ，以 [啟用 Exchange 內部部署存取控制]  。
+3. 在 [Exchange 內部部署存取] 窗格中選擇 [是]，以 [啟用 Exchange 內部部署存取控制]。
 
    > [!div class="mx-imgBorder"]
    > ![Exchange 內部部署存取畫面的範例螢幕擷取畫面](./media/conditional-access-exchange-create/exchange-on-premises-access.png)
 
-4. 在 [指派]  底下，選擇 [選取要納入的群組]  ，然後選取一或多個群組來設定存取。
+4. 在 [指派] 底下，選擇 [選取要納入的群組]，然後選取一或多個群組來設定存取。
 
    已將適用於 Exchange 內部部署存取的條件式存取原則套用至您所選群組的成員。 接收到此原則的使用者必須先在 Intune 中註冊其裝置，並符合合規性設定檔的規範，才能存取 Exchange 內部部署。
 
    > [!div class="mx-imgBorder"]
    > ![選取要包含的群組](./media/conditional-access-exchange-create/select-groups.png)
 
-5. 若要排除群組，請選擇 [選取要排除的群組]  ，然後選取無須註冊裝置及符合合規性設定檔規範然後才能存取 Exchange 內部部署的一或多個群組。
+5. 若要排除群組，請選擇 [選取要排除的群組]，然後選取無須註冊裝置及符合合規性設定檔規範然後才能存取 Exchange 內部部署的一或多個群組。
 
-   選取 [儲存]  以儲存您的設定，然後返回 [Exchange 存取]  窗格。
+   選取 [儲存] 以儲存您的設定，然後返回 [Exchange 存取] 窗格。
 
-6. 接下來，設定 Intune 內部部署 Exchange 連接器的設定。 在主控台中，選取 [租用戶系統管理]   > [Exchange 存取]  > [Exchange ActiveSync 內部部署連接器]  ，然後選取您要設定的 Exchange 組織連接器。
+6. 接下來，設定 Intune 內部部署 Exchange 連接器的設定。 在主控台中，選取 [租用戶系統管理] > [Exchange 存取]> [Exchange ActiveSync 內部部署連接器]，然後選取您要設定的 Exchange 組織連接器。
 
-7. 針對 [使用者通知]  ，選取 [編輯]  以開啟 [編輯組織]  工作流程，您可以在其中修改「使用者通知」  訊息。
+7. 針對 [使用者通知]，選取 [編輯] 以開啟 [編輯組織] 工作流程，您可以在其中修改「使用者通知」訊息。
 
    > [!div class="mx-imgBorder"]
    > ![針對通知編輯組織工作流程的範例螢幕擷取畫面](./media/conditional-access-exchange-create/edit-organization-user-notification.png)
 
    修改傳送給使用者的預設電子郵件訊息，這是當使用者裝置不符合規範但又想要存取 Exchange 內部部署時，會傳送給使用者的訊息。 訊息範本會使用標記語言。 您也可以在輸入時看到訊息外觀的預覽
 
-   選取 [檢閱並儲存]  ，然後選取 [儲存]  來儲存您的編輯，以完成 Exchange 內部部署存取的設定。
+   選取 [檢閱並儲存]，然後選取 [儲存] 來儲存您的編輯，以完成 Exchange 內部部署存取的設定。
 
    > [!TIP]
    > 若要深入了解標記語言，請參閱 Wikipedia 上的這篇[文章](https://en.wikipedia.org/wiki/Markup_language)。
 
-8. 接下來，選取 [進階 Exchange ActiveSync 存取設定]  以開啟 [進階 Exchange ActiveSync 存取設定]  工作流程，您可以在其中設定裝置存取規則。
+8. 接下來，選取 [進階 Exchange ActiveSync 存取設定] 以開啟 [進階 Exchange ActiveSync 存取設定] 工作流程，您可以在其中設定裝置存取規則。
 
    > [!div class="mx-imgBorder"]
    > ![針對進階設定編輯組織工作流程的範例螢幕擷取畫面](./media/conditional-access-exchange-create/edit-organization-advanced-settings.png)
 
-   - 針對 [非受控裝置存取]  ，為來自不受條件式存取或其他規則影響之裝置的存取，設定全域預設規則：
+   - 針對 [非受控裝置存取]，為來自不受條件式存取或其他規則影響之裝置的存取，設定全域預設規則：
 
      - **允許存取**：所有裝置皆可立即存取 Exchange 內部部署。 如果擁有裝置的使用者屬於您在上一個程序中設定為包含的群組，則當裝置稍後被評估為不符合合規性政策的規範或未向 Intune 註冊時，即會予以封鎖。
 
      - **封鎖存取**和**隔離**：立即封鎖所有裝置存取 Exchange 內部部署。 如果擁有裝置的使用者屬於您在上一個程序中設定為包含的群組中，則在該裝置向 Intune 註冊且評估為符合規範之後，即可存取。
 
-       「未」  執行 Samsung Knox Standard 的 Android 裝置不支援此設定，一律會遭到封鎖。
+       「未」執行 Samsung Knox Standard 的 Android 裝置不支援此設定，一律會遭到封鎖。
 
-   - 針對 [裝置平台例外]  選取 [新增]  ，然後視您的環境需要指定詳細資料。
+   - 針對 [裝置平台例外] 選取 [新增]，然後視您的環境需要指定詳細資料。
 
-      若將 [非受控裝置存取]  設定設為 [已封鎖]  ，即使已有封鎖它們的平台例外狀況，仍允許已註冊且符合規範的裝置。  
+      若將 [非受控裝置存取] 設定設為 [已封鎖]，即使已有封鎖它們的平台例外狀況，仍允許已註冊且符合規範的裝置。  
 
-9. 選取 [確定]  以儲存您的編輯。
+9. 選取 [確定] 以儲存您的編輯。
 
-10. 選取 [檢閱並儲存]  ，然後選取 [儲存]  以儲存 Exchange 條件式存取原則。
+10. 選取 [檢閱並儲存]，然後選取 [儲存] 以儲存 Exchange 條件式存取原則。
 
 ## <a name="next-steps"></a>後續步驟
 

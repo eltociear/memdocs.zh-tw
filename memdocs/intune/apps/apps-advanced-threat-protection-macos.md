@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8707b938231e682fe1cd165c207cca8e575950d4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24938f85cf85e9c5934a0e26029ec2ccfc5c33a7
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324665"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989447"
 ---
 # <a name="add-microsoft-defender-atp-to-macos-devices-using-microsoft-intune"></a>使用 Microsoft Intune 將 Microsoft Defender ATP 新增至 macOS 裝置
 
@@ -34,20 +34,20 @@ ms.locfileid: "80324665"
 - 在 Intune 中部署核心延伸模組。 如需詳細資訊，請參閱[在 Intune 中新增 macOS 核心延伸模組](../configuration/kernel-extensions-overview-macos.md)。
 
 > [!IMPORTANT]
-> 核心延伸模組只有在安裝 Microsoft Defender ATP 應用程式之前已存在於裝置上時，才能自動核准。 否則，使用者將會在 Mac 上看到「已封鎖系統延伸模組」訊息，且必須前往 [安全性喜好設定]  或 [系統喜好設定]   > [安全性與隱私]  ，然後選取 [允許]  來核准延伸模組。 如需詳細資訊，請參閱[針對 Microsoft Defender ATP for Mac 中的核心延伸模組問題進行疑難排解](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext)。
+> 核心延伸模組只有在安裝 Microsoft Defender ATP 應用程式之前已存在於裝置上時，才能自動核准。 否則，使用者將會在 Mac 上看到「已封鎖系統延伸模組」訊息，且必須前往 [安全性喜好設定] 或 [系統喜好設定] > [安全性與隱私]，然後選取 [允許] 來核准延伸模組。 如需詳細資訊，請參閱[針對 Microsoft Defender ATP for Mac 中的核心延伸模組問題進行疑難排解](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext)。
 
 ## <a name="add-microsoft-defender-atp-to-intune"></a>將 Microsoft Defender ATP 新增至 Intune
 您可以使用下列步驟，將 Microsoft Defender ATP 新增至 Intune：
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [應用程式]   > [所有應用程式]   > [新增]  。
-3. 在 [應用程式類型]  清單中的 [Microsoft Defender ATP]  下方，選取 [macOS]  。
+2. 選取 [應用程式] > [所有應用程式] > [新增]。
+3. 在 [應用程式類型] 清單中的 [Microsoft Defender ATP] 下方，選取 [macOS]。
 
 ## <a name="configure-app-information"></a>設定應用程式資訊
 在此步驟中，您要提供應用程式部署的相關資訊。 這項資訊可協助您在 Intune 中識別應用程式，並幫助使用者在公司入口網站中尋找應用程式。
 
-1. 按一下 [應用程式資訊]  以顯示 [應用程式資訊]  窗格。
-2. 在 [應用程式資訊]  窗格中，您會提供此應用程式部署的相關資訊。 這項資訊可協助您在 Intune 中識別應用程式，並幫助使用者在公司入口網站中尋找應用程式。
+1. 按一下 [應用程式資訊] 以顯示 [應用程式資訊] 窗格。
+2. 在 [應用程式資訊] 窗格中，您會提供此應用程式部署的相關資訊。 這項資訊可協助您在 Intune 中識別應用程式，並幫助使用者在公司入口網站中尋找應用程式。
     - **名稱**：輸入要顯示在公司入口網站中的應用程式名稱。 請確定所有名稱都是唯一的。 如果有重複的應用程式名稱，使用者只會在公司入口網站中看到其中一個應用程式。
     - **描述**：輸入應用程式的描述。 例如，您可以在 [描述] 中列出目標使用者。
     - **發行者**：Microsoft 會顯示為發行者。
@@ -58,17 +58,17 @@ ms.locfileid: "80324665"
     - **開發人員**：Microsoft 會顯示為開發人員。
     - **擁有者**：Microsoft 會顯示為擁有者。
     - **附註**：(選擇性) 輸入要與此應用程式建立關聯的任何附註。
-3. 選取 [確定]  。
+3. 選取 [確定]。
 
 ## <a name="select-scope-tags-optional"></a>選取範圍標籤 (選擇性)
 您可以使用範圍標籤來決定可在 Intune 中看見用戶端應用程式資訊的人員。 如需範圍標籤的完整詳細資料，請參閱針對分散式 IT 使用角色型存取控制和範圍標籤。
-1.    選取 [範圍 (標籤)]   > [新增]  。
-2.    使用 [選取]  方塊來搜尋範圍標籤。
+1.    選取 [範圍 (標籤)] > [新增]。
+2.    使用 [選取] 方塊來搜尋範圍標籤。
 3.    選取您想要指派至此應用程式之範圍標籤旁邊的核取方塊。
-4.    按一下 [選取]   > [確定]  。
+4.    按一下 [選取] > [確定]。
 
 ## <a name="add-the-app"></a>新增應用程式
-當您完成設定時，請從 [應用程式]  窗格中選取 [新增]  。 
+當您完成設定時，請從 [應用程式] 窗格中選取 [新增]。 
 
 您建立的應用程式即會顯示在應用程式清單中，而您可從中將該應用程式指派給所選的群組。 
 
@@ -76,7 +76,7 @@ ms.locfileid: "80324665"
 > 目前，Apple 未提供讓 Intune 在 macOS 裝置上解除安裝 Microsoft Defender ATP 的方法。
 
 ## <a name="next-steps"></a>後續步驟
-- 若要了解如何在 macOS 裝置上設定 Microsoft Defender ATP，請參閱[在 macOS 裝置上設定 Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-preferences)。
+- 若要了解如何在 Intune 中套用端點安全性的防毒原則，請參閱 [Intune 端點安全性的防毒原則](../protect/endpoint-security-antivirus-policy.md) 
 - 若要深入了解包含和排除使用者群組的應用程式指派，請參閱[包含與排除應用程式指派](apps-inc-exl-assignments.md)。
-- [將應用程式指派給群組](apps-deploy.md)
+- 若要了解如何在 Intune 中將應用程式指派給群組，請參閱[將應用程式指派給群組](apps-deploy.md)。
 

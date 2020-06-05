@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 05/07/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c72d2f8d9bd6a7235845863000272f605bb41089
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 1c92220fabf8d1cb2a34ac702dd4157ef848762b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943819"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990268"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>在 Intune 中建立 VPN 設定檔以連線到 VPN 伺服器
 
-虛擬私人網路 (VPN) 為使用者提供安全的組織網路遠端存取。 裝置會使用 VPN 連線設定檔來啟動與 VPN 伺服器的連線。 Microsoft Intune 中的 **VPN 設定檔**會將 VPN 設定指派給組織中的使用者與裝置，讓他們可以輕鬆且安全地連線到組織網路。
+虛擬私人網路 (VPN) 為使用者提供安全的組織網路遠端存取。 裝置會使用 VPN 連線設定檔來啟動與 VPN 伺服器的連線。 Microsoft Intune 中的 **VPN 設定檔**會將 VPN 設定指派給您組織中的使用者和裝置。 使用者使用這些設定就可以輕鬆安全地連線到您的組織網路。
 
 例如，您想要使用連線到組織網路上檔案共用所需的設定來設定所有 iOS/iPadOS 裝置。 您會建立包含這些設定的 VPN 設定檔。 接著，您需將此設定檔指派給所有擁有 iOS/iPadOS 裝置的使用者。 這些使用者會在可用的網路清單中看到此 VPN 連線，而且很輕鬆就能建立連線。
 
@@ -108,7 +108,6 @@ ms.locfileid: "82943819"
   - Android 企業工作設定檔
   - Android Enterprise 裝置擁有者 (完全受控)
   - iOS/iPadOS
-  - macOS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
@@ -132,7 +131,7 @@ ms.locfileid: "82943819"
 ## <a name="create-the-profile"></a>建立設定檔
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取 [裝置] > [組態設定檔] > [建立設定檔]。
 3. 輸入下列內容：
 
     - **平台**：選擇您的裝置平台。 選項包括：
@@ -144,16 +143,16 @@ ms.locfileid: "82943819"
       - **Windows 10 及以上版本**
       - **Windows 8.1 及更新版本**
       - **Windows Phone 8.1**
-    - **設定檔**：選取 [VPN]  。
+    - **設定檔**：選取 [VPN]。
 
-4. 選取 [建立]  。
-5. 在 [基本資訊]  中，輸入下列內容：
+4. 選取 [建立]。
+5. 在 [基本資訊] 中，輸入下列內容：
 
     - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，良好的設定檔名稱為**適用於整家公司的 VPN 設定檔**。
     - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
 
-6. 選取 [下一步]  。
-7. 在 [組態設定]  中，您可進行的設定會根據您選擇的平台而不同。 選取您的平台來進行詳細設定：
+6. 選取 [下一步]。
+7. 在 [組態設定] 中，您可進行的設定會根據您選擇的平台而不同。 選取您的平台來進行詳細設定：
 
     - [Android 裝置系統管理員](vpn-settings-android.md)
     - [Android Enterprise](vpn-settings-android-enterprise.md)
@@ -163,16 +162,16 @@ ms.locfileid: "82943819"
     - [Windows 8.1](vpn-settings-windows-8-1.md)
     - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 
-8. 選取 [下一步]  。
-9. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+8. 選取 [下一步]。
+9. 在 [範圍標籤] (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
 
-    選取 [下一步]  。
+    選取 [下一步]。
 
-10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
+10. 在 [指派] 中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
 
-    選取 [下一步]  。
+    選取 [下一步]。
 
-11. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立]  時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
+11. 在 [檢閱 + 建立] 中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 ## <a name="secure-your-vpn-profiles"></a>保護您的 VPN 設定檔
 
@@ -182,12 +181,12 @@ VPN 設定檔可以使用來自不同製造商的多種連線類型及通訊協�
 
 當您建立 VPN 設定檔時，請選擇先前在 Intune 中建立的 SCEP 或 PKCS 憑證設定檔。 這個設定檔稱為識別憑證。 此憑證可用來針對您為允許使用者裝置進行連線而建立的受信任憑證設定檔 (或*根憑證*) 進行驗證。 受信任的憑證會指派到可驗證 VPN 連線的電腦 (一般是 VPN 伺服器)。
 
-若您針對 VPN 設定檔使用以憑證為基礎的驗證，請部署 VPN 設定檔、憑證設定檔及信任的根設定檔至相同的群組，確保每個裝置都能識別您憑證授權單位的合法性。
+您的 VPN 設定檔如果使用憑證式驗證，請將 VPN 設定檔、憑證設定檔及信任的根設定檔部署至相同的群組。 此指派可確保每部裝置都能辨識您憑證授權單位單位的合法性。
 
 如需如何在 Intune 中建立及使用憑證設定檔的詳細資訊，請參閱[如何利用 Microsoft Intune 設定憑證](../protect/certificates-configure.md)。
 
 > [!NOTE]
-> VPN 驗證不支援使用 [PKCS 匯入的憑證]  設定檔類型新增的憑證。 VPN 驗證支援使用 [PKCS 憑證]  設定檔類型新增的憑證。
+> VPN 驗證不支援使用 [PKCS 匯入的憑證] 設定檔類型新增的憑證。 VPN 驗證支援使用 [PKCS 憑證] 設定檔類型新增的憑證。
 
 
 ### <a name="user-name-and-password"></a>使用者名稱和密碼

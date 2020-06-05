@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86117193ce7aae01380923ce26f84dfb5ba97a4d
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: 91683280a2e48d82fd145bf19228c33b432b6b49
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82182288"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853565"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>使用應用程式防護原則的資料保護架構 
 
@@ -55,7 +55,7 @@ Microsoft 建議 APP 資料保護架構使用下列部署更新步調方法：
 
 測試 APP 的變更時，請留意[傳遞時間](app-protection-policy-delivery.md)。 您可以監視指定使用者的 APP 傳遞狀態。 如需詳細資料，請參閱[如何監視應用程式保護原則](app-protection-policies-monitor.md)。
 
-您可以使用 Edge 和 URL *about:Intunehelp*，在裝置上驗證每個應用程式的個別 APP 設定。 如需詳細資料，請參閱[檢閱用戶端應用程式防護記錄檔](app-protection-policy-settings-log.md)和[透過搭配 Microsoft Intune 使用 Microsoft Edge 來管理 Web 存取](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)。
+您可以使用 Edge 和 URL *about:Intunehelp*，在裝置上驗證每個應用程式的個別 APP 設定。 如需詳細資訊，請參閱[檢閱用戶端應用程式保護記錄](app-protection-policy-settings-log.md)以及[使用 iOS 和 Android 版 Edge 存取受控應用程式記錄檔](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs)。
 
 ## <a name="app-data-protection-framework-settings"></a>APP 資料保護架構設定
 
@@ -140,7 +140,7 @@ Microsoft 建議先檢閱和分類使用案例，再使用該層級的規範方�
 
 層級 2 是針對使用者須存取更敏感資訊的裝置，建議作為標準的資料保護設定。 這些裝置理所當然會成為現今企業中的攻擊目標。 這些建議不會假定要有大量具備高技能的安全性從業人員配備，因此應該可供大部分企業組織使用。 此設定藉由限制資料傳輸案例，並要求最低作業系統版本，以擴充層級 1 中的設定。
 
-層級 2 中強制執行的原則設定包括層級 1 所建議所有原則設定，且只會新增或更新下列原則設定，以實作比層級 1 更多的控制和更複雜設定。 雖然這些設定可能會對使用者或應用程式造成稍微偏高的影響，但其所強制執行的資料保護層級，更適合須在行動裝置上存取敏感性資訊的高風險使用者。
+於層級 2 中強制執行的原則設定包括了建議用於層級 1 中的所有原則設定，但只會列出以下這些已新增或變更的設定，以比層級 1 有更多控制及較精確的設定。 雖然這些設定可能會對使用者或應用程式造成稍微偏高的影響，但其所強制執行的資料保護層級，更適合須在行動裝置上存取敏感性資訊的高風險使用者。
 
 #### <a name="data-protection"></a>資料保護
 
@@ -167,7 +167,7 @@ Microsoft 建議先檢閱和分類使用案例，再使用該層級的規範方�
 
 層級 3 是針對具有大型且複雜安全性小組的組織，或特別容易成為攻擊目標的特定使用者和群組，建議作為標準的資料保護設定。 這類組織通常會成為資金充裕且經驗老道的攻擊者目標，因此應受到上述更多限制和控制。 此設定藉由限制其他資料傳輸案例、提高 PIN 設定的複雜度，並新增行動威脅偵測，以擴充層級 2 中的設定。  
 
-層級 3 中強制執行的原則設定包括層級 2 和 1 所建議的所有原則設定，且只會新增或更新下列原則設定，以實作嚴格的資料保護設定和控制。 這些原則設定可能會對使用者或應用程式造成潛在重大影響，但其所強制執行的安全性層級，相當適合高風險目標組織。  
+層級 3 中強制執行的原則設定，包括層級 2 中建議的所有原則設定，但只會列出以下這些新增或變更的設定，以實作比層級 2 更多的控制和更複雜的設定。 這些原則設定可能會對使用者或應用程式造成潛在重大影響，但其所強制執行的安全性層級，相當適合高風險目標組織。  
 
 #### <a name="data-protection"></a>資料保護
 

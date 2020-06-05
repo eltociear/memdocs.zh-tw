@@ -6,7 +6,7 @@ keywords: Intune 資料倉儲
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 05/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,18 +18,49 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36944b05a12b150c15e59f145efd9fef85598a2f
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: 90d1ab0792e329616fce525cfe672c07219908b5
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881038"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165850"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Intune 資料倉儲 API 的變更記錄檔
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 保持 Intune 資料倉儲更新的最新狀態。
+
+## <a name="2004"></a>2004 
+_發行日期：2020 年 4 月_
+
+### <a name="beta-changes"></a>搶鮮版 (Beta) 變更
+
+下表列出 Intune 資料倉儲中 **device** 實體的新增屬性。
+
+|    集合                          |    變更     |    描述資訊                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    windowsOsEdition     |    已新增    |    Windows 作業系統版本。                                                                                                                                                                                                                                                                     |
+
+## <a name="2003"></a>2003 
+_發行日期：2020 年 3 月_
+
+### <a name="beta-changes"></a>搶鮮版 (Beta) 變更
+
+下表列出 Intune 資料倉儲中 **device** 實體的新增屬性。
+
+|    集合                          |    變更     |    描述資訊                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    ethernetMacAddress    |    已新增    |    此裝置的唯一網路識別碼。                                                                                                                                                                                                                                                                     |
+|    模型    |    已新增    |    裝置型號。                                                                                                                                                                                                                                                                     |
+|    office365Version    |    已新增    |    安裝於裝置上的 Office 365 版本。                                                                                                                                                                                                                                                                     |
+
+下表列出 Intune 資料倉儲中 **devicePropertyHistory** 實體的新增屬性。
+
+|    集合                          |    變更     |    描述資訊                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    physicalMemoryInBytes    |    已新增    |    實體記憶體 (以位元組為單位)。                                                                                                                                                                                                                                                                     |
+|    totalStorageSpaceInBytes     |    已新增    |    總儲存體 (以位元組為單位)。                                                                                                                                                                                                                                                                     |
 
 ## <a name="1903-part-2"></a>1903 (第 2 部分)
 _發行日期：2019 年 4 月_
@@ -43,7 +74,7 @@ _發行日期：2019 年 4 月_
 |    mobileAppDeviceUserInstallStatus    |    移除    |    請改為使用 [mobileAppInstallStatusCounts](intune-data-warehouse-collections.md#mobileappinstallstatuscounts)。                                                                                                                                                                                                                                                                     |
 |    enrollmentTypes                     |    移除    |    請改為使用 [deviceEnrollmentTypes](intune-data-warehouse-collections.md#deviceenrollmenttypes)。                                                                                                                                                                                                                                                                                      |
 |    mdmStatuses                         |    移除    |    請改為使用 [complianceStates](intune-data-warehouse-collections.md#compliancestates)。                                                                                                                                                                                                                                                                                               |
-|    workPlaceJoinStateTypes             |    移除    |    請改為使用 `azureAdRegistered`devices[ 中的 ](intune-data-warehouse-collections.md#devices) 屬性，以及 [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) 集合。                                                                                                                                                                                                             |
+|    workPlaceJoinStateTypes             |    移除    |    請改為使用 [devices](intune-data-warehouse-collections.md#devices) 中的 `azureAdRegistered` 屬性，以及 [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) 集合。                                                                                                                                                                                                             |
 |    clientRegistrationStateTypes        |    移除    |    請改為使用 [deviceRegistrationStates](intune-data-warehouse-collections.md#deviceregistrationstates)。                                                                                                                                                                                                                                                                             |
 |    currentUser                         |    移除    |    請改為使用 [users](intune-data-warehouse-collections.md#users)。                                                                                                                                                                                                                                                                                                      |
 |    mdmDeviceInventoryHistories         |    移除    |    許多屬性都是冗餘的，或是現在可在 [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) 或 [devices](intune-data-warehouse-collections.md#devices) 集合中找到。 任何尚未與這兩個集合一同列出的 **mdmDeviceInventoryHistories** 屬性都不再提供使用。 請參閱下列詳細資料。    |
@@ -189,8 +220,8 @@ _發行日期：2019 年 2 月_
 
 #### <a name="add-additional-filters-to-the-intune-compliance-app"></a>新增額外篩選至 Intune 相容性應用程式
 1. 在您的網頁瀏覽器中開啟 [Intune 相容性 (資料倉儲)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) 應用程式。
-2. 按一下 [不相容的裝置]  ，然後在 **complianceStatus** 篩選中選取 [不相容]  。
-3. 按一下 [未知的裝置]  ，然後在 **complianceStatus** 篩選中選取 [尚無法使用]  。
+2. 按一下 [不相容的裝置]，然後在 **complianceStatus** 篩選中選取 [不相容]。
+3. 按一下 [未知的裝置]，然後在 **complianceStatus** 篩選中選取 [尚無法使用]。
 
 ## <a name="1812"></a>1812 
 _發行日期：2018 年 12 月_

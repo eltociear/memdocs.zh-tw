@@ -5,24 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/02/2020
-ms.topic: conceptual
+ms.date: 05/12/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: ''
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: ''
+ms.reviewer: jieyan
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2d0d4c186dd0c703e371169fd24c2dbdabaa8ea
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 8eaa636659cb9e2382f61fb668d8aec2ecd75f7a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254838"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990187"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>在 Microsoft Intune 中透過 OEMConfig 使用和管理 Android Enterprise 裝置
 
@@ -31,6 +31,8 @@ ms.locfileid: "82254838"
 本功能適用於：  
 
 - Android 企業
+
+若要使用 Android 裝置系統管理員來管理 Zebra Technologies 裝置，請使用 [Zebra Mobile Extensions (MX)](android-zebra-mx-overview.md)。
 
 此文章說明 OEMConfig、列出先決條件、示範如何建立組態設定檔，並列出 Intune 中支援的 OEMConfig 應用程式。
 
@@ -56,7 +58,9 @@ OEMConfig 原則是特殊類型的裝置設定原則，類似[應用程式設定
 - Intune 會公開 OEMConfig 應用程式的結構描述以供您加以設定。 Intune 不會驗證或變更應用程式所提供的結構描述。 因此，如果結構描述不正確，或具有不準確的資料，此資料仍然會傳送至裝置。 如果您找到源自結構描述的問題，請連絡 OEM 以取得指引。
 - Intune 不會影響或控制應用程式結構描述的內容。 例如，Intune 無法對字串、語言、允許的動作等進行任何控制。 我們建議您連絡 OEM 以取得搭配 OEMConfig 來管理其裝置的詳細資訊。
 - OEM 隨時可以更新其支援的功能和結構描述，並上傳新的應用程式至 Google Play。 Intune 一律會從 Google Play 同步最新版本的 OEMConfig 應用程式。 Intune 不會維護結構描述或應用程式的較舊版本。 如果您遇到版本衝突，建議您連絡 OEM 以取得詳細資訊。
-- 為裝置指派單一 OEMConfig 設定檔。 如果為相同的裝置指派多個設定檔，您可能會遇到不一致的行為。 OEMConfig 模型針對每個裝置僅支援單一原則。
+- 在 Zebra 裝置上，您可以建立多個設定檔，並將其指派給相同的裝置。 如需詳細資訊，請參閱 [Zebra 裝置上的 OEMConfig](oemconfig-zebra-android-devices.md)。
+
+  非 Zebra 裝置上的 OEMConfig 模型僅支援每個裝置單一原則。 如果為相同的裝置指派多個設定檔，您可能會遇到不一致的行為。
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -64,7 +68,7 @@ OEMConfig 原則是特殊類型的裝置設定原則，類似[應用程式設定
 
 - 已在 Intune 中註冊的 Android Enterprise 裝置。
 - 由 OEM 所建置並上傳至 Google Play 的 OEMConfig 應用程式。 如果其不在 Google Play 上，請連絡 OEM 以取得詳細資訊。
-- Intune 管理員已具有 [行動應用程式]  、[裝置設定]  的角色型存取控制 (RBAC) 權限，以及 [Android for Work]  底下的「讀取」權限。 這些權限之所以為必要，是因為 OEMConfig 設定檔會使用受控應用程式設定來管理裝置設定。
+- Intune 管理員已具有 [行動應用程式]、[裝置設定] 的角色型存取控制 (RBAC) 權限，以及 [Android for Work] 底下的「讀取」權限。 這些權限之所以為必要，是因為 OEMConfig 設定檔會使用受控應用程式設定來管理裝置設定。
 
 ## <a name="prepare-the-oemconfig-app"></a>準備 OEMConfig 應用程式
 
@@ -79,28 +83,28 @@ OEMConfig 原則是特殊類型的裝置設定原則，類似[應用程式設定
 ## <a name="create-an-oemconfig-profile"></a>建立 OEMConfig 設定檔
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取 [裝置] > [組態設定檔] > [建立設定檔]。
 3. 輸入下列內容：
 
-    - **平台**：選取 [Android 企業]  。
-    - **設定檔類型**：選取 [OEMConfig]  。
+    - **平台**：選取 [Android 企業]。
+    - **設定檔**：選取 [OEMConfig]。
 
-4. 選取 [建立]  。
-5. 在 [基本資訊]  中，輸入下列內容：
+4. 選取 [建立]。
+5. 在 [基本資訊] 中，輸入下列內容：
 
     - **名稱**：為新的設定檔輸入描述性名稱。
     - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
-    - **OEMConfig 應用程式**：選擇 [選取 OEMConfig 應用程式]  。
+    - **OEMConfig 應用程式**：選擇 [選取 OEMConfig 應用程式]。
 
-6. 在 [相關聯的應用程式]  中，選取您先前所新增的現有 OEMConfig 應用程式 > [選取]  。 請務必針對您要指派原則的裝置選擇正確的 OEMConfig 應用程式。
+6. 在 [相關聯的應用程式] 中，選取您先前所新增的現有 OEMConfig 應用程式 > [選取]。 請務必針對您要指派原則的裝置選擇正確的 OEMConfig 應用程式。
 
     如果您沒有看到任何列出的應用程式，請設定 [受控的 Google Play]，然後從受控 Google Play 商店取得應用程式。 [將受控 Google Play 應用程式新增至 Android Enterprise 裝置](../apps/apps-add-android-for-work.md)會列出步驟。
 
     > [!IMPORTANT]
-    > 如果您新增 OEMConfig 應用程式並將其同步至 Google Play，但其沒有列為 [相關聯的應用程式]  ，您可能需要連絡 Intune 以將應用程式上架。 請參閱[新增應用程式](#supported-oemconfig-apps) (在此文章中)。
+    > 如果您新增 OEMConfig 應用程式並將其同步至 Google Play，但其沒有列為 [相關聯的應用程式]，您可能需要連絡 Intune 以將應用程式上架。 請參閱[新增應用程式](#supported-oemconfig-apps) (在此文章中)。
 
-7. 選取 [下一步]  。
-8. 在 [組態設定]  中，選取 [設定設計工具]  或 [JSON 編輯器]  ：
+7. 選取 [下一步]。
+8. 在 [組態設定] 中，選取 [設定設計工具] 或 [JSON 編輯器]：
 
     > [!TIP]
     > 請參閱 OEM 文件以確保您能夠正確地設定屬性。 這些應用程式屬性是由 OEM 所包含，而非 Intune。 Intune 對屬性或是您所輸入的內容會進行最低限度的驗證。 例如，如果您針對連接埠號碼輸入 `abcd`，設定檔將會直接儲存，並搭配您所設定的值部署到您的裝置。 請確定您輸入的資訊是正確的。
@@ -111,41 +115,41 @@ OEMConfig 原則是特殊類型的裝置設定原則，類似[應用程式設定
 
       - 許多設定都有由 OEM 所提供的預設值。 若要查看是否有預設值，請將滑鼠暫留在設定旁邊的資訊圖示上。 工具提示會顯示該設定的預設值 (若適用的話)，以及由 OEM 所提供的詳細資料。
 
-      - 按一下 [清除]  會從設定檔刪除設定。 如果設定不在設定檔中，套用設定檔時，其在裝置上的值將不會變更。
+      - 按一下 [清除] 會從設定檔刪除設定。 如果設定不在設定檔中，套用設定檔時，其在裝置上的值將不會變更。
 
       - 如果您在設定設計工具中建立空的 (未設定的) 配套，系統會在切換至 JSON 編輯器時加以刪除。
 
-    - **JSON 編輯器**：當您選取此選項時，JSON 編輯器即會開啟，並附帶內嵌在應用程式中的完整設定結構描述範本。 在編輯器中，搭配適用於不同設定的值自訂範本。 如果您使用 [設定設計工具]  來變更值，JSON 編輯器會使用來自 [設定設計工具] 的值覆寫範本。
+    - **JSON 編輯器**：當您選取此選項時，JSON 編輯器即會開啟，並附帶內嵌在應用程式中的完整設定結構描述範本。 在編輯器中，搭配適用於不同設定的值自訂範本。 如果您使用 [設定設計工具] 來變更值，JSON 編輯器會使用來自 [設定設計工具] 的值覆寫範本。
 
       - 如果您更新現有設定檔，JSON 編輯器會顯示最後一次搭配設定檔儲存的設定。
 
-      - OEMConfig 結構描述可能會很龐大且複雜。 如果您偏好使用不同的編輯器來更新這些設定，請選取 [下載 JSON 範本]  按鈕。 使用您偏好的編輯器來將設定值新增到範本。 然後，將您更新的 JSON 複製並貼到 [JSON 編輯器]  屬性。
+      - OEMConfig 結構描述可能會很龐大且複雜。 如果您偏好使用不同的編輯器來更新這些設定，請選取 [下載 JSON 範本] 按鈕。 使用您偏好的編輯器來將設定值新增到範本。 然後，將您更新的 JSON 複製並貼到 [JSON 編輯器] 屬性。
 
       - 您可以使用 JSON 編輯器來建立設定的備份。 在您設定好設定之後，請使用此功能來取得具有您的值的 JSON 設定。 將 JSON 複製並貼到檔案中，然後加以儲存。 您現在有備份檔案了。
 
     在設定設計工具中所做的任何變更，也會自動在 JSON 編輯器中進行。 同樣地，在 JSON 編輯器中所做的任何變更，也會自動在設定設計工具中進行。 如果您的輸入包含無效的值，便無法在設定設計工具和 JSON 編輯器之間切換，直到您修正該問題為止。
 
-9. 選取 [下一步]  。
-10. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+9. 選取 [下一步]。
+10. 在 [範圍標籤] (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
 
-    選取 [下一步]  。
+    選取 [下一步]。
 
-11. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 將一個設定檔指派到每部裝置。 OEMConfig 模型針對每個裝置僅支援單一原則。
+11. 在 [指派] 中，選取將接收您設定檔的使用者或群組。 將一個設定檔指派到每部裝置。 OEMConfig 模型針對每個裝置僅支援單一原則。
 
     如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
 
-    選取 [下一步]  。
+    選取 [下一步]。
 
-12. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立]  時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
+12. 在 [檢閱 + 建立] 中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 當裝置下一次檢查設定更新時，您所設定的 OEM 特定設定將會套用到 OEMConfig 應用程式。
 
 > [!NOTE]
-> OEMConfig 標準目前不會包含狀態報告。 因此根據預設，設定檔會顯示 [擱置]  狀態。
+> OEMConfig 標準目前不會包含狀態報告。 因此根據預設，設定檔會顯示 [擱置] 狀態。
 
 ## <a name="supported-oemconfig-apps"></a>支援的 OEMConfig 應用程式
 
-與標準應用程式相比，OEMConfig 應用程式會擴充 Google 所授與的受控設定權限，以支援更複雜的結構描述。 Intune 目前支援下列 OEMConfig 應用程式：
+與標準應用程式相比，OEMConfig 應用程式會擴充 Google 所授與的受控設定權限，以支援更複雜的結構描述和函式。 OEM 必須向 Google 註冊其 OEMConfig 應用程式。 如果您未註冊，這些功能可能無法如預期般運作。 Intune 目前支援下列 OEMConfig 應用程式：
 
 -----------------
 
@@ -153,6 +157,7 @@ OEMConfig 原則是特殊類型的裝置設定原則，類似[應用程式設定
 | --- | --- | ---|
 | Ascom | com.ascom.myco.oemconfig | |
 | Cipherlab | com.cipherlab.oemconfig | |
+| Datalogic | com.datalogic.settings.oemconfig | |
 | Honeywell | com.honeywell.oemconfig |  |
 | HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
 | HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 | 
