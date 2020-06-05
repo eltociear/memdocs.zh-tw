@@ -1,5 +1,5 @@
 ---
-title: 使用 Microsoft Intune 管理作業系統版本
+title: 使用 Intune 管理作業系統版本
 titleSuffix: Microsoft Intune
 description: 了解如何使用 Microsoft Intune 跨平台管理作業系統版本。
 keywords: ''
@@ -14,12 +14,12 @@ ms.localizationpriority: high
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c25a40d288b643c289c05322e3e2d4677afb0b60
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e4135dc90ff2739cb27ac95afa095bdfaf375d82
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362234"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330928"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>使用 Intune 管理作業系統版本
 在現代化行動和桌面平台上，主要更新、修補程式以及新版本的發行速度很快。 您有控制方法可以完全管理 Windows 上的更新和修補程式，但像是 iOS/iPadOS 和 Android 等其他平台則需要終端使用者參與這個流程。  Microsoft Intune 具有可協助在不同平台之間組織作業系統版本管理結構的功能。
@@ -79,11 +79,11 @@ Intune 應用程式保護原則與行動應用程式管理 (MAM) 存取設定，
 ## <a name="managing-a-new-operating-system-version-rollout"></a>管理新的作業系統版本推出
 您可以使用本文中所述的 Intune 功能，協助您在您定義的時間表內，讓組織移到較新的作業系統版本。 下列步驟提供範例部署模型，在七天內將您的使用者從作業系統 v1 移到作業系統 v2。
 - **步驟 1**：使用註冊限制，要求作業系統 v2 作為註冊裝置的最低版本。 這可確保新的終端使用者裝置在註冊時即符合規範。
-- **步驟 2a**：使用 Intune 應用程式保護原則在應用程式開啟或繼續時，警告使用者需要作業系統 v2。
-- **步驟 2b**： 使用裝置合規性原則，要求作業系統 v2 作為裝置要符合規範時的最低版本。 針對不相容使用 [動作]  ，以允許七天的寬限期，並傳送電子郵件通知給終端使用者，告知您的時間表和要求。
+- **步驟 2a**：使用 Intune 應用程式防護原則在應用程式開啟或繼續時，警告使用者需要作業系統 v2。
+- **步驟 2b**： 使用裝置合規性原則，要求作業系統 v2 作為裝置要符合規範時的最低版本。 針對不相容使用 [動作]，以允許七天的寬限期，並傳送電子郵件通知給終端使用者，告知您的時間表和要求。
   - 這些原則會透過電子郵件、Intune 公司入口網站，以及已啟用應用程式保護原則的應用程式開啟時通知終端使用者，需要更新現有的裝置。
   - 您可以執行合規性報告，以識別不符合規範的使用者。 
-- **步驟 3a**：使用 Intune 應用程式保護原則，當應用程式開啟或繼續時，如果裝置不在執行作業系統 v2 即封鎖使用者。
+- **步驟 3a**：使用 Intune 應用程式防護原則，當應用程式開啟或繼續時，如果裝置不在執行作業系統 v2 即封鎖使用者。
 - **步驟 3b**：使用裝置合規性原則，要求作業系統 v2 作為裝置要符合規範時的最低版本。
   - 這些原則會要求裝置更新，以便它們能繼續存取組織的資料。 與裝置條件式存取搭配使用時，即會封鎖受保護的服務。 已啟用應用程式保護原則的應用程式，會在開啟時或存取組織資料時遭到封鎖。
 

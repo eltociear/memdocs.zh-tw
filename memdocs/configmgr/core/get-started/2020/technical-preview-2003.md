@@ -19,7 +19,7 @@ ms.locfileid: "81691476"
 ---
 # <a name="features-in-configuration-manager-technical-preview-version-2003"></a>Configuration Manager Technical Preview 2003 版本的功能
 
-適用於：  Configuration Manager (Technical Preview 分支)
+適用於：Configuration Manager (Technical Preview 分支)
 
 本文介紹 Configuration Manager Technical Preview 2003 版中可用的功能。 安裝此版本進行更新，並將新功能新增到您的 Technical Preview 網站。
 

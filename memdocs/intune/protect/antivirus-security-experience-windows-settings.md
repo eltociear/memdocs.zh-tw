@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 089303b76f674d47767afdff72341d09f7f227d4
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 78cc6182cf8682935ecaa6c319e30ee8261fc2fb
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431731"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455254"
 ---
 # <a name="settings-for-the-windows-security-experience-profile-in-microsoft-intune"></a>Microsoft Intune 中 Windows 安全性體驗設定檔的設定
 
@@ -43,7 +43,7 @@ ms.locfileid: "83431731"
   - [是] - 向使用者隱藏 Windows 安全性應用程式的病毒與威脅防護區域。 隱藏病毒與威脅防護相關的通知。
 
   - **隱藏 Windows 安全性應用程式中的勒索軟體資料復原選項**  
-    CSP：[](https://go.microsoft.com/fwlink/?linkid=873664)
+    CSP：[HideRansomwareDataRecovery](https://go.microsoft.com/fwlink/?linkid=873664)
 
   - **未設定** (預設) - 此設定會還原為用戶端預設，允許使用者存取及通知。
   - [是] - 向使用者隱藏 Windows 安全性應用程式的勒索軟體資料復原區域。 隱藏勒索軟體的相關通知。
@@ -85,7 +85,7 @@ ms.locfileid: "83431731"
   - [是] - 向使用者隱藏 Windows 安全性應用程式的家長監護選項區域。 這也會隱藏家長監護選項區域的相關通知。
 
 - **Windows 安全性應用程式通知**  
-  CSP：[](https://go.microsoft.com/fwlink/?linkid=873675)
+  CSP：[DisableNotifications](https://go.microsoft.com/fwlink/?linkid=873675)
 
   使用此設定可封鎖上述所有功能設定的 Windows 安全性通知，向使用者隱藏所有設定通知。 或者，您也可以使用上述設定，依功能管理 Windows 安全性代理程式通知。
 

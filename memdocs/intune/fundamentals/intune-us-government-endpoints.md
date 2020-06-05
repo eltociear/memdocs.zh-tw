@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28454fc067a7d8ab281b92d571a872bd9e0aa2d0
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d1574e07ca58debaef5bbc134a86d76aa21778a3
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991171"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347235"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Microsoft Intune 的美國政府端點
 
@@ -36,7 +36,7 @@ ms.locfileid: "83991171"
 
 您可以修改個別用戶端電腦上的 Proxy 伺服器設定。 也可以使用群組原則設定，針對位於指定 Proxy 伺服器後方的所有用戶端電腦變更設定。
 
-受管理裝置需要進行可讓 [所有使用者]  穿過防火牆存取服務的設定。
+受管理裝置需要進行可讓 [所有使用者] 穿過防火牆存取服務的設定。
 
 如需適用於美國政府客戶的 Windows 10 自動註冊和裝置註冊的詳細資訊，請參閱[設定 Windows 裝置的註冊](../enrollment/windows-enroll.md#windows-10-auto-enrollment-and-device-registration)。
 
@@ -61,22 +61,9 @@ ms.locfileid: "83991171"
 - MS Graph：https:\//graph.microsoft.us
 - ADRS：https:\//enterpriseregistration.microsoftonline.us
 
-## <a name="windows-push-notification-services"></a>Windows 推播通知服務
-在使用行動裝置管理 (MDM) 所管理的 Intune 受控裝置上，需要有 Windows 推播通知服務 (WNS) 才能執行裝置動作與其他立即活動。 如需詳細資訊，請參閱[支援 WNS 流量的企業防火牆和 Proxy 設定](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config) ()
+[!INCLUDE [Intune notices](../includes/windows-push-notification-services.md)]
 
-## <a name="apple-device-network-information"></a>Apple 裝置網路資訊
-
-|**使用對象**|**主機名稱 (IP 位址/子網路)**|**通訊協定**|**連接埠**|
-|------------|-----------|------------|-----------|
-|擷取並顯示來自 Apple 伺服器的內容|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br>\*.phobos.itunes-apple.com.akadns.net|HTTP|80|
-|與 APNS 伺服器通訊|#-courier.push.apple.com<br>'#' 是從 0 至 50 的隨機數字。|TCP|5223 和 443|
-|各種功能，包括存取網際網路、iTunes store、macOS App Store、iCloud、傳訊等。|phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net|HTTP/HTTPS|80 或 443|
-
-如需詳細資訊，請參閱：
-
-- [Apple 軟體產品使用的 TCP 和 UDP 埠](https://support.apple.com/HT202944)
-- [關於 macOS、iOS/iPadOS 和 iTunes 伺服器主機連線與 iTunes 背景處理序](https://support.apple.com/HT201999)
-- [如果 macOS 和 iOS/iPadOS 用戶端無法取得 Apple 推播通知](https://support.apple.com/HT203609)
+[!INCLUDE [Intune notices](../includes/apple-device-network-information.md)]
 
 ## <a name="next-steps"></a>後續步驟
 [Microsoft intune 的網路端點](intune-endpoints.md)
