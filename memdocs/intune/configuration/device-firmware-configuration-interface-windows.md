@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/06/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df8f6ba6873e98663be853e134995bab640541fc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2f598a73275e257fca3ff4024641fce54c3dabd2
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79361116"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983831"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>在 Microsoft Intune 中，於 Windows 裝置上使用裝置韌體設定介面設定檔 (公開預覽)
-
-
 
 當您使用 Intune 來管理 Autopilot 裝置時，您可以使用裝置韌體設定介面 (DFCI)，在註冊之後管理 UEFI (BIOS) 設定。 如需優點、案例和必要條件的概觀，請參閱 [DFCI 概觀](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/) \(英文\)。
 
@@ -78,34 +76,38 @@ Autopilot 部署設定檔會指派給 Azure AD 安全性群組。 請務必建�
 此設定檔包含您設定的 DFCI 設定。
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取 [裝置] > [組態設定檔] > [建立設定檔]。
 3. 輸入下列內容：
+
+    - **平台**：選擇 [Windows 10 及更新版本]。
+    - **設定檔**：選取 [裝置韌體設定介面]。
+
+4. 選取 [建立]。
+5. 在 [基本資訊] 中，輸入下列內容：
 
     - **名稱**：為設定檔輸入描述性名稱。 為您的設定檔命名，以方便之後能夠輕鬆識別。 例如，一個良好的設定檔名稱是 **Windows：在 Windows 裝置上設定 DFCI 設定**。
     - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
-    - **平台**：選擇 [Windows 10 及更新版本]  。
-    - **設定檔類型**：選取 [裝置韌體設定介面]  。
 
-4. 設定這些設定：
+6. 選取 [下一步]。
+7. 在 [組態設定] 中，進行下列設定：
 
     - **允許本機使用者變更 UEFI (BIOS) 設定**：選項包括：
-      - **僅未設定的設定**：「除非」  是使用 Intune 明確設定為 [啟用]  或 [停用]  的設定，否則本機使用者可以變更任何設定。
+      - **僅未設定的設定**：「除非」是使用 Intune 明確設定為 [啟用] 或 [停用] 的設定，否則本機使用者可以變更任何設定。
       - **無**：本機使用者不能變更任何 UEFI (BIOS) 設定，包括未顯示在 DFCI 設定檔中的設定。
 
     - **CPU 與 IO 虛擬化**：選項包括：
-        - **未設定**：Intune 不會變更此功能，任何設定都會保持原狀。
+        - **未設定**：Intune 不會變更或更新此設定。
         - **啟用**：BIOS 可讓平台的 CPU 與 IO 虛擬化功能供 OS 使用。 它會開啟以 Windows 虛擬化為基礎的安全性和 Device Guard 技術。
-        - **停用**：BIOS 會停用平台 CPU 與 IO 虛擬化功能，並防止它們被使用。
     - **相機**：選項包括：
-        - **未設定**：Intune 不會變更此功能，任何設定都會保持原狀。
+        - **未設定**：Intune 不會變更或更新此設定。
         - **啟用**：啟用由 UEFI (BIOS) 管理的所有內建相機。 週邊設備 (如 USB 相機) 不受影響。
         - **Disabled**：停用由 UEFI (BIOS) 管理的所有內建相機。 週邊設備 (如 USB 相機) 不受影響。
     - **麥克風和喇叭**：選項包括：
-        - **未設定**：Intune 不會變更此功能，任何設定都會保持原狀。
+        - **未設定**：Intune 不會變更或更新此設定。
         - **啟用**：啟用由 UEFI (BIOS) 管理的所有內建式麥克風和喇叭。 週邊設備 (如 USB 裝置) 不受影響。
         - **Disabled**：停用由 UEFI (BIOS) 管理的所有內建式麥克風和喇叭。 週邊設備 (如 USB 裝置) 不受影響。
     - **無線電波 (藍牙、Wi-Fi、NFC 等等。)** ：選項包括：
-        - **未設定**：Intune 不會變更此功能，任何設定都會保持原狀。
+        - **未設定**：Intune 不會變更或更新此設定。
         - **啟用**：啟用由 UEFI (BIOS) 管理的所有內建無線電波。 週邊設備 (如 USB 裝置) 不受影響。
         - **Disabled**：停用由 UEFI (BIOS) 管理的所有內建無線電波。 週邊設備 (如 USB 裝置) 不受影響。
 
@@ -113,19 +115,31 @@ Autopilot 部署設定檔會指派給 Azure AD 安全性群組。 請務必建�
         > 如果您停用**無線電波**設定，裝置需要有線網路連線。 否則，裝置可能無法受管理。
 
     - **從外部媒體 (USB、SD) 開機**：選項包括：
-        - **未設定**：Intune 不會變更此功能，任何設定都會保持原狀。
+        - **未設定**：Intune 不會變更或更新此設定。
         - **啟用**：UEFI (BIOS) 允許從非硬碟儲存體開機。
         - **Disabled**：UEFI (BIOS) 不允許從非硬碟儲存體開機。
     - **從網路介面卡開機**：選項包括：
-        - **未設定**：Intune 不會變更此功能，任何設定都會保持原狀。
+        - **未設定**：Intune 不會變更或更新此設定。
         - **啟用**：UEFI (BIOS) 允許從內建網路介面開機。
         - **Disabled**：UEFI (BIOS) 不允許從內建網路介面開機。
 
-5. 當您完成時，請選取 [確定]   > [建立]  儲存變更。 就會建立設定檔，並顯示在清單中。
+8. 選取 [下一步]。
+
+9. 在 [範圍標籤] (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+
+    選取 [下一步]。
+
+10. 在 [指派] 中，選取將接收您設定檔的使用者或使用者群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
+
+    選取 [下一步]。
+
+11. 在 [檢閱 + 建立] 中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
+
+每部裝置下次簽入時，就會套用該原則。
 
 ## <a name="assign-the-profiles-and-reboot"></a>指派設定檔，然後重新開機
 
-建立設定檔之後，就[可以指派它](../configuration/device-profile-assign.md)。 請務必將設定檔指派給包含 DFCI 裝置的 Azure AD 安全性群組。
+請務必將設定檔[指派](../configuration/device-profile-assign.md)至包含 DFCI 裝置的 Azure AD 安全性群組。 您可以在建立設定檔時或建立設定檔之後，進行指派。
 
 當裝置執行 Windows Autopilot 時，DFCI 可能會在 [註冊狀態] 頁面中強制重新開機。 在這次重新開機期間，會向 Intune 註冊 UEFI。 
 
@@ -158,12 +172,12 @@ Autopilot 部署設定檔會指派給 Azure AD 安全性群組。 請務必建�
 
 當您準備好要淘汰裝置，並將它從管理系統釋放時，請將 DFCI 設定檔更新為您想要裝置在離開時具有的 UEFI (BIOS) 設定狀態。 您通常會想要啟用所有設定。 例如：
 
-1. 開啟您的 DFCI 設定檔 ([裝置]   > [組態設定檔]  )。
-2. 將 [允許本機使用者變更 UEFI (BIOS) 設定]  設定變更為 [僅未設定的設定]  。
-3. 將所有其他設定設定為 [未設定]  。
+1. 開啟您的 DFCI 設定檔 ([裝置] > [組態設定檔])。
+2. 將 [允許本機使用者變更 UEFI (BIOS) 設定] 設定變更為 [僅未設定的設定]。
+3. 將所有其他設定設定為 [未設定]。
 4. 儲存設定。
 
-這些步驟會將裝置的 UEFI (BIOS) 功能表解除鎖定。 這些值保持與設定檔 ([啟用]  或 [停用]  ) 的相同，不會設定為任何預設 OS 值。
+這些步驟會將裝置的 UEFI (BIOS) 功能表解除鎖定。 這些值保持與設定檔 ([啟用] 或 [停用]) 的相同，不會設定為任何預設 OS 值。
 
 您現在可以抹除裝置。 抹除裝置之後，請刪除 Autopilot 記錄。 刪除記錄可防止裝置在重新開機時自動重新註冊。
 
@@ -179,4 +193,4 @@ Autopilot 部署設定檔會指派給 Azure AD 安全性群組。 請務必建�
 
 ## <a name="next-steps"></a>後續步驟
 
-指派設定檔之後，[監視其狀態](device-profile-monitor.md)。
+[指派設定檔](device-profile-assign.md)之後，[監視其狀態](device-profile-monitor.md)。

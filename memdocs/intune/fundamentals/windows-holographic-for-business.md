@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44cae6e1e7fdd310a6053cbcb6f19371263d0161
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5a463742a9511f21a98c277394f8c0d29084d379
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326627"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791753"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>使用 Intune 在 Windows 全像攝影版和 HoloLens 上管理及使用不同的裝置管理功能
 
@@ -91,11 +91,11 @@ Intune 具有一些內建動作，可讓 IT 系統管理員執行不同的工作
 
 下列動作適用於執行 Windows Holographic for Business 的裝置： 
 
-- **[抹除](../remote-actions/devices-wipe.md#wipe)** ：[抹除]  動作會將裝置從 Intune 移除並還原為其出廠預設值。 您可以在提供裝置給新的使用者之前或裝置遺失或遭竊時，使用此動作。
+- **[抹除](../remote-actions/devices-wipe.md#wipe)** ：[抹除] 動作會將裝置從 Intune 移除並還原為其出廠預設值。 您可以在提供裝置給新的使用者之前或裝置遺失或遭竊時，使用此動作。
 
-- **[淘汰](../remote-actions/devices-wipe.md#retire)** ：[淘汰]  動作會將裝置從 Intune 移除。 它也會移除 Intune 指派的受控應用程式資料、設定和電子郵件設定檔。 使用者的個人資料仍會保留在裝置上。
+- **[淘汰](../remote-actions/devices-wipe.md#retire)** ：[淘汰] 動作會將裝置從 Intune 移除。 它也會移除 Intune 指派的受控應用程式資料、設定和電子郵件設定檔。 使用者的個人資料仍會保留在裝置上。
 
-- **[同步處理裝置以取得最新的原則和動作](../remote-actions/device-sync.md)** ：[同步]  動作會強制裝置立即向 Intune 簽入。 當裝置簽入時，會立即接收所有擱置動作或已指派的原則。 這項功能有助驗證已指派的原則並對其進行疑難排解，而不用等到下次排程的簽入才進行。
+- **[同步處理裝置以取得最新的原則和動作](../remote-actions/device-sync.md)** ：[同步] 動作會強制裝置立即向 Intune 簽入。 當裝置簽入時，會立即接收所有擱置動作或已指派的原則。 這項功能有助驗證已指派的原則並對其進行疑難排解，而不用等到下次排程的簽入才進行。
 
 **[什麼是 Microsoft Intune 裝置管理？](../remote-actions/device-management.md)** 是一篇很好的資源，可讓您了解如何使用 Azure 入口網站管理裝置。 
 
@@ -116,6 +116,8 @@ Intune 包含您可以在組織內不同裝置上啟用或停用的設定及功�
 ### <a name="custom-device-settings"></a>[自訂裝置設定](../configuration/custom-settings-windows-holographic.md)
 
 若要設定 OMA-URI (開放行動通訊聯盟統一資源識別項) 設定，您可以在 Intune 中建立自訂設定檔。 請使用 OMA-URI 設定來控制您 Windows Holographic for Business 裝置上的各種不同功能，例如啟用 VPN 或檢查 Microsoft Update 上是否有更新。
+
+請參閱使用 [Windows Defender 應用程式控制 (WDAC) CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp)，在 HoloLens 2 裝置上允許或封鎖開啟應用程式的[範例](../configuration/custom-profile-hololens.md)。
 
 ### <a name="configure-kiosk-mode"></a>[設定 kiosk 模式](../configuration/kiosk-settings-holographic.md)
 
