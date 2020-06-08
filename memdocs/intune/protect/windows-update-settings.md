@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b18af35b0e741540637ecdde74877d1058a7915
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: c6cb913d0f3d3f806a8a9a2592624b2bcf376f40
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254702"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551905"
 ---
 # <a name="windows-update-settings-for-intune"></a>適用於 Intune 的 Windows Update 設定  
 
@@ -38,7 +38,7 @@ Update 設定可控制裝置將下載的位元和時機。 如需每個設定之
 
   設定裝置接收 Windows 更新的通道 (分支)。 在更新傳遞之前，不同的通道可以使用不同的延遲期。  
 
-  例如，「半年通道」  有六個月的延遲。 如果您使用此通道，而沒有此設定主體的額外延遲，則裝置會在發行更新的六個月後安裝更新。  
+  例如，「半年通道」有六個月的延遲。 如果您使用此通道，而沒有此設定主體的額外延遲，則裝置會在發行更新的六個月後安裝更新。  
 
   支援的更新通道：  
 
@@ -52,20 +52,20 @@ Update 設定可控制裝置將下載的位元和時機。 如需每個設定之
 
 
   > [!IMPORTANT]  
-  > 從 Windows 1903 版開始，「半年通道 (已設定目標)」  (SAC-T) 已淘汰而不再使用。 隨著此變更的推出，SAC-T 與「半年通道」  合併。 若要深入了解此變更以及它如何影響商務用 Windows Update，請參閱 Windows IT 專業人員部落格文章[商務用 Windows Update 與 SAC-T 的停用](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Windows-Update-for-Business-and-the-retirement-of-SAC-T/ba-p/339523) \(英文\)。  
+  > 從 Windows 1903 版開始，「半年通道 (已設定目標)」(SAC-T) 已淘汰而不再使用。 隨著此變更的推出，SAC-T 與「半年通道」合併。 若要深入了解此變更以及它如何影響商務用 Windows Update，請參閱 Windows IT 專業人員部落格文章[商務用 Windows Update 與 SAC-T 的停用](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Windows-Update-for-Business-and-the-retirement-of-SAC-T/ba-p/339523) \(英文\)。  
  
 - **Microsoft 產品更新**  
   **預設**：允許  
   Windows Update CSP：[Update/AllowMUUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
 
-  - **允許** - 選取 [允許]  以掃描來自 Microsoft Update 的應用程式更新。  
+  - **允許** - 選取 [允許] 以掃描來自 Microsoft Update 的應用程式更新。  
   - **封鎖** - 選取 [封鎖] 以防止掃描應用程式更新。  
 
 - **Windows 驅動程式**  
   **預設**：允許  
   Windows Update CSP：[Update/ExcludeWUDriversInQualityUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)  
 
-  - **允許** - 選取 [允許]  以在更新期間包含 Windows Update 驅動程式。  
+  - **允許** - 選取 [允許] 以在更新期間包含 Windows Update 驅動程式。  
   - **封鎖** - 選取 [封鎖] 以防止掃描驅動程式。  
 
 - **品質更新延遲期間 (天)**  
@@ -114,7 +114,7 @@ Update 設定可控制裝置將下載的位元和時機。 如需每個設定之
 
   - **在維護期間自動安裝** - 當裝置未在使用中或以電池電源執行時自動下載更新，然後在自動維護期間安裝。 當需要重新啟動時，系統會在七天內持續提示使用者重新啟動，之後便會強制重新啟動。  
 
-    此選項可在更新安裝之後自動重新啟動裝置。 使用 [使用時間]  設定來定義封鎖自動重新啟動的期間：  
+    此選項可在更新安裝之後自動重新啟動裝置。 使用 [使用時間] 設定來定義封鎖自動重新啟動的期間：  
 
     - **使用中時數開始** - 指定針對因安裝更新而抑制重新啟動的開始時間。  
       **預設**：上午 8 點  
@@ -126,7 +126,7 @@ Update 設定可控制裝置將下載的位元和時機。 如需每個設定之
 
   - **在維護期間自動安裝並重新啟動**：當裝置未在使用中或以電池電源執行時自動下載更新，然後在自動維護期間安裝。 當需要重新啟動時，裝置會在未使用時重新啟動。 (這是非受控裝置的預設設定)。  
 
-    此選項可在更新安裝之後自動重新啟動裝置。 [使用時間]  設定的用法並未在 Windows Update 設定中描述，但 Intune 會用來定義封鎖自動重新啟動的期間：  
+    此選項可在更新安裝之後自動重新啟動裝置。 [使用時間] 設定的用法並未在 Windows Update 設定中描述，但 Intune 會用來定義封鎖自動重新啟動的期間：  
 
     - **使用中時數開始** - 指定針對因安裝更新而抑制重新啟動的開始時間。  
       **預設**：上午 8 點  
@@ -159,11 +159,11 @@ Update 設定可控制裝置將下載的位元和時機。 如需每個設定之
   **預設**：允許  
   Windows Update CSP：[Update/SetEDURestart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
 
-  若要在重新啟動裝置時略過這些檢查，請選取 [略過]  。 
+  若要在重新啟動裝置時略過這些檢查，請選取 [略過]。 
   
   此設定根據裝置的 Windows 版本會有不同的結果：  
  
-  - Windows 1709 版與更新版本  - 在「使用時間」期間，不會針對更新執行下列程序：掃描、下載、安裝和重新啟動。 在「使用時間」之後，只要裝置通過電池檢查和電源檢查，便會執行更新程序，且可將裝置從睡眠喚醒、掃描、下載、安裝和重新開機。 
+  - Windows 1709 版與更新版本 - 在「使用時間」期間，不會針對更新執行下列程序：掃描、下載、安裝和重新啟動。 在「使用時間」之後，只要裝置通過電池檢查和電源檢查，便會執行更新程序，且可將裝置從睡眠喚醒、掃描、下載、安裝和重新開機。 
 
 - **封鎖使用者使其無法暫停 Windows 更新**  
   **預設**：允許  
@@ -192,7 +192,7 @@ Update 設定可控制裝置將下載的位元和時機。 如需每個設定之
 
   指定要在自動重新啟動前，提前多少時間向使用者顯示有關該重新啟動的可關閉通知。 支援 **2**、**4**、**8**、**12** 或 **24** 小時的值。  
   
-  當您清除預設值時，此設定會變成 [未設定]  。  
+  當您清除預設值時，此設定會變成 [未設定]。  
 
 - **使用永久提醒，在必要的自動重新開機之前提醒使用者 (分鐘)**  
   **預設**：15  
@@ -200,7 +200,7 @@ Update 設定可控制裝置將下載的位元和時機。 如需每個設定之
 
   指定要在自動重新啟動前，提前多少時間向使用者顯示有關該重新啟動的不可關閉警告。 支援 **15**、**30** 或 **60** 分鐘的值。  
 
-  當您清除預設值時，此設定會變成 [未設定]  。  
+  當您清除預設值時，此設定會變成 [未設定]。  
 
 - **變更更新通知層級**  
   **預設**：使用預設 Windows Update 通知  
@@ -222,7 +222,7 @@ Update 設定可控制裝置將下載的位元和時機。 如需每個設定之
   - **未設定**
   - **允許**
 
-  設定為 [允許]  時，您可以設定下列期限設定：
+  設定為 [允許] 時，您可以設定下列期限設定：
 
   - **功能更新的期限**  
     **預設**：*未設定*  
@@ -237,7 +237,7 @@ Update 設定可控制裝置將下載的位元和時機。 如需每個設定之
     指定使用者在其裝置上自動安裝品質更新之前的天數 (2-30)。
 
   - **寬限期**  
-    **預設**：未設定  Windows Update CSP：[Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+    **預設**：未設定 Windows Update CSP：[Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
     指定在期限之後直到自動重新啟動之間的天數下限 (2-7)。
 
@@ -250,6 +250,6 @@ Update 設定可控制裝置將下載的位元和時機。 如需每個設定之
 
 ### <a name="delivery-optimization-download-mode"></a>傳遞最佳化下載模式  
 
-[傳遞最佳化] 不再是 [軟體更新] 下 [Windows 10 更新通道] 的其中一項設定。 現在會透過裝置設定來設定傳遞最佳化。 不過，您仍然可以在主控台中使用先前的設定。 您可以將先前的設定編輯為「未設定」  來移除這些設定，但無法修改這些設定。 
+傳遞最佳化不再是軟體更新下 Windows 10 更新通道的其中一項設定。 現在會透過裝置設定來設定傳遞最佳化。 不過，您仍然可以在主控台中使用先前的設定。 您可以將先前的設定編輯為「未設定」來移除這些設定，但無法修改這些設定。 
 
-若要避免新原則與舊原則之間的衝突，請參閱[從 Windows 10 更新通道移除傳遞最佳化](../configuration/delivery-optimization-windows.md#remove-delivery-optimization-from-windows-10-update-rings)，然後將您的設定移至傳遞最佳化設定檔。
+若要避免新舊原則之間的衝突，請參閱[從 Windows 10 更新通道移除傳遞最佳化](../configuration/delivery-optimization-windows.md#remove-delivery-optimization-from-windows-10-update-rings)，然後將您的設定移至傳遞最佳化設定檔。
