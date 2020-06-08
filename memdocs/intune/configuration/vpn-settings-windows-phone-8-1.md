@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df05c4b1a7a5ee3f30d33e40620a8a116f508333
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9cf69afb3db3e7250f8bf491efbfb3ff64dc32ec
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086489"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556297"
 ---
 # <a name="add-vpn-settings-on-windows-phone-81-devices-in-microsoft-intune"></a>Microsoft Intune 中新增 Windows Phone 8.1 裝置的 VPN 設定
 
@@ -37,18 +37,18 @@ ms.locfileid: "80086489"
 
 ## <a name="base-vpn-settings"></a>基本 VPN 設定
 
-- **僅將所有設定套用至 Windows Phone 8.1**：在傳統 Intune 入口網站中進行此設定。 這項設定無法在 Microsoft 端點管理員系統管理中心內變更。 當設定為 [已設定]  時，則所有設定將只會套用到 Windows Phone 8.1 裝置。 當設定為 [未設定]  時，則這些設定也會套用到 Windows 10 行動裝置版裝置。
+- **僅將所有設定套用至 Windows Phone 8.1**：在傳統 Intune 入口網站中進行此設定。 這項設定無法在 Microsoft 端點管理員系統管理中心內變更。 當設定為 [已設定] 時，則所有設定將只會套用到 Windows Phone 8.1 裝置。 當設定為 [未設定] 時，則這些設定也會套用到 Windows 10 行動裝置版裝置。
 - **連線名稱**：輸入此連線的名稱。 使用者瀏覽其裝置的可用 VPN 連線清單時，會看到此名稱。
 - **驗證方法**：從下列方式中選擇裝置向 VPN 伺服器進行驗證的方式︰
-  - **憑證**：從 [驗證憑證]  下選擇先前建立用於驗證連線的 SCEP 或 PKCS 憑證設定檔。 如需憑證設定檔的詳細資訊，請參閱[如何設定憑證](../protect/certificates-configure.md)。
+  - **憑證**：從 [驗證憑證] 下選擇先前建立用於驗證連線的 SCEP 或 PKCS 憑證設定檔。 如需憑證設定檔的詳細資訊，請參閱[如何設定憑證](../protect/certificates-configure.md)。
   - **使用者名稱和密碼**：終端使用者必須提供使用者名稱和密碼才能登入 VPN 伺服器。
 - **伺服器**：新增裝置要連線的一或多部 VPN 伺服器。
-  - **新增**：開啟 [加入資料列]  刀鋒視窗指定下列資訊︰
+  - **新增**：開啟 [加入資料列] 刀鋒視窗指定下列資訊︰
     - **描述**：為伺服器指定描述性名稱，例如 **Contoso VPN 伺服器**。
     - **IP 位址或 FQDN**：提供裝置要連線之 VPN 伺服器的 IP 位址或完整網域名稱。 範例：**192.168.1.1**、**vpn.contoso.com**。
     - **預設伺服器**：啟用此伺服器作為裝置用來建立連線的預設伺服器。 您只可設定一部預設伺服器。
-  - **匯入**：瀏覽至內含伺服器清單並以逗點分隔的檔案 (格式為：描述, IP 位址或 FQDN, 預設伺服器)。 選擇 [確定]  ，以將這些伺服器匯入**伺服器**清單。
-  - [匯出]  ：將伺服器清單匯出成逗點分隔值 (csv) 檔案。
+  - **匯入**：瀏覽至內含伺服器清單並以逗點分隔的檔案 (格式為：描述, IP 位址或 FQDN, 預設伺服器)。 選擇 [確定]，以將這些伺服器匯入**伺服器**清單。
+  - [匯出]：將伺服器清單匯出成逗點分隔值 (csv) 檔案。
 
 - **在公司 Wi-Fi 網路上不要使用 VPN**：啟用此選項可指定當裝置連線到公司 Wi-Fi 網路時不要使用 VPN 連線。
 - **使用家用 Wi-Fi 網路時不要使用 VPN**：啟用此選項可指定當裝置連線到家用 Wi-Fi 網路時不要使用 VPN 連線。
@@ -93,12 +93,12 @@ ms.locfileid: "80086489"
 
   如需撰寫自訂 XML 命令的詳細資訊，請參閱製造商的 VPN 文件。
 
-- **分割通道**：[啟用]  可讓裝置依據流量決定要使用的連線。 例如，旅館中的使用者使用 VPN 連線存取工作檔案，但使用旅館的標準網路進行一般的網頁瀏覽。 如果您想要在 VPN 連線為使用中時強制所有流量使用 VPN 通道，則設定為 [停用]  。
+- **分割通道**：[啟用] 可讓裝置依據流量決定要使用的連線。 例如，旅館中的使用者使用 VPN 連線存取工作檔案，但使用旅館的標準網路進行一般的網頁瀏覽。 如果您想要在 VPN 連線為使用中時強制所有流量使用 VPN 通道，則設定為 [停用]。
 
 ## <a name="proxy-settings"></a>Proxy 設定
 
 - **自動偵測 Proxy 設定**：如果您的 VPN 伺服器進行連線時需要 Proxy 伺服器，請指定是否要裝置自動偵測連線設定。
-- **自動設定指令碼**：使用檔案設定 Proxy 伺服器。 輸入包含組態設定檔的 [Proxy 伺服器 URL]  (例如 `http://proxy.contoso.com`)。
+- **自動設定指令碼**：使用檔案設定 Proxy 伺服器。 輸入包含組態設定檔的 [Proxy 伺服器 URL] (例如 `http://proxy.contoso.com`)。
 - **使用 Proxy 伺服器**：若要手動輸入 Proxy 伺服器設定，可啟用此選項。
   - **位址**：輸入 Proxy 伺服器位址 (例如 IP 位址)。
   - **連接埠號碼**：輸入與 Proxy 伺服器相關聯的連接埠號碼。
@@ -106,6 +106,6 @@ ms.locfileid: "80086489"
 
 ## <a name="next-steps"></a>後續步驟
 
-設定檔已建立，但還不會執行任何動作。 接下來，[指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
+[指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
 
 在 [Android](vpn-settings-android.md)、[Android Enterprise](vpn-settings-android-enterprise.md)、[macOS](vpn-settings-macos.md) 與 [Windows 10](vpn-settings-windows-10.md) 裝置上設定 VPN 設定。

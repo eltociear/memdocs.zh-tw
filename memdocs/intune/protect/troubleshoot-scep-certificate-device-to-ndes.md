@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/30/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53f33b659e45720dc84b7c38ca54fec0e3768a60
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: b35011577b6c5882a2f136d9b6d321b182c2be6a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126091"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991089"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>在 Microsoft Intune 中針對 SCEP 憑證設定檔的裝置對 NDES 伺服器通訊進行疑難排解
 
@@ -110,13 +110,13 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 ### <a name="windows-devices"></a>Windows 裝置
 
-在連線到 NDES 的 Windows 裝置上，您可以檢視裝置的 Windows 事件檢視器，並尋找成功連線的跡象。 系統會在裝置的 [DeviceManagement-Enterprise-Diagnostics-Provide]   > [管理員]  記錄中，將連線記錄為事件識別碼 **36**。
+在連線到 NDES 的 Windows 裝置上，您可以檢視裝置的 Windows 事件檢視器，並尋找成功連線的跡象。 系統會在裝置的 [DeviceManagement-Enterprise-Diagnostics-Provide] > [管理員] 記錄中，將連線記錄為事件識別碼 **36**。
 
 若要開啟記錄：
 
 1. 在裝置上，執行 **eventvwr.msc** 以開啟 Windows 事件檢視器。
 
-2. 展開 [應用程式及服務記錄檔]   > [Microsoft]   > [Windows]   > [DeviceManagement-Enterprise-Diagnostic-Provider]   > [管理員]  。
+2. 展開 [應用程式及服務記錄檔] > [Microsoft] > [Windows] > [DeviceManagement-Enterprise-Diagnostic-Provider] > [管理員]。
 
 3. 尋找事件 **36**，其類似於下列範例，並具有 **SCEP:Certificate request generated successfully** (SCEP: 成功產生憑證要求) 的關鍵行：
 
@@ -137,7 +137,7 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 ### <a name="status-code-500"></a>狀態碼 500
 
-類似下列範例且狀態碼為 500 的連線，表示 [在驗證後模擬用戶端]  使用者權限並未指派給 NDES 伺服器上的 IIS_IURS 群組。 狀態值 **500** 會出現在結尾：
+類似下列範例且狀態碼為 500 的連線，表示 [在驗證後模擬用戶端] 使用者權限並未指派給 NDES 伺服器上的 IIS_IURS 群組。 狀態值 **500** 會出現在結尾：
 
 ```
 2017-08-08 20:22:16 IP_address GET /certsrv/mscep/mscep.dll operation=GetCACert&message=SCEP%20Authority 443 - 10.5.14.22 profiled/1.0+CFNetwork/811.5.4+Darwin/16.6.0 - 500 0 1346 31
@@ -147,13 +147,13 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 1. 在 NDES 伺服器上，執行 **secpol.msc** 以開啟本機安全性原則。
 
-2. 展開 [本機原則]  ，然後按一下 [使用者權限指派]  。
+2. 展開 [本機原則]，然後按一下 [使用者權限指派]。
 
-3. 按兩下右窗格中的 [在驗證後模擬用戶端]  。
+3. 按兩下右窗格中的 [在驗證後模擬用戶端]。
 
-4. 按一下 [新增使用者或群組]  ，在 [輸入物件名稱來選取]  方塊中輸入 **IIS_IURS**，然後按一下 [確定]  。
+4. 按一下 [新增使用者或群組]，在 [輸入物件名稱來選取] 方塊中輸入 **IIS_IURS**，然後按一下 [確定]。
 
-5. 按一下 [確定]  。
+5. 按一下 [確定]。
 
 6. 重新啟動電腦，然後再次嘗試從裝置進行連線。
 
@@ -161,9 +161,9 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 使用下列步驟來測試於 SCEP 憑證設定檔中指定的 URL。
 
-1. 在 Intune 中，編輯您的 SCEP 憑證設定檔並複製伺服器 URL。 URL 應該類似 *https://contoso.com/certsrv/mscep/mscep.dll* 。
+1. 在 Intune 中，編輯您的 SCEP 憑證設定檔並複製伺服器 URL。 URL 應該會類似 `https://contoso.com/certsrv/mscep/mscep.dll`。
 
-2. 開啟網頁瀏覽器，然後瀏覽到該 SCEP 伺服器 URL。 結果應該如下：「HTTP 錯誤 403.0 – 禁止」  。 此結果指出 URL 正常運作。
+2. 開啟網頁瀏覽器，然後瀏覽到該 SCEP 伺服器 URL。 結果應該如下：「HTTP 錯誤 403.0 – 禁止」。 此結果指出 URL 正常運作。
 
    如果您沒有接收到該錯誤，請選取類似您所看到錯誤的連結，以檢視問題特定的指導方針：
    - [我接收到一般網路裝置註冊服務訊息](#general-ndes-message)
@@ -198,11 +198,11 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 ![HTTP 錯誤 503。 服務無法使用](../protect/media/troubleshoot-scep-certificate-device-to-ndes/service-unavailable.png)
 
-此問題通常是因為 IIS 中的 **SCEP** 應用程式集區並未啟動。 在 NDES 伺服器上，開啟 [IIS 管理員]  並移至 [應用程式集區]  。 找出 **SCEP** 應用程式集區並確認其已啟動。
+此問題通常是因為 IIS 中的 **SCEP** 應用程式集區並未啟動。 在 NDES 伺服器上，開啟 [IIS 管理員] 並移至 [應用程式集區]。 找出 **SCEP** 應用程式集區並確認其已啟動。
 
 如果 SCEP 應用程式集區未啟動，請檢查伺服器上的應用程式事件記錄：
 
-1. 在裝置上，執行 **eventvwr.msc** 以開啟 [事件檢視器]  ，然後移至 [Windows 記錄]   > [應用程式]  。
+1. 在裝置上，執行 **eventvwr.msc** 以開啟 [事件檢視器]，然後移至 [Windows 記錄] > [應用程式]。
 
 2. 尋找類似下列範例的事件，這代表應用程式集區在接收到要求時損毀：
 
@@ -226,20 +226,20 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
   
   若要識別「信任的根憑證授權單位」憑證存放區中的所有中繼憑證，請執行下列 PowerShell Cmdlet：`Get-Childitem -Path cert:\LocalMachine\root -Recurse | Where-Object {$_.Issuer -ne $_.Subject}`
 
-  擁有相同 [發行給]  和 [發行者]  值的憑證是根憑證。 否則，其便是中繼憑證。
+  擁有相同 [發行給] 和 [發行者] 值的憑證是根憑證。 否則，其便是中繼憑證。
 
   在移除憑證並重新啟動伺服器之後，請再次執行 PowerShell Cmdlet 以確認沒有中繼憑證。 如果有，請檢查是否有群組原則會將中繼憑證推送至 NDES 伺服器。 如果是，請從群組原則排除 NDES 伺服器，然後再次移除中繼憑證。
 
 - **原因 2**：憑證撤銷清單 (CRL) 中的 URL 已被封鎖，或是無法由 Intune 憑證連接器所使用的憑證所存取。
 
   **解決方案**：啟用其他記錄以收集更多資訊：
-  1. 開啟 [事件檢視器]，按一下 [檢視]  ，確定已選取 [顯示分析與偵錯記錄檔]  選項。
-  2. 移至 [應用程式及服務記錄檔]   > [Microsoft]   > [Windows]   > [CAPI2]   > [操作]  ，以滑鼠右鍵按一下 [操作]  ，然後按一下 [啟用記錄]  。
+  1. 開啟 [事件檢視器]，按一下 [檢視]，確定已選取 [顯示分析與偵錯記錄檔] 選項。
+  2. 移至 [應用程式及服務記錄檔] > [Microsoft] > [Windows] > [CAPI2] > [操作]，以滑鼠右鍵按一下 [操作]，然後按一下 [啟用記錄]。
   3. 在啟用 CAPI2 記錄之後，請重新產生該問題，並檢視事件記錄以對問題進行疑難排解。
 
-- **原因 3**：[CertificateRegistrationSvc]  上的 IIS 權限已啟用 [Windows 驗證]  。
+- **原因 3**：[CertificateRegistrationSvc] 上的 IIS 權限已啟用 [Windows 驗證]。
 
-  **解決方案**：啟用 [匿名驗證]  並停用 [Windows 驗證]  ，然後重新啟動 NDES 伺服器。
+  **解決方案**：啟用 [匿名驗證] 並停用 [Windows 驗證]，然後重新啟動 NDES 伺服器。
 
   ![IIS 權限](../protect/media/troubleshoot-scep-certificate-device-to-ndes/iis-permissions.png)
 
@@ -262,9 +262,9 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 ![Gatewaytimeout 錯誤](../protect/media/troubleshoot-scep-certificate-device-to-ndes/gateway-timeout.png)
 
-- **原因**：未啟動 [Microsoft AAD 應用程式 Proxy 連接器]  服務。
+- **原因**：未啟動 [Microsoft AAD 應用程式 Proxy 連接器] 服務。
 
-  **解決方案**：執行 **services.msc**，然後確定 [Microsoft AAD 應用程式 Proxy 連接器]  服務正在執行，且 [啟動類型]  已設定為 [自動]  。
+  **解決方案**：執行 **services.msc**，然後確定 [Microsoft AAD 應用程式 Proxy 連接器] 服務正在執行，且 [啟動類型] 已設定為 [自動]。
 
 #### <a name="http-414-request-uri-too-long"></a>HTTP 414 要求 - URI 太長
 
@@ -274,13 +274,13 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 - **解決方案**：設定長 URL 的支援。
 
-  1. 在 NDES 伺服器上開啟 [IIS 管理員]，選取 [預設的網站]   > [要求篩選]   > [編輯功能設定]  以開啟 [編輯要求篩選設定]  頁面。
+  1. 在 NDES 伺服器上開啟 [IIS 管理員]，選取 [預設的網站] > [要求篩選] > [編輯功能設定] 以開啟 [編輯要求篩選設定] 頁面。
 
   2. 進行以下設定：
      - **URL 長度上限 (位元組)** = 65534
      - **查詢字串上限 (位元組)** = 65534
 
-  3. 選取 [確定]  以儲存這項設定並關閉 IIS 管理員。
+  3. 選取 [確定] 以儲存這項設定並關閉 IIS 管理員。
 
   4. 找出下列登錄機碼以確認其具有指出的值來驗證此設定：
 
@@ -318,49 +318,49 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
   若要要求新的憑證，請遵循這些步驟：
 
-  1. 在憑證授權單位 (CA) 或發行 CA 上，開啟 [憑證範本] MMC。 確定已登入的使用者和 NDES 伺服器具有 CEP 加密和 Exchange 註冊代理程式 (離線要求) 憑證範本的 [讀取]  和 [註冊]  權限。
+  1. 在憑證授權單位 (CA) 或發行 CA 上，開啟 [憑證範本] MMC。 確定已登入的使用者和 NDES 伺服器具有 CEP 加密和 Exchange 註冊代理程式 (離線要求) 憑證範本的 [讀取] 和 [註冊] 權限。
 
-  2. 檢查 NDES 伺服器上的過期憑證，從憑證中複製 [主體]  資訊。
+  2. 檢查 NDES 伺服器上的過期憑證，從憑證中複製 [主體] 資訊。
 
-  3. 開啟 [電腦帳戶]  的 [憑證] MMC。
+  3. 開啟 [電腦帳戶] 的 [憑證] MMC。
 
-  4. 展開 [個人]  ，以滑鼠右鍵按一下 [憑證]  ，然後選取 [所有工作]   > [要求新憑證]  。
+  4. 展開 [個人]，以滑鼠右鍵按一下 [憑證]，然後選取 [所有工作] > [要求新憑證]。
 
-  5. 在 [要求憑證]  頁面上，選取 [CEP 加密]  ，然後按一下 [需要更多資訊才能註冊此憑證。**請按一下此處以設定設定值。]** 。
+  5. 在 [要求憑證] 頁面上，選取 [CEP 加密]，然後按一下 [需要更多資訊才能註冊此憑證。**請按一下此處以設定設定值。]** 。
 
      ![選取 CEP 加密](../protect/media/troubleshoot-scep-certificate-device-to-ndes/select-scep-encryption.png)
 
-  6. 在 [憑證內容]  中，按一下 [主體]  索引標籤，以您在步驟 2 期間所收集的資訊填入 [主體名稱]  ，按一下 [新增]  ，然後按一下 [確定]  。
+  6. 在 [憑證內容] 中，按一下 [主體] 索引標籤，以您在步驟 2 期間所收集的資訊填入 [主體名稱]，按一下 [新增]，然後按一下 [確定]。
 
   7. 完成憑證註冊。
 
-  8. 開啟 [我的使用者帳戶]  的 [憑證] MMC。
+  8. 開啟 [我的使用者帳戶] 的 [憑證] MMC。
 
-     當您註冊 Exchange 註冊代理程式 (離線要求) 憑證時，必須在使用者內容中加以完成。 因為此憑證範本的 [主體類型]  已設定為 [使用者]  。
+     當您註冊 Exchange 註冊代理程式 (離線要求) 憑證時，必須在使用者內容中加以完成。 因為此憑證範本的 [主體類型] 已設定為 [使用者]。
 
-  9. 展開 [個人]  ，以滑鼠右鍵按一下 [憑證]  ，然後選取 [所有工作]   > [要求新憑證]  。
+  9. 展開 [個人]，以滑鼠右鍵按一下 [憑證]，然後選取 [所有工作] > [要求新憑證]。
 
-  10. 在 [要求憑證]  頁面上，選取 [Exchange 註冊代理程式 (離線要求)]  ，然後按一下 [需要更多資訊才能註冊此憑證。**請按一下此處以設定設定值。]** 。
+  10. 在 [要求憑證] 頁面上，選取 [Exchange 註冊代理程式 (離線要求)]，然後按一下 [需要更多資訊才能註冊此憑證。**請按一下此處以設定設定值。]** 。
 
       ![選取 Exchange 註冊代理程式](../protect/media/troubleshoot-scep-certificate-device-to-ndes/select-exchange-enrollment-agent.png)
 
-  11. 在 [憑證內容]  中，按一下 [主體]  索引標籤，以您在步驟 2 期間所收集的資訊填入 [主體名稱]  ，按一下 [新增]  。
+  11. 在 [憑證內容] 中，按一下 [主體] 索引標籤，以您在步驟 2 期間所收集的資訊填入 [主體名稱]，按一下 [新增]。
 
       ![憑證內容](../protect/media/troubleshoot-scep-certificate-device-to-ndes/certificate-properties.png)
 
-      選取 [私密金鑰]  索引標籤，選取 [可匯出私密金鑰]  ，然後按一下 [確定]  。
+      選取 [私密金鑰] 索引標籤，選取 [可匯出私密金鑰]，然後按一下 [確定]。
 
       ![私密金鑰](../protect/media/troubleshoot-scep-certificate-device-to-ndes/private-key.png)
 
   12. 完成憑證註冊。
 
-  13. 從目前使用者的憑證存放區中匯出 Exchange 註冊代理程式 (離線要求) 憑證。 在 [憑證匯出精靈] 中，選取 [是，匯出私密金鑰]  。
+  13. 從目前使用者的憑證存放區中匯出 Exchange 註冊代理程式 (離線要求) 憑證。 在 [憑證匯出精靈] 中，選取 [是，匯出私密金鑰]。
 
   14. 將憑證匯入至本機電腦的憑證存放區。
 
   15. 在 [憑證] MMC 中，針對每個新憑證執行下列動作：
 
-      以滑鼠右鍵按一下憑證，按一下 [所有工作]   > [管理私密金鑰]  ，將 [讀取]  權限新增至 NDES 服務帳戶。
+      以滑鼠右鍵按一下憑證，按一下 [所有工作] > [管理私密金鑰]，將 [讀取] 權限新增至 NDES 服務帳戶。
 
   16. 執行 **iisreset** 命令來重新啟動 IIS。
 

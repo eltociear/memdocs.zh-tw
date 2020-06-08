@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 08/17/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4da13b77b52a8110072dcba208b70d1ce0407cbb
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: c1bbcfc953945f7e8525cb7dc7edf3b1dd8a2f5c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077983"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989070"
 ---
 # <a name="set-enrollment-restrictions"></a>設定註冊限制
 
@@ -59,12 +59,12 @@ ms.locfileid: "82077983"
 
 ## <a name="create-a-device-type-restriction"></a>建立裝置類型限制
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > [裝置]   > [註冊限制]   > [建立限制]   > [裝置類型限制]  。
-2. 在 [基本]  頁面上，為限制提供 [名稱]  與選擇性的 [描述]  。
-3. 選擇 [下一步]  以移至 [平台設定]  頁面。
-4. 在 [平台]  底下，針對您想要此限制允許的平台，選擇 [允許]  。
+1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > [裝置] > [註冊限制] > [建立限制] > [裝置類型限制]。
+2. 在 [基本] 頁面上，為限制提供 [名稱] 與選擇性的 [描述]。
+3. 選擇 [下一步] 以移至 [平台設定] 頁面。
+4. 在 [平台] 底下，針對您想要此限制允許的平台，選擇 [允許]。
     ![選擇平台設定的螢幕擷取畫面](./media/enrollment-restrictions-set/choose-platform-settings.png)
-5. 在 [版本]  底下，選擇您希望可允許平台支援的最低與最高版本。 版本限制僅適用於已向公司入口網站註冊的裝置。
+5. 在 [版本] 底下，選擇您希望可允許平台支援的最低與最高版本。 版本限制僅適用於已向公司入口網站註冊的裝置。
      支援的版本格式包含：
     - Android 裝置管理員與 Android Enterprise 工作設定檔支援 major.minor.rev.build。
     - iOS/iPadOS 支援 major.minor.rev。作業系統版本不適用於以裝置註冊計劃、Apple School Manager 或 Apple Configurator 應用程式註冊的 Apple 裝置。
@@ -81,29 +81,33 @@ ms.locfileid: "82077983"
    > [!Note]
    > Windows 10 不會在註冊期間提供修訂編號，所以舉例來說，如果您輸入 10.0.17134.100 而裝置為 10.0.17134.174，則裝置在註冊期間將會被封鎖。
 
-6. 在 [個人所擁有]  底下，針對您想要允許作為個人擁有裝置的平台，選擇 [允許]  。
-7. 在 [裝置製造商]  下，輸入您要封鎖的製造商清單 (以逗號分隔)。
-8. 選擇 [下一步]  以移至 [指派]  頁面。
-9. 選擇 [選取要納入的群組]  ，然後使用搜尋方塊來尋找您想要納入此限制的群組。 限制只適用於指派的群組。 如果限制不指派給至少一個群組，就不會產生任何效果。 然後選擇 [選取]  。 
+6. 在 [個人所擁有] 底下，針對您想要允許作為個人擁有裝置的平台，選擇 [允許]。
+7. 在 [裝置製造商] 下，輸入您要封鎖的製造商清單 (以逗號分隔)。
+8. 選擇 [下一步] 以移至 [範圍標籤] 頁面。
+9. 在 [範圍標籤] 頁面上，您可以選擇性地新增您想要套用到此限制的範圍標籤。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用角色型存取控制和範圍標籤](../fundamentals/scope-tags.md)。 為註冊限制套用範圍標籤時，使用者只能為其已套用範圍的原則重新排序。 此外，使用者也只能為其已套用範圍的原則位置重新排序。 使用者在每個原則上都會看到真實的原則優先順序號碼。 受範圍所限制的使用者即使無法看到所有其他原則，也可以分辨其原則的相對優先順序。
+10. 選擇 [下一步] 以移至 [指派] 頁面。
+11. 選擇 [選取要納入的群組]，然後使用搜尋方塊來尋找您想要納入此限制的群組。 限制只適用於指派的群組。 如果限制不指派給至少一個群組，就不會產生任何效果。 然後選擇 [選取]。 
     ![選擇平台設定的螢幕擷取畫面](./media/enrollment-restrictions-set/select-groups.png)
-10. 選取 [下一步]  以移至 [檢閱 + 建立]  頁面。
-11. 選取 [建立]  以建立限制。
-12. 新建立的限制優先順序剛好在預設值前。 您可以[變更優先順序](#change-enrollment-restriction-priority)。
+12. 選取 [下一步] 以移至 [檢閱 + 建立] 頁面。
+13. 選取 [建立] 以建立限制。
+14. 新建立的限制優先順序剛好在預設值前。 您可以[變更優先順序](#change-enrollment-restriction-priority)。
 
 
 ## <a name="create-a-device-limit-restriction"></a>建立裝置限制的限制
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > [裝置]   > [註冊限制]   > [建立限制]   > [裝置限制的限制]  。
-2. 在 [基本]  頁面上，為限制提供 [名稱]  與選擇性的 [描述]  。
-3. 選擇 [下一步]  以移至 [裝置限制]  頁面。
-4. 針對 [裝置限制]  ，選取使用者可以註冊的裝置數目上限。
+1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > [裝置] > [註冊限制] > [建立限制] > [裝置限制的限制]。
+2. 在 [基本] 頁面上，為限制提供 [名稱] 與選擇性的 [描述]。
+3. 選擇 [下一步] 以移至 [裝置限制] 頁面。
+4. 針對 [裝置限制]，選取使用者可以註冊的裝置數目上限。
     ![選擇裝置限制的螢幕擷取畫面](./media/enrollment-restrictions-set/choose-device-limit.png)
-5. 選擇 [下一步]  以移至 [指派]  頁面。
-6. 選擇 [選取要納入的群組]  ，然後使用搜尋方塊來尋找您想要納入此限制的群組。 限制只適用於指派的群組。 如果限制不指派給至少一個群組，就不會產生任何效果。 然後選擇 [選取]  。 
+5. 選擇 [下一步] 以移至 [範圍標籤] 頁面。
+6. 在 [範圍標籤] 頁面上，您可以選擇性地新增您想要套用到此限制的範圍標籤。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用角色型存取控制和範圍標籤](../fundamentals/scope-tags.md)。 為註冊限制套用範圍標籤時，使用者只能為其已套用範圍的原則重新排序。 此外，使用者也只能為其已套用範圍的原則位置重新排序。 使用者在每個原則上都會看到真實的原則優先順序號碼。 受範圍所限制的使用者即使無法看到所有其他原則，也可以分辨其原則的相對優先順序。
+7. 選擇 [下一步] 以移至 [指派] 頁面。
+8. 選擇 [選取要納入的群組]，然後使用搜尋方塊來尋找您想要納入此限制的群組。 限制只適用於指派的群組。 如果限制不指派給至少一個群組，就不會產生任何效果。 然後選擇 [選取]。 
     ![選取群組的螢幕擷取畫面](./media/enrollment-restrictions-set/select-groups-device-limit.png)
-7. 選取 [下一步]  以移至 [檢閱 + 建立]  頁面。
-8. 選取 [建立]  以建立限制。
-9. 新建立的限制優先順序剛好在預設值前。 您可以[變更優先順序](#change-enrollment-restriction-priority)。
+9. 選取 [下一步] 以移至 [檢閱 + 建立] 頁面。
+10. 選取 [建立] 以建立限制。
+11. 新建立的限制優先順序剛好在預設值前。 您可以[變更優先順序](#change-enrollment-restriction-priority)。
 
 在 BYOD 註冊期間，當使用者達到已註冊裝置的限制時，他們會看到通知。 例如，在 iOS 上：
 
@@ -126,9 +130,9 @@ ms.locfileid: "82077983"
 
 您可以遵循下列步驟來變更註冊限制的設定。 這些限制不會影響已經註冊的裝置。 使用此功能無法封鎖使用 [Intune PC 代理程式](../fundamentals/manage-windows-pcs-with-microsoft-intune.md)所註冊的裝置。
 
-1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > [裝置]   > [註冊限制]  > 選擇要變更的限制 > [屬性]  。
-2. 選擇您要變更之設定旁邊的 [編輯]  。
-3. 在 [編輯]  頁面上進行所需的變更並繼續前往 [檢閱並儲存]  頁面，然後選擇 [儲存]  。
+1. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > [裝置] > [註冊限制] > 選擇要變更的限制 > [屬性]。
+2. 選擇您要變更之設定旁邊的 [編輯]。
+3. 在 [編輯] 頁面上進行所需的變更並繼續前往 [檢閱並儲存] 頁面，然後選擇 [儲存]。
 
 
 ## <a name="blocking-personal-android-devices"></a>封鎖個人 Android 裝置
@@ -143,7 +147,7 @@ ms.locfileid: "82077983"
 - 註冊使用者會使用[裝置註冊管理員帳戶]( device-enrollment-manager-enroll.md)。
 - 裝置透過 [Windows Autopilot](enrollment-autopilot.md) 註冊。
 - 裝置已向 Windows Autopilot 註冊，但不是 Windows 設定中的 [僅限 MDM 註冊] 選項。
-- 裝置的 IMEI 編號列在 [裝置註冊]   > [[公司裝置識別碼](corporate-identifiers-add.md)]  中。 (不支援 Windows Phone 8.1)。
+- 裝置的 IMEI 編號列在 [裝置註冊] > [[公司裝置識別碼](corporate-identifiers-add.md)] 中。 (不支援 Windows Phone 8.1)。
 - 裝置透過[大量佈建套件](windows-bulk-enroll.md)註冊。
 - 裝置透過 GPO 註冊，或透過[從 Configuration Manager 自動註冊以共同管理](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1)方式註冊。
  
@@ -175,7 +179,7 @@ Intune 會將下列註冊標示為公司。 但是，因為它們不會為 Intun
 您可以變更任何非預設限制的優先順序。
 
 1. 登入 Azure 入口網站。
-2. 選取 [更多服務]  並搜尋 **Intune**，然後選擇 [Intune]  。
-3. 選取 [裝置註冊]   > [註冊限制]  。
+2. 選取 [更多服務] 並搜尋 **Intune**，然後選擇 [Intune]。
+3. 選取 [裝置註冊] > [註冊限制]。
 4. 將滑鼠停留在優先順序清單的限制上。
 5. 使用三個垂直點，將優先順序拖曳到所要的清單位置。

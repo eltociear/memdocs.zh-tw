@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1dee569d6f2ce4ed1a3bc278c9c9a886f9d23974
-ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.openlocfilehash: d9e3d03211907f31008b31d68c4ed5cd11ae1a6e
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82782254"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791735"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Microsoft 端點管理員概觀
 
@@ -42,15 +42,15 @@ ms.locfileid: "82782254"
 
   如果您有內部部署基礎結構 (例如 Exchange 或 Active Directory)，則也可以使用 Intune 連接器：
 
-  - 「適用於 Active Directory 的 Intune 連接器」  會針對使用 Windows Autopilot 註冊的電腦，將項目新增至您的內部部署 Active Directory 網域。 如需詳細資訊，請參閱[部署已加入混合式 Azure AD 的裝置](/mem/intune/enrollment/windows-autopilot-hybrid)。
+  - 「適用於 Active Directory 的 Intune 連接器」會針對使用 Windows Autopilot 註冊的電腦，將項目新增至您的內部部署 Active Directory 網域。 如需詳細資訊，請參閱[部署已加入混合式 Azure AD 的裝置](/mem/intune/enrollment/windows-autopilot-hybrid)。
   - 如果裝置已在 Intune 中註冊且符合您的原則規範，則 **Intune Exchange 連接器**會允許 (或封鎖) 裝置存取您的 Exchange 伺服器。 如需詳細資訊，請參閱[安裝內部部署 Intune Exchange 連接器](/mem/intune/protect/exchange-connector-install)。
-  - 「Intune 憑證連接器」  會處理來自使用憑證進行驗證和 S/MIME 電子郵件加密之裝置的憑證要求。 如需詳細資訊，請參閱[使用憑證進行驗證](/mem/intune/protect/certificates-configure)。
+  - 「Intune 憑證連接器」會處理來自使用憑證進行驗證和 S/MIME 電子郵件加密之裝置的憑證要求。 如需詳細資訊，請參閱[使用憑證進行驗證](/mem/intune/protect/certificates-configure)。
 
   作為「端點管理員」的一部分，使用 Intune 來建立及檢查合規性，然後使用雲端將應用程式、功能及設定部署到您的裝置。
 
   如需詳細資訊，請參閱[什麼是 Microsoft Intune](https://docs.microsoft.com/intune/fundamentals/what-is-intune)。
 
-- **Configuration Manager**：Configuration Manager 是一個內部部署管理解決方案，可管理網路或網際網路上的桌上型電腦、伺服器及膝上型電腦。 您可以啟用其雲端功能來與 Intune、Azure AD、Microsoft Defender ATP 及其他雲端服務進行整合。 使用 Configuration Manager 來部署應用程式、軟體更新及作業系統。 您也可以監視合規性、即時查詢用戶端並對其進行操作等等。
+- **Configuration Manager**：Configuration Manager 是一個內部部署管理解決方案，可管理網路或網際網路上的桌上型電腦、伺服器及膝上型電腦。 您可以啟用其雲端功能來與 Intune、Azure Active Directory (AD)、Microsoft Defender ATP 及其他雲端服務進行整合。 使用 Configuration Manager 來部署應用程式、軟體更新及作業系統。 您也可以監視合規性、即時查詢用戶端並對其進行操作等等。
 
   作為「端點管理員」的一部分，繼續使用 Configuration Manager，如您一直所做的一樣。 如果您已經準備好將一些工作移至雲端，請考慮使用[共同管理](https://docs.microsoft.com/configmgr/comanage/)。
 
@@ -74,7 +74,7 @@ ms.locfileid: "82782254"
 
   如需詳細資訊，請參閱 [Windows Autopilot 概觀](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot) \(部分機器翻譯\) 和[在 Intune 中註冊 Windows 裝置](/mem/intune/enrollment/enrollment-autopilot)。
 
-- **Azure AD Premium**：「端點管理員」將 Azure AD 用於裝置、使用者、群組、動態群組、自動註冊、多重要素驗證及條件式存取。 這些功能是保護裝置、應用程式及資料的關鍵。
+- **Azure Active Directory (AD)** ：Azure AD 由端點管理員用來進行裝置、使用者、群組和多重要素驗證 (MFA) 的身分識別。 **Azure AD Premium** (可能會是額外成本) 具有[額外的功能](https://azure.microsoft.com/pricing/details/active-directory/)，可協助保護裝置、應用程式和資料，包括動態群組、自動註冊和條件式存取。
 
   如需詳細資訊，請參閱[新增使用者](/mem/intune/fundamentals/users-add)、[設定自動註冊](/mem/intune/enrollment/windows-enroll)，以及[關於條件式存取 ](/mem/intune/protect/conditional-access)。
 

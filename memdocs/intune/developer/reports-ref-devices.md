@@ -6,7 +6,7 @@ keywords: Intune 資料倉儲
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31eef700f7aa38b70c5e9a2fa75fd3faee4c9713
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: bc01428430eb665dc609cff84ee322f28e3b7d79
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078051"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165425"
 ---
 # <a name="reference-for-devices-entities"></a>裝置實體的參考
 
-[裝置]  類別包含的行動裝置實體，可追蹤下列資訊：
+[裝置] 類別包含的行動裝置實體，可追蹤下列資訊：
 
 - 裝置類型
 - 裝置註冊和註冊狀態
@@ -226,7 +226,7 @@ ms.locfileid: "82078051"
 **devices** 實體會列出管理下的所有已註冊裝置及其對應的屬性。
 
 |          屬性          |                                                                                       說明                                                                                      |
-|:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | deviceKey                  | 資料倉儲中裝置的唯一識別碼 - surrogate 索引鍵。                                                                                                               |
 | deviceId                   | 裝置的唯一識別碼。                                                                                                                                                     |
 | deviceName                 | 允許命名裝置之平台上的裝置名稱。 在其他平台上，Intune 會從其他屬性建立名稱。 此屬性不適用於所有裝置。 |
@@ -263,13 +263,18 @@ ms.locfileid: "82078051"
 | cellularTechnology         | 裝置的行動電話通訊技術                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
 | ICCD                       | 積體電路卡識別碼                                                                                                                                                     |
+| windowsOsEdition           | Windows 作業系統版本。                                                                                                                             |
+| ethernetMacAddress           | 此裝置的唯一網路識別碼。                                                                                                                                        |
+| 模型                      | 裝置型號。                                                                                                                                                                      |
+| office365Version           | 安裝於裝置上的 Office 365 版本。                                                                                                                             |
+
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
 **devicePropertyHistory** 實體與裝置資料表和每部裝置過去 90 天內每天記錄的每日快照集有相同的內容。 DateKey 資料行會指出每個資料列的日期。
 
 |          屬性          |                                                                                      說明                                                                                     |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | dateKey                    | 指出當日的日期資料表參考。                                                                                                                                          |
 | deviceKey                  | 資料倉儲中裝置的唯一識別碼 - surrogate 索引鍵。 這是包含 Intune 裝置識別碼之裝置資料表的參考。                               |
 | deviceName                 | 允許命名裝置之平台上的裝置名稱。 在其他平台上，Intune 會從其他屬性建立名稱。 此屬性不適用於所有裝置。 |
@@ -281,4 +286,6 @@ ms.locfileid: "82078051"
 | OSVersion                  | 作業系統版本。                                                                                                                                                                          |
 | jailBroken                 | 裝置是否已越獄或刷機。                                                                                                                                         |
 | deviceCategoryKey          | 此裝置的裝置類別屬性索引鍵。 
+| physicalMemoryInBytes      | 實體記憶體 (以位元組為單位)。                                                                                                                                                          |
+| totalStorageSpaceInBytes   | 儲存體容量總計 (以位元組為單位)。                                                                                                                                                                |
 

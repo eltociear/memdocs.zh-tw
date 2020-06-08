@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5c2af6ce301b0a5de06cbbd4126b1661ca21fb0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 49f9b9076d20c1f5d4740a6f8b1b9883e12ce629
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359062"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853531"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>引導式案例 - 部署適用於行動裝置的 Microsoft Edge
 
 透過遵循此[引導式案例](guided-scenarios-overview.md)，您可以將 Microsoft Edge 應用程式指派至組織中使用 iOS/iPadOS 或 Android 裝置的使用者。 指派此應用程式將能讓您的使用者順暢地使用其公司裝置瀏覽內容。
 
-Microsoft Edge 能讓使用者透過能協助他們合併、排列及管理工作內容的內建功能，來釐清網路上的雜亂內容。 在 Microsoft Edge 應用程式中使用其企業 Azure AD 帳戶來登入的 iOS/iPadOS 和 Android 裝置使用者，將會在瀏覽器中看見已預先載入的工作區 [我的最愛]  ，以及您定義的網站篩選。
+Microsoft Edge 能讓使用者透過能協助他們合併、排列及管理工作內容的內建功能，來釐清網路上的雜亂內容。 在 Microsoft Edge 應用程式中使用其企業 Azure AD 帳戶來登入的 iOS/iPadOS 和 Android 裝置使用者，將會在瀏覽器中看見已預先載入的工作區 [我的最愛]，以及您定義的網站篩選。
 
 > [!NOTE]
 > 如果您已封鎖使用者註冊 iOS/iPadOS 或 Android 裝置的能力，則此案例將不會啟用註冊，且使用者必須自行安裝 Edge。
@@ -38,7 +38,7 @@ Microsoft Edge 能讓使用者透過能協助他們合併、排列及管理工�
 - **Azure 應用程式 Proxy 整合** - 系統管理員可以控制對 SaaS 應用程式和 Web 應用程式的存取，協助確保無論使用者是從公司網路連線或從網際網路連線，瀏覽器型應用程式都只會在安全的 Microsoft Edge 瀏覽器中執行。
 - **受控我的最愛和首頁捷徑** - 為了方便存取，系統管理員可以設定 URL，以在終端使用者進入公司內容中時，顯示在 [我的最愛] 底下。 系統管理員可以設定首頁捷徑，就會在公司的使用者於 Microsoft Edge 中開啟新的頁面或新的索引標籤時，顯示為主要捷徑。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 - [將 MDM 授權單位設定為 Intune](mdm-authority-set.md#set-mdm-authority-to-intune)：行動裝置管理 (MDM) 授權單位設定會決定您管理裝置的方式。 身為 IT 系統管理員，您必須在使用者可以註冊裝置以進行管理之前，設定 MDM 授權單位。
 - 所需的 Intune 系統管理權限：
@@ -72,7 +72,7 @@ Microsoft Edge 能讓使用者透過能協助他們合併、排列及管理工�
 
 ## <a name="step-3---configuration"></a>步驟 3 - 設定
 
-在此步驟中，引導式案例將會設定 Microsoft Edge 以顯示透過 Intune 指派給使用者的所有其他應用程式，並共用與 Microsoft Intune 公司入口網站應用程式相同的商標。 您可以搭配 [首頁捷徑 URL]  、[受控書籤]  清單，以及[封鎖的 URL]  清單來進一步設定 Microsoft Edge。 在使用者於裝置上的 Microsoft Edge 中開啟新索引標籤時，[首頁捷徑 URL]  將會以搜尋列下方第一個圖示的形式向使用者顯示。 [受控書籤]  是供您的使用者在其工作內容中使用 Microsoft Edge 時可用的最愛 URL 清單。 [封鎖的 URL]  會指定針對您的使用者在其工作內容中封鎖的網站。 系統會允許所有其他網站。
+在此步驟中，引導式案例將會設定 Microsoft Edge 以顯示透過 Intune 指派給使用者的所有其他應用程式，並共用與 Microsoft Intune 公司入口網站應用程式相同的商標。 您可以搭配 [首頁捷徑 URL]、[受控書籤] 清單，以及[封鎖的 URL] 清單來進一步設定 Microsoft Edge。 在使用者於裝置上的 Microsoft Edge 中開啟新索引標籤時，[首頁捷徑 URL] 將會以搜尋列下方第一個圖示的形式向使用者顯示。 [受控書籤] 是供您的使用者在其工作內容中使用 Microsoft Edge 時可用的最愛 URL 清單。 [封鎖的 URL] 會指定針對您的使用者在其工作內容中封鎖的網站。 系統會允許所有其他網站。
 
 ## <a name="step-4---assignments"></a>步驟 4 - 指派
 
@@ -80,7 +80,7 @@ Microsoft Edge 能讓使用者透過能協助他們合併、排列及管理工�
 
 ## <a name="step-5---review--create"></a>步驟 5 - 檢閱 + 建立
 
-最後的步驟可讓您檢閱您所設定之設定的摘要。 在您檢閱自己的選擇之後，請按一下 [建立]  以完成引導式案例。 
+最後的步驟可讓您檢閱您所設定之設定的摘要。 在您檢閱自己的選擇之後，請按一下 [建立] 以完成引導式案例。 
 
 > [!NOTE]
 > Edge 最多可能會需要 12 小時才能接收到該設定。 如需詳細資訊，請參閱 [Microsoft Intune 的應用程式設定原則](../apps/app-configuration-policies-overview.md)。
@@ -90,6 +90,5 @@ Microsoft Edge 能讓使用者透過能協助他們合併、排列及管理工�
 
 ## <a name="next-steps"></a>後續步驟
 
-- 設定 Intune 應用程式防護原則整合，來強化使用 Microsoft Edge 的安全性。 如需詳細資訊，請參閱 [Microsoft Edge 的應用程式保護原則](../apps/manage-microsoft-edge.md#application-protection-policies-for-microsoft-edge)。
-- 如果您有要包含的內部網路網站，請探索透過 Azure 應用程式 Proxy 整合來保護存取。 如需詳細資訊，請參閱[針對 Microsoft Edge 設定應用程式 Proxy 設定](../apps/manage-microsoft-edge.md#configure-application-proxy-settings-for-microsoft-edge)。
-
+- 設定 Intune 應用程式防護原則整合，來強化使用 Microsoft Edge 的安全性。 如需詳細資訊，請參閱[建立 Intune 應用程式防護原則](../apps/manage-microsoft-edge.md#create-intune-app-protection-policies)。
+- 如果您有要包含的內部網路網站，請探索透過 Azure 應用程式 Proxy 整合來保護存取。 如需詳細資訊，請參閱[管理 Proxy 設定](../apps/manage-microsoft-edge.md#manage-proxy-configuration)。
