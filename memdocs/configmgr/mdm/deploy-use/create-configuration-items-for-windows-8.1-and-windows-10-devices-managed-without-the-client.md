@@ -10,16 +10,16 @@ ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8186b45a0b0c74840582052f9c585c0557180493
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 1987ba504630ab1d4b23cdb54710f0cbaa3db28a
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724832"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506242"
 ---
 # <a name="create-configuration-items-for-windows-devices-with-on-premises-mdm-in-configuration-manager"></a>在 Configuration Manager 中建立具有內部部署 MDM 之 Windows 裝置的設定專案
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 使用 Configuration Manager **Windows 8.1 和 Windows 10**設定專案，管理您使用內部部署行動裝置管理（MDM）管理之 Windows 裝置的設定。
 
@@ -60,9 +60,9 @@ ms.locfileid: "81724832"
 
     - **資訊**
 
-    - **警告**
+    - **Warning**
 
-    - **重大**
+    - **重要**
 
     - **重大事件**：不符合此合規性規則的裝置會針對 Configuration Manager 報告回報 [重大]**** 失敗嚴重性。 它也會將不相容的狀態記錄為應用程式事件記錄檔中的 Windows 事件。
 
@@ -89,7 +89,7 @@ ms.locfileid: "81724832"
 - **記住的密碼數目**：防止重複使用先前使用過的密碼。
 - 抹除**裝置前的失敗登入嘗試次數**：如果登入嘗試失敗次數過多，MDM 會清除裝置
 - **鎖定裝置前的閒置時間**：指定裝置鎖定前可閒置的時間量。 當沒有使用者輸入時，裝置就會閒置。
-- **密碼複雜性**：選擇您是否可以指定數位 PIN （例如`1234`），或是否必須提供強式密碼。
+- **密碼複雜性**：選擇您是否可以指定數位 PIN （例如 `1234` ），或是否必須提供強式密碼。
   - **密碼所需的複雜字元集數**：如果密碼複雜度很**強**，請選取密碼需要多少類型的字元：大寫字母、小寫字母、數位或符號。 根據預設，此值為 `2`。
 - **將密碼復原 PIN 傳送至 Exchange Server**
 
@@ -136,7 +136,7 @@ ms.locfileid: "81724832"
 - **應用程式內購買**：允許或禁止使用者進行應用程式內購買。
 - **存放區起始應用程式啟動**：停用裝置上預先安裝或從 Microsoft Store 安裝的所有應用程式。
 - **自動更新存放區中的應用程式**：允許或禁止從 Microsoft Store 安裝的應用程式自動更新。
-- 將**應用程式安裝在系統磁片磁碟機上**：允許或禁止裝置將應用程式安裝在系統磁片磁碟機上`C:` ，這通常是磁片磁碟機。
+- 將**應用程式安裝在系統磁片磁碟機上**：允許或禁止裝置將應用程式安裝在系統磁片磁碟機上，這通常是 `C:` 磁片磁碟機。
 - 將**應用程式資料安裝在系統磁碟區**：啟用此選項可允許應用程式將資料儲存在系統磁片磁碟機上。
 - **僅使用私人存放區**：要求使用者從您的私人存放區下載應用程式。
 - **遊戲 DVR**：停用 Windows 遊戲錄製和廣播
@@ -164,12 +164,12 @@ ms.locfileid: "81724832"
 - **信任的網站區域的安全性等級**：設定信任的網站區域的安全性等級： [高]、[中]、[中]、[中]、[中]、[中] 或 [低]。
 - **受限制的網站區域的安全性等級**：設定限制的網站區域的安全性等級：高。
 - **內部網路區域的命名空間**：設定要從內部網路區域新增或移除的網站。
-- **針對單一單字輸入，移至內部網路網站**：如果使用者輸入有效的網站名稱，但沒有前面的通訊協定，則允許或禁止 Internet Explorer 自動移至內部`https://`網路網站。
+- **針對單一單字輸入，移至內部網路網站**：如果使用者輸入有效的網站名稱，但沒有前面的通訊協定，則允許或禁止 Internet Explorer 自動移至內部網路網站 `https://` 。
 - **企業模式功能表選項**：可讓使用者從 Internet Explorer 的 [**工具**] 功能表啟用和停用企業模式。
   - **記錄報告位置（URL）**：當企業模式為使用中時，指定 URL 來記錄造訪的網站。
 - **企業模式網站清單位置（URL）**：當企業模式處於作用中狀態時，請指定使用它的網站清單。
 
-### <a name="cloud"></a>雲端
+### <a name="cloud"></a>Cloud
 
 這些設定適用於執行 Windows 8.1 和 Windows 10 的裝置。
 
@@ -242,7 +242,7 @@ ms.locfileid: "81724832"
         - **WPA2**
         - **WPA2-PSK**
     - **資料加密**：選擇此連接所使用的加密方法。 可用的值會根據您選取的**驗證**方法而變更：
-        - **已停用**
+        - **停用**
         - **4**
         - **TKIP**
         - **AES**
@@ -265,7 +265,7 @@ ms.locfileid: "81724832"
 - **目的地存放區**：選擇下列一個或多個憑證存放區：
   - **路徑**
   - **CA**
-  - **一般**
+  - **Normal**
   - **特殊權限**
   - **SPC**
   - **對等**
@@ -327,7 +327,7 @@ ms.locfileid: "81724832"
 
 如需如何使用 Configuration Manager 設定企業資料保護的詳細資訊，請參閱[使用 Windows 資訊保護保護您的企業資料（WIP）](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)。
 
-### <a name="microsoft-edge"></a>Microsoft Edge
+### <a name="microsoft-edge-legacy"></a>Microsoft Edge 舊版
 
 這些設定僅適用于執行 Windows 10 和更新版本的裝置。  
 
@@ -342,7 +342,7 @@ ms.locfileid: "81724832"
 - **延伸**模組：允許或禁止 Edge 延伸模組。
 - **Inprivate 流覽**：允許或禁止 inprivate 流覽，這不會儲存歷程記錄或 cookie。
 - **WebRTC LOCALHOST ip 位址**：允許或禁止使用者使用 web RTC 通訊協定撥打電話時，顯示裝置的 localhost ip 位址。
-- **禁止存取 about： flags**：允許或禁止使用者存取`about:flags`頁面，其中包含開發人員和實驗性設定。
+- **禁止存取 about： flags**：允許或禁止使用者存取 `about:flags` 頁面，其中包含開發人員和實驗性設定。
 - 檔案**的 SmartScreen 提示覆寫**：允許或禁止使用者略過有關下載潛在惡意檔案的 smartscreen 篩選工具警告。
 - **SmartScreen 提示覆寫**：允許或禁止使用者略過有關潛在惡意網站的 SmartScreen 篩選工具警告。
 - **第一個執行 URL**：指定使用者第一次開啟 Edge 時要顯示的網站。
@@ -368,7 +368,7 @@ ms.locfileid: "81724832"
 - **掃描**封存檔案： Defender 會掃描壓縮的封存，例如 .zip 或 .cab 檔案。
 - **掃描電子郵件訊息**： Defender 會在電子郵件訊息到達裝置時加以掃描。
 - **掃描卸載式磁片磁碟機**： Defender 會掃描卸載式磁片磁碟機，例如 USB 記憶杆。
-- **掃描對應的磁片磁碟機**： Defender 會掃描對應至網路共用的磁片磁碟機。 例如， `H:`會對應到使用者的個人磁片磁碟機。 如果磁片磁碟機上的檔案是唯讀的，Defender 就無法移除它在該處找到的任何惡意程式碼。
+- **掃描對應的磁片磁碟機**： Defender 會掃描對應至網路共用的磁片磁碟機。 例如， `H:` 會對應到使用者的個人磁片磁碟機。 如果磁片磁碟機上的檔案是唯讀的，Defender 就無法移除它在該處找到的任何惡意程式碼。
 - **掃描從網路共用資料夾開啟的**檔案： Defender 會在使用者從共用的網路路徑開啟檔案時掃描檔案。 例如： `\\server\share\file.doc` 。 如果共用上的檔案是唯讀的，Defender 就無法移除它所找到的任何惡意程式碼。
 - 簽章**更新間隔**：選擇 Defender 檢查新特徵碼檔案的時間間隔。
 - **允許雲端保護**： Defender 會使用 Microsoft cloud 來接收惡意程式碼活動的相關資訊，並在第一次看見時啟用區塊等功能。
@@ -376,7 +376,7 @@ ms.locfileid: "81724832"
 - **潛在的垃圾應用程式偵測**：保護裝置免于執行由 Defender 分類為潛在垃圾的軟體。 您可以防止這些應用程式執行，或使用 audit 模式來報告使用者安裝潛在垃圾應用程式的時間。
 - 檔案**及資料夾排除**專案：在排除清單中新增一或多個檔案和資料夾。 例如，`C:\Path` 或 `%ProgramFiles%\Path\filename.exe`。 Defender 不會在任何即時或已排程的掃描中包含這些檔案和資料夾。
 - **副檔名排除**：將一或多個副檔名新增至排除清單。 例如，`java` 或 `exe`。 Defender 不會在任何即時或已排程的掃描中包含具有這些副檔名的任何檔案。
-- **進程排除**專案：將特定進程新增至排除清單。 例如： `C:\path\myproc.exe` 。 此排除類型僅支援下列延伸模組： `exe`、 `com`或`scr`。 Defender 不會在任何即時或已排程的掃描中包含這些進程。
+- **進程排除**專案：將特定進程新增至排除清單。 例如： `C:\path\myproc.exe` 。 此排除類型僅支援下列延伸模組： `exe` 、 `com` 或 `scr` 。 Defender 不會在任何即時或已排程的掃描中包含這些進程。
 
 ### <a name="additional-settings"></a>其他設定
 
