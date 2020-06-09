@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 05/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca3ec1605bd4d63c182511c32297da0bdb503d8b
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 67a0ad9eeb7e5ced358a44b17fd8f1c0b05fa2b8
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824161"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223660"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune 的新功能
 
@@ -54,7 +54,22 @@ ms.locfileid: "83824161"
 
 <!-- ########################## -->
 
+## <a name="week-of-may-25-2020"></a>2020 年 5 月 25 日當週
+
+### <a name="app-management"></a>應用程式管理
+
+#### <a name="windows-32-bit-x86-apps-on-arm64-devices---5477661---"></a>ARM64 裝置上的 Windows 32 位元 (x86) 應用程式<!-- 5477661 -->
+部署為可供 ARM64 裝置使用的 Windows 32 位元 (x86) 應用程式，現在將會顯示在公司入口網站中。 如需有關 Windows 32 位元應用程式的詳細資訊，請參閱 [Win32 應用程式管理](../apps/apps-win32-app-management.md)。
+
+#### <a name="windows-company-portal-app-icon---7114635---"></a>Windows 公司入口網站應用程式圖示<!-- 7114635 -->
+Windows 公司入口網站應用程式的圖示已更新。 如需有關公司入口網站的詳細資訊，請參閱[如何自訂 Intune 公司入口網站應用程式、公司入口網站及 Intune 應用程式](../apps/company-portal-app.md)。
+
 ## <a name="week-of-may-18-2020"></a>2020 年 5 月 18 日當週
+
+### <a name="app-management"></a>應用程式管理  
+
+#### <a name="update-to-icons-in-company-portal-app-for-iosipados-and-macos--6057697---"></a>更新適用於 iOS/iPadOS 與 macOS 之公司入口網站應用程式的圖示<!--6057697 -->
+我們已更新公司入口網站中的圖示，這些圖示支援雙螢幕裝置且具有更現代化的外觀和感覺，並與「Microsoft Fluent Design 系統」一致。 若要查看已更新的圖示，請移至 [Intune 終端使用者應用程式的 UI 更新](./whats-new-app-ui.md)。 
 
 ### <a name="device-security"></a>裝置安全性
 

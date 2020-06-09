@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20c552ff879574edc0ed497b5c99b45b8092918a
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: f469d9646fad3b247743b6017f0ecbc7917f2cdf
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864886"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311160"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>使用 Intune 來允許或限制功能的 Windows 10 (和更新版本) 裝置設定
 
@@ -40,7 +40,7 @@ ms.locfileid: "83864886"
 這些設定使用 [ApplicationManagement 原則 CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement)，它也會列出支援的 Windows 版本。
 
 - **App Store (僅限行動裝置版)** ：[封鎖] 會防止使用者在行動裝置上存取 App Store。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能允許使用者存取 App Store。
-- **自動更新來自市集的應用程式**：[封鎖] 會防止自動從 Microsoft Store 安裝更新。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能允許自動更新從 Microsoft Store 安裝的應用程式。
+- **自動更新來自市集的應用程式**：[封鎖] 會防止自動從 Microsoft Store 安裝更新。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 會允許自動更新從 Microsoft Store 安裝的應用程式。
 
   [ApplicationManagement/AllowAppStoreAutoUpdate CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowappstoreautoupdate) \(部分機器翻譯\)
 
@@ -49,7 +49,7 @@ ms.locfileid: "83864886"
   - **封鎖**：防止側載。 無法安裝非 Microsoft Store 應用程式。
   - **允許**：允許側載。 可以安裝非 Microsoft Store 應用程式。
 
-- **開發人員解除鎖定**：允許 Windows 開發人員設定，例如允許使用者修改側載應用程式。 選項包括：
+- **開發人員解除鎖定**：允許 Windows 開發人員設定，例如允許使用者修改側載的應用程式。 選項包括：
   - **未設定** (預設值)：Intune 不會變更或更新此設定。
   - **封鎖**：防止開發人員模式和側載應用程式。
   - **允許**：允許開發人員模式和側載應用程式。
@@ -130,7 +130,7 @@ ms.locfileid: "83864886"
 這些設定使用[藍牙原則 CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth)，其也會列出支援的 Windows 版本。
 
 - **藍牙**：[封鎖] 防止使用者啟用藍牙。 [未設定] (預設) 允許在裝置上使用藍牙。
-- **藍牙探索**：[封鎖] 防止其他藍牙啟用的裝置探索此裝置。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能允許其他藍牙啟用的裝置 (例如耳機) 探索此裝置。
+- **藍牙探索**：[封鎖] 防止其他藍牙啟用的裝置探索此裝置。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 會允許其他具備藍牙功能的裝置 (例如耳機) 探索此裝置。
 
   [Bluetooth/AllowDiscoverableMode CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
 
@@ -138,7 +138,7 @@ ms.locfileid: "83864886"
 
   [Bluetooth/AllowPrepairing CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
 
-- **藍牙通知**：[封鎖] 防止裝置傳送出藍牙通知。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能允許裝置送出藍牙公告。
+- **藍牙通知**：[封鎖] 防止裝置傳送出藍牙通知。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 會允許裝置送出藍牙公告。
 
   [Bluetooth/AllowAdvertising CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
 
@@ -222,7 +222,7 @@ GDI DPI 縮放比例會讓非 DPI 感知的應用程式變成依監視器 DPI �
 
 - **螢幕擷取** (僅限行動裝置版)：[封鎖] 會防止使用者在裝置上取得螢幕擷取畫面。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。
 - **複製並貼上 (僅限行動裝置版)** ：[封鎖] 會防止使用者在裝置的應用程式之間使用複製並貼上。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。
-- **手動取消註冊**：[封鎖] 會防止使用者使用裝置上的工作場所控制台刪除工作場所帳戶。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。
+- **手動取消註冊**：[封鎖] 會禁止使用者使用裝置上的工作場所控制台刪除工作場所帳戶。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。
 
   如果電腦已加入 Azure AD，且啟用自動註冊，則不會套用此原則設定。
 
@@ -238,7 +238,7 @@ GDI DPI 縮放比例會讓非 DPI 感知的應用程式變成依監視器 DPI �
   [System/DisableOneDriveFileSync CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-disableonedrivefilesync)
 
 - **抽取式存放裝置**：[封鎖] 會防止使用者使用外部存放裝置，如裝置的 SD 卡。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。
-- **地理位置**：[封鎖] 會防止使用者開啟裝置的位置服務。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。
+- **地理位置**：[封鎖] 會禁止使用者開啟裝置的定位服務。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。
 
   [System/AllowLocation CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowlocation)
 
@@ -249,7 +249,7 @@ GDI DPI 縮放比例會讓非 DPI 感知的應用程式變成依監視器 DPI �
   [Connectivity/AllowUSBConnection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
 
 - **防竊模式** (僅限行動裝置版)：[封鎖] 會防止使用者選取裝置的防竊模式喜好設定。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。
-- **Cortana**：[封鎖] 會停用裝置的 Cortana 語音助理。 Cortana 關閉時，使用者仍可搜尋，在裝置上尋找項目。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能允許 Cortana。
+- **Cortana**：[封鎖] 會停用裝置的 Cortana 語音助理。 Cortana 關閉時，使用者仍可搜尋，在裝置上尋找項目。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 會允許 Cortana。
 
   [Experience/AllowCortana CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowcortana)
 
@@ -464,7 +464,7 @@ GDI DPI 縮放比例會讓非 DPI 感知的應用程式變成依監視器 DPI �
 
 這些設定使用 [DeviceLock 原則 CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock)，它也會列出支援的 Windows 版本。
 
-- **密碼**：[需要] 會強制使用者輸入密碼，才能存取裝置。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能允許不用密碼即可存取裝置。 僅適用於本機帳戶。 網域帳戶密碼仍然由 Active Directory (AD) 和 Azure AD 設定。
+- **密碼**：[需要] 會強制使用者輸入密碼，才能存取裝置。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 會允許不用密碼即可存取裝置。 僅適用於本機帳戶。 網域帳戶密碼仍然由 Active Directory (AD) 和 Azure AD 設定。
 
   [DeviceLock/DevicePasswordEnabled CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordenabled)
 
@@ -498,7 +498,7 @@ GDI DPI 縮放比例會讓非 DPI 感知的應用程式變成依監視器 DPI �
 
     [DeviceLock/DevicePasswordHistory CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordhistory)
 
-  - **裝置從閒置狀態回復時需要密碼** (行動裝置和全像攝影)：[需要] 會強制使用者輸入密碼，才能在閒置後解除鎖定裝置。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 在閒置後可能不需要 PIN 或密碼。
+  - **裝置從閒置狀態回復時需要密碼** (行動裝置和全像攝影)：[需要] 會強制使用者輸入密碼，才能在閒置後解除鎖定裝置。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 在閒置後不需要 PIN 或密碼。
 
     [DeviceLock/AllowIdleReturnWithoutPassword CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-allowidlereturnwithoutpassword)
 
@@ -638,11 +638,11 @@ GDI DPI 縮放比例會讓非 DPI 感知的應用程式變成依監視器 DPI �
 ## <a name="reporting-and-telemetry"></a>報告與遙測
 
 - **共用使用方式資料**：選擇提交診斷資料的層級。 選項包括：
-  - **未設定** (預設值)：Intune 不會變更或更新此設定。 不強制任何設定。 使用者選擇已提交的層級。 根據預設，OS 可能不會共用任何資料。
-  - **安全性**：讓 Windows 更安全的必要資訊，包括已連線使用者體驗與遙測元件的設定、惡意軟體移除工具及 Microsoft Defender 的相關資料
-  - **基本**：基本裝置資訊，包括品質相關資料、應用程式相容性、應用程式使用量資料和安全性層級的資料
-  - **增強**：額外的見解，包括 Windows、Windows Server、System Center 和應用程式的使用方式、執行方式、進階的可靠性資料，以及基本和安全性層級的資料
-  - **完整**：找出及協助修正問題的所有必要資料，加上安全性、基本和增強層級的資料。
+  - **未設定** (預設值)：Intune 不會變更或更新此設定。 不強制任何設定。 使用者可以選擇要提交的層級。 根據預設，OS 不會共用任何資料。
+  - **安全性**：協助提升 Windows 安全性的必要資訊，包括已連線使用者體驗與遙測元件設定、惡意軟體移除工具及 Microsoft Defender 的相關資料
+  - **基本**：基本裝置資訊，包括品質相關資料、應用程式相容性、應用程式使用量資料和 [安全性] 層級的資料
+  - **增強**：額外的見解，包括 Windows、Windows Server、System Center 和應用程式的使用方式、執行方式、進階的可靠性資料，以及 [基本] 和 [安全性] 層級的資料
+  - **完整**：找出及協助修正問題的所有必要資料，加上 [安全性]、[基本] 和 [增強] 層級的資料。
 
   [System/AllowTelemetry CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowtelemetry)
 
@@ -685,7 +685,7 @@ GDI DPI 縮放比例會讓非 DPI 感知的應用程式變成依監視器 DPI �
 
   [Search/AlwaysUseAutoLangDetection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-alwaysuseautolangdetection)
 
-- **搜尋位置**：[封鎖] 會防止 Windows Search 使用位置。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會允許此功能。
+- **搜尋位置**：[封鎖] 會禁止 Windows Search 使用位置。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會允許此功能。
 
   [Search/AllowSearchToUseLocation CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-allowsearchtouselocation)
 
@@ -1095,7 +1095,8 @@ GDI DPI 縮放比例會讓非 DPI 感知的應用程式變成依監視器 DPI �
 - **偵測潛在的不必要應用程式**：這項功能會識別並封鎖潛在的垃圾應用程式 (PUA)，使其無法在您的網路中下載和安裝。 這些應用程式不會被視為病毒、惡意程式碼或其他類型的威脅。 但是，這些應用程式可以在可能影響其效能或使用的端點上執行動作。 選擇 Windows 偵測 PUA 時的保護層級。 選項包括：
 
   - **未設定** (預設值)：Intune 不會變更或更新此設定。 根據預設，Microsoft Defender 可能會停用這項功能。
-  - **封鎖**：Microsoft Defender 會偵測到 PUA，並封鎖偵測到的項目。 這些項目會和其他威脅一起顯示在歷程記錄中。
+  - **Off**：關閉 PUA 保護。
+  - **啟用**：Microsoft Defender 會偵測到 PUA，並封鎖偵測到的項目。 這些項目會和其他威脅一起顯示在歷程記錄中。
   - **稽核**：Microsoft Defender 會偵測 PUA，但不採取任何動作。 您可以檢閱那些應用程式 (Microsoft Defender 會採取動作) 的相關資訊。 例如，在 [事件檢視器] 中搜尋由 Microsoft Defender 建立的事件。
 
   如需潛在垃圾應用程式的詳細資訊，請參閱[偵測及封鎖潛在的垃圾應用程式](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus)。
