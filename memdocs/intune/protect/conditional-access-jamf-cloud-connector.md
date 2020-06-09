@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 05/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f86b418df46069b2a33dd56d06e0e82dbbbf8090
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 734a1361d8889ca1463e8d8986239e088b90cd09
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81538445"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206361"
 ---
 # <a name="use-the-jamf-cloud-connector-with-microsoft-intune"></a>使用 Jamf Cloud Connector 搭配 Microsoft Intune
 
@@ -91,7 +91,7 @@ Cloud Connector 的使用是選擇性的：
 
 ## <a name="remove-the-jamf-pro-integration-for-a-previously-configured-tenant"></a>為先前設定的租用戶移除 Jamf Pro 整合
 
-使用下列程序，「先」  從您的 Azure 租用戶中移除手動設定的 Jamf Pro 整合，您才能設定 Cloud Connector。
+使用下列程序，「先」從您的 Azure 租用戶中移除手動設定的 Jamf Pro 整合，您才能設定 Cloud Connector。
 
 如果您先前尚未設定 Jamf Pro 與 Intune 之間的連線，或如果您有一或多個已使用 Cloud Connector 的連線，請略過此程序並從[為新的租用戶設定 Cloud Connector](#configure-the-cloud-connector-for-a-new-tenant) 著手。
 
@@ -99,29 +99,29 @@ Cloud Connector 的使用是選擇性的：
 
 1. 登入 Jamf Pro 主控台。
 
-2. 選取 [設定]  (右上角的齒輪圖示)，然後移至 [全域管理]   > [條件式存取]  。
+2. 選取 [設定] (右上角的齒輪圖示)，然後移至 [全域管理] > [條件式存取]。
 
    ![導覽至條件式存取](./media/conditional-access-jamf-cloud-connector/navigate-jamf-console-1.png)
 
-3. 選取 [編輯]  。
+3. 選取 [編輯]。
 
-4. 取消選取 [啟用 macOS 的 Intune 整合]  核取方塊。
+4. 取消選取 [啟用 macOS 的 Intune 整合] 核取方塊。
 
    取消選取此設定時，您會停用連線，但會儲存設定。
 
-5. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，並移至 [租用戶系統管理]   > [合作夥伴裝置管理]  。
+5. 登入 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，並移至 [租用戶系統管理] > [合作夥伴裝置管理]。
 
-   在 [合作夥伴裝置管理]  節點上，刪除 [指定 Jamf 的 Azure Active Directory 應用程式識別碼]  欄位中的 [應用程式識別碼]  ，然後選取 [儲存]  。
+   在 [合作夥伴裝置管理] 節點上，刪除 [指定 Jamf 的 Azure Active Directory 應用程式識別碼] 欄位中的 [應用程式識別碼]，然後選取 [儲存]。
 
    當您設定 Jamf Pro 的手動整合時，應用程式識別碼就是在 Azure 中所建立 Azure 企業應用程式的識別碼。
 
-6. 使用具有全域系統管理員權限的帳戶登入 [Azure 入口網站](https://portal.azure.com/)，並移至 [Azure Active Directory]   > [企業應用程式]  。
+6. 使用具有全域系統管理員權限的帳戶登入 [Azure 入口網站](https://portal.azure.com/)，並移至 [Azure Active Directory] > [企業應用程式]。
 
    找出兩個 Jamf 應用程式並予以刪除。 當您在下一個程序中設定 Jamf Cloud Connector 時，系統將會自動建立新的應用程式。
 
    ![選取要刪除的 Jamf 應用程式](./media/conditional-access-jamf-cloud-connector/delete-jamf-apps.png)
 
-   在 Jamf Pro 中停用整合並刪除企業應用程式之後，[合作夥伴裝置管理]  節點會顯示 [已終止]  連線狀態。
+   在 Jamf Pro 中停用整合並刪除企業應用程式之後，[合作夥伴裝置管理] 節點會顯示 [已終止] 連線狀態。
 
    ![終止的連線狀態](./media/conditional-access-jamf-cloud-connector/terminated-connection-status.png)
 
@@ -140,53 +140,55 @@ Cloud Connector 的使用是選擇性的：
 
 1. 登入 Jamf Pro 主控台。
 
-2. 選取 [設定]  (右上角的齒輪圖示)，然後移至 [全域管理]   > [條件式存取]  。
+2. 選取 [設定] (右上角的齒輪圖示)，然後移至 [全域管理] > [條件式存取]。
 
    ![導覽至條件式存取](./media/conditional-access-jamf-cloud-connector/navigate-jamf-console-1.png)
 
-3. 選取 [編輯]  。
+3. 選取 [編輯]。
 
-4. 選取 [啟用 macOS 的 Intune 整合]  核取方塊。
+4. 選取 [啟用 macOS 的 Intune 整合] 核取方塊。
    - 選取此設定，讓 Jamf Pro 將清查更新傳送至 Microsoft Intune。
    - 您可以取消選取此設定來停用連線，但會儲存設定。
 
    > [!IMPORTANT]
-   > 如果已選取 [啟用 macOS 的 Intune 整合]  ，且 [連線類型]  已設定為 [手動]  ，您就必須先移除該整合，才能繼續執行。 繼續執行之前，請參閱本文中的[為先前設定的租用戶移除 Jamf Pro 整合](#remove-the-jamf-pro-integration-for-a-previously-configured-tenant)。
+   > 如果已選取 [啟用 macOS 的 Intune 整合]，且 [連線類型] 已設定為 [手動]，您就必須先移除該整合，才能繼續執行。 繼續執行之前，請參閱本文中的[為先前設定的租用戶移除 Jamf Pro 整合](#remove-the-jamf-pro-integration-for-a-previously-configured-tenant)。
 
-5. 在 [連線類型]  底下，選取 [Cloud Connector]  。
+5. 在 [連線類型] 底下，選取 [Cloud Connector]。
 
    ![在 Jamf Pro 主控台中選取 Cloud Connector](./media/conditional-access-jamf-cloud-connector/select-cloud-connector.png)
 
-6. 從 [主權雲端]  快顯功能表，選取 Microsoft 中您的主權雲端位置。
+6. 從 [主權雲端] 快顯功能表，選取 Microsoft 中您的主權雲端位置。 如果您要取代先前與 Jamf Cloud Connector 的整合，且如果已指定位置，則可以略過此步驟。
 
 7. 對於 Microsoft Azure 無法辨識的電腦，選取下列其中一個登陸頁面選項：
    - **預設 Jamf Pro 裝置註冊頁面**：視 macOS 裝置的狀態而定，此選項會將使用者重新導向至 Jamf Pro 裝置註冊入口網站 (以向 Jamf Pro 註冊) 或 Intune 公司入口網站應用程式 (以向 Azure AD 註冊)。
    - **拒絕存取頁面**
    - **自訂 URL**
+  
+   如果您要取代先前與 Jamf Cloud Connector 的整合，且如果已指定登陸頁面，則可以略過此步驟。
+  
+8. 選取 [連線]。 系統會將您重新導向以在 Azure 中註冊 Jamf Pro 應用程式。
 
-8. 選取 [連線]  。 系統會將您重新導向以在 Azure 中註冊 Jamf Pro 應用程式。
+   出現提示時，請指定您的 Microsoft Azure 認證，並遵循畫面上的指示來授與所要求的權限。 您將授與 [Cloud Connector] 的權限，然後再次授與 [Cloud Connector 使用者註冊應用程式] 的權限。 這兩個應用程式都會在 Azure 中註冊為企業應用程式。
 
-   出現提示時，請指定您的 Microsoft Azure 認證，並遵循畫面上的指示來授與所要求的權限。 您將授與 [Cloud Connector]  的權限，然後再次授與 [Cloud Connector 使用者註冊應用程式]  的權限。 這兩個應用程式都會在 Azure 中註冊為企業應用程式。
+   授與這兩個應用程式的權限之後，[應用程式識別碼] 頁面隨即開啟。
 
-   授與這兩個應用程式的權限之後，[應用程式識別碼]  頁面隨即開啟。
-
-9. 在 [應用程式識別碼]  頁面上，選取 [複製並開啟 Intune]  。
+9. 在 [應用程式識別碼] 頁面上，選取 [複製並開啟 Intune]。
 
    ![應用程式識別碼](./media/conditional-access-jamf-cloud-connector/copy-application-id.png)
 
-   [應用程式識別碼]  會複製到系統剪貼簿，以供下一個步驟使用，而 [Microsoft 端點管理員系統管理中心]  中的 [合作夥伴裝置管理]  節點會開啟。 ([租用戶管理]   > [合作夥伴裝置管理]  )。
+   [應用程式識別碼] 會複製到系統剪貼簿，以供下一個步驟使用，而 [Microsoft 端點管理員系統管理中心] 中的 [合作夥伴裝置管理] 節點會開啟。 ([租用戶管理] > [合作夥伴裝置管理])。
 
-10. 在 [合作夥伴裝置管理]  節點上，將 [應用程式識別碼]  貼到  [指定 Jamf 的 Azure Active Directory 應用程式識別碼]  欄位中，然後選取 [儲存]  。
+10. 在 [合作夥伴裝置管理] 節點上，將 [應用程式識別碼] 貼到 [指定 Jamf 的 Azure Active Directory 應用程式識別碼] 欄位中，然後選取 [儲存]。
 
     ![設定合作夥伴裝置管理](./media/conditional-access-jamf-cloud-connector/partner-device-management.png)
 
-11. 返回 Jamf Pro 中的 [應用程式識別碼] 頁面，然後選取 [確認]  。
+11. 返回 Jamf Pro 中的 [應用程式識別碼] 頁面，然後選取 [確認]。
 
 12. Jamf Pro 會完成並測試設定，而且在 [條件式存取設定] 頁面上顯示連線成功或失敗。 下圖為成功範例：
 
     ![已在 Jamf Pro 中確認設定成功](./media/conditional-access-jamf-cloud-connector/successful-configuration.png)
 
-13. 在 Microsoft 端點管理員系統管理中心，重新整理 [合作夥伴裝置管理]  節點。 連線現在應該會顯示為 [作用中]  ：
+13. 在 Microsoft 端點管理員系統管理中心，重新整理 [合作夥伴裝置管理] 節點。 連線現在應該會顯示為 [作用中]：
 
     ![連線狀態為作用中](./media/conditional-access-jamf-cloud-connector/active-connection-status.png)
 
@@ -202,15 +204,15 @@ Cloud Connector 的使用是選擇性的：
 
 如果您需要移除 Jamf Pro 與 Intune 的整合，請使用下列步驟，從 Jamf Pro 主控台內移除連線。此資訊適用於 Cloud Connector 和手動設定的整合。
 
-1. 在 Jamf Pro 中，移至 [全域管理]   > [條件式存取]  。 在 [macOS Intune 整合]  索引標籤上，選取 [編輯]  。
+1. 在 Jamf Pro 中，移至 [全域管理] > [條件式存取]。 在 [macOS Intune 整合] 索引標籤上，選取 [編輯]。
 
-2. 清除 [啟用 macOS 的 Intune 整合]  核取方塊。
+2. 清除 [啟用 macOS 的 Intune 整合] 核取方塊。
 
-3. 選取 [儲存]  。 Jamf Pro 會將您的設定傳送至 Intune 並終止整合。
+3. 選取 [儲存]。 Jamf Pro 會將您的設定傳送至 Intune 並終止整合。
 
 4. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-5. 選取 [租用戶系統管理]   > [連接器與權杖]   > [夥伴裝置管理]  ，以驗證狀態現為 [已終止]  。
+5. 選取 [租用戶系統管理] > [連接器與權杖] > [夥伴裝置管理]，以驗證狀態現為 [已終止]。
 
    > [!NOTE]
    > 您組織的 Mac 裝置將會在主控台中顯示的日期 (3 個月) 移除。
@@ -280,9 +282,13 @@ Jamf Pro 會使用 AWS 中的微服務，將裝置資訊正確地路由傳送至
 
 是。 您可以將連線類型變回手動，並依照步驟進行手動設定。 如有任何問題，應將其導向至 Jamf 尋求協助。
 
-### <a name="permissions-were-modified-on-one-or-both-required-apps-cloud-connector-and-cloud-connector-user-registration-app-and-registration-is-not-working-is-this-supported"></a>已在一或兩個必要的應用程式 ([Cloud Connector]  和 [loud Connector 使用者註冊應用程式]  ) 上修改權限，而註冊無法運作，可支援此作業嗎？
+### <a name="permissions-were-modified-on-one-or-both-required-apps-cloud-connector-and-cloud-connector-user-registration-app-and-registration-is-not-working-is-this-supported"></a>已在一或兩個必要的應用程式 ([Cloud Connector] 和 [loud Connector 使用者註冊應用程式]) 上修改權限，而註冊無法運作，可支援此作業嗎？
 
 不支援修改應用程式的權限。
+
+### <a name="is-there-a-log-file-in-jamf-pro-that-shows-if-the-connection-type-has-been-changed"></a>Jamf Pro 中是否有記錄檔會顯示連線類型是否已變更？
+
+是，變更會記錄到 JAMFChangeManagement.log 檔案中。 若要檢視變更管理記錄檔，請登入 Jamf Pro，移至 [設定] > [系統設定] > [變更管理] > [記錄]，搜尋 [條件式存取] 的**物件類型**，然後按一下 [詳細資料] 以檢視變更。
 
 ## <a name="next-steps"></a>後續步驟
 

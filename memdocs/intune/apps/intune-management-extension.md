@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8d75208de7cc6697699d79e3a52df742f605fdb
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 529d7a7da1257b9ebce1e1ab3cec706e8f100403
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990726"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270934"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>在 Intune 的 Windows 10 裝置上使用 PowerShell 指令碼
 
@@ -68,7 +68,7 @@ Intune 管理延伸模組具有下列必要條件。 一旦符合這些必要條
     
     - 使用者使用自身 Azure AD 帳戶登入裝置，然後在 Intune 中註冊。
 
-  - 使用 Configuration Manager 和 Intune 共同管理的裝置。 請務必將 [應用程式]  工作負載設定為 [試驗 Intune]  或 [Intune]  。 如需指引，請參閱下列文章： 
+  - 使用 Configuration Manager 和 Intune 共同管理的裝置。 安裝 Win32 應用程式時，請確定 [應用程式] 工作負載已設定為 [試驗 Intune] 或 [Intune]。 即使 [應用程式] 工作負載已設定為 [Configuration Manager]，也會執行 PowerShell 指令碼。 當您將 PowerShell 指令碼目標設為裝置時，Intune 管理延伸模組將會部署至裝置。 不過，如上所述，裝置必須是 Azure AD 或已加入混合式 Azure AD 的裝置，且必須執行 Windows 10 1607 版或更新版本。 如需指引，請參閱下列文章： 
   
     - [什麼是共同管理](https://docs.microsoft.com/configmgr/comanage/overview) 
     - [用戶端應用程式工作負載](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
@@ -80,46 +80,46 @@ Intune 管理延伸模組具有下列必要條件。 一旦符合這些必要條
 ## <a name="create-a-script-policy-and-assign-it"></a>建立並指派指令碼原則
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置]   > [PowerShell 指令碼]   > [新增]  。
+2. 選取 [裝置] > [PowerShell 指令碼] > [新增]。
 
     ![在 Microsoft Intune 中新增和使用 PowerShell 指令碼](./media/intune-management-extension/mgmt-extension-add-script.png)
 
-3. 在 [基本資訊]  中，輸入下列內容，然後選取 [下一步]  ：
+3. 在 [基本資訊] 中，輸入下列內容，然後選取 [下一步]：
     - **名稱**：輸入 PowerShell 指令碼的名稱。 
     - **描述**：輸入 PowerShell 指令碼的描述。 這是選擇性設定，但建議執行。
-4. 在 [指令碼設定]  中，輸入下列內容，然後選取 [下一步]  ：
+4. 在 [指令碼設定] 中，輸入下列內容，然後選取 [下一步]：
     - **指令碼位置**：瀏覽至 PowerShell 指令碼。 指令碼必須小於 200 KB (ASCII)。
-    - **使用登入認證執行此指令碼**：選取 [是]  以使用裝置上的使用者認證來執行指令碼。 選擇 [否]  (預設) 以在系統內容中執行指令碼。 許多系統管理員會選擇 [是]  。 如果需要在系統內容中執行指令碼，請選擇 [否]  。
-    - **強制執行指令碼簽章檢查**：如果指令碼必須由信任的發行者簽章，請選取 [是]  。 如果指令碼不需要簽章，請選取 [否]  (預設)。 
-    - **在 64 位元的 PowerShell 主機中執行指令碼**：選取 [是]  以在 64 位元用戶端架構的 64 位元 PowerShell (PS) 主機中執行指令碼。 選取 [否]  (預設) 以在 32 位元的 PowerShell 主機中執行指令碼。
+    - **使用登入認證執行此指令碼**：選取 [是] 以使用裝置上的使用者認證來執行指令碼。 選擇 [否] (預設) 以在系統內容中執行指令碼。 許多系統管理員會選擇 [是]。 如果需要在系統內容中執行指令碼，請選擇 [否]。
+    - **強制執行指令碼簽章檢查**：如果指令碼必須由信任的發行者簽章，請選取 [是]。 如果指令碼不需要簽章，請選取 [否] (預設)。 
+    - **在 64 位元的 PowerShell 主機中執行指令碼**：選取 [是] 以在 64 位元用戶端架構的 64 位元 PowerShell (PS) 主機中執行指令碼。 選取 [否] (預設) 以在 32 位元的 PowerShell 主機中執行指令碼。
 
-      設定為 [是]  或 [否]  時，可使用下表來了解新的和現有原則行為：
+      設定為 [是] 或 [否] 時，可使用下表來了解新的和現有原則行為：
 
       | 在 64 位元的 PS 主機中執行指令碼 | 用戶端架構 | 新的 PS 指令碼 | 現有的 PS 指令碼原則 |
       | --- | --- | --- | --- | 
       | 否 | 32 位元  | 支援 32 位元的 PS 主機 | 僅在 32 位元的 PS 主機中執行，該主機可在 32 位元和 64 位元架構上運作。 |
       | 是 | 64 位元 | 僅在 64 位元架構的 64 位元 PS 主機中執行。 在 32 位元上執行時，指令碼會在 32 位元的 PS 主機中執行。 | 在 32 位元的 PS 主機中執行指令碼。 如果此設定變更為 64 位元，指令碼會在 64 位元的 PS 主機中開啟 (但不會執行) 並報告結果。 在 32 位元上執行時，指令碼會在 32 位元的 PS 主機中執行。 |
 
-5. 選取 [範圍標籤]  。 範圍標籤為選擇性。 [針對分散式 IT 使用角色型存取控制 (RBAC) 和範圍標籤](../fundamentals/scope-tags.md)提供詳細資訊。
+5. 選取 [範圍標籤]。 範圍標籤為選擇性。 [針對分散式 IT 使用角色型存取控制 (RBAC) 和範圍標籤](../fundamentals/scope-tags.md)提供詳細資訊。
 
     若要新增範圍標籤：
 
-    1. 選擇 [選取範圍標籤]  > 從清單中選取現有的範圍標籤 > [選取]  。
+    1. 選擇 [選取範圍標籤] > 從清單中選取現有的範圍標籤 > [選取]。
 
-    2. 完成時，請選取 [下一步]  。
+    2. 完成時，請選取 [下一步]。
 
-6. 選取 [指派]   > [選取要包含的群組]  。 Azure AD 群組的現有清單會隨即顯示。
+6. 選取 [指派] > [選取要包含的群組]。 Azure AD 群組的現有清單會隨即顯示。
 
-    1. 選取包含其裝置接收指令碼之使用者的一或多個群組。 選擇 [選取]  。 您選擇的群組會顯示在清單中，並會接收您的原則。
+    1. 選取包含其裝置接收指令碼之使用者的一或多個群組。 選擇 [選取]。 您選擇的群組會顯示在清單中，並會接收您的原則。
 
         > [!NOTE]
         > Intune 中的 PowerShell 指令碼可以鎖定至 Azure AD 裝置安全性群組或 Azure AD 使用者安全性群組。
 
-    2. 選取 [下一步]  。
+    2. 選取 [下一步]。
 
         ![在 Microsoft Intune 中將 PowerShell 指令碼指派或部署到裝置群組](./media/intune-management-extension/mgmt-extension-assignments.png)
 
-7. 在 [檢閱 + 新增]  中，會顯示您設定的設定摘要。 選取 [新增]  以儲存此指令碼。 當您選取 [新增]  時，會將原則部署到您選擇的群組。
+7. 在 [檢閱 + 新增] 中，會顯示您設定的設定摘要。 選取 [新增] 以儲存此指令碼。 當您選取 [新增] 時，會將原則部署到您選擇的群組。
 
 ## <a name="important-considerations"></a>重要考量
 
@@ -162,7 +162,7 @@ Intune 管理延伸模組具有下列必要條件。 一旦符合這些必要條
 
 您可以在 Azure 入口網站中，監視使用者和裝置之 PowerShell 指令碼的執行狀態。
 
-在 [PowerShell 指令碼]  中，選取要監視的指令碼，然後選擇 [監視]  ，再選擇下列其中一種報表：
+在 [PowerShell 指令碼] 中，選取要監視的指令碼，然後選擇 [監視]，再選擇下列其中一種報表：
 
 - **裝置狀態**
 - **使用者狀態**
@@ -175,7 +175,7 @@ Intune 管理延伸模組具有下列必要條件。 一旦符合這些必要條
 
 ## <a name="delete-a-script"></a>刪除指令碼
 
-在 [PowerShell 指令碼]  中，以滑鼠右鍵按一下指令碼，然後選取 [刪除]  。
+在 [PowerShell 指令碼] 中，以滑鼠右鍵按一下指令碼，然後選取 [刪除]。
 
 ## <a name="common-issues-and-resolutions"></a>常見問題和解決方式
 
@@ -190,9 +190,9 @@ Intune 管理延伸模組具有下列必要條件。 一旦符合這些必要條
 
 若要查看裝置是否已自動註冊，您可以：
 
-  1. 移至 [設定]   > [帳戶]   > [存取公司或學校資源]  。
-  2. 選取已加入的帳戶 > [資訊]  。
-  3. 在 [進階診斷報告]  下，選取 [建立報表]  。
+  1. 移至 [設定] > [帳戶] > [存取公司或學校資源]。
+  2. 選取已加入的帳戶 > [資訊]。
+  3. 在 [進階診斷報告] 下，選取 [建立報表]。
   4. 在 Web 瀏覽器中開啟 `MDMDiagReport`。
   5. 搜尋 **MDMDeviceWithAAD** 屬性。 如果屬性存在，就代表裝置已自動註冊。 如果屬性不存在，則代表裝置未自動註冊。
 

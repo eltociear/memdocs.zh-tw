@@ -4,7 +4,7 @@ description: Microsoft 365 企業版隨附 Microsoft Intune。 了解 Intune 如
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 05/28/2020
 ms.topic: overview
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44f9446299bb20bd73890a67ec33c3d8e7a36e48
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 540faaca71d3694b95d32a24c947a977989a3223
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988137"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223631"
 ---
 # <a name="device-management-overview"></a>裝置管理概觀
 
-任何系統管理員的一項主要工作是保護組織的資源和資料安全。 這項工作為「裝置管理」  。 使用者擁有許多裝置，他們可以在裝置上開啟及共用個人檔案、瀏覽網站，以及安裝應用程式和遊戲。 同樣的這些使用者也是員工和學生。 他們想要使用其裝置來存取工作和學校資源，例如電子郵件和 OneNote。
+任何系統管理員的一項主要工作是保護組織的資源和資料安全。 這項工作為「裝置管理」。 使用者擁有許多裝置，他們可以在裝置上開啟及共用個人檔案、瀏覽網站，以及安裝應用程式和遊戲。 同樣的這些使用者也是員工和學生。 他們想要使用其裝置來存取工作和學校資源，例如電子郵件和 OneNote。
 
 裝置管理可讓組織從不同裝置保護其資源和資料的安全。
 
@@ -56,6 +56,16 @@ Microsoft 等許多組織使用 Intune 來保護使用者有權從其公司擁�
 - 使用個人裝置存取組織資源
 
 如需 Intune 的詳細資訊，請參閱[什麼是 intune](what-is-intune.md)。
+
+## <a name="co-management"></a>共同管理
+
+許多組織都會使用內部部署 Configuration Manager 來管理裝置，包括桌上型電腦與伺服器。 您可以將內部部署 Configuration Manager 以雲端方式連接到 Microsoft Intune。 當連接雲端時，您可以獲得 Intune 與雲端的優點，包括[條件式存取](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-conditional-access)、[執行遠端動作](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-remote-actions)、[使用 Windows Autopilot](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-autopilot) 等。
+
+[Microsoft 端點管理員](https://docs.microsoft.com/mem/endpoint-manager-overview)是統一數種服務的解決方案平台。 其包含雲端式裝置管理的 [Microsoft Intune](what-is-intune.md)，以及可用於進行雲端連接裝置管理的 [Configuration Manager + Intune](https://docs.microsoft.com/mem/configmgr/comanage/overview)。
+
+如果您使用 Configuration Manager，而且您已準備好將一些工作移至雲端，則共同管理是您的答案。
+
+如需有關以雲端方式連接 Configuration Manager 的詳細資訊，請參閱[什麼是共同管理](https://docs.microsoft.com/mem/configmgr/comanage/overview)。
 
 ## <a name="integration-with-secure-and-protect-services"></a>與安全且受保護的服務整合
 

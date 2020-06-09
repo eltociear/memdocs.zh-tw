@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 06/01/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49749ec3a839b11062b1cc2655a1cca4e3d6cfb0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 78f69edbc38bc41863783010a0e795290b7762c5
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81525695"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270917"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>針對 Jamf Pro 與 Microsoft Intune 的整合進行疑難排解
 
@@ -67,7 +67,7 @@ ms.locfileid: "81525695"
 
 ### <a name="devices-are-marked-as-unresponsive-in-jamf-pro"></a>裝置在 Jamf Pro 中標記為沒有回應  
 
-**原因**：下列為裝置由 Jamf Pro 標記為「沒有回應」  的常見原因：
+**原因**：下列為裝置由 Jamf Pro 標記為「沒有回應」的常見原因：
 
 - 裝置無法使用 Jamf Pro 存回。  
   Jamf Pro 預期裝置每 15 分鐘進行存回。 若裝置在 24 小時的期間內無法存回，Jamf 即會將裝置標記為沒有回應。  
@@ -79,7 +79,7 @@ ms.locfileid: "81525695"
   - 若 Azure 權杖過期，使用者即會收到提示，要求登入 Azure 以取得新的權杖。 用於 Azure 存取的重新整理權杖每七天會產生一次。
 
 **解決方法**  
-在裝置由 Jamf Pro 標記為「沒有回應」  後，裝置的已註冊使用者必須登入，才能修正沒有回應的狀態。 其必須是已加入公司帳戶的使用者，因為這些使用者在其登入 keychain 中擁有 Intune 的身分識別。
+在裝置由 Jamf Pro 標記為「沒有回應」後，裝置的已註冊使用者必須登入，才能修正沒有回應的狀態。 其必須是已加入公司帳戶的使用者，因為這些使用者在其登入 keychain 中擁有 Intune 的身分識別。
 
 
 
@@ -102,7 +102,7 @@ ms.locfileid: "81525695"
 - **允許** - 單次登入。 下一次當應用程式開啟時，會再次出現登入提示。
 - **一律允許** - 為應用程式快取登入認證。 下一次當應用程式開啟時，不會再次出現登入提示。  
 
-為應用程式選取 [一律允許]  只會核准該應用程式未來的登入。 其他應用程式仍會出現提示要求驗證，直到這些應用程式也設為 [一律允許]  為止。 單一應用程式的快取認證無法由其他應用程式使用。  
+為應用程式選取 [一律允許] 只會核准該應用程式未來的登入。 其他應用程式仍會出現提示要求驗證，直到這些應用程式也設為 [一律允許] 為止。 單一應用程式的快取認證無法由其他應用程式使用。  
 
 ### <a name="devices-fail-to-register"></a>裝置無法登錄  
 
@@ -157,7 +157,7 @@ Mac 裝置無法登錄有數個常見的原因。
 
 **解決方法**  
 將登錄來源從 Intune 變更為 Jamf：
-1. [從 Intune 取消註冊 macOS 裝置](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos)。 為了避免使並未完全從 Intune 中移除的裝置變得更為複雜，請參閱原因清單中的[原因 6  ](#cause-6)。  
+1. [從 Intune 取消註冊 macOS 裝置](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos)。 為了避免使並未完全從 Intune 中移除的裝置變得更為複雜，請參閱原因清單中的[原因 6](#cause-6)。  
 
 2. 在裝置上，使用 Jamf Self Service 開啟公司入口網站應用程式，然後使用 Intune 註冊裝置。 這項工作需要[已使用 Jamf 部署 macOS 的公司入口網站應用程式](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro)，且[已在 Jamf Pro 中建立原則，向 Azure AD 登錄使用者裝置](conditional-access-assign-jamf.md#create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory)。  
 
@@ -205,14 +205,13 @@ Jamf Pro 伺服器會在整合關閉時傳送脈衝到 Intune 伺服器，告知
    - /Library/Application Support/com.microsoft.CompanyPortal.usercontext.info
    - /Library/Application Support/com.microsoft.CompanyPortal
    - /Library/Application Support/com.jamfsoftware.selfservice.mac
-   - /Library/Saved Application
-   - State/com.jamfsoftware.selfservice.mac.savedState
+   - /Library/Saved Application State/com.jamfsoftware.selfservice.mac.savedState
    - /Library/Saved Application State/com.microsoft.CompanyPortal.savedState
    - /Library/Preferences/com.microsoft.CompanyPortal.plist
    - /Library/Preferences/com.jamfsoftware.selfservice.mac.plist
    - /Library/Preferences/com.jamfsoftware.management.jamfAAD.plist
-   - /Users/<username>/Library/Cookies/com.microsoft.CompanyPortal.binarycookies
-   - /Users/<username>/Library/Cookies/com.jamf.management.jamfAAD.binarycookies
+   - /Users/\<*username*>/Library/Cookies/com.microsoft.CompanyPortal.binarycookies
+   - /Users/\<*username*>/Library/Cookies/com.jamf.management.jamfAAD.binarycookies
    - com.microsoft.CompanyPortal
    - com.microsoft.CompanyPortal.HockeySDK
    - enterpriseregistration.windows.net
@@ -220,7 +219,7 @@ Jamf Pro 伺服器會在整合關閉時傳送脈衝到 Intune 伺服器，告知
    - https://device.login.microsoftonline.com/
    - Microsoft 工作階段傳輸金鑰 (公開與私密金鑰)
    - Microsoft Workplace Join 金鑰 (公開與私密金鑰)
-7. 從裝置上的 keychain 移除任何參考 *Microsoft*、*Intune*，或「公司入口網站」  的項目，包括 DeviceLogin.microsoft.com 憑證。 移除除 JAMF 公開和私密金鑰以外的 *JAMF* 參考。 
+7. 從裝置上的 keychain 移除任何參考 *Microsoft*、*Intune*，或「公司入口網站」的項目，包括 DeviceLogin.microsoft.com 憑證。 移除除 JAMF 公開和私密金鑰以外的 *JAMF* 參考。 
    > [!IMPORTANT]  
    > 移除公開和私密金鑰會中斷裝置註冊。
 
@@ -251,7 +250,7 @@ Jamf Pro 伺服器會在整合關閉時傳送脈衝到 Intune 伺服器，告知
 ```
 
 **解決方法**  
-為了成功向 Azure AD 登錄裝置，Jamf 會要求使用者提供其帳戶密碼，並選取 [允許]  。
+為了成功向 Azure AD 登錄裝置，Jamf 會要求使用者提供其帳戶密碼，並選取 [允許]。
 
 這項要求與本文稍早[在開啟應用程式時 Mac 裝置出現提示，要求進行 keychain 登入](#mac-devices-prompt-for-keychain-sign-in-when-you-open-an-app)的請求相似。  
 
@@ -263,7 +262,7 @@ Jamf Pro 伺服器會在整合關閉時傳送脈衝到 Intune 伺服器，告知
 - 裝置在沒有進行必要清除的情況下多次登錄。
 
 **解決方法**  
-若要解決此問題，請遵循本文稍早＜裝置無法登錄＞  的[原因 6  ](#cause-6) 解決方案。 
+若要解決此問題，請遵循本文稍早＜裝置無法登錄＞的[原因 6](#cause-6) 解決方案。 
 
 
 ### <a name="duplicate-entries-appear-in-the-intune-console-for-mac-devices-enrolled-by-using-jamf"></a>Intune 主控台中出現使用 Jamf 註冊 Mac 裝置的重複項目  
@@ -273,7 +272,7 @@ Jamf Pro 伺服器會在整合關閉時傳送脈衝到 Intune 伺服器，告知
 從 Intune 和 Jamf Pro 整合中移除裝置時，可能會留下一些資料，其會導致後續的登錄建立重複項目。  
 
 **解決方法**  
-若要解決此問題，請遵循本文稍早＜裝置無法登錄＞  的[原因 6  ](#cause-6) 解決方案。
+若要解決此問題，請遵循本文稍早＜裝置無法登錄＞的[原因 6](#cause-6) 解決方案。
 
 ### <a name="compliance-policy-fails-to-evaluate-the-device"></a>合規性政策無法評估裝置  
 
@@ -295,7 +294,7 @@ Jamf Pro 伺服器會在整合關閉時傳送脈衝到 Intune 伺服器，告知
 在 Azure 中登錄 Jamf Pro 應用程式時，發生了下列其中一個狀況：
 
 - 應用程式收到超過一個權限。
-- 未選取 [ ***\<your 公司 >*** ] 選項的 [授與系統管理員同意]。  
+- 未選取 [代表 *\<your company>* 授與管理員同意] 選項。  
 
 **解決方法**  
 請參閱本文稍早[裝置無法登錄](#devices-fail-to-register)原因 1 的解決方案。
