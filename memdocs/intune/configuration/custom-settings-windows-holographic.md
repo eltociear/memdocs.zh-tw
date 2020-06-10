@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
-ms.article: article
+ms.date: 05/18/2020
+ms.article: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43199009740f259c6a6484e455b0205da76492ba
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f37550bcfd8105b9cf5ea51c1bfa0d9305721348
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084039"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990082"
 ---
 # <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>在 Intune 中使用 Windows Holographic for Business 裝置的自訂設定
 
@@ -35,38 +35,30 @@ Windows Holographic for Business 提供許多設定服務提供者 (CSP) 設定�
 
 本文示範如何建立 Windows Holographic for Business 裝置的自訂設定檔。 其中也包含建議的 OMA-URI 設定清單。
 
-## <a name="create-the-profile"></a>建立設定檔
+## <a name="before-you-begin"></a>開始之前
 
-1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
-3. 輸入下列設定：
+[建立 Windows 10 自訂設定檔](custom-settings-configure.md#create-the-profile)。
 
-    - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，一個合適的設定檔名稱可為 **Hololens 自訂設定檔**。
-    - **描述**：輸入描述來概述設定和其他重要的詳細資料。
-    - **平台**：選取 [Windows 10 及更新版本]  。
-    - **設定檔類型**：選取 [自訂]  。
+## <a name="custom-oma-uri-settings"></a>自訂 OMA-URI 設定
 
-4. 在 [自訂 OMA-URI 設定]  中，選取 [新增]  。 輸入下列設定：
+**新增**：輸入下列設定：
 
-    - **名稱**：輸入 OMA-URI 設定的唯一名稱，協助您在設定清單中識別該設定。
-    - **描述**：輸入描述來概述設定和其他重要的詳細資料。
-    - **OMA-URI** (區分大小寫)：輸入您要用作設定的 OMA-URI。
-    - **資料類型**：選取您要用於這個 OMA-URI 設定的資料類型。 選項包括：
+- **名稱**：輸入 OMA-URI 設定的唯一名稱，協助您在設定清單中識別該設定。
+- **描述**：輸入描述來概述設定和其他重要的詳細資料。
+- **OMA-URI** (區分大小寫)：輸入您要用作設定的 OMA-URI。
+- **資料類型**：選取您要用於這個 OMA-URI 設定的資料類型。 選項包括：
 
-        - 字串
-        - 字串 (XML 檔案)
-        - 日期和時間
-        - 整數
-        - 浮點數
-        - 布林值
-        - Base64 (檔案)
+  - 字串
+  - 字串 (XML 檔案)
+  - 日期和時間
+  - 整數
+  - 浮點數
+  - 布林值
+  - Base64 (檔案)
 
-    - **值**：輸入要與您輸入之 OMA-URI 相關聯的資料值。 該值取決於您選取的資料類型。 例如，如果您選取 [日期和時間]  ，請從日期選擇器選取值。
+- **值**：輸入要與您輸入之 OMA-URI 相關聯的資料值。 該值取決於您選取的資料類型。 例如，如果您選取 [日期和時間]，請從日期選擇器選取值。
 
-    新增一些設定之後，您可以選取 [匯出]  。 [匯出]  會以逗號分隔值 (.csv) 檔案格式，為您新增的所有值建立一份清單。
-
-5. 按一下 [確定]  以儲存您的變更。 視需要繼續新增更多設定。
-6. 完成時，選取 [確定]   > [建立]  以建立 Intune 設定檔。 完成時，您的設定檔會顯示在 [裝置 - 設定檔]  清單中。
+新增一些設定之後，您可以選取 [匯出]。 [匯出] 會以逗號分隔值 (.csv) 檔案格式，為您新增的所有值建立一份清單。
 
 ## <a name="recommended-custom-settings"></a>建議的自訂設定
 
@@ -149,7 +141,6 @@ Windows Holographic for Business 提供許多設定服務提供者 (CSP) 設定�
 > |----|---|
 > |./Vendor/MSFT/AccountManagement/UserProfileManagement/ProfileInactivityThreshold|整數<br/>預設值為 30。|
 
-
 ### <a name="storagecapacitystartdeletion"></a>[StorageCapacityStartDeletion](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
 
 > [!div class="mx-tableFixed"]
@@ -168,10 +159,12 @@ Windows Holographic for Business 提供許多設定服務提供者 (CSP) 設定�
 
 您可以在 [CSPs supported in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens) (Windows Holographic 支援的 CSP) 中找到 Windows Holographic 支援的所有設定服務提供者 (CSP) 的完整清單。 並非所有設定都與所有的 Windows Holographic 版本相容。 [CSPs supported in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens) (Windows Holographic 支援的 CSP) 中的表格列出每個 CSP 支援的版本。
 
-此外，Intune 不支援所有在 [CSPs supported in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens) (Windows Holographic 支援的 CSP) 中列出的設定。 若要了解 Intune 是否支援您想要的設定，請開啟該設定的文章。 每個設定頁面都會顯示它所支援的作業。 若要使用 Intune，該設定必須支援「新增」  或「取代」  作業。
+此外，Intune 不支援所有在 [CSPs supported in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens) (Windows Holographic 支援的 CSP) 中列出的設定。 若要了解 Intune 是否支援您想要的設定，請開啟該設定的文章。 每個設定頁面都會顯示它所支援的作業。 若要使用 Intune，該設定必須支援「新增」或「取代」作業。
 
 ## <a name="next-steps"></a>後續步驟
 
-設定檔已建立，但還不會執行任何動作。 接下來，[指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
+[指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
 
 [在 Windows 10 裝置上建立自訂設定檔](custom-settings-windows-10.md)。
+
+深入了解 Intune 中的[自訂設定檔](custom-settings-configure.md)。

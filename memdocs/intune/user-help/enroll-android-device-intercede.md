@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/17/2020
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -18,16 +18,16 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8afc499f85e91658b411a25988ac858ca59030cc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e82d8f27b7ffbce663ee64030a6d933bf1684dc1
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81616043"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880597"
 ---
 # <a name="set-up-android-device-with-company-portal-and-intercede"></a>使用公司入口網站及 Intercede 設定 Android 裝置
 
-使用 Intune 公司入口網站應用程式註冊您的裝置，以安全地使用行動裝置存取您組織的電子郵件、檔案和應用程式。 您的裝置註冊之後，它就變成「受控」  。 您的組織可以透過 Intune 等行動裝置管理 (MDM) 提供者將原則和應用程式指派給裝置。
+使用 Intune 公司入口網站應用程式註冊您的裝置，以安全地使用行動裝置存取您組織的電子郵件、檔案和應用程式。 您的裝置註冊之後，它就變成「受控」。 您的組織可以透過 Intune 等行動裝置管理 (MDM) 提供者將原則和應用程式指派給裝置。
 
 在註冊期間，您也會在裝置上安裝衍生的認證。 組織可能會要求在存取資源或簽署和加密電子郵件時，使用衍生認證作為驗證方法。
 
@@ -64,29 +64,29 @@ ms.locfileid: "81616043"
 ## <a name="enroll-device"></a>註冊裝置  
 
 1. 開啟新裝置或恢復出廠預設值之裝置的電源。  
-2. 在 [歡迎使用]  畫面上選取您的語言。 若您收到指示，要求您使用 QR 代碼或 NFC 註冊，請遵循以下符合該方法的步驟。  
+2. 在 [歡迎使用] 畫面上選取您的語言。 若您收到指示，要求您使用 QR 代碼或 NFC 註冊，請遵循以下符合該方法的步驟。  
      * NFC：針對程式設計師裝置輕觸您支援 NFC 的裝置，來連線到您組織的網路。 遵循畫面上的提示。 當您到達 Chrome 的服務條款畫面時，請繼續前往步驟 5。  
 
      * QR 代碼：完成 [QR 代碼註冊](#qr-code-enrollment)中的步驟。  
 
      若您收到指示，要求您使用另一種方法，請繼續前往步驟 3。    
 
-3. 連線到 Wi-Fi 並點選 [下一步]  。 遵循符合您註冊方法的步驟。 
+3. 連線到 Wi-Fi 並點選 [下一步]。 遵循符合您註冊方法的步驟。 
 
     * 權杖：當您到達 Google 登入畫面時，請完成[權杖註冊](#token-enrollment)中的步驟。  
     * Google Zero Touch：在您連線到 Wi-Fi 後，您的組織將能辨識您的裝置。 繼續前往步驟 4 並遵循畫面上的提示，直到安裝完成。    
  
        ![Google 條款畫面的範例影像 (若您使用 Google Zero Touch 的話)，其中已醒目提示 [接受並繼續] 按鈕。](./media/google-zero-touch-intune-app-01.png)   
    
-4. 檢閱 Google 的條款。 然後點選 [接受並繼續]  。  
+4. 檢閱 Google 的條款。 然後點選 [接受並繼續]。  
 
       ![Google 條款畫面的範例影像，其中已醒目提示 [接受並繼續] 按鈕。](./media/fully-managed-intune-app-04.png)   
 
-5. 檢閱 Chrome 的服務條款。 然後點選 [接受並繼續]  。  
+5. 檢閱 Chrome 的服務條款。 然後點選 [接受並繼續]。  
 
    ![Google 服務條款畫面的範例影像，其中已醒目提示 [接受並繼續] 按鈕。](./media/fully-managed-intune-app-06.png)  
 
-6. 在登入畫面中，依序點選 [登入選項]  及 [從另一部裝置登入]  。 
+6. 在登入畫面中，依序點選 [登入選項] 及 [從另一部裝置登入]。 
 
 7. 記下螢幕上的代碼。  
 
@@ -101,15 +101,15 @@ ms.locfileid: "81616043"
 
 11. 在登入畫面中，選取您的公司或學校帳戶。 切換回您的行動裝置。
 
-12. 取決於您組織的需求，您可能會收到提示，要求您更新設定 (例如畫面鎖定或加密)。 若您看到這些提示，請點選 [設定]  並遵循畫面上的說明。  
+12. 取決於您組織的需求，您可能會收到提示，要求您更新設定 (例如畫面鎖定或加密)。 若您看到這些提示，請點選 [設定] 並遵循畫面上的說明。  
 
        ![設定您公司電話畫面的範例影像，其中已醒目提示 [設定] 按鈕。](./media/fully-managed-intune-app-10.png)   
 
-13. 若要在您的裝置上安裝公司應用程式，請點選 [安裝]  。 安裝完成後，請點選 [下一步]  。  
+13. 若要在您的裝置上安裝公司應用程式，請點選 [安裝]。 安裝完成後，請點選 [下一步]。  
 
        ![設定您公司電話畫面的範例影像，其中已醒目提示 [安裝] 按鈕。](./media/fully-managed-intune-app-11.png)    
 
-14. 點選 [開始]  ，以開啟 Microsoft Intune 應用程式。 
+14. 點選 [開始]，以開啟 Microsoft Intune 應用程式。 
 
     ![設定您公司電話畫面的範例影像，其中已醒目提示 [啟動] 按鈕。](./media/fully-managed-intune-app-17.png)   
  
@@ -123,7 +123,7 @@ ms.locfileid: "81616043"
 ### <a name="qr-code-enrollment"></a>QR 代碼註冊  
 在本節中，您將會掃描您公司提供的 QR 代碼。  當您完成時，我們會將您重新導向回裝置註冊步驟。     
   
-1. 在 [歡迎]  畫面上，點選畫面五次來啟動 QR 代碼安裝。  
+1. 在 [歡迎] 畫面上，點選畫面五次來啟動 QR 代碼安裝。  
 
    ![裝置安裝 [歡迎] 畫面的範例影像，其中已醒目提示點選畫面的說明。](./media/qr-code-intune-app-01.png)  
 
@@ -135,17 +135,17 @@ ms.locfileid: "81616043"
 ### <a name="token-enrollment"></a>權杖註冊  
 在本節中，您將會輸入您公司提供的權杖。 當您完成時，我們會將您重新導向回裝置註冊步驟。  
 
-1. 在 Google 登入畫面的 [電子郵件或電話]  方塊中，鍵入 **afw#setup**。 點選 [下一步]  。 
+1. 在 Google 登入畫面的 [電子郵件或電話] 方塊中，鍵入 **afw#setup**。 然後點選 [下一步]。 
 
    ![Google 登入畫面的範例影像，其中顯示已在欄位中鍵入 "afw#setup"。](./media/token-intune-app-01.png)   
 
-2. 針對 [Android 裝置原則]  應用程式選擇 [安裝]  。 繼續安裝。 取決於您的裝置，您可能需要檢閱及接受其他條款。    
+2. 針對 [Android 裝置原則] 應用程式選擇 [安裝]。 繼續安裝。 取決於您的裝置，您可能需要檢閱及接受其他條款。    
 
-3. 在 [註冊此裝置]  畫面上，選取 [下一步]  。  
+3. 在 [註冊此裝置] 畫面上，選取 [下一步]。  
 
-4. 選取 [輸入代碼]  。  
+4. 選取 [輸入代碼]。  
 
-5. 在 [掃描或輸入代碼]  畫面上，鍵入組織給您的代碼。  然後按一下 [下一步]  。  
+5. 在 [掃描或輸入代碼] 畫面上，鍵入組織給您的代碼。  然後按一下 [下一步] 。  
 
    ![[掃描或輸入代碼] 畫面的範例影像，其中已醒目提示 [下一步] 按鈕。](./media/token-intune-app-04.png)  
 
@@ -162,7 +162,7 @@ ms.locfileid: "81616043"
 
    1. 點選組織其設定指示的連結。 如果組織未提供其他指示，則會將您送往這篇文章。
 
-   2. 點選 [開始]  。  
+   2. 點選 [開始]。  
 
    > [!div class="mx-imgBorder"]
    > ![公司入口網站之設定行動智慧卡存取畫面的範例螢幕擷取畫面。](./media/smart-card-open-entrust-android.png)
@@ -173,19 +173,19 @@ ms.locfileid: "81616043"
 
 5. 當系統詢問想要使用哪一個設定檔時，請選擇以行動認證啟用。 QR 代碼隨即出現。  
 
-6. 返回您的 Android 裝置。 在公司入口網站 > **取得 QR 代碼**的畫面中，點選 [下一步]  。
+6. 返回您的 Android 裝置。 在公司入口網站 > [取得 QR 代碼]的畫面中，點選 [下一步]。
 
     > [!div class="mx-imgBorder"]
     > ![公司入口網站之取得 QR 代碼畫面的範例螢幕擷取畫面。](./media/get-qr-code-entrust-android.png)
 
-7. 如有提示允許 Intune 應用程式使用您的相機時，請點選 [允許]  。
+7. 如有提示允許 Intune 應用程式使用您的相機時，請點選 [允許]。
 
 8. 掃描支援智慧卡裝置上的 QR 代碼影像。
 
 9. Intune 應用程式會開始下載存取公司或學校資源所需的憑證，然後加以安裝。 此程序需要一些時間，視您的網際網路連線而定。 在這段期間內，請勿關閉應用程式。
 
     > [!div class="mx-imgBorder"]
-    > ![公司入口網站之下載及安裝憑證畫面的範例螢幕擷取畫面。](./media/install-certificates-entrust-android.png)
+    > ![公司入口網站之「下載及安裝憑證」畫面的範例螢幕擷取畫面](./media/install-certificates-entrust-android.png)
 
 10. 處理完所有憑證之後，請等待 Intune 應用程式完成您的裝置設定。 當出現**設定完成** 畫面時，表示設定已完成。
 

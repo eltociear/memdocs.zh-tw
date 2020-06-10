@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/28/2020
-ms.topic: conceptual
+ms.date: 05/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: c37563dee40d776d352dec4e0b8ef11b1dc8f67b
-ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
+ms.openlocfilehash: 4d491a3210229d5dd6c74ccaed7f44c4ae4eb83c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506534"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990068"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Microsoft Intune 中的傳遞最佳化設定
 
@@ -36,64 +36,82 @@ ms.locfileid: "82506534"
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取 [裝置] > [組態設定檔] > [建立設定檔]。
 
 3. 輸入下列內容：
-   - **平台**：選取 [Windows 10 及更新版本]  。
-   - **設定檔類型**：選取 [傳遞最佳化]  。
 
-4. 選取 [建立]  。
+   - **平台**：選取 [Windows 10 及更新版本]。
+   - **設定檔**：選取 [傳遞最佳化]。
 
-5. 在 [基本]  頁面上，輸入新設定檔的名稱與描述，然後選擇 [下一步]  。
+4. 選取 [建立]。
 
-6. 在 [組態設定]  頁面上，定義要下載更新及應用程式的方式。 如需可用設定的資訊，請參閱 [Intune 的傳遞最佳化設定](delivery-optimization-settings.md)。
+5. 在 [基本資訊] 中，輸入下列內容：
 
-   當完成設定時，請選取 [下一步]  。
+   - **名稱**：為新的設定檔輸入描述性名稱。
+   - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
 
-7. 在 [範圍 (標籤)]  頁面上，選取 [選取範圍標籤]  以開啟 [選取標籤]  窗格並指派範圍標籤到設定檔。
+6. 選取 [下一步]。
+
+7. 在 [組態設定] 頁面上，定義要下載更新及應用程式的方式。 如需可用設定的資訊，請參閱 [Intune 的傳遞最佳化設定](delivery-optimization-settings.md)。
+
+   當完成設定時，請選取 [下一步]。
+
+8. 在 [範圍 (標籤)] 頁面上，選取 [選取範圍標籤] 以開啟 [選取標籤] 窗格並指派範圍標籤到設定檔。
   
-   選取 [下一步]  以繼續進行操作。
+   選取 [下一步] 以繼續進行操作。
 
-8. 在 [指派]  頁面上，選取將接收此設定檔的群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
+9. 在 [指派] 頁面上，選取將接收此設定檔的群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
 
-   選取 [下一步]  。
+   選取 [下一步]。
 
-9. 在 [適用性規則]  頁面上，使用 [規則]  、[屬性]  和 [值]  選項來定義此設定檔在指派群組中套用的方式。
+10. 在 [適用性規則] 頁面上，使用 [規則]、[屬性] 和 [值] 選項來定義此設定檔在指派群組中套用的方式。
 
-10. 在 [檢閱 + 建立]  頁面上，當您完成操作時，請選擇 [建立]  。 設定檔隨即建立並顯示在清單中。 接下來，[指派設定檔](device-profile-assign.md)，然後[監視其狀態](device-profile-monitor.md)。
+11. 在 [檢閱 + 建立] 頁面上，當您完成操作時，請選擇 [建立]。 設定檔隨即建立並顯示在清單中。
+
+當每個裝置下次簽入時，就會套用原則。
 
 ## <a name="remove-delivery-optimization-from-windows-10-update-rings"></a>從 Windows 10 更新通道移除傳遞最佳化
 
-傳遞最佳化先前設定為軟體更新通道的一部分。 從 2019 年 2 月開始，傳遞最佳化設定已設定為傳遞最佳化裝置組態設定檔的一部分，其中包括的其他設定會影響裝置的軟體更新傳遞。 如果還沒有這麼做，請透過將傳遞最佳化設定設定為 [未設定]  以將其從更新通道移除，然後使用傳遞最佳化設定檔來管理較大範圍的可用選項。
+傳遞最佳化先前設定為軟體更新通道的一部分。 從 2019 年 2 月開始，傳遞最佳化設定已設定為傳遞最佳化裝置組態設定檔的一部分，其中包括的其他設定會影響裝置的軟體更新傳遞。 如果還沒有這麼做，請透過將傳遞最佳化設定設為 [未設定] 以將其從更新通道移除，然後使用傳遞最佳化設定檔來管理較大範圍的可用選項。
 
 1. 建立傳遞最佳化裝置組態設定檔：
 
-    1. 在 Microsoft Endpoint Manager 系統管理中心內，選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+    1. 在 Microsoft Endpoint Manager 系統管理中心內，選取 [裝置] > [組態設定檔] > [建立設定檔]。
     2. 輸入下列內容：
+
+        - **平台**：選取 [Windows 10 及更新版本]。
+        - **設定檔**：選取 [傳遞最佳化]。
+
+    3. 選取 [建立]。
+    4. 在 [基本資訊] 中，輸入下列內容：
 
         - **名稱**：為新的設定檔輸入描述性名稱。
         - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
-        - **平台**：選取 [Windows 10 及更新版本]  。
-        - **設定檔類型**：選取 [傳遞最佳化]  。
-        - **設定**：針對 [傳遞最佳化下載模式]  ，除非您想要變更套用到裝置的設定，否則請選擇現有軟體更新通道所使用的相同模式。 選項包括：
-            - **未設定**
-            - **只有 HTTP，沒有任何對等**
-            - **HTTP 混合 (具有相同 NAT 後方之對等互連)**
-            - **HTTP 混合 (具有跨私人群組的對等互連)**
-            - **混合網際網路對等的 HTTP**
-            - **無對等的簡式下載模式**
-            - **略過模式**
-    3. 設定您可能要管理的任何其他設定。
 
-2. 將此新的設定檔指派至與現有軟體更新通道相同的裝置和使用者。 [指派設定檔](device-profile-assign.md)列出步驟。
+    5. 選取 [下一步]。
+    6. 在 [組態設定] > [下載模式] 中，「除非」您想要變更套用到裝置的設定，否則請選擇現有軟體更新通道所使用的相同模式。 選項包括：
 
-3. 將現有軟體通道取消設定：
-    1. 在 Microsoft Endpoint Manager 系統管理中心內，移至 [軟體更新]  > [Windows 10 更新通道]。
+        - **未設定**
+        - **只有 HTTP，沒有任何對等**
+        - **HTTP 混合 (具有相同 NAT 後方之對等互連)**
+        - **HTTP 混合 (具有跨私人群組的對等互連)**
+        - **混合網際網路對等的 HTTP**
+        - **無對等的簡式下載模式**
+        - **略過模式**
+
+    7. 設定您想要管理的[任何其他設定](delivery-optimization-settings.md)，然後繼續建立設定檔。
+
+        在 [指派] 中，將此新的設定檔指派至與現有軟體更新通道相同裝置和使用者。 如需詳細資訊，請參閱[指派設定檔](device-profile-assign.md)。
+
+2. 將現有軟體通道取消設定：
+
+    1. 在 Microsoft Endpoint Manager 系統管理中心內，移至 [軟體更新] > [Windows 10 更新通道]。
     2. 在清單中，選取您的更新通道。
-    3. 在設定中，將 [傳遞最佳化下載模式]  設定成 [未設定]  。
-    4. 按一下 [確定]   > [儲存]  來儲存您的變更。
+    3. 在設定中，將 [傳遞最佳化下載模式] 設定成 [未設定]。
+    4. 按一下 [確定] > [儲存] 來儲存您的變更。
 
 ## <a name="next-steps"></a>後續步驟
 
-[指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。  
+在您[指派設定檔](device-profile-assign.md)後，[監視其狀態](device-profile-monitor.md)。
+
 檢視 Intune 的[傳遞最佳化設定](delivery-optimization-settings.md)。

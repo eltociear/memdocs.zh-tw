@@ -1,12 +1,12 @@
 ---
 title: 使用 Microsoft Intune 建立 iOS/iPadOS 或 macOS 裝置設定檔 - Azure | Micrososft Docs
-description: 新增或建立 iOS、iPadOS 或 macOS 裝置設定檔，然後在 Microsoft Intune 中設定 AirPrint 的設定、主畫面配置、應用程式通知、共用裝置、單一登入，以及網路內容篩選器設定。
+description: 新增或建立 iOS、iPadOS 或 macOS 裝置設定檔。 在 Microsoft Intune 中針對 AirPrint、主畫面配置、應用程式通知、共用裝置、單一登入及網路內容篩選器設定進行設定。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/09/2020
-ms.topic: conceptual
+ms.date: 05/06/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e72fc48608ebf32f3e32d4a94ab7203ee418d8f
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 349fdc7b0f13f0999b8c9993bcaba1d458ebac59
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943802"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989198"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>在 Intune 中新增 iOS、iPadOS 或 macOS 裝置功能設定
 
@@ -54,7 +54,7 @@ AirPrint 是可讓裝置透過無線網路列印到檔案的 Apple 功能。 在
 
 ## <a name="app-notifications"></a>應用程式通知
 
-選擇 iOS 和 iPadOS 裝置上應用程式接收通知的方式。 例如，從 Intune 傳送應用程式通知，以使其顯示於通知中心、顯示於鎖定畫面上或播放音效。
+選擇 iOS 和 iPadOS 裝置上應用程式接收通知的方式。 例如傳送應用程式通知，以使其顯示於通知中心、顯示於鎖定畫面上或播放音效。
 
 如需可在 Intune 中設定的設定清單，請參閱 [iOS/iPadOS 上的應用程式通知](ios-device-features-settings.md#app-notifications)。
 
@@ -87,7 +87,7 @@ AirPrint 是可讓裝置透過無線網路列印到檔案的 Apple 功能。 在
 這些設定會在 iOS 和 iPadOS 裝置的 Dock 和主畫面上設定應用程式配置和資料夾。 您可以：
 
 - 使用 **Dock** 設定來將應用程式或資料夾新增至畫面。 例如，在裝置 Dock 上顯示 [Safari] 和 [郵件] 應用程式。
-- 新增您想要顯示於主畫面上的**頁面**，以及要顯示於每個頁面上的應用程式。 例如，新增 [Contoso]  頁面，然後在此頁面上新增 [設定] 應用程式。
+- 新增您想要顯示於主畫面上的**頁面**，以及要顯示於每個頁面上的應用程式。 例如，新增 [Contoso] 頁面，然後在此頁面上新增 [設定] 應用程式。
 
 如需可在 Intune 中設定的設定清單，請參閱 [iOS/iPadOS 上的主畫面配置](ios-device-features-settings.md#home-screen-layout)。
 
@@ -206,7 +206,7 @@ AirPrint 是可讓裝置透過無線網路列印到檔案的 Apple 功能。 在
 ## <a name="create-the-profile"></a>建立設定檔
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取 [裝置] > [組態設定檔] > [建立設定檔]。
 3. 輸入下列內容：
 
     - **平台**：選擇您的裝置平台。 選項包括：  
@@ -214,31 +214,31 @@ AirPrint 是可讓裝置透過無線網路列印到檔案的 Apple 功能。 在
         - **iOS/iPadOS**
         - **macOS**
 
-    - **設定檔**：選取 [裝置功能]  。
+    - **設定檔**：選取 [裝置功能]。
 
-4. 選取 [建立]  。
-5. 在 [基本資訊]  中，輸入下列內容：
+4. 選取 [建立]。
+5. 在 [基本資訊] 中，輸入下列內容：
 
     - **名稱**：輸入政策的描述性名稱。 為您的設定檔命名，以方便之後能夠輕鬆識別。 例如，良好的原則名稱是 **macOS：設定登入畫面**。
     - **描述**：輸入政策的描述。 這是選擇性設定，但建議執行。
 
-6. 選取 [下一步]  。
+6. 選取 [下一步]。
 
-7. 在 [組態設定]  中，您可進行的設定會根據您選擇的平台而不同。 選擇您平台來進行詳細設定：
+7. 在 [組態設定] 中，您可進行的設定會根據您選擇的平台而不同。 選擇您平台來進行詳細設定：
 
     - [iOS/iPadOS](ios-device-features-settings.md)
     - [macOS](macos-device-features-settings.md)
 
-8. 選取 [下一步]  。
-9. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+8. 選取 [下一步]。
+9. 在 [範圍標籤] (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
 
-    選取 [下一步]  。
+    選取 [下一步]。
 
-10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
+10. 在 [指派] 中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
 
-    選取 [下一步]  。
+    選取 [下一步]。
 
-11. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立]  時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
+11. 在 [檢閱 + 建立] 中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 ## <a name="next-steps"></a>後續步驟
 

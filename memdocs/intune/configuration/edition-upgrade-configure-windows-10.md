@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 068363167d5c6abb54dde26939b102db2f120d27
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b846aa1ead9bb2d1c1b15d783e646e59047c16ee
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364379"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988409"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>使用 Microsoft Intune 在裝置上升級 Windows 10 版本或切換移出 S 模式
-
-
 
 作為行動裝置管理 (MDM) 解決方案的一部分，您可能會想要升級您的 Windows 10 裝置。 例如，您會想要將「Windows 10 專業版」裝置升級至「Windows 10 企業版」。 或者，您想要讓裝置切換移出 S 模式。
 
@@ -97,24 +95,40 @@ ms.locfileid: "79364379"
 ## <a name="create-the-profile"></a>建立設定檔
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取 [裝置] > [組態設定檔] > [建立設定檔]。
 3. 輸入下列內容：
+
+    - **平台**：選取 [Windows 10 及更新版本]。
+    - **設定檔**：選取 [版本升級]。
+
+4. 選取 [建立]。
+5. 在 [基本資訊] 中，輸入下列內容：
 
     - **名稱**：為新的設定檔輸入描述性名稱。 例如，輸入類似 `Windows 10 edition upgrade profile` 或 `Windows 10 switch off S mode` 的內容。
     - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
-    - **平台**：選取 [Windows 10 及更新版本]  。
-    - **設定檔類型**：選取 [版本升級]  。
-    - **設定**：輸入您要設定的設定。 如需所有設定的清單及其用途，請參閱：
 
-        - [Windows 10 升級和 S 模式](edition-upgrade-windows-settings.md)
-        - [Windows Holographic for Business](holographic-upgrade.md)
+6. 選取 [下一步]。
+7. 在 [組態設定] 中，輸入您要設定的設定。 如需所有設定的清單及其用途，請參閱：
 
-4. 選取 [確定]   > [建立]  儲存您的變更。
+    - [Windows 10 升級和 S 模式](edition-upgrade-windows-settings.md)
+    - [Windows Holographic for Business](holographic-upgrade.md)
 
-設定檔隨即建立，並顯示在清單中。 請確認會[指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
+8. 選取 [下一步]。
+
+9. 在 [範圍標籤] (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+
+    選取 [下一步]。
+
+10. 在 [指派] 中，選取將接收您設定檔的使用者或使用者群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
+
+    選取 [下一步]。
+
+11. 在 [檢閱 + 建立] 中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
+
+當每個裝置下次簽入時，就會套用原則。
 
 ## <a name="next-steps"></a>後續步驟
 
-建立設定檔之後即可加以指派。 接下來，[指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
+[指派設定檔](device-profile-assign.md)後，[監視其狀態](device-profile-monitor.md)。
 
-檢視適用於 [Windows 10](edition-upgrade-windows-settings.md) 和 [Windows Holographic for Business](holographic-upgrade.md) 裝置的升級和 S 模式設定。
+請參閱適用於 [Windows 10](edition-upgrade-windows-settings.md) 和 [Windows Holographic for Business](holographic-upgrade.md) 裝置的升級和 S 模式設定。

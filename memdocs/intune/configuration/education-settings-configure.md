@@ -5,8 +5,8 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/04/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,18 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 12d04869834691167c2f31be853029c9a939a338
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 52eae65e6735ad655c2e8db53e34383ccc5e3b30
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364327"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988397"
 ---
 # <a name="use-the-take-a-test-app-on-windows-10-devices-in-microsoft-intune"></a>在 Microsoft Intune 中，於 Windows 10 裝置上使用 [進行測驗] 應用程式
 
-
-
-Intune 中的教育設定檔是專為學生在裝置上進行測驗或考試而設計的。 此功能包括 [進行測驗]  應用程式，以及新增測驗 URL，選擇使用者登入測驗之方式的設定等。 此功能支援下列平台：
+Intune 中的教育設定檔是專為學生在裝置上進行測驗或考試而設計的。 此功能包括 [進行測驗] 應用程式，以及新增測驗 URL，選擇使用者登入測驗之方式的設定等。 此功能支援下列平台：
 
 - Windows 10 及更新版本
 
@@ -39,24 +37,39 @@ Intune 中的教育設定檔是專為學生在裝置上進行測驗或考試而�
 ## <a name="create-a-device-profile"></a>建立裝置設定檔
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取 [裝置] > [組態設定檔] > [建立設定檔]。
 3. 輸入下列內容：
+
+    - **平台**：選取 [Windows 10 及更新版本]。
+    - **設定檔**：選取 [安全性評定 (教育)]。
+
+4. 選取 [建立]。
+5. 在 [基本資訊] 中，輸入下列內容：
 
     - **名稱**：為新的設定檔輸入描述性名稱。
     - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
-    - **平台**：選擇 [Windows 10 及更新版本]  。
-    - **設定檔**：選擇**教育設定檔**。
 
-4. 輸入您要設定的設定：
+6. 選取 [下一步]。
+7. 在 [組態設定] 中，輸入您要設定的設定：
 
     - [Windows 10 及以上版本](education-settings-windows.md)
 
-5. 選取 [確定]   > [建立]  儲存您的變更。
+8. 選取 [下一步]。
 
-輸入您的設定並建立設定檔之後，您的設定檔會顯示在 [設定檔] 清單中。 接下來，請[將此設定檔指派給一些群組](device-profile-assign.md)。
+9. 在 [範圍標籤] (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+
+    選取 [下一步]。
+
+10. 在 [指派] 中，選取將接收您設定檔的使用者或使用者群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](device-profile-assign.md)。
+
+    選取 [下一步]。
+
+11. 在 [檢閱 + 建立] 中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
+
+當每個裝置下次簽入時，就會套用原則。
 
 ## <a name="next-steps"></a>後續步驟
 
 查看 [Windows 10 教育設定](education-settings-windows.md)的清單及其描述。
 
-[指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
+[指派設定檔](device-profile-assign.md)後，[監視其狀態](device-profile-monitor.md)。

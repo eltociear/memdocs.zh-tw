@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,18 +15,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef2c4593ad9809614b7e0d497745065fef12df69
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d17614424cdb20d2d88d818fcdd015c229150d66
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086379"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556331"
 ---
 # <a name="import-wi-fi-settings-for-windows-devices-in-intune"></a>在 Intune 中，為 Windows 裝置匯入 Wi-Fi 設定
 
 對於執行 Windows 的裝置，您可以匯入先前匯出到檔案的 Wi-Fi 設定檔。 **對於 Windows 10 及更新版本的裝置，您也可以直接在 Intune 中[建立 Wi-Fi 設定檔](wi-fi-settings-windows.md)** 。
 
-適用於：  
+本功能適用於：
+
 - Windows 8.1 及更新版本
 - Windows 10 及更新版本
 - Windows 10 Desktop 或行動裝置版
@@ -54,12 +55,16 @@ ms.locfileid: "80086379"
 4. 執行 `netsh wlan export profile name="ProfileName" folder=c:\Wifi` 命令。 此命令會在目標資料夾中建立名為 **Wi-Fi-WiFiName.xml** 的 Wi-Fi 設定檔。
 
 > [!IMPORTANT]
-> - 如果您要匯出包含預先共用金鑰的 Wi-Fi 設定檔，就**必須**將 `key=clear` 新增至命令中。 例如，輸入：`netsh wlan export profile name="ProfileName" key=clear folder=c:\Wifi`
+>
+> - 如果您要匯出包含預先共用金鑰的 Wi-Fi 設定檔，就**必須**將其新增`key=clear`至命令中。 例如，輸入：
+>
+>   `netsh wlan export profile name="ProfileName" key=clear folder=c:\Wifi`
+>
 > - 搭配 Windows 10 使用預先共用金鑰會導致在 Intune 中顯示補救錯誤。 發生這種情況時，系統會將 Wi-Fi 設定檔適當地指派給裝置，而該設定檔將如預期般運作。
 > - 如果您要匯出包含預先共用金鑰的 Wi-Fi 設定檔，請確定該檔案受到保護。 該金鑰會採用存文字格式，因此您需負責保護該金鑰。
 
 ## <a name="next-steps"></a>後續步驟
 
-設定檔已建立，但它不會執行任何動作。 接下來，[指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
+[指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
 
 請參閱 [Wi-Fi 設定概觀](wi-fi-settings-configure.md)，包括其他可用平台。
