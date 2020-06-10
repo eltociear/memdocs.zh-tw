@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 33e4ecbac965206ec4043f5adf91d2dbfb9602d8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7e9602ef5ea784dd3e97578d5ff585f2ca662c1e
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694936"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347197"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>雲端管理閘道的憑證
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 根據您透過雲端管理閘道 (CMG) 管理網際網路上用戶端所使用的案例，您可能需要下列一或多個數位憑證：  
 
@@ -66,9 +66,9 @@ CMG 會建立以網際網路為基礎的用戶端連線至的 HTTPS 服務。 �
 此憑證需要全球唯一名稱來識別 Azure 中的服務。 要求憑證之前，請確認您想要的 Azure 網域名稱是唯一的。 例如，*GraniteFalls.CloudApp.Net*。
 
 1. 登入 [Azure 入口網站](https://portal.azure.com)。
-1. 選取 [所有資源]  ，然後選取 [新增]  。
-1. 搜尋**雲端服務**。 選取 [建立]  。
-1. 在 [DNS 名稱]  欄位中輸入您想要的前置詞，例如 *GraniteFalls*。 介面將會反映網域名稱可用或已由另一個服務使用。
+1. 選取 [所有資源]，然後選取 [新增]。
+1. 搜尋**雲端服務**。 選取 [建立]。
+1. 在 [DNS 名稱] 欄位中輸入您想要的前置詞，例如 *GraniteFalls*。 介面將會反映網域名稱可用或已由另一個服務使用。
 
     > [!Important]  
     > 請勿在入口網站中建立服務，只要使用此程序檢查名稱可用性。
@@ -76,7 +76,7 @@ CMG 會建立以網際網路為基礎的用戶端連線至的 HTTPS 服務。 �
 如果您也將針對內容啟用 CMG，請確認 CMG 服務名稱也是唯一的 Azure 儲存體帳戶名稱。 如果 CMG 雲端服務名稱是唯一的，但儲存體帳戶名稱不是，Configuration Manager 就無法在 Azure 中佈建該服務。 在 Azure 入口網站中，使用下列變更重複執行上述程序：
 
 - 搜尋**儲存體帳戶**
-- 在 [儲存體帳戶名稱]  欄位中測試您的名稱
+- 在 [儲存體帳戶名稱] 欄位中測試您的名稱
 
 DNS 名稱前置詞 (例如 *GraniteFalls*) 的長度必須是 3 到 24 個字元，而且只能使用英數位元。 請勿使用特殊字元，例如破折號 (`-`)。<!-- SCCMDocs#1080 -->
 
@@ -105,7 +105,7 @@ DNS 名稱前置詞 (例如 *GraniteFalls*) 的長度必須是 3 到 24 個字�
 2. 使用 CNAME 別名的一般名稱 (CN) 向公用提供者要求伺服器驗證憑證。
 例如，Contoso 使用 **GraniteFalls.Contoso.com** 做為憑證 CN。  
 
-3. 使用此憑證在 Configuration Manager 主控台中建立 CMG。 在 [建立雲端管理閘道精靈] 的 [設定]  頁面上：  
+3. 使用此憑證在 Configuration Manager 主控台中建立 CMG。 在 [建立雲端管理閘道精靈] 的 [設定] 頁面上：  
 
     - 當您為此雲端服務新增伺服器憑證時 (從**憑證檔案**)，精靈會從憑證 CN 擷取主機名稱來作為服務名稱。  
 
@@ -161,27 +161,27 @@ CMG 必須信任用戶端驗證憑證。 若要完成這個信任，請提供受
 
 1. 開啟 [開始] 功能表。 輸入「執行」以開啟 [執行] 視窗。 開啟 `mmc`。  
 
-2. 從 [檔案] 功能表中，選擇 [新增/移除嵌入式管理單元...]  。  
+2. 從 [檔案] 功能表中，選擇 [新增/移除嵌入式管理單元...]。  
 
-3. 在 [新增或移除嵌入式管理單元] 對話方塊中，選取 [憑證]  ，然後選取 [新增]  。  
+3. 在 [新增或移除嵌入式管理單元] 對話方塊中，選取 [憑證]，然後選取 [新增]。  
 
-    1. 在 [憑證嵌入式管理單元] 對話方塊中，選取 [電腦帳戶]  ，然後選取 [下一步]  。  
+    1. 在 [憑證嵌入式管理單元] 對話方塊中，選取 [電腦帳戶]，然後選取 [下一步]。  
 
-    1. 在 [選取電腦] 對話方塊中，選取 [本機電腦]  ，然後選取 [完成]  。  
+    1. 在 [選取電腦] 對話方塊中，選取 [本機電腦]，然後選取 [完成]。  
 
-    1. 在 [新增或移除嵌入式管理單元] 對話方塊中，選取 [確定]  。  
+    1. 在 [新增或移除嵌入式管理單元] 對話方塊中，選取 [確定]。  
 
-4. 依序展開 [憑證]  和 [個人]  ，然後選取 [憑證]  。  
+4. 依序展開 [憑證] 和 [個人]，然後選取 [憑證]。  
 
 5. 選取使用目的為**用戶端驗證**的憑證。  
 
-    1. 從 [動作] 功能表中，選取 [開啟]  。  
+    1. 從 [動作] 功能表中，選取 [開啟]。  
 
-    1. 移至 [憑證路徑]  索引標籤。  
+    1. 移至 [憑證路徑] 索引標籤。  
 
-    1. 選取鏈結中下一個憑證，然後選取 [檢視憑證]  。  
+    1. 選取鏈結中下一個憑證，然後選取 [檢視憑證]。  
 
-6. 在這個新的 [憑證] 對話方塊上，移至 [詳細資料]  索引標籤。選取 [複製到檔案...]  。  
+6. 在這個新的 [憑證] 對話方塊上，移至 [詳細資料] 索引標籤。選取 [複製到檔案...]。  
 
 7. 使用預設憑證格式 **DER 編碼二進位 X.509 (.CER)** 完成 [憑證匯出精靈]。 記下您所匯出之憑證的名稱和位置。  
 
@@ -191,7 +191,7 @@ CMG 必須信任用戶端驗證憑證。 若要完成這個信任，請提供受
 
 在 Configuration Manager 環境之外佈建此憑證。 例如，使用 Active Directory 憑證服務和群組原則來發出 Web 伺服器憑證。 如需詳細資訊，請參閱 [PKI 憑證需求](../../../plan-design/network/pki-certificate-requirements.md)和[為執行 IIS 的站台系統部署 Web 伺服器憑證](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012)。
 
-在使用 [為 HTTP 站台系統使用 Configuration Manager 產生的憑證]  站台選項時，HTTP 可作為管理點。 如需詳細資訊，請參閱[Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md) (增強 HTTP)。
+在使用 [為 HTTP 站台系統使用 Configuration Manager 產生的憑證] 站台選項時，HTTP 可作為管理點。 如需詳細資訊，請參閱[Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md) (增強 HTTP)。
 
 > [!Tip]  
 > 如果您未使用增強式 HTTP，而且您的環境具有多個管理點，您不需要針對 CMG 全部啟用 HTTPS。 將啟用 CMG 的管理點設定為**僅限網際網路**。 之後，您的內部部署用戶端就不會嘗試使用它們。<!-- SCCMDocs#1676 -->
@@ -238,15 +238,16 @@ CMG 必須信任用戶端驗證憑證。 若要完成這個信任，請提供受
 
 #### <a name="legend-of-terms"></a>字詞說明
 
-- *工作群組*：裝置未加入網域或 Azure AD，但有[用戶端驗證憑證](#bkmk_clientauth)  
-- *加入 AD 網域*：您將裝置加入了內部部署 Active Directory 網域  
-- *加入 Azure AD*：也稱為「加入雲端網域」，您將裝置加入了 Azure Active Directory 租用戶  
-- *混合式加入*：您將裝置同時加入了 Active Directory 網域與 Azure AD 租用戶  
-- *HTTP*：在管理點屬性上，您將用戶端連線設定為 **HTTP**  
-- *HTTPS*：在管理點屬性上，您將用戶端連線設定為 **HTTPS**  
-- *E-HTTP*：在站台屬性的 [用戶端電腦通訊]  索引標籤上，您要將站台系統設定設為 [HTTPS 或 HTTP]  ，並啟用 [為 HTTP 站台系統使用 Configuration Manager 產生的憑證]  選項。 您會設定 HTTP 的管理點，HTTP 管理點已就緒，可供 HTTP 與 HTTPS 通訊使用 (權杖驗證案例)。  
+- *工作群組*：裝置未加入網域或 Azure AD，但有[用戶端驗證憑證](#bkmk_clientauth)。
+- *加入 AD 網域*：您將裝置加入了內部部署 Active Directory 網域。
+- *加入 Azure AD*：也稱為「雲端網域加入」，您將裝置加入了 Azure Active Directory 租用戶。 如需詳細資訊，請參閱 [Azure AD 加入裝置](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join) \(部分機器翻譯\)。
+- *混合式加入*：將裝置加入您的內部部署 Active Directory，並向您的 Azure Active Directory 註冊。 如需詳細資訊，請參閱[混合式 Azure AD 加入裝置](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid) \(部分機器翻譯\)。
+- *HTTP*：在管理點屬性上，您將用戶端連線設定為 **HTTP**。
+- *HTTPS*：在管理點屬性上，您將用戶端連線設定為 **HTTPS**。
+- *E-HTTP*：在站台屬性的 [用戶端電腦通訊] 索引標籤上，您要將站台系統設定設為 [HTTPS 或 HTTP]，並啟用 [為 HTTP 站台系統使用 Configuration Manager 產生的憑證] 選項。 您會設定 HTTP 的管理點，HTTP 管理點已就緒，可供 HTTP 與 HTTPS 通訊使用 (權杖驗證案例)。
+
     > [!Note]
-    > 從 1906 版開始，此索引標籤稱為**通訊安全性**。<!-- SCCMDocs#1645 -->  
+    > 從 1906 版開始，此索引標籤稱為**通訊安全性**。<!-- SCCMDocs#1645 -->
 
 ## <a name="azure-management-certificate"></a><a name="bkmk_azuremgmt"></a> Azure 管理憑證
 

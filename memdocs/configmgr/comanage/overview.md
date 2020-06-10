@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: e06dc0d40eb6359d11ef31045989d7ed398b3687
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 86bd566e9582c7dd7c83f93c22430edcc8ea0d0d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690996"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347180"
 ---
 # <a name="what-is-co-management"></a>什麼是共同管理？
 
@@ -33,7 +33,7 @@ ms.locfileid: "81690996"
 [檢視完整大小的圖表](media/co-management-overview.svg)
 
 > [!Note]  
-> 當您同時使用 Configuration Manager 和 Microsoft Intune 來管理 Windows 10 裝置時，此設定被稱為「共同管理」  。 當您使用 Configuration Manager 來管理裝置，並註冊至第三方 MDM 服務時，此設定被稱為「共存」  。 當您針對單一裝置具備兩個管理授權單位，且沒有在兩者之間取得適當協調的情況下，可能會帶來許多挑戰性。 在使用共同管理的情況下，Configuration Manager 和 Intune 會平衡[工作負載](#workloads)，以確保不會發生衝突。 在使用第三方服務的情況下，由於此互動並不存在，使得共存具備有限的管理能力。 如需詳細資訊，請參閱[搭配 Configuration Manager 的第三方 MDM 共存](coexistence.md)。
+> 當您同時使用 Configuration Manager 和 Microsoft Intune 來管理 Windows 10 裝置時，此設定被稱為「共同管理」。 當您使用 Configuration Manager 來管理裝置，並註冊至第三方 MDM 服務時，此設定被稱為「共存」。 當您針對單一裝置具備兩個管理授權單位，且沒有在兩者之間取得適當協調的情況下，可能會帶來許多挑戰性。 在使用共同管理的情況下，Configuration Manager 和 Intune 會平衡[工作負載](#workloads)，以確保不會發生衝突。 在使用第三方服務的情況下，由於此互動並不存在，使得共存具備有限的管理能力。 如需詳細資訊，請參閱[搭配 Configuration Manager 的第三方 MDM 共存](coexistence.md)。
 
 ## <a name="paths-to-co-management"></a>共同管理的路徑
 
@@ -100,9 +100,9 @@ ms.locfileid: "81690996"
 
 ### <a name="azure-ad"></a>Azure AD
 
-- 必須加入 Azure AD 的 Windows 10 裝置。 它們可以是下列任一類型：  
+- Windows 10 裝置必須連線至 Azure AD。 它們可以是下列任一類型：  
 
-  - [混合式 Azure AD 加入](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) (機器翻譯)，其中裝置已加入內部部署 Active Directory，並已加入 Azure Active Directory。  
+  - [已加入混合式 Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)，其中裝置已加入您的內部部署 Active Directory，並會向 Azure Active Directory 註冊。
 
   - 僅限[已加入 Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)。 (此類型有時稱為「已加入雲端網域」)<!--SCCMDocs issue 605-->  
 

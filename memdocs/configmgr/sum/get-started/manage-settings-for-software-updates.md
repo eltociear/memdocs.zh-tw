@@ -2,7 +2,7 @@
 title: 管理軟體更新的設定
 titleSuffix: Configuration Manager
 description: 深入了解安裝軟體更新點後，適合網站更新軟體的用戶端設定。
-ms.date: 03/30/2020
+ms.date: 06/04/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,16 +10,16 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 0a2a45ff866ea02aacc83c42109c8cba4020ed4e
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 2b851c03424af0ba0f826716b401705879338855
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906789"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436664"
 ---
 #  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a> 管理軟體更新的設定  
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 在 Configuration Manager 中同步處理軟體更新後，設定並確認下列各區段中的設定。
 
@@ -55,12 +55,12 @@ ms.locfileid: "82906789"
 
 #### <a name="to-open-software-update-properties"></a>開啟軟體更新內容  
 
-1. 在 Configuration Manager 主控台中，按一下 [軟體程式庫]  。  
-2. 在 [軟體程式庫] 工作區中，展開 [軟體更新]  ，然後按一下 [所有軟體更新]  。  
+1. 在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
+2. 在 [軟體程式庫] 工作區中，展開 [軟體更新] ，然後按一下 [所有軟體更新] 。  
 3. 選取一個或多個軟體更新，然後在 [首頁]  索引標籤上，按一下 [內容]  群組中的 [內容]  。  
 
    > [!NOTE]  
-   >  在 [所有軟體更新]  節點 上，Configuration Manager 只會顯示在過去 30 天內發行且分類為 [重大]  和 [安全性]  的軟體更新。  
+   >  在 [所有軟體更新] 節點 上，Configuration Manager 只會顯示在過去 30 天內發行且分類為 [重大] 和 [安全性] 的軟體更新。  
 
 ###  <a name="review-software-updates-information"></a><a name="BKMK_SoftwareUpdatesInformation"></a> 檢閱軟體更新資訊  
 在軟體更新內容中，您可以檢閱有關軟體更新的詳細資訊。 當您選取一個以上的軟體更新時不會顯示詳細資訊。 以下章節將說明適用於所選取軟體更新的資訊。  
@@ -113,23 +113,23 @@ ms.locfileid: "82906789"
 在內容中，您可以針對一或多個軟體更新設定軟體更新設定。 您可以只在管理中心網站或獨立主要網站上設定大部分的軟體更新設定。 以下各節將協助您設定軟體更新的設定。  
 
 ####  <a name="set-maximum-run-time"></a><a name="BKMK_SetMaxRunTime"></a> 設定執行階段上限  
-於 [執行時間上限]  索引標籤中，設定在用戶端電腦上完成軟體更新所配置的時間上限。 如果更新所需的時間大於執行時間上限值，Configuration Manager 會建立狀態訊息，並停止監視軟體更新安裝的部署。 您可以只在管理中心網站或獨立主要網站上設定此設定。  
+於 [執行時間上限]  索引標籤中，設定在用戶端電腦上完成軟體更新所配置的時間上限。 如果更新所需的時間大於執行時間上限值，Configuration Manager 會建立狀態訊息，並停止軟體更新安裝。 您可以只在管理中心網站或獨立主要網站上設定此設定。  
 
 Configuration Manager 也使用此設定來判斷是否要在設定的維護期間內起始軟體更新的安裝。 如果執行時間上限值超過維護期間中剩下的時間，則會延遲安裝軟體更新，直到下一個維護期間開始為止。 若有多個軟體更新要安裝在已設定維護期間 (時間範圍) 的用戶端電腦上時，會先安裝具備最低執行時間上限的軟體更新，接著會安裝具備次低執行時間上限的軟體更新，以此類推。 安裝每個軟體更新前，用戶端會驗證可用維護期間是否提供足夠時間來安裝軟體更新。 軟體更新開始安裝後，即使安裝超過維護期間尾端，仍會繼續安裝。 如需維護視窗的詳細資訊，請參閱[如何使用維護視窗](../../core/clients/manage/collections/use-maintenance-windows.md)。  
 
 在 [執行時間上限]  索引標籤上，您可以檢視並設定以下設定：  
 
-- **執行時間上限**：指定在 Configuration Manager 不再監視安裝前，為完成軟體更新安裝所配置的分鐘數上限。 此設定也會用來判斷在維護期間結束前，剩下的時間是否足夠安裝更新。 Service Pack 的預設設定為 60 分鐘。 對於其他軟體更新類型，如果您安裝的是 Configuration Manager 1511 版或更新版本的全新安裝，預設值是 10 分鐘，而當您從舊版升級時，則為 5 分鐘。 值的範圍為 5 到 9999 分鐘。  
+- **執行時間上限**：指定在 Configuration Manager 停止安裝前，為完成軟體更新安裝所配置的分鐘數上限。 此設定也會用來判斷在維護期間結束前，剩下的時間是否足夠安裝更新。 Service Pack 的預設設定為 60 分鐘。 對於其他軟體更新類型，如果您安裝的是 Configuration Manager 1511 版或更新版本的全新安裝，預設值是 10 分鐘，而當您從舊版升級時，則為 5 分鐘。 值的範圍為 5 到 9999 分鐘。  
 
 > [!IMPORTANT]  
 >  執行時間的上限值必須小於所設定的維護視窗時間，或增加維護視窗時間，使其大於執行時間的上限值。 否則會永遠無法起始軟體更新安裝。  
 
 ####  <a name="set-custom-severity"></a><a name="BKMK_SetCustomSeverity"></a> 設定自訂嚴重性  
-在軟體更新的內容中，您可以使用 [自訂嚴重性]  索引標籤，設定軟體更新的自訂嚴重性值。 若預先定義的嚴重性值不符合您的需求時，這就是必要項目。 自訂值會列在 Configuration Manager 主控台的 [自訂嚴重性]  欄內。 您可利用已定義的自訂嚴重性值來排序軟體更新，也可以建立能篩選這些值的查詢和報告。 您可以只在管理中心網站或獨立主要網站上設定此設定。  
+在軟體更新的內容中，您可以使用 [自訂嚴重性]  索引標籤，設定軟體更新的自訂嚴重性值。 若預先定義的嚴重性值不符合您的需求時，這就是必要項目。 自訂值會列在 Configuration Manager 主控台的 [自訂嚴重性] 欄內。 您可利用已定義的自訂嚴重性值來排序軟體更新，也可以建立能篩選這些值的查詢和報告。 您可以只在管理中心網站或獨立主要網站上設定此設定。  
 
 您可以在 [自訂嚴重性]  索引標籤上設定以下設定。  
 
-- **自訂嚴重性**：設定軟體更新的自訂嚴重性值。 從清單選取 [重大]  、[重要]  、[一般]  或 [低]  。 根據預設，自訂嚴重性值為空白。
+- **自訂嚴重性**：設定軟體更新的自訂嚴重性值。 從清單選取 [重大] 、[重要] 、[一般] 或 [低]  。 根據預設，自訂嚴重性值為空白。
 
 ## <a name="crl-checking-for-software-updates"></a>軟體更新的 CRL 檢查
 根據預設，在驗證 Configuration Manager 軟體更新的簽章時，不會檢查憑證撤銷清單 (CRL)。 每次使用憑證時皆檢查，提供比使用已撤銷憑證更多的安全性，但同時也會造成連線延遲，以及對執行 CRL 檢查的電腦產生額外的處理需求。  
@@ -137,6 +137,6 @@ Configuration Manager 也使用此設定來判斷是否要在設定的維護期�
 如果使用此方法，則必須在處理軟體更新的 Configuration Manager 主控台啟用 CRL 檢查。  
 
 #### <a name="to-enable-crl-checking"></a>啟用 CRL 檢查  
-在執行 CRL 檢查的電腦上，從產品 DVD 及命令列提示字元執行下列動作： **\SMSSETUP\BIN\X64\\** <語言  > **\UpdDwnldCfg.exe /checkrevocation**。  
+在執行 CRL 檢查的電腦上，從產品 DVD 及命令列提示字元執行下列動作： **\SMSSETUP\BIN\X64\\** <語言> **\UpdDwnldCfg.exe /checkrevocation**。  
 
 例如，針對英文 (美國) 版執行 **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe /checkrevocation**。  

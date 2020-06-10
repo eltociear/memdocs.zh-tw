@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 127ed43fded6c66bc4395ae4d69a28ae8c9eddd5
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 21e837d5d97c42f095159a87e015f181c5e53419
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877514"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347163"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>關於 Configuration Manager 中的用戶端設定
 
@@ -98,7 +98,7 @@ Windows 電腦上的 Configuration Manager 用戶端快取會儲存用於安裝�
 從 1906 版開始，請指定 Configuration Manager 用戶端保留快取內容的時間下限。 此用戶端設定定義 Configuration Manager 代理程式在將內容從快取中移除之前應等候的最小時間量。
 
 此值預設為 1,440 分鐘 (24 小時)。
-此設定的最大值是 10,080 分鐘 (1 周)。
+此設定的最大值是 10,080 分鐘 (一週)。
 
 此設定可讓您進一步控制不同類型裝置上的用戶端快取。 您可以在具有小型硬碟且不需要在執行其他部署之前保留現有內容的用戶端上，降低該值。
 
@@ -114,7 +114,7 @@ Windows 電腦上的 Configuration Manager 用戶端快取會儲存用於安裝�
 - Mac 電腦  
 - 執行 Linux 或 UNIX 的電腦  
 
-此值預設為 60 分鐘。 減少此值可能會導致用戶端更頻繁地對站台進行輪詢。 對於許多用戶端而言，此行為可能會對網站效能產生負面影響。 [大小和縮放比例指引](../../plan-design/configs/size-and-scale-numbers.md)是以預設值為基礎。 增加此值可能會導致用戶端較不頻繁地對站台進行輪詢。 任何針對用戶端原則的變更 (包括新部署)，都會使用戶端需要花費更長的時間來下載和處理。<!-- SCCMDocs issue 823 -->
+此值預設為 60 分鐘。 減少此值可能會導致用戶端更頻繁地對站台進行輪詢。 對於許多用戶端而言，此行為可能會對站台效能產生負面影響。 [大小和縮放比例指引](../../plan-design/configs/size-and-scale-numbers.md)是以預設值為基礎。 增加此值可能會導致用戶端較不頻繁地對站台進行輪詢。 任何針對用戶端原則的變更 (包括新部署)，都會使用戶端需要花費更長的時間來下載和處理。<!-- SCCMDocs issue 823 -->
 
 ### <a name="enable-user-policy-on-clients"></a>在用戶端上啟用使用者原則
 
@@ -276,7 +276,7 @@ Configuration Manager 會使用此設定，從軟體中心將使用者連線至�
 
 如果電腦需要 BitLocker PIN 項目，則此選項會在軟體安裝後重新啟動電腦時，略過輸入 PIN 的需求。  
 
-- **永遠**：Configuration Manager 在安裝需要重新啟動的軟體並起始電腦的重新啟動後，會短暫地暫止 BitLocker。 此設定只適用於 Configuration Manager 所起始的電腦重新啟動。 使用者重新啟動電腦時，此設定不會暫停輸入 BitLocker PIN 的需求。 BitLocker PIN 輸入需求會在 Windows 啟動後繼續作用。
+- **永遠**：Configuration Manager 在安裝需要重新啟動電腦的軟體之後會短暫地暫止 BitLocker，而且會重新啟動電腦。 只有當 Configuration Manager 重新啟動電腦時，才會套用此設定。 使用者重新啟動電腦時，此設定不會暫停輸入 BitLocker PIN 的需求。 BitLocker PIN 輸入需求會在 Windows 啟動後繼續作用。
 
 - **永不**：Configuration Manager 在安裝需要重新啟動的軟體後，不會暫止 BitLocker。 在此案例中，除非使用者輸入 PIN 完成標準啟動程序及載入 Windows，否則無法完成軟體安裝。
 
@@ -329,29 +329,11 @@ Configuration Manager 會使用此設定，從軟體中心將使用者連線至�
 
 設定 0 到 120 小時的寬限期。 此設定是與 [根據使用者偏好設定，延遲強制施行此部署] 部署內容搭配使用。 如需詳細資訊，請參閱[部署應用程式](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period)。
 
-
 ## <a name="computer-restart"></a>電腦重新啟動
 
-下列設定的持續時間必須比套用至電腦的最短維護視窗還要短：
+如需有關這些設定的詳細資訊，請參閱[裝置重新啟動通知](device-restart-notifications.md)。<!-- 7182335 -->
 
-- **向使用者顯示短暫的通知，指出使用者登出或電腦重新啟動之前的間隔 (分鐘)**
-- **顯示使用者無法關閉的對話方塊，其中顯示使用者登出或電腦重新啟動之前的倒數計時間隔 (分鐘)**
-
-
-如需維護期間的詳細資訊，請參閱[如何在 Configuration Manager 中使用維護期間](../manage/collections/use-maintenance-windows.md)。
-
-- **指定電腦重新啟動倒數通知的延遲持續時間 (小時)** (從 1906 版開始)<!--3976435-->
-  - 預設值為 240 分鐘。
-  - 延遲持續時間值應小於暫時通知值減去使用者無法關閉的通知值。
-  - 如需詳細資訊，請參閱[裝置重新啟動通知](device-restart-notifications.md)。
-
-**部署必須重新啟動時，將對使用者顯示快顯通知改為顯示對話視窗**<!--3555947-->:從 1902 版開始，將此設定設為 [是] 會將使用者體驗變更為更具提示效果。 此設定適用於所有應用程式、工作順序及軟體更新的部署。 如需詳細資訊，請參閱[針對軟體中心進行規劃](../../../apps/plan-design/plan-for-software-center.md#bkmk_impact)。
-
-> [!IMPORTANT]
-> 在 Configuration Manager 1902 中，在某些情況下，對話方塊將不會取代快顯通知。 若要解決此問題，請安裝 [Configuration Manager 1902 的更新彙總套件](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902)。 <!--4404715-->
-
-
-## <a name="delivery-optimization"></a>傳遞最佳化 
+## <a name="delivery-optimization"></a>傳遞最佳化
 
 <!-- 1324696 -->
 您可以使用 Configuration Manager 界限群組，來定義和規範在您的公司網路上以及到遠端辦公室的內容發佈。 [Windows 傳遞最佳化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)是一種雲端式點對點技術，可在 Windows 10 裝置之間共用內容。 請設定讓「傳遞最佳化」在於同儕節點之間共用內容時，使用您的界限群組。
@@ -363,7 +345,7 @@ Configuration Manager 會使用此設定，從軟體中心將使用者連線至�
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>針對傳遞最佳化群組識別碼使用 Configuration Manager 界限群組
 
-選擇 [是] 以套用界限群組識別碼作為用戶端上的傳遞最佳化群組識別碼。 當用戶端與傳遞最佳化雲端服務進行通訊時，它會使用此識別碼來尋找含有所需內容的同儕節點。 啟用此設定也會在目標用戶端上，將傳遞最佳化下載模式設定為 [群組 (2)] 選項。
+選擇 [是] 以套用界限群組識別碼作為用戶端上的傳遞最佳化群組識別碼。 當用戶端與「傳遞最佳化」雲端服務進行通訊時，它會使用此識別碼來尋找含有內容的同儕節點。 啟用此設定也會在目標用戶端上，將傳遞最佳化下載模式設定為 [群組 (2)] 選項。
 
 > [!Note]
 > Microsoft 建議允許用戶端透過本機原則 (而非群組原則) 進行此設定。 此設定可允許將界限群組識別碼設為用戶端上的傳遞最佳化群組識別碼。 如需詳細資訊，請參閱[傳遞最佳化](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)。
@@ -411,7 +393,7 @@ Configuration Manager 會使用此設定，從軟體中心將使用者連線至�
 
 ### <a name="allowed-period-of-time-users-can-postpone-a-required-restart-to-complete-the-endpoint-protection-installation-hours"></a>使用者可以延遲必要重新啟動以完成 Endpoint Protection 安裝的允許期限 (小時)
 
-如果安裝 Endpoint Protection 用戶端之後需要重新啟動，則此設定指定使用者可延遲必要重新啟動的時數。 此設定需要 [安裝 Endpoint Protection 用戶端後抑制任何必要的電腦重新啟動] 的設定為 [否]。  
+如果安裝 Endpoint Protection 用戶端之後需要重新啟動，則此設定指定使用者可延遲必要重新啟動的時數。 此設定要求您必須停用下列設定：**安裝 Endpoint Protection 用戶端後抑制任何必要的電腦重新啟動**。
 
 ### <a name="disable-alternate-sources-such-as-microsoft-windows-update-microsoft-windows-server-update-services-or-unc-shares-for-the-initial-definition-update-on-client-computers"></a>針對用戶端電腦上的初始定義更新停用替代來源 (例如 Microsoft Windows Update、Microsoft Windows Server Update Services 或 UNC 路徑)
 
@@ -423,7 +405,7 @@ Configuration Manager 會使用此設定，從軟體中心將使用者連線至�
 
 ### <a name="polling-interval-for-mobile-device-legacy-clients"></a>行動裝置舊版用戶端的輪詢間隔
 
-選取 [設定間隔]，以指定舊版行動裝置輪詢原則的時間長度 (分鐘或小時)。 這些裝置包含 Windows CE、Mac OS X 和 Unix 或 Linux 這類平台。
+選取 [設定間隔]，以指定舊版行動裝置輪詢原則的時間長度 (分鐘或小時)。 這些裝置包含 Windows CE、macOS 與 Unix 或 Linux 這類平台。
 
 ### <a name="polling-interval-for-modern-devices-minutes"></a>新式裝置的輪詢間隔 (分鐘)
 
@@ -529,7 +511,7 @@ Configuration Manager 會使用此設定，從軟體中心將使用者連線至�
 
 ### <a name="allow-network-wake-up"></a>允許網路喚醒
 
-1810 的新功能。 當設定為 [啟用] 時，系統會設定網路介面卡上的電源設定，以允許網路介面卡喚醒裝置。 當設定為 [停用] 時，網路介面卡上的電源設定會設定為不允許網路介面卡喚醒裝置。
+當您啟用此設定時，用戶端會設定電腦上的電源設定，以允許網路介面卡喚醒裝置。 如果您停用此設定，電腦的網路介面卡將無法喚醒裝置。
 
 ### <a name="enable-wake-up-proxy"></a>啟用喚醒 Proxy
 
@@ -549,7 +531,7 @@ Configuration Manager 會使用此設定，從軟體中心將使用者連線至�
     > [!IMPORTANT]  
     > 此號碼必須符合 [內容] 中的號碼。 如果您在一個位置變更這個號碼，則不會在另一個位置進行自動更新。  
 
-- **喚醒 Proxy 的 Windows Defender 防火牆例外**：Configuration Manager 用戶端會在執行 Windows Defender 防火牆的裝置上自動設定喚醒 Proxy 連接埠號碼。 選取 [設定]，以指定所需的防火牆設定檔。  
+- **喚醒 Proxy 的 Windows Defender 防火牆例外**：Configuration Manager 用戶端會在執行 Windows Defender 防火牆的裝置上自動設定喚醒 Proxy 連接埠號碼。 選取 [設定] 以指定防火牆設定檔。  
 
     如果用戶端執行不同的防火牆，請手動將其設定為允許 [喚醒 Proxy 連接埠號碼 (UDP)]。  
 
@@ -586,7 +568,7 @@ Configuration Manager 會使用此設定，從軟體中心將使用者連線至�
 
 ### <a name="grant-remote-control-permission-to-local-administrators-group"></a>將遠端控制權限授與本機系統管理員群組
 
-選擇起始遠端控制連線之伺服器上的本機系統管理員，是否可以建立用戶端電腦的遠端控制工作階段。  
+選擇啟動遠端控制連線之伺服器上的本機系統管理員，是否可以建立與用戶端電腦的遠端控制工作階段。  
 
 ### <a name="access-level-allowed"></a>允許的存取層級
 
@@ -620,7 +602,7 @@ Configuration Manager 會使用此設定，從軟體中心將使用者連線至�
 
 將此設定設為 [是]，讓 Configuration Manager 管理未請求的遠端協助工作階段。  
 
-在未請求遠端協助工作階段中，用戶端電腦的使用者不會要求協助以起始工作階段。  
+在未請求遠端協助工作階段中，用戶端電腦的使用者未要求協助以啟動工作階段。  
 
 ### <a name="manage-solicited-remote-assistance-settings"></a>管理請求遠端協助設定
 
@@ -630,7 +612,7 @@ Configuration Manager 會使用此設定，從軟體中心將使用者連線至�
 
 ### <a name="level-of-access-for-remote-assistance"></a>遠端協助的存取層級
 
-選擇要指派給 Configuration Manager 主控台中所起始之遠端協助工作階段的存取層級。 選取下列其中一個選項：
+選擇要指派給 Configuration Manager 主控台中所啟動之遠端協助工作階段的存取層級。 選取下列其中一個選項：
 
 - **無** (預設值)
 - **遠端檢視**
@@ -671,7 +653,7 @@ Configuration Manager 會使用此設定，從軟體中心將使用者連線至�
 
 ### <a name="hide-installed-applications-in-software-center"></a><a name="bkmk_HideInstalled"></a> 在軟體中心中隱藏已安裝的應用程式
 
-當您啟用此選項時，[應用程式] 索引標籤中不再顯示已經安裝的應用程式。當您安裝或升級至 Configuration Manager 1802 時，此選項會設定為預設值。 在 [安裝狀態] 索引標籤下，仍然得以檢閱已安裝的應用程式。 <!--1357592-->
+當您啟用此選項時，[應用程式] 索引標籤中不再顯示已經安裝的應用程式。當您安裝或升級至 Configuration Manager 時，此選項會設定為預設值。 在 [安裝狀態] 索引標籤下，仍然得以檢閱已安裝的應用程式。 <!--1357592-->
 
 ### <a name="hide-application-catalog-link-in-software-center"></a><a name="bkmk_HideAppCat"></a> 隱藏軟體中心中的應用程式類別目錄連結
 
@@ -694,9 +676,9 @@ Configuration Manager 會使用此設定，從軟體中心將使用者連線至�
 - **安裝狀態**
 - **裝置相容性**
 - **選項**
-- 按一下 [新增索引標籤] 按鈕，最多新增 5 個自訂索引標籤。
+- 按一下 [新增索引標籤] 按鈕，最多新增五個自訂索引標籤。
   - 指定自訂索引標籤的**索引標籤名稱**和**內容 URL**。
-  - 按一下 [刪除索引標籤] 以移除自訂索引標籤。  
+  - 選取 [刪除索引標籤] 以移除自訂索引標籤。  
 
   >[!Important]  
   > - 某些網站功能作為軟體中心的自訂索引標籤使用時，可能無法正常運作。 請務必測試結果，再將此項目部署至用戶端。 <!--519659-->
@@ -731,9 +713,9 @@ Configuration Manager 會使用此設定，從軟體中心將使用者連線至�
 
   - 「軟體中心」一律會使用您的預設設定。 使用者可以變更此篩選，但「軟體中心」不會保存其喜好設定。  
 
-- 將 [預設應用程式檢視] 設為 [圖格檢視] 或 [清單檢視]。 
+- 將 [預設應用程式檢視] 設為 [圖格檢視] 或 [清單檢視]。
 
-  - 如果使用者變更此設定，軟體中心之後會保存使用者的喜好設定。 
+  - 如果使用者變更此設定，軟體中心之後會保存使用者的喜好設定。
 
 
 ## <a name="software-deployment"></a>軟體部署  
@@ -745,7 +727,7 @@ Configuration Manager 會使用此設定，從軟體中心將使用者連線至�
 > [!IMPORTANT]  
 > 此設定對本機用戶端的侵入性大於對網路或站台伺服器的侵入性。 更頻繁的重新評估排程會對網路和用戶端電腦效能造成負面影響。 Microsoft 不建議將值設定成比預設值低。 如果您變更此值，請嚴密監視效能。  
 
-從用戶端將此動作初始化，如下所示：在 [Configuration Manager] 控制台的 [動作] 索引標籤中，選取 [應用程式部署評估週期]。  
+從用戶端啟動此動作，如下所示：在 [Configuration Manager] 控制台的 [動作] 索引標籤中，選取 [應用程式部署評估週期]。  
 
 
 
@@ -854,9 +836,9 @@ Configuration Manager 會使用此設定，從軟體中心將使用者連線至�
 
 ### <a name="software-update-scan-schedule"></a>軟體更新掃描排程
 
-選取 [排程]，以指定用戶端起始合規性評量掃描的頻率。 這項掃描會判斷用戶端上軟體更新的狀態 (例如，必要或已安裝)。 如需合規性評估的詳細資訊，請參閱 [Software updates compliance assessment](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance) (軟體更新合規性評估)。  
+選取 [排程] 以指定用戶端啟動合規性評量掃描的頻率。 這項掃描會判斷用戶端上軟體更新的狀態 (例如，必要或已安裝)。 如需合規性評估的詳細資訊，請參閱 [Software updates compliance assessment](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance) (軟體更新合規性評估)。  
 
-根據預設，這項掃描會使用簡單排程，每隔七天進行起始。 您可以建立自訂排程。 您可以指定確切的開始日期和時間、使用全球定位時間 (UTC) 或本機時間，並且設定一週內的特定日期為週期性間隔。  
+根據預設，此掃描會使用簡單的排程，每隔七天啟動一次。 您可以建立自訂排程。 您可以指定確切的開始日期和時間、使用全球定位時間 (UTC) 或本機時間，並且設定一週內的特定日期為週期性間隔。  
 
 > [!NOTE]  
 > 如果您指定的間隔少於一天，Configuration Manager 會自動預設為一天。  
@@ -868,16 +850,16 @@ Configuration Manager 會使用此設定，從軟體中心將使用者連線至�
 
 選取 [排程]，以設定軟體更新用戶端代理程式重新評估軟體更新的頻率，來取得 Configuration Manager 用戶端電腦上的安裝狀態。 在用戶端上無法再找到先前安裝的軟體更新但仍然需要它們時，用戶端會重新安裝軟體更新。
 
-根據軟體更新合規性的公司原則，以及使用者是否可以將軟體更新解除安裝，來調整此排程。 每個部署重新評估週期都會導致網路和用戶端電腦處理器活動。 根據預設，此設定會使用簡易排程，每隔七天起始部署重新評估掃描。  
+根據軟體更新合規性的公司原則，以及使用者是否可以將軟體更新解除安裝，來調整此排程。 每個部署重新評估週期都會導致網路和用戶端電腦處理器活動。 根據預設，此設定會使用簡單的排程，每隔七天啟動部署重新評估掃描。  
 
 > [!NOTE]  
 > 如果您指定的間隔少於一天，Configuration Manager 會自動預設為一天。  
 
 ### <a name="when-any-software-update-deployment-deadline-is-reached-install-all-other-software-update-deployments-with-deadline-coming-within-a-specified-period-of-time"></a>當任何軟體更新部署期限達到時，安裝期限在指定期間內的所有其他軟體更新部署
 
-將此選項設為 [是]，以安裝必要部署中期限在指定期間內的所有軟體更新。 當達到必要軟體更新部署期限時，用戶端會在部署中起始軟體更新的安裝。 此設定決定是否從其他必要部署中安裝軟體更新，而這些部署的期限落在指定的時間內。  
+將此選項設為 [是]，以安裝必要部署中期限在指定期間內的所有軟體更新。 當達到必要軟體更新部署期限時，用戶端會在部署中啟動軟體更新的安裝。 此設定決定是否從其他必要部署中安裝軟體更新，而這些部署的期限落在指定的時間內。  
 
-使用此設定，可加速必要軟體更新的安裝。 此設定有可能也會提高用戶端安全性、減少給予使用者的通知，並減少用戶端重新啟動的次數。 根據預設，此設定值是設為 [否] 。  
+使用此設定以加速必要軟體更新的安裝。 此設定有可能也會提高用戶端安全性、減少給予使用者的通知，並減少用戶端重新啟動的次數。 根據預設，此設定值是設為 [否] 。  
 
 ### <a name="period-of-time-for-which-all-pending-deployments-with-deadline-in-this-time-will-also-be-installed"></a>期限在這段時間內的所有擱置中部署也會安裝的一段時間
 
@@ -911,7 +893,7 @@ Configuration Manager 會使用此設定，從軟體中心將使用者連線至�
 
 ### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a> 當 [軟體更新] 維護視窗可以使用時，允許安裝 [所有部署] 維護視窗中的軟體更新
 
-從 1810 版開始，當您將此選項設定為 [是] 且用戶端至少定義一個 [軟體更新] 維護時段時，將在 [所有部署] 維護時段安裝軟體更新。
+當您將此選項設定為 [是] 且用戶端至少定義了一個 [軟體更新] 維護時段時，將在 [所有部署] 維護時段安裝軟體更新。
 
 根據預設，此設定值是設為 [否] 。 此值會使用和先前相同的行為：如果兩個類型都存在，其便會忽略該視窗。 <!--2839307-->
 

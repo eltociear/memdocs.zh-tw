@@ -10,16 +10,16 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b9e2e4e85d9fb6a1ab34af8760e0ac61d6e4fab4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 79e83a7ba111b1d7f96fb623914ffe8e11f22f3d
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700886"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270866"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>準備將 SQL Server AlwaysOn 可用性群組與 Configuration Manager 搭配使用
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 您可以使用本文來準備 Configuration Manager 以使用 SQL Server AlwaysOn 可用性群組。 此功能可為站台資料庫提供高可用性和災害復原解決方案。  
 
@@ -28,7 +28,7 @@ Configuration Manager 支援在下列位置使用可用性群組：
 - 在主要站台和管理中心網站。
 - 內部部署環境或 Microsoft Azure 中。
 
-當您在 Microsoft Azure 中使用可用性群組時，可以使用「Azure 可用性設定組」  來進一步提升站台資料庫的可用性。 如需 Azure 可用性集合的詳細資訊，請參閱 [管理虛擬機器的可用性](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/)。
+當您在 Microsoft Azure 中使用可用性群組時，可以使用「Azure 可用性設定組」來進一步提升站台資料庫的可用性。 如需 Azure 可用性集合的詳細資訊，請參閱 [管理虛擬機器的可用性](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/)。
 
 > [!Important]
 > 在您繼續操作之前，必須先熟悉 SQL Server 和 SQL Server 可用性群組的設定。 接下來的資訊會參考 SQL Server 文件庫和程序。
@@ -91,7 +91,7 @@ Configuration Manager 支援在下列位置使用可用性群組：
 
 請為每個複本的資料庫進行下列設定：  
 
-- 啟用 [CLR 整合]  ：
+- 啟用 [CLR 整合]：
 
     ``` SQL
     sp_configure 'show advanced options', 1;  
@@ -106,13 +106,13 @@ Configuration Manager 支援在下列位置使用可用性群組：
 
     如需詳細資訊，請參閱 [CLR 整合](https://docs.microsoft.com/sql/relational-databases/clr-integration/clr-integration-enabling)。  
 
-- 將 [最大文字複寫大小]  設定為 `2147483647`：  
+- 將 [最大文字複寫大小] 設定為 `2147483647`：  
 
     ``` SQL
     EXECUTE sp_configure 'max text repl size (B)', 2147483647
     ```
 
-- 將資料庫擁有者設定為 [SA 帳戶]  。 您不需要啟用此帳戶。
+- 將資料庫擁有者設定為 [SA 帳戶]。 您不需要啟用此帳戶。
 
 - 將 **TRUSTWORTY** 設定設為 **ON**：
 
@@ -122,7 +122,7 @@ Configuration Manager 支援在下列位置使用可用性群組：
 
     如需詳細資訊，請參閱 [TRUSTWORTHY 資料庫屬性](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property)。
 
-- 啟用 [Service Broker]  ：  
+- 啟用 [Service Broker]：  
 
     ``` SQL
     ALTER DATABASE [CM_xxx] SET ENABLE_BROKER
@@ -217,24 +217,24 @@ Configuration Manager 支援在下列位置使用可用性群組：
 - 您可以使用非同步認可複本來復原您的同步複本。 如需詳細資訊，請參閱[站台資料庫復原選項](../../manage/recover-sites.md#site-database-recovery-options)。  
 
     > [!Warning]  
-    > Configuration Manager 不支援「容錯移轉」  成使用非同步認可複本作為您的站台資料庫。 如需詳細資訊，請參閱[容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups)。  
+    > Configuration Manager 不支援「容錯移轉」成使用非同步認可複本作為您的站台資料庫。 如需詳細資訊，請參閱[容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups)。  
 
 Configuration Manager 不會驗證非同步認可複本的狀態來確認它是最新複本。 使用非同步認可複本作為站台資料庫會讓您站台和資料的完整性有風險。 就設計而言，此複本可能不會同步。 如需詳細資訊，請參閱 [SQL Server AlwaysOn 可用性群組概觀](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)。
 
 每個複本成員必須具有下列設定：
 
-- 使用「預設執行個體」  或「具名執行個體」   
+- 使用「預設執行個體」或「具名執行個體」  
 
-- [主要角色的連線]  設定為 [允許所有連線]   
+- [主要角色的連線] 設定為 [允許所有連線]  
 
-- [可讀取次要]  設定為 [是]   
+- [可讀取次要] 設定為 [是]  
 
-- 已針對 [手動容錯移轉]  進行啟用
+- 已針對 [手動容錯移轉]進行啟用
 
     > [!Note]
     > 在 1902 版和更舊版本中，您需要在 SQL Server 上設定所有可用性群組，以進行手動容錯移轉。 即使不裝載站台資料庫，也需要進行此設定。
     >
-    > 從 1906 版開始，設定為 [自動容錯移轉]  時，Configuration Manager 支援使用可用性群組同步複本。 在下列情況下，請設定 [手動容錯移轉]  ：
+    > 從 1906 版開始，設定為 [自動容錯移轉] 時，Configuration Manager 支援使用可用性群組同步複本。 在下列情況下，請設定 [手動容錯移轉]：
     >
     > - 您執行 Configuration Manager 安裝程式來指定使用可用性群組中的站台資料庫。  
     > - 您為 Configuration Manager 安裝任何更新。 (不僅僅是適用於站台資料庫的更新)。  
@@ -264,6 +264,8 @@ Configuration Manager 安裝程式必須連線至每個複本。 當您在 Azure
 
 您可以使用自訂連接埠來進行這些設定。 請在端點及可用性群組中的所有複本上，使用相同的自訂連接埠。
 
+若要讓 SQL 在站台間複寫資料，請在 Azure 負載平衡器中建立每個連接埠的負載平衡規則。 如需詳細資訊，請參閱[設定內部負載平衡器的高可用性連接埠](https://docs.microsoft.com/azure/load-balancer/load-balancer-configure-ha-ports) \(部分機器翻譯\)。<!-- MEMDocs#252 -->
+
 #### <a name="listener"></a>接聽程式
 
 可用性群組至少必須有一個 *可用性群組接聽程式*。 當您將 Configuration Manager 設定為使用可用性群組中的站台資料庫時，它會使用此接聽程式的虛擬名稱。 雖然一個可用性群組可以包含多個接聽程式，但是 Configuration Manager 只能使用一個接聽程式。 如需詳細資訊，請參閱[建立或設定 SQL Server 可用性群組接聽程式](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server)。
@@ -272,7 +274,7 @@ Configuration Manager 安裝程式必須連線至每個複本。 當您在 Azure
 
 當您執行 Configuration Manager 安裝程式來設定讓站台使用可用性群組中的資料庫時，每部次要複本伺服器都必須具有 SQL Server 檔案路徑，且此路徑與目前主要複本上站台資料庫檔案的檔案路徑相同。 如果相同的路徑不存在，安裝程式就無法新增可用性群組的執行個體作為站台資料庫的新位置。  
 
-本機 SQL Server 服務帳戶必須具備此資料夾的 [完全控制]  權限。
+本機 SQL Server 服務帳戶必須具備此資料夾的 [完全控制] 權限。
 
 只有當您使用 Configuration Manager 安裝程式來指定可用性群組中的資料庫執行個體時，次要複本伺服器才需要此檔案路徑。 在它完成可用性群組中站台資料庫的設定之後，您便可以從次要複本伺服器刪除不使用的路徑。
 
@@ -333,7 +335,7 @@ MSF Enabled : 1 (DWORD)
 > [!Note]
 > 在 1902 版和更舊版本中，您需要在 SQL Server 上設定所有可用性群組，以進行手動容錯移轉。 即使不裝載站台資料庫，也需要進行此設定。
 >
-> 從 1906 版開始，設定為 [自動容錯移轉]  時，Configuration Manager 支援使用可用性群組同步複本。 在下列情況下，請設定 [手動容錯移轉]  ：
+> 從 1906 版開始，設定為 [自動容錯移轉] 時，Configuration Manager 支援使用可用性群組同步複本。 在下列情況下，請設定 [手動容錯移轉]：
 >
 > - 您執行 Configuration Manager 安裝程式來指定使用可用性群組中的站台資料庫。  
 > - 您為 Configuration Manager 安裝任何更新。 (不僅僅是適用於站台資料庫的更新)。  
@@ -377,20 +379,20 @@ SQL Server Always On 可用性群組中的 Configuration Manager 不支援下列
 
 ### <a name="backup-database-files"></a>備份資料庫檔案
   
-當站台資料庫使用可用性群組時，請執行內建的「備份站台伺服器」  維護工作，以備份常用的 Configuration Manager 設定和檔案。 請勿使用該備份所建立的 .MDF 或 .LDF 檔案。 應改為使用 SQL Server 來直接備份這些資料庫檔案。
+當站台資料庫使用可用性群組時，請執行內建的「備份站台伺服器」維護工作，以備份常用的 Configuration Manager 設定和檔案。 請勿使用該備份所建立的 .MDF 或 .LDF 檔案。 應改為使用 SQL Server 來直接備份這些資料庫檔案。
 
 ### <a name="transaction-log"></a>交易記錄  
 
-請將站台資料庫的復原模式設定為 [完整]  。 就可用性群組中的 Configuration Manager 使用而言，這是必要設定。 規劃以監視及維護站台資料庫交易記錄的大小。 在完整復原模型中，必須等到建立資料庫或交易記錄的完整備份之後，才會強行寫入交易。 如需詳細資訊，請參閱 [SQL Server 資料庫的備份與還原](https://docs.microsoft.com/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases)。
+請將站台資料庫的復原模式設定為 [完整]。 就可用性群組中的 Configuration Manager 使用而言，這是必要設定。 規劃以監視及維護站台資料庫交易記錄的大小。 在完整復原模型中，必須等到建立資料庫或交易記錄的完整備份之後，才會強行寫入交易。 如需詳細資訊，請參閱 [SQL Server 資料庫的備份與還原](https://docs.microsoft.com/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases)。
 
 
 ## <a name="changes-for-site-recovery"></a>站台復原的變更
 
-如果至少有一個可用性群組節點仍可運作，請使用 [略過資料庫復原 (如果資料庫未受到影響，則使用此選項)]  站台復原選項。
+如果至少有一個可用性群組節點仍可運作，請使用 [略過資料庫復原 (如果資料庫未受到影響，則使用此選項)] 站台復原選項。
 
 從 1906 版開始，站台復原可以在 SQL Always On 群組上重新建立資料庫。 此程序適用於手動和自動植入。<!-- SCCMDocs-pr#3846 -->
 
-在 1902 版或更舊版本中，當您遺失可用性群組的所有節點時，則必須先重新建立可用性群組，才能復原站台。 Configuration Manager 無法重建或還原可用性節點。 請重新建立群組、還原備份，然後重新設定 SQL。 接著，使用 [略過資料庫復原 (如果資料庫未受到影響，則使用此選項)]  站台復原選項。
+在 1902 版或更舊版本中，當您遺失可用性群組的所有節點時，則必須先重新建立可用性群組，才能復原站台。 Configuration Manager 無法重建或還原可用性節點。 請重新建立群組、還原備份，然後重新設定 SQL。 接著，使用 [略過資料庫復原 (如果資料庫未受到影響，則使用此選項)] 站台復原選項。
 
 如需詳細資訊，請參閱[備份和復原](../../manage/backup-and-recovery.md)。
 
@@ -401,15 +403,15 @@ SQL Server Always On 可用性群組中的 Configuration Manager 不支援下列
 
 Reporting Services 點不支援使用可用性群組的接聽程式虛擬名稱。 它也不支援將其資料庫裝載在 SQL Server Always On 可用性群組中。  
 
-- 根據預設，Reporting Services 點安裝會將 [站台資料庫伺服器名稱]  設定為指定成接聽程式的虛擬名稱。 請將此設定變更為指定可用性群組中複本的電腦名稱和執行個體。  
+- 根據預設，Reporting Services 點安裝會將 [站台資料庫伺服器名稱] 設定為指定成接聽程式的虛擬名稱。 請將此設定變更為指定可用性群組中複本的電腦名稱和執行個體。  
 
 - 若要在某個複本節點離線時，卸載報告功能並提升可用性，請考慮在每個複本節點上安裝額外的 Reporting Services 點。 然後將每個 Reporting Services 點設定為使用自己的電腦名稱。 當您在可用性群組的每個複本上安裝 Reporting Services 點時，報告功能將一律可以連線到作用中的報告點伺服器。  
 
 ### <a name="switch-the-reporting-services-point-used-by-the-console"></a>切換主控台所使用的 Reporting Services 點
 
-1. 在 Configuration Manager 主控台中，移至 [監視]  工作區、展開 [報告]  ，然後選取 [報告]  節點。
+1. 在 Configuration Manager 主控台中，移至 [監視] 工作區、展開 [報告]，然後選取 [報告] 節點。
 
-1. 在功能區中，選取 [報告選項]  。  
+1. 在功能區中，選取 [報告選項]。  
 
 1. 在 [報告選項] 對話方塊中，選取您想要使用的 Reporting Services 點。  
 

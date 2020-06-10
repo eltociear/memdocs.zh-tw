@@ -2,7 +2,7 @@
 title: 維護工作的參考
 titleSuffix: Configuration Manager
 description: 每個 Configuration Manager 站台維護工作的詳細資料
-ms.date: 03/30/2020
+ms.date: 06/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9964834bf3a6bfa8e5c0a0bb70039554134490ec
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e989de5acab778374c233862d0ab4d7077899d28
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708536"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428600"
 ---
 # <a name="reference-for-maintenance-tasks-in-configuration-manager"></a>Configuration Manager 中的維護工作參考
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 此文章列出每個 Configuration Manager 站台維護工作的詳細資料。 每個項目都會指定可使用工作的站台類型，以及是否預設為啟用。
 
@@ -50,7 +50,7 @@ ms.locfileid: "81708536"
 ### <a name="clear-undiscovered-clients"></a>清除未探索的用戶端
 
 > [!Tip]
-> 您也可以在主控台中看到名為 [清除安裝旗標]  的這個工作。
+> 您也可以在主控台中看到名為 [清除安裝旗標] 的這個工作。
 
 若要針對在**用戶端重新探索**期間並未提交「活動訊號探索」記錄的用戶端移除已安裝的旗標，請使用此工作。 已安裝旗標可避免在已具備作用中 Configuration Manager 用戶端的電腦上進行自動用戶端推入安裝。  
 
@@ -96,6 +96,7 @@ ms.locfileid: "81708536"
 
 - 過時或過期的用戶端通知，例如電腦或使用者原則的下載要求
 - Endpoint Protection，例如系統管理使用者針對用戶端所提出，執行掃描或下載更新定義的要求
+- 執行指令碼狀態結果
 
 |||
 |---------|---------|
@@ -240,9 +241,9 @@ ms.locfileid: "81708536"
 ### <a name="delete-aged-exchange-partnership"></a>刪除過時 Exchange 合作關係
 
 > [!Tip]
-> > 您也可以在主控台中看到此工作，名稱為 [刪除受 Exchange Server 連接器管理的過時裝置]  。
+> > 您也可以在主控台中看到此工作，名稱為 [刪除受 Exchange Server 連接器管理的過時裝置]。
 
-使用此工作，刪除有關由 Exchange Server 連接器管理之行動裝置的過時資料。 站台會根據 Exchange Server 連接器內容之 [探索]  索引標籤上的 [略過未使用達指定天數以上的行動裝置]  設定刪除此資料。 如需詳細資訊，請參閱[使用 Configuration Manager 和 Exchange 管理行動裝置](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。
+使用此工作，刪除有關由 Exchange Server 連接器管理之行動裝置的過時資料。 站台會根據 Exchange Server 連接器內容之 [探索] 索引標籤上的 [略過未使用達指定天數以上的行動裝置] 設定刪除此資料。 如需詳細資訊，請參閱[使用 Configuration Manager 和 Exchange 管理行動裝置](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。
 
 |||
 |---------|---------|
@@ -410,7 +411,7 @@ ms.locfileid: "81708536"
 此工作僅會在 Configuration Manager 用戶端資源上運作。 這與刪除任何過時探索資料記錄的**刪除過時探索資料**工作不同。 在某個網站上執行此工作時，會從階層內所有網站的資料庫內移除資料。 如需詳細資訊，請參閱[如何設定用戶端狀態](../../clients/deploy/configure-client-status.md)。
 
 > [!IMPORTANT]  
-> 啟用此工作時，請設定此工作以大於 [活動訊號探索]  排程的間隔執行。 此設定會讓使用中用戶端傳送活動訊號探索記錄，將其用戶端記錄標記為使用中，以便此工作不會將它們刪除。  
+> 啟用此工作時，請設定此工作以大於 [活動訊號探索] 排程的間隔執行。 此設定會讓使用中用戶端傳送活動訊號探索記錄，將其用戶端記錄標記為使用中，以便此工作不會將它們刪除。  
 
 |||
 |---------|---------|
@@ -501,7 +502,7 @@ ms.locfileid: "81708536"
 
 此工作會將多個記錄的軟體計量檔案使用狀況摘述成一個一般記錄。 資料摘要可以壓縮儲存在 Configuration Manager 資料庫中的資料量。
 
-若要摘要說明軟體計量資料並節省資料庫中的磁碟空間，請搭配 [摘述軟體計量每月使用資料]  工作使用此工作。 如需詳細資訊，請參閱[軟體計量](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。
+若要摘要說明軟體計量資料並節省資料庫中的磁碟空間，請搭配 [摘述軟體計量每月使用資料] 工作使用此工作。 如需詳細資訊，請參閱[軟體計量](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。
 
 |||
 |---------|---------|
@@ -523,7 +524,7 @@ ms.locfileid: "81708536"
 
 此工作會將多個記錄的軟體計量每月使用狀況摘述成一個一般記錄。 資料摘要可以壓縮儲存在 Configuration Manager 資料庫中的資料量。
 
-若要摘要說明軟體計量資料並節省資料庫中的空間，請搭配 [摘述軟體計量檔案使用資料]  工作使用此工作。 如需詳細資訊，請參閱[軟體計量](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。
+若要摘要說明軟體計量資料並節省資料庫中的空間，請搭配 [摘述軟體計量檔案使用資料] 工作使用此工作。 如需詳細資訊，請參閱[軟體計量](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。
 
 |||
 |---------|---------|

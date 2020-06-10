@@ -10,16 +10,16 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 9e59d850a78a8f45f93769003e7a1de99e5634b3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: ddd01055ac6edf2872854c93cc5172b396052ad2
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906393"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270849"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>在 Configuration Manager 中建立 Windows 應用程式
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 建立和部署 Windows 裝置的應用程式時，除了[建立應用程式](../deploy-use/create-applications.md)的其他 Configuration Manager 需求和程序之外，還要考慮下列項目。  
 
@@ -27,7 +27,7 @@ ms.locfileid: "82906393"
 
 Configuration Manager 支援部署適用於 Windows 8.1 和 Windows 10 裝置的 Windows 應用程式套件 (.appx) 與應用程式套件組合 (.appxbundle) 格式。
 
-當您在 Configuration Manager 主控台中建立應用程式時，請將應用程式安裝檔案的 [類型]  選取為 [Windows 應用程式套件 (\*.appx、\*.appxbundle、\*.msix、\*.msixbundle)]  。 如需有關建立應用程式的詳細資訊，請參閱[建立應用程式](../deploy-use/create-applications.md)。 如需有關 MSIX 格式的詳細資訊，請參閱[對 MSIX 格式的支援](#bkmk_msix)。
+當您在 Configuration Manager 主控台中建立應用程式時，請將應用程式安裝檔案的 [類型] 選取為 [Windows 應用程式套件 (\*.appx、\*.appxbundle、\*.msix、\*.msixbundle)]。 如需有關建立應用程式的詳細資訊，請參閱[建立應用程式](../deploy-use/create-applications.md)。 如需有關 MSIX 格式的詳細資訊，請參閱[對 MSIX 格式的支援](#bkmk_msix)。
 
 > [!Note]  
 > 若要利用 Configuration Manager 的新功能，請先將用戶端更新為最新版本。 雖然當您更新主控台和站台時，Configuration Manager 主控台中會出現新功能，但要等到用戶端版本也是最新版，才能完整運作。<!--SCCMDocs issue 646-->  
@@ -39,7 +39,7 @@ Configuration Manager 支援部署適用於 Windows 8.1 和 Windows 10 裝置的
 > [!Important]  
 > 在裝置上安裝、佈建和更新相同 Windows 應用程式套件的不同版本時，請謹慎處理，因為這可能會造成非預期的結果。 使用 Configuration Manager 佈建應用程式，但接著允許使用者從 Microsoft Store 更新應用程式時，可能會發生這種行為。 如需詳細資訊，請參閱[管理從商務用 Microsoft Store 購買的應用程式](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps)時的下一個步驟指引。  
 
-佈建離線授權應用程式時，Configuration Manager 不會讓 Windows 從 Microsoft Store 自動進行更新。  
+將離線應用程式部署至具有 Configuration Manager 用戶端的 Windows 10 裝置時，不允許使用者更新 Configuration Manager 部署外部的應用程式。 在多使用者環境 (例如教室) 中，離線應用程式更新的控制特別重要。 如需詳細資訊，請參閱[使用 Configuration Manager 管理從商務與教育用 Microsoft Store 取得的應用程式](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps)。<!-- MEMDocs#316 -->
 
 Configuration Manager 支援在所有支援的 Windows 10 版本上佈建應用程式。<!--SCCMDocs-pr issue 2762-->
 
@@ -48,7 +48,7 @@ Configuration Manager 支援在所有支援的 Windows 10 版本上佈建應用�
 - Uninstall action: Windows 10, version 1703 and later
 -->
 
-若要設定這項功能的 Windows 應用程式部署類型，請啟用 [在裝置上為所有使用者佈建此應用程式]  的選項。 如需詳細資訊，請參閱[建立應用程式](../deploy-use/create-applications.md)。
+若要設定這項功能的 Windows 應用程式部署類型，請啟用 [在裝置上為所有使用者佈建此應用程式] 的選項。 如需詳細資訊，請參閱[建立應用程式](../deploy-use/create-applications.md)。
 
 > [!Note]  
 > 如果您需要從使用者已登入的裝置解除安裝佈建的應用程式，則需要建立兩個解除安裝部署。 將第一個解除安裝部署的目標設為包含裝置的裝置集合。 將第二個解除安裝部署的目標設為包含使用者的使用者集合，且這些使用者已登入具有佈建應用程式的裝置。 在裝置上解除安裝佈建的應用程式時，Windows 目前也不會為使用者解除安裝該應用程式。
@@ -85,7 +85,7 @@ Configuration Manager 支援 Windows 10 應用程式套件 (.msix) 與應用程�
 
 #### <a name="process-to-convert-applications-to-msix-format"></a>將應用程式轉換為 MSIX 格式的程序
 
-1. 提高 Configuration Manager 主控台權限，移至 [軟體程式庫]  工作區，展開 [應用程式管理]  ，然後選取 [應用程式]  節點。  
+1. 提高 Configuration Manager 主控台權限，移至 [軟體程式庫] 工作區，展開 [應用程式管理]，然後選取 [應用程式] 節點。  
 
 2. 選取具備 Windows Installer (.msi) 部署類型的應用程式。  
 
@@ -96,7 +96,7 @@ Configuration Manager 支援 Windows 10 應用程式套件 (.msix) 與應用程�
     >
     > 請勿在參考裝置上預先安裝此應用程式。  
 
-3. 在功能區中選取 [轉換成 .MSIX]  。
+3. 在功能區中選取 [轉換成 .MSIX]。
 
 當精靈完成時，MSIX Packaging Tool 會在您於精靈中指定的位置建立一個 MSIX 檔案。 在此過程中，Configuration Manager 會以無訊息方式在參照裝置上安裝應用程式。
 
@@ -126,7 +126,7 @@ Configuration Manager 支援 Windows 10 應用程式套件 (.msix) 與應用程�
 
 您只能將非 OS 部署工作順序作新增為應用程式上的部署類型。 不支援具強烈影響性、OS 部署或 OS 升級工作順序。 <!--A user-targeted deployment still runs in the user context of the local System account.-->
 
-當將此部署類型新增至應用程式時，請在 [工作順序]  頁面上設定其屬性。 如需詳細資訊，請參閱[部署類型的 [工作順序]  選項](../deploy-use/create-applications.md#bkmk_dt-ts)。
+當將此部署類型新增至應用程式時，請在 [工作順序] 頁面上設定其屬性。 如需詳細資訊，請參閱[部署類型的 [工作順序] 選項](../deploy-use/create-applications.md#bkmk_dt-ts)。
 
 ### <a name="prerequisites-for-a-task-sequence-deployment-type"></a>工作順序部署類型的先決條件
 
@@ -134,7 +134,7 @@ Configuration Manager 支援 Windows 10 應用程式套件 (.msix) 與應用程�
 
 - 僅使用非 OS 部署步驟，例如：**安裝套件**、**執行命令列**，或**執行 PowerShell 指令碼**。 如需詳細資訊 (包括支援步驟的完整清單)，請參閱[建立非 OS 部署的工作順序](../../osd/deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)。
 
-- 在工作順序屬性的 [使用者通知]  索引標籤上，請不要選取具強烈影響性的工作順序選項。
+- 在工作順序屬性的 [使用者通知] 索引標籤上，請不要選取具強烈影響性的工作順序選項。
 
 <!-- - If you use the **Install Application** step in the task sequence, don't add an app to that step that has a task sequence deployment type. -->
 

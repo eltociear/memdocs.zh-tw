@@ -10,16 +10,16 @@ ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e4922502b49ab2da9ce393fab809e4dc583fd962
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84ef4e37ddf756f04101c9cdec0ec7a4ed91688d
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694836"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270832"
 ---
 # <a name="security-and-privacy-for-configuration-manager-clients"></a>Configuration Manager 用戶端的安全性和隱私權
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 本文說明 Configuration Manager 用戶端的安全性和隱私權資訊。 它也包含由 [Exchange Server 連接器](../../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)所管理之行動裝置的資訊。  
 
@@ -30,7 +30,7 @@ Configuration Manager 站台接受來自執行 Configuration Manager 用戶端�
 
 ### <a name="use-public-key-infrastructure-pki-certificates-for-client-communications-with-site-systems-that-run-iis"></a>使用公開金鑰基礎結構 (PKI) 憑證，以執行 IIS 的站台系統進行用戶端通訊  
 
-- 作為網站內容，針對 [僅 HTTPS]  設定 [網站系統設定]  。  
+- 作為網站內容，針對 [僅 HTTPS]  設定 [網站系統設定] 。  
 
 - 以 `UsePKICert` CCMSetup 內容安裝用戶端。  
 
@@ -48,7 +48,7 @@ Configuration Manager 站台接受來自執行 Configuration Manager 用戶端�
 - 自動 (適用於受信任網域中的電腦)
 - 自動 (適用於所有電腦)  
 
-最安全的核准方法是自動核准受信任網域成員的用戶端。 然後手動檢查並核准所有其他電腦。 除非有其他存取控制功能可預防不受信任的電腦存取您的網路，否則不建議自動核准所有用戶端。  
+最安全的核准方法是自動核准受信任網域成員的用戶端。 此選項包括來自已連線 Azure Active Directory (Azure AD) 租用戶的雲端網域加入用戶端。<!-- MEMDocs#318 --> 然後手動檢查並核准所有其他電腦。 除非有其他存取控制功能可預防不受信任的電腦存取您的網路，否則不建議自動核准所有用戶端。  
 
 如需如何手動核准電腦的詳細資訊，請參閱[從裝置節點管理用戶端](../../manage/manage-clients.md#BKMK_ManagingClients_DevicesNode)。  
 
@@ -81,7 +81,7 @@ Configuration Manager 基礎結構會拒絕被封鎖的用戶端。 如果用戶
 
 如需不同用戶端安裝方法的詳細資訊，請參閱[用戶端安裝方法](client-installation-methods.md)。  
 
-盡可能選取需要 Configuration Manager 最少安全性權限的用戶端安裝方法。 限制將具有可用於用戶端部署以外用途之權限的安全性角色指派給系統管理使用者。 例如，設定自動用戶端升級需要 [系統高權限管理員]  安全性角色，而此角色會授與系統管理使用者所有的安全性權限。  
+盡可能選取需要 Configuration Manager 最少安全性權限的用戶端安裝方法。 限制將具有可用於用戶端部署以外用途之權限的安全性角色指派給系統管理使用者。 例如，設定自動用戶端升級需要 [系統高權限管理員] 安全性角色，而此角色會授與系統管理使用者所有的安全性權限。  
 
 如需各用戶端安裝方法所需之相依性和安全性權限的詳細資訊，請參閱[電腦用戶端的必要條件](../prerequisites-for-deploying-clients-to-windows-computers.md#BKMK_prereqs_computers)中的＜安裝方法相依性＞。  
 
@@ -165,15 +165,15 @@ Configuration Manager 在這段期間會將電腦鎖定，只能由本機系統�
 
 ### <a name="only-suspend-bitlocker-pin-entry-on-trusted-and-restricted-access-devices"></a>只在信任並限制存取的裝置上暫停輸入 BitLocker PIN  
 
-請只為您信任並已限制其實際存取權的電腦，將用戶端設定 [重新啟動時暫停輸入 BitLocker PIN]  設定為 [永遠]  。
+請只為您信任並已限制其實際存取權的電腦，將用戶端設定 [重新啟動時暫停輸入 BitLocker PIN] 設定為 [永遠]。
 
-當您將此用戶端設定設為 [永遠]  時，Configuration Manager 會完成軟體的安裝。 此行為可協助安裝重大軟體更新，並且繼續服務。 如果有攻擊者攔截重新啟動程序，則攻擊者可能會控制電腦。 只有在信任電腦並已限制電腦的實際存取權時，才能使用此設定。 例如，此設定可能適合用於資料中心內的伺服器。  
+當您將此用戶端設定設為 [永遠] 時，Configuration Manager 會完成軟體的安裝。 此行為可協助安裝重大軟體更新，並且繼續服務。 如果有攻擊者攔截重新啟動程序，則攻擊者可能會控制電腦。 只有在信任電腦並已限制電腦的實際存取權時，才能使用此設定。 例如，此設定可能適合用於資料中心內的伺服器。  
 
 如需此用戶端設定的詳細資訊，請參閱[關於用戶端設定](../about-client-settings.md#suspend-bitlocker-pin-entry-on-restart)。  
 
 ### <a name="dont-bypass-powershell-execution-policy"></a>請勿略過 PowerShell 執行原則
 
-如果您將 Configuration Manager 用戶端設定 [PowerShell 執行原則]  設定為 [略過]  ，則 Windows 會允許執行未簽署的 PowerShell 指令碼。 此行為可能會允許在用戶端電腦上執行惡意程式碼。 當您的組織需要此選項時，請使用自訂用戶端設定。 請只將其指派至必須執行未簽署之 PowerShell 指令碼的用戶端電腦。  
+如果您將 Configuration Manager 用戶端設定 [PowerShell 執行原則] 設定為 [略過]，則 Windows 會允許執行未簽署的 PowerShell 指令碼。 此行為可能會允許在用戶端電腦上執行惡意程式碼。 當您的組織需要此選項時，請使用自訂用戶端設定。 請只將其指派至必須執行未簽署之 PowerShell 指令碼的用戶端電腦。  
 
 如需此用戶端設定的詳細資訊，請參閱[關於用戶端設定](../about-client-settings.md#powershell-execution-policy)。  
 
@@ -186,25 +186,25 @@ Configuration Manager 在這段期間會將電腦鎖定，只能由本機系統�
 
 ### <a name="configure-the-password-settings-to-help-protect-mobile-devices-from-unauthorized-access"></a>設定密碼設定，以協助保護行動裝置並防止未經授權的存取  
 
-針對由 Configuration Manager 註冊的行動裝置  ：使用行動裝置設定項目將密碼複雜性設定為 PIN。 至少指定預設的密碼最小長度。  
+針對由 Configuration Manager 註冊的行動裝置：使用行動裝置設定項目將密碼複雜性設定為 PIN。 至少指定預設的密碼最小長度。  
 
-針對沒有安裝 Configuration Manager 用戶端，但由 Exchange Server 連接器管理的行動裝置  ：設定 Exchange Server 連接器的 [密碼設定]  ，使密碼複雜性為 PIN。 至少指定預設的密碼最小長度。  
+針對沒有安裝 Configuration Manager 用戶端，但由 Exchange Server 連接器管理的行動裝置：設定 Exchange Server 連接器的 [密碼設定]，使密碼複雜性為 PIN。 至少指定預設的密碼最小長度。  
 
 ### <a name="only-allow-applications-to-run-that-are-signed-by-companies-that-you-trust"></a>只允許執行信任的公司簽署過的應用程式  
 
 只允許執行信任的公司簽署過的應用程式，如此有助於預防清查資訊與狀態資訊遭到竄改。 不允許裝置安裝未簽署的檔案。  
 
-針對由 Configuration Manager 註冊的行動裝置  ：使用行動裝置設定項目，將安全性設定 [未簽署的應用程式]  設定為 [禁止]  。 將 [未簽署的檔案安裝]  設定為信任的來源。  
+針對由 Configuration Manager 註冊的行動裝置：使用行動裝置設定項目，將安全性設定 [未簽署的應用程式] 設定為 [禁止]。 將 [未簽署的檔案安裝] 設定為信任的來源。  
 
-針對沒有安裝 Configuration Manager 用戶端，但由 Exchange Server 連接器管理的行動裝置  ：設定 Exchange Server 連接器的 [應用程式設定]  ，將 [未簽署的檔案安裝]  與 [未簽署的應用程式]  設定為 [禁止]  。  
+針對沒有安裝 Configuration Manager 用戶端，但由 Exchange Server 連接器管理的行動裝置：設定 Exchange Server 連接器的 [應用程式設定]，將 [未簽署的檔案安裝] 與 [未簽署的應用程式] 設定為 [禁止]。  
 
 ### <a name="lock-mobile-devices-when-not-in-use"></a>鎖定未使用的行動裝置  
 
 鎖定未使用的行動裝置，有助於預防權限提高攻擊。
 
-針對由 Configuration Manager 註冊的行動裝置  ：使用行動裝置設定項目，進行密碼設定 [鎖定行動裝置前允許的閒置時間 (分鐘)]  。  
+針對由 Configuration Manager 註冊的行動裝置：使用行動裝置設定項目，進行密碼設定 [鎖定行動裝置前允許的閒置時間 (分鐘)]。  
 
-針對沒有安裝 Configuration Manager 用戶端，但由 Exchange Server 連接器管理的行動裝置  ：設定 Exchange Server 連接器的 [密碼設定]  ，以設定 [鎖定行動裝置前允許的閒置時間 (分鐘)]  。  
+針對沒有安裝 Configuration Manager 用戶端，但由 Exchange Server 連接器管理的行動裝置：設定 Exchange Server 連接器的 [密碼設定]，以設定 [鎖定行動裝置前允許的閒置時間 (分鐘)]。  
 
 ### <a name="restrict-the-users-who-can-enroll-their-mobile-devices"></a>限制可註冊其行動裝置的使用者  
 
@@ -261,17 +261,17 @@ Configuration Manager 在這段期間會將電腦鎖定，只能由本機系統�
 
 2. 輸入下列命令：`sudo /Applications/Utilities/Keychain\ Access.app/Contents/MacOS/Keychain\ Access`  
 
-3. 在 [金鑰鏈存取]  對話方塊的 [金鑰鏈]  區段中，按一下 [系統]  。 然後在 [類別]  區段中，按一下 [憑證]  。  
+3. 在 [金鑰鏈存取] 對話方塊的 [金鑰鏈] 區段中，按一下 [系統]。 然後在 [類別] 區段中，按一下 [憑證]。  
 
 4. 找出並按兩下 Mac 用戶端憑證的根 CA 憑證。  
 
 5. 在根 CA 憑證的對話方塊中，展開 [信任]  區段，然後進行下列變更：  
 
-    1. **使用此憑證時**：將 [永遠信任]  設定變更為 [使用系統預設值]  。  
+    1. **使用此憑證時**：將 [永遠信任] 設定變更為 [使用系統預設值]。  
 
-    2. **安全通訊端層 (SSL)** ：將 [未指定值]  變更為 [永遠信任]  。  
+    2. **安全通訊端層 (SSL)** ：將 [未指定值] 變更為 [永遠信任]。  
 
-6. 關閉對話方塊。 收到提示時輸入系統管理員的密碼，然後按一下 [更新設定]  。  
+6. 關閉對話方塊。 收到提示時輸入系統管理員的密碼，然後按一下 [更新設定]。  
 
 在您完成此程序之後，根憑證只有在驗證 SSL 通訊協定時才受信任。 其他目前不受此根憑證信任的通訊協定包括安全郵件 (S/MIME)、可延伸的驗證 (EAP) 或程式碼簽署。  
 
@@ -302,7 +302,7 @@ Configuration Manager 在這段期間會將電腦鎖定，只能由本機系統�
 
 ### <a name="client-logs-allow-user-access"></a>用戶端記錄檔可供使用者存取  
 
-所有用戶端記錄檔皆允許 **Users** 群組進行「讀取」  存取，並且允許特殊的**互動**使用者進行「寫入」  存取。 如果您啟用詳細資訊記錄，攻擊者可能會讀取記錄檔，尋找有關相容性或系統漏洞的資訊。 用戶端安裝在使用者內容中的處理序 (例如軟體) 必須使用低權限使用者帳戶來寫入記錄。 此行為表示攻擊者也可以利用低權限帳戶寫入記錄。  
+所有用戶端記錄檔皆允許 **Users** 群組進行「讀取」存取，並且允許特殊的**互動**使用者進行「寫入」存取。 如果您啟用詳細資訊記錄，攻擊者可能會讀取記錄檔，尋找有關相容性或系統漏洞的資訊。 用戶端安裝在使用者內容中的處理序 (例如軟體) 必須使用低權限使用者帳戶來寫入記錄。 此行為表示攻擊者也可以利用低權限帳戶寫入記錄。  
 
 最重大的風險是，攻擊者可能會將記錄檔中的資訊移除。 系統管理員可能需要此資訊進行稽核及偵測入侵。  
 
@@ -330,7 +330,7 @@ Configuration Manager 在這段期間會將電腦鎖定，只能由本機系統�
 
 ### <a name="a-wipe-acknowledgment-doesnt-verify-that-the-device-has-been-successfully-wiped"></a>抹除認可並不會確認裝置是否已成功抹除  
 
-當您對行動裝置起始抹除動作，並且 Configuration Manager 認可抹除時，驗證方式為確認 Configuration Manager 是否成功「傳送」  訊息。 它不會確認裝置是否對要求進行「動作」  。
+當您對行動裝置起始抹除動作，並且 Configuration Manager 認可抹除時，驗證方式為確認 Configuration Manager 是否成功「傳送」訊息。 它不會確認裝置是否對要求進行「動作」。
 
 對於由 Exchange Server 連接器管理的行動裝置，抹除認可會確認命令是否由 Exchange 接收，而非裝置。  
 
@@ -338,14 +338,14 @@ Configuration Manager 在這段期間會將電腦鎖定，只能由本機系統�
 
 如果 Windows Embedded 裝置執行 Windows 7 之前的 OS 版本，而且使用者嘗試在 Configuration Manager 停用寫入篩選器時登入，則帳戶鎖定前 Windows 所允許的已設定錯誤嘗試次數只有一半。
 
-例如，您可以將 [帳戶鎖定閾值]  的網域原則設定為六次嘗試。 使用者輸入錯誤密碼三次，便會鎖定帳戶。此行為實際上會導致拒絕服務。 在此案例中，如果使用者必須登入內嵌裝置，請警告使用者鎖定閥值可能會降低。  
+例如，您可以將 [帳戶鎖定閾值] 的網域原則設定為六次嘗試。 使用者輸入錯誤密碼三次，便會鎖定帳戶。此行為實際上會導致拒絕服務。 在此案例中，如果使用者必須登入內嵌裝置，請警告使用者鎖定閥值可能會降低。  
 
 
 ## <a name="privacy-information-for-configuration-manager-clients"></a><a name="BKMK_Privacy_Clients"></a> Configuration Manager 用戶端的隱私權資訊  
 
 當您部署 Configuration Manager 用戶端時，會啟用用戶端設定，以使用 Configuration Manager 功能。 您用來設定功能的設定可套用至 Configuration Manager 階層中的所有用戶端。 無論是直接連線至內部網路、透過遠端工作階段連線，或是連線至網路網路，此行為都相同。  
 
-用戶端資訊會儲存在您 SQL Server 中的 Configuration Manager 資料庫，不會傳送給 Microsoft。 資訊會保留在資料庫中，直到每 90 天由站台維護工作 [刪除過時探索資料]  刪除為止。 您可以設定刪除間隔。 
+用戶端資訊會儲存在您 SQL Server 中的 Configuration Manager 資料庫，不會傳送給 Microsoft。 資訊會保留在資料庫中，直到每 90 天由站台維護工作 [刪除過時探索資料] 刪除為止。 您可以設定刪除間隔。 
 
 系統會將一些摘要或彙總的診斷及使用方式資料傳送給 Microsoft。 如需詳細資訊，請參閱[診斷和使用方式資料](../../../plan-design/diagnostics/diagnostics-and-usage-data.md)。  
 
@@ -366,7 +366,7 @@ Configuration Manager 會監視用戶端活動。 它會定期評估 Configurati
 
 Exchange Server 連接器會藉由 ActiveSync 通訊協定尋找並管理連線至內部部署或託管 Exchange Server 的裝置。 Exchange Server 連接器找到的記錄會儲存在您 SQL Server 中的 Configuration Manager 資料庫。 此資訊會從 Exchange Server 進行收集。 伺服器不包含來自行動裝置傳送至 Exchange Server 的任何額外資訊。  
 
-行動裝置資訊不會傳送給 Microsoft。 行動裝置資訊儲存在您 SQL Server 中的 Configuration Manager 資料庫。 資訊會保留在資料庫中，直到每 90 天由站台維護工作 [刪除過時探索資料]  刪除為止。 您可以設定刪除間隔。  
+行動裝置資訊不會傳送給 Microsoft。 行動裝置資訊儲存在您 SQL Server 中的 Configuration Manager 資料庫。 資訊會保留在資料庫中，直到每 90 天由站台維護工作 [刪除過時探索資料] 刪除為止。 您可以設定刪除間隔。  
 
 安裝並設定 Exchange Server 連接器之前，請考量您的隱私權需求。  
 

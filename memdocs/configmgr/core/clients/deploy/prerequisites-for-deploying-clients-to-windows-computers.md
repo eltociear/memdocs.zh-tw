@@ -2,7 +2,7 @@
 title: Windows 用戶端部署必要條件
 titleSuffix: Configuration Manager
 description: 了解將設定管理員用戶端部署至 Windows 電腦的必要條件。
-ms.date: 11/29/2019
+ms.date: 06/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1d4cd7ffe38f7191a5361ad2e89817ea80f9f093
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2aa375d0521e6088904ebe9a1f10af83f4bc261f
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694786"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428567"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>在 Configuration Manager 中將用戶端部署至 Windows 電腦的必要條件
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 在環境中部署 Configuration Manager 用戶端會擁有下列外部相依性和產品內的相依性。 此外，每一種用戶端部署方法都有自己的相依性，必須符合這些相依性用戶端安裝才能成功。  
 
@@ -28,18 +28,20 @@ ms.locfileid: "81694786"
 > [!NOTE]  
 > 本文章只列出最低需求的軟體版本號碼。  
 
-
 ## <a name="prerequisites-for-windows-clients"></a><a name="BKMK_prereqs_computers"></a> Windows 用戶端的必要條件  
 
 使用下列資訊來判斷在 Windows 裝置上安裝 Configuration Manager 用戶端時的必要條件。  
 
-### <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 外部的相依性  
+### <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 外部的相依性
 
-|元件|說明|  
-|---|---|  
-|Windows Installer 3.1.4000.2435 版|支援針對套件和軟體更新使用 Windows Installer 更新 (.msp) 檔案所需。|  
-|Microsoft 背景智慧型傳送服務 (BITS) 2.5 版|需要在用戶端電腦和 Configuration Manager 站台系統之間進行節流資料傳送。 BITS 不會在用戶端安裝期間自動下載。 在電腦上安裝 BITS 時，通常需要重新啟動才能完成安裝。<br /><br /> 大部分作業系統都包含 BITS。 如果沒有的話，請先安裝 BITS，再安裝 Configuration Manager 用戶端。|  
-|Microsoft 工作排程器|在用戶端上啟用此服務，以完成用戶端安裝。|  
+其中有許多元件是 Windows 預設會啟用的服務或功能。 請勿在 Configuration Manager 用戶端上停用這些元件。
+
+|元件|說明|
+|---|---|
+|Windows Installer|支援使用 Windows Installer 檔案進行應用程式與軟體更新所需。|
+|Microsoft 背景智慧型傳送服務 (BITS)|在用戶端電腦和 Configuration Manager 站台系統之間進行節流資料傳輸所必須。|
+|Microsoft 工作排程器|用戶端作業所需，例如定期評估 Configuration Manager 用戶端的健康情況。|
+|Microsoft 遠端差異壓縮 (RDC)|最佳化透過網路的資料傳輸所需。|
 |SHA-2 程式碼簽署支援|從 1906 版開始，用戶端需要支援 SHA-2 程式碼簽署演算法。 如需詳細資訊，請參閱 [SHA-2 程式碼簽署支援](#bkmk_sha2)。|
 
 #### <a name="sha-2-code-signing-support"></a><a name="bkmk_sha2"></a> SHA-2 程式碼簽署支援
@@ -64,18 +66,15 @@ ms.locfileid: "81694786"
 
 Configuration Manager 用戶端具有外部相依性。 這些相依性取決於用戶端電腦上的 OS 版本和安裝的軟體。  
 
-如果用戶端需要這些相依性才能完成安裝，就會自動進行安裝。  
+如果用戶端需要這些相依性才能完成安裝，就會自動進行安裝。
 
-|元件|說明|  
-|---|---|  
-|Windows Update 代理程式 7.0.6000.363 版|Windows 支援更新偵測和部署所需。|  
-|Microsoft Core XML Services (MSXML) 6.20.5002 版和更新版本|支援在 Windows 中處理 XML 文件所需。|  
-|Microsoft 遠端差異壓縮 (RDC)|最佳化透過網路的資料傳輸所需。|  
-|Microsoft Visual C++ 2013 可轉散發套件 12.0.21005.1 版|支援用戶端操作所需。 當您在用戶端電腦上安裝此更新時，可能需要重新啟動以完成安裝。|  
-|Microsoft Visual C++ 2005 可轉散發套件 8.0.50727.42 版|針對 1606 版和更早版本，支援 Microsoft SQL Server Compact 作業所需。|  
-|Windows Imaging API 6.0.6001.18000|允許 Configuration Manager 管理 Windows 映像 (.wim) 檔案所需。|  
-|Microsoft Policy Platform 1.2.3514.0|允許用戶端評估合規性設定所需。|  
-|Microsoft .NET Framework 4.5.2 版|支援用戶端操作所需。 如果未安裝 Microsoft .NET Framework 4.5 版或更新版本，就會自動安裝在用戶端電腦上。 如需詳細資訊，請參閱 [關於 Microsoft.NET Framework 4.5.2 版的其他詳細資料](#dotNet)。|  
+|元件|說明|
+|---|---|
+|Microsoft Core XML Services (MSXML) 6.20.5002 版或更新版本 (`msxml6.msi`)|支援在 Windows 中處理 XML 文件所需。|
+|Microsoft Visual C++ 2013 可轉散發套件 12.0.40660.0 版 (`vcredist_x*.exe`)|支援用戶端操作所需。 當您在用戶端電腦上安裝此更新時，可能需要重新啟動以完成安裝。|<!-- SCCMDocs#1526 -->
+|Windows Imaging API 6.0.6001.18000 或更新版本 (`wimgapi.msi`)|允許 Configuration Manager 管理 Windows 映像 (.wim) 檔案所需。|
+|Microsoft Policy Platform 1.2.3514.0 或更新版本 (`MicrosoftPolicyPlatformSetup.msi`)|允許用戶端評估合規性設定所需。|  
+|Microsoft .NET Framework 4.5.2 版或更新版本 (`NDP452-KB2901907-x86-x64-AllOS-ENU.exe`)|支援用戶端操作所需。 如果未安裝 Microsoft .NET Framework 4.5 版或更新版本，就會自動安裝在用戶端電腦上。 如需詳細資訊，請參閱 [關於 Microsoft.NET Framework 4.5.2 版的其他詳細資料](#dotNet)。|  
 |Microsoft SQL Server Compact 4.0 SP1 元件|儲存用戶端操作相關資訊所需。|  
 
 > [!Important]
@@ -120,7 +119,7 @@ Microsoft .NET Framework 4.5.2 版可能需要重新啟動才能完成安裝。 
 
 #### <a name="client-push-installation"></a>用戶端推入安裝  
 
-- 站台使用用戶端推入安裝帳戶來連線到電腦，以安裝用戶端。 您可以在 [用戶端推入安裝內容] 的 [帳戶]  索引標籤上，指定這些帳戶。 此帳戶必須是目的地電腦上本機系統管理員群組的成員。  
+- 站台使用用戶端推入安裝帳戶來連線到電腦，以安裝用戶端。 您可以在 [用戶端推入安裝內容] 的 [帳戶] 索引標籤上，指定這些帳戶。 此帳戶必須是目標電腦上本機 Administrators 群組的成員。  
 
     如果您未指定用戶端推入安裝帳戶，站台伺服器會使用其電腦帳戶。  
 
@@ -128,7 +127,7 @@ Microsoft .NET Framework 4.5.2 版可能需要重新啟動才能完成安裝。 
 
 - 電腦擁有 ADMIN$ 共用。  
 
-- 若要將 Configuration Manager 用戶端自動推入探索到的資源，請在 [用戶端推入安裝內容] 中，選取 [Enable client push installation to assigned resources] \(對指派的資源啟用用戶端推入安裝\)  選項。  
+- 若要將 Configuration Manager 用戶端自動推入探索到的資源，請在 [用戶端推入安裝內容] 中，選取 [Enable client push installation to assigned resources] \(對指派的資源啟用用戶端推入安裝\) 選項。  
 
 - 用戶端電腦需要與發佈點或管理點通訊，才能下載來源檔案。  
 
@@ -136,9 +135,9 @@ Microsoft .NET Framework 4.5.2 版可能需要重新啟動才能完成安裝。 
 
 若要使用用戶端推入，您需要下列安全性權限：  
 
-- 若要設定用戶端推入安裝帳戶：[站台]  物件的 [修改]  和 [讀取]  權限。  
+- 若要設定用戶端推入安裝帳戶：[站台] 物件的 [修改] 和 [讀取] 權限。  
 
-- 使用用戶端推送將用戶端安裝至集合、裝置和查詢：[集合]  物件的 [修改資源]  和 [讀取]  權限。  
+- 使用用戶端推送將用戶端安裝至集合、裝置和查詢：[集合] 物件的 [修改資源] 和 [讀取] 權限。  
 
 [基礎結構系統管理員]  預設安全性角色包括管理用戶端推入安裝的必要權限。  
 
@@ -249,23 +248,23 @@ Microsoft .NET Framework 4.5.2 版可能需要重新啟動才能完成安裝。 
 
 - 若要設定行動裝置的註冊，您必須擁有下列安全性權限：  
 
-    - 新增、修改以及刪除註冊站台系統角色：[站台]  物件的 [修改]  權限。  
+    - 新增、修改以及刪除註冊站台系統角色：[站台] 物件的 [修改] 權限。  
 
-    - 進行註冊的用戶端設定：預設用戶端設定需要 [站台]  物件的 [修改]  權限，自訂用戶端設定則需要 [用戶端代理程式]  權限。  
+    - 進行註冊的用戶端設定：預設用戶端設定需要 [站台] 物件的 [修改] 權限，自訂用戶端設定則需要 [用戶端代理程式] 權限。  
 
-    [系統高權限管理員]  預設安全性角色包括設定註冊站台系統角色的必要權限。  
+    [系統高權限管理員] 預設安全性角色包括設定註冊站台系統角色的必要權限。  
 
 - 若要管理已註冊的行動裝置，您必須擁有下列安全性權限：  
 
-    - 抹除或淘汰行動裝置：[集合]  物件的 [刪除資源]  。  
+    - 抹除或淘汰行動裝置：[集合] 物件的 [刪除資源]。  
 
-    - 取消抹除或淘汰命令：[集合]  物件的 [刪除資源]  。  
+    - 取消抹除或淘汰命令：[集合] 物件的 [刪除資源]。  
 
-    - 允許及封鎖行動裝置：[集合]  物件的 [修改資源]  。  
+    - 允許及封鎖行動裝置：[集合] 物件的 [修改資源]。  
 
-    - 從遠端鎖定或重設行動裝置密碼：[集合]  物件的 [修改資源]  。  
+    - 從遠端鎖定或重設行動裝置密碼：[集合] 物件的 [修改資源]。  
 
-    [操作系統管理員]  預設安全性角色包括管理行動裝置的必要權限。  
+    [操作系統管理員] 預設安全性角色包括管理行動裝置的必要權限。  
 
     如需如何設定安全性權限的詳細資訊，請參閱[以角色為基礎的系統管理基本概念](../../understand/fundamentals-of-role-based-administration.md)和[設定以角色為基礎的系統管理](../../servers/deploy/configure/configure-role-based-administration.md)。  
 

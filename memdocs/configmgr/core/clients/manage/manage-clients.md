@@ -10,18 +10,18 @@ ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d7697f8b5a2017aa732c52512bf31598c070fbc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7b9111e3be82424425561e0a664fee955d73ee63
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696076"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270815"
 ---
 # <a name="how-to-manage-clients-in-configuration-manager"></a>如何在 Configuration Manager 中管理用戶端
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
-已在裝置上安裝 Configuration Manager 用戶端並順利指派給站台之後，就會在 [裝置]  節點的 [資產與相容性]  工作區，以及在 [裝置集合]  節點的一或多個集合中查看裝置。 選取裝置或集合，然後執行管理作業。 不過，有其他方法可以管理用戶端，這些方法可能與主控台的其他工作區有關，或與主控台以外的工作有關。  
+已在裝置上安裝 Configuration Manager 用戶端並順利指派給站台之後，就會在 [裝置] 節點的 [資產與相容性] 工作區，以及在 [裝置集合] 節點的一或多個集合中查看裝置。 選取裝置或集合，然後執行管理作業。 不過，有其他方法可以管理用戶端，這些方法可能與主控台的其他工作區有關，或與主控台以外的工作有關。  
 
 > [!NOTE]  
 > 如果您安裝 Configuration Manager 用戶端，但尚未成功指派用戶端給站台，則該用戶端可能不會顯示在主控台中。 指派用戶端給站台之後，請更新集合成員資格，然後重新整理主控台檢視。  
@@ -30,13 +30,13 @@ ms.locfileid: "81696076"
 >
 > 利用 [Exchange Server 連接器](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)或[內部部署 MDM](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md) 管理的行動裝置不會安裝 Configuration Manager 用戶端。  
 >
-> 若要從主控台管理裝置，請使用 [裝置]  節點中的 [用戶端]  資料行來判斷是否已安裝用戶端。  
+> 若要從主控台管理裝置，請使用 [裝置] 節點中的 [用戶端] 資料行來判斷是否已安裝用戶端。  
 
-## <a name="manage-clients-from-the-devices-node"></a><a name="BKMK_ManagingClients_DevicesNode"></a> 從 [裝置]  節點管理用戶端  
+## <a name="manage-clients-from-the-devices-node"></a><a name="BKMK_ManagingClients_DevicesNode"></a> 從 [裝置] 節點管理用戶端  
 
 根據不同的裝置類型，某些選項可能無法使用。  
 
-1. 在 Configuration Manager 主控台中，移至 [資產與合規性]  工作區，然後選取 [裝置]  節點。  
+1. 在 Configuration Manager 主控台中，移至 [資產與合規性] 工作區，然後選取 [裝置] 節點。  
 
 2. 選取一或多部裝置，然後從功能區中選取其中一個用戶端管理工作。 您也可以在裝置上按一下滑鼠右鍵。  
 
@@ -48,21 +48,21 @@ ms.locfileid: "81696076"
 
 ### <a name="import-computer-information"></a>匯入電腦資訊
 
-啟動 [匯入電腦資訊精靈]  ，將新的電腦資訊匯入 Configuration Manager 資料庫。 您可以使用檔案匯入多部電腦，或指定單一電腦的資訊。
+啟動 [匯入電腦資訊精靈]，將新的電腦資訊匯入 Configuration Manager 資料庫。 您可以使用檔案匯入多部電腦，或指定單一電腦的資訊。
 
 ### <a name="add-selected-items"></a>新增選取的項目
 
 提供下列選項：
 
-- **將選取的項目新增至現有裝置集合**：開啟 [選取集合]  對話方塊。 選取您要新增此裝置的集合。 使用 [直接]  成員資格規則，將裝置包含在此集合中。  
+- **將選取的項目新增至現有裝置集合**：開啟 [選取集合]  對話方塊。 選取您要新增此裝置的集合。 使用 [直接] 成員資格規則，將裝置包含在此集合中。  
 
-- **將選取的項目新增至新裝置集合**：開啟 [建立裝置集合精靈]  ，您可以在其中建立新的集合。 使用 [直接]  成員資格規則，將選取的集合包含在此集合中。  
+- **將選取的項目新增至新裝置集合**：開啟 [建立裝置集合精靈]，您可以在其中建立新的集合。 使用 [直接] 成員資格規則，將選取的集合包含在此集合中。  
 
 如需詳細資訊，請參閱[如何建立集合](collections/create-collections.md)。
 
 ### <a name="install-client"></a>安裝用戶端
 
-開啟 [安裝用戶端精靈]  。 此精靈會使用用戶端推入安裝，在選取的裝置上安裝或重新安裝 Configuration Manager 用戶端。
+開啟 [安裝用戶端精靈]。 此精靈會使用用戶端推入安裝，在選取的裝置上安裝或重新安裝 Configuration Manager 用戶端。
 
 > [!TIP]  
 > 安裝 Configuration Manager 用戶端的方式有很多種。 雖然 [用戶端推入精靈] 提供從主控台方便執行的用戶端安裝方法，但此方法有許多相依性，不適用於所有環境。 如需這些相依性的詳細資訊，請參閱[將用戶端部署到 Windows 電腦的必要條件](../deploy/prerequisites-for-deploying-clients-to-windows-computers.md#client-push-installation)。 如需其他用戶端安裝方法的詳細資訊，請參閱[用戶端安裝方法](../deploy/plan/client-installation-methods.md)。
@@ -71,7 +71,7 @@ ms.locfileid: "81696076"
 
 ### <a name="run-script"></a>執行指令碼
 
-開啟 [執行指令碼精靈]  ，在選取的裝置上執行 PowerShell 指令碼。
+開啟 [執行指令碼精靈]，在選取的裝置上執行 PowerShell 指令碼。
 
 如需詳細資訊，請參閱[建立及執行 PowerShell 指令碼](../../../apps/deploy-use/create-deploy-scripts.md)。
 
@@ -93,17 +93,17 @@ ms.locfileid: "81696076"
 
 ### <a name="start"></a>開始
 
-- 執行 [資源總管]  以查看來自 Windows 用戶端的軟硬體清查資訊。 如需詳細資訊，請參閱下列文章：
+- 執行 [資源總管] 以查看來自 Windows 用戶端的軟硬體清查資訊。 如需詳細資訊，請參閱下列文章：
 
   - [如何使用資源總管檢視硬體清查](inventory/use-resource-explorer-to-view-hardware-inventory.md)
 
   - [如何使用資源總管檢視軟體清查](inventory/use-resource-explorer-to-view-software-inventory.md)
 
-- 使用 [遠端控制]  、[遠端協助]  或 [遠端桌面用戶端]  來遠端管理裝置。 如需詳細資訊，請參閱[如何從遠端管理 Windows 用戶端電腦](remote-control/remotely-administer-a-windows-client-computer.md)。
+- 使用 [遠端控制]、[遠端協助] 或 [遠端桌面用戶端] 來遠端管理裝置。 如需詳細資訊，請參閱[如何從遠端管理 Windows 用戶端電腦](remote-control/remotely-administer-a-windows-client-computer.md)。
 
 ### <a name="approve"></a>核准
 
-當用戶端使用 HTTP 和自我簽署憑證與站台系統通訊時，您必須核准這些用戶端，以便將它們識別為受信任的電腦。 根據預設，站台設定會自動核准相同 Active Directory 樹系和受信任樹系的用戶端。 此預設行為表示您不需要手動核准每個用戶端。 請手動核准您信任的工作群組電腦，以及您信任但未核准的任何其他電腦。
+當用戶端使用 HTTP 和自我簽署憑證與站台系統通訊時，您必須核准這些用戶端，以便將它們識別為受信任的電腦。 根據預設，站台設定會自動核准來自相同 Active Directory 樹系、信任的樹系與已連線 Azure Active Directory (Azure AD) 租用戶的用戶端<!-- MEMDocs#318 -->。 此預設行為表示您不需要手動核准每個用戶端。 請手動核准您信任的工作群組電腦，以及您信任但未核准的任何其他電腦。
 
 > [!IMPORTANT]  
 > 雖然某些管理功能可用於未核准的用戶端，但 Configuration Manager 不支援此狀況。  
@@ -156,28 +156,28 @@ ms.locfileid: "81696076"
 
 - 如果行動裝置是由 Exchange Server 連接器所管理，則會在與 Exchange 進行同步處理時收到此命令。  
 
-若要監視裝置收到抹除命令的時間，請使用 [抹除狀態]  資料行。 在裝置將抹除認可傳送給 Configuration Manager 之後，您才可以取消抹除命令。  
+若要監視裝置收到抹除命令的時間，請使用 [抹除狀態] 資料行。 在裝置將抹除認可傳送給 Configuration Manager 之後，您才可以取消抹除命令。  
 
 ### <a name="retire-a-mobile-device"></a>淘汰行動裝置
 
-只有由內部部署 MDM註冊的行動裝置才支援 [淘汰]  選項。  
+只有由內部部署 MDM註冊的行動裝置才支援 [淘汰] 選項。  
 
 如需詳細資訊，請參閱[透過遠端抹除、遠端鎖定或密碼重設來協助保護您的資料](../../../mdm/deploy-use/wipe-lock-reset-devices.md)。
 
 ### <a name="change-ownership"></a>變更擁有權
 
-如果裝置未加入網域且未安裝 Configuration Manager 用戶端，請使用此選項將擁有權變更為 [公司]  或 [個人]  。  
+如果裝置未加入網域且未安裝 Configuration Manager 用戶端，請使用此選項將擁有權變更為 [公司] 或 [個人]。  
 
 您可以在應用程式需求中使用這個值來控制部署，以及控制要從使用者裝置收集多少清查。  
 
-您可能需要以滑鼠右鍵按一下任意欄標題，然後選擇 [裝置擁有者]  欄以將該欄新增至檢視。
+您可能需要以滑鼠右鍵按一下任意欄標題，然後選擇 [裝置擁有者] 欄以將該欄新增至檢視。
 
 ### <a name="delete"></a>刪除
 
 > [!WARNING]  
 > 如果您想要解除安裝 Configuration Manager 用戶端，或將該用戶端從集合中移除，請勿刪除該用戶端。  
 
-[刪除]  動作會手動移除 Configuration Manager 資料庫中的用戶端記錄。 僅使用此動作來針對問題進行疑難排解。 如果您刪除此物件，但仍然安裝用戶端且其與站台進行通訊，則活動訊號探索會重新建立用戶端記錄。 雖然用戶端歷程記錄和任何先前的關聯都會遺失，但是用戶端記錄會重新出現在 Configuration Manager 主控台中。  
+[刪除] 動作會手動移除 Configuration Manager 資料庫中的用戶端記錄。 僅使用此動作來針對問題進行疑難排解。 如果您刪除此物件，但仍然安裝用戶端且其與站台進行通訊，則活動訊號探索會重新建立用戶端記錄。 雖然用戶端歷程記錄和任何先前的關聯都會遺失，但是用戶端記錄會重新出現在 Configuration Manager 主控台中。  
 > [!NOTE]  
 > 當您刪除 Configuration Manager 所註冊的行動裝置用戶端時，此動作也會撤銷已發出的 PKI 憑證。 管理點接著會拒絕此憑證，即使 IIS 並未檢查憑證撤銷清單 (CRL) 也一樣。
 >
@@ -191,7 +191,7 @@ ms.locfileid: "81696076"
 
 ### <a name="refresh"></a>重新整理
 
-以資料庫中的最新資料重新整理主控台檢視。 例如，如果裝置出現在探索的清單中，但未顯示為已安裝。 在您安裝用戶端並確定它已指派給站台之後，請選取 [重新整理]  。
+以資料庫中的最新資料重新整理主控台檢視。 例如，如果裝置出現在探索的清單中，但未顯示為已安裝。 在您安裝用戶端並確定它已指派給站台之後，請選取 [重新整理]。
 
 ### <a name="properties"></a>屬性
 
@@ -200,9 +200,9 @@ ms.locfileid: "81696076"
 您也可以設定讓工作順序用來將作業系統部署到裝置的變數。 如需詳細資訊，請參閱[針對裝置與集合建立工作順序變數](../../../osd/understand/using-task-sequence-variables.md#bkmk_set-coll-var)。
 
 
-## <a name="manage-clients-from-the-device-collections-node"></a><a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> 從 [裝置集合]  節點管理用戶端
+## <a name="manage-clients-from-the-device-collections-node"></a><a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> 從 [裝置集合] 節點管理用戶端
 
-可供 [裝置]  節點中裝置使用的許多工作，也可在集合上使用。 主控台會自動將作業套用至集合中的所有合格裝置。 整個集合上的此動作會產生額外的網路封包，並增加站台伺服器上的 CPU 使用量。  
+可供 [裝置] 節點中裝置使用的許多工作，也可在集合上使用。 主控台會自動將作業套用至集合中的所有合格裝置。 整個集合上的此動作會產生額外的網路封包，並增加站台伺服器上的 CPU 使用量。  
 
 請先考慮下列問題，再執行集合層級工作。 一旦啟動，就無法從主控台停止工作。
 
@@ -220,7 +220,7 @@ ms.locfileid: "81696076"
 > [!Tip]
 > 啟用自動用戶端升級，能以更少的投入量，讓用戶端保持最新狀態。 如需詳細資訊，請參閱[關於自動用戶端升級](upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate)。
 
-若要識別擱置重新啟動的裝置，請移至 Configuration Manager 主控台中的 [資產與相容性]  工作區，然後選取 [裝置]  節點。 然後在名為 [擱置重新啟動]  之新資料行的詳細資料窗格中，檢視每個裝置的狀態。 每個裝置都會有下列其中一或多個值：
+若要識別擱置重新啟動的裝置，請移至 Configuration Manager 主控台中的 [資產與相容性] 工作區，然後選取 [裝置] 節點。 然後在名為 [擱置重新啟動] 之新資料行的詳細資料窗格中，檢視每個裝置的狀態。 每個裝置都會有下列其中一或多個值：
 
 - **否**：沒有擱置重新啟動
 - **Configuration Manager**：這個值來自用戶端重新開機協調器元件 (RebootCoordinator.log)
@@ -230,10 +230,10 @@ ms.locfileid: "81696076"
 
 ### <a name="create-the-client-notification-to-restart-a-device"></a>建立重新啟動裝置的用戶端通知
 
-1. 在主控台的 [裝置集合]  節點中，選取您想要在集合內重新啟動的裝置。
-2. 在功能區中，選取 [用戶端通知]  ，然後選取 [重新啟動]  。 即會開啟有關重新啟動的資訊視窗。 選取 [確定]  以確認重新啟動要求。
+1. 在主控台的 [裝置集合] 節點中，選取您想要在集合內重新啟動的裝置。
+2. 在功能區中，選取 [用戶端通知]，然後選取 [重新啟動]。 即會開啟有關重新啟動的資訊視窗。 選取 [確定] 以確認重新啟動要求。
 
-當通知抵達用戶端時，會開啟 [軟體中心]  通知視窗，以通知使用者有關重新啟動一事。 根據預設，將會在 90 分鐘後重新啟動。 您可以設定[用戶端設定](../deploy/configure-client-settings.md)，以修改重新啟動時間。 重新啟動行為的設定位於預設設定的[電腦重新啟動](../deploy/about-client-settings.md#computer-restart)索引標籤上。
+當通知抵達用戶端時，會開啟 [軟體中心] 通知視窗，以通知使用者有關重新啟動一事。 根據預設，將會在 90 分鐘後重新啟動。 您可以設定[用戶端設定](../deploy/configure-client-settings.md)，以修改重新啟動時間。 重新啟動行為的設定位於預設設定的[電腦重新啟動](../deploy/about-client-settings.md#computer-restart)索引標籤上。
 
 
 ## <a name="configure-the-client-cache"></a><a name="BKMK_ClientCache"></a> 設定用戶端快取
@@ -256,7 +256,7 @@ Configuration Manager 用戶端會在收到部署後隨即下載所需軟體的�
 - 對於必要程式：用戶端不會自動重試下載內容。 將套件和程式重新部署至用戶端。  
 - 對於必要應用程式：用戶端會在下載其用戶端原則時自動重試下載內容。  
 
-如果用戶端嘗試下載的套件小於快取大小，但快取已滿，則所有「必要」  部署會繼續重試，直到：
+如果用戶端嘗試下載的套件小於快取大小，但快取已滿，則所有「必要」部署會繼續重試，直到：
 
 - 有快取空間可用
 - 下載逾時
@@ -281,15 +281,15 @@ Configuration Manager 用戶端會在收到部署後隨即下載所需軟體的�
   - SMSCACHESIZE  
 
     > [!NOTE]
-    > 使用 Configuration Manager 主控台中 [用戶端設定]  提供的快取大小設定，而不是 SMSCACHESIZE。 如需詳細資訊，請參閱[用戶端快取設定](../deploy/about-client-settings.md#client-cache-settings)。
+    > 使用 Configuration Manager 主控台中 [用戶端設定] 提供的快取大小設定，而不是 SMSCACHESIZE。 如需詳細資訊，請參閱[用戶端快取設定](../deploy/about-client-settings.md#client-cache-settings)。
 
 如需如何將這些命令列屬性用於 CCMSetup.exe 的詳細資訊，請參閱[關於用戶端安裝內容](../deploy/about-client-installation-properties.md)。
 
 ### <a name="configure-the-cache-during-client-push-installation"></a>在手動用戶端推入安裝期間設定快取  
 
-1. 在 Configuration Manager 主控台中，移至 [系統管理]  工作區，展開 [站台設定]  ，然後選取 [站台]  節點。  
+1. 在 Configuration Manager 主控台中，移至 [系統管理] 工作區，展開 [站台設定]，然後選取 [站台] 節點。  
 
-2. 選取適當的站台。 在功能區 [常用]  索引標籤的 [設定]  群組中，選取 [用戶端安裝設定]  ，然後選擇 [用戶端推入安裝]  。 切換至 [安裝內容]  索引標籤。  
+2. 選取適當的站台。 在功能區 [常用] 索引標籤的 [設定] 群組中，選取 [用戶端安裝設定]，然後選擇 [用戶端推入安裝]。 切換至 [安裝內容] 索引標籤。  
 
 3. 指定下列內容並以空格分隔：  
 
@@ -302,7 +302,7 @@ Configuration Manager 用戶端會在收到部署後隨即下載所需軟體的�
    - SMSCACHESIZE  
 
      > [!NOTE]
-     > 使用 Configuration Manager 主控台中 [用戶端設定]  提供的快取大小設定，而不是 SMSCACHESIZE。 如需詳細資訊，請參閱[用戶端快取設定](../deploy/about-client-settings.md#client-cache-settings)。
+     > 使用 Configuration Manager 主控台中 [用戶端設定] 提供的快取大小設定，而不是 SMSCACHESIZE。 如需詳細資訊，請參閱[用戶端快取設定](../deploy/about-client-settings.md#client-cache-settings)。
 
      如需如何將這些命令列屬性用於 CCMSetup.exe 的詳細資訊，請參閱[關於用戶端安裝內容](../deploy/about-client-installation-properties.md)。  
 
@@ -310,13 +310,13 @@ Configuration Manager 用戶端會在收到部署後隨即下載所需軟體的�
 
 1. 在用戶端電腦上，開啟 **Configuration Manager** 控制台。  
 
-2. 切換至 [快取]  索引標籤。設定空間和位置內容。 預設位置為 `%windir%\ccmcache`。  
+2. 切換至 [快取] 索引標籤。設定空間和位置內容。 預設位置為 `%windir%\ccmcache`。  
 
-3. 若要刪除快取資料夾中的檔案，請選擇 [刪除檔案]  。  
+3. 若要刪除快取資料夾中的檔案，請選擇 [刪除檔案]。  
 
 ### <a name="configure-client-cache-size-in-client-settings"></a>在用戶端設定中設定用戶端快取大小
 
-調整用戶端快取的大小，而不需要重新安裝用戶端。 使用 Configuration Manager 主控台中 [用戶端設定]  提供的快取大小設定。 如需詳細資訊，請參閱[用戶端快取設定](../deploy/about-client-settings.md#client-cache-settings)。
+調整用戶端快取的大小，而不需要重新安裝用戶端。 使用 Configuration Manager 主控台中 [用戶端設定] 提供的快取大小設定。 如需詳細資訊，請參閱[用戶端快取設定](../deploy/about-client-settings.md#client-cache-settings)。
 
 
 ## <a name="uninstall-the-client"></a><a name="BKMK_UninstalClient"></a> 解除安裝用戶端
@@ -344,20 +344,20 @@ Configuration Manager 會使用電腦帳戶的 Windows 驗證或來自受信任�
 
 ### <a name="change-the-hierarchy-setting-for-managing-conflicting-records"></a>變更管理衝突記錄的階層設定  
 
-1. 在 Configuration Manager 主控台中，移至 [系統管理]  工作區，展開 [站台設定]  ，然後選取 [站台]  節點。
+1. 在 Configuration Manager 主控台中，移至 [系統管理] 工作區，展開 [站台設定]，然後選取 [站台] 節點。
 
-1. 在功能區中選取 [階層設定]  。
+1. 在功能區中選取 [階層設定]。
 
-1. 切換至 [用戶端核准和衝突的記錄]  索引標籤，然後選取下列其中一個選項：
+1. 切換至 [用戶端核准和衝突的記錄] 索引標籤，然後選取下列其中一個選項：
 
     - **自動解決衝突的記錄**
     - **手動解決衝突的記錄**
 
 ### <a name="manually-resolve-conflicting-records"></a>手動解決衝突的記錄  
 
-1. 在 Configuration Manager 主控台中，移至 [監視]  工作區，展開 [系統狀態]  ，然後選取 [衝突的記錄]  節點。  
+1. 在 Configuration Manager 主控台中，移至 [監視] 工作區，展開 [系統狀態]，然後選取 [衝突的記錄] 節點。  
 
-1. 選取一或多個衝突的記錄，然後選擇 [衝突的記錄]  。  
+1. 選取一或多個衝突的記錄，然後選擇 [衝突的記錄]。  
 
 1. 選取下列其中一個選項：  
 
@@ -378,11 +378,11 @@ Configuration Manager 會使用電腦帳戶的 Windows 驗證或來自受信任�
 
 使用下列處理序來新增 Configuration Manager 要略過的硬體識別碼：
 
-1. 在 Configuration Manager 主控台中，移至 [系統管理]  工作區，展開 [站台設定]  ，然後選取 [站台]  節點。
+1. 在 Configuration Manager 主控台中，移至 [系統管理] 工作區，展開 [站台設定]，然後選取 [站台] 節點。
 
-2. 在功能區 [常用]  索引標籤的 [站台]  群組中，選取 [階層設定]  。
+2. 在功能區 [常用] 索引標籤的 [站台] 群組中，選取 [階層設定]。
 
-3. 切換至 [用戶端核准和衝突的記錄]  索引標籤。若要新增硬體識別碼，請在 [重複硬體識別碼]  區段中選擇 [新增]  。
+3. 切換至 [用戶端核准和衝突的記錄] 索引標籤。若要新增硬體識別碼，請在 [重複硬體識別碼] 區段中選擇 [新增]。
 
 > [!TIP]
 > 從 1910 版開始，使用下列 PowerShell Cmdlet 來自動化重複硬體識別碼的管理：<!-- 4852819 -->
@@ -404,9 +404,9 @@ Configuration Manager 用戶端會依照您設定的排程 (用戶端設定) 下
 
 ### <a name="start-client-policy-retrieval-with-client-notification"></a><a name="bkmk_policy-notify"></a> 使用用戶端通知來啟動用戶端原則抓取  
 
-1. 在 Configuration Manager 主控台中，移至 [資產與合規性]  工作區，然後選取 [裝置]  。  
+1. 在 Configuration Manager 主控台中，移至 [資產與合規性] 工作區，然後選取 [裝置]。  
 
-1. 選取要下載原則的裝置。 在功能區 [常用]  索引標籤的 [裝置]  群組中，選取 [用戶端通知]  ，然後選擇 [下載電腦原則]  。  
+1. 選取要下載原則的裝置。 在功能區 [常用] 索引標籤的 [裝置] 群組中，選取 [用戶端通知]，然後選擇 [下載電腦原則]。  
 
     > [!NOTE]  
     > 您也可以使用用戶端通知，以針對集合中的所有裝置啟動原則抓取。  
@@ -415,11 +415,11 @@ Configuration Manager 用戶端會依照您設定的排程 (用戶端設定) 下
 
 1. 在電腦上開啟 **Configuration Manager** 控制台。  
 
-2. 切換至 [動作]  索引標籤。選取 [電腦原則抓取和評估週期]  來啟動電腦原則，然後選取 [立即執行]  。  
+2. 切換至 [動作] 索引標籤。選取 [電腦原則抓取和評估週期] 來啟動電腦原則，然後選取 [立即執行]。  
 
-3. 選取 [確定]  確認提示。  
+3. 選取 [確定] 確認提示。  
 
-4. 針對任何其他動作重複上述步驟。 例如，針對使用者用戶端設定的 [電腦原則抓取和評估週期]  。  
+4. 針對任何其他動作重複上述步驟。 例如，針對使用者用戶端設定的 [電腦原則抓取和評估週期]。  
 
 ### <a name="start-client-policy-retrieval-with-support-center"></a><a name="bkmk_policy-support"></a> 使用支援中心來啟動用戶端原則抓取
 

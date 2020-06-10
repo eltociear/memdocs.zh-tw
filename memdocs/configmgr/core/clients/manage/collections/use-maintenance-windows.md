@@ -2,7 +2,7 @@
 title: 使用維護時段
 titleSuffix: Configuration Manager
 description: 使用集合和維護時段，在 Configuration Manager 中有效率地管理用戶端。
-ms.date: 07/30/2018
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,67 +10,93 @@ ms.assetid: 4564ebcb-41a8-4eb0-afdb-2e1f0795cfa2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6c2128c9e26137c268577e68e5ee12e3a71f8513
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0b81599c6c5e4dda418b69c6e3c6d3b8cd144253
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695456"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428538"
 ---
 # <a name="how-to-use-maintenance-windows-in-configuration-manager"></a>如何使用 Configuration Manager 中的維護時段
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
-維護時段可讓您定義何時可在裝置集合上執行 Configuration Manager 操作。 您可以藉助維護時段，確保用戶端設定變更發生的期間不會影響生產力。 從 Configuration Manager 1806 版開始，您的使用者可以從 [軟體中心]  的 [安裝狀態]  索引標籤查看下一個維護時段的時間。 <!--1358131-->
+使用維護時段來定義 Configuration Manager 何時可以在裝置上執行會造成影響的工作。 維護時段有助於確保用戶端設定變更在不影響生產力的時間內進行。 透過 [軟體中心]，使用者可以在 [安裝狀態] 索引標籤上看到裝置的下一個維護時段。 <!--1358131-->
 
- 下列操作支援維護時段：  
+下列工作支援維護時段：
 
-- 軟體部署  
+- 應用程式與套件部署
 
-- 軟體更新部署  
+- 軟體更新部署
 
-- 相容性設定部署和評估  
+- 相容性設定部署和評估
 
-- 作業系統部署  
+- OS 與自訂工作順序部署
 
-- 工作順序部署  
+使用有效日期、開始時間與結束時間，以及週期模式來設定維護時段。 視窗的持續時間上限必須小於 24 小時。 主控台不允許超過 24 小時的單一維護時段。 例如，如果您想要允許星期六與星期日全天進行維護，則針對每一天建立兩個 24 小時的維護時段。<!-- MEMDocs#310 -->
 
-  請設定維護時段的開始日期、開始和完成時間，以及定期模式。 視窗的持續時間上限必須小於 24 小時。 根據預設，部署造成電腦重新啟動的行為不允許出現在維護時段之外，但是您可以覆寫預設值。 維護時段只會影響部署程式執行的時間，而設定在本機上下載及執行的應用程式可以在時段之外下載內容。  
+根據預設，部署造成電腦重新啟動的行為不允許出現在維護時段之外，但是您可以覆寫預設值。 維護時段只會影響部署執行的時間。 您設定要在本機下載並執行的部署，可以在時段外下載內容。
 
-  如果用戶端電腦是維護時段的裝置集合成員，則部署程式只會在允許的執行時間上限未超過針對時段設定的持續時間時執行。 如果程式執行失敗，將會產生警示，且部署將會在下一次排程的維護視窗有可用時間時重新執行。  
+如果用戶端電腦是維護時段的裝置集合成員，只有在其允許的執行時間上限未超過時段持續時間的情況下，部署才會執行。 如果部署無法執行，用戶端會產生警示。 然後，其會在下一個排定的維護時段內重新執行部署。
 
-## <a name="using-multiple-maintenance-windows"></a>使用多個維護視窗  
- 如果用戶端電腦是具有維護時段之多個裝置集合的成員，則適用下列規則：  
+## <a name="multiple-maintenance-windows"></a>多個維護時段
 
-- 如果維護時段未重疊，則會視為兩個獨立的維護時段。  
+如果用戶端電腦是具有維護時段之多個裝置集合的成員，則適用下列規則：  
 
-- 如果維護時段重疊，則會視為包含兩個維護時段所涵蓋時段的單一維護時段。 例如，如果兩個視窗的持續時間各為一小時，其中有 30 分鐘重疊，則維護時段的有效持續時間會是 90 分鐘。  
+- 如果維護時段未重疊，用戶端會將其視為兩個獨立的維護時段。
 
-  當使用者從軟體中心起始應用程式安裝時，應用程式將會立即安裝，而不理會任何維護時段。  
+- 如果維護時段重疊，則用戶端會在兩個時段的整個時間內將其視為一個時段。 例如，您在集合上建立兩個維護時段。 第一個是從 6:00 到 7:00，第二個則是從 6:30 到 7:30 生效。 由於其重疊 30 分鐘，因此合併維護時段的有效持續時間為 90 分鐘，從 6:00 到 7:30。
 
-  如果在軟體中心使用者設定的非營業時間裡，有 **必要** 目的的應用程式部署面臨安裝期限，就會安裝應用程式。 
+當使用者從 [軟體中心] 安裝應用程式時，用戶端會立即加以啟動。 其會優先處理使用者對管理員的意圖。
 
-### <a name="how-to-configure-maintenance-windows"></a>如何設定維護視窗  
+在軟體中心中，如果在使用者設定的非上班時間裡有 [必要] 目的的應用程式部署達到安裝期限，用戶端就會安裝應用程式。 其會優先處理使用者的管理員意圖。
 
-1.  在 Configuration Manager 主控台中，選擇 [資產與合規性]  >  [裝置集合]  。  
+根據預設，有多個維護時段，用戶端只會在 [軟體更新] 類型時段期間安裝軟體更新。 除非是唯一的類型，否則會忽略 [所有部署] 的維護時段。 您可以使用**軟體更新**群組中的下列用戶端設定來設定此行為：**當 [軟體更新] 維護視窗可以使用時，允許安裝 [所有部署] 維護視窗中的軟體更新**。 如需詳細資訊，請參閱[關於用戶端設定](../../deploy/about-client-settings.md#bkmk_SUMMaint)。<!-- SCCMDocs#1317 -->
 
-3.  在 [裝置集合]  清單中，選取一個集合。 您無法為 [所有系統]  集合建立維護時段。  
+> [!NOTE]
+> 此設定也適用於您設定以套用至**工作順序**的維護時段。<!-- SCCMDocs-pr #4596 -->
+>
+> 如果用戶端只有 [所有部署] 時段可用，其仍會在該時段安裝軟體更新或工作順序。
 
-4.  在 [首頁]  索引標籤的 [內容]  群組中，選擇 [內容]  。  
+## <a name="configure-maintenance-windows"></a>設定維護時段
 
-5.  在 [&lt;集合名稱\> 內容]  對話方塊的 [維護時段]  索引標籤中，選擇新增  圖示。  
+1. 在 Configuration Manager 主控台中，移至 [資產與合規性] 工作區。
 
-6.  完成 [&lt;新增\> 排程]  對話方塊。  
+1. 選取 [裝置集合] 節點，然後選取一個集合。
 
-7.  從 [將此排程套用至]  下拉式清單中進行選取。  
+    > [!NOTE]
+    > 您無法為 [所有系統] 集合建立維護時段。
 
-8.  選擇 [確定]  ，然後關閉 [&lt;集合名稱\> 內容]  對話方塊。  
- 
-## <a name="using-powershell"></a><a name="bkmk_powershell"></a> 使用 PowerShell
+1. 在功能區 [常用] 索引標籤的 [內容] 群組中，選擇 [內容]。
 
-PowerShell 可用來設定維護期間。  如需詳細資訊，請參閱：
+1. 切換至 [維護時段] 索引標籤，然後選取 [新增] 圖示。
 
-* [Set-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmmaintenancewindow) \(英文\)
-* [Get-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmmaintenancewindow) \(英文\)
-* [New-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmmaintenancewindow) \(英文\)
-* [Remove-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmmaintenancewindow) \(英文\)
+    1. 指定 [名稱] 以唯一識別此集合的維護時段。
+
+    1. 設定 [時間] 設定：
+
+        - **生效日期**：維護時段的開始日期。 預設值是目前的日期。
+
+        - **開始**與**結束**：維護時段的開始與結束時間。 其會計算時段的**持續時間**。 最短持續時間為五分鐘，最大值為 24 小時。 預設持續時間是三小時，從 01:00 到 04:00。
+
+        - **國際標準時間 (UTC)** ：啟用此選項可讓用戶端以 UTC 時區來解譯開始與結束時間。 針對相同集合中的區域或全域散發裝置，此選項會將維護時段設定為在集合中的所有裝置上同時執行。 請停用此選項，讓用戶端使用裝置的本地時區。 預設會停用這個選項。
+
+    1. 設定週期模式。 預設值是一週的目前日期每週一次。
+
+    1. **將此排程套用至**：根據預設，此時段適用於**所有部署**。 您可以選取 [軟體更新] 或 [工作順序]，進一步控制在此時段中執行的部署。
+
+        > [!TIP]
+        > 如果您在相同的集合上設定多個不同類型的維護時段，請確定您了解用戶端行為。 如需詳細資訊，請參閱[多個維護時段](#multiple-maintenance-windows)。
+
+1. 選取 [確定] 以儲存並關閉時段。
+
+集合屬性的 [維護時段] 索引標籤會顯示所有已設定的時段。
+
+## <a name="use-powershell"></a><a name="bkmk_powershell"></a> 使用 PowerShell
+
+PowerShell 可用來設定維護期間。 如需詳細資訊，請參閱下列文章：
+
+- [Get-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmmaintenancewindow?view=sccm-ps) \(英文\)
+- [New-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmmaintenancewindow?view=sccm-ps) \(英文\)
+- [Remove-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmmaintenancewindow?view=sccm-ps) \(英文\)
+- [Set-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmmaintenancewindow?view=sccm-ps) \(英文\)

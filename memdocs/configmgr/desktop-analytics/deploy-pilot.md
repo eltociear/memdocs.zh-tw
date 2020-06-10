@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0e90855949f5c8f249db6b2f4305c71b8ee4e768
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 3aa722415248ad9275c6ad065f0120bfe78d3ce4
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824013"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311215"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>如何使用電腦分析部署至試驗
 
@@ -104,7 +104,7 @@ ms.locfileid: "83824013"
 Configuration Manager 會使用電腦分析的資料來建立試驗和生產環境部署集合。 這些集合位於 [資產與合規性] 工作區，[裝置集合] 節點，[部署計劃] 資料夾。
 
 > [!IMPORTANT]
-> 這些集合是由電腦分析部署計劃的 Configuration Manager 管理的。 不支援手動變更。
+> 這些集合是由電腦分析部署計劃的 Configuration Manager 管理的。 不支援手動變更。 如果您刪除其中一個集合，電腦分析將無法正常執行，而且您必須再次[連線 Configuration Manager](connect-configmgr.md)。<!--7208090-->
 
 請使用下列程式建立電腦分析整合的階段式部署，以在每個部署階段後確定裝置狀況良好：
 

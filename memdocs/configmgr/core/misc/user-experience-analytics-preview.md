@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: c7a99931db27b6a55c9e0722cc12c1d7a9cc9e80
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 7ddcb1ade6f39d1fc2cb824470c33d39496bcbf1
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764232"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428675"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a> 端點分析預覽
 
@@ -347,8 +347,11 @@ Microsoft Intune 為使用者提供數項生產力優勢，包括即使公司資
 1. 已成功設定資料收集的裝置必須在啟用資料收集之後重新開機，最多必須等到 24 小時之後，裝置才會顯示在 [裝置效能] 索引標籤中。
 1. 如果裝置已成功設定資料收集，隨後已重新開機，但 24 小時之後仍未看到該裝置，則可能是裝置無法連接到收集端點。 如果公司使用 Proxy 伺服器，但尚未在 Proxy 中啟用端點，則可能會發生此問題。 如需詳細資訊，請參閱[針對端點進行疑難排解](#bkmk_uea_endpoints)。
 
+### <a name="data-collection-for-intune-managed-devices"></a>Intune 受控裝置的資料收集
 
-### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a> 端點
+端點分析會利用 Windows 10 與 Windows Server 連線的使用者體驗與遙測元件 (DiagTrack)，從 Intune 受控裝置收集資料。 請確認裝置上的**已連線使用者體驗與遙測**服務正在執行。
+
+#### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a> 端點
 
 若要將裝置註冊到端點分析，則其必須將必要的功能資料傳送給 Microsoft。 若您的環境使用 Proxy 伺服器，請使用此資訊協助設定 Proxy。
 
@@ -364,15 +367,15 @@ Microsoft Intune 為使用者提供數項生產力優勢，包括即使公司資
 | `https://*.manage.microsoft.com` | 用來將裝置集合和裝置與端點分析同步 (僅限於 Configuration Manager 伺服器角色)。 如需詳細資訊，請參閱[為站台系統伺服器設定 Proxy](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server)。 |
 
 
-### <a name="proxy-server-authentication"></a>Proxy 伺服器驗證
+#### <a name="proxy-server-authentication"></a>Proxy 伺服器驗證
 
 如果組織使用 Proxy 伺服器驗證來存取網際網路，請確定其不會因為驗證而封鎖資料。 如果您的 Proxy 不允許裝置傳送這項資料，裝置就不會顯示在電腦分析中。
 
-#### <a name="bypass-recommended"></a>略過 (建議)
+##### <a name="bypass-recommended"></a>略過 (建議)
 
 設定您的 Proxy 伺服器，使其不會向目標為資料共用端點的流量要求 Proxy 驗證。 此選項是最全面的解決方案。 適用於所有 Windows 10 版本。  
 
-#### <a name="user-proxy-authentication"></a>使用者 Proxy 驗證
+##### <a name="user-proxy-authentication"></a>使用者 Proxy 驗證
 
 設定裝置，以使用登入使用者的內容進行 Proxy 驗證。 此方法需要下列設定：
 
@@ -385,7 +388,7 @@ Microsoft Intune 為使用者提供數項生產力優勢，包括即使公司資
 > [!IMPORTANT]
 > 使用者 Proxy 驗證方法與使用 Microsoft Defender 進階威脅防護不相容。 此行為是因為此驗證依賴將 **DisableEnterpriseAuthProxy** 登錄機碼設為 `0`，但 Microsoft Defender ATP 需要將其設為 `1`。 如需詳細資訊，請參閱[在 Microsoft Defender ATP 中設定電腦 Proxy 及網際網路連線能力設定](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)。
 
-#### <a name="device-proxy-authentication"></a>裝置 Proxy 驗證
+##### <a name="device-proxy-authentication"></a>裝置 Proxy 驗證
 
 此方法支援下列案例：
 
