@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 7ddcb1ade6f39d1fc2cb824470c33d39496bcbf1
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: da8c52dabf27ddf0992d9f405400b3ac984f2ecc
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428675"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455118"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a> 端點分析預覽
 
@@ -56,7 +56,7 @@ ms.locfileid: "84428675"
 
 在此預覽版中，您可以透過 Configuration Manager 或 Microsoft Intune 來註冊裝置。 
 
-若要透過 Intune 註冊裝置，此預覽版需要：
+#### <a name="to-enroll-devices-via-intune-this-preview-requires"></a><a name="bkmk_uea__intune_prereq"></a> 若要透過 Intune 註冊裝置，此預覽版需要：
 - 執行 Windows 10 的 Intune 已註冊裝置
 - 啟動效能見解僅適用於執行 1903 版或更新版 Windows 10 企業版 (目前不支援家用版與專業版) 的裝置，且裝置必須加入 Azure AD 或混合式 Azure AD。 目前不支援加入工作場所網路的機器。
 - 從裝置到 Microsoft 公用雲端的網路連線。 如需詳細資訊，請參閱[端點](#bkmk_uea_endpoints)。
@@ -64,11 +64,12 @@ ms.locfileid: "84428675"
    - 一旦按一下 [開始]，即表示您同意並確認您的客戶資料可能會儲存在您於佈建 Microsoft Intune 租用戶時所選取之位置以外的位置。
    - 在按一下 [開始收集資料] 後，其他唯讀角色就可以檢視資料。
 
-若要透過 Configuration Manager 註冊裝置，此預覽版需要：
+#### <a name="to-enroll-devices-via-configuration-manager-this-preview-requires"></a><a name="bkmk_uea__cm_prereq"></a> 若要透過 Configuration Manager 註冊裝置，此預覽版需要：
 - Configuration Manager 2002 版或更新版本
 - 升級至 2002 版或更新版本的用戶端
 - 已在北美洲或歐洲的 Azure 租用戶位置啟用了 [Microsoft 端點管理員租用戶附加](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) \(部分機器翻譯\) (我們很快就會擴展到其他區域)
 
+#### <a name="proactive-remediation-scripting-requires"></a><a name="bkmk_uea__prs_prereq"></a> 主動式補救指令碼處理需要：
 無論是透過 Intune 或 Configuration Manager 註冊裝置，[**主動式補救指令碼**](#bkmk_uea_prs)都具有下列需求：
 - 裝置必須加入 Azure AD 或混合式 Azure AD，並符合下列其中一個條件：
 - 由 Intune 管理的 Windows 10 企業版、專業版或教育版裝置
