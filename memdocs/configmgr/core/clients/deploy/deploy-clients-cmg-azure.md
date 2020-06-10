@@ -2,7 +2,7 @@
 title: 使用 Azure AD 安裝用戶端
 titleSuffix: Configuration Manager
 description: 在使用 Azure Active Directory 進行驗證的 Windows 10 裝置上安裝及指派設定管理員用戶端
-ms.date: 03/20/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9a55440e7ba61ec62d9f0c91c0a23b98bab5884c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b447e5c8d34a4b8758fa0fd6109113b0675a635
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694106"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347010"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>安裝並指派 Configuration Manager Windows 10 用戶端，並使用 Azure AD 進行驗證
 
@@ -40,7 +40,7 @@ ms.locfileid: "81694106"
 
   - 登入的使用者必須是 Azure AD 身分識別。
 
-  - 如果使用者是同盟或同步處理身分識別，您必須使用 Configuration Manager [Active Directory 使用者探索](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)以及 [Azure AD 使用者探索](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)。 如需混合式身分識別的詳細資訊，請參閱[定義混合式身分識別採用策略](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy)。<!--497750-->  
+  - 如果使用者是同盟或同步處理身分識別，請設定 Configuration Manager [Active Directory 使用者探索](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)與 [Azure AD 使用者探索](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)。 如需混合式身分識別的詳細資訊，請參閱[定義混合式身分識別採用策略](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-identity-adoption-strategy)。<!--497750-->
 
 - 除了管理點站台系統角色的[現有必要條件](../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012MPpreq)之外，也要在這部伺服器上啟用 **ASP.NET 4.5**。 包括在啟用 ASP.NET 4.5 時會自動選取的其他任何選項。  
 
@@ -61,26 +61,29 @@ ms.locfileid: "81694106"
 
 ## <a name="configure-client-settings"></a>設定用戶端設定
 
-這些用戶端設定會協助使用 Azure AD 加入 Windows 10 裝置。 它們也可以啟用以網際網路為基礎的用戶端，來使用 CMG 和雲端發佈點。
+這些用戶端設定可協助將 Windows 10 裝置設定為混合式加入。 它們也可以啟用以網際網路為基礎的用戶端，來使用 CMG 和雲端發佈點。
 
-1. 使用[如何設定用戶端設定](configure-client-settings.md)中的資訊，來設定 [雲端服務]  區段中的下列用戶端設定。  
+1. 在 [雲端服務] 群組中設定下列用戶端設定。 如需詳細資訊，請參閱[如何設定用戶端設定](configure-client-settings.md)。
 
     - **允許存取雲端發佈點**：啟用此設定來協助網際網路型裝置取得安裝設定管理員用戶端的必要內容。 如果無法從雲端發佈點取得內容，裝置可以從 CMG 擷取內容。 用戶端安裝啟動程序會在容錯回復到 CMG 之前，重試雲端發佈點四個小時。<!--495533-->  
 
-    - **自動以 Azure Active Directory 註冊已加入新 Windows 10 網域的裝置**：設定為 [是]  或 [否]  。 預設值為 [是]  。 這個行為也是 Windows 10 1709 版的預設值。
+    - **自動以 Azure Active Directory 註冊已加入新 Windows 10 網域的裝置**：設定為 [是] 或 [否]。 預設值為 [是]。 這個行為也是 Windows 10 1709 版的預設值。
 
-    - **允許用戶端使用雲端管理閘道**：設定為 [是]  (預設值)，或 [否]  。  
+        > [!TIP]
+        > 混合式加入裝置會加入內部部署 Active Directory 網域，並向 Azure AD 註冊。 如需詳細資訊，請參閱[混合式 Azure AD 加入裝置](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid) \(部分機器翻譯\)。<!-- MEMDocs#325 -->
+
+    - **允許用戶端使用雲端管理閘道**：設定為 [是] (預設值)，或 [否]。  
 
 2. 將用戶端設定部署至所需的裝置集合。 不要將這些設定部署到使用者集合。
 
-若要確認裝置已加入至 Azure AD，請在命令提示字元中執行 `dsregcmd.exe /status`。 如果裝置已加入 Azure AD 網域，結果中的 **AzureAdjoined** 欄位會顯示 **YES**。
+若要確認裝置為混合式加入，請在命令提示字元中執行 `dsregcmd.exe /status`。 如果裝置已加入 Azure AD 或為混合式加入，結果中的 **AzureAdjoined** 欄位會顯示**是**。 如需詳細資訊，請參閱 [dsregcmd 命令 - 裝置狀態](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd) \(部分機器翻譯\)。
 
 ## <a name="install-and-register-the-client-using-azure-ad-identity"></a>使用 Azure AD 身分識別安裝及註冊用戶端
 
 若要使用 Azure AD 身分識別來手動安裝用戶端，首先請檢閱[如何手動安裝用戶端](deploy-clients-to-windows-computers.md#BKMK_Manual)上的一般流程。
 
- > [!Note]  
- > 裝置需要網際網路的存取權才能夠與 Azure AD 連絡，但是不需要是以網際網路為基礎。
+> [!Note]  
+> 裝置需要網際網路的存取權才能夠與 Azure AD 連絡，但是不需要是以網際網路為基礎。
 
 以下範例示範命令列的一般結構：`ccmsetup.exe /mp:<source management point> CCMHOSTNAME=<internet-based management point> SMSSiteCode=<site code> SMSMP=<initial management point> AADTENANTID=<Azure AD tenant identifier> AADCLIENTAPPID=<Azure AD client app identifier> AADRESOURCEURI=<Azure AD server app identifier>`
 

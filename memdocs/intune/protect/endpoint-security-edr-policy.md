@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 05/29/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: ac8f82396571a7ae39df43662000f9f3f17d0430
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d0ba328f1976d0463c6be042dfd6f8a7570d6dac
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990873"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206327"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Intune 中端點安全性的端點偵測及回應原則
 
@@ -38,13 +38,13 @@ EDR 原則會部署到您使用 Intune 在 Azure Active Directory (Azure AD) 中
 
 EDR 的端點安全性原則位於 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) [端點安全性] 節點中的 [管理] 下方。
 
-檢視[端點偵測及回應設定檔的設定](../protect/endpoint-security-edr-profile-settings.md)。
+檢視[端點偵測及回應設定檔的設定](endpoint-security-edr-profile-settings.md)。
 
 ## <a name="prerequisites-for-edr-policies"></a>EDR 原則的必要條件
 
 **一般**：
 
-- **Microsoft Defender 進階威脅防護租用戶** ‒ 您的 Defender ATP 租用戶必須與您的 Microsoft 端點管理員租用戶 (Intune 訂閱) 整合，您才能建立 EDR 原則。 請參閱 Intune 文件中的[使用 Microsoft Defender ATP](../protect/advanced-threat-protection.md)。
+- **Microsoft Defender 進階威脅防護租用戶** ‒ 您的 Defender ATP 租用戶必須與您的 Microsoft 端點管理員租用戶 (Intune 訂閱) 整合，您才能建立 EDR 原則。 請參閱 Intune 文件中的[使用 Microsoft Defender ATP](advanced-threat-protection.md)。
 
 **支援來自 Configuration Manager 的裝置**：
 
@@ -67,7 +67,7 @@ EDR 的端點安全性原則位於 [Microsoft 端點管理員系統管理中心]
 
 ## <a name="edr-profiles"></a>EDR 設定檔
 
-檢視您可以為下列平台及設定檔進行的[設定](../protect/endpoint-security-edr-profile-settings.md)。
+檢視您可以為下列平台及設定檔進行的[設定](endpoint-security-edr-profile-settings.md)。
 
 **Intune** ‒ 以下適用於您使用 Intune 管理的裝置：
 
@@ -138,7 +138,7 @@ Configuration Manager 版本 2002 需要更新，才支援使用您從 Microsoft
 
       選取此選項時，精靈會顯示額外頁面來完成共同管理的設定。 如需詳細資訊，請參閱 Configuration Manager 內容中的[啟用共同管理](../../configmgr/comanage/how-to-enable.md)。
 
-     ![設定租用戶附加](./media/endpoint-security-edr-policy/tenant-onboarding.png)
+     ![設定租用戶附加](media/endpoint-security-edr-policy/tenant-onboarding.png)
 
 4. 依序按一下 [下一步] 和 [是]，以接受 [建立 AAD 應用程式] 通知。 此動作會佈建服務主體並建立 Azure AD 應用程式註冊，來加速將集合同步至 Microsoft 端點管理員系統管理中心的過程。
 
@@ -159,7 +159,7 @@ Configuration Manager 版本 2002 需要更新，才支援使用您從 Microsoft
 3. 在 [設定上傳] 索引標籤中，選取 [上傳至 Microsoft 端點管理員系統管理中心]。 按一下 [套用] 。
    - 裝置上傳的預設設定是 [All my devices managed by Microsoft Endpoint Configuration Manager] \(所有我由 Microsoft Endpoint Configuration Manager 管理的裝置\)。 您也可以選擇將您的設定限制在一或數個裝置集合。
 
-     ![檢視共同管理屬性索引標籤](./media/endpoint-security-edr-policy/configure-upload.png)
+     ![檢視共同管理屬性索引標籤](media/endpoint-security-edr-policy/configure-upload.png)
 
 4. 當出現提示時，請使用「全域管理員」帳戶登入。
 
@@ -195,7 +195,7 @@ Configuration Manager 版本 2002 需要更新，才支援使用您從 Microsoft
 
    - 若您的 Configuration Manager 階層尚未附加租用戶，您便無法選取此選項。
   
-   ![設定雲端同步](./media/endpoint-security-edr-policy/cloud-sync.png)
+   ![設定雲端同步](media/endpoint-security-edr-policy/cloud-sync.png)
 
 3. 選取 [確定] 儲存設定。
 
@@ -258,11 +258,17 @@ Configuration Manager 版本 2002 需要更新，才支援使用您從 Microsoft
 
 - 針對以 **Windows 10 及更新版本**平台 (Intune) 為目標的原則，您將會看到原則的合規性概觀。 您也可以選取圖表來檢視接收原則的裝置清單，並鑽研個別裝置以取得詳細資料。
 
+  **具有 ATP 感應器的裝置**圖表只會顯示已透過使用 **Windows 10 及更新版本**設定檔，成功上線至 Defender ATP 的裝置。 為了確保您的裝置在此圖表中完整呈現，請將上線設定檔部署到所有裝置。 以外部方式 (例如群組原則或 PowerShell) 上線至 Defender ATP 的裝置，會視為**沒有 ATP 感應器的裝置**。
+
 - 針對以 **Windows 10 和 Windows Server** 平台 (Configuration Manager) 為目標的原則，您將會看到原則的合規性概觀，但無法鑽研以檢視其他詳細資料。 此檢視會受到限制，因為系統管理中心只會從負責管理 Configuration Manager 裝置原則部署的 Configuration Manager 收到有限的狀態詳細資料。
 
-檢視您可以為平台和設定檔進行的[設定](../protect/endpoint-security-edr-profile-settings.md)。
+
+
+
+
+檢視您可以為平台和設定檔進行的[設定](endpoint-security-edr-profile-settings.md)。
 
 ## <a name="next-steps"></a>後續步驟
 
-- [設定端點安全性原則](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+- [設定端點安全性原則](endpoint-security-policy.md#create-an-endpoint-security-policy)
 - 深入了解 Microsoft Defender ATP 文件中的[端點偵測及回應](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response)。

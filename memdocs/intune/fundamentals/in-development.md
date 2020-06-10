@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5562ef1eaa1cc98e3f5a654e90e4779e228768b6
-ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
+ms.openlocfilehash: 90039e9bb75bcf7c266ac033408f87d37e27ef8d
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84311198"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436749"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Microsoft Intune 正在開發的項目
 
@@ -161,7 +161,7 @@ ms.locfileid: "84311198"
 - 已移除的 Apple Business Manager 裝置計數將會新增至概觀頁面，您可以在其中看到裝置的狀態。
 
 ### <a name="bring-your-own-devices-can-use-vpn-to-deploy--5015344---"></a>「攜帶您自己的裝置」可使用 VPN 進行部署<!--5015344 -->
-這項功能可能會延遲。
+新的 Autopilot 設定檔 [跳過網域連線能力檢查] 切換按鈕可讓您使用自己的協力廠商 Win32 VPN 用戶端來部署混合式 Azure AD Join 裝置，而不需存取公司網路。 若要查看新的切換，請前往 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > [裝置]  > [Windows] > [Windows 註冊] > [部署設定檔] > [建立設定檔] > [全新體驗 (OOBE)]。
 
 ### <a name="shared-ipads-for-business--6367326---"></a>適用於商務的共用 iPad<!--6367326 -->
 您能夠使用 Intune 和 Apple Business Manager 來輕鬆且安全地設定共用的 iPad，以讓多位員工可以共用裝置。 Apple 的[共用 iPad](https://developer.apple.com/education/shared-ipad/)可為多個使用者提供個人化體驗，同時保留使用者資料。 使用者可使用受控 Apple ID，在登入其組織中的任何共用 iPad 之後，存取其應用程式、資料及設定。 共用的 iPad 可與同盟身分識別搭配使用。
