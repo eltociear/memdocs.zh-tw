@@ -10,12 +10,12 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b447e5c8d34a4b8758fa0fd6109113b0675a635
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 39d6bf22cb24492a0f4e3f59313184ce522b5d09
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347010"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454999"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>安裝並指派 Configuration Manager Windows 10 用戶端，並使用 Azure AD 進行驗證
 
@@ -95,7 +95,7 @@ ms.locfileid: "84347010"
 - 雲端管理閘道
 - 以網際網路為基礎的管理點
 
-**SMSMP** 屬性會指定內部部署或以網際網路為基礎的管理點。
+**SMSMP** 屬性會指定內部部署管理點。 這不是必要項目。 建議已加入 Azure AD 且漫遊至內部網路的裝置使用，讓其可以找到內部部署管理點。
 
 這個範例使用雲端管理閘道。 其會取代範例值：`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
 
