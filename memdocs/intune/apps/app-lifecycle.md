@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/27/2020
+ms.date: 06/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33f59cc2ecd2662e2d5d09fb06a9f1c7a33f0fca
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8605b33d8fb83fb4537182127860f0cbb098e620
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79342357"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428608"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Microsoft Intune 中的應用程式生命週期概觀
 
@@ -54,7 +54,7 @@ Intune 提供您許多方法來協助保護您的應用程式中的資料。 主
 
 ## <a name="retire"></a>淘汰
 
-最後，您部署的應用程式很可能會過時，因此必須移除。 Intune 可讓您輕鬆地[從服務淘汰應用程式](../remote-actions/device-management.md)。
+最後，您部署的應用程式很可能會過時，因此必須移除。 Intune 讓您輕鬆解除安裝應用程式。 如需詳細資訊，請參閱[解除安裝應用程式](../apps/apps-add.md#uninstall-an-app)。
 
 ## <a name="next-steps"></a>後續步驟
 

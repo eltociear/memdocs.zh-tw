@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 06/2/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e96199d9f525fa0dcbf7545d2c20b90a3a76b9cd
-ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
+ms.openlocfilehash: 8ee0603a96d7276e9e1ef0fb9bff60ac44a3ef84
+ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83401810"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84301379"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>針對 Intune 中的原則和設定檔進行疑難排解
 
@@ -37,7 +37,7 @@ Microsoft Intune 包含一些內建的疑難排解功能。 使用這些功能�
 
 ## <a name="use-built-in-troubleshooting"></a>使用內建的疑難排解
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選取 [疑難排解 + 支援]：
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選取 [疑難排解 + 支援] > [疑難排解]：
 
     :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png" alt-text="在端點管理系統管理中心和 Intune 中，前往 [疑難排解與支援]。":::
 
@@ -98,7 +98,7 @@ Microsoft Intune 包含一些內建的疑難排解功能。 使用這些功能�
 
         **實用的連結**： 
 
-        - [部署裝置合規性政策的方式](../protect/device-compliance-get-started.md#ways-to-deploy-device-compliance-policies)
+        - [部署裝置合規性政策的方式](../protect/device-compliance-get-started.md)
         - [監視裝置合規性原則](../protect/compliance-policy-monitor.md)
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>您不確定設定檔是否已正確套用
@@ -123,7 +123,7 @@ Microsoft Intune 包含一些內建的疑難排解功能。 使用這些功能�
 
 - [針對 iOS/iPadOS 或 Android 原則未套用至裝置的問題進行疑難排解](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) \(英文\) (會開啟另一個 Microsoft 網站)
 - [針對 Windows 10 Intune 原則失敗進行疑難排解](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) \(英文\) (會開啟部落格)
-- [針對 Windows 10 的 CSP 自訂設定進行疑難排解](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) \(英文\) (會開啟另一個 Microsoft 網站)
+- [針對 Windows 10 的 CSP 自訂設定進行疑難排解](https://support.microsoft.com/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) \(英文\) (會開啟另一個 Microsoft 網站)
 - [Windows 10 群組原則與 Intune MDM 原則](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) \(英文\) (會開啟另一個 Microsoft 網站)
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>警示：將存取規則儲存到 Exchange 失敗

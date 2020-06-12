@@ -1,5 +1,5 @@
 ---
-title: 設定 Check Point SandBlast MTD
+title: 使用 Intune 設定 Check Point SandBlast MTD 連接器
 titleSuffix: Microsoft Intune
 description: 深入了解整合 Intune 與 Check Point SandBlast Mobile Threat Defense 來控制行動裝置對公司資源的存取。
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9c1450af064caa1f7572da0ab4753e9db68484c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a0645c771b304bfb4930f5cd365b9291366499b1
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989269"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330911"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Check Point SandBlast Mobile Threat Defense 連接器與 Intune
 
@@ -79,7 +79,7 @@ Intune 裝置合規性原則包含以 Check Point SandBlast Mobile 風險評估�
 
 ### <a name="control-access-based-on-threat-to-network"></a>依據對網路的威脅性來控制存取
 
-偵測網路中的「攔截式攻擊」  等威脅，並根據裝置風險保護對 Wi-Fi 網路的存取。
+偵測網路中的「攔截式攻擊」等威脅，並根據裝置風險保護對 Wi-Fi 網路的存取。
 
 *封鎖透過 Wi-Fi 的網路存取︰*
 
@@ -91,9 +91,9 @@ Intune 裝置合規性原則包含以 Check Point SandBlast Mobile 風險評估�
 > [!div class="mx-imgBorder"]
 > ![Check Point MTD 授與 Wi-Fi 存取權](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-5.PNG)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>根據網路威脅來控制 SharePoint Online 的存取權
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>依據對網路的威脅來控制對 SharePoint Online 的存取
 
-偵測網路中的「攔截式攻擊」  等威脅，並根據裝置風險防止對公司檔案進行同步處理。
+偵測網路中的「攔截式攻擊」等威脅，並根據裝置風險防止對公司檔案進行同步處理。
 
 *偵測到網路威脅時封鎖 SharePoint Online：*
 

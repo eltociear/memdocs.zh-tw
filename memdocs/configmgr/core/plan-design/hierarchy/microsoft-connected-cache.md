@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4dead573e1744a5c8b84ff954e85be43af644486
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 70d4930da712eccff8bdb1f1986a68aa5fe77644
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878501"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455271"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 中的 Microsoft 連線快取
 
@@ -63,7 +63,7 @@ ms.locfileid: "83878501"
 
   - 請勿預先安裝 IIS 的 [應用程式要求路由](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) 功能。 連線快取會安裝 ARR，並進行其設定。 Microsoft 無法保證連線快取的 ARR 設定不會與伺服器上同時使用此功能的其他應用程式產生衝突。
 
-  - 此發佈點需要 Microsoft 雲端的網際網路存取權限。 特定 URL 可能會依已啟用雲端的特定內容而有所不同。 如需詳細資訊，請參閱[網際網路存取需求](../network/internet-endpoints.md)。
+  - 此發佈點需要 Microsoft 雲端的網際網路存取權限。 特定 URL 可能會依已啟用雲端的特定內容而有所不同。 請務必同時允許端點進行傳遞最佳化。 如需詳細資訊，請參閱[網際網路存取需求](../network/internet-endpoints.md)。
 
   - 從 2002 版開始，連線快取應用程式可以使用未經驗證的 Proxy 伺服器來存取網際網路。 如需詳細資訊，請參閱[為站台系統伺服器設定 Proxy](../network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server)。<!-- 5856396 -->
 

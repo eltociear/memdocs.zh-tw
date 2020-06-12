@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da78e0f80df31f5cb0f6236c4f85f93c05f0320a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f01baaf8ca48229242b6f65d10ef28a294a632bc
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989475"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428635"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>將應用程式新增至 Microsoft Intune 
 
@@ -187,6 +187,25 @@ Intune 會根據下列條件，自動重新安裝、更新或移除必要的應�
 - 如果必要的應用程式安裝失敗，或因任何原因導致裝置上沒有該應用程式，則 Intune 會在過了此排程之後評估合規性，並重新安裝應用程式。  
 - 系統管理員可將應用程式設為可供使用者群組使用的目標，使用者即可透過裝置上的公司入口網站來安裝應用程式。 之後，系統管理員可將應用程式從 v1 更新為 v2。 如果裝置上仍有任何舊版的應用程式，Intune 會在過了此排程之後更新應用程式。
 - 如果系統管理員部署解除安裝的意圖，但裝置上的應用程式無法解除安裝，則 Intune 會在過了此排程之後評估合規性，並解除安裝應用程式。   
+
+## <a name="uninstall-an-app"></a>解除安裝應用程式
+
+當您需要在使用者的裝置中解除安裝應用程式時，請使用下列步驟。
+
+1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+2. 選取 [應用程式] > [所有應用程式] > 「某應用程式」 > [指派] > [新增群組]。
+3. 在 [新增群組] 窗格中，選取 [解除安裝]。
+4. 選取 [包含的群組]，以選取受此應用程式指派影響的使用者群組。
+5. 選取您要套用解除安裝指派的群組。
+6. 在 [選取群組] 窗格上，按一下 [選取]。
+7. 在 [指派] 窗格上，按一下 [確定] 以設定指派。
+8. 如果您想要將任何使用者群組排除，使他們不受此應用程式指派影響，請選取 [排除群組]。
+9. 如果您選擇要排除任何群組，請在 [選取群組] 中，選取 [選取]。
+10. 在 [新增群組] 窗格中，選取 [確定]。
+11. 在應用程式 [指派] 窗格中，選取 [儲存]。
+
+> [!IMPORTANT]
+> 若要成功解除安裝應用程式，請務必先移除安裝的成員或群組指派，再將其指派為要解除安裝。 如果群組同時指派給安裝應用程式與解除安裝應用程式，應用程式將會保留而不會移除。
 
 ## <a name="app-installation-errors"></a>應用程式安裝錯誤
 

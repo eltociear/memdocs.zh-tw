@@ -15,12 +15,12 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5d0e809e834a82f192128263742bc2b9b0024a2
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 9a264b9a3b8f0ba15debe7e7323c106f09fa12c6
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079275"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455237"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>使用 Microsoft Enterprise Mobility + Security (EMS) 啟用 BYOD 的技術決策
 
@@ -72,14 +72,14 @@ ms.locfileid: "82079275"
 |遭盜用的使用者帳戶 | 封鎖高風險使用者 | 封鎖高風險使用者 |
 |遭盜用的使用者帳戶 | 裝置 PIN | 應用程式 PIN |
 | | | |
-| 遭盜用的裝置或應用程式 | 需要相容的裝置 | 應用程式啟動破解檢查 |
+| 遭盜用的裝置或應用程式 | 需要相容的裝置 | 在應用程式啟動時執行越獄/根目錄檢查 |
 | 遭盜用的裝置或應用程式 | 加密裝置資料 | 加密應用程式資料 |
 | | | |
 |遺失或遭竊的裝置 | 移除所有的裝置資料 | 移除所有的應用程式資料|
 | | | |
-| 意外的資料共用或儲存至不安全的位置 | 限制裝置資料備份 | 限制剪下/複製/貼上|
+| 意外的資料共用或儲存至不安全的位置 | 限制裝置資料備份 | 限制組織資料的備份 |
 | 意外的資料共用或儲存至不安全的位置 | 限制另存為 | 限制另存為 |
-|意外的資料共用或儲存至不安全的位置 | 停用列印 | n/a|
+|意外的資料共用或儲存至不安全的位置 | 停用列印 | 停用列印組織資料 |
 
 ## <a name="next-steps"></a>後續步驟
 現在將把焦點放在裝置管理、應用程式管理或兩者的組合，以決定是否要在您的組織啟用 BYOD。 實作選擇的決定權在您，以確保無論如何都能使用 Azure AD 提供的身分識別和安全性功能。  

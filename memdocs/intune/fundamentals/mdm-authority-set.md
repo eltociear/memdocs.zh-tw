@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7244872fa888aaee164187e62a2355a94f793499
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4209c461877786000e01dd03e4e0dea9f76a6e84
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985189"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270951"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>設定行動裝置管理授權單位
 
@@ -36,9 +36,9 @@ ms.locfileid: "83985189"
 
 - **Intune 共同管理** - Windows 10 裝置的 Intune 雲端解決方案與 Configuration Manager 整合版。 您可以使用 Configuration Manager 主控台設定 Intune。 [設定針對 Intune 自動註冊裝置](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune)。 
 
-- **Office 365 的行動裝置管理** - Office 365 與 Intune 雲端解決方案的整合版。 您可以從 Microsoft 365 系統管理中心設定 Intune。 包含 Intune 獨立版提供的功能子集。 請參閱[在 Microsoft 365 中設定行動裝置管理 (MDM)](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)
+- **適用於 Office 365 的行動裝置管理**：如已啟用 Office 365 的 MDM，您會看到 MDM 授權單位設定為 "Office 365"。 如果想要開始使用 Intune，您需要購買 Intune 授權。
 
-- **Office 365 MDM 共存**：您可以在租用戶上同時啟動並使用 MDM for Office 和 Intune，並為每位使用者將管理授權單位設定為 Intune 或 MDM for Office，指示使用哪項服務管理其 MDM 註冊裝置。 每位使用者的管理授權單位會根據指派給使用者的授權來定義：如果使用者只有 Microsoft 365 Basic 或 Standard 的授權，其裝置就會由 MDM for Office 管理。 如果使用者擁有 Intune 授權，其裝置就會由 Intune 管理。 如果您將 Intune 授權新增至先前由 MDM for Office 管理的使用者，其裝置就會切換為 Intune 管理。 將使用者切換至 Intune 之前，請務必將 Intune 設定指派給使用者，以取代 MDM for Office，否則其裝置會遺失 MDM for Office 設定，而且不會收到替換的 Intune。
+- **Office 365 MDM 共存**：目前使用的若為 Office 365 的 MDM，您可將 Intune 新增至租用戶，並為每個使用者將管理授權單位設定為 Intune 或 Office 365 的 MDM，以指示將使用哪項服務來管理註冊了 MDM 的裝置。 每位使用者的管理授權單位會根據指派給使用者的授權來定義：如果使用者只有 Microsoft 365 Basic 或 Standard 的授權，其裝置就會由 MDM for Office 管理。 如果使用者擁有 Intune 授權，其裝置就會由 Intune 管理。 如果您將 Intune 授權新增至先前由 MDM for Office 管理的使用者，其裝置就會切換為 Intune 管理。 將使用者切換至 Intune 之前，請務必將 Intune 設定指派給使用者，以取代 MDM for Office，否則其裝置會遺失 MDM for Office 設定，而且不會收到替換的 Intune。
 
 ## <a name="set-mdm-authority-to-intune"></a>將 MDM 授權單位設為 Intune
 

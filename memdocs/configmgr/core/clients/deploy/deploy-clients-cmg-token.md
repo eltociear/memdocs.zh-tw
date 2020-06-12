@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6b33027d67329b883f401168795c1b466ded1a7
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: 5054d44371fd3114a9644f90d37dabf1e81d1997
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709380"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455016"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>雲端管理閘道的權杖型驗證
 
@@ -60,10 +60,16 @@ Configuration Manager 用戶端會與管理點一起管理此權杖，因此不�
 
 1. 在以網際網路為基礎的裝置上安裝 Configuration Manager 用戶端。 包含用戶端安裝參數：[ **/regtoken**](about-client-installation-properties.md#regtoken)。 下列範例命令列包含其他必要的安裝程式參數和屬性：
 
-    `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com /regtoken:eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik9Tbzh2Tmd5VldRUjlDYVh5T2lacHFlMDlXNCJ9.eyJTQ0NNVG9rZW5DYXRlZ29yeSI6IlN7Q01QcmVBdXRoVG9rZW4iLCJBdXRob3JpdHkiOiJTQ0NNIiwiTGljZW5zZSI6IlNDQ00iLCJUeXBlIjoiQnVsa1JlZ2lzdHJhdGlvbiIsIlRlbmFudElkIjoiQ0RDQzVFOTEtMEFERi00QTI0LTgyRDAtMTk2NjY3RjFDMDgxIiwiVW5pcXVlSWQiOiJkYjU5MWUzMy1wNmZkLTRjNWItODJmMy1iZjY3M2U1YmQwYTIiLCJpc3MiOiJ1cm46c2NjbTpvYXV0aDI6Y2RjYzVlOTEtMGFkZi00YTI0LTgyZDAtMTk2NjY3ZjFjMDgxIiwiYXVkIjoidXJuOnNjY206c2VydmljZSIsImV4cCI6MTU4MDQxNbUwNSwibmJmIjoxNTgwMTU2MzA1fQ.ZUJkxCX6lxHUZhMH_WhYXFm_tbXenEdpgnbIqI1h8hYIJw7xDk3wv625SCfNfsqxhAwRwJByfkXdVGgIpAcFshzArXUVPPvmiUGaxlbB83etUTQjrLIk-gvQQZiE5NSgJ63LCp5KtqFCZe8vlZxnOloErFIrebjFikxqAgwOO4i5ukJdl3KQ07YPRhwpuXmwxRf1vsiawXBvTMhy40SOeZ3mAyCRypQpQNa7NM3adCBwUtYKwHqiX3r1jQU0y57LvU_brBfLUL6JUpk3ri-LSpwPFarRXzZPJUu4-mQFIgrMmKCYbFk3AaEvvrJienfWSvFYLpIYA7lg-6EVYRcCAA`
+    `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC /regtoken:eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik9Tbzh2Tmd5VldRUjlDYVh5T2lacHFlMDlXNCJ9.eyJTQ0NNVG9rZW5DYXRlZ29yeSI6IlN7Q01QcmVBdXRoVG9rZW4iLCJBdXRob3JpdHkiOiJTQ0NNIiwiTGljZW5zZSI6IlNDQ00iLCJUeXBlIjoiQnVsa1JlZ2lzdHJhdGlvbiIsIlRlbmFudElkIjoiQ0RDQzVFOTEtMEFERi00QTI0LTgyRDAtMTk2NjY3RjFDMDgxIiwiVW5pcXVlSWQiOiJkYjU5MWUzMy1wNmZkLTRjNWItODJmMy1iZjY3M2U1YmQwYTIiLCJpc3MiOiJ1cm46c2NjbTpvYXV0aDI6Y2RjYzVlOTEtMGFkZi00YTI0LTgyZDAtMTk2NjY3ZjFjMDgxIiwiYXVkIjoidXJuOnNjY206c2VydmljZSIsImV4cCI6MTU4MDQxNbUwNSwibmJmIjoxNTgwMTU2MzA1fQ.ZUJkxCX6lxHUZhMH_WhYXFm_tbXenEdpgnbIqI1h8hYIJw7xDk3wv625SCfNfsqxhAwRwJByfkXdVGgIpAcFshzArXUVPPvmiUGaxlbB83etUTQjrLIk-gvQQZiE5NSgJ63LCp5KtqFCZe8vlZxnOloErFIrebjFikxqAgwOO4i5ukJdl3KQ07YPRhwpuXmwxRf1vsiawXBvTMhy40SOeZ3mAyCRypQpQNa7NM3adCBwUtYKwHqiX3r1jQU0y57LvU_brBfLUL6JUpk3ri-LSpwPFarRXzZPJUu4-mQFIgrMmKCYbFk3AaEvvrJienfWSvFYLpIYA7lg-6EVYRcCAA`
 
     > [!TIP]
     > 如需此命令列的詳細資訊，請參閱[使用 Azure AD 身分識別](deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity)安裝和註冊用戶端。 此流程與上述流程很類似，只是不會使用 Azure AD 的屬性。
+
+若要驗證，請檢查下列記錄檔中是否有類似的項目：<!-- bug 7357499 -->
+
+```ClientLocation.log
+Rotating internet management point, new management point [1] is: https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 (0) with capabilities: <Capabilities SchemaVersion ="1.0"><Property Name="SSL" Version="1" /></Capabilities>
+```
 
 ### <a name="known-issues"></a>已知問題
 
@@ -107,23 +113,23 @@ Configuration Manager 用戶端會與管理點一起管理此權杖，因此不�
 
 如有需要，您可以在 Configuration Manager 主控台中查看先前建立的大量註冊權杖與其存留期，並封鎖其使用方式。 不過，站台資料庫不會儲存大量註冊權杖。
 
-#### <a name="to-review-a-bulk-registration-token"></a>檢閱大量註冊權杖
+### <a name="review-a-bulk-registration-token"></a>檢閱大量註冊權杖
 
-1. 在 Configuration Manager 主控台中，按一下 [系統管理]。
+1. 在 Configuration Manager 主控台中，移至 [系統管理] 工作區。
 
-2. 在 [系統管理] 工作區中，展開 [安全性]，然後按一下 [憑證]。 主控台會在詳細資料窗格中列出所有與站台相關的憑證與大量註冊權杖。
+2. 展開 [安全性]，然後選取 [憑證] 節點。 主控台會在詳細資料窗格中列出所有與站台相關的憑證與大量註冊權杖。
 
 3. 選取要檢閱的大量註冊權杖。
 
-您可以根據使用者的 GUID 識別特定的大量註冊權杖。 大量註冊權杖的 GUID 會在建立權杖時顯示。 您也可以視需要篩選或排序 [類型] 欄。
+您也可以篩選或排序 [類型] 資料行。 根據其 GUID 識別特定的大量註冊權杖。 當您建立大量註冊權杖時，此工具會顯示 GUID。
 
-#### <a name="to-block-a-bulk-registration-token"></a>封鎖大量註冊權杖
+### <a name="block-a-bulk-registration-token"></a>封鎖大量註冊權杖
 
-1. 在 Configuration Manager 主控台中，按一下 [系統管理]。
+1. 在 Configuration Manager 主控台中，移至 [系統管理] 工作區。
 
-2. 在 [系統管理] 工作區中，展開 [安全性]、按一下 [憑證]，然後選取要封鎖的大量註冊權杖。
+2. 展開 [安全性]，選取 [憑證] 節點，然後選取要封鎖的大量註冊權杖。
 
-3. 在功能區列的 [常用] 索引標籤上或右鍵內容功能表中，選取 [封鎖]。 相反地，您可以在功能區列的 [常用] 索引標籤上或右鍵內容功能表中選取 [解除封鎖]，來解除封鎖先前已封鎖的大量註冊權杖。
+3. 在功能區列的 [常用] 索引標籤上或滑鼠右鍵內容功能表中，選取 [封鎖]。 若要解除封鎖之前已封鎖的大量註冊權杖，請選取 [解除封鎖] 動作。
 
 ## <a name="see-also"></a>請參閱
 

@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 58afaf564a8afaba4569755575fcc7c1757c5529
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 8423af8d4c743965f627a94a07f587fd97d45bdf
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110129"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454965"
 ---
 # <a name="internet-access-requirements"></a>網際網路存取需求
 
@@ -38,7 +38,7 @@ ms.locfileid: "82110129"
 
 從 2002 版開始，如果 Configuration Manager 站台無法連線至雲端服務的必要端點，則會引發重大狀態訊息識別碼 11488。 當無法連線至服務時，SMS_SERVICE_CONNECTOR 元件狀態會變更為重大。 在 Configuration Manager 主控台的 [元件狀態](../../servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) 節點中，查看詳細狀態。<!-- 5566763 -->
 
-### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"/> 更新與維護
+### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"></a> 更新及服務
 
 如需此功能的詳細資訊，請參閱 [Configuration Manager 的更新與服務](../../servers/manage/updates.md)。
 
@@ -86,6 +86,18 @@ ms.locfileid: "82110129"
 ## <a name="microsoft-store-for-business"></a>商務用 Microsoft Store
 
 如果您要與[商務用 Microsoft Store](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md) 整合 Configuration Manager，請確定服務連接點和目標裝置皆可以存取雲端服務。 如需詳細資訊，請參閱[商務用 Microsoft Store Proxy 設定](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration) \(部分機器翻譯\)。
+
+## <a name="delivery-optimization"></a>傳遞最佳化
+
+如果使用傳遞最佳化，用戶端即必須與其雲端服務通訊：`*.do.dsp.mp.microsoft.com`
+
+支援 Microsoft 網內快取的發佈點也需要這些端點。
+
+如需詳細資訊，請參閱下列文章：
+
+- [傳遞最佳化常見問題](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
+- [Configuration Manager 的內容管理基本概念](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
+- [Configuration Manager 中的 Microsoft 連線快取](../hierarchy/microsoft-connected-cache.md)
 
 ## <a name="cloud-services"></a><a name="bkmk_cloud"></a> 雲端服務
 
@@ -172,7 +184,7 @@ ms.locfileid: "82110129"
 ## <a name="manage-office-365"></a>管理 Office 365
 
 > [!NOTE]
-> 從 2020 年 4 月 21 日開始，「Office 365 專業增強版」會重新命名為「Microsoft 365 Apps 企業版」  。 如需詳細資訊，請參閱 [Office 365 專業增強版的名稱變更](https://docs.microsoft.com/deployoffice/name-change) \(部分機器翻譯\)。 在主控台正在進行更新時，您在 Configuration Manager 主控台與輔助文件中可能仍會看到提及舊名稱。
+> 從 2020 年 4 月 21 日開始，「Office 365 專業增強版」會重新命名為「Microsoft 365 Apps 企業版」。 如需詳細資訊，請參閱 [Office 365 專業增強版的名稱變更](https://docs.microsoft.com/deployoffice/name-change) \(部分機器翻譯\)。 在主控台正在進行更新時，您在 Configuration Manager 主控台與輔助文件中可能仍會看到提及舊名稱。
 
 如果您使用 Configuration Manager 來部署和更新 Microsoft 365 Apps 企業版，請允許下列端點：
 
@@ -207,7 +219,7 @@ when in current branch, get details from SCCMDocs-pr #3403
 
 ### <a name="monitoring-workspace-site-hierarchy-node"></a>[監視] 工作區、[站台階層] 節點
 
-如果您使用 [地理檢視]  ，請允許存取下列端點：
+如果您使用 [地理檢視]，請允許存取下列端點：
 
 - `http://maps.bing.com`
 

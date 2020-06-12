@@ -1,5 +1,5 @@
 ---
-title: 當您搭配 Microsoft Intune 使用 SCEP 時，針對裝置的憑證傳遞進行疑難排解 | Microsoft Docs
+title: 對 Intune 的 SCEP 憑證傳遞進行疑難排解 | Microsoft Docs
 description: 使用 SCEP 憑證設定檔搭配 Intune 來部署憑證時，針對從 CA 將憑證傳遞至裝置進行疑難排解。
 keywords: ''
 author: brenduns
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3acd8f0605ffbfe4f04ea4a9f0aaf81249e38cf5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 401bc2abe1be925f78436ff6557896ed51e37cb1
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991059"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330894"
 ---
 # <a name="troubleshoot-the-delivery-of-certificates-provisioned-by-scep-to-devices-in-microsoft-intune"></a>在 Microsoft Intune 中針對將 SCEP 佈建的憑證傳遞至裝置進行疑難排解
 
@@ -93,14 +93,14 @@ Default 18:30:57.320616 -0500 profiled Profile \'93www.windowsintune.com.SCEP.Mo
 
 在 Windows 裝置上，確認憑證已傳遞：
 
-- 執行 **eventvwr.msc** 以開啟事件檢視器。 移至 [應用程式及服務記錄檔]   > [Microsoft]   > [Windows]   > [DeviceManagement-Enterprise-Diagnostic-Provider]   > [Admin]  ，並尋找**事件 39**。 此事件應具有下列一般描述：**SCEP：已成功安裝憑證。**
+- 執行 **eventvwr.msc** 以開啟事件檢視器。 移至 [應用程式及服務記錄檔] > [Microsoft] > [Windows] > [DeviceManagement-Enterprise-Diagnostic-Provider] > [Admin]，並尋找**事件 39**。 此事件應具有下列一般描述：**SCEP：已成功安裝憑證。**
 
    ![Windows 應用程式記錄檔中的事件 39](../protect/media/troubleshoot-scep-certificate-delivery/device-app-log.png)
 
 若要在裝置上檢視憑證，請執行 **certmgr.msc** 以開啟 [憑證 MMC]，並確認已在裝置上的個人存放區中正確安裝根憑證與 SCEP 憑證：
 
-   1. 移至 [憑證 (本機電腦)]   > [信任的根憑證授權單位]   > [憑證]  ，並確認 CA 的根憑證存在。 「發出給」  與「發行者」  的值將會相同。
-   2. 在 [憑證 MMC] 中，移至 [憑證 - 目前的使用者]   > [個人]   > [憑證]  ，然後確認要求的憑證存在，且憑證的「發行者」  等於 CA 的名稱。
+   1. 移至 [憑證 (本機電腦)] > [信任的根憑證授權單位] > [憑證]，並確認 CA 的根憑證存在。 「發出給」與「發行者」的值將會相同。
+   2. 在 [憑證 MMC] 中，移至 [憑證 - 目前的使用者] > [個人] > [憑證]，然後確認要求的憑證存在，且憑證的「發行者」等於 CA 的名稱。
 
 ## <a name="troubleshoot-failures"></a>針對失敗進行疑難排解
 
@@ -116,7 +116,7 @@ Default 18:30:57.320616 -0500 profiled Profile \'93www.windowsintune.com.SCEP.Mo
 
 若要針對未安裝在裝置上的憑證問題進行疑難排解，請查看 Windows 事件記錄檔中是否有建議問題的錯誤：
 
-- 在裝置上，執行 **eventvwr.msc** 以開啟事件檢視器，然後移至 [應用程式及服務記錄檔]   > [Microsoft]   > [Windows]   > [DeviceManagement-Enterprise-Diagnostic-Provider > Admin]   。
+- 在裝置上，執行 **eventvwr.msc** 以開啟事件檢視器，然後移至 [應用程式及服務記錄檔] > [Microsoft] > [Windows] > [DeviceManagement-Enterprise-Diagnostic-Provider > Admin] 。
 
 憑證傳遞和憑證安裝到裝置的錯誤通常與 Windows 作業相關，而與 Intune 無關。
 

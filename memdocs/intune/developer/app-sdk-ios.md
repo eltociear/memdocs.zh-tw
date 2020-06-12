@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 06/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 379eacee731c8cdd773fc7a15f556ab85e409f7c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0d3b1fc1917e7567301a2d2c8a3a3b06d4892a6b
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989884"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436783"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK for iOS 開發人員指南
 
@@ -35,13 +35,13 @@ Microsoft Intune App SDK for iOS 可讓您將 Intune 應用程式保護原則 (�
 
 ## <a name="prerequisites"></a>先決條件
 
-* 您需要執行 OS X 10.8.5 或更新版本的 Mac OS 電腦，且該電腦必須已安裝 Xcode 9 或更新版本。
+- 您需要執行 OS X 10.12.6 或更新版本的 Mac OS 電腦，且該電腦必須已安裝 Xcode 9 或更新版本。
 
-* 您的應用程式必須以 iOS 11 或更新版本為目標。
+- 您的應用程式必須以 iOS 11 或更新版本為目標。
 
-* 檢閱[適用於 iOS 的 Intune App SDK 授權條款](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf)。 列印並保留一份授權條款供您備查。 下載並使用 Intune App SDK for iOS 即表示您同意這些授權條款。  如果您不接受這些條款，請不要使用此軟體。
+- 檢閱[適用於 iOS 的 Intune App SDK 授權條款](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf)。 列印並保留一份授權條款供您備查。 下載並使用 Intune App SDK for iOS 即表示您同意這些授權條款。  如果您不接受這些條款，請不要使用此軟體。
 
-* 在 [GitHub](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios) 上，下載 Intune App SDK for iOS 的檔案。
+- 在 [GitHub](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios) 上，下載 Intune App SDK for iOS 的檔案。
 
 ## <a name="whats-in-the-sdk-repository"></a>SDK 存放庫中的內容
 
@@ -750,7 +750,7 @@ SDK 會追蹤本機檔案擁有者的身分識別，並據以套用原則。 建
 ## <a name="notifications"></a>通知
 如果您的應用程式收到通知，請務必閱讀 `IntuneMAMPolicy.h` 中 `notificationPolicy` 的註解，以取得支援此案例的指示。  建議讓應用程式註冊 `IntuneMAMPolicyManager.h` 中所述的 `IntuneMAMPolicyDidChangeNotification`，並透過金鑰鏈將此值傳達給其 `UNNotificationServiceExtension`。
 ## <a name="displaying-web-content-within-application"></a>在應用程式中顯示 Web 內容
-如果您的應用程式能夠在 Web 檢視中顯示網站，且顯示的網頁能夠巡覽至任意網站，則該應用程式會負責設定目前的身分識別，讓受控資料不會透過 Web 檢視洩漏。 這種情況的範例是「建議功能」或「意見反應」網頁，這些網頁中包含搜尋引擎的直接或間接連結。
+如果您的應用程式能夠在 Web 檢視中顯示網站，且顯示的網頁能夠瀏覽至任意網站，則該應用程式會負責設定目前的身分識別，讓受控資料不會透過 Web 檢視洩漏。 這種情況的範例是「建議功能」或「意見反應」網頁，這些網頁中包含搜尋引擎的直接或間接連結。
 多重身分識別應用程式應該在顯示 Web 檢視之前，呼叫傳入空字串的 IntuneMAMPolicyManager setUIPolicyIdentity。 在關閉 Web 檢視之後，應用程式則應該呼叫傳入目前身分識別的 setUIPolicyIdentity。
 單一身分識別應用程式應該在顯示 Web 檢視之前，呼叫傳入空字串的 IntuneMAMPolicyManager setCurrentThreadIdentity。 在關閉 Web 檢視之後，應用程式則應該呼叫傳入 nil 的 setCurrentThreadIdentity。
 

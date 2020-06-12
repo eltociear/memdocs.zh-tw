@@ -1,5 +1,5 @@
 ---
-title: Symantec 連接器與 Microsoft Intune
+title: 使用 Symantec Endpoint Protection Mobile 連接器搭配 Microsoft Intune
 titleSuffix: Microsoft Intune
 description: 深入了解整合 Intune 與 Symantec Endpoint Protection Mobile 來控制行動裝置對公司資源的存取。
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3dcca264716b35600addd917e0ee7f309f530b70
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b078996ba5c7822ce9d8273be1df96a7aad0248b
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988341"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330962"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Symantec Endpoint Protection Mobile 連接器
 
@@ -68,9 +68,9 @@ Intune 裝置合規性政策包含以 SEP Mobile 風險評估為基礎的 SEP Mo
 
 Intune 支援兩種與 SEP Mobile 整合的模式：
 
-- 「基本設定」  是唯讀模式，允許 Intune 中的裝置看見 SEP Mobile。
+- 「基本設定」是唯讀模式，允許 Intune 中的裝置看見 SEP Mobile。
 
-- 「完整整合」  可讓 SEP Mobile 向 Intune 報告裝置風險和安全性事件詳細資料。
+- 「完整整合」可讓 SEP Mobile 向 Intune 報告裝置風險和安全性事件詳細資料。
 
 ## <a name="sample-scenarios"></a>範例案例
 
@@ -96,7 +96,7 @@ Intune 支援兩種與 SEP Mobile 整合的模式：
 
 ### <a name="control-access-based-on-threat-to-network"></a>依據對網路的威脅性來控制存取
 
-偵測網路中的「攔截式攻擊」  等威脅，並根據裝置風險保護對 Wi-Fi 網路的存取。
+偵測網路中的「攔截式攻擊」等威脅，並根據裝置風險保護對 Wi-Fi 網路的存取。
 
 *封鎖透過 Wi-Fi 的網路存取︰*
 
@@ -106,9 +106,9 @@ Intune 支援兩種與 SEP Mobile 整合的模式：
 
 ![補救後授與存取](./media/skycure-mobile-threat-defense-connector/symantec-arch-4.png)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>根據網路威脅來控制 SharePoint Online 的存取權
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>依據對網路的威脅來控制對 SharePoint Online 的存取
 
-偵測網路中的「攔截式攻擊」  等威脅，並根據裝置風險防止對公司檔案進行同步處理。
+偵測網路中的「攔截式攻擊」等威脅，並根據裝置風險防止對公司檔案進行同步處理。
 
 *偵測到網路威脅時封鎖 SharePoint Online：*
 

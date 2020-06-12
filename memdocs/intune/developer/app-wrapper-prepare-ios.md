@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 06/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 424778a86ebf3bac750e17359204ef6be3aaa71c
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 69940fc8e3f495a1738f2b7b4c6769e431821f30
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166037"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436800"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>使用 Intune App Wrapping Tool 準備應用程式保護原則的 iOS 應用程式
 
@@ -73,17 +73,17 @@ ms.locfileid: "84166037"
 
 1. 前往 [Apple Developer Enterprise Program 網站](https://developer.apple.com/programs/enterprise/)。
 
-2. 按一下頁面右上方的 [註冊]  。
+2. 按一下頁面右上方的 [註冊]。
 
-3. 閱讀註冊所需項目的檢查清單。 按一下頁面底部的 [Start Your Enrollment]\(開始註冊)  。
+3. 閱讀註冊所需項目的檢查清單。 按一下頁面底部的 [Start Your Enrollment]\(開始註冊)。
 
-4. 使用組織的 Apple 識別碼**登入**。 如果您沒有 Apple 識別碼，請按一下 [Create Apple ID]\(建立 Apple 識別碼)  。
+4. 使用組織的 Apple 識別碼**登入**。 如果您沒有 Apple 識別碼，請按一下 [Create Apple ID]\(建立 Apple 識別碼)。
 
-5. 選取您的 [實體類型]  ，然後按一下 [繼續]  。
+5. 選取您的 [實體類型]，然後按一下 [繼續]。
 
-6. 使用您組織的資訊來填寫表單。 按一下 [繼續]  。 Apple 此時會連絡您，確認您已獲授權可註冊您的組織。
+6. 使用您組織的資訊來填寫表單。 按一下 [繼續] 。 Apple 此時會連絡您，確認您已獲授權可註冊您的組織。
 
-7. 驗證之後，請按一下 [Agree to License]\(同意授權)  。
+7. 驗證之後，請按一下 [Agree to License]\(同意授權)。
 
 8. 同意授權之後，即可透過**購買和啟動程式**來完成。
 
@@ -93,24 +93,24 @@ ms.locfileid: "84166037"
 
 1. 前往 [Apple Developer 入口網站](https://developer.apple.com/)。
 
-2. 按一下頁面右上方的 [帳戶]  。
+2. 按一下頁面右上方的 [帳戶]。
 
 3. 使用組織 Apple 識別碼**登入**。
 
-4. 按一下 [Certificates, IDs & Profiles]\(憑證、識別碼和設定檔)  。
+4. 按一下 [Certificates, IDs & Profiles]\(憑證、識別碼和設定檔)。
 
    ![Apple 開發人員入口網站 - 憑證、識別碼與設定檔](./media/app-wrapper-prepare-ios/iOS-signing-cert-1.png)
 
 5. 按一下 [裝置] ![Apple Developer 入口網站加號](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) (右上角) 來新增 iOS 憑證。
 
-6. 選擇在 [Production] \(生產)  下建立 [In-House and Ad Hoc] \(內部和特定)  憑證。
+6. 選擇在 [Production] \(生產) 下建立 [In-House and Ad Hoc] \(內部和特定) 憑證。
 
    ![選取內部和特定憑證](./media/app-wrapper-prepare-ios/iOS-signing-cert-3.png)
 
    >[!NOTE]
    >如果不打算散發應用程式，而只想要在內部進行測試，您可以使用 iOS 應用程式開發憑證，而不是生產環境憑證。 如果您使用開發憑證，請確定行動佈建設定檔參考應用程式安裝所在的裝置。
 
-7. 按一下頁面底部的 [下一步]  。
+7. 按一下頁面底部的 [下一步]。
 
 8. 閱讀如何在 macOS 電腦上使用金鑰鏈存取應用程式建立**憑證簽署要求 (CSR)** 的指示。
 
@@ -118,7 +118,7 @@ ms.locfileid: "84166037"
 
 9. 請遵循上方的指示來建立憑證簽署要求。 在 macOS 電腦上，啟動**金鑰鏈存取**應用程式。
 
-10. 在畫面頂端的 macOS 功能表上，移至 [Keychain Access]\(金鑰鏈存取) > [Certificate Assistant]\( 憑證助理) > [Request a Certificate From a Certificate Authority]\(向憑證授權單位要求憑證)  。  
+10. 在畫面頂端的 macOS 功能表上，移至 [Keychain Access]\(金鑰鏈存取) > [Certificate Assistant]\( 憑證助理) > [Request a Certificate From a Certificate Authority]\(向憑證授權單位要求憑證)。  
 
     ![在金鑰鏈存取中向憑證授權單位要求憑證](./media/app-wrapper-prepare-ios/iOS-signing-cert-5.png)
 
@@ -126,7 +126,7 @@ ms.locfileid: "84166037"
 
     ![輸入您所要求的憑證資訊](./media/app-wrapper-prepare-ios/iOS-signing-cert-6.png)
 
-12. 返回 Apple Developer 站台。 按一下 [繼續]  。 然後上傳 CSR 檔案。
+12. 返回 Apple Developer 站台。 按一下 [繼續] 。 然後上傳 CSR 檔案。
 
 13. Apple 會產生您的簽署憑證。 將它下載並儲存到 macOS 電腦上的易記位置。
 
@@ -134,11 +134,11 @@ ms.locfileid: "84166037"
 
 14. 按兩下您剛剛下載的憑證，以將憑證新增至金鑰鏈。
 
-15. 再次開啟**金鑰鏈存取**。 在右上方搜尋列中搜尋憑證的名稱，以找到憑證。 以滑鼠右鍵按一下項目來顯示功能表，然後按一下 [Get Info]\(取得資訊)  。 在範例畫面中，我們會使用開發憑證，而不是生產環境憑證。
+15. 再次開啟**金鑰鏈存取**。 在右上方搜尋列中搜尋憑證的名稱，以找到憑證。 以滑鼠右鍵按一下項目來顯示功能表，然後按一下 [Get Info]\(取得資訊)。 在範例畫面中，我們會使用開發憑證，而不是生產環境憑證。
 
     ![將憑證新增至金鑰鏈](./media/app-wrapper-prepare-ios/iOS-signing-cert-8.png)
 
-16. 隨即出現參考視窗。 捲動到底部，並查看 [指紋]  標籤下方。 複製 **SHA1** 字串 (模糊化)，作為 App Wrapping Tool 之 "-c" 的引數。
+16. 隨即出現參考視窗。 捲動到底部，並查看 [指紋] 標籤下方。 複製 **SHA1** 字串 (模糊化)，作為 App Wrapping Tool 之 "-c" 的引數。
 
     ![iPhone 資訊 - SHA1 指紋字串](./media/app-wrapper-prepare-ios/iOS-signing-cert-9.png)
 
@@ -146,15 +146,15 @@ ms.locfileid: "84166037"
 
 1. 返回 [Apple Developer 帳戶入口網站](https://developer.apple.com/account/)，並使用組織 Apple 識別碼**登入**。
 
-2. 按一下 [Certificates, IDs & Profiles]\(憑證、識別碼和設定檔)  。
+2. 按一下 [Certificates, IDs & Profiles]\(憑證、識別碼和設定檔)。
 
 3. 按一下 [裝置] ![Apple Developer 入口網站加號](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) (右上角) 來新增 iOS 佈建設定檔。
 
-4. 選擇在 [Distribution]\(發佈)  下建立 [In House]\(內部)  佈建設定檔。
+4. 選擇在 [Distribution]\(發佈) 下建立 [In House]\(內部) 佈建設定檔。
 
    ![選取內部佈建設定檔](./media/app-wrapper-prepare-ios/iOS-provisioning-profile-1.png)
 
-5. 按一下 [繼續]  。 一定要將先前產生的簽署憑證連結至佈建設定檔。
+5. 按一下 [繼續] 。 一定要將先前產生的簽署憑證連結至佈建設定檔。
 
 6. 遵循將設定檔 (副檔名為 .mobileprovision) 下載至 macOS 電腦的步驟。
 
@@ -166,7 +166,7 @@ ms.locfileid: "84166037"
 
 2. 按兩下 **Microsoft Intune App Wrapping Tool for iOS.dmg**。 終端使用者授權合約 (EULA) 視窗隨即出現。 請仔細閱讀文件。
 
-3. 選擇 [同意]  接受 EULA，將封裝掛接到您的電腦。
+3. 選擇 [同意] 接受 EULA，將封裝掛接到您的電腦。
 
 ## <a name="run-the-app-wrapping-tool"></a>執行應用程式包裝工具
 
@@ -293,7 +293,7 @@ ms.locfileid: "84166037"
 使用下列步驟，在疑難排解期間取得已包裝應用程式的記錄檔。
 
 1. 移至您裝置上的 iOS 設定應用程式，並選取您的 LOB 應用程式。
-2. 將 [診斷主控台]  切換為 [開啟]  。
+2. 將 [診斷主控台] 切換為 [開啟]。
 3. 啟動您的 LOB 應用程式。
 4. 按一下「開始使用」連結。
 5. 您現在可以透過電子郵件來共用記錄檔，或者將記錄檔複製到 OneDrive 位置。
@@ -319,17 +319,17 @@ App Wrapping Tool for iOS 必須滿足此工具的一些需求，才能發揮全
 |---------------|-----------|
 |iOS 佈建設定檔|加入設定檔之前，請先確定其有效性。 App Wrapping Tool 在處理 iOS 應用程式期間，不會檢查佈建設定檔過期與否。 如果指定了過期的佈建設定檔，應用程式包裝工具會包含過期的佈建設定檔，而您將不會知道有問題，直到在 iOS 裝置上安裝應用程式失敗。|
 |iOS 簽署憑證|指定簽署憑證之前，請先確定其有效性。 工具在處理 iOS 應用程式時，不會檢查憑證是否已過期。 如果提供已過期憑證的雜湊，則工具會處理並簽署應用程式，但它無法在裝置上安裝。<br /><br />請確定為簽署已包裝應用程式提供的憑證，在佈建設定檔中有相符的項目。 工具不會驗證針對為簽署包裝應用程式所提供的憑證，佈建設定檔是否有相符的項目。|
-|驗證|裝置必須有 PIN，加密才能運作。 在部署已包裝應用程式的裝置上，點選裝置上的狀態列，將要求使用者使用工作或學校帳戶重新登入。 包裝應用程式中的預設原則為「重新啟動時驗證」  。 iOS 在處理任何外部通知 (例如來電) 時，會結束並重新啟動應用程式。
+|驗證|裝置必須有 PIN，加密才能運作。 在部署已包裝應用程式的裝置上，點選裝置上的狀態列，將要求使用者使用工作或學校帳戶重新登入。 包裝應用程式中的預設原則為「重新啟動時驗證」。 iOS 在處理任何外部通知 (例如來電) 時，會結束並重新啟動應用程式。
 
 ## <a name="setting-app-entitlements"></a>設定應用程式權利
 
-包裝應用程式之前，您可以授與*權利*，將超過應用程式一般所能執行的其他權限及功能提供給應用程式。 *權利檔案*還可在程式碼簽署期間，用於指定應用程式內的特殊權限 (例如共用金鑰鏈的存取權)。 某些稱為*功能*的應用程式服務，會在應用程式開發期間於 Xcode 內啟用。 啟用後，您的權利檔案中會反映這些功能。 如需權利和功能的詳細資訊，請參閱 iOS Developer Library 中的[新增功能](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html)。 如需支援功能的完整清單，請參閱[支援的功能](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html)。
+包裝應用程式之前，您可以授與[「權利」](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html)，提供此應用程式超過一般應用程式可執行的其他權限及功能。 *權利檔案*還可在程式碼簽署期間，用於指定應用程式內的特殊權限 (例如共用金鑰鏈的存取權)。 某些稱為*功能*的應用程式服務，會在應用程式開發期間於 Xcode 內啟用。 啟用後，您的權利檔案中會反映這些功能。 如需權利和功能的詳細資訊，請參閱 iOS Developer Library 中的[新增功能](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html)。 如需支援功能的完整清單，請參閱[支援的功能](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html)。
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>App Wrapping Tool for iOS 的支援功能
 
 |功能|說明|建議的指引|
 |--------------|---------------|------------------------|
-|應用程式群組|使用 [應用程式群組] 可以讓多個應用程式同時存取共用容器，並允許應用程式之間進行其他處理序之間的通訊。<br /><br />若要啟用應用程式群組，請開啟 [功能]  窗格，然後按一下 [應用程式群組]  中的 [開啟]  。 您可以新增應用程式群組或選取現有的應用程式群組。|使用應用程式群組時，請使用反向 DNS 標記法：<br /><br />*group.com.companyName.AppGroup*|
+|應用程式群組|使用 [應用程式群組] 可以讓多個應用程式同時存取共用容器，並允許應用程式之間進行其他處理序之間的通訊。<br /><br />若要啟用應用程式群組，請開啟 [功能] 窗格，然後按一下 [應用程式群組] 中的 [開啟]。 您可以新增應用程式群組或選取現有的應用程式群組。|使用應用程式群組時，請使用反向 DNS 標記法：<br /><br />*group.com.companyName.AppGroup*|
 |背景模式|啟用 [背景模式] 可讓您的 iOS 應用程式繼續在背景中執行。||
 |資料保護|[資料保護] 為使用 iOS 應用程式儲存在磁碟上的檔案，增加一層安全性。 [資料保護] 使用特定裝置上的現有內建加密硬體，以加密格式將檔案儲存在磁碟上。 您必須佈建應用程式，才能使用 [資料保護]。||
 |在應用程式內購買|[在應用程式內購買] 讓您可以連線到市集，並安全地處理使用者的付款，形同將市集直接內嵌在您的應用程式中。 您可以使用 [在應用程式內購買] 為增強功能或您應用程式可用的其他內容收款。||
@@ -342,7 +342,7 @@ App Wrapping Tool for iOS 必須滿足此工具的一些需求，才能發揮全
 
 1. 啟用您應用程式中的功能：
 
-    a.  在 Xcode 中，移至您的應用程式的目標，然後按一下 [功能]  。
+    a.  在 Xcode 中，移至您的應用程式的目標，然後按一下 [功能]。
 
     b.  開啟適當的功能。 如需每項功能及如何決定正確值的詳細資訊，請參閱 [iOS Developer Library 中的新增功能](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html)。
 

@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 12fee834e4f384cc180658a8e58cf3920a907831
-ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
+ms.openlocfilehash: fda1e877f8e0bc211b36e288af13de204305cc5a
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153443"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455033"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>關於 Configuration Manager 中的用戶端安裝參數和屬性
 
@@ -676,21 +676,19 @@ Configuration Manager 預設會啟用記錄。
 
 範例：`CCMSetup.exe SMSCONFIGSOURCE=RP`
 
-<!--
-### SMSDIRECTORYLOOKUP
+### <a name="smsdirectorylookup"></a>SMSDIRECTORYLOOKUP
 
-Specifies whether the client can use Windows Internet Name Service (WINS) to find a management point that accepts HTTP connections. Clients use this method when they can't find a management point in Active Directory Domain Services or in DNS.  
+指定用戶端是否可以使用 Windows 網際網路名稱服務 (WINS) 尋找接受 HTTP 連線的管理點。 用戶端在 Active Directory 網域服務或 DNS 中找不到管理點時，會使用此方法。
 
- This property doesn't affect whether the client uses WINS for name resolution.  
+此內容不會影響用戶端是否使用 WINS 進行名稱解析。
 
- You can configure two different modes for this property:  
+您可以為此內容設定兩個不同的模式：
 
--   NOWINS: This value is the most secure setting for this property and prevents clients from finding a management point in WINS. When you use this setting, clients must have an alternative method to locate a management point on the intranet, such as Active Directory Domain Services or by using DNS publishing.  
+- **NOWINS**：這個值是此屬性最安全的設定。 可防止用戶端在 WINS 中尋找管理點。 當您使用此設定時，用戶端必須使用替代方法來找出內部網路的管理點。 例如，Active Directory Domain Services 或 DNS 發行。
 
--   WINSSECURE (default): In this mode, a client that uses HTTP communication can use WINS to find a management point. However, the client must have a copy of the trusted root key before it can successfully connect to the management point. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
+- **WINSSECURE** (預設)：在此模式中，使用 HTTP 通訊的用戶端可以使用 WINS 來尋找管理點。 不過，用戶端必須擁有受信任根金鑰的複本，才能順利與管理點連線。 如需詳細資訊，請參閱[規劃受信任的根金鑰](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK)。
 
-Example: `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`  
--->
+範例：`CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`  
 
 ### <a name="smsmp"></a>SMSMP
 

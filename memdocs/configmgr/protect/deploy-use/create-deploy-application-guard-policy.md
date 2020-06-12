@@ -1,8 +1,8 @@
 ---
 title: 管理應用程式防護原則
 titleSuffix: Configuration Manager
-description: 了解如何建立及部署 Windows Defender 應用程式防護原則
-ms.date: 07/26/2019
+description: 了解如何建立及部署 Microsoft Defender 應用程式防護原則
+ms.date: 06/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,39 +10,39 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b691004742def4c126ba82b07cad1651cbe822f8
-ms.sourcegitcommit: 13ceb4e1cc8c2a10bfa199e301bf9bada8ceb268
+ms.openlocfilehash: 1189f8c89215bc228c533a88f38f5ae59b6855ee
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82923434"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454931"
 ---
-# <a name="create-and-deploy-windows-defender-application-guard-policy"></a>建立及部署 Windows Defender 應用程式防護原則
+# <a name="create-and-deploy-microsoft-defender-application-guard-policy"></a>建立及部署 Microsoft Defender 應用程式防護原則
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 <!-- 1351960 -->  
-您可以使用 Configuration Manager Endpoint Protection，建立及部署 [Windows Defender 應用程式防護原則 (Application Guard)](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview)。 這些原則可在作業系統其他部分所無法存取的安全隔離容器中開啟未受信任的網站，來協助保護您的使用者。
+您可以使用 Configuration Manager Endpoint Protection，建立及部署 [Microsoft Defender 應用程式防護 (應用程式防護)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview) (機器翻譯) 原則。 這些原則可在作業系統其他部分所無法存取的安全隔離容器中開啟未受信任的網站，來協助保護您的使用者。
 
 ## <a name="prerequisites"></a>先決條件
 
-若要建立及部署 Windows Defender 應用程式防護原則，必須使用 Windows 10 Fall Creators Update (1709)。 您必須使用[網路隔離原則](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard#network-isolation-settings) \(部分機器翻譯\) 設定要部署原則的 Windows 10 裝置。 如需詳細資訊，請參閱 [Windows Defender Application Guard overview](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview) (Windows Defender 應用程式防護概觀)。
+若要建立及部署 Microsoft Defender 應用程式防護原則，您必須使用 Windows 10 Fall Creators Update (1709)。 您必須使用[網路隔離原則](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard#network-isolation-settings) \(部分機器翻譯\) 設定要部署原則的 Windows 10 裝置。 如需詳細資訊，請參閱 [Microsoft Defender 應用程式防護概述](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview) (機器翻譯)。
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>建立原則並瀏覽可用的設定
 
-1. 在 Configuration Manager 主控台中，選擇 [資產與相容性]  。
-2. 在 [資產與合規性]  工作區中，選擇 [概觀]   > [Endpoint Protection]   > [Windows Defender 應用程式防護]  。
-3. 在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立 Windows Defender 應用程式防護原則]  。
-4. 您可以參考[文章](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard) \(英文\)，瀏覽並設定可用的設定。 Configuration Manager 可讓您設定特定的原則設定：
+1. 在 Configuration Manager 主控台中，選擇 [資產與相容性]。
+2. 在 [資產與合規性] 工作區中，選擇 [概觀] > [Endpoint Protection] > [Windows Defender 應用程式防護]。
+3. 在 [首頁] 索引標籤的 [建立] 群組中，按一下 [建立 Windows Defender 應用程式防護原則]。
+4. 您可以參考[文章](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard) \(英文\)，瀏覽並設定可用的設定。 Configuration Manager 可讓您設定特定的原則設定：
    - [主機互動設定](#bkmk_HIS)
    - [應用程式行為](#bkmk_ABS)
    - [檔案管理](#bkmk_FM)
-5. 在 [網路定義]  頁面上指定公司身分識別，以及定義您的公司網路界限。
+5. 在 [網路定義] 頁面上指定公司身分識別，以及定義您的公司網路界限。
 
     > [!NOTE]
     > Windows 10 電腦只會在用戶端上儲存一份網路隔離清單。 您可以建立兩種不同的網路隔離清單，並將它們部署至用戶端：
     >
     >  - 一個來自 Windows 資訊保護
-    >  - 一個來自 Windows Defender 應用程式防護
+    >  - 一個來自 Microsoft Defender 應用程式防護
     >
     > 如果您兩個原則都部署，則這些網路隔離清單必須相符。 若您部署的清單，與同一部用戶端不符，部署將會失敗。 如需詳細資訊，請參閱 [Windows 資訊保護文件](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)。
 
@@ -50,7 +50,7 @@ ms.locfileid: "82923434"
 
 ### <a name="host-interaction-settings"></a><a name="bkmk_HIS"></a> 主機互動設定
 
-設定主機裝置和應用程式防護容器之間的互動。 在 Configuration Manager 1802 版之前，應用程式行為和主機互動都位在 [設定]  索引標籤底下。
+設定主機裝置和應用程式防護容器之間的互動。 在 Configuration Manager 1802 版之前，應用程式行為和主機互動都位在 [設定] 索引標籤底下。
 
 - **剪貼簿**：在 Configuration Manager 1802 之前位在設定底下
   - 允許的內容類型
@@ -68,7 +68,7 @@ ms.locfileid: "82923434"
 
 ### <a name="application-behavior-settings"></a><a name="bkmk_ABS"></a> 應用程式行為設定
 
-設定應用程式防護工作階段內的應用程式行為。 在 Configuration Manager 1802 版之前，應用程式行為和主機互動都位在 [設定]  索引標籤底下。
+設定應用程式防護工作階段內的應用程式行為。 在 Configuration Manager 1802 版之前，應用程式行為和主機互動都位在 [設定] 索引標籤底下。
 
 - **內容：**
   - 企業網站可載入非企業內容，例如協力廠商外掛程式。
@@ -78,7 +78,7 @@ ms.locfileid: "82923434"
 
 ### <a name="file-management"></a><a name="bkmk_FM"></a> 檔案管理
 <!--3555858-->
-自 Configuration Manager 1906 版起加入了一項原則設定，可以讓使用者信任在應用程式防護中正常開啟的檔案。 成功完成時，檔案會在主機裝置上 (而非在應用程式防護中) 開啟。 如需應用程式防護原則的詳細資訊，請參閱[設定 Windows Defender 應用程式防護設定](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard)\(部分內容為機器翻譯\)。
+自 Configuration Manager 1906 版起加入了一項原則設定，可以讓使用者信任在應用程式防護中正常開啟的檔案。 成功完成時，檔案會在主機裝置上 (而非在應用程式防護中) 開啟。 如需應用程式防護原則的詳細資訊，請參閱[設定 Microsoft Defender 應用程式防護原則設定](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard) (機器翻譯)。
 
 - **允許使用者信任在 Windows Defender 應用程式防護中開啟的檔案** - 允許使用者將檔案標示為信任。 檔案一經信任，就會在主機上開啟，而不是在應用程式防護中開啟。 適用於執行 Windows 10 1809 版或更新版本的用戶端。
   - **禁止：** 不允許使用者將檔案標示為受信任 (預設)。
@@ -94,9 +94,14 @@ ms.locfileid: "82923434"
   - 在對應中找不到 FileTrustCriteria_condition
   - 在摘要中找不到 FileTrustCriteria_condition
 
-若要編輯應用程式防護的設定，請在 [資產與相容性]  工作區中，展開 [Endpoint Protection]  ，然後按一下 [Windows Defender 應用程式防護]  節點。 以滑鼠右鍵按一下您要編輯的原則，然後選取 [屬性]  。
+若要編輯應用程式防護的設定，請在 [資產與相容性] 工作區中，展開 [Endpoint Protection]，然後按一下 [Windows Defender 應用程式防護] 節點。 以滑鼠右鍵按一下您要編輯的原則，然後選取 [屬性]。
+
+## <a name="known-issues"></a>已知問題
+
+執行 Windows 10 2004 版的裝置會在 Microsoft Defender 應用程式防護檔案信任準則的合規性報告中顯示失敗。 發生此問題的原因是 Windows 10 2004 版的 WMI 類別 `MDM_WindowsDefenderApplicationGuard_Settings01` 移除了某些子類別。 所有其他的 Microsoft Defender 應用程式防護設定仍然適用，只有檔案信任準則會失敗。 目前沒有可略過此錯誤的因應措施。 <!--7099444,5946790-->
 
 ## <a name="next-steps"></a>後續步驟
 
-若要深入了解 Windows Defender 應用程式防護：[Windows Defender 應用程式防護概觀](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/wd-app-guard-overview) \(部分機器翻譯\)。
-[Windows Defender 應用程式防護常見問題集](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/faq-wd-app-guard) \(英文\)。
+如需 Microsoft Defender 應用程式防護的詳細資訊，請參閱
+ - [Microsoft Defender 應用程式防護概述](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview) (機器翻譯)。
+- [Microsoft Defender 應用程式防護常見問題](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard) (機器翻譯)。

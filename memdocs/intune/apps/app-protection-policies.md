@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 06/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91ca1e8a710e13e393af5bb3723ca1086e37887d
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: abd34733bd27ec150a92bf20cecbf7edc02c2bd6
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988601"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330996"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>如何建立及部署應用程式保護原則
 
@@ -35,13 +35,13 @@ ms.locfileid: "83988601"
 
 無論裝置是否由 Intune 管理，都能對裝置上執行的應用程式套用應用程式防護原則。 如需用程式保護原則運作方式，以及 Intune 應用程式保護原則支援之案例的詳細描述，請參閱[應用程式保護原則概觀](app-protection-policy.md)。
 
-應用程式保護原則 (APP) 中可用的選擇可讓組織針對其特定需求量身訂作保護方案。 針對一些組織，實作完整案例需要哪種原則設定可能不是那麼明顯。 為了協助組織排定行動用戶端端點強化的優先順序，Microsoft 引進了適用於 iOS 與 Android 行動裝置應用程式管理的應用程式資料保護架構分類法。
+應用程式保護原則 (APP) 中可用的選擇可讓組織針對其特定需求量身訂作保護方案。 針對一些組織，實作完整案例需要哪種原則設定可能不是那麼明顯。 為了協助組織排定行動用戶端端點強化的優先順序，Microsoft 引進了適用於 iOS 與 Android 行動裝置應用程式管理的 APP 資料保護架構分類法。
 
 應用程式資料保護架構會組織成三個不同的設定層級，每個層級都以前一層為基礎而建置：
 
-- **企業基本資料保護** (層級1) 可確保應用程式使用 PIN 來保護並加密，並執行選擇性抹除作業。 針對 Android 裝置，此層級會驗證 Android 裝置證明。 這是一種入門級設定，可在 Exchange Online 信箱原則中提供類似的資料保護控制，並將 IT 與使用者人口引進 APP。
-- **企業增強的資料保護** (層級2) 引進應用程式資料洩露防護機制與最低 OS 需求。 此設定適用於大部分存取公司或學校資料的行動使用者。
-- **企業高資料保護** (層級3) 引進進階資料保護機制、增強的 PIN 設定，以及 APP 行動威脅防禦。 對於存取高風險資料的使用者而言，這是理想的設定。
+- **企業基本資料保護** (層級 1) 可確保應用程式使用 PIN 來保護並加密，並執行選擇性抹除作業。 針對 Android 裝置，此層級會驗證 Android 裝置證明。 這是一種入門級設定，可在 Exchange Online 信箱原則中提供類似的資料保護控制，並將 IT 與使用者人口引進 APP。
+- **企業增強的資料保護** (層級 2) 引進 APP 資料洩露防護機制與最低 OS 需求。 此設定適用於大部分存取公司或學校資料的行動使用者。
+- **企業高資料保護** (層級 3) 引進進階資料保護機制、增強的 PIN 設定，以及 APP 行動威脅防禦。 對於存取高風險資料的使用者而言，這是理想的設定。
 
 若要查看必須保護之每個設定層級與最低應用程式的特定建議，請參閱[使用應用程式保護原則的資料保護架構](app-protection-framework.md)。
 
@@ -51,7 +51,7 @@ ms.locfileid: "83988601"
 
 ## <a name="app-protection-policies-for-iosipados-and-android-apps"></a>適用於 iOS/iPadOS 和 Android 應用程式的應用程式保護原則
 
-當您建立適用於 iOS/iPadOS 和 Android 應用程式的應用程式保護原則時，您會遵循會產生新應用程式保護原則的新式 Intune 程序流程。
+當您建立適用於 iOS/iPadOS 和 Android 應用程式的應用程式保護原則時，您會遵循會產生新應用程式保護原則的新式 Intune 程序流程。 如需建立適用於 Windows 應用程式的應用程式保護原則相關資訊，請參閱[使用 Intune 建立及部署 Windows 資訊保護 (WIP) 原則](../apps/windows-information-protection-policy-create.md)。
 
 ### <a name="create-an-iosipados-or-android-app-protection-policy"></a>建立 iOS/iPadOS 或 Android 應用程式保護原則
 

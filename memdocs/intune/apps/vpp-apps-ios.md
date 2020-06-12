@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 06/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c145a4b7fa150a9d42c9bf20eca4f85f6356acf8
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 2e386d382ceb785d886dfb931bb26222bd82b1a0
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988519"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347316"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>如何使用 Microsoft Intune 管理透過 Apple 大量採購方案購買的 iOS 與 macOS 應用程式
 
@@ -180,7 +180,13 @@ Microsoft Intune 可藉由下列方式協助您管理透過此方案所購買的
 
 ## <a name="renewing-app-licenses"></a>更新應用程式授權
 
-您可以透過從 Apple Business Manager 或 Apple School Manager 下載新的權杖並在 Intune 中更新現有權杖，來更新 Apple VPP 權杖。
+您可以從 [Apple Business Manager](https://business.apple.com/) 或 [Apple School Manager](https://school.apple.com/) 下載新的權杖，然後更新 Intune 中的現有權杖，藉此更新 Apple VPP 權杖。 
+
+若要更新 Apple VPP 權杖，請使用下列步驟：
+
+1. 瀏覽至 [Apple Business Manager](https://business.apple.com/) 或 [Apple School Manager](https://school.apple.com/)。
+2. 選取 [設定] > [應用程式和電子書] > [我的伺服器權杖]，在 **Apple Business (或 School) Manager** 中下載新的權杖。
+3. 選取 [租用戶系統管理] > [連接器與權杖] > [Apple VPP 權杖]，更新 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)的權杖。 然後，手動上傳權杖。
 
 ## <a name="deleting-a-vpp-app"></a>刪除 VPP 應用程式
 
@@ -190,7 +196,7 @@ Microsoft Intune 可藉由下列方式協助您管理透過此方案所購買的
 
 您可以使用指派給 Intune 中自訂系統管理員角色的權限，獨立控制 Apple VPP 權杖和 VPP 應用程式的存取權。
 
-* 若要允許 Intune 自訂角色管理 [應用程式] > [Apple VPP 權杖] 底下的 Apple VPP 權杖，請指派 [受管理的應用程式] 權限。
+* 若要允許 Intune 自訂角色以管理 Apple VPP 權杖，請在 Microsoft 端點管理員系統管理中心內，選取 [租用戶系統管理] > [連接器與權杖] > [Apple VPP 權杖]，指派**受控應用程式**的權限。
 * 若要允許 Intune 自訂角色管理 [應用程式] > [所有應用程式] 下使用 iOS/iPadOS VPP 權杖購買的應用程式，請指派 [行動應用程式] 權限。 
 
 ## <a name="additional-information"></a>其他資訊
