@@ -68,6 +68,8 @@
       href: deploy-use/optimize-windows-10-update-delivery.md
     - name: 管理適用於 Windows 10 更新的快速安裝檔案
       href: deploy-use/manage-express-installation-files-for-windows-10-updates.md
+    - name: 管理 Surface 驅動程式
+      href: deploy-use/surface-drivers.md
     - name: 與 Windows 10 中的 Windows Update for Business 整合
       href: deploy-use/integrate-windows-update-for-business-windows-10.md
     - name: 協力廠商軟體更新

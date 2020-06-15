@@ -56,7 +56,7 @@
       href: deploy-use/create-remote-connection-profiles.md
     - name: 將 Windows 裝置升級至新版本
       href: deploy-use/upgrade-windows-version.md
-    - name: 設定 Microsoft Edge 設定
+    - name: 進行 Microsoft Edge 舊版設定
       href: deploy-use/browser-profiles.md
     - name: 監視合規性設定
       href: deploy-use/monitor-compliance-settings.md
