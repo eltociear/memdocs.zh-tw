@@ -78,6 +78,9 @@
     - name: macOS 上的喜好設定檔案
       href: preference-file-settings-macos.md
       displayName: 'property list files, plist'
+    - name: macOS 上的有線網路
+      href: wired-networks-configure.md
+      displayName: 802.1x
     - name: Zebra 裝置上的行動性延伸模組
       displayName: 'mx, android, stagenow'
       items:
@@ -183,6 +186,8 @@
               href: vpn-settings-macos.md
             - name: Wi-Fi
               href: wi-fi-settings-macos.md
+            - name: 有線網路
+              href: wired-network-settings-macos.md
         - name: Windows 10 及更新版本
           items:
             - name: 自訂
