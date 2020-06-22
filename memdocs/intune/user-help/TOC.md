@@ -83,7 +83,7 @@
 ### [使用公司入口網站重設您的裝置會發生什麼情況？](effects-of-device-reset-company-portal-ios.md)
 ### [將裝置取消註冊](unenroll-your-device-from-intune-ios.md)
 #### [如果將裝置取消註冊，會發生什麼情況？](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
-### [手動同步您的裝置](sync-your-device-manually-ios.md)
+### [手動同步 iOS 裝置](sync-your-device-manually-ios.md)
 
 ### [修正 iOS 的常見問題](troubleshoot-your-device-iOS.md)
 #### [重新連接遭盜用的 iOS 裝置](how-to-reconnect-a-compromised-ios-device.md)
@@ -115,6 +115,7 @@
 ### [註冊 macOS 裝置](enroll-your-device-in-intune-macos-cp.md)
 ### [註冊您組織提供的 macOS 裝置](enroll-company-device-macos.md)  
 ### [取消註冊 macOS 裝置](unenroll-your-device-from-intune-macos.md)  
+### [手動同步 macOS 裝置](sync-your-device-manually-macos.md)
 ### [修正 macOS 的常見問題](troubleshoot-your-device-macos.md)
 #### [尚不支援我的 macOS 版本](your-macos-version-isnt-yet-supported.md)
 #### [更新 macOS 裝置](you-need-to-update-your-macos-device.md)
