@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 361f0ff36b78daddd08954953744f3f95191d4f3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5c4b06e8c81e04e067156929dfe7637cf04fb9d1
+ms.sourcegitcommit: bc8c9d957dac46d95070c433d3a83408e5e48d82
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990607"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289456"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>使用 Windows Autopilot 在 Intune 中註冊 Windows 裝置  
 Windows Autopilot 簡化了在 Intune 中註冊裝置的程序。 建置和維護自訂的作業系統映像需要許多時間。 您也可能會花時間將這些自訂的作業系統映像套用至新的裝置，以在送交使用者之前，先將它們做好使用的準備。 使用 Microsoft Intune 和 Autopilot，您可以將新的裝置提供給使用者而不需要建置、維護及套用自訂作業系統映像至裝置。 當您使用 Intune 來管理 Autopilot 裝置時，可以在裝置註冊之後管理原則、設定檔、應用程式等。 如需優點、案例和必要條件的概觀，請參閱 [Windows Autopilot 概觀](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot)。
@@ -83,7 +83,7 @@ Autopilot 部署類型有四種：
 3. 如果您在上一步中針對 [成員資格類型] 選擇 [已指派] ，請在 [群組] 刀鋒視窗中選擇 [成員] 並將 Autopilot 裝置新增至群組。
     尚未註冊的 Autopilot 裝置為裝置名稱與序號相同的裝置。
 4. 如果針對上述的 [成員資格類型] 選擇 [動態裝置]，請在 [群組] 刀鋒視窗中選擇 [動態裝置成員] ，然後在 [進階規則] 方塊中輸入下列任意一項代碼。 這些規則只會收集 Autopilot 裝置，因為其目標屬性僅由 Autopilot 裝置所擁有。 根據非 Autopilot 屬性建立群組，並無法保證包含在該群組中的裝置實際上會註冊至 Autopilot。
-    - 若要建立包含您所有 Autopilot 裝置的群組，請輸入：`(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`
+    - 若要建立包含您所有 Autopilot 裝置的群組，請輸入：`(device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))`
     - Intune 的群組標籤欄位會對應至 Azure AD 裝置上的 OrderID 屬性。 若要建立包含具特定群組標籤 (Azure AD 裝置 OrderID) 之所有 Autopilot 裝置的群組，您必須輸入：`(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - 若建立的群組要包含具有特定採購單識別碼的所有 Autopilot 裝置，請鍵入：`(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
     
@@ -223,7 +223,7 @@ Autopilot 部署設定檔會用來設定 Autopilot 裝置。 您可以為每個�
 ## <a name="windows-autopilot-for-existing-devices"></a>適用於現有裝置的 Windows Autopilot
 
 您可以在透過 Configuration Manager 使用[適用於現有裝置的 Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)註冊時，以交互識別碼來將 Windows 裝置分組
-。 交互識別碼是 Autopilot 設定檔的參數。 [Azure AD 裝置屬性 enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) 會自動設為相等的 "OfflineAutopilotprofile-\<correlator ID\>"。 這會允許使用 enrollmentprofileName 屬性，根據交互識別碼建立任意 Azure AD 動態群組。
+。 交互識別碼是 Autopilot 設定檔的參數。 [Azure AD 裝置屬性 enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) 會自動設為相等的 "OfflineAutopilotprofile-\<correlator ID\>correlator ID"。 這會允許使用 enrollmentprofileName 屬性，根據交互識別碼建立任意 Azure AD 動態群組。
 
 >[!WARNING] 
 > 因為交互識別碼並未在 Intune 中預先列出，裝置可能會回報任何其希望的交互識別碼。 若使用者建立與 Autopilot 或 Apple ADE 設定檔名稱相符的交互識別碼，則裝置會新增至任何根據 enrollmentProfileName 屬性的動態 Azure AD 裝置群組。 若要避免此衝突：

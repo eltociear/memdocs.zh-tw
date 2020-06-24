@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 02/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: dagerrit
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec125e1ab58e733707adb3d9f4df304e21ffabcf
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: c43b74b6ca20fa3f140ad688be49daa928c54b5f
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764130"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85264034"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>引導式案例 - 雲端管理的新式桌面
 
@@ -126,5 +127,5 @@ Windows Autopilot 會將設定新裝置的程序自動化，因此使用者可�
 
 ## <a name="next-steps"></a>後續步驟
 
-- 若正在使用 Microsoft Defender 進階威脅偵測，則請建立 [Intune 合規性政策](../protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy)以要求 Defender 威脅分析符合合規性。
+- 若正在使用 Microsoft Defender 進階威脅偵測，則請建立 [Intune 合規性政策](../protect/advanced-threat-protection.md#create-and-assign-compliance-policy-to-set-device-risk-level)以要求 Defender 威脅分析符合合規性。
 - 建立[裝置型條件式存取原則](../protect/advanced-threat-protection.md#create-a-conditional-access-policy)以在裝置不符合 Intune 合規性時封鎖存取。

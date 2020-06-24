@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: f98d7a30d219aee63e38a63a74d8f1713deb198a
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: aa518036aa99d5de003fbc56f99748267f3cc87b
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431614"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776866"
 ---
 # <a name="firewall-policy-for-endpoint-security-in-intune"></a>Intune 端點安全性的防火牆原則
 
-使用 Intune 的端點安全性防火牆原則，為執行 macOS 和 Windows 10 的裝置設定裝置內建防火牆。 內建防火牆包括適用於 Windows 裝置的 BitLocker 以及適用於 macOS 的 FileVault。
+使用 Intune 的端點安全性防火牆原則，為執行 macOS 和 Windows 10 的裝置設定裝置內建防火牆。
 
 雖然您可以使用裝置設定的 Endpoint Protection 設定檔來設定相同的防火牆設定，但裝置組態設定檔會包含其他的設定類別。 這些其他設定與防火牆無關，而且會讓僅針對環境設定防火牆的工作變複雜。
 
