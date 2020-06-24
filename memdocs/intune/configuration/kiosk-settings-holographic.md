@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d54e02c7bb88354ec59a9a8ce780ff559377466
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: d18ea0a12f0525b71fbcb8660187af36f1148bee
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556093"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093160"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>Intune 中 Kiosk 執行模式的 Windows Holographic for Business 裝置設定
 
@@ -112,4 +112,4 @@ ms.locfileid: "83556093"
 
 [指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
 
-您也可以為 [Android](device-restrictions-android.md#kiosk)、[Android 企業](device-restrictions-android-for-work.md#dedicated-devices)及 [Windows 10 和更新版本](kiosk-settings-windows.md) 裝置建立 kiosk 設定檔。
+您也可以為 [Android](device-restrictions-android.md#kiosk)、[Android 企業](device-restrictions-android-for-work.md#device-experience)及 [Windows 10 和更新版本](kiosk-settings-windows.md) 裝置建立 kiosk 設定檔。

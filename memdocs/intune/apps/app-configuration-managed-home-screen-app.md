@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b2c804618081a21aaf9dfd70b92d65fc14a7cc7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3bcb9d86cf413407bc1e0812be4b0c9e17d0f88d
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988838"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093205"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>設定適用於 Android Enterprise 的 Microsoft Managed Home Screen 應用程式
 
@@ -34,7 +34,7 @@ Managed Home Screen 這個應用程式用於企業擁有的 Android Enterprise �
 一般而言，如果您可以透過 [裝置設定] 來進行設定，就請在該處進行。 這樣做可以節省您的時間、盡可能減少失誤，並獲得較佳的 Intune 支援體驗。 不過，有些 Managed Home Screen 設定目前僅透過 Intune 主控台中的 [應用程式設定原則]  窗格提供。 請使用這份文件了解如何使用設定設計工具或 JSON 指令碼來進行不同的設定。 
 
 > [!NOTE]
-> 目前可以 (並建議) 透過 [應用程式]  和 [裝置設定]  來設定允許列出的應用程式及釘選的 Web 連結。 如需 [裝置設定]  中會影響 Managed Home Screen 的設定完整清單，請參閱[專用裝置設定](../configuration/device-restrictions-android-for-work.md#dedicated-devices)。  
+> 目前可以 (並建議) 透過 [應用程式]  和 [裝置設定]  來設定允許列出的應用程式及釘選的 Web 連結。 如需 [裝置設定]  中會影響 Managed Home Screen 的設定完整清單，請參閱[專用裝置設定](../configuration/device-restrictions-android-for-work.md#device-experience)。  
 
 首先，巡覽至 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)並選取 [應用程式]   > [應用程式設定原則]  。 為執行 **Android** 的 [受控裝置]  新增設定原則，然後選擇 [Managed Home Screen]  作為建立關聯的應用程式。 按一下 [組態設定]  來進行其他可用的 Managed Home Screen 設定。 
 
@@ -382,7 +382,7 @@ Managed Home Screen 這個應用程式用於企業擁有的 Android Enterprise �
 Managed Home Screen 應用程式現在可讓您存取 Google 的 Android Device Policy 應用程式。 Managed Home Screen 應用程式是用於裝置的自訂啟動器，這些裝置已在 Intune 中註冊為使用多應用程式 kiosk 模式的 Android Enterprise (AE) 專用裝置。 您可以存取 Android Device Policy 應用程式，或引導使用者存取 Android Device Policy 應用程式，以用以支援和偵錯。 當裝置在 Managed Home Screen 中註冊和鎖定時，即可使用這項啟動功能。 不需要其他安裝即可使用這項功能。
 
 ## <a name="managed-home-screen-debug-screen"></a>受控主畫面偵錯畫面
-您可以按一下 [返回]  按鈕，直到顯示 [偵錯] 畫面為止 (按一下 [返回]  按鈕 15 次以上)，來存取受控主畫面的 [偵錯] 畫面。 您可以從此 [偵錯] 畫面啟動「Android 裝置原則」應用程式、檢視及上傳記錄檔，或暫停 kiosk 模式以更新裝置。 如需有關暫停 kiosk 模式的詳細資訊，請參閱 Android Enterprise [專用裝置設定](../configuration/device-restrictions-android-for-work.md#dedicated-devices)中的**離開 kiosk 模式**項目。 若要更快地存取受管理之主畫面的偵錯畫面，可以利用應用程式設定原則，將 **Enable easy access debug menu** (允許快速存取偵錯功能表) 設定為 `True`。 
+您可以按一下 [返回]  按鈕，直到顯示 [偵錯] 畫面為止 (按一下 [返回]  按鈕 15 次以上)，來存取受控主畫面的 [偵錯] 畫面。 您可以從此 [偵錯] 畫面啟動「Android 裝置原則」應用程式、檢視及上傳記錄檔，或暫停 kiosk 模式以更新裝置。 如需有關暫停 kiosk 模式的詳細資訊，請參閱 Android Enterprise [專用裝置設定](../configuration/device-restrictions-android-for-work.md#device-experience)中的**離開 kiosk 模式**項目。 若要更快地存取受管理之主畫面的偵錯畫面，可以利用應用程式設定原則，將 **Enable easy access debug menu** (允許快速存取偵錯功能表) 設定為 `True`。 
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e48ba131d97e68570f1d6cb85b285ddc3198971c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: a4f4ef6bab42f2f1b97c32a422d92247a3e564f7
+ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429754"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84680399"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>使用 Intune 來允許或限制功能的 macOS 裝置設定
 
@@ -190,7 +190,7 @@ ms.locfileid: "83429754"
 
   - **程式碼需求**：輸入應用程式或程序的程式碼簽章。
 
-    當應用程式或二進位檔是由開發人員憑證簽署時，就會建立程式碼簽章。 若要尋找指定內容，請在終端機應用程式中手動執行 `codesign` 命令：`codesign --display -r -/path/to/app/binary`。 程式碼簽章是 `=>` 後面出現的所有內容。
+    當應用程式或二進位檔是由開發人員憑證簽署時，就會建立程式碼簽章。 若要尋找指定內容，請在終端機應用程式中手動執行 `codesign` 命令：`codesign --display -r - /path/to/app/binary`。 程式碼簽章是 `=>` 後面出現的所有內容。
 
   - **啟用靜態程式碼驗證**：選擇 [是] 讓應用程式或程序以靜態方式驗證程式碼需求。 當設定為 [未設定] 時，Intune 則不會變更或更新此設定。
 

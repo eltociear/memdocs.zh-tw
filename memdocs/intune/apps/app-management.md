@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aef549cc01ba0e45d61c16eb8489f8926f92276b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 617c6b89bfc52d926e2ddb422c36db39edec6908
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990527"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093039"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>什麼是 Microsoft Intune 應用程式管理？
 
@@ -71,7 +71,7 @@ Intune 提供各種功能，可協助您在所要的裝置上取得所需的應�
 <sup>1</sup>您可以考慮使用 [Windows 資訊保護](../protect/windows-information-protection-configure.md)來保護 Windows 10 裝置上的應用程式。<br>
 <sup>2</sup> 僅適用於 Intune 管理的裝置。<br>
 <sup>3</sup> Intune 支援 Android Enterprise 裝置上受控 Google Play 商店中的可用應用程式。<br>
-<sup>4</sup> Intune 不提供在標準 Android Enterprise 裝置上將應用程式的捷徑安裝為網頁連結。 不過，會針對[多應用程式專用的 Android Enterprise 裝置](../configuration/device-restrictions-android-for-work.md#dedicated-devices)提供網頁連結支援。 
+<sup>4</sup> Intune 不提供在標準 Android Enterprise 裝置上將應用程式的捷徑安裝為網頁連結。 不過，會針對[多應用程式專用的 Android Enterprise 裝置](../configuration/device-restrictions-android-for-work.md#device-experience)提供網頁連結支援。 
 
 
 ## <a name="get-started"></a>開始使用

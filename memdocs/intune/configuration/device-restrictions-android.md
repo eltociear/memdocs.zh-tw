@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5fc11d7302c30dd53314eb2312d37842b081a6b3
-ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
+ms.openlocfilehash: 02e07ec75b7c0d07a81a9c6f555cf119310a9a9f
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82862355"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093697"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Intune 中的 Android 與 Samsung Knox Standard 裝置限制設定
 
@@ -193,4 +193,4 @@ Kiosk 設定僅套用至 Samsung Knox Standard 裝置，且只套用至您使用
 
 [指派設定檔](device-profile-assign.md)並[監視其狀態](device-profile-monitor.md)。
 
-您也可以為 [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) 和 [Windows 10](kiosk-settings.md) 裝置建立 kiosk 設定檔。
+您也可以為 [Android Enterprise](device-restrictions-android-for-work.md#device-experience) 和 [Windows 10](kiosk-settings.md) 裝置建立 kiosk 設定檔。

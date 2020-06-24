@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ecbde2f6e6a40379cd37a6ddebe09fa9dab8e3b1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 7894e2648b58b1afd313250dc9724f117fe6c93a
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988930"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216530"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Windows 裝置的大量註冊
 
@@ -37,7 +37,7 @@ Azure AD 使用者是這些裝置上的標準使用者，並且會接收指派�
 
 ## <a name="create-a-provisioning-package"></a>建立佈建套件
 
-1. 從 Microsoft 網上商店下載 [Windows Configuration Designer (WCD)](https://www.microsoft.com/store/apps/9nblggh4tx22)。
+1. 從 Microsoft 網上商店下載 [Windows Configuration Designer (WCD)](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22)。
    ![Windows 設定設計工具 Microsoft Store 的螢幕擷取畫面](./media/windows-bulk-enroll/bulk-enroll-store.png)
 
 2. 開啟 **Windows Configuration Designer** 應用程式並選取 [Provision desktop devices (佈建電腦裝置)]  。

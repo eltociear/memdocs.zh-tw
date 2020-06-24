@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/09/2019
+ms.date: 06/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfcedebf32c8f08450e3eaa87c99f9bc11dd7431
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 972596cd3973c84c4f00409464f2fe621efc1369
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906907"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107404"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>使用 Intune，透過 Windows 10 及更新版本的設定將裝置標示為相容或不相容
 
@@ -46,13 +46,12 @@ ms.locfileid: "82906907"
 - **要求 BitLocker**：  
    Windows BitLocker 磁碟機加密會加密儲存在 Windows 作業系統磁碟區上的所有資料。 BitLocker 使用信賴平台模組 (TPM) 來協助保護 Windows 作業系統和使用者資料。 即使該電腦處於無人看管、遺失或遭竊的情況，它也能協助確保電腦不受竄改。 如果電腦配備相容的 TPM，BitLocker 就會使用 TPM 來鎖定保護資料的加密金鑰。 因此，必須等到 TPM 驗證電腦的狀態之後，才能存取金鑰。  
 
-   - [未設定]  (預設  ) - 不會評估此設定是否符合規範。
-   - [需要]  - 裝置可以保護儲存在磁碟機上的資料，使其在系統關閉或是休眠時免於未經授權的存取。  
-
+  - [未設定]  (預設  ) - 不會評估此設定是否符合規範。
+  - [需要]  - 裝置可以保護儲存在磁碟機上的資料，使其在系統關閉或是休眠時免於未經授權的存取。  
 
 - **要求在裝置上啟用安全開機**：  
-    - [未設定]  (預設  ) - 不會評估此設定是否符合規範。
-    - **需要** - 會強迫系統在開機時進入原廠信任的狀態。 用來啟動電腦的核心元件必須擁有製造裝置組織所信任的正確密碼編譯簽章。 UEFI 韌體會在讓電腦啟動之前先驗證簽章。 如果有任何檔案遭到竄改 (這會中斷它們的簽章)，系統就不會開機。
+  - [未設定]  (預設  ) - 不會評估此設定是否符合規範。
+  - **需要** - 會強迫系統在開機時進入原廠信任的狀態。 用來啟動電腦的核心元件必須擁有製造裝置組織所信任的正確密碼編譯簽章。 UEFI 韌體會在讓電腦啟動之前先驗證簽章。 如果有任何檔案遭到竄改 (這會中斷它們的簽章)，系統就不會開機。
 
   > [!NOTE]
   > 某些 TPM 1.2 和 2.0 裝置支援 [要求在裝置上啟用安全開機]  設定。 針對不支援 TPM 2.0 或更新版本的裝置，Intune 中的原則狀態會顯示為 [不符合規範]  。 如需支援版本的詳細資訊，請參閱[裝置健全狀況證明](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation)。
@@ -60,7 +59,7 @@ ms.locfileid: "82906907"
 - **要求程式碼完整性**：  
   程式碼完整性是一種功能，可在每次將驅動程式或系統檔案載入至記憶體時驗證其完整性。
   - [未設定]  (預設  ) - 不會評估此設定是否符合規範。
-  -  [需要]  - 需要程式碼完整性，它會偵測是否正在將未簽署的驅動程式或系統檔案載入核心。 它也會偵測是否透過惡意軟體變更了系統檔案，或以具系統管理員權限的使用者帳戶執行了系統檔案。
+  - [需要]  - 需要程式碼完整性，它會偵測是否正在將未簽署的驅動程式或系統檔案載入核心。 它也會偵測是否透過惡意軟體變更了系統檔案，或以具系統管理員權限的使用者帳戶執行了系統檔案。
 
 其他資源：
 
@@ -104,7 +103,7 @@ ms.locfileid: "82906907"
 
 - **裝置必須符合 Configuration Manager 的規範**：  
   - [未設定]  (預設  ) - Intune 不會針對合規性檢查任何 Configuration Manager 設定。
-  - **需要** - 需要 Configuration Manager 中的所有設定 (設定項目) 符合規範。  
+  - **需要** - 需要 Configuration Manager 中的所有設定 (設定項目) 符合規範。
 
     例如，您需要在裝置上安裝所有軟體更新。 在 Configuration Manager 中，此要求將會對應「已安裝」狀態。 如果裝置上的任何程式處於未知狀態，則裝置在 Intune 中就不會符合規範。
 
@@ -128,7 +127,7 @@ ms.locfileid: "82906907"
   
   當設定為 [英數字元]  時，可用的設定如下：  
   - [密碼複雜性]  ：  
-    選項包括： 
+    選項包括：
     - **需要數字及小寫字母** (預設值  )
     - **需要數字、小寫和大寫字母**
     - **需要數字、小寫字母、大寫字母及特殊字元**
@@ -172,7 +171,7 @@ ms.locfileid: "82906907"
 
 - **防火牆**：  
   - **未設定** (預設值  ) - Intune 不會控制 Microsoft Defender 防火牆，也不會變更現有的設定。
-  - **需要** - 開啟 Microsoft Defender 防火牆，並防止使用者將其關閉。  
+  - **需要** - 開啟 Microsoft Defender 防火牆，並防止使用者將其關閉。
 
   [防火牆 CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
 
@@ -181,27 +180,21 @@ ms.locfileid: "82906907"
 
 - [信賴平台模組 (TPM)]  ：  
   - **未設定** (預設值  ) -  Intune 不會檢查裝置是否有 TPM 晶片版本。
-  - **需要** - Intune 會檢查 TPM 晶片版本的相容性。 如果 TPM 晶片版本大於 **0** (零)，則裝置相容。 如果裝置上沒有 TPM 版本，則裝置不相容。  
+  - **需要** - Intune 會檢查 TPM 晶片版本的相容性。 如果 TPM 晶片版本大於 **0** (零)，則裝置相容。 如果裝置上沒有 TPM 版本，則裝置不相容。
 
   [DeviceStatus CSP - DeviceStatus/TPM/SpecificationVersion 節點](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
   
 - **防毒**：  
-  - [未設定]  (預設  ) - Intune 不會檢查裝置上是否有任何安裝的反間諜功能解決方案。 
+  - [未設定]  (預設  ) - Intune 不會檢查裝置上是否有任何安裝的反間諜功能解決方案。
   - [需要]  - 使用向 [Windows 資訊安全中心](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)註冊的防毒解決方案 (例如 Symantec 和 Microsoft Defender) 來檢查合規性。
-  
-  [DeviceStatus CSP - DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp) \(部分機器翻譯\)
 
-  > [!NOTE]
-  > 「Windows 10 家用版」  不支援針對 [防毒] 使用 DeviceStatus CSP，而且會回報 [不適用]  的狀態。 Intune 小組正在努力修正。 若要針對此限制做出因應措施，請考慮在裝置合規性政策中使用 [Windows Defender](#defender) 設定。 Windows 10 家用版支援 Windows Defender 設定。  
+  [DeviceStatus CSP - DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp) \(部分機器翻譯\)
 
 - [反間諜功能]  ：  
   - [未設定]  (預設  ) - Intune 不會檢查裝置上是否有任何安裝的反間諜功能解決方案。
-  - [需要]  - 使用向 [Windows 資訊安全中心](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)註冊的反間諜功能解決方案 (例如 Symantec 和 Microsoft Defender) 來檢查合規性。  
-  
-  [DeviceStatus CSP - DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp) \(部分機器翻譯\)
+  - [需要]  - 使用向 [Windows 資訊安全中心](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)註冊的反間諜功能解決方案 (例如 Symantec 和 Microsoft Defender) 來檢查合規性。
 
-  > [!NOTE]
-  > 「Windows 10 家用版」  不支援針對 [反間諜功能] 使用 DeviceStatus CSP，而且會回報 [不適用]  的狀態。 Intune 小組正在努力修正。 若要針對此限制做出因應措施，請考慮在裝置合規性政策中使用 [Windows Defender](#defender) 設定。 Windows 10 家用版支援 Windows Defender 設定。 
+  [DeviceStatus CSP - DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp) \(部分機器翻譯\)
 
 ### <a name="defender"></a>Defender
 
@@ -212,7 +205,7 @@ Windows 10 Desktop 支援下列相容性設定。
   - **需要** - 開啟 Microsoft Defender 反惡意程式碼服務，並防止使用者將其關閉。
 
 - **Microsoft Defender 反惡意程式碼軟體最低版本**：  
-  輸入 Microsoft Defender 反惡意程式碼服務允許的最低版本。 例如，輸入 `4.11.0.0`。 保留空白時，可以使用任何版本的 Microsoft Defender 反惡意程式碼服務。  
+  輸入 Microsoft Defender 反惡意程式碼服務允許的最低版本。 例如，輸入 `4.11.0.0`。 保留空白時，可以使用任何版本的 Microsoft Defender 反惡意程式碼服務。
 
   根據預設，不會設定任何版本  。
 
@@ -244,7 +237,6 @@ Windows 10 Desktop 支援下列相容性設定。
   - [高]  - 此選項最不安全，且允許所有威脅等級。 如果此解決方案只用於報告用途，則此設定可能很實用。
   
   若要將 Microsoft Defender ATP (進階威脅防護) 設定為防禦威脅服務，請參閱[使用條件式存取啟用 Microsoft Defender ATP](advanced-threat-protection.md)。
-
 
 ## <a name="windows-holographic-for-business"></a>Windows Holographic for Business
 
