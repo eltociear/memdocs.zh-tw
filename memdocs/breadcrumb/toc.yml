@@ -75,3 +75,6 @@
                 - name: 租用戶附加
                   tocHref: /mem/configmgr/tenant-attach/
                   topicHref: /mem/configmgr/tenant-attach/
+            - name: 端點分析
+              tocHref: /mem/analytics/
+              topicHref: /mem/analytics/

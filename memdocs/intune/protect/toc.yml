@@ -258,6 +258,8 @@
               href: troubleshoot-scep-certificate-delivery.md
             - name: 憑證部署的報告
               href: troubleshoot-scep-certificate-reporting.md
+        - name: 針對 PKCS 憑證設定檔進行疑難排解
+          href: troubleshoot-pkcs-certificate-profiles.md
         - name: Exchange Connector 疑難排解
           items:
             - name: Exchange Connector 疑難排解
