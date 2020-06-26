@@ -10,16 +10,16 @@ ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d694f9985e6d1e5118f2620e5cbd556de249788a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 31f9b1cb083400abd36858a177e87804a916362c
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771322"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746506"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>如何使用 Configuration Manager Docs
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 此文章提供使用 Configuration Manager 文件庫的資源和祕訣。
 
@@ -36,7 +36,7 @@ ms.locfileid: "81771322"
 
 - 當您使用慣用的搜尋引擎尋找 Configuration Manager 的內容時，請在搜尋關鍵字中包括 `ConfigMgr`。
 
-  - 尋找來自 `docs.microsoft.com/configmgr` 的 Configuration Manager 最新分支結果。 來自 `docs.microsoft.com/previous-versions` 的結果適用於較舊的產品版本。
+  - 尋找來自 `docs.microsoft.com/mem/configmgr` 的 Configuration Manager 最新分支結果。 來自 `docs.microsoft.com/previous-versions` 的結果適用於較舊的產品版本。
 
   - 若要進一步將焦點放在目前內容庫的搜尋結果，可在搜尋時包括 `site:docs.microsoft.com` 以限定搜尋引擎的範圍。
 
@@ -50,22 +50,22 @@ ms.locfileid: "81771322"
 
 - `docs.microsoft.com` 上的每篇文章都包含下列欄位，可協助搜尋內容：
 
-  - 右上角的 [搜尋]  。 若要搜尋所有文章，請在此欄位中輸入字詞。 Configuration Manager 文件庫中的文章會自動包含 `ConfigMgr` 範圍，以便只搜尋此文件庫。
+  - 右上角的 [搜尋]。 若要搜尋所有文章，請在此欄位中輸入字詞。 Configuration Manager 文件庫中的文章會自動包含 `ConfigMgr` 範圍，以便只搜尋此文件庫。
 
-  - 左目錄上方的 [依標題篩選]  。 若要搜尋目前的目錄，請在此欄位中輸入字詞。 此欄位只會比對目前節點的文章標題中所顯示的字詞。 例如，**核心基礎結構** (`docs.microsoft.com/configmgr/core`) 或**應用程式管理** (`docs.microsoft.com/configmgr/apps`)。
+  - 左目錄上方的 [依標題篩選]。 若要搜尋目前的目錄，請在此欄位中輸入字詞。 此欄位只會比對目前節點的文章標題中所顯示的字詞。 例如，**核心基礎結構** (`docs.microsoft.com/configmgr/core`) 或**應用程式管理** (`docs.microsoft.com/configmgr/apps`)。
 
 - 尋找時發生問題嗎？ [歡迎提出意見反應！](#bkmk_docfeedback) 當您提出問題時，請提供所使用的搜尋引擎、嘗試的關鍵字和目標文件。 您的意見反應可協助 Microsoft 最佳化內容，以確保更有效率的搜尋。
 
 > [!TIP]
-> 從 Configuration Manager 1902 版開始，Configuration Manager 主控台的新 [社群]  工作區中會有一個 [文件]  節點。 此節點包含 Configuration Manager 文件和支援文章的最新資訊。 如需詳細資訊，請參閱[使用 Configuration Manager 主控台](../servers/manage/admin-console.md#bkmk_doc-dashboard)。
+> 從 Configuration Manager 1902 版開始，Configuration Manager 主控台的新 [社群] 工作區中會有一個 [文件] 節點。 此節點包含 Configuration Manager 文件和支援文章的最新資訊。 如需詳細資訊，請參閱[使用 Configuration Manager 主控台](../servers/manage/admin-console.md#bkmk_doc-dashboard)。
 
 ## <a name="feedback"></a><a name="bkmk_docfeedback"></a> 意見反應
 
-選取任一篇文章右上角的 [意見反應]  連結，以移至底部的 [意見反應] 區段。 此區段會與 GitHub 問題整合。 如需整合 GitHub 問題的詳細資訊，請參閱 [Docs 平台部落格文章](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs)。
+選取任一篇文章右上角的 [意見反應] 連結，以移至底部的 [意見反應] 區段。 此區段會與 GitHub 問題整合。 如需整合 GitHub 問題的詳細資訊，請參閱 [Docs 平台部落格文章](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs)。
 
-若要分享有關 Configuration Manager 產品本身的意見反應，選取 [產品意見反應]  。 如需詳細資訊，請參閱[產品意見反應](find-help.md#product-feedback)。
+若要分享有關 Configuration Manager 產品本身的意見反應，選取 [產品意見反應]。 如需詳細資訊，請參閱[產品意見反應](find-help.md#product-feedback)。
 
-若要提供文件的意見反應，您必須具備 [GitHub 帳戶](https://github.com/join)。 一旦您登入之後，即會有 Microsoft Docs 組織的一次性授權。 接著，當您選取 [內容意見反應]  時，輸入標題和留言，然後選取 [提交意見反應]  。 這個動作會在 [SCCMdocs 存放庫](https://github.com/MicrosoftDocs/SCCMdocs/issues)中的目標文件提出一個新問題。
+若要提供文件的意見反應，您必須具備 [GitHub 帳戶](https://github.com/join)。 一旦您登入之後，即會有 Microsoft Docs 組織的一次性授權。 接著，當您選取 [內容意見反應] 時，輸入標題和留言，然後選取 [提交意見反應]。 這個動作會在 [SCCMdocs 存放庫](https://github.com/MicrosoftDocs/SCCMdocs/issues)中的目標文件提出一個新問題。
 
 這項整合也會顯示目標文件任何現有的未結案或已結案問題。 如果有的話，請先檢閱這些內容後，再提交新的問題。 如果您找到相關的問題，選取笑臉圖示以新增回應，或展開問題即可新增留言。
 
@@ -99,12 +99,12 @@ ms.locfileid: "81771322"
 
     - 搜尋任何有關 [SQL](https://docs.microsoft.com/search/index?search=SQL&scope=ConfigMgr) 的文章
 
-2. 選取右上角的 [RSS]  連結。
+2. 選取右上角的 [RSS] 連結。
 
 3. 在任何 RSS 應用程式中使用此摘要，以在任何搜尋結果有變更時收到通知。
 
 > [!TIP]
-> 您也可以選擇 [Watch] \(追蹤\)  GitHub 上的 [SCCMdocs 存放庫](https://github.com/MicrosoftDocs/SCCMdocs)。 此方法會產生許多通知。 其中也不包含來自 Microsoft 所使用的私人存放庫變更。
+> 您也可以選擇 [Watch] \(追蹤\) GitHub 上的 [SCCMdocs 存放庫](https://github.com/MicrosoftDocs/SCCMdocs)。 此方法會產生許多通知。 其中也不包含來自 Microsoft 所使用的私人存放庫變更。
 
 ## <a name="contribute"></a><a name="bkmk_contribute"></a> 參與
 
@@ -112,15 +112,15 @@ Configuration Manager 文件庫和大部分的 docs.microsoft.com 內容一樣�
 
 ### <a name="basic-steps-to-contribute-to-sccmdocs"></a>參與 SCCMdocs 的基本步驟
 
-1. 從目標文章中，選取 [編輯]  。 這個動作會在 GitHub 中開啟來源檔案。
+1. 從目標文章中，選取 [編輯]。 這個動作會在 GitHub 中開啟來源檔案。
 
 2. 若要編輯來源檔案，選取鉛筆圖示。
 
 3. 在 Markdown 來源中進行變更。 如需詳細資訊，請參閱[如何使用 Markdown 來撰寫 Docs](https://docs.microsoft.com/contribute/markdown-reference)。
 
-4. 在 [提議檔案變更] 區段中，輸入公開修訂的意見，以說明您要變更的「具體內容」  。 然後，選取 [提議檔案變更]  。
+4. 在 [提議檔案變更] 區段中，輸入公開修訂的意見，以說明您要變更的「具體內容」。 然後，選取 [提議檔案變更]。
 
-5. 向下捲動並確認您所做的變更。 選取 [建立提取要求]  以開啟表單。 請說明要進行這項變更的「具體原因」  。 標記文章作者，並要求他們檢閱。 選取 [建立提取要求]  。
+5. 向下捲動並確認您所做的變更。 選取 [建立提取要求] 以開啟表單。 請說明要進行這項變更的「具體原因」。 標記文章作者，並要求他們檢閱。 選取 [建立提取要求]。
 
 ### <a name="what-to-contribute"></a>可參與的項目
 

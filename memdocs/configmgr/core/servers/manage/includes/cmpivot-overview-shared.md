@@ -3,13 +3,13 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 05/26/2020
-ms.openlocfilehash: ad725a2aeb01984d8bce71f66307792e8d1691ee
-ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
+ms.date: 06/05/2020
+ms.openlocfilehash: 3672127798b66d857b4a1dbd5014c02dfed8a7ee
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226430"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84466825"
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
@@ -128,7 +128,6 @@ CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%'
 |ProtectedVolumeInformation|受保護的磁碟區資訊|
 |通訊協定|通訊協定|
 |QuickFixEngineering|快速檢修|
-|Registry()|特定登錄機碼的所有值|
 |SCSIController|SCSI 控制器|
 |SerialPortConfiguration|序列埠設定|
 |SerialPorts|序列埠|
@@ -270,4 +269,5 @@ CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%'
 |實體|FileContent()|特定檔案的內容|
 |實體|NAPClient|NAP 用戶端|
 |實體|NAPSystemHealthAgent|NAP 系統健全狀況代理程式|
+|實體|Registry()|特定登錄機碼的所有值<!--7371183-->|
 |資料表運算子|轉譯|將結果轉譯為圖形輸出|
