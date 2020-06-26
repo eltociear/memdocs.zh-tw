@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: fdc15860f2d093a4c9c61b787ba0b780051d3f3d
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: db70eab54f319197f267173fe857d0fb147a7eba
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864866"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746556"
 ---
 # <a name="monitor-connection-health"></a>監視連線健康情況
 
@@ -217,7 +217,7 @@ Configuration Manager 已成功設定裝置，但電腦分析無法建立相容�
 
 - 無法設定裝置應用程式相容性資料集合 (SetRequestAllAppraiserVersions)。 請檢查記錄以取得例外狀況詳細資料  
 
-- 無法將 RequestAllAppraiserVersions 寫入登錄機碼 `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser`。 請檢查權限  
+- 無法將 RequestAllAppraiserVersions 寫入登錄機碼 `HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Appraiser`。 請檢查權限  
 
 請檢查此登錄機碼上的權限。 確認本機系統帳戶可以針對要設定的 Configuration Manager 用戶端存取此機碼。  
 
@@ -343,7 +343,7 @@ Windows 7 預設會啟用 DisableEnterpriseAuthProxy 設定。 針對 Windows 8.
 
 此屬性可能會顯示下列錯誤：
 
-- 已啟用驗證 Proxy。 請在 `HKLM\Software\Policies\Microsoft\Windows\DataCollection` 中將 DisableEnterpriseAuthProxy 設為 0
+- 已啟用驗證 Proxy。 請在 `HKLM:\Software\Policies\Microsoft\Windows\DataCollection` 中將 DisableEnterpriseAuthProxy 設為 0
 
 - 無法檢查驗證 Proxy 狀態。 請檢查記錄以取得例外狀況詳細資料
 
