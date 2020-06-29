@@ -16,18 +16,18 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 2f3a378cdb3b5e24371edb2fd6dc240962f80342
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: bfefdee7e949faf9e484ea20e7fc203ee72a9784
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431900"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879649"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Intune 端點安全性的防毒原則
 
-Intune 端點安全性防毒原則可協助安全性系統管理員專注於管理受控裝置的個別幾組防毒設定。 若要使用防毒原則，請將 Microsoft Defender 進階威脅防護 (Defender ATP) 與 Intune 整合為 Mobile Threat Defense 解決方案。
+Intune 端點安全性防毒原則可協助安全性系統管理員專注於管理受控裝置的個別幾組防毒設定。 若要使用防毒原則，請將 Intune 與 Microsoft Defender 進階威脅防護 (Microsoft Defender ATP) 整合為行動威脅防禦解決方案。
 
-防毒原則包含數個設定檔。 每個設定檔只包含適用於 macOS、Windows 10 或 Windows 10 裝置上 Windows 安全性應用程式使用者體驗的 Defender ATP 防毒相關設定。
+防毒原則包含數個設定檔。 每個設定檔只包含適用於 macOS、Windows 10 或 Windows 10 裝置上 Windows 安全性應用程式使用者體驗的 Microsoft Defender ATP 防毒相關設定。
 
 您可以在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，端點安全性節點的 [管理] 下方找到防毒原則。
 
@@ -37,10 +37,10 @@ Intune 端點安全性防毒原則可協助安全性系統管理員專注於管�
 
 - **macOS**
   - 所有受支援的 macOS 版本
-  - 您必須在裝置上安裝 Defender ATP，才能使用 Intune 管理該裝置的防毒設定。 請參閱： [適用於 macOS 的 Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (位於 Defender ATP 文件中)
+  - 您必須在裝置上安裝 Microsoft Defender ATP，才能使用 Intune 管理該裝置的防毒設定。 請參閱： [適用於 macOS 的 Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (位於 Microsoft Defender ATP 文件中)
 
 - **Windows 10 及以上版本**
-  - 您必須在裝置上安裝 Defender ATP，才能使用 Intune 管理該裝置的防毒設定。 請參閱 Intune 文件中[適用於 Windows 的 Microsoft Defender ATP](../protect/advanced-threat-protection.md)。
+  - 您必須在裝置上安裝 Microsoft Defender ATP，才能使用 Intune 管理該裝置的防毒設定。 請參閱 Intune 文件中[適用於 Windows 的 Microsoft Defender ATP](../protect/advanced-threat-protection.md)。
   - Windows 安全性應用程式會安裝在執行 Window 10 的所有裝置上，而且不需要任何其他必要條件。
 
 ## <a name="antivirus-profiles"></a>防毒設定檔

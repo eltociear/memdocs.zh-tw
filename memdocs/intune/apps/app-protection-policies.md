@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 06/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abd34733bd27ec150a92bf20cecbf7edc02c2bd6
-ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
+ms.openlocfilehash: d4beb6c5a91f9f379006df482ff10066831389b6
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330996"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216394"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>如何建立及部署應用程式保護原則
 
@@ -183,14 +183,14 @@ ms.locfileid: "84330996"
 
 ### <a name="device-types"></a>裝置類型
 
-- **非受控**：非受控裝置是指尚未檢測到 Intune MDM 管理的裝置。 這包含由協力廠商 MDM 廠商所管理的裝置。
+- **非受控**：針對 iOS/iPadOS 裝置，非受控裝置是 Intune MDM 管理或協力廠商 MDM/EMM 解決方案不會傳遞 `IntuneMAMUPN` 金鑰的任何裝置。 針對 Android 裝置，非受控裝置是指尚未檢測到 Intune MDM 管理的裝置。 這包含由協力廠商 MDM 廠商所管理的裝置。
 - **Intune 受控裝置**：受控裝置由 Intune MDM 管理。
 - **Android 裝置系統管理員**：使用 Android 裝置系統管理員 API 的 Intune 受控裝置。
 - **Android Enterprise**：使用 Android Enterprise 工作設定檔或 Android Enterprise 完整裝置管理的 Intune 受控裝置。
 
 在 Android 上，無論選擇哪種裝置類型，Android 裝置都將提示您安裝 Intune 公司入口網站應用程式。 例如，如果您選擇 [Android Enterprise]，則系統仍將提示使用非受控 Android 裝置的使用者。
 
-針對 iOS/iPadOS，若要將 [裝置類型] 選取項目強制設定為 [非受控裝置]，則需要其他的應用程式組態設定。 這些設定將會與管理特定應用程式的應用程式服務通訊，而且應用程式設定將不適用：
+針對 iOS/iPadOS，若要將 [裝置類型] 選取項目強制設定為 Intune 受控裝置，則需要其他的應用程式組態設定。 這些設定將會與管理特定應用程式的應用程式服務通訊，而且應用程式設定將不適用：
 
 - **IntuneMAMUPN** 必須針對所有 MDM 受控應用程式進行設定。 如需詳細資訊，請參閱[如何使用 Microsoft Intune 管理 iOS/iPadOS 應用程式之間的資料傳輸](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm)。
 - **IntuneMAMDeviceID** 必須針對所有協力廠商及企業營運 MDM 受控應用程式進行設定。 **IntuneMAMDeviceID** 應設為裝置識別碼權杖。 例如 `key=IntuneMAMDeviceID, value={{deviceID}}`。 如需詳細資訊，請參閱[為受控 iOS/iPadOS 裝置新增應用程式設定原則](app-configuration-policies-use-ios.md)。

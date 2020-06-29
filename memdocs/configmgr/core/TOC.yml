@@ -370,7 +370,7 @@
           href: servers/deploy/configure/site-components.md
         - name: 發佈站台資料
           href: servers/deploy/configure/publish-site-data.md
-        - name: Manage content and content infrastructure
+        - name: 管理內容與內容基礎結構
           items:
             - name: 內容基礎結構概觀
               href: servers/deploy/configure/manage-content-and-content-infrastructure.md
@@ -464,7 +464,7 @@
   items:
     - name: 社群中樞
       href: servers/manage/community-hub.md
-    - name: Management Insights
+    - name: 管理見解
       href: servers/manage/management-insights.md
     - name: CMPivot
       items:

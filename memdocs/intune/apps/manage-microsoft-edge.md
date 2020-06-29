@@ -1,12 +1,12 @@
 ---
-title: 使用 Intune 管理 iOS 與 Android 版 Edge
+title: 使用 Intune 管理 iOS 及 Android 版 Edge
 titleSuffix: ''
-description: 使用 iOS 與 Android 版 Edge 的 Intune 應用程式保護原則來確保一律使用適當的安全性措施保護公司網站的存取。
+description: 使用 Intune 應用程式防護與設定 iOS 及 Android 版 Edge 原則，以確保一律可使用適當的保護措施來存取公司網站。
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad0a886aba8e1966e47e9ea11c99cb97c35c4f5a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4d32c496fc094879943fc15102bbb5061d830092
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988384"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973055"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>透過搭配 Microsoft Intune 使用 iOS 與 Android 版 Edge 來管理 Web 存取
 
@@ -51,19 +51,19 @@ iOS 12.0 與更新版本支援 iOS 版 Edge。 Android 5 與更新版本支援 A
 
 ## <a name="create-intune-app-protection-policies"></a>建立 Intune 應用程式保護原則
 
-應用程式保護原則 (APP) 定義允許哪些應用程式，以及其可以對組織資料採取的動作。 APP 中可用的選擇可讓組織針對其特定需求量身訂作保護方案。 針對一些組織，實作完整案例需要哪種原則設定可能不是那麼明顯。 為了協助組織排定行動用戶端端點強化的優先順序，Microsoft 引進了適用於 iOS 與 Android 行動裝置應用程式管理的應用程式資料保護架構分類法。
+應用程式保護原則 (APP) 定義允許哪些應用程式，以及其可以對組織資料採取的動作。 APP 中可用的選擇可讓組織針對其特定需求量身訂作保護方案。 針對一些組織，實作完整案例需要哪種原則設定可能不是那麼明顯。 為了協助組織排定行動用戶端端點強化的優先順序，Microsoft 引進了適用於 iOS 與 Android 行動裝置應用程式管理的 APP 資料保護架構分類法。
 
 應用程式資料保護架構會組織成三個不同的設定層級，每個層級都以前一層為基礎而建置：
 
-- **企業基本資料保護** (層級1) 可確保應用程式使用 PIN 來保護並加密，並執行選擇性抹除作業。 針對 Android 裝置，此層級會驗證 Android 裝置證明。 這是一種入門級設定，可在 Exchange Online 信箱原則中提供類似的資料保護控制，並將 IT 與使用者人口引進 APP。
-- **企業增強的資料保護** (層級2) 引進應用程式資料洩露防護機制與最低 OS 需求。 此設定適用於大部分存取公司或學校資料的行動使用者。
-- **企業高資料保護** (層級3) 引進進階資料保護機制、增強的 PIN 設定，以及 APP 行動威脅防禦。 對於存取高風險資料的使用者而言，這是理想的設定。
+- **企業基本資料保護** (層級 1) 可確保應用程式使用 PIN 來保護並加密，並執行選擇性抹除作業。 針對 Android 裝置，此層級會驗證 Android 裝置證明。 這是一種入門級設定，可在 Exchange Online 信箱原則中提供類似的資料保護控制，並將 IT 與使用者人口引進 APP。
+- **企業增強的資料保護** (層級 2) 引進 APP 資料洩露防護機制與最低 OS 需求。 此設定適用於大部分存取公司或學校資料的行動使用者。
+- **企業高資料保護** (層級 3) 引進進階資料保護機制、增強的 PIN 設定，以及 APP 行動威脅防禦。 對於存取高風險資料的使用者而言，這是理想的設定。
 
 若要查看必須保護之每個設定層級與最低應用程式的特定建議，請參閱[使用應用程式保護原則的資料保護架構](app-protection-framework.md)。
 
 無論裝置是否已在聯合式端點管理 (UEM) 解決方案中註冊，都必須使用[如何建立及指派應用程式保護原則](app-protection-policies.md)中的步驟，為 iOS 與 Android 應用程式建立 Intune 應用程式保護原則。 這些原則至少必須符合下列條件：
 
-1. 其包含所有 Microsoft 行動裝置應用程式，例如 Outlook、OneDrive、Office 或 Teams ，因為這可確保使用者能夠以安全的方式存取及操作任何 Microsoft 應用程式中的公司或學校資料。
+1. 其包含所有 Microsoft 365 行動應用程式，例如 Edge、Outlook、OneDrive、Office 或 Teams ，因為這可確保使用者能夠以安全的管道，存取及操作任何 Microsoft 應用程式中的公司或學校資料。
 
 2. 其會指派給所有使用者。 這可確保所有使用者都受到保護，不論他們是否使用 iOS 或 Android 版 Edge。
 
@@ -443,3 +443,4 @@ iOS 與 Android 版 Edge 和 [Azure AD 應用程式 Proxy](https://docs.microsof
 ## <a name="next-steps"></a>後續步驟
 
 - [什麼是應用程式保護原則？](app-protection-policy.md) 
+- [Microsoft Intune 的應用程式設定原則](app-configuration-policies-overview.md)

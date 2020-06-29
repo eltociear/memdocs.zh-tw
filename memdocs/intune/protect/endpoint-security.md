@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 99ac1e069386c69011543ac40878dd62a0d50527
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e3ab2e31aa8a35ef04c150972cd7bb7650e46040
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990819"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879699"
 ---
 # <a name="manage-endpoint-security-in-microsoft-intune"></a>在 Microsoft Intune 中管理端點安全性
 
@@ -31,15 +31,15 @@ ms.locfileid: "83990819"
 
 - **檢閱您所有受控裝置的狀態**。 使用[所有裝置](#manage-devices)檢視時，您可以在其中概要檢視裝置合規性，然後鑽研至特定裝置以了解哪些合規性原則未滿足，以便您解決問題。
 
-- **部署可建立裝置最佳做法安全性設定的安全性基準**。 Intune 包含 Windows 裝置的[安全性基準](#manage-security-baselines)，以及不斷增加的應用程式清單，例如 Microsoft Defender 進階威脅防護 (Defender ATP) 和 Microsoft Edge。 安全性基準是預先設定的 Windows 設定群組，可協助您套用已知的設定群組，與相關安全性小組所建議的預設值。
+- **部署可建立裝置最佳做法安全性設定的安全性基準**。 Intune 包含 Windows 裝置的[安全性基準](#manage-security-baselines)，以及不斷增加的應用程式清單，例如 Microsoft Defender 進階威脅防護 (Microsoft Defender ATP) 和 Microsoft Edge。 安全性基準是預先設定的 Windows 設定群組，可協助您套用已知的設定群組，與相關安全性小組所建議的預設值。
 
-- **透過緊密聚焦的原則來管理裝置安全性設定**。  每個[端點安全性原則](#use-policies-to-manage-device-security)都注重於裝置安全性的各個層面，例如防毒軟體、磁碟加密、防火牆及透過與 Defender ATP 整合所提供的數個區域。
+- **透過緊密聚焦的原則來管理裝置安全性設定**。  每個[端點安全性原則](#use-policies-to-manage-device-security)都注重於裝置安全性的各個層面，例如防毒軟體、磁碟加密、防火牆及透過與 Microsoft Defender ATP 整合所提供的數個區域。
 
 - **透過合規性政策來建立裝置和使用者需求**。 使用[合規性政策](../protect/device-compliance-get-started.md)時，您可以設定裝置和使用者必須符合才能視為符合規範的規則。 規則可能包含 OS 版本、密碼需求、裝置威脅層級等等。
 
   當您整合 Azure Active Directory (Azure AD) [條件式存取原則](#configure-conditional-access)以施行合規性政策時，您可以控制受控裝置及未受控裝置對公司資源的存取權。
 
-- **將 Intune 與您的 Microsoft Defender ATP 小組整合**。 [與 Defender ATP 整合](#set-up-integration-with-defender-atp)可讓您存取[安全性工作](#review-security-tasks-from-defender-atp)。 安全性工作會將 Defender ATP 和 Intune 緊密結合，以協助您的安全性小組找出具風險裝置，並將詳細的補救步驟傳遞給 Intune 系統管理員以便採取行動。
+- **將 Intune 與您的 Microsoft Defender ATP 小組整合**。 [與 Microsoft Defender ATP 整合](#set-up-integration-with-microsoft-defender-atp)可讓您存取[安全性工作](#review-security-tasks-from-microsoft-defender-atp)。 安全性工作會將 Microsoft Defender ATP 和 Intune 緊密結合，以協助您的安全性小組找出具風險裝置，並將詳細的補救步驟傳遞給 Intune 系統管理員以便採取行動。
 
 本文下列章節將討論您可從系統管理中心端點安全性節點執行的不同工作，以及所需的角色型存取控制 (RBAC) 權限。
 
@@ -61,13 +61,13 @@ Intune 安全性基準是預先設定的設定群組，這些設定是產品相�
 
 安全性基準是 Intune 中數種方法的其中一種，用於設定裝置上的設定。 管理設定時，請務必了解您的環境使用哪些其他方法來設定裝置，以避免造成衝突。 請參閱本文後面的[避免原則衝突](#avoid-policy-conflicts)。
 
-## <a name="review-security-tasks-from-defender-atp"></a>檢閱 Defender ATP 的安全性工作
+## <a name="review-security-tasks-from-microsoft-defender-atp"></a>檢閱 Microsoft Defender ATP 的安全性工作
 
-當您整合 Intune 與 Microsoft Defender Advanced 威脅防護 (Defender ATP) 時，您可以在 Intune 中檢閱可識別具風險裝置並提供步驟來降低風險的「安全性工作」。 然後您可以使用這些工作，在成功降低這些風險時回報給 Defender ATP。
+當您整合 Intune 與 Microsoft Defender Advanced 威脅防護 (Microsoft Defender ATP) 時，您可以在 Intune 中檢閱可識別具風險裝置並提供步驟來降低風險的「安全性工作」。 然後您可以使用這些工作，在成功降低這些風險時回報給 Microsoft Defender ATP。
 
-- 您的 Defender ATP 小組會判斷有哪些裝置具風險，並將該資訊傳遞給您的 Intune 小組作為安全性工作。 只需要按幾下，他們就能建立 Intune 的安全性工作，可識別具風險裝置、弱點並提供如何降低風險的指引。
+- 您的 Microsoft Defender ATP 小組會判斷有哪些裝置具風險，並將該資訊傳遞給您的 Intune 小組作為安全性工作。 只需要按幾下，他們就能建立 Intune 的安全性工作，可識別具風險裝置、弱點並提供如何降低風險的指引。
 
-- Intune 系統管理員會檢閱安全性工作，然後在 Intune 內採取行動來補救這些工作。 降低風險後，他們會將工作設定為完成，即會將該狀態傳回 Defender ATP 小組。
+- Intune 系統管理員會檢閱安全性工作，然後在 Intune 內採取行動來補救這些工作。 降低風險後，他們會將工作設定為完成，即會將該狀態傳回 Microsoft Defender ATP 小組。
 
 透過安全性工作，這兩個小組會對於哪些裝置具風險、這些風險的補救方式和時機方面保持同步。
 
@@ -93,7 +93,7 @@ Intune 安全性基準是預先設定的設定群組，這些設定是產品相�
 
 - 需要裝置執行最低或特定的 OS 版本
 - 設定密碼需求
-- 指定允許的裝置威脅層級上限，由 Defender ATP 或其他行動威脅防禦合作夥伴來決定
+- 指定允許的裝置威脅層級上限，由 Microsoft Defender ATP 或其他行動威脅防禦合作夥伴來決定
 
 除了原則規則外，合規性政策也支援：
 
@@ -119,18 +119,18 @@ Intune 會將裝置合規性政策的結果傳遞至 Azure AD，然後使用條�
 
 若要深入了解如何搭配 Intune 使用條件式存取，請參閱[了解條件式存取和 Intune](../protect/conditional-access.md)。
 
-## <a name="set-up-integration-with-defender-atp"></a>設定與 Defender ATP 的整合
+## <a name="set-up-integration-with-microsoft-defender-atp"></a>與 Microsoft Defender ATP 整合的設定
 
-當您將 Microsoft Defender 進階威脅防護 (Defender ATP) 與 Intune 整合時，您可以改善識別及回應風險的能力。
+當您將 Microsoft Defender ATP 與 Intune 整合時，您可以改善識別及回應風險的能力。
 
-雖然 Intune 可以與數個[行動威脅防禦合作夥伴](../protect/mobile-threat-defense.md)整合，但是當您使用 Defender ATP 時，Defender ATP 將能與 Intune 的緊密整合，並可存取深層的裝置保護選項，包括：
+雖然 Intune 可以與數個[行動威脅防禦合作夥伴](../protect/mobile-threat-defense.md)整合，但是當您使用 Microsoft Defender ATP 時，Microsoft Defender ATP 將能與 Intune 的緊密整合，並可存取深層的裝置保護選項，包括：
 
 - 安全性工作 - 在 ATP 與 Intune 管理員之間，能對具風險裝置、如何補救這些裝置及確認已降低這些風險時進行順暢通訊。
-- 在用戶端上簡化 Defender ATP 的上線。
+- 在用戶端上簡化 Microsoft Defender ATP 的上線。
 - 在 Intune 合規性政策中使用 ATP 裝置風險訊號。
 - 使用「篡改防護」功能。
 
- 若要深入了解如何搭配 Intune 使用 Defender ATP，請參閱[在 Intune 中使用條件式存取強制執行 Microsoft Defender ATP 的合規性](../protect/advanced-threat-protection.md)。
+ 若要深入了解如何搭配 Intune 使用 Microsoft Defender ATP，請參閱[在 Intune 中使用條件式存取強制執行 Microsoft Defender ATP 的合規性](../protect/advanced-threat-protection.md)。
 
 ## <a name="role-based-access-control-requirements"></a>角色型存取控制需求
 
@@ -230,4 +230,4 @@ Intune 會將裝置合規性政策的結果傳遞至 Azure AD，然後使用條�
 - [安全性基準](../protect/security-baselines.md)
 - [合規性原則](../protect/device-compliance-get-started.md)
 - [條件式存取原則](#configure-conditional-access)
-- [與 Defender ATP 整合](../protect/advanced-threat-protection.md)
+- [與 Microsoft Defender ATP 整合](../protect/advanced-threat-protection.md)

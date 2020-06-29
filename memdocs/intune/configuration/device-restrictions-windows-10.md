@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 06/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f469d9646fad3b247743b6017f0ecbc7917f2cdf
-ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
+ms.openlocfilehash: 96b547c50cda0ef623370bae20d347d4ccf1976b
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84311160"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216479"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>使用 Intune 來允許或限制功能的 Windows 10 (和更新版本) 裝置設定
 
@@ -141,6 +141,10 @@ ms.locfileid: "84311160"
 - **藍牙通知**：[封鎖] 防止裝置傳送出藍牙通知。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 會允許裝置送出藍牙公告。
 
   [Bluetooth/AllowAdvertising CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+
+- **藍牙近端連線**：[封鎖] 會避免使用者使用迅速配對以及其他近接型案例。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 會允許裝置送出藍牙公告。
+
+  [Bluetooth/AllowPromptedProximalConnections CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 
 - **藍牙允許的服務**：以十六進位字串，**新增**允許的藍牙服務和設定檔清單，例如 `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`。
 
@@ -322,6 +326,9 @@ GDI DPI 縮放比例會讓非 DPI 感知的應用程式變成依監視器 DPI �
 ## <a name="microsoft-edge-browser"></a>Microsoft Edge 瀏覽器
 
 這些設定使用[瀏覽器原則 CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser)，它也會列出支援的 Windows 版本。
+
+> [!NOTE]
+> 瀏覽器原則 CSP 的使用，適用於 Microsoft Edge 45 版和更早版本。 對於 Microsoft Edge Enterprise 77 版和以後版本，請參閱[使用 Microsoft Intune 設定 Microsoft Edge 原則設定](/DeployEdge/configure-edge-with-intune)。
 
 ### <a name="use-microsoft-edge-kiosk-mode"></a>使用 Microsoft Edge kiosk 模式
 
