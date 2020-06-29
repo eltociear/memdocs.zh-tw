@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 228c6758feca348d2caed4eb3b54207cadf7a037
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 09ebf7fde0cedb907e105e42abe7338237d231af
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985837"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795698"
 ---
 # <a name="configure-microsoft-launcher"></a>設定 Microsoft Launcher
 
@@ -33,7 +33,7 @@ Microsoft Launcher 是 Android 應用程式，讓使用者能夠將他們的電�
 
 ## <a name="how-to-configure-the-microsoft-launcher-app"></a>如何設定 Microsoft Launcher 應用程式 
 
-Microsoft Launcher 應用程式[新增至 Intune](../apps/apps-add.md) 後，請巡覽至 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，然後選取 [應用程式]   > [應用程式設定原則]  。 為執行 **Android** 的**受控裝置**新增設定原則，然後選擇 [Microsoft Launcher]  作為相關聯的應用程式。 按一下 [組態設定]  以設定其他可用的 Managed Home Screen 設定。 
+Microsoft Launcher 應用程式[新增至 Intune](../apps/apps-add.md) 後，請巡覽至 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，然後選取 [應用程式] > [應用程式設定原則]。 為執行 **Android** 的**受控裝置**新增設定原則，然後選擇 [Microsoft Launcher] 作為相關聯的應用程式。 按一下 [組態設定] 以設定其他可用的 Managed Home Screen 設定。 
 
 ## <a name="choosing-a-configuration-settings-format"></a>選擇組態設定格式 
 
@@ -43,7 +43,7 @@ Microsoft Launcher 應用程式[新增至 Intune](../apps/apps-add.md) 後，請
 
 - **JSON 資料**可讓您使用 JSON 指令碼定義所有可用的設定索引碼。 
 
-若您使用**設定設計工具**來新增屬性，即可從 [組態設定格式]  下拉式清單中選取 [輸入 JSON 資料]  ，來將這些屬性自動轉換成 JSON，如下所示。
+若您使用**設定設計工具**來新增屬性，即可從 [組態設定格式] 下拉式清單中選取 [輸入 JSON 資料]，來將這些屬性自動轉換成 JSON，如下所示。
 
    ![組態設定格式 - 使用設定設計工具](./media/configure-microsoft-launcher/configure-microsoft-launcher-01.png)
 
@@ -63,16 +63,16 @@ Microsoft Launcher 應用程式[新增至 Intune](../apps/apps-add.md) 後，請
 |    設定機碼    |    值類型    |    預設值    |    說明     |
 |---------------------------------------------------|------------------|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    註冊類型    |    字串     |    預設值    |    允許您設定應套用此原則的註冊類型。 目前，**Default** 值會參考 **CorporateOwnedBuisnessOnly**。 現在沒有任何其他支援的註冊類型。        JSON 金鑰名稱：management_mode_key        |
-|    已允許使用者變更主畫面應用程式順序    |    布林值    |    True    |    讓您能夠指定終端使用者是否可以變更 [主畫面應用程式順序]  設定。<ul><li>如果設定為 **True**，就只會針對初始部署強制執行原則中定義的應用程式順序。 之後，將不會強制執行原則來採用使用者可能進行的任何變更。</li><li>如果設定為 **False**，則會在每次同步處理時強制執行應用程式順序。</li></ul><br>**注意︰** 主畫面應用程式順序只能透過 JSON 編輯器來設定。<br><br>JSON 金鑰名稱：<br>`com.microsoft.launcher.HomeScreen.AppOrder.UserChangeAllowed`    |
+|    已允許使用者變更主畫面應用程式順序    |    布林值    |    True    |    讓您能夠指定終端使用者是否可以變更 [主畫面應用程式順序] 設定。<ul><li>如果設定為 **True**，就只會針對初始部署強制執行原則中定義的應用程式順序。 之後，將不會強制執行原則來採用使用者可能進行的任何變更。</li><li>如果設定為 **False**，則會在每次同步處理時強制執行應用程式順序。</li></ul><br>**注意︰** 主畫面應用程式順序只能透過 JSON 編輯器來設定。<br><br>JSON 金鑰名稱：<br>`com.microsoft.launcher.HomeScreen.AppOrder.UserChangeAllowed`    |
 |    設定格線大小    |    字串    |    自動    |    讓您可為要放置於主畫面的應用程式設定格線大小。 您可以利用下列格式來設定應用程式的列數與欄數，以定義格線大小：`columns;rows`。 如果您定義了格線大小，主畫面上一列中將顯示的應用程式最大數目即為您設定的列數，而主畫面上一欄中將顯示的應用程式最大數目則為您設定的欄數。<br><br>        JSON 金鑰名稱：<br>`com.microsoft.launcher.HomeScreen.GridSize`    |
 |    設定裝置背景圖案    |    字串    |    Null    |    讓您可輸入想要設為背景圖案的影像 URL，來設定自選的背景圖案。<br><br>JSON 金鑰名稱：<br>`com.microsoft.launcher.Wallpaper.URL`    |
 |    已允許使用者變更設定裝置背景圖案    |    Bool    |    True    |    讓您能夠指定終端使用者是否可以變更 [設定裝置背景圖案] 設定。<ul><li>如果設定為 **True**，就只會針對初始部署強制執行原則中定義的背景圖案。 之後，將不會強制執行原則來採用使用者可能進行的任何變更。</li><li>如果設定為 **False**，則會在每次同步處理時強制執行背景圖案。</li></ul><br>JSON 金鑰名稱：<br>`com.microsoft.launcher.Wallpaper.URL.UserChangeAllowed`        |
 |    摘要啟用    |    布林值    |    True    |    讓您能夠在使用者於主畫面上向右撥動時，在裝置上啟用啟動器摘要。<ul><li>如果設定為 **True**，將會啟用摘要。</li><li>如果設定為 **False**，將會停用摘要。</li></ul><br>JSON 金鑰名稱：<br>`com.microsoft.launcher.Feed.Enabled`    |
-|    已允許使用者變更摘要啟用    |    布林值    |    True    |     讓您能夠指定終端使用者是否可以變更 [摘要啟用]  設定。<ul><li>如果設定為 **True**，就只會針對初始部署強制執行摘要。 之後，將不會強制執行原則來採用使用者可能進行的任何變更。</li><li>如果設定為 **False**，則會在每次同步處理時強制執行摘要。</li></ul><br>JSON 金鑰名稱：`com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
-|    搜尋列位置   |    字串    |    下層    |  可供在主畫面上指定**搜尋列的位置**。 <ul><li>如果設定為 [底端]  ，搜尋列就會位於主畫面底部。</li><li>如果設定為 [頂端]  ，搜尋列就會位於主畫面頂端。</li><li>如果設定為 [隱藏]  ，搜尋列就會從主畫面中移除。</li></ul><br>JSON 金鑰名稱：<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
-|    允許使用者變更搜尋列位置   |    Bool    |    True    |  可供指定終端使用者是否可以變更 [搜尋列位置]  設定。 <ul><li>如果設定為 [True]  ，就只會強制執行初始部署的搜尋列位置。 之後，將不會強制執行原則來採用使用者可能進行的任何變更。</li><li>如果設定為 [False]  ，則會在每次同步處理時強制執行搜尋列位置。</li></ul><br>JSON 金鑰名稱：<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`    |
-|    Dock 模式  |    字串    |    顯示    | 可供在使用者於主畫面上向右撥動時，在裝置上啟用 Dock。<ul><li>如果設定為 [顯示]  ，就會啟用 Dock。</li><li>如果設定為 [隱藏]  ，主畫面就會隱藏 Dock，但使用者可在需要時顯示。</li><li>如果設定為 [停用]  ，就會停用 Dock。</li></ul><br>JSON 金鑰名稱：<br>`com.microsoft.launcher.Dock.Mode`    |
-|   允許使用者變更 Dock 模式   |    字串    |    True    |  可供指定終端使用者是否可以變更 Dock 模式設定。<ul><li>如果設定為 [True]  ，就只會強制執行初始部署的 Dock 模式設定。 之後，將不會強制執行原則來採用使用者可能進行的任何變更。</li><li>如果設定為 [False]  ，則會在每次同步處理時強制執行 Dock 模式設定。</li></ul><br>JSON 金鑰名稱：<br>`com.microsoft.launcher.Dock.Mode.UserChangeAllowed`    |
+|    已允許使用者變更摘要啟用    |    布林值    |    True    |     讓您能夠指定終端使用者是否可以變更 [摘要啟用] 設定。<ul><li>如果設定為 **True**，就只會針對初始部署強制執行摘要。 之後，將不會強制執行原則來採用使用者可能進行的任何變更。</li><li>如果設定為 **False**，則會在每次同步處理時強制執行摘要。</li></ul><br>JSON 金鑰名稱：`com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
+|    搜尋列位置   |    字串    |    下層    |  可供在主畫面上指定**搜尋列的位置**。 <ul><li>如果設定為 [底端]，搜尋列就會位於主畫面底部。</li><li>如果設定為 [頂端]，搜尋列就會位於主畫面頂端。</li><li>如果設定為 [隱藏]，搜尋列就會從主畫面中移除。</li></ul><br>JSON 金鑰名稱：<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
+|    允許使用者變更搜尋列位置   |    Bool    |    True    |  可供指定終端使用者是否可以變更 [搜尋列位置] 設定。 <ul><li>如果設定為 [True]，就只會強制執行初始部署的搜尋列位置。 之後，將不會強制執行原則來採用使用者可能進行的任何變更。</li><li>如果設定為 [False]，則會在每次同步處理時強制執行搜尋列位置。</li></ul><br>JSON 金鑰名稱：<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`<p>**注意：** 在 Microsoft Launcher v 6.2 和更新版本中，將不再強制執行此設定。 因此，將此值設定為 `True` 將不會有任何作用。 終端使用者將無法自訂其裝置上的搜尋列位置。    |
+|    Dock 模式  |    字串    |    顯示    | 可供在使用者於主畫面上向右撥動時，在裝置上啟用 Dock。<ul><li>如果設定為 [顯示]，就會啟用 Dock。</li><li>如果設定為 [隱藏]，主畫面就會隱藏 Dock，但使用者可在需要時顯示。</li><li>如果設定為 [停用]，就會停用 Dock。</li></ul><br>JSON 金鑰名稱：<br>`com.microsoft.launcher.Dock.Mode`    |
+|   允許使用者變更 Dock 模式   |    字串    |    True    |  可供指定終端使用者是否可以變更 Dock 模式設定。<ul><li>如果設定為 [True]，就只會強制執行初始部署的 Dock 模式設定。 之後，將不會強制執行原則來採用使用者可能進行的任何變更。</li><li>如果設定為 [False]，則會在每次同步處理時強制執行 Dock 模式設定。</li></ul><br>JSON 金鑰名稱：<br>`com.microsoft.launcher.Dock.Mode.UserChangeAllowed`    |
 
 ## <a name="enter-json-data"></a>輸入 JSON 資料
 

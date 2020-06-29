@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/12/2020
+ms.date: 06/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8eaa636659cb9e2382f61fb668d8aec2ecd75f7a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 68f8eb2ab3b7e348daa99e982e640e9bd28692d8
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990187"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85264119"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>在 Microsoft Intune 中透過 OEMConfig 使用和管理 Android Enterprise 裝置
 
@@ -116,6 +116,8 @@ OEMConfig 原則是特殊類型的裝置設定原則，類似[應用程式設定
       - 許多設定都有由 OEM 所提供的預設值。 若要查看是否有預設值，請將滑鼠暫留在設定旁邊的資訊圖示上。 工具提示會顯示該設定的預設值 (若適用的話)，以及由 OEM 所提供的詳細資料。
 
       - 按一下 [清除] 會從設定檔刪除設定。 如果設定不在設定檔中，套用設定檔時，其在裝置上的值將不會變更。
+      
+      - 使用 [尋找] 按鈕來尋找設定。 在側邊面板中鍵入關鍵字，以查看所有相關的設定及其描述。 選取任一設定，使其自動新增設定至設計工具樹狀結構 (若尚不存在)。 這也會自動開啟樹狀結構，讓您可以看到設定。 
 
       - 如果您在設定設計工具中建立空的 (未設定的) 配套，系統會在切換至 JSON 編輯器時加以刪除。
 
@@ -155,15 +157,23 @@ OEMConfig 原則是特殊類型的裝置設定原則，類似[應用程式設定
 
 | OEM | 套件組合識別碼 | OEM 文件 (若有的話) |
 | --- | --- | ---|
+| Archos | com.archos.oemconfig | |
 | Ascom | com.ascom.myco.oemconfig | |
+| Bluebird | com.bluebird.android.oemconfig | |
 | Cipherlab | com.cipherlab.oemconfig | |
 | Datalogic | com.datalogic.settings.oemconfig | |
-| Honeywell | com.honeywell.oemconfig |  |
+| Honeywell | com.honeywell.oemconfig | |
 | HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
-| HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 | 
+| HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 |
+| HMDGlobal - 5.3 | com.hmdglobal.app.oemconfig.n5_3 |
+| Lenovo | com.lenovo.oemconfig.rel | |
+| LG | com.lge.android.oemconfig | |
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
+| Panasonic | com.panasonic.mobile.oemconfig | |
+| Point Mobile | device.apps.emkitagent | |
 | Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin 系統管理指南](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) \(英文\) |
 | Seuic | com.seuic.seuicoemconfig | |
+| Social Mobile | com.rhinomobility.oemconfig | |
 | Spectralink - Barcodes | com.spectralink.barcode.service |  |
 | Spectralink - Buttons | com.spectralink.buttons |  |
 | Spectralink - Device | com.spectralink.slnkdevicesettings  |  |

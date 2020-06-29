@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune - Azure 中不符合規範的訊息與動作 | Microsoft Docs
-description: 建立電子郵件通知，並傳送到不符合規範的裝置。 在裝置受標記為不符合規範之後新增動作，例如新增寬限期以讓其符合規範，或建立排程來禁止存取，直到裝置符合規範為止。 在 Azure 中使用 Microsoft Intune 來執行。
+description: 建立電子郵件通知，並傳送到不符合規範的裝置。 新增動作，以套用至不符合合規性原則的裝置。 動作可包括取得符合規範的寬限期、禁止存取網路資源，或淘汰不符合規範的裝置。
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fff21eac61f7b68e00989aefc1f9ea6dc3ad7c0a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 330dd566599d6bdb1fa667d8797878ea8c92f098
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989306"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093715"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>在 Intune 中為不符合規範的裝置設定動作
 
@@ -29,11 +29,11 @@ ms.locfileid: "83989306"
 
 ## <a name="overview"></a>概觀
 
-根據預設，每個合規性原則都包含不符合規範時 [將裝置標示為不符合規範] 的動作，且排程為零天 (**0**)。 此預設值的結果是當 Intune 偵測到不符合規範的裝置時，Intune 就會立即將此裝置標示為不符合規範。 接著，Azure Active Directory (AD) [條件式存取](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)可以封鎖該裝置。
+根據預設，每個合規性原則都包含不符合規範時 [將裝置標示為不符合規範] 的動作，且排程為零天 (**0**)。 此預設值的結果是當 Intune 偵測到不符合規範的裝置時，Intune 就會立即將此裝置標示為不符合規範。 在裝置被標示為不符合規範之後，Azure Active Directory (AD) [條件式存取](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)就可以封鎖該裝置。
 
 設定 [不符合規範時的動作]，您可彈性地決定如何處理不符合規範的裝置，以及何時執行。 例如，您可選擇不要立即封鎖裝置，然後給予使用者可變得符合規範的寬限期。
 
-對於您可設定的每個動作，您可設定排程，以根據裝置標示為不符合規範後的天數，決定該動作的生效時間。 您也可設定某個動作的多個執行個體。 當您在原則中設定某個動作的多個執行個體時，如果裝置仍不符合規範，該動作會在該排程時間之後再次執行。
+針對所設定的每個動作，您可以設定排程，以判斷該動作何時會生效。 排程會規定裝置將在幾天後被標示為不符合規範。 您也可設定某個動作的多個執行個體。 當您在原則中設定某個動作的多個執行個體時，如果裝置仍不符合規範，該動作會在該排程時間之後再次執行。
 
 並非所有動作都適用於所有平台。
 
@@ -48,7 +48,7 @@ ms.locfileid: "83989306"
 - **傳送電子郵件給終端使用者**：此動作會將電子郵件通知傳送給使用者。
 當您啟用此動作時：
 
-  - 選取此動作傳送的「通知訊息範本」。 您必須先[建立通知訊息範本](#create-a-notification-message-template)，才能將其指派給此動作。 當您建立自訂通知時，您可自訂主旨、訊息本文，並可包含公司標誌、公司名稱和其他連絡人資訊。
+  - 選取此動作傳送的「通知訊息範本」。 您要先[建立通知訊息範本](#create-a-notification-message-template)，才能將其指派給此動作。 當您建立自訂通知時，您可自訂主旨、訊息本文，並可包含公司標誌、公司名稱和其他連絡人資訊。
   - 選取您的一或多個 Azure AD 群組，以將訊息傳送給其他收件者。
 
 當電子郵件送出時，Intune 會在電子郵件通知中包含不符合規範裝置的詳細資料。
@@ -100,12 +100,12 @@ ms.locfileid: "83989306"
   
   例如，您可將第一個動作的排程設為零天，然後為此動作新增設為三天的第二個執行個體。 第二個通知前的此種延遲讓使用者有幾天的時間可解決問題，且避免第二個通知。
 
-  若要避免對具有太多重複訊息的使用者傳送垃圾郵件，請檢閱並簡化哪些相容性原則包含不符合規範時的推播通知，並檢閱排程，以免針對相同的問題經常傳送重複的通知。
+  為避免因太多重複郵件造成使用者受垃圾郵件困擾，請檢閱並簡化哪些合規性原則包含不符合規範的推播通知，並檢閱排程，以免經常傳送相同內容的重複通知。
 
   考量：
   - 若單一原則對於針對同一天所設定的推播通知包含多個執行個體，則當天只會傳送單一通知。
 
-  - 當多個合規性原則包含相同的合規性條件，且包含具有相同排程的推播通知動作時，系統會在同一天將多個通知傳送至相同的裝置。
+  - 當多個合規性原則包含相同的合規性條件，且包含具有相同排程的推播通知動作時，Intune 會在同一天將多個通知傳送至相同的裝置。
 
 ## <a name="before-you-begin"></a>開始之前
 
@@ -126,22 +126,22 @@ ms.locfileid: "83989306"
 若要傳送電子郵件給您的使用者，請建立通知訊息範本。 裝置不符合規範時，您在範本中輸入的詳細資料會顯示在傳送給您使用者的電子郵件裡。
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [裝置] > [合規性原則] > [通知] > [建立通知]。
+2. 選取 [端點安全性] > [裝置合規性] > [通知]  > [建立通知]。
 3. 在 [基本] 底下，指定下列資訊：
 
    - **Name**
    - **主旨**
    - **Message**
 
-4. 此外，在 [基本] 底下，為通知設定下列選項，這些全都預設為 [已啟用]：
+4. 此外，在 [基本] 底下，為通知設定下列選項：
 
-   - **電子郵件標題 – 包含公司標誌**
-   - **電子郵件頁尾 – 包含公司名稱**
-   - **電子郵件頁尾 – 包含連絡人資訊**
+   - **電子郵件標頭 – 包含公司標誌** (預設 =「啟用」) - 作為公司入口網站商標一部分上傳的標誌，將會用於電子郵件範本。 如需公司入口網站商標的詳細資訊，請參閱[公司識別商標自訂](../apps/company-portal-app.md#customizing-the-user-experience)。
+   - **電子郵件頁尾 – 包含公司名稱** (預設 =「啟用」)
+   - **電子郵件頁尾 – 包含連絡人資訊** (預設 =「啟用」)
+   - **公司入口網站網站連結** (預設 =「停用」) - 當設定為 [啟用] 時，電子郵件會包含公司入口網站的網站連結。
 
-   您當作公司入口網站商標一部分上傳的標誌將會用於電子郵件範本。 如需公司入口網站商標的詳細資訊，請參閱[公司識別商標自訂](../apps/company-portal-app.md#customizing-the-user-experience)。
-
-   ![在 Intune 中符合規範的通知訊息範例](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
+   > [!div class="mx-imgBorder"]
+   > ![在 Intune 中符合規範的通知訊息範例](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
    選取 [下一步] 以繼續進行操作。
 
@@ -185,7 +185,7 @@ ms.locfileid: "83989306"
 
    例如，在您的合規性政策中，您也會想要通知使用者。 您可以新增 [傳送電子郵件給使用者] 動作。 在此 [傳送電子郵件] 動作中，您將 [排程] 設定為兩天。 如果裝置或終端使用者在第二天仍被評估為不符合規範，則會在第二天傳送您的電子郵件。 如果您想要在不符合規範的第五天再次傳送電子郵件給使用者，請新增另一個動作，並將 [排程] 設定為五天。
 
-  如需有關合規性與內建動作的詳細資訊，請參閱[合規性概觀](device-compliance-get-started.md)。
+   如需有關合規性與內建動作的詳細資訊，請參閱[合規性概觀](device-compliance-get-started.md)。
 
 6. 完成後，請選取 [新增] > [確定]以儲存變更。
 

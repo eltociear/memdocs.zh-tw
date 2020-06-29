@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/16/2019
+ms.date: 06/12/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cd8c57dcaede1331838946d93c4fce16801651b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1de1b015daad50837142ce9628543f0b2d7587d7
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990508"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093755"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>在 Intune 中設定 macOS 裝置的註冊
 
@@ -73,19 +73,22 @@ Intune 可讓您管理 macOS 裝置，以為使用者提供公司電子郵件與
 
 您可以使用 Parallels Desktop 或 VMware Fusion 註冊 macOS 虛擬機器進行測試。 
 
-針對 Parallels Desktop，您需要設定虛擬機器的硬體型號和序號，讓 Intune 可以進行辨識。 遵循 Parallels 的設定硬體類型和[序號](http://kb.parallels.com/123455)指示，設定必要的設定來進行測試。 建議您比對執行虛擬機器之裝置的硬體型號與您所建立之虛擬機器的硬體型號。 您可以在 **Apple 功能表** > [關於此 Mac]  [系統報表] >    > [模型識別碼]  中找到這個硬體型號。 
+針對 Parallels Desktop，您需要設定虛擬機器的硬體型號和序號，讓 Intune 可以進行辨識。 遵循 Parallels 的設定硬體類型和[序號](http://kb.parallels.com/123455)指示，設定必要的設定來進行測試。 建議您比對執行虛擬機器之裝置的硬體型號與您所建立之虛擬機器的硬體型號。 您可以在 **Apple 功能表** > [關於此 Mac][系統報表] >  > [模型識別碼] 中找到這個硬體型號。 
 
-針對 VMware Fusion，您需要[編輯 .vmx 檔案](https://kb.vmware.com/s/article/1014782)，設定虛擬機器的硬體型號和序號。 建議您比對執行虛擬機器之裝置的硬體型號與您所建立之虛擬機器的硬體型號。 您可以在 **Apple 功能表** > [關於此 Mac]  [系統報表] >    > [模型識別碼]  中找到這個硬體型號。 
+針對 VMware Fusion，您需要[編輯 .vmx 檔案](https://kb.vmware.com/s/article/1014782)，設定虛擬機器的硬體型號和序號。 建議您比對執行虛擬機器之裝置的硬體型號與您所建立之虛擬機器的硬體型號。 您可以在 **Apple 功能表** > [關於此 Mac][系統報表] >  > [模型識別碼] 中找到這個硬體型號。 
 
 ## <a name="user-approved-enrollment"></a>通過使用者核准的註冊
+
 「通過使用者核准」的註冊是一種 macOS 註冊，可讓您管理某些敏感的安全性設定。 如需詳細資訊，請參閱 [Apple 支援文件](https://support.apple.com/HT208019)。  
  
-在 BYOD 註冊程序期間，系統會要求使用者手動核准 Apple 管理設定檔。 適用於 macOS 的公司入口網站應用程式中會提供指示。 雖然完成註冊不需要核准管理設定檔，但 Intune 會建議使用者核准的註冊。 如果使用者未在註冊期間核准設定檔，使用者可以前往 [系統偏好設定]   > [設定檔]  ，選擇管理設定檔，然後選取 [核准]  。    
+自 2020 年 6 月起，Intune 中所有新的 macOS MDM 註冊 (包括不是透過自動裝置註冊 (ADE) 完成的註冊)，都視為已經使用者核准。 使用者必須在 [系統喜好設定] > [設定檔] 中手動安裝管理設定檔，從而提供管理設定檔的核准。 系統喜好設定會自動從適用於 BYOD macOS 使用者的公司入口網站應用程式啟動。 公司入口網站應用程式會提供[安裝管理設定檔的指示](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp)。     
+
+若使用者未在 [系統喜好設定] > [設定檔] 中手動提供管理設定檔的核准，則在 2020 年 6 月之前的 BYOD macOS MDM 註冊可能未經使用者核准。 針對 2020 年 6 月之後的 BYOD 註冊，公司入口網站應用程式會為使用者啟動 [系統喜好設定]，而使用者必須選取 [安裝]。 若使用者未在註冊期間核准設定檔，使用者可以移至 [系統喜好設定] > [設定檔]，選擇該管理設定檔，然後選取 [核准]，以在之後的時間點核准該設定檔。
 
 ### <a name="find-out-if-a-device-is-user-approved"></a>找出裝置是否為「經使用者核准」
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選擇 [裝置]   > [所有裝置]  > 選擇裝置 > [硬體]  。
-3. 勾選 [使用者核准的註冊]  欄位。
+2. 選擇 [裝置] > [所有裝置] > 選擇裝置 > [硬體]。
+3. 勾選 [使用者核准的註冊] 欄位。
 
 
 ## <a name="next-steps"></a>後續步驟

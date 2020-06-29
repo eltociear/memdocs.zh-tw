@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 06/11/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: 028a568b9a588697139f97f292c70c50347217f3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 740d9b68a0101e04e6bf690d09ecce7eaff4509e
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882088"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107324"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>當我註冊裝置時，我的組織可以看到哪些資訊？
 
@@ -55,7 +55,7 @@ ms.locfileid: "83882088"
  
  > [!NOTE]
  > 以下列其中一種方式安裝的應用程式會被視為**受控應用程式**：
- > 1. 在 Intune 系統管理員發佈為**可用**後，使用者從公司入口網站應用程式進行安裝的應用程式。
+ > 1. 在 Intune 系統管理員發佈為**可用**之後，使用者可從公司入口網站應用程式安裝的應用程式。
  > 2. Intune 系統管理員將此應用程式發佈為**必要**，且安裝在裝置上。 
  >
  > 若您是組織中的 IT 系統管理員或支援人員，而且想要了解在 Intune 中管理應用程式的詳細資訊，請參閱[了解非受控應用程式、受控應用程式和 MAM 應用程式的功能](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/understanding-the-capabilities-of-unmanaged-apps-managed-apps/ba-p/249164) (英文)。
@@ -64,6 +64,6 @@ ms.locfileid: "83882088"
 
 - 電話號碼：針對公司所擁有的裝置，組織可以看到您完整的電話號碼。 如果是個人所擁有的裝置，組織便只能看到電話號碼的最後四個數字。 您可在個別裝置的 [裝置詳細資料] 頁面上看到每個個別裝置的所有權類型。
 - 裝置儲存空間：如果您無法安裝必要的應用程式，組織可以查看裝置儲存空間，以了解是否是空間不足。  
-- 位置：組織一律無法看到裝置的位置，除非您需要復原某個已遺失的受監督 iOS 裝置。 請瀏覽 [Apple iOS 文件](https://go.microsoft.com/fwlink/?linkid=853816)，以深入了解受監督的裝置。  
-- 應用程式清查詳細資料：如果您的組織使用 Mobile Threat Defense，他們將能夠檢視您 iOS 裝置上應用程式的相關詳細資料。 深入了解 [Mobile Threat Defense](set-up-mobile-threat-defense.md)。 如果是個人裝置，組織只能看到您的受控應用程式清查。 如果是公司擁有的裝置，組織可以看到所有的應用程式清查。
+- 位置：在公司擁有的裝置上，組織可以看到遺失的裝置位置。 至於個人擁有的裝置，除非嘗試尋找遺失的受監督 iOS 裝置，否則您的組織看不到裝置位置。 請瀏覽 [Apple iOS 文件](https://go.microsoft.com/fwlink/?linkid=853816)，以深入了解受監督的裝置。  
+- 應用程式清查詳細資料：如果您的組織使用 Mobile Threat Defense，他們將能夠檢視您 iOS 裝置上應用程式的相關詳細資料。 深入了解 [Mobile Threat Defense](set-up-mobile-threat-defense.md)。 否則，在個人擁有的裝置上，組織只能看到您的受控應用程式清查。 對於公司擁有的裝置，組織可以看到所有的應用程式清查。
 - 網路資訊：有些與 Android 裝置網路連線相關的資訊，可能會提供給您組織的支援人員。 例如，如果您的組織要求裝置保留在某個建築物內，則您的裝置會識別網路連線位置。 

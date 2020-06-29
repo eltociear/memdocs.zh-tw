@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 06/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,27 +16,27 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3c8b8599c7b207900d6e4a14b7580a324a238dfe
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 27d31e64e99e8dc796b0436052f7220260ab1029
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989915"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795664"
 ---
 # <a name="see-device-details-in-intune"></a>在 Intune 中查看裝置詳細資料
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-[裝置]  功能提供您管理之裝置其他詳細資料，包括其硬體及安裝的應用程式。
+[裝置] 功能提供您管理之裝置其他詳細資料，包括其硬體及安裝的應用程式。
 
 這篇文章會示範如何在 Azure 入口網站中檢視您的所有裝置及其屬性。
 
 ## <a name="view-the-device-details"></a>檢視裝置詳細資料
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-3. 選取 [裝置]   > [所有裝置]  > 選取其中一個列出的裝置以開啟其詳細資料：
+3. 選取 [裝置] > [所有裝置] > 選取其中一個列出的裝置以開啟其詳細資料：
 
-   - [概觀]  會顯示裝置名稱，並列出該裝置的一些重要屬性，包括其為個人裝置或公司裝置、序號、主要使用者等。 您可以在裝置上執行下列動作：
+   - [概觀] 會顯示裝置名稱，並列出該裝置的一些重要屬性，包括其為個人裝置或公司裝置、序號、主要使用者等。 您可以在裝置上執行下列動作：
       - [淘汰](devices-wipe.md#retire)
       - [抹除](devices-wipe.md#wipe)
       - [刪除](devices-wipe.md#delete-devices-from-the-intune-portal)
@@ -48,15 +48,15 @@ ms.locfileid: "83989915"
       - [Autopilot 重設](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (僅限 Windows)
       - [快速掃描](../configuration/device-restrictions-windows-10.md) (僅限 Windows 10)
       - [完整掃描](../configuration/device-restrictions-windows-10.md) (僅限 Windows 10)
-      - 更新 Windows Defender 安全情報
+      - [更新 Windows Defender 安全情報](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/manage-protection-updates-microsoft-defender-antivirus)
       - [BitLocker 金鑰輪替](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
       - [重新命名裝置](device-rename.md)
       - [新的遠端協助工作階段](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
-   - 使用 [內容]  來指派[您所建立的類別](../enrollment/device-group-mapping.md)，以及將裝置的擁有權變更為個人裝置或公司裝置。
-   - [硬體]  會包括許多裝置相關的詳細資料，例如裝置識別碼、作業系統與版本、儲存空間，以及更多詳細資料。
-   - [探索到的應用程式]  會列出 Intune 找到已安裝在裝置上的所有應用程式，以及應用程式版本。 如需詳細資訊，請參閱 [Intune 探索到的應用程式](../apps/app-discovered-apps.md)。
-   - [裝置合規性]  會列出所有已指派的合規性原則，以及裝置是否符合規範。
-   - [裝置設定]  會顯示已指派給裝置的所有裝置設定原則，以及原則是否成功。
+   - 使用 [內容] 來指派[您所建立的類別](../enrollment/device-group-mapping.md)，以及將裝置的擁有權變更為個人裝置或公司裝置。
+   - [硬體] 會包括許多裝置相關的詳細資料，例如裝置識別碼、作業系統與版本、儲存空間，以及更多詳細資料。
+   - [探索到的應用程式] 會列出 Intune 找到已安裝在裝置上的所有應用程式，以及應用程式版本。 如需詳細資訊，請參閱 [Intune 探索到的應用程式](../apps/app-discovered-apps.md)。
+   - [裝置合規性] 會列出所有已指派的合規性原則，以及裝置是否符合規範。
+   - [裝置設定]會顯示已指派給裝置的所有裝置設定原則，以及原則是否成功。
    - **應用程式設定** 
    - **端點安全性設定**
    - **修復金鑰**會顯示針對裝置找到的可用 BitLocker 金鑰
@@ -75,8 +75,8 @@ ms.locfileid: "83989915"
 |UDID|裝置的唯一裝置識別碼。|Windows、iOS|
 |Intune 裝置識別碼|可唯一識別裝置的 GUID。|Windows、iOS|
 |序號|由製造商提供的裝置序號。|Windows、iOS|
-|共用裝置|若為 [是]  ，則會有多名使用者共用裝置。|Windows、iOS|
-|通過使用者核准的註冊|若為 [是]  ，則裝置會具備使用者核准的註冊，讓管理員能夠管理裝置上的特定安全性設定。|Windows、iOS|
+|共用裝置|若為 [是]，則會有多名使用者共用裝置。|Windows、iOS|
+|通過使用者核准的註冊|若為 [是]，則裝置會具備使用者核准的註冊，讓管理員能夠管理裝置上的特定安全性設定。|Windows、iOS|
 |作業系統|在裝置上使用的作業系統。|Windows、iOS|
 |作業系統版本|裝置上的作業系統版本。|Windows、iOS|
 |作業系統語言|為裝置上作業系統設定的語言。|Windows、iOS|
@@ -96,13 +96,13 @@ ms.locfileid: "83989915"
 |註冊日期|裝置在 Intune 中註冊的日期與時間。|Windows、iOS/iPadOS、Android|
 |上次連絡|裝置最後連線至 Intune 的日期與時間。|Windows、iOS/iPadOS、Android|
 |啟用鎖定略過碼|此代碼可用來停用啟用鎖定。|iOS|
-|已註冊 Azure AD|若為 [是]  ，表示裝置已向 Azure Directory 註冊。|Windows、iOS/iPadOS、Android|
-|Intune 已註冊|若為 [是]  ，表示裝置已向 Intune 註冊|Windows、iOS/iPadOS、Android|
+|已註冊 Azure AD|若為 [是]，表示裝置已向 Azure Directory 註冊。|Windows、iOS/iPadOS、Android|
+|Intune 已註冊|若為 [是]，表示裝置已向 Intune 註冊|Windows、iOS/iPadOS、Android|
 |合規性|裝置的合規性狀態。|Windows、iOS/iPadOS、Android|
-|EAS 已啟用|若為 [是]  ，裝置便會與 Exchange 信箱同步處理。|Windows、iOS/iPadOS、Android|
+|EAS 已啟用|若為 [是]，裝置便會與 Exchange 信箱同步處理。|Windows、iOS/iPadOS、Android|
 |EAS 啟用識別碼|裝置的 Exchange ActiveSync 識別碼。|Windows、iOS/iPadOS、Android|
-|受監督|若為 [是]  ，表示系統管理員對裝置有加強的控制力。|Windows、iOS/iPadOS、Android|
-|已加密|若為 [是]  ，表示會加密儲存在裝置上的資料。|Windows、iOS/iPadOS、Android|
+|受監督|若為 [是]，表示系統管理員對裝置有加強的控制力。|Windows、iOS/iPadOS、Android|
+|已加密|若為 [是]，表示會加密儲存在裝置上的資料。|Windows、iOS/iPadOS、Android|
 
 > [!Note]  
 > 系統不會清查 Android Enterprise 專用或完全受控裝置上的電話號碼。

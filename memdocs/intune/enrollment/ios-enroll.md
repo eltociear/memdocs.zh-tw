@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf413dc551d8be8fd646a03826fb3e5507f4d272
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ba44cca323dd2a3fbf756b86743dea403ce0b156
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988931"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093066"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>在 Intune 中註冊 iOS/iPadOS 裝置
 
@@ -61,7 +61,7 @@ Intune 啟用 iPad 和 iPhone 的行動裝置管理 (MDM)，讓使用者安全�
 
 ## <a name="automated-device-enrollment"></a>自動的裝置註冊
 
-組織可以透過 Apple 的自動裝置註冊 (ADE) 購買 iOS/iPadOS 裝置。 ADE 可供在「線上」部署註冊設定檔，將裝置納入管理。 如需詳細資訊，請參閱[裝置註冊計劃](device-enrollment-program-enroll-ios.md)。
+組織可以透過 Apple 的自動裝置註冊 (ADE) 購買 iOS/iPadOS 裝置。 ADE 可供在「線上」部署註冊設定檔，將裝置納入管理。 如需詳細資訊，請參閱[使用 Apple 的自動化裝置註冊來自動註冊 iOS/iPadOS 裝置](device-enrollment-program-enroll-ios.md)。
 
 ## <a name="user-enrollment"></a>使用者註冊
 相較於其他註冊方法，使用者註冊會提供一組管理選項子集給管理員。 如需詳細資訊，請參閱[使用者註冊支援的動作、密碼和其他選項](ios-user-enrollment-supported-actions.md)，以及[設定 iOS/iPadOS 與 iPadOS 使用者註冊](ios-user-enrollment.md)。
@@ -101,7 +101,7 @@ Apple School Manager 是針對學校提供的裝置採購暨註冊方案。 如�
 
 設定為無使用者親和性的裝置並不支援公司入口網站，且不應該安裝該 App。 公司入口網站專為有公司認證且需要存取個人化公司資源 (如電子郵件) 的使用者設計。 註冊為無使用者親和性的裝置並非專供單一使用者登入使用。 Kiosk、銷售點 (POS)，或共用公用程式裝置，皆屬註冊為無使用者親和性的常見案例。
 
-如果需要使用者親和性，請在註冊裝置之前確認裝置的註冊設定檔已選取 [使用者親和性]  。 若要變更裝置的親和性狀態，您必須將裝置淘汰並重新註冊該裝置。
+如果需要使用者親和性，請在註冊裝置之前確認裝置的註冊設定檔已選取 [使用者親和性]。 若要變更裝置的親和性狀態，您必須將裝置淘汰並重新註冊該裝置。
 
 ## <a name="see-also"></a>請參閱
 

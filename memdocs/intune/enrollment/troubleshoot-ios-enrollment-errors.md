@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 06/16/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07612080f170c5f2bef448aa616a4422508218d1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2b0c65e12349f8b4c887b5a633a1cd94c272ca5a
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326928"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093348"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>針對 Microsoft Intune 中的 iOS/iPadOS 裝置註冊問題進行疑難排解
 
@@ -61,30 +61,11 @@ ms.locfileid: "80326928"
 
 #### <a name="resolution"></a>解決方案
 1. 登入 Azure 入口網站。
-2. 選取 [更多服務]  並搜尋 Intune，然後選取 [Intune]  。
-3. 選取 [裝置註冊]   > [註冊限制]  。
-4. 在 [裝置類型限制]  下，選取您要設定的限制 > [內容]   > 選取 [平台]  > 針對 [iOS]  選取 [允許]  ，然後按一下 [確定]  。
-5. 選取 [設定平台]  ，針對個人擁有的 iOS/iPadOS 裝置選取 [允許]  ，然後按一下 [確定]  。
+2. 選取 [更多服務] 並搜尋 Intune，然後選取 [Intune]。
+3. 選取 [裝置註冊] > [註冊限制]。
+4. 在 [裝置類型限制] 下，選取您要設定的限制 > [內容] > 選取 [平台] > 針對 [iOS] 選取 [允許]，然後按一下 [確定]。
+5. 選取 [設定平台]，針對個人擁有的 iOS/iPadOS 裝置選取 [允許]，然後按一下 [確定]。
 6. 重新註冊裝置。
-
-**原因：** DNS 中的必要 CNAME 記錄不存在。
-
-#### <a name="resolution"></a>解決方案
-建立公司網域的 CNAME DNS 資源記錄。 例如，假設公司的網域為 contoso.com，則請在 DNS 中建立 CNAME，其會將 EnterpriseEnrollment.contoso.com 重新導向至 EnterpriseEnrollment-s.manage.microsoft.com。
-
-雖然建立 CNAME DNS 項目並非必要，但 CNAME 記錄可以方便使用者進行註冊。 若找不到任何 CNAME 記錄，將會提示使用者手動輸入 MDM 伺服器名稱 enrollment.manage.microsoft.com。
-
-如果已驗證的網域不止一個，請為每個網域建立一筆 CNAME 記錄。 CNAME 資源記錄必須包含下列資訊：
-
-|類型|主機名稱|指向|TTL|
-|------|------|------|------|
-|CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com|1 小時|
-|CNAME|EnterpriseRegistration.company_domain.com|EnterpriseRegistration.windows.net|1 小時|
-
-如果您的公司對使用者認證使用多個網域，請為每個網域建立 CNAME 記錄。
-
-> [!NOTE]
-> DNS 記錄變更可能需要 72 小時才會傳播完成。 在 DNS 記錄傳播完成之前，您無法在 Intune 中驗證 DNS 變更。
 
 **原因：** 您註冊的裝置先前是使用不同使用者帳戶所註冊，而先前的使用者未適當地從 Intune 中移除。
 
@@ -99,16 +80,16 @@ ms.locfileid: "80326928"
 **原因：** 裝置已向另一個 MDM 提供者註冊。
 
 #### <a name="resolution"></a>解決方案
-1. 在 iOS/iPadOS 裝置上開啟 [設定]  ，移至 [一般] > [裝置管理]  。
+1. 在 iOS/iPadOS 裝置上開啟 [設定]，移至 [一般] > [裝置管理]。
 2. 移除任何現有的管理設定檔。
 3. 重新註冊裝置。
 
 **原因：** 嘗試註冊裝置的使用者沒有 Microsoft Intune 授權。
 
 #### <a name="resolution"></a>解決方案
-1. 移至 [Office 365 系統管理中心](https://admin.microsoft.com)，然後選擇 [使用者] > [作用中使用者]  。
-2. 選取您想要指派 Intune 使用者授權的使用者帳戶，然後選擇 [產品授權] > [編輯]  。
-3. 針對您要指派給此使用者的授權，將切換開關切換至 [開啟]  位置，然後選擇 [儲存]  。
+1. 移至 [Office 365 系統管理中心](https://admin.microsoft.com)，然後選擇 [使用者] > [作用中使用者]。
+2. 選取您想要指派 Intune 使用者授權的使用者帳戶，然後選擇 [產品授權] > [編輯]。
+3. 針對您要指派給此使用者的授權，將切換開關切換至 [開啟] 位置，然後選擇 [儲存]。
 4. 重新註冊裝置。
 
 ### <a name="this-service-is-not-supported-no-enrollment-policy"></a>不支援這項服務。 無註冊原則。
@@ -136,10 +117,10 @@ ms.locfileid: "80326928"
 **原因：** 使用者嘗試註冊的裝置數目超過裝置註冊限制。
 
 #### <a name="resolution"></a>解決方案
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [所有裝置]  ，並檢查使用者已註冊的裝置數目。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置] > [所有裝置]，並檢查使用者已註冊的裝置數目。
     > [!NOTE]
     > 您也應該讓受影響的使用者登入 [Intune 使用者入口網站](https://portal.manage.microsoft.com/)，並檢查已註冊的裝置。 有些裝置可能出現在 [Intune 使用者入口網站](https://portal.manage.microsoft.com/)中，但不在 [Intune 系統管理入口網站](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview)中，這類裝置也會計入裝置註冊限制。
-2. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [註冊限制]  > 檢查裝置註冊限制。 根據預設，此限制數目為 15。 
+2. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置] > [註冊限制] > 檢查裝置註冊限制。 根據預設，此限制數目為 15。 
 3. 如果註冊的裝置數目已達到限制，請移除不必要的裝置，或增加裝置註冊限制。 因為每個已註冊的裝置都會耗用 Intune 授權，所以建議您一律先移除不必要的裝置。
 4. 重新註冊裝置。
 
@@ -157,8 +138,8 @@ ms.locfileid: "80326928"
 **原因：** 嘗試註冊裝置的使用者沒有有效 Intune 授權。
 
 #### <a name="resolution"></a>解決方案
-1. 移至 [Microsoft 365 系統管理中心](https://admin.microsoft.com)，然後選擇 [使用者]   > [作用中使用者]  。
-2. 選取受影響的使用者帳戶 > [產品授權]   > [編輯]  。
+1. 移至 [Microsoft 365 系統管理中心](https://admin.microsoft.com)，然後選擇 [使用者] > [作用中使用者]。
+2. 選取受影響的使用者帳戶 > [產品授權] > [編輯]。
 3. 確認已將有效的 Intune 授權指派給此使用者。
 4. 重新註冊裝置。
 
@@ -166,8 +147,8 @@ ms.locfileid: "80326928"
 
 **原因：** 嘗試註冊裝置的使用者沒有有效 Intune 授權。
 
-1. 移至 [Microsoft 365 系統管理中心](https://admin.microsoft.com)，然後選擇 [使用者]   > [作用中使用者]  。
-2. 選取受影響的使用者帳戶，然後選擇 [產品授權]   > [編輯]  。
+1. 移至 [Microsoft 365 系統管理中心](https://admin.microsoft.com)，然後選擇 [使用者] > [作用中使用者]。
+2. 選取受影響的使用者帳戶，然後選擇 [產品授權] > [編輯]。
 3. 確認已將有效的 Intune 授權指派給此使用者。
 4. 重新註冊裝置。
 
@@ -177,8 +158,8 @@ ms.locfileid: "80326928"
 
 #### <a name="resolution"></a>解決方案
 
-1. 在 iOS/iPadOS 裝置上開啟 [設定]  > [一般]   > [裝置管理]  。
-2. 點選現有的管理設定檔，然後點選 [移除管理]  。
+1. 在 iOS/iPadOS 裝置上開啟 [設定] > [一般] > [裝置管理]。
+2. 點選現有的管理設定檔，然後點選 [移除管理]。
 3. 重新註冊裝置。
 
 ### <a name="noenrollmentpolicy"></a>NoEnrollmentPolicy
@@ -229,7 +210,7 @@ iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR 
 #### <a name="resolution"></a>解決方案
 
 1. 編輯註冊設定檔。 您可以對設定檔進行任何變更。 目的是要更新設定檔的修改時間。
-2. 同步處理 ADE 管理的裝置：在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [iOS]   > [iOS 註冊]   > [註冊方案權杖]  > 選擇權杖 > [立即同步]  。 同步處理要求會傳送至 Apple。
+2. 同步處理 ADE 管理的裝置：在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置] > [iOS] > [iOS 註冊] > [註冊方案權杖] > 選擇權杖 > [立即同步]。 同步處理要求會傳送至 Apple。
 
 ### <a name="ade-enrollment-stuck-at-user-login"></a>ADE 註冊在使用者登入時停止運作
 當開啟已指派註冊設定檔的 ADE 管理裝置時，在輸入認證後會停在初始設定。
@@ -239,6 +220,16 @@ iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR 
 #### <a name="resolution"></a>解決方案
 停用 MFA，然後重新註冊裝置。
 
+### <a name="authentication-doesnt-redirect-to-the-government-cloud"></a>驗證不會重新導向至政府雲端 
+
+從另一部裝置登入的政府使用者，會被重新導向至公用雲端驗證，而不是政府雲端。 
+
+**原因：** Azure AD 尚不支援從另一部裝置登入時，重新導向至政府雲端。 
+
+#### <a name="resolution"></a>解決方案 
+使用**設定**應用程式中的 iOS 公司入口網站 [雲端] 設定，將政府使用者的驗證重新導向至政府雲端。 根據預設，[雲端] 設定會設定為 [自動]，而公司入口網站會將驗證導向至裝置自動偵測到的雲端 (例如公用或政府)。 從另一部裝置登入的政府使用者，必須手動選取進行驗證的政府雲端。 
+
+開啟**設定**應用程式，然後選取 [公司入口網站]。 選取 [公司入口網站] 設定中的 [雲端]。 將 [雲端] 設定為 [政府]。  
 
 ## <a name="next-steps"></a>後續步驟
 

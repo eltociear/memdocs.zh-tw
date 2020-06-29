@@ -16,20 +16,20 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d0ba328f1976d0463c6be042dfd6f8a7570d6dac
-ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
+ms.openlocfilehash: ae95fb48296f778fb98affa2270ba763d79fb766
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206327"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879680"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Intune 中端點安全性的端點偵測及回應原則
 
-當您將 Microsoft Defender 進階威脅防護 (Defender ATP) 與 Intune 整合時，您可以使用端點偵測及回應 (EDR) 的端點安全性原則來管理 EDR 設定，並讓裝置在 Defender ATP 上線。
+當將 Microsoft Defender 進階威脅防護 (Microsoft Defender ATP) 與 Intune 整合時，您可使用端點偵測及回應 (EDR) 的端點安全性原則來管理 EDR 設定，並讓裝置在 Microsoft Defender ATP 上線。
 
-Defender ATP 端點偵測及回應的功能可提供接近即時且可採取動作的進階攻擊偵測。 安全性分析師可以有效地優先處理警示、查看缺口的完整範圍，並採取回應動作來補救威脅。
+Microsoft Defender ATP 端點偵測及回應功能可提供接近即時且可採取動作的進階攻擊偵測。 安全性分析師可以有效地優先處理警示、查看缺口的完整範圍，並採取回應動作來補救威脅。
 
-EDR 原則包含平台專用的設定檔，可用來管理 EDR 的設定。 設定檔會自動包含 Defender ATP 的「上線套件」。 上線套件會設定裝置與 Defender ATP 搭配使用的方式。 在裝置上線後，您便可以開始使用該裝置的威脅資料。
+EDR 原則包含平台專用的設定檔，可用來管理 EDR 的設定。 設定檔會自動包含 Microsoft Defender ATP 的「上線套件」。 上線套件會設定裝置與 Microsoft Defender ATP 搭配使用的方式。 在裝置上線後，您便可以開始使用該裝置的威脅資料。
 
 EDR 原則會部署到您使用 Intune 在 Azure Active Directory (Azure AD) 中管理的裝置群組，以及您使用 Configuration Manager 管理的內部部署裝置 (包含 Windows 伺服器)。 不同管理路徑的 EDR 原則需要不同的上線套件。 因此，您需要為您管理的不同裝置類型建立個別的 EDR 原則。
 
@@ -44,7 +44,7 @@ EDR 的端點安全性原則位於 [Microsoft 端點管理員系統管理中心]
 
 **一般**：
 
-- **Microsoft Defender 進階威脅防護租用戶** ‒ 您的 Defender ATP 租用戶必須與您的 Microsoft 端點管理員租用戶 (Intune 訂閱) 整合，您才能建立 EDR 原則。 請參閱 Intune 文件中的[使用 Microsoft Defender ATP](advanced-threat-protection.md)。
+- **Microsoft Defender 進階威脅防護租用戶** – Microsoft Defender ATP 租用戶必須與 Microsoft 端點管理員租用戶 (Intune 訂閱) 整合，您才能建立 EDR 原則。 請參閱 Intune 文件中的[使用 Microsoft Defender ATP](advanced-threat-protection.md)。
 
 **支援來自 Configuration Manager 的裝置**：
 
@@ -258,12 +258,9 @@ Configuration Manager 版本 2002 需要更新，才支援使用您從 Microsoft
 
 - 針對以 **Windows 10 及更新版本**平台 (Intune) 為目標的原則，您將會看到原則的合規性概觀。 您也可以選取圖表來檢視接收原則的裝置清單，並鑽研個別裝置以取得詳細資料。
 
-  **具有 ATP 感應器的裝置**圖表只會顯示已透過使用 **Windows 10 及更新版本**設定檔，成功上線至 Defender ATP 的裝置。 為了確保您的裝置在此圖表中完整呈現，請將上線設定檔部署到所有裝置。 以外部方式 (例如群組原則或 PowerShell) 上線至 Defender ATP 的裝置，會視為**沒有 ATP 感應器的裝置**。
+  **具有 ATP 感應器的裝置**圖表只會顯示已透過使用 **Windows 10 及更新版本**設定檔，成功上線至 Microsoft Defender ATP 的裝置。 為了確保您的裝置在此圖表中完整呈現，請將上線設定檔部署到所有裝置。 以外部方式 (例如群組原則或 PowerShell) 上線至 Microsoft Defender ATP 的裝置，會視為**沒有 ATP 感應器的裝置**。
 
 - 針對以 **Windows 10 和 Windows Server** 平台 (Configuration Manager) 為目標的原則，您將會看到原則的合規性概觀，但無法鑽研以檢視其他詳細資料。 此檢視會受到限制，因為系統管理中心只會從負責管理 Configuration Manager 裝置原則部署的 Configuration Manager 收到有限的狀態詳細資料。
-
-
-
 
 
 檢視您可以為平台和設定檔進行的[設定](endpoint-security-edr-profile-settings.md)。

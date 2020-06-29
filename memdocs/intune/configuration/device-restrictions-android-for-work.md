@@ -5,23 +5,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 06/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
-ms.reviewer: chmaguir, chrisbal
+ms.reviewer: chmaguir, chrisbal, priyar
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b81686f645d9fce610c39266feb2675fd35cc280
-ms.sourcegitcommit: 6f67c864cf71b4a6a316f4d04a6cc43cf28b4277
+ms.openlocfilehash: 88843cfa1c4f98d87e5eaaefdc0dcd87daf8cb68
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84257030"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093712"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>使用 Intune 來允許或限制功能的 Android Enterprise 裝置設定
 
@@ -87,93 +87,124 @@ ms.locfileid: "84257030"
 
 - **對應用程式進行威脅掃描**：[必要] (預設值) 可讓 Google Play 安全防護在應用程式安裝前後掃描這些應用程式。 如果偵測到威脅，可能會警告使用者從裝置移除應用程式。 當設定為 [未設定] 時，Intune 則不會變更或更新此設定。 根據預設，OS 可能不會啟用或執行 Google Play Protect 來掃描應用程式。
 
-### <a name="dedicated-devices"></a>專用裝置
+### <a name="device-experience"></a>裝置體驗
 
-請使用這些設定來設定專用裝置上的 Kiosk 樣式體驗。 您可設定要執行一個應用程式或執行許多應用程式的裝置。 以 Kiosk 模式設定裝置時，只能使用您新增的應用程式。 這些設定適用於 Android Enterprise 專用裝置。 它們不適用於 Android Enterprise 完全受控裝置。
+請使用這些設定，來設定專用裝置或完全受控裝置上的 kiosk 樣式體驗。 您可設定要執行一個應用程式或執行許多應用程式的裝置。 以 Kiosk 模式設定裝置時，只能使用您新增的應用程式。
 
-**Kiosk 模式**：選擇裝置是要執行一個應用程式，還是要執行多個應用程式。
+**註冊設定檔類型**：選取註冊設定檔類型，以開始在您的裝置上設定 Microsoft Launcher 或 Microsoft Managed Home Screen。 選項包括：
 
-- **未設定**：Intune 不會變更或更新此設定。
-- **單一應用程式**：使用者只能存取裝置上的單一應用程式。 當裝置啟動時，只會啟動特定的應用程式。 也會限制使用者無法開啟新應用程式或變更執行中應用程式。
+- **未設定**：Intune 不會變更或更新此設定。 根據預設，使用者會有看到裝置的預設主畫面體驗。
+- **專用裝置**：在專用裝置上設定 kiosk 樣式體驗。 在您設定這些設定之前，請務必在裝置上[新增](../apps/apps-add-android-for-work.md)及[指派](../apps/apps-deploy.md)您想要使用的應用程式。
 
-  - **選取受管理應用程式**：從清單選取受管理的 Google Play 應用程式。
+  - **Kiosk 模式**：選擇裝置是要執行一個應用程式，還是要執行多個應用程式。 選項包括：
 
-    如果您沒有看到任何應用程式列出，則請[新增一些 Android 應用程式](../apps/apps-add-android-for-work.md)到裝置。 請務必[將應用程式指派給為專用裝置建立的裝置群組](../apps/apps-deploy.md)。
+    - **未設定**：Intune 不會變更或更新此設定。
+    - **單一應用程式**：使用者只能存取裝置上的單一應用程式。 當裝置啟動時，只會啟動特定的應用程式。 也會限制使用者無法開啟新應用程式或變更執行中應用程式。
 
-  > [!IMPORTANT]
-  > 使用單一應用程式 Kiosk 模式時，撥號程式/電話應用程式可能無法正常運作。
+      - **選取用於 kiosk 模式的應用程式**：從清單選取受管理的 Google Play 應用程式。
+
+      > [!IMPORTANT]
+      > 使用單一應用程式 kiosk 模式時，撥號程式/電話應用程式可能無法正常運作。
   
-- **多個應用程式**：使用者可以存取裝置上一組有限的應用程式。 當裝置啟動時，只會啟動您新增的應用程式。 您也可以新增一些使用者可開啟的網頁連結。 套用原則時，使用者會在主畫面上看到所允許之應用程式的圖示。
+    - **多個應用程式**：使用者可以存取裝置上一組有限的應用程式。 當裝置啟動時，只會啟動您新增的應用程式。 您也可以新增一些使用者可開啟的網頁連結。 套用原則時，使用者會在主畫面上看到所允許之應用程式的圖示。
 
-  > [!IMPORTANT]
-  > 針對多應用程式專用裝置，來自 Google Play 的 [Managed Home Screen 應用程式](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise)**必須**：
-  >   - 在 Intune 中[新增為用戶端應用程式](../apps/apps-add-android-for-work.md)
-  >   - [指派給為專用裝置建立的裝置群組](../apps/apps-deploy.md)
-  >
-  > **Managed Home Screen** 應用程式不一定要在組態設定檔中，但必須新增為用戶端應用程式。 當 **Managed Home Screen** 應用程式新增為用戶端應用程式時，您在組態設定檔中新增的任何其他應用程式，都會在 **Managed Home Screen** 應用程式中顯示為圖示。
-  >
-  > 使用多應用程式 Kiosk 模式時，撥號程式/電話應用程式可能無法正常運作。 
+      > [!IMPORTANT]
+      > 針對多應用程式專用裝置，來自 Google Play 的 [Managed Home Screen 應用程式](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise)**必須**：
+      >   - [新增至 Intune](../apps/apps-add-android-for-work.md)
+      >   - [指派給為專用裝置建立的裝置群組](../apps/apps-deploy.md)
+      >
+      > **Managed Home Screen** 應用程式不一定要在組態設定檔中，但必須新增為應用程式。 新增 **Managed Home Screen** 應用程式後，您在組態設定檔中新增的任何其他應用程式，在 **Managed Home Screen** 應用程式中都會顯示為圖示。
+      >
+      > 使用多應用程式 Kiosk 模式時，撥號程式/電話應用程式可能無法正常運作。 
 
-  - **新增**：從清單中選取應用程式。
+      - **新增**：從清單中選取應用程式。
 
-    如果未列出 **Managed Home Screen** 應用程式，請[從 Google Play 中新增它](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise)。 請務必[將應用程式指派](../apps/apps-deploy.md)給為專用裝置建立的裝置群組。
+        如果未列出 **Managed Home Screen** 應用程式，請[從 Google Play 中新增它](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise)。 請務必[將應用程式指派](../apps/apps-deploy.md)給為專用裝置建立的裝置群組。
 
-    您也可以將您組織建立的任何其他 [Android 應用程式](../apps/apps-add-android-for-work.md)和 [Web 應用程式](../apps/web-app.md)新增到裝置。 請務必[將應用程式指派給為專用裝置建立的裝置群組](../apps/apps-deploy.md)。
+        您也可以將您組織建立的任何其他 [Android 應用程式](../apps/apps-add-android-for-work.md)和 [Web 應用程式](../apps/web-app.md)新增到裝置。 請務必[將應用程式指派給為專用裝置建立的裝置群組](../apps/apps-deploy.md)。
 
-  - **虛擬首頁按鈕**：讓使用者返回受控主畫面的螢幕按鍵，以便使用者可以在應用程式之間切換。 選項包括：
+      - **虛擬首頁按鈕**：讓使用者返回受控主畫面的螢幕按鍵，以便使用者可以在應用程式之間切換。 選項包括：
+        - **未設定** (預設值)：不顯示 [首頁] 按鈕。 使用者必須使用返回按鈕以在應用程式之間切換。
+        - **向上撥動**：[首頁] 按鈕會在使用者於裝置中向上撥動時顯示。
+        - **浮動**：在裝置上顯示持續浮動的 [首頁] 按鈕。
 
-    - **未設定** (預設值)：不顯示 [首頁] 按鈕。 使用者必須使用返回按鈕以在應用程式之間切換。
-    - **向上撥動**：[首頁] 按鈕會在使用者於裝置中向上撥動時顯示。
-    - **浮動**：在裝置上顯示持續浮動的 [首頁] 按鈕。
-
-  - **離開 Kiosk 模式**：[啟用] 允許系統管理員暫時停止 kiosk 模式以更新裝置。 若要使用這項功能，系統管理員必須執行下列動作：
+      - **離開 Kiosk 模式**：[啟用] 允許系統管理員暫時停止 kiosk 模式以更新裝置。 若要使用這項功能，系統管理員必須執行下列動作：
   
-    1. 繼續以選取返回按鈕，直到顯示 [結束 Kiosk] 按鈕為止。 
-    2. 選取 [結束 Kiosk] 按鈕，然後輸入 [離開 kosk 模式驗證碼] PIN。
-    3. 完成後，請選取 [受控主畫面] 應用程式。 此步驟會將裝置重新鎖定為多應用程式 kiosk 模式。
+        1. 繼續以選取返回按鈕，直到顯示 [結束 Kiosk] 按鈕為止。 
+        2. 選取 [結束 Kiosk] 按鈕，然後輸入 [離開 kosk 模式驗證碼] PIN。
+        3. 完成後，請選取 [受控主畫面] 應用程式。 此步驟會將裝置重新鎖定為多應用程式 kiosk 模式。
 
-      當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會防止系統管理員暫停 kiosk 模式。 如果系統管理員繼續以選取返回按鈕，並選取 [結束 Kiosk] 按鈕，則會顯示需要密碼的訊息。
+        當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會防止系統管理員暫停 kiosk 模式。 如果系統管理員繼續以選取返回按鈕，並選取 [結束 Kiosk] 按鈕，則會顯示需要密碼的訊息。
 
-    - **離開 Kiosk 模式驗證碼**：輸入 4-6 位數的數字 PIN。 系統管理員可使用此 PIN 暫時暫停 kiosk 模式。
+      - **離開 Kiosk 模式驗證碼**：輸入 4-6 位數的數字 PIN。 系統管理員可使用此 PIN 暫時暫停 kiosk 模式。
 
-  - **設定自訂 URL 背景**：輸入 URL 以自訂專用裝置上的背景畫面。 例如，輸入 `http://contoso.com/backgroundimage.jpg`。
+      - **設定自訂 URL 背景**：輸入 URL 以自訂專用裝置上的背景畫面。 例如，輸入 `http://contoso.com/backgroundimage.jpg`。
 
-    > [!NOTE]
-    > 在大部分情況下，我們建議您至少從下列大小的影像開始：
-    >
-    > - 電話：1080x1920 像素
-    > - 平板電腦：1920x1080 像素
-    >
-    > 為獲得最佳體驗及清晰的詳細資料，建議根據顯示規格建立每部裝置的影像資產。
-    >
-    > 現代顯示器具有較高的像素密度，可以顯示相當於 2K/4K 清晰度的影像。
+        > [!NOTE]
+        > 在大部分情況下，我們建議您至少從下列大小的影像開始：
+        >
+        > - 電話：1080x1920 像素
+        > - 平板電腦：1920x1080 像素
+        >
+        > 為獲得最佳體驗及清晰的詳細資料，建議根據顯示規格建立每部裝置的影像資產。
+        >
+        > 現代顯示器具有較高的像素密度，可以顯示相當於 2K/4K 清晰度的影像。
 
-  - **Wi-Fi 設定**：[啟用] 會在受控主畫面上顯示 Wi-Fi 控制項，並可讓使用者將裝置連線到不同的 Wi-Fi 網路。 啟用這項功能也會開啟裝置位置。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能不會在受控主畫面上顯示 Wi-Fi 控制項。 此選項可防止使用者在使用受控主畫面時連線到 Wi-Fi 網路。
+      - **Wi-Fi 設定**：[啟用] 會在受控主畫面上顯示 Wi-Fi 控制項，並可讓使用者將裝置連線到不同的 Wi-Fi 網路。 啟用這項功能也會開啟裝置位置。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能不會在受控主畫面上顯示 Wi-Fi 控制項。 此選項可防止使用者在使用受控主畫面時連線到 Wi-Fi 網路。
 
-  - **藍牙設定**：[啟用] 會在受控主畫面上顯示藍牙控制項，並可讓使用者將裝置與藍牙配對。 啟用這項功能也會開啟裝置位置。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能不會在受控主畫面上顯示藍牙控制項。 此選項可防止使用者在使用受控主畫面時，設定藍牙並配對裝置。
+      - **藍牙設定**：[啟用] 會在受控主畫面上顯示藍牙控制項，並可讓使用者將裝置與藍牙配對。 啟用這項功能也會開啟裝置位置。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能不會在受控主畫面上顯示藍牙控制項。 此選項可防止使用者在使用受控主畫面時，設定藍牙並配對裝置。
 
-  - **手電筒存取權**：[啟用] 會在受控主畫面上顯示手電筒控制項，並可讓使用者開啟或關閉手電筒。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能不會在受控主畫面上顯示手電筒控制項。 此選項可防止使用者在使用受控主畫面時使用手電筒。
+      - **手電筒存取權**：[啟用] 會在受控主畫面上顯示手電筒控制項，並可讓使用者開啟或關閉手電筒。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能不會在受控主畫面上顯示手電筒控制項。 此選項可防止使用者在使用受控主畫面時使用手電筒。
 
-  - **媒體音量控制**：[啟用] 會在受控主畫面上顯示媒體音量控制項，並可讓使用者使用滑桿來調整裝置的媒體音量。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能不會在受控主畫面上顯示媒體音量控制項。 除非其硬體按鈕支援這個功能，否則此選項可防止使用者在使用受控主畫面時調整裝置的媒體音量。
+      - **媒體音量控制**：[啟用] 會在受控主畫面上顯示媒體音量控制項，並可讓使用者使用滑桿來調整裝置的媒體音量。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能不會在受控主畫面上顯示媒體音量控制項。 除非其硬體按鈕支援這個功能，否則此選項可防止使用者在使用受控主畫面時調整裝置的媒體音量。
 
-  - **螢幕保護程式模式**：[啟用] 會在裝置鎖定或逾時時，在受控主畫面上顯示螢幕保護程式。當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能不會在受控主畫面上顯示螢幕保護程式。
+      - **螢幕保護程式模式**：[啟用] 會在裝置鎖定或逾時時，在受控主畫面上顯示螢幕保護程式。當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能不會在受控主畫面上顯示螢幕保護程式。
 
-    啟用時，亦請設定：
+        啟用時，亦請設定：
 
-    - **設定自訂螢幕保護程式影像**：輸入自訂 PNG、JPG、JPEG、GIF、BMP、WebP 或 ICOimage 的 URL。 例如，輸入：
+        - **設定自訂螢幕保護程式影像**：輸入自訂 PNG、JPG、JPEG、GIF、BMP、WebP 或 ICOimage 的 URL。 如果您未輸入 URL，則會使用裝置預設影像 (如果有預設影像的話)。 
+        
+          例如，輸入：
 
-      - `http://www.contoso.com/image.jpg`
-      - `www.contoso.com/image.bmp`
-      - `https://www.contoso.com/image.webp`
+          - `http://www.contoso.com/image.jpg`
+          - `www.contoso.com/image.bmp`
+          - `https://www.contoso.com/image.webp`          
 
-      如果您未輸入 URL，則會使用裝置預設影像 (如果有預設影像的話)。
+          > [!TIP]
+          > 支援任何可轉換成點陣圖的檔案資源 URL。
 
-      > [!TIP]
-      > 支援任何可轉換成點陣圖的檔案資源 URL。
+        - **裝置在關閉螢幕前顯示螢幕保護程式的秒數**：選擇裝置顯示螢幕保護程式的時間長度。 輸入介於 0-9999999 秒之間的值。 預設值為 `0` 秒。 當保留空白或設為零 (`0`) 時，螢幕保護裝置會在使用者與裝置互動前處於作用中狀態。
+        - **裝置在顯示螢幕保護程式前的非使用中秒數**：選擇顯示螢幕保護程式之前，裝置閒置的時間長度。 輸入介於 1-9999999 秒之間的值。 預設值為 `30` 秒。 您必須輸入大於零 (`0`) 的數字。
+        - **啟動螢幕保護程式前偵測媒體**：如果裝置上正在播放音訊或影片，則 [啟用] (預設) 不會顯示螢幕保護程式。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會顯示螢幕保護裝置，即使正在播放音訊或影片也一樣。
 
-    - **裝置在關閉螢幕前顯示螢幕保護程式的秒數**：選擇裝置顯示螢幕保護程式的時間長度。 輸入介於 0-9999999 秒之間的值。 預設值為 `0` 秒。 當保留空白或設為零 (`0`) 時，螢幕保護裝置會在使用者與裝置互動前處於作用中狀態。
-    - **裝置在顯示螢幕保護程式前的非使用中秒數**：選擇顯示螢幕保護程式之前，裝置閒置的時間長度。 輸入介於 1-9999999 秒之間的值。 預設值為 `30` 秒。 您必須輸入大於零 (`0`) 的數字。
-    - **啟動螢幕保護程式前偵測媒體**：如果裝置上正在播放音訊或影片，則 [啟用] (預設) 不會顯示螢幕保護程式。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會顯示螢幕保護裝置，即使正在播放音訊或影片也一樣。
+- **完全受控**：在完全受控裝置上設定 Microsoft Launcher。
+
+  - **將 Microsoft Launcher 設定為預設啟動器**：[啟用] 會將 Microsoft Launcher 設定為主畫面上的預設啟動器。 若您將 Launcher 設為預設，使用者就無法使用另一個啟動器。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，不會強制將 Microsoft Launcher 設定為預設啟動器。
+
+<!-- The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
+
+  - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
+    - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
+    - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
+  - **Enable launcher feed**: **Enable** turns on the launcher feed, which shows calendars, documents, and recent activities. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, this feed isn't shown.
+    - **Allow user to enable/disable feed**: **Enable** lets users enable or disable the launcher feed. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the launcher feed settings.
+  - **Dock presence**: The dock gives users quick access to their apps and tools. Your options:
+    - **Not configured** (default): Intune doesn't change or update this setting.
+    - **Show**: The dock is shown on devices.
+    - **Hide**: The dock is hidden. Users must swipe up to access the dock.
+    - **Disabled**: The dock isn't shown on devices, and users are prevented from showing it.
+
+  - **Allow user to change dock presence**: **Enable** allows users to show or hide the dock. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users aren't allowed to change the device dock configuration.
+
+  - **Search bar replacement**: Choose where to put the search bar. Your options:
+    - **Not configured** (default): Intune doesn't change or update this setting.
+    - **Top**: Search bar is shown at the top of devices.
+    - **Bottom**: Search bar is shown at the bottom of devices.
+    - **Hide**: Search bar is hidden.
+
+  - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
+
+End of comment -->
 
 ### <a name="password"></a>密碼
 
@@ -298,8 +329,9 @@ ms.locfileid: "84257030"
 
 - **工作和個人設定檔之間的複製並貼上**：[封鎖] 會防止在工作和個人應用程式之間的複製並貼上。 當設定為 [未設定] (預設) 時，Intune 不會變更或更新此設定。 根據預設，OS 可能會允許使用者使用個人設定檔中應用程式的複製和貼上來共用資料。
 - **工作設定檔與個人設定檔之間的資料共用**：選擇工作設定檔中的應用程式是否能夠與個人設定檔中的應用程式共用。 例如，您可控制應用程式內的共用動作，例如，Chrome 瀏覽器應用程式中的 [分享] 選項。 此設定不適用於複製/貼上剪貼簿行為。 選項包括：
-  - **裝置預設**：這是裝置的預設共用行為，會因 Android 版本而異。 預設允許從個人設定檔共用至工作設定檔。 預設也會封鎖從工作設定檔共用至個人設定檔。 此設定是為了防止資料從工作設定檔共用至個人設定檔。 在執行版本 6.0 和更新版本的裝置上，Google 並未封鎖從個人設定檔共用至工作設定檔。
-  - **禁止跨邊界共用**：禁止工作設定檔與個人設定檔之間的共用。
+  - **裝置預設**：這是裝置的預設共用行為，隨 Android 版本而異：
+    - 在執行 Android 6.0 或更新版本的裝置上，禁止從工作設定檔共用至個人設定檔。 但允許從個人設定檔共用至工作設定檔。
+    - 在執行 Android 5.0 及更舊版本的裝置上，會雙向禁止工作設定檔與個人設定檔之間的共用。
   - **工作設定檔中的應用程式可以處理來自個人設定檔的共用要求**：啟用允許從個人設定檔與工作設定檔進行共用的內建 Android 功能。 啟用時，來自個人設定檔中應用程式的共用要求，可以與工作設定檔中的應用程式共用。 此設定是執行早於 6.0 版本之 Android 裝置的預設行為。
   - **共用不受限制**：允許跨工作設定檔界限進行雙向共用。 當您選取此設定時，工作設定檔中的應用程式可以和個人設定檔中不具徽章的應用程式共用資料。 此設定可讓工作設定檔中受管理的應用程式與裝置未受管理端上的應用程式共用。 因此，請小心使用此設定。
 

@@ -88,6 +88,20 @@
         - name: Samsung Knox Mobile Enrollment
           href: android-samsung-knox-mobile-enroll.md
           displayName: kda; kme
+        - name: Android Enterprise 安全性設定架構
+          items:
+            - name: Android Enterprise 安全性設定架構
+              href: android-configuration-framework.md
+            - name: 架構部署方法
+              href: framework-deployment-methodology.md
+            - name: 裝置註冊限制
+              href: device-enrollment-restrictions.md
+            - name: 為應用程式設定原則進行設定
+              href: android-app-configuration-policies.md
+            - name: Android 工作設定檔安全性設定
+              href: android-work-profile-security-settings.md
+            - name: Android 完全受控安全性設定
+              href: android-fully-managed-security-settings.md
     - name: 設定 iOS/iPadOS 註冊
       href: ios-enroll.md
       items:

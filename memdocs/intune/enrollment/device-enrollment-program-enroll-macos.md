@@ -18,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 196fc4f551596a6146513d25166b1b167aa44186
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: bfcc4a8e867041e0053697bbee605f9798e45bec
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986682"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093874"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>使用 Apple Business Manager 或 Apple School Manager 自動註冊 macOS 裝置
 
 > [!IMPORTANT]
-> Apple 在最近將 Apple 裝置註冊計劃 (DEP) 變更為 Apple 自動裝置註冊 (ADE)。 Intune 正在更新 Intune 使用者介面以應對這項變更。 在變更完成之前，您仍會繼續在 Intune 入口網站中看到「裝置註冊計劃」  。 無論顯示的名稱為何，您現在所使用的皆為「自動裝置註冊」。
+> Apple 在最近將 Apple 裝置註冊計劃 (DEP) 變更為 Apple 自動裝置註冊 (ADE)。 Intune 正在更新 Intune 使用者介面以應對這項變更。 在變更完成之前，您仍會繼續在 Intune 入口網站中看到「裝置註冊計劃」。 無論顯示的名稱為何，您現在所使用的皆為「自動裝置註冊」。
 
 您可以為透過 Apple [Apple Business Manager](https://business.apple.com/) 或 [Apple School Manager](https://school.apple.com/) 購買的 macOS 裝置設定 Intune 註冊。 針對大量裝置，這兩種註冊您都可以使用，且不需要實際取得裝置。 您可以將 macOS 裝置直接寄送給使用者。 當使用者開啟裝置電源時，會以預先設定的設定來執行設定助理，並註冊裝置以接受 Intune 管理。
 
@@ -46,7 +46,7 @@ Apple Businesss Manager 註冊或 Apple School Manager 註冊都無法搭配[裝
 -->
 ## <a name="prerequisites"></a>先決條件
 
-- 在 [Apple School Manager](https://school.apple.com/) 或 [Apple 的裝置註冊計劃](http://deploy.apple.com)中購買的裝置
+- 在 [Apple School Manager](https://school.apple.com/) 或 [Apple 自動裝置註冊](http://deploy.apple.com)中購買的裝置
 - 序號或採購單號碼的清單。
 - [MDM 授權單位](../fundamentals/mdm-authority-set.md)
 - [Apple MDM Push Certificate](../enrollment/apple-mdm-push-certificate-get.md)
@@ -62,71 +62,76 @@ Apple Businesss Manager 註冊或 Apple School Manager 註冊都無法搭配[裝
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>步驟 1： 下載建立權杖所需的 Intune 公開金鑰憑證
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [macOS]   > [macOS 註冊]   > [註冊方案權杖]   > [新增]  。
+1. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選擇 [裝置] > [macOS] > [macOS 註冊]。 
+> [註冊方案權杖] > [新增]。
 
-    ![取得註冊計劃權杖。](./media/device-enrollment-program-enroll-macos/image01.png)
+    ![Get an enrollment program token.](./media/device-enrollment-program-enroll-macos/image01.png)
 
-2. 藉由選取 [我同意]  來將權限授與 Microsoft，以將使用者和裝置資訊傳送給 Apple。
+2. 藉由選取 [我同意] 來將權限授與 Microsoft，以將使用者和裝置資訊傳送給 Apple。
 
-   ![[Apple 憑證] 工作區中 [註冊計劃權杖] 窗格下載公開金鑰的螢幕擷取畫面。](./media/device-enrollment-program-enroll-macos/add-enrollment-program-token-pane.png)
+   ![[Apple 憑證] 工作區中 [註冊計劃權杖] 窗格下載公開金鑰的螢幕擷取畫面。](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
-3. 選擇 [下載您的公開金鑰]  ，在本機下載並儲存加密金鑰 (.pem) 檔案。 這個 .pem 檔案會用於向 Apple 入口網站要求信任關係憑證。
+3. 選擇 [下載您的公開金鑰]，在本機下載並儲存加密金鑰 (.pem) 檔案。 這個 .pem 檔案會用於向 Apple 入口網站要求信任關係憑證。
 
 ### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>步驟 2： 使用您的金鑰，下載來自 Apple 的權杖
 
-1. 選擇 [建立 Apple 的裝置註冊計畫的權杖]  或 [透過 Apple School Manager 建立權杖]  來開啟適當的 Apple 入口網站，並使用您的公司 Apple ID 登入。 您可以使用此 Apple ID 來更新您的權杖。
-2. 對於 DEP，在 Apple 入口網站中，對於 [裝置註冊計劃]  選擇 [開始使用]   > [管理伺服器]   > [新增 MDM 伺服器]  。
-3. 對於 Apple School Manage，在 Apple 入口網站中，選擇 [MDM 伺服器]   > [新增 MDM 伺服器]  。
-4. 輸入 [MDM 伺服器名稱]  ，然後選擇 [下一步]  。 您可參考這個伺服器名稱，以識別行動裝置管理 (MDM) 伺服器， 但它不是 Microsoft Intune 伺服器的名稱或 URL。
+1. 選擇 [Create a token for via Apple Business Manager] \(透過 Apple Business Manager 建立權杖\) 或 [透過 Apple School Manager 建立權杖] 來開啟適當的 Apple 入口網站，然後使用您的公司 Apple ID 登入。 您可以使用此 Apple ID 來更新您的權杖。
+2. 對於 DEP，在 Apple 入口網站中，對於 [裝置註冊計劃] 選擇 [開始使用] > [管理伺服器] > [新增 MDM 伺服器]。
+3. 對於 Apple School Manage，在 Apple 入口網站中，選擇 [MDM 伺服器] > [新增 MDM 伺服器]。
+4. 輸入 [MDM 伺服器名稱]，然後選擇 [下一步] 。 您可參考這個伺服器名稱，以識別行動裝置管理 (MDM) 伺服器， 但它不是 Microsoft Intune 伺服器的名稱或 URL。
 
-5. [新增 &lt;服器名稱&gt;]  對話方塊隨即開啟，指出**上傳您的公用金鑰**。 選擇 [選擇檔案...]  以上傳 .pem 檔案，然後選擇 [下一步]  。
+5. [新增 &lt;服器名稱&gt;] 對話方塊隨即開啟，指出**上傳您的公用金鑰**。 選取 [選擇檔案] 以上傳 .pem 檔案，然後選擇 [下一步]。
 
-6. 移至 [部署計劃]  &gt; [裝置註冊計劃]  &gt; [管理裝置]  。
-7. 在 [選擇裝置依據]  下，指定識別裝置的方式：
+6. 移至 [部署計劃] &gt; [裝置註冊計劃] &gt; [管理裝置]。
+7. 在 [選擇裝置依據] 下，指定識別裝置的方式：
     - **序號**
     - **訂單號碼**
     - **上傳 CSV 檔案**。
 
    ![指定依據序號選擇裝置、將選擇的動作設定為 [指派給伺服器]，然後選取伺服器名稱的螢幕擷取畫面。](./media/device-enrollment-program-enroll-macos/enrollment-program-token-specify-serial.png)
 
-8. 針對 [選擇動作]  選擇 [Assign to Server] (指派給伺服器))  ，然後選擇指定給 Microsoft Intune 的 &lt;伺服器名稱&gt;，再選擇 [確定]  。 Apple 入口網站會將指定的裝置指派給 Intune 伺服器以便管理 ，然後顯示 [指派完成]  。
+8. 針對 [選擇動作] 選擇 [Assign to Server] (指派給伺服器))，然後選擇指定給 Microsoft Intune 的 &lt;伺服器名稱&gt;，再選擇 [確定]。 Apple 入口網站會將指定的裝置指派給 Intune 伺服器以便管理 ，然後顯示 [指派完成]。
 
 ### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>步驟 3： 儲存用以建立此權杖的 Apple ID
 
 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，提供 Apple ID 供日後參考。
 
-![指定要用於建立註冊計劃權杖的 Apple 識別碼，並瀏覽至註冊計劃權杖的螢幕擷取畫面。](./media/device-enrollment-program-enroll-macos/image03.png)
+![指定要用於建立註冊計劃權杖的 Apple 識別碼，並瀏覽至註冊計劃權杖的螢幕擷取畫面。](./media/device-enrollment-program-enroll-ios/image03.png)
 
 ### <a name="step-4-upload-your-token"></a>步驟 4： 上傳權杖
-在 [Apple 權杖]  方塊中，瀏覽至憑證 (.pem) 檔案，選擇 [開啟]  ，然後選擇 [建立]  。 使用推播憑證，透過將原則推送到已註冊的裝置，Intune 即可註冊及管理 macOS 裝置。 Intune 會自動與 Apple 同步處理，以查看您的註冊計劃帳戶。
+在 [Apple 權杖] 方塊中，瀏覽至憑證 (.pem) 檔案，選擇 [開啟]，然後選擇 [建立]。 使用推播憑證，透過將原則推送到已註冊的裝置，Intune 即可註冊及管理 macOS 裝置。 Intune 會自動與 Apple 同步處理，以查看您的註冊計劃帳戶。
 
 ## <a name="create-an-apple-enrollment-profile"></a>建立 Apple 註冊設定檔
 
 安裝權杖之後，您可以為裝置建立註冊設定檔。 裝置註冊設定檔會定義要在註冊期間套用至裝置群組的設定。
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [macOS]   > [macOS 註冊]   > [註冊方案權杖]  。
-2. 選取權杖，選擇 [設定檔]  ，然後選擇 [建立設定檔]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置] > [macOS] > [macOS 註冊] > [註冊方案權杖]。
+2. 選取權杖，選擇 [設定檔]，然後選擇 [建立設定檔]。
 
     ![[建立設定檔] 螢幕擷取畫面。](./media/device-enrollment-program-enroll-macos/image04.png)
 
-3. 在 [建立設定檔]  下，為設定檔輸入系統管理用的**名稱**以及**描述**。 使用者看不到這些詳細資料。 您可以使用此 [名稱]  欄位，在 Azure Active Directory 中建立動態群組。 設定檔名稱可用來定義 enrollmentProfileName 參數，以註冊具備此註冊設定檔的裝置。 深入了解 [Azure Active Directory 動態群組](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)。
+3. 在 [基本] 頁面上，為設定檔輸入系統管理用的**名稱**與**描述**。 使用者看不到這些詳細資料。 您可以使用此 [名稱] 欄位，在 Azure Active Directory 中建立動態群組。 設定檔名稱可用來定義 enrollmentProfileName 參數，以註冊具備此註冊設定檔的裝置。 深入了解 [Azure Active Directory 動態群組](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)。
 
     ![設定檔名稱與描述。](./media/device-enrollment-program-enroll-macos/createprofile.png)
 
-4. 針對 [平台]  ，選擇 [macOS]  。
+4. 針對 [平台]，選擇 [macOS]。
 
-5. 針對 [使用者親和性]  ，為具備此設定檔的裝置選擇需要或不需要由指派的使用者來進行註冊。
+5. 選取 [下一步]，以移至 [管理設定] 頁面。
+
+6. 針對 [使用者親和性]，為具備此設定檔的裝置選擇需要或不需要由指派的使用者來進行註冊。
     - **搭配使用者親和性進行註冊** - 針對屬於使用者且想要使用公司入口網站 App 進行像是安裝應用程式等服務的裝置，選擇此選項。 若使用 ADFS，則使用者親和性需要 [WS-Trust 1.3 使用者名稱/混合端點](https://technet.microsoft.com/library/adfs2-help-endpoints)。 [深入了解](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。具有使用者親和性的 macOS ADE 裝置不支援多重要素驗證。
 
     - **不搭配使用者親和性進行註冊** - 針對未與任何使用者相關的裝置選擇此選項。 針對執行工作而不需存取本機使用者資料的裝置使用此選項。 公司入口網站應用程式類的應用程式無法運作。
 
-6. 選擇 [裝置管理設定]  ，並選擇您是否想要針對使用此設定檔的裝置鎖定註冊。 **鎖定的註冊**會停用可將管理設定檔從 [系統喜好設定]  功能表中或透過 [終端機]  移除的 macOS 設定。 註冊裝置之後，必須抹除裝置才能變更此設定。
+6. 若您選擇了 [使用使用者親和性註冊]，請選擇 [驗證方法] 底下的 [Setup Assistant (legacy)] \(設定助理 (舊版)\) 或 [Setup Assistant with modern authentication] \(使用新式驗證設定助理\)。
 
-    ![裝置管理設定螢幕擷取畫面。](./media/device-enrollment-program-enroll-macos/devicemanagementsettingsblade-macos.png)
+7. 針對 [鎖定的註冊]，選擇您是否要鎖定使用此設定檔的裝置註冊。 [是] 將停用可將管理設定檔從 [系統喜好設定] 功能表中移除或透過 [終端機] 移除的 macOS 設定。 註冊裝置之後，必須抹除裝置才能變更此設定。
 
-7. 選擇 [確定]  。
+8. 選取 [下一步]，以移至 [設定助理] 頁面。
 
-8. 選擇 [設定助理設定]  ，對下列設定檔進行設定：![設定助理自訂。](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
+9. 在 [設定助理] 頁面上，設定下列設定檔設定：
+
+    ![設定助理自訂。](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
     | 部門設定 | 說明 |
     |---|---|
@@ -134,58 +139,60 @@ Apple Businesss Manager 註冊或 Apple School Manager 註冊都無法搭配[裝
     | <strong>部門電話</strong> | 在使用者在啟用期間按一下 [需要協助] 按鈕時顯示。 |
 
     您可以選擇當使用者設定裝置時，要在裝置上顯示或隱藏各種不同的設定助理畫面。
-    - 如果您選擇 [隱藏]  ，則不會在設定期間顯示畫面。 設定好裝置之後，使用者仍然可以進入 [設定]  功能表來設定此功能。
-    - 如果您選擇 [顯示]  ，將會在設定期間顯示畫面。 使用者有時可以跳過畫面而不採取動作。 但是他們隨後可以進入裝置的 [設定]  功能表來設定此功能。 
+    - 如果您選擇 [隱藏]，則不會在設定期間顯示畫面。 設定好裝置之後，使用者仍然可以進入 [設定] 功能表來設定此功能。
+    - 如果您選擇 [顯示]，將會在設定期間顯示畫面。 使用者有時可以跳過畫面而不採取動作。 但是他們隨後可以進入裝置的 [設定] 功能表來設定此功能。 
 
-    | 設定助理畫面設定 | 如果您選擇 [顯示]  ，裝置會在設定期間... |
+    | 設定助理畫面設定 | 如果您選擇 [顯示]，裝置會在設定期間... |
     |------------------------------------------|------------------------------------------|
-    | <strong>密碼</strong> | 提示使用者輸入密碼。 除非裝置受到保護，或以其他方式控制存取 (例如，將裝置限制為單一應用程式的 Kiosk 模式)，否則一律需要密碼。 |
-    | <strong>位置服務</strong> | 提示使用者輸入其位置。 |
-    | <strong>還原</strong> | 顯示 [應用程式與資料] 畫面。 此畫面可讓使用者選擇在設定裝置時，要從 iCloud 備份還原或傳送資料。 |
-    | <strong>iCloud 與 Apple ID</strong> | 可讓使用者選擇使用其 **Apple ID** 登入並使用 **iCloud**。                         |
-    | <strong>條款和條件</strong> | 需要使用者接受 Apple 的條款及條件。 |
-    | <strong>Touch ID</strong> | 可讓使用者選擇設定裝置的指紋識別。 |
-    | <strong>Apple Pay</strong> | 可讓使用者選擇在裝置上設定 Apple Pay。 |
-    | <strong>縮放</strong> | 可讓使用者選擇在設定裝置時縮放顯示畫面。 |
-    | <strong>Siri</strong> | 可讓使用者選擇設定 Siri。 |
-    | <strong>診斷資料</strong> | 向使用者顯示 [診斷] 畫面。 此畫面可讓使用者選擇將診斷資料傳送給 Apple。 |
-    | <strong>FileVault</strong> | 可讓使用者選擇設定 FileVault 加密。 |
-    | <strong>iCloud 診斷</strong> | 可讓使用者選擇將 iCloud 診斷資料傳送給 Apple。 |
-    | <strong>iCloud 儲存空間</strong> | 讓使用者能夠選擇使用 iCloud 儲存空間。 |    
-    | <strong>顯示色調</strong> | 可讓使用者選擇開啟 [顯示色調]。 |
-    | <strong>外觀</strong> | 向使用者顯示 [外觀] 畫面。 |
-    | <strong>註冊</strong>| 要求使用者註冊裝置。 |
-    | <strong>隱私權</strong>| 向使用者顯示 [隱私權] 畫面。 |
-    | <strong>螢幕使用時間</strong>| 向使用者顯示 [螢幕使用時間] 畫面。 |
+    | <strong>密碼</strong> | 提示使用者輸入密碼。 除非以其他方式控制存取 (例如，將裝置限制為單一應用程式的 Kiosk 模式)，否則未受到保護的裝置一律需要密碼。 適用於 iOS/iPadOS 7.0 與更新版本。 |
+    | <strong>位置服務</strong> | 提示使用者輸入其位置。 適用於 macOS 10.11 與更新版本，以及 iOS/iPadOS 7.0 與更新版本。 |
+    | <strong>還原</strong> | 顯示 [應用程式與資料] 畫面。 此畫面可讓使用者選擇在設定裝置時，要從 iCloud 備份還原或傳送資料。 適用於 macOS 10.9 與更新版本，以及 iOS/iPadOS 7.0 與更新版本。 |
+    | <strong>Apple ID</strong> | 提供讓使用者選擇使用其 Apple ID 登入並使用 iCloud 的選項。 適用於 macOS 10.9 與更新版本，以及 iOS/iPadOS 7.0 與更新版本。   |
+    | <strong>條款和條件</strong> | 需要使用者接受 Apple 的條款及條件。 適用於 macOS 10.9 與更新版本，以及 iOS/iPadOS 7.0 與更新版本。 |
+    | <strong>Touch ID</strong> | 可讓使用者選擇設定裝置的指紋識別。 適用於 macOS 10.12.4 與更新版本，以及 iOS/iPadOS 8.1 與更新版本。 |
+    | <strong>Apple Pay</strong> | 可讓使用者選擇在裝置上設定 Apple Pay。 適用於 macOS 10.12.4 與更新版本，以及 iOS/iPadOS 7.0 與更新版本。 |
+    | <strong>縮放</strong> | 可讓使用者選擇在設定裝置時縮放顯示畫面。 適用於 iOS/iPadOS 8.3 與更新版本。 |
+    | <strong>Siri</strong> | 可讓使用者選擇設定 Siri。 適用於 macOS 10.12 與更新版本，以及 iOS/iPadOS 7.0 與更新版本。 |
+    | <strong>診斷資料</strong> | 向使用者顯示 [診斷] 畫面。 此畫面可讓使用者選擇將診斷資料傳送給 Apple。 適用於 macOS 10.9 與更新版本，以及 iOS/iPadOS 7.0 與更新版本。 |
+    | <strong>FileVault</strong> | 向使用者顯示 FileVault 2 加密畫面。 適用於 macOS 10.10 與更新版本。 |
+    | <strong>iCloud 診斷</strong> | 向使用者顯示 iCloud 分析畫面。 適用於 macOS 10.12.4 與更新版本。 |
+    | <strong>iCloud 儲存空間</strong> | 向使用者顯示 iCloud 文件及桌面畫面。 適用於 macOS 10.13.4 與更新版本。 |
+    | <strong>顯示色調</strong> | 可讓使用者選擇開啟 [顯示色調]。 適用於 macOS 10.13.6 與更新版本，以及 iOS/iPadOS 9.3.2 與更新版本。 |
+    | <strong>外觀</strong> | 向使用者顯示 [外觀] 畫面。 適用於 macOS 10.14 與更新版本，以及 iOS/iPadOS 13.0 與更新版本。 |
+    | <strong>註冊</strong> | 向使用者顯示註冊畫面。 適用於 macOS 10.9 與更新版本。 |
+    | <strong>螢幕使用時間</strong> | 顯示 [螢幕使用時間] 畫面。 適用於 macOS 10.15 與更新版本，以及 iOS/iPadOS 12.0 與更新版本。 |
+    | <strong>隱私權</strong> | 向使用者顯示 [隱私權] 畫面。 適用於 macOS 10.13.4 與更新版本，以及 iOS/iPadOS 11.3 與更新版本。 |
+    
+10. 選取 [下一步] 以移至 [檢閱 + 建立] 頁面。
 
-9. 選擇 [確定]  。
-
-10. 若要儲存該設定檔，請選擇 [建立]  。
+11. 若要儲存該設定檔，請選擇 [建立]。
 
 ## <a name="sync-managed-devices"></a>同步受管理裝置
 
 由於 Intune 有管理您裝置的權限，您可以同步處理 Intune 與 Apple，以在 Azure 入口網站的 Intune 中查看受管理裝置。
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]  > [macOS]  > **[macOS 註冊]** > [註冊方案權杖]  > 選擇清單中的權杖 > [裝置]  > [同步]  。![選取 [註冊計劃裝置] 節點並選擇 [同步] 連結的螢幕擷取畫面。](./media/device-enrollment-program-enroll-macos/image06.png)
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置] > [macOS] > [macOS 註冊] > [註冊方案權杖]。
+
+2. 在清單中選擇權杖 > [裝置]>[同步]。![選取 [註冊計劃裝置] 節點並選擇 [同步] 連結的螢幕擷取畫面。](./media/device-enrollment-program-enroll-macos/image06.png)
 
    為了符合 Apple 規定的可接受註冊計劃流量，Intune 具有下列限制︰
    - 完整同步處理每 7 天只能執行一次。 在完整同步期間，Intune 會擷取指派至已連線 Intune 之 Apple MDM 伺服器的序號完整更新清單。 若註冊計劃裝置從 Intune 入口網站刪除，但未從 Apple 入口網站中的 Apple MDM 伺服器解除指派，則在執行完整同步之前，該裝置都不會重新匯入 Intune。   
-   - 同步會每 24 小時自動執行一次。 您也可以按一下 [同步]  按鈕來進行同步 (請勿在 15 分鐘內重複點選)。 所有同步要求都必須在 15 分鐘內完成。 [同步]  按鈕在同步完成前都會處於停用狀態。 此同步會重新整理現有的裝置狀態，以及匯入指派至 Apple MDM 伺服器的新裝置。
+   - 同步會每 24 小時自動執行一次。 您也可以按一下 [同步] 按鈕來進行同步 (請勿在 15 分鐘內重複點選)。 所有同步要求都必須在 15 分鐘內完成。 [同步] 按鈕在同步完成前都會處於停用狀態。 此同步會重新整理現有的裝置狀態，以及匯入指派至 Apple MDM 伺服器的新裝置。
 
 ## <a name="assign-an-enrollment-profile-to-devices"></a>將註冊設定檔指派給裝置
 
 必須先將註冊計劃設定檔指派至裝置，裝置才能註冊。
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [macOS]   > [macOS 註冊]   > [註冊方案權杖]  > 在清單中選擇權杖。
-2. 選擇 [裝置]  > 選擇清單中的裝置 > [指派設定檔]  。
-3. 在 [指派設定檔]  下，選擇裝置的設定檔 > [指派]  。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置] > [macOS] > [macOS 註冊] > [註冊方案權杖] > 在清單中選擇權杖。
+2. 選擇 [裝置] > 選擇清單中的裝置 > [指派設定檔]。
+3. 在 [指派設定檔] 下，選擇裝置的設定檔 > [指派]。
 
 ### <a name="assign-a-default-profile"></a>指派預設設定檔
 
 您可以針對使用特定權杖註冊的所有裝置，挑選要套用的預設 macOS 與 iOS/iPadOS 設定檔。 
 
-1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置]   > [macOS]   > [macOS 註冊]   > [註冊方案權杖]  > 在清單中選擇權杖。
-2. 選擇 [設定預設設定檔]  、在下拉式清單中選擇設定檔，然後選擇 [儲存]  。 此設定檔將套用到使用該權杖註冊的所有裝置。
+1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置] > [macOS] > [macOS 註冊] > [註冊方案權杖] > 在清單中選擇權杖。
+2. 選擇 [設定預設設定檔]、在下拉式清單中選擇設定檔，然後選擇 [儲存]。 此設定檔將套用到使用該權杖註冊的所有裝置。
 
 ## <a name="distribute-devices"></a>散發裝置
 
@@ -194,20 +201,20 @@ Apple Businesss Manager 註冊或 Apple School Manager 註冊都無法搭配[裝
 ## <a name="renew-an-ade-token"></a>更新 ADE 權杖
 
 1. 前往 deploy.apple.com。  
-2. 在 [管理伺服器]  下，選擇與您所欲更新之權杖檔案相關的 MDM 伺服器。
-3. 選擇 [產生新權杖]  。
+2. 在 [管理伺服器] 下，選擇與您所欲更新之權杖檔案相關的 MDM 伺服器。
+3. 選擇 [產生新權杖]。
 
     ![產生新權杖的螢幕擷取畫面。](./media/device-enrollment-program-enroll-macos/generatenewtoken.png)
 
-4. 選擇 [您的伺服器權杖]  。  
-5. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置註冊]   > [Apple 註冊]   > [註冊方案權杖]  > 選擇權杖。
-    ![註冊計劃權杖的螢幕擷取畫面。](./media/device-enrollment-program-enroll-macos/enrollmentprogramtokens.png)
+4. 選擇 [您的伺服器權杖]。  
+5. 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，選擇 [裝置註冊] > [Apple 註冊] > [註冊方案權杖] > 選擇權杖。
+    ![註冊計劃權杖的螢幕擷取畫面。](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
 6. 選擇 [更新權杖]**Renew token**，然後輸入用於建立原始權杖的 Apple ID。  
-    ![產生新權杖的螢幕擷取畫面。](./media/device-enrollment-program-enroll-macos/renewtoken.png)
+    ![產生新權杖的螢幕擷取畫面。](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
 7. 上傳新下載的權杖。  
-8. 選擇 [更新權杖]  。 您會看到權杖已更新的確認。
+8. 選擇 [更新權杖]。 您會看到權杖已更新的確認。
     ![確認的螢幕擷取畫面。](./media/device-enrollment-program-enroll-macos/confirmation.png)
 
 ## <a name="next-steps"></a>後續步驟

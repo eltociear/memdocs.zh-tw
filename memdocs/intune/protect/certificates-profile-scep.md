@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 06/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfa830f1e7bfd87c20c1aed78b933f81e96b8dca
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 35cf4b3afb766d8729d3438d2d8c61e1d79f4791
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988658"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531735"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>在 Intune 中建立並指派 SCEP 憑證設定檔
 
@@ -34,15 +34,15 @@ ms.locfileid: "83988658"
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 選取並移至 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取並移至 [裝置] > [組態設定檔] > [建立設定檔]。
 
 3. 輸入下列內容：
    - **平台**：選擇您的裝置平台。
-   - **設定檔**：選取 [SCEP 憑證] 
+   - **設定檔**：選取 [SCEP 憑證]
 
-     針對 **Android Enterprise** 平台，「設定檔類型」  會分為兩個類別：「僅限裝置擁有者」  和「僅限工作設定檔」  。 請務必為您管理的裝置選取正確的 SCEP 憑證設定檔。  
+     針對 **Android Enterprise** 平台，「設定檔類型」會分為兩個類別：「僅限裝置擁有者」和「僅限工作設定檔」。 請務必為您管理的裝置選取正確的 SCEP 憑證設定檔。  
 
-     適用於「僅限裝置擁有者」  設定檔的 SCEP 憑證設定檔具有下列限制：
+     適用於「僅限裝置擁有者」設定檔的 SCEP 憑證設定檔具有下列限制：
 
       1. 在 [監視] 下方，憑證報告不適用於「裝置擁有者」SCEP 憑證設定檔。
 
@@ -50,15 +50,15 @@ ms.locfileid: "83988658"
 
       3. 針對 Android Enterprise 專用裝置，SCEP 憑證設定檔僅支援 Wi-Fi 網路設定和驗證。  Android Enterprise 專用裝置上的 SCEP 憑證設定檔並不支援 VPN 或應用程式驗證。
 
-4. 選取 [建立]  。
+4. 選取 [建立]。
 
-5. 在 [基本資訊]  中，輸入下列內容：
+5. 在 [基本資訊] 中，輸入下列內容：
    - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，良好的設定檔名稱為*適用於整家公司的 SCEP 設定檔*。
    - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
 
-6. 選取 [下一步]  。
+6. 選取 [下一步]。
 
-7. 在 [組態設定]  中，完成下列設定：
+7. 在 [組態設定] 中，完成下列設定：
 
    - **憑證類型**：
 
@@ -66,14 +66,14 @@ ms.locfileid: "83988658"
 
      根據您要使用憑證設定檔的方式來選取類型：
 
-     - **使用者**：[使用者]  憑證可在憑證的主旨與 SAN 中包含使用者屬性和裝置屬性。  
-     - **裝置**：[裝置]  憑證只能在憑證的主旨與 SAN 中包含裝置屬性。
+     - **使用者**：[使用者] 憑證可在憑證的主旨與 SAN 中包含使用者屬性和裝置屬性。  
+     - **裝置**：[裝置] 憑證只能在憑證的主旨與 SAN 中包含裝置屬性。
 
-       針對無使用者裝置 (例如 kiosk 或 Windows 裝置) 等情況使用 [裝置]  。 在 Windows 裝置上，憑證會放在本機電腦憑證存放區中。
+       針對無使用者裝置 (例如 kiosk 或 Windows 裝置) 等情況使用 [裝置]。 在 Windows 裝置上，憑證會放在本機電腦憑證存放區中。
 
    - **主體名稱格式**：
 
-     選取 Intune 在憑證要求中自動建立主體名稱的方式。 主體名稱格式的選項，取決於您選取的憑證類型 ([使用者]  或 [裝置]  )。
+     選取 Intune 在憑證要求中自動建立主體名稱的方式。 主體名稱格式的選項，取決於您選取的憑證類型 ([使用者] 或 [裝置])。
 
      > [!NOTE]
      > 當產生的憑證簽署要求 (CSR) 中的主體名稱包含下列其中一個字元作為逸出字元 (以反斜線 \\ 開頭) 時，使用 SCEP 取得憑證有一個[已知問題](#avoid-certificate-signing-requests-with-escaped-special-characters)：
@@ -84,7 +84,7 @@ ms.locfileid: "83988658"
 
      - **使用者憑證類型**
 
-       「主體名稱格式」  的格式選項包括：
+       「主體名稱格式」的格式選項包括：
 
        - **未設定**
        - **一般名稱**
@@ -92,7 +92,7 @@ ms.locfileid: "83988658"
        - **一般名稱及電子郵件地址**
        - **IMEI (國際行動設備識別)**
        - **序號**
-       - **自訂**：選取此選項時，會一併顯示 [自訂]  文字方塊。 您可以使用此欄位來輸入自訂主體名稱格式，包括變數。 自訂格式支援兩個變數：**一般名稱 (CN)** 和**電子郵件 (E)** 。 **一般名稱 (CN)** 可以設定為下列任何變數：
+       - **自訂**：選取此選項時，會一併顯示 [自訂] 文字方塊。 您可以使用此欄位來輸入自訂主體名稱格式，包括變數。 自訂格式支援兩個變數：**一般名稱 (CN)** 和**電子郵件 (E)** 。 **一般名稱 (CN)** 可以設定為下列任何變數：
 
          - **CN={{UserName}}** ：使用者的使用者名稱，例如 janedoe。
          - **CN={{UserPrincipalName}}** ：使用者的使用者主體名稱，例如 janedoe@contoso.com.\*
@@ -133,10 +133,10 @@ ms.locfileid: "83988658"
 
         > [!IMPORTANT]
         > - 當您指定變數時，請將變數名稱括在大括弧 { } 中 (如範例所示)，以避免發生錯誤。  
-        > - 裝置憑證的「主體」  或 *SAN* 中所使用裝置屬性 (例如 **IMEI**、**SerialNumber** 和 **FullyQualifiedDomainName**)，這些屬性可由具有裝置存取權的人員來偽造。
+        > - 裝置憑證的「主體」或 *SAN* 中所使用裝置屬性 (例如 **IMEI**、**SerialNumber** 和 **FullyQualifiedDomainName**)，這些屬性可由具有裝置存取權的人員來偽造。
         > - 裝置必須支援憑證設定檔中指定的所有變數，才能在該裝置上安裝該設定檔。  例如，如果 SCEP 設定檔的主體名稱中使用 **{{IMEI}}** ，但該設定檔指派給沒有 IMEI 編號的裝置，則設定檔安裝將會失敗。
 
-   - **主體別名**：選取 Intune 在憑證要求中自動建立主體別名 (SAN) 的方式。 SAN 的選項取決於所選憑證類型 ([使用者]  或 [裝置]  )。
+   - **主體別名**：選取 Intune 在憑證要求中自動建立主體別名 (SAN) 的方式。 SAN 的選項取決於所選憑證類型 ([使用者] 或 [裝置])。
 
       - **使用者憑證類型**
 
@@ -149,7 +149,7 @@ ms.locfileid: "83988658"
 
       - **裝置憑證類型**
 
-        使用 [屬性]  下拉式清單並選取屬性、指派**值**，並將其**新增**至憑證設定檔。 您可以藉由選取其他屬性來新增多個值。
+        使用 [屬性] 下拉式清單並選取屬性、指派**值**，並將其**新增**至憑證設定檔。 您可以藉由選取其他屬性來新增多個值。
 
         可用的屬性包括：
 
@@ -157,7 +157,7 @@ ms.locfileid: "83988658"
         - **使用者主體名稱 (UPN)**
         - **DNS**
 
-        透過 [裝置]  憑證類型，您可以使用下列裝置憑證變數作為值：
+        透過 [裝置] 憑證類型，您可以使用下列裝置憑證變數作為值：
 
         - **{{AAD_Device_ID}}** 或 **{{AzureADDeviceId}}** - 任一變數皆可用於以 Azure AD 識別碼來識別裝置。
         - **{{Device_Serial}}**
@@ -175,7 +175,7 @@ ms.locfileid: "83988658"
         > [!IMPORTANT]
         > - 當您使用裝置憑證變數時，請用大括弧 { } 將變數名稱括住。
         > - 請不要在變數後面的文字中使用大括弧 **{ }** 、縱線符號 **|** 和分號 **;** 。
-        > - 裝置憑證的「主體」  或 *SAN* 中所使用裝置屬性 (例如 **IMEI**、**SerialNumber** 和 **FullyQualifiedDomainName**)，這些屬性可由具有裝置存取權的人員來偽造。
+        > - 裝置憑證的「主體」或 *SAN* 中所使用裝置屬性 (例如 **IMEI**、**SerialNumber** 和 **FullyQualifiedDomainName**)，這些屬性可由具有裝置存取權的人員來偽造。
         > - 裝置必須支援憑證設定檔中指定的所有變數，才能在該裝置上安裝該設定檔。  例如，如果 SCEP 設定檔的 SAN 中使用 **{{IMEI}}** ，但該設定檔指派給沒有 IMEI 編號的裝置，則設定檔安裝將會失敗。
 
    - **憑證有效期間**：
@@ -214,11 +214,11 @@ ms.locfileid: "83988658"
 
    - **根憑證**：
 
-     選取您先前設定並指派給此 SCEP 憑證設定檔所適用使用者和裝置的「受信任憑證設定檔」  。 受信任憑證設定檔用於使用受信任的根 CA 憑證來佈建使用者和裝置。 如需受信任憑證設定檔的資訊，請參閱＜在 Intune 中使用憑證以進行驗證＞  中的[＜匯出受信任的根 CA 憑證＞](certificates-configure.md#export-the-trusted-root-ca-certificate)和[＜建立受信任的憑證設定檔＞](certificates-configure.md#create-trusted-certificate-profiles)。 如果您有根憑證授權單位與發行憑證授權單位，請選取驗證發行憑證授權單位的受信任根憑證設定檔。
+     選取您先前設定並指派給此 SCEP 憑證設定檔所適用使用者和裝置的「受信任憑證設定檔」。 受信任憑證設定檔用於使用受信任的根 CA 憑證來佈建使用者和裝置。 如需受信任憑證設定檔的資訊，請參閱＜在 Intune 中使用憑證以進行驗證＞中的[＜匯出受信任的根 CA 憑證＞](certificates-configure.md#export-the-trusted-root-ca-certificate)和[＜建立受信任的憑證設定檔＞](certificates-configure.md#create-trusted-certificate-profiles)。 如果您有根憑證授權單位與發行憑證授權單位，請選取驗證發行憑證授權單位的受信任根憑證設定檔。
 
    - **擴充金鑰使用方法**：
 
-     針對憑證的使用目的新增值。 在大部分情況下，憑證需要「用戶端驗證」  ，使用者或裝置才能向伺服器進行驗證。 您可以視需要新增其他金鑰使用方法。
+     針對憑證的使用目的新增值。 在大部分情況下，憑證需要「用戶端驗證」，使用者或裝置才能向伺服器進行驗證。 您可以視需要新增其他金鑰使用方法。
 
    - **更新閾值 (%)** ：
 
@@ -226,23 +226,33 @@ ms.locfileid: "83988658"
 
    - **SCEP 伺服器 URL**：
 
-     輸入一或多個透過 SCEP 發行憑證的 NDES 伺服器 URL。 例如，輸入類似 `https://ndes.contoso.com/certsrv/mscep/mscep.dll` 的內容。 您可以視需要新增額外的 SCEP URL 來進行負載平衡，因為 URL 會隨機推送至具有設定檔的裝置。 如果其中一個 SCEP 伺服器不可用，則 SCEP 要求將會失敗，且可能會在稍後的裝置簽入中對已關閉的相同伺服器提出憑證要求。
+     輸入一或多個透過 SCEP 發行憑證的 NDES 伺服器 URL。 例如，輸入類似 `https://ndes.contoso.com/certsrv/mscep/mscep.dll` 的內容。
 
-8. 選取 [下一步]  。
+     您可以視需要新增額外的 SCEP URL 以負載平衡。 裝置會對 NDES 伺服器發出三次不同的呼叫：取得伺服器功能、取得公開金鑰，然後提交簽署要求。 當您使用多個 URL 時，因為負載平衡之故，可能會導致後續對 NDES 伺服器的呼叫使用不同的 URL。 若在相同的要求期間，後續呼叫連絡了不同的伺服器，要求將會失敗。
 
-9. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+     每個裝置平台都有專門管理 NDES 伺服器 URL 的行為：
 
-   選取 [下一步]  。
+     - **Android**：裝置會隨機化 SCEP 原則中已收到的 URL 清單，然後搜尋整份清單，直到找到可存取的 NDES 伺服器為止。 裝置接著會在整個過程中繼續使用相同的 URL 與伺服器。 若裝置無法存取任何一部 NDES 伺服器，此過程即告失敗。
+     - **iOS/iPadOS**：Intune 會隨機化 URL，並向裝置提供單一 URL。 若裝置無法存取 NDES 伺服器，SCEP 要求就會失敗。
+     - **Windows**：NDES URL 清單會被隨機化，然後傳遞至 Windows 裝置，按收到的順序嘗試這些 URL，直到找到可用的 URL 為止。 若裝置無法存取任何一部 NDES 伺服器，此過程即告失敗。
 
-10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
+     裝置在三次呼叫 NDES 伺服器的過程中，只要有一次無法成功連線至相同的 NDES 伺服器，SCEP 要求就會失敗。 例如，當負載平衡解決方案在第二次或第三次呼叫 NDES 伺服器時提供了不同的 URL，或根據 NDES 的虛擬化 URL 提供了不同的實際 NDES 伺服器，就可能會發生這種情況。 在要求失敗之後，裝置會從隨機化 NDES URL (或 iOS/iPadOS 的單一 URL) 的清單開始，在下一個原則週期重新嘗試此流程。  
 
-    選取 [下一步]  。
+8. 選取 [下一步]。
 
-11. (*僅適用於 Windows 10*) 在 [適用性規則]  中，指定適用性規則以精簡此設定檔的指派。 您可以根據作業系統版本或裝置版本，選擇指派或不指派設定檔。
+9. 在 [範圍標籤] (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+
+   選取 [下一步]。
+
+10. 在 [指派] 中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
+
+    選取 [下一步]。
+
+11. (*僅適用於 Windows 10*) 在 [適用性規則] 中，指定適用性規則以精簡此設定檔的指派。 您可以根據作業系統版本或裝置版本，選擇指派或不指派設定檔。
 
    如需詳細資訊，請參閱*在 Microsoft Intune 中建立裝置設定檔*中的[適用性規則](../configuration/device-profile-create.md#applicability-rules)。
 
-12. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
+12. 在 [檢閱 + 建立] 中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 ### <a name="avoid-certificate-signing-requests-with-escaped-special-characters"></a>避免使用具有已逸出之特殊字元的憑證簽署要求
 
@@ -290,7 +300,7 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 
 在繼續之前，請先考慮下列事項：
 
-- 當您指派 SCEP 憑證設定檔給群組時，受信任根 CA 憑證檔案 (如同在「受信任憑證設定檔」  中所指定) 即會安裝在裝置上。 裝置會使用 SCEP 憑證設定檔來建立該受信任根 CA 憑證的憑證要求。
+- 當您指派 SCEP 憑證設定檔給群組時，受信任根 CA 憑證檔案 (如同在「受信任憑證設定檔」中所指定) 即會安裝在裝置上。 裝置會使用 SCEP 憑證設定檔來建立該受信任根 CA 憑證的憑證要求。
 
 - SCEP 憑證設定檔只會安裝在執行您建立憑證設定檔時所指定平台的裝置上。
 
@@ -298,7 +308,7 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 
 - 若要在裝置註冊之後快速將憑證發行至裝置，請將憑證設定檔指派到使用者群組，而不是裝置群組。 如果您將它指派至裝置群組，便必須先執行完整的裝置註冊，裝置才能接收原則。
 
-- 如果您針對 Intune 和 Configuration Manager 使用共同管理，請在 Configuration Manager 中，將資源存取原則的[工作負載滑桿設定為](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) [Intune]  或 [試驗 Intune]  。 此設定可讓 Windows 10 用戶端啟動要求憑證的流程。
+- 如果您針對 Intune 和 Configuration Manager 使用共同管理，請在 Configuration Manager 中，將資源存取原則的[工作負載滑桿設定為](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) [Intune] 或 [試驗 Intune]。 此設定可讓 Windows 10 用戶端啟動要求憑證的流程。
 
 > [!NOTE]
 > - 在 iOS/iPadOS 裝置上，當 SCEP 憑證設定檔或 PKCS 憑證設定檔與其他設定檔 (例如 Wi-Fi 或 VPN 設定檔) 建立關聯時，裝置會收到這些每個其他設定檔的憑證。 這會導致 iOS/iPadOS 裝置具有多個由 SCEP 或 PKCS 憑證要求提供的憑證。 

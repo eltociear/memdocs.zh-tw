@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea4b196a6b2fade8ca926d13c3436207cb4b764e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: ee6ccebc9610f74f9f34c08bc8204e652e0a01db
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429780"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85092865"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>在 Intune 中為 Windows 10 和更新版本裝置新增 Wi-Fi 設定
 
@@ -34,6 +34,8 @@ ms.locfileid: "83429780"
 [建立裝置設定檔](wi-fi-settings-configure.md)。
 
 ## <a name="basic-profile"></a>基本設定檔
+
+基本或個人設定檔會使用 WPA/WPA2，保護裝置上的 Wi-Fi 連線。 WPA/WPA2 通常用於家用網路或個人網路。 您也可以新增預先共用金鑰來驗證連線。
 
 - **Wi-Fi 類型**：選擇 [基本]。 
 
@@ -70,6 +72,8 @@ ms.locfileid: "83429780"
   - **自動設定**：輸入指向 Proxy 自動設定 (PAC) 指令碼的 URL。 例如，輸入 `http://proxy.contoso.com/proxy.pac`。
 
 ## <a name="enterprise-profile"></a>企業設定檔
+
+企業設定檔使用可延伸的驗證通訊協定 (EAP) 來驗證 Wi-Fi 連線。 EAP 經常用於企業，因為您可以使用憑證來驗證及保護連線，並設定更多安全性選項。
 
 - **Wi-Fi 類型**：選擇 [企業]。
 
@@ -116,7 +120,7 @@ ms.locfileid: "83429780"
     **EAP-TLS、EAP-TTLS 及 PEAP 其他設定**：
 
     > [!NOTE]
-    > 目前，使用 EAP 類型時只支援 SCEP 憑證設定檔。 不支援 PKCS 憑證設定檔。 每當要求使用者輸入憑證時，請務必選擇 SCEP 憑證。
+    > 使用 EAP 類型時，支援 SCEP 與 PKCS 憑證設定檔。
 
     - **伺服器信任**  
 

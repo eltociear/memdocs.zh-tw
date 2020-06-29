@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b94146cc429f2a7f7b196f15527e8687368e6d78
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3031e909b5bd330f9ec84f05f2c83c504022d50e
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988238"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746590"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>使用 TeamViewer 來遠端管理 Intune 裝置
 
@@ -48,19 +48,19 @@ ms.locfileid: "83988238"
 若要為裝置提供遠端協助，請使用下列步驟來設定 Intune TeamViewer 連接器：
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選取 [租用戶管理]   > [連接器與權杖]   > [TeamViewer 連接器]  。
-3. 選取 [連線]  並接受授權合約。
-4. 選取 [登入 TeamViewer 進行授權]  。
-5. 隨即開啟一個網頁來顯示 TeamViewer 網站。 輸入您的 TeamViewer 授權認證，然後 [登入]  。
+2. 選取 [租用戶管理] > [連接器與權杖] > [TeamViewer 連接器]。
+3. 選取 [連線] 並接受授權合約。
+4. 選取 [登入 TeamViewer 進行授權]。
+5. 隨即開啟一個網頁來顯示 TeamViewer 網站。 輸入您的 TeamViewer 授權認證，然後 [登入]。
 
 ## <a name="remotely-administer-a-device"></a>遠端管理裝置
 
 設定連接器後，您可以從遠端管理裝置。 請使用下列步驟： 
 
 1. 在 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)內，
-2. 選取 [裝置]  ，然後選取 [所有裝置]  。
-3. 從清單中，選取想要遠端管理的裝置 > [...]   > [新增遠端協助工作階段]  。
-4. 當 Intune 連線至 TeamViewer 服務之後，您將會看到一些裝置的相關資訊。 [連線]  以啟動遠端工作階段。
+2. 選取 [裝置]，然後選取 [所有裝置]。
+3. 從清單中，選取想要遠端管理的裝置 > [...] > [新增遠端協助工作階段]。
+4. 當 Intune 連線至 TeamViewer 服務之後，您將會看到一些裝置的相關資訊。 [連線] 以啟動遠端工作階段。
 
 ![使用 TeamViewer 從遠端管理 Android 裝置：範例](./media/teamviewer-support/android-teamviewer.png)
 
@@ -69,6 +69,6 @@ ms.locfileid: "83988238"
 > [!NOTE]
 > 使用「無使用者」方法 (例如裝置註冊管理員 (DEM) 及 Windows Configuration Designer (WCD)) 註冊的 Windows 裝置不會在公司入口網站應用程式中顯示 TeamViewer 通知。 在這些情況下，建議使用 TeamViewer 入口網站來產生工作階段。
 
-在 TeamViewer 中，您可以在裝置上完成一系列動作，包括控制裝置。 對於您可以執行的作業之完整詳細資料，請參閱 [TeamViewer guidance](https://www.teamviewer.com/support/documents/) (TeamViewer 指導)。
+在 TeamViewer 中，您可以在裝置上完成一系列動作，包括控制裝置。 如需可執行作業的完整詳細資料，請參閱 [TeamViewer 社群頁面](https://community.teamviewer.com/)。
 
 完成後，請關閉 TeamViewer 視窗。

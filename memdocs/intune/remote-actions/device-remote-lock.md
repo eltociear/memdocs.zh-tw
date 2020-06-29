@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f6cafadbecbb0e0f0287b8a6ac4db5a1168e5e84
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0ac6a5d848a0d02b72a4f7275a6b6df47b2cd834
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983098"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107336"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>使用 Intune 從遠端鎖定裝置
 
@@ -45,7 +45,7 @@ ms.locfileid: "83983098"
 - Windows 10 Desktop
 
 > [!NOTE]
-> macOS 裝置要設定 6 位數的修復 PIN。 裝置鎖定時，[裝置概觀] 會顯示 PIN，直到傳送另一個裝置動作為止。 PIN 只會在遠端鎖定命令傳送之後的 7 天內提供，因此請務必記下 PIN。 7 天後，Intune 將不再保留 PIN。 此外，在使用原始 PIN 成功解除鎖定裝置之前，請不要再對相同裝置起始這個命令。 您應該傳送這個命令、記下 PIN，並在使用此 PIN 成功進入 macOS 裝置之前，不要再次將此命令傳送至相同的裝置。  
+> macOS 裝置要設定 6 位數的修復 PIN。 裝置鎖定時，[裝置概觀] 會顯示 PIN，直到傳送另一個裝置動作為止。 PIN 只會在遠端鎖定命令傳送之後的 30 天內提供，因此請務必記下 PIN。 30 天後，Intune 將不再保留 PIN。 此外，在使用原始 PIN 成功解除鎖定裝置之前，請不要再對相同裝置起始這個命令。 您應該傳送這個命令、記下 PIN，並在使用此 PIN 成功進入 macOS 裝置之前，不要再次將此命令傳送至相同的裝置。  
 
 
 ## <a name="remote-lock-a-device"></a>遠端鎖定裝置

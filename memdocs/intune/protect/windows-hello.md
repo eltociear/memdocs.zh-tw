@@ -1,12 +1,12 @@
 ---
 title: 整合 Windows Hello 企業版與 Microsoft Intune
 titleSuffix: Microsoft Intune
-description: 了解如何建立原則，以控制在受管理的裝置上使用 Windows Hello 企業版。
+description: 了解如何建立原則，以在裝置註冊期間，控制在受控裝置上使用 Windows Hello 企業版。
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 06/08/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,32 +17,30 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 00f617d91541c1a580f6dec0b6b844abfc8d0d97
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 64a76911725e5d596a80ecc67e42f088666017de
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990935"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531888"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>整合 Windows Hello 企業版與 Microsoft Intune  
 
-您可以整合 Windows Hello 企業版 (先前稱為 Microsoft Passport for Work) 與 Microsoft Intune。
+在裝置註冊期間，您可以整合 Windows Hello 企業版 (先前稱為 Microsoft Passport for Work) 與 Microsoft Intune。
 
- Hello 企業版是使用 Active Directory 或 Azure Active Directory 帳戶取代密碼、智慧卡或虛擬智慧卡的替代登入方法。 您可使用其提供的「使用者筆勢」  登入，而不使用密碼登入。 使用者筆勢可以是 PIN、生物識別驗證 (例如 Windows Hello) 或外部裝置 (例如指紋辨識器)。
+Hello 企業版是使用 Active Directory 或 Azure Active Directory 帳戶取代密碼、智慧卡或虛擬智慧卡的替代登入方法。 您可使用其提供的「使用者筆勢」登入，而不使用密碼登入。 使用者筆勢可以是 PIN、生物識別驗證 (例如 Windows Hello) 或外部裝置 (例如指紋辨識器)。
 
 Intune 以兩種方式與 Hello 企業版整合：
 
-- 您可以在 [裝置註冊]  下建立 Intune 原則。 此原則以整個組織 (整個租用戶) 為目標。 它支援 Windows AutoPilot 全新體驗 (OOBE)，並會在裝置註冊時套用。 
-- 您可以在 [裝置設定]  下建立 Identity Protection 設定檔。 此設定檔以指派的使用者和裝置為目標，並會在簽入期間套用。 
+- **全租用戶**：您可以在 [裝置註冊] 下建立 Intune 原則。 此原則以整個組織 (整個租用戶) 為目標。 它支援 Windows AutoPilot 全新體驗 (OOBE)，並會在裝置註冊時套用。
+- **離散群組**：您可以將管理 Windows Hello 企業版的原則，部署到已向 Intune 註冊的裝置。 管理 Windows Hello 的原則類型包括：您在「裝置設定」下建立的「身分識別保護」設定檔、各種「安全性基準」，以及端點安全性「帳戶保護」設定檔。 這些設定檔類型會將指派的使用者或裝置設為目標，然後在存回期間套用。
 
 本文可用來建立以您整個組織為目標的預設 Windows Hello 企業版原則。 若要建立套用至所選使用者和裝置群組的 Identity Protection 設定檔，請參閱[設定 Identity Protection 設定檔](identity-protection-configure.md)。  
 
-<!--- - You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Secure resource access with certificate profiles in Microsoft Intune](secure-resource-access-with-certificate-profiles.md). --->
-
 > [!IMPORTANT]
 > 在年度更新版之前的 Windows 10 電腦和行動裝置版本中，您可以設定兩個不同的 PIN 碼，以用來驗證資源：
-> - 「裝置 PIN」  可以用來解除鎖定裝置及連線到雲端資源。
-> - 「公司 PIN」  是用來在使用者的個人裝置 (BYOD) 上存取 Azure AD 資源。
+> - 「裝置 PIN」可以用來解除鎖定裝置及連線到雲端資源。
+> - 「公司 PIN」是用來在使用者的個人裝置 (BYOD) 上存取 Azure AD 資源。
 > 
 > 在年度更新版中，這兩個 PIN 已經合併成一個單一的裝置 PIN 。
 > 任何您設定來控制裝置 PIN 的 Intune 設定原則，以及您所設定的 Windows Hello 企業版原則，現在都會設定此一新 PIN 值。
@@ -55,15 +53,17 @@ Intune 以兩種方式與 Hello 企業版整合：
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 移至 [裝置]   >  [註冊]   > [註冊裝置]   > [Windows 註冊]   > [Windows Hello 企業版]  。 [Windows Hello 企業版] 窗格隨即開啟。
+2. 移至 [裝置] >  [註冊] > [註冊裝置] > [Windows 註冊] > [Windows Hello 企業版]。 [Windows Hello 企業版] 窗格隨即開啟。
 
-3. 針對 [設定 Windows Hello 企業版]  ，從下列選項中選取：
+3. 針對 [設定 Windows Hello 企業版]，從下列選項中選取：
 
-    - **Disabled**。 如果您不想要使用 Windows Hello 企業版，請選取此設定。 若停用，除了在可能需要佈建的已加入 Azure Active Directory 的行動電話上，使用者將無法佈建 Windows Hello 企業版。
-    - **Enabled**。 如果您想要設定 Windows Hello 企業版設定，請選取此設定。  當您選取 [已啟用]  時，將會顯示 Windows Hello 的其他設定。
+     - **Enabled**。 如果您想要設定 Windows Hello 企業版設定，請選取此設定。  當您選取 [啟用] 時，會顯示 Windows Hello 的其他設定，也可以針對裝置設定這些設定。
+
+    - **Disabled**。 若您不想在裝置註冊期間啟用 Windows Hello 企業版，請選取此選項。 停用時，除了在可能需要佈建之已加入 Azure Active Directory 的行動電話上，使用者將無法佈建 Windows Hello 企業版。 當設定為 [停用] 時，即使此原則不會啟用 Windows Hello 企業版，您仍然可以設定 Windows Hello 企業版的後續設定。
+
     - **未設定**。 如果您不想要使用 Intune 來控制 Windows Hello 企業版設定，請選取此設定。 不會變更 Windows 10 裝置上任何現有的 Windows Hello 企業版設定。 窗格上的所有其他設定，都無法使用。
 
-4. 如果在前一步驟選取了 [已啟用]  ，請設定會套用到所有已註冊之 Windows 10 與 Windows 10 行動裝置版裝置所需的設定。 在您已設定這些設定之後，請選取 [儲存]  。
+4. 如果在前一步驟選取了 [已啟用]，請設定會套用到所有已註冊之 Windows 10 與 Windows 10 行動裝置版裝置所需的設定。 在您已設定這些設定之後，請選取 [儲存]。
 
    - **使用信賴平台模組 (TPM)** ：
 
@@ -72,11 +72,11 @@ Intune 以兩種方式與 Hello 企業版整合：
      - **必要** (預設)。 只有能存取 TPM 的裝置可以佈建 Windows Hello 企業版。
      - **慣用**。 第一次嘗試使用 TPM 的裝置。 如果無法使用此選項，則可以使用軟體加密。
 
-   - [PIN 長度下限]  和 [PIN 的長度上限]  ：
+   - [PIN 長度下限] 和 [PIN 的長度上限]：
 
      設定裝置以使用您指定的最小和最大 PIN 長度，協助確保安全的登入。 預設的 PIN 長度為 6 個字元，但您可以強制執行最小長度 (4 個字元)。 PIN 長度上限為 127 個字元。
 
-   - [PIN 的小寫字母]  、[PIN 中的大寫字母]  和 [PIN 中的特殊字元]  。
+   - [PIN 的小寫字母]、[PIN 中的大寫字母] 和 [PIN 中的特殊字元]。
 
      您可以要求在 PIN 中使用大寫字母、小寫字母及特殊字元，以強制使用強度更高的 PIN。 針對每個設定，請從下列選項中選取：
 
@@ -107,11 +107,11 @@ Intune 以兩種方式與 Hello 企業版整合：
 
      設定是否要在支援的裝置上使用 Windows Hello 的反詐騙功能。 例如，偵測出前方為包含臉部的相片，而非實際的臉部。
 
-     設定為 [是]  時，Windows 便會要求所有使用者在支援的情況下使用臉部特徵的防詐騙功能。
+     設定為 [是] 時，Windows 便會要求所有使用者在支援的情況下使用臉部特徵的防詐騙功能。
 
    - **允許手機登入**：
 
-     若此選項設為 [是]  ，使用者即可使用遠端 Passport 作為桌上型電腦驗證的可攜式配套裝置。 桌上型電腦必須已加入 Azure Active Directory，且配套裝置必須設有 Windows Hello 企業版的 PIN。
+     若此選項設為 [是]，使用者即可使用遠端 Passport 作為桌上型電腦驗證的可攜式配套裝置。 桌上型電腦必須已加入 Azure Active Directory，且配套裝置必須設有 Windows Hello 企業版的 PIN。
 
 ## <a name="windows-holographic-for-business-support"></a>Windows Holographic for Business 支援
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 9c2e6f742610eb8f2f526c6fc7a5afabfbadcbbf
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 071cab69b652193b835282603e187e4f3d0c7b0d
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990861"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879720"
 ---
 # <a name="manage-device-security-with-endpoint-security-policies-in-microsoft-intune"></a>在 Microsoft Intune 中使用端點安全性原則管理裝置安全性
 
@@ -35,13 +35,13 @@ ms.locfileid: "83990861"
 
 以下是每個端點安全性原則類型的簡短描述。 若要深入了解這些類型，包含各類型可用的設定檔，請前往各原則類型的專屬內容連結：
 
-- [防毒](../protect/endpoint-security-antivirus-policy.md) - 防毒原則可以協助安全性系統管理員專注於管理受控裝置的個別防毒設定群組。 若要使用防毒原則，請將 Microsoft Defender 進階威脅防護 (Defender ATP) 與 Intune 整合為行動威脅防禦解決方案。
+- [防毒](../protect/endpoint-security-antivirus-policy.md) - 防毒原則可以協助安全性系統管理員專注於管理受控裝置的個別防毒設定群組。 若要使用防毒原則，請將 Intune 與 Microsoft Defender 進階威脅防護 (Microsoft Defender ATP) 整合為行動威脅防禦解決方案。
 
 - [磁碟加密](../protect/endpoint-security-disk-encryption-policy.md) - 端點安全性磁碟加密設定檔只會聚焦在與裝置內建加密方法相關的設定，例如 FileVault 或 BitLocker。 這樣聚焦可讓安全性系統管理員輕鬆管理磁碟加密設定，而無須瀏覽大量不相關的設定。
 
-- [防火牆](../protect/endpoint-security-firewall-policy.md) - 使用 Intune 中的端點安全性防火牆原則來為執行 macOS 和 Windows 10 的裝置設定裝置內建防火牆。 內建防火牆包括適用於 Windows 裝置的 BitLocker 以及適用於 macOS 的 FileVault。
+- [防火牆](../protect/endpoint-security-firewall-policy.md) - 使用 Intune 中的端點安全性防火牆原則來為執行 macOS 和 Windows 10 的裝置設定裝置內建防火牆。 
 
-- [端點偵測及回應](../protect/endpoint-security-edr-policy.md) - 當您將 Defender ATP 與 Intune 整合時，請使用端點偵測及回應 (EDR) 的端點安全性原則來管理 EDR 設定，並讓裝置在 Defender ATP 上線。
+- [端點偵測及回應](../protect/endpoint-security-edr-policy.md) - 當您將 Microsoft Defender ATP 與 Intune 整合時，請使用端點偵測及回應 (EDR) 的端點安全性原則來管理 EDR 設定，並將裝置上線至 Microsoft Defender ATP。
 
 - [受攻擊面縮小](../protect/endpoint-security-asr-policy.md) - 在您的 Windows 10 裝置上使用 Defender 防毒軟體時，請使用受攻擊面縮小的 Intune 端點安全性原則管理裝置的這些設定。
 

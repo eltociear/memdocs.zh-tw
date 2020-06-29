@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: efa965bc3dff2436a98602e3cb9dda96a1fe580d
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 11aba38d63621472b5e8513b066b96120d649c31
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166145"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740859"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune 終端使用者應用程式的 UI 更新
 
@@ -34,6 +34,14 @@ ms.locfileid: "84166145"
 
 如果您是員工或學生，請務必查看公司入口網站說明文件的螢幕擷取畫面和連結。 如需如何使用公司入口網站應用程式的詳細資訊，請參閱[公司入口網站使用者說明文件](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done)。  
 
+
+## <a name="week-of-june-8-2020"></a>2020 年 6 月 8 日當週 
+
+### <a name="updates-to-informational-screen-in-company-portal-for-iosipados----7032452---"></a>iOS/iPadOS 公司入口網站的資訊畫面更新 <!-- 7032452 -->
+我們更新了 iOS/iPadOS 公司入口網站的資訊畫面，以便更清楚地說明系統管理員可在裝置上查看的內容以及對裝置執行的動作。 這些詳細資訊只與公司擁有的裝置有關。 僅更新文字，未實際修改管理員可在使用者裝置上查看的內容或執行的動作。 若要深入了解管理員能看到的內容，請參閱[當我註冊裝置時，我的組織可以看到哪些資訊？](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
+
+
+[![公司入口網站資訊畫面的螢幕擷取畫面，其中顯示已更新的文字。](./media/whats-new-app-ui/device-management-privacy-2005-02.png)](./media/whats-new-app-ui/device-management-privacy-2005-03.png#lightbox)
 
 
 ## <a name="week-of-may-18-2020"></a>2020 年 5 月 18 日當週  
@@ -62,12 +70,6 @@ ms.locfileid: "84166145"
 為了為這些新的與已改善的體驗騰出空間，已移除下圖所示的 [應用程式] 索引標籤。  
 
 ![公司入口網站的範例影像，其中顯示現已移除 [應用程式] 索引標籤。](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
-
-
-
-
-
-
 
 ## <a name="week-of-march-2-2020"></a>2020 年 3 月 2 日當週   
 ### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>改善了 Android 公司入口網站登入體驗   

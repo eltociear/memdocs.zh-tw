@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 06/11/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3437a1b9fe3c663844d366bbfda6c0bcb463c3ab
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5bf114edf17fa1f8959b5f26b83c771b711b83f5
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983798"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093178"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>在 Microsoft Intune 中使用裝置設定檔將功能和設定套用至您的裝置
 
@@ -41,7 +41,7 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 
 ## <a name="administrative-templates"></a>系統管理範本
 
-[系統管理範本](administrative-templates-windows.md)包含您可以為 Internet Explorer、OneDrive、遠端桌面、Word、Excel 和其他 Office 程式進行的數百項設定。
+[系統管理範本](administrative-templates-windows.md)包含可針對 Internet Explorer、Microsoft Edge、OneDrive、遠端桌面、Word、Excel 與其他 Office 程式進行的數百項設定。
 
 這些範本提供系統管理員一個簡化過的設定檢視，類似於群組原則，但為 100% 雲端架構。
 
@@ -132,7 +132,7 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 
 - Windows 10 及更新版本
 
-## <a name="edition-upgrade"></a>版本升級
+## <a name="edition-upgrade-and-mode-switch"></a>版本升級及模式切換
 
 [Windows 10 版本升級](edition-upgrade-configure-windows-10.md)自動升級執行某些 Windows 10 版本的裝置至較新的版本。
 
@@ -202,7 +202,15 @@ Microsoft Intune 包含可讓您在組織內不同裝置上啟用或停用的設
 
 - Windows 10 及更新版本
 
-Kiosk 設定也透過 [Android](device-restrictions-android.md#kiosk)、[Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) 與 [ios/iPadOS](device-restrictions-ios.md#kiosk) 裝置限制的形式提供。
+Kiosk 設定也透過 [Android](device-restrictions-android.md#kiosk)、[Android Enterprise](device-restrictions-android-for-work.md#device-experience) 與 [ios/iPadOS](device-restrictions-ios.md#kiosk) 裝置限制的形式提供。
+
+## <a name="mx-profile-zebra"></a>MX 設定檔 (Zebra)
+
+在內建的 Intune 設定上展開[行動延伸模組 (MX)](android-zebra-mx-overview.md)，以自訂或新增更多 Zebra 裝置特定的設定。 Zebra 裝置通常用於工廠車間與零售環境。 若您有成百上千部的 Zebra 裝置，您可以使用 Intune 來設定及管理這些裝置。
+
+這項功能支援：
+
+- Android 裝置管理員
 
 ## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 
@@ -214,7 +222,7 @@ Kiosk 設定也透過 [Android](device-restrictions-android.md#kiosk)、[Android
 
 ## <a name="oemconfig"></a>OEMConfig
 
-[OEMConfig](android-oem-configuration-overview.md) 是一項標準，讓 OEM (原始設備製造商) 和 EMM (企業行動管理) 能夠以標準化方式，在 Android Enterprise 裝置上建置及支援 OEM 特有的功能。 使用 OEMConfig，OEM 會建立結構描述來定義 OEM 特有的管理功能，並將其內嵌於已上傳至 Google Play 的應用程式中。 Intune 會從應用程式中讀取結構描述，讓 Intune 服務管理員可以設定結構描述中的設定。
+在 Android 企業裝置上，[OEMConfig](android-oem-configuration-overview.md) 是可讓 OEM (原始設備製造商) 與 EMM (企業行動管理) 能夠以標準化方式建置及支援 OEM 特定功能的標準。 使用 OEMConfig，OEM 會建立結構描述來定義 OEM 特有的管理功能，並將其內嵌於已上傳至 Google Play 的應用程式中。 Intune 會從應用程式中讀取結構描述，讓 Intune 系統管理員可以設定結構描述中的設定。
 
 這項功能支援：
 
@@ -222,7 +230,7 @@ Kiosk 設定也透過 [Android](device-restrictions-android.md#kiosk)、[Android
 
 ## <a name="powershell-scripts"></a>PowerShell 指令碼
 
-[Windows 10 裝置上的 PowerShell 指令碼](../apps/intune-management-extension.md)會使用 Intune 管理延伸模組，在 Intune 中上傳 PowerShell 指令碼，然後在裝置上執行這些指令碼。 另請參閱使用延伸模組所需的項目、如何將其新增至 Intune，以及其他重要資訊。
+[PowerShell 指令碼](../apps/intune-management-extension.md)會使用 Intune 管理延伸模組，在 Intune 中上傳 PowerShell 指令碼，然後在裝置上執行這些指令碼。 另請參閱使用延伸模組所需的項目、如何將其新增至 Intune，以及其他重要資訊。
 
 這項功能支援：
 
@@ -278,7 +286,7 @@ MacOS 裝置上的[喜好設定檔案](preference-file-settings-macos.md)包含�
 
 [Wi-Fi 設定](wi-fi-settings-configure.md)指派給使用者和裝置的無線網路設定。 若您指派 Wi-Fi 設定檔，使用者不需要自行設定即可存取您公司的 Wi-Fi。 
 
-這項功能支援： 
+這項功能支援：
 
 - Android 裝置管理員
 - Android 企業
@@ -286,6 +294,16 @@ MacOS 裝置上的[喜好設定檔案](preference-file-settings-macos.md)包含�
 - macOS
 - Windows 8.1 (僅匯入)
 - Windows 10 及更新版本
+
+## <a name="wired-networks"></a>有線網路
+
+[有線網路](wired-networks-configure.md)可讓您建立及管理 macOS 桌上型電腦的 802.1 x 有線連線。 您要在設定檔中，選擇網路介面，再選取已接受的 EAP 類型，然後輸入伺服器信任設定，包括 PKCS 與 SCEP 憑證。
+
+若您指派設定檔，macOS 桌上型電腦使用者不需要自行設定，即可存取您公司的有線網路。
+
+這項功能支援：
+
+- macOS
 
 ## <a name="zebra-mobility-extensions-mx"></a>Zebra 行動性延伸模組 (MX)
 

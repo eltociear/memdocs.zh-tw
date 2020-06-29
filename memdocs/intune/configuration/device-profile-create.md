@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74e365e50d73bb14f20376c92b43061b12d00003
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 886f572212a1af3e38fd5ea10afa21ce24c23411
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988459"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093294"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>在 Microsoft Intune 中建立裝置設定檔
 
-裝置設定檔可讓您新增設定項目並加以設定，然後再將這些設定推送至您組織中的裝置。 [使用裝置設定檔在裝置上套用功能和設定](device-profiles.md)則能提供更詳細的資料，包括您可以執行哪些作業。
+裝置設定檔可讓您新增設定項目並加以設定，然後再將這些設定推送至您組織中的裝置。 如需包括可執行動作在內的詳細資訊，請參閱[使用裝置設定檔將功能和設定套用至您的裝置](device-profiles.md)。
 
 這篇文章：
 
@@ -84,6 +84,7 @@ ms.locfileid: "83988459"
 - [信任的憑證](../protect/certificates-configure.md)
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
+- [有線網路 (macOS)](wired-network-settings-macos.md)
 
 例如，平台如果選取 [iOS/iPadOS]，則您的設定檔選項看起來就會類似以下設定檔：
 
@@ -178,7 +179,7 @@ Intune 會使用各種重新整理循環來檢查組態設定檔是否有更新�
 
   :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="適用於使用者與裝置的 Intune 系統管理範本。":::
 
-- 當您每次建立受限的原則時，請將此變更傳達給使用者。 例如，如果要將密碼需求從 4 個字元變更為 6 個字元，請在指派原則之前，讓您的使用者知道。
+- 當您每次建立受限的原則時，請將此變更傳達給使用者。 例如，若要將密碼需求從四 (4) 個字元變更為六 (6) 個字元，請在指派原則之前通知您的使用者。
 
 ## <a name="next-steps"></a>後續步驟
 

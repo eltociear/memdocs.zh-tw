@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/03/2020
+ms.date: 06/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e386d382ceb785d886dfb931bb26222bd82b1a0
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 9012cf55bcd74ab0786c3d961bc60914f9ade04e
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347316"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093321"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>如何使用 Microsoft Intune 管理透過 Apple 大量採購方案購買的 iOS 與 macOS 應用程式
 
@@ -134,7 +134,6 @@ Microsoft Intune 可藉由下列方式協助您管理透過此方案所購買的
 > [!NOTE]  
 > Intune (或任何其他 MDM) 實際上不會安裝 VPP 應用程式。 相反地，Intune 會連線到您的 VPP 帳戶，並告訴 Apple 要將哪些應用程式授權指派給哪些裝置。 從該處，所有實際安裝都會在 Apple 與裝置之間處理。
 > 
-> [Apple MDM 通訊協定參考，第 135 頁](https://developer.apple.com/business/documentation/MDM-Protocol-Reference.pdf) \(英文\)
 
 ## <a name="end-user-prompts-for-vpp"></a>VPP 的終端使用者提示
 
@@ -188,6 +187,9 @@ Microsoft Intune 可藉由下列方式協助您管理透過此方案所購買的
 2. 選取 [設定] > [應用程式和電子書] > [我的伺服器權杖]，在 **Apple Business (或 School) Manager** 中下載新的權杖。
 3. 選取 [租用戶系統管理] > [連接器與權杖] > [Apple VPP 權杖]，更新 [Microsoft 端點管理員系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)的權杖。 然後，手動上傳權杖。
 
+>[!NOTE]
+>您必須從 Apple Business Manager 下載新的 Apple VPP 或位置權杖，並當使用 Apple Business Manager 設定權杖的使用者變更其密碼，或離開您的 Apple Business Manager 組織時，在 Intune 中更新現有的權杖。 未更新的權杖會在 Intune 中顯示「無效」狀態。
+
 ## <a name="deleting-a-vpp-app"></a>刪除 VPP 應用程式
 
 目前，您無法從 Microsoft Intune 刪除 iOS/iPadOS VPP 應用程式。
@@ -204,6 +206,8 @@ Microsoft Intune 可藉由下列方式協助您管理透過此方案所購買的
 Apple 提供建立和更新 VPP 權杖的直接協助。 如需詳細資訊，請參閱 Apple 文件中的 [ Distribute content to your users with the Volume Purchase Program (VPP)](https://go.microsoft.com/fwlink/?linkid=2014661) (使用大量採購計劃 (VPP) 發佈內容給使用者)。 
 
 如果 Intune 入口網站中指出**已指派給外部 MDM**，您 (系統管理員) 必須先從協力廠商 MDM 移除 VPP 權杖，才能在 Intune 中使用 VPP 權杖。
+
+若權杖的狀態是**重複**，即表示已上傳多個具有相同**權杖位置**的權杖。 請移除重複的權杖，以再次開始同步權杖。 您仍能為標記為「重複」的權杖指派及撤銷授權。 然而，權杖標記為「重複」之後，可能無法反映新購買的應用程式和書籍授權。
 
 ## <a name="frequently-asked-questions"></a>常見問題集
 

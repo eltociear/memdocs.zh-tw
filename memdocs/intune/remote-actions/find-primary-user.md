@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 761f46cdf8865694ba8960044954a16c415a3eba
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4319435b170203f6dfd3763f1d05d2752fc76f8e
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988226"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107524"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>尋找 Intune 裝置的主要使用者
 
@@ -31,23 +31,22 @@ ms.locfileid: "83988226"
 ## <a name="find-a-devices-primary-user"></a>尋找裝置的主要使用者
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選擇 [裝置]  > 選擇裝置。
-3. 在 [概觀]  頁面中，您可以看到列出的主要使用者。
+2. 選擇 [裝置]> 選擇裝置。
+3. 在 [概觀] 頁面中，您可以看到列出的主要使用者。
 
 ## <a name="change-a-devices-primary-user"></a>變更裝置的主要使用者
 
 您可以更新已加入 Azure AD 或混合式 Azure AD 之 Windows 10 裝置的主要使用者。
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 選擇 [裝置]   > [所有裝置]  > 選擇裝置 > [屬性]   > [變更主要使用者]  。
-3. 選取新的使用者，然後選擇 [選取]  。
+2. 選擇 [裝置] > [所有裝置] > 選擇裝置 > [屬性] > [變更主要使用者]。
+3. 選取新的使用者，然後選擇 [選取]。
 
 更新主要使用者之後，也會在 Intune 和 Azure AD 裝置刀鋒視窗中一併更新。
 >[!NOTE]
 >1. 跨端點管理員與 Azure AD 的主要使用者更新最多可能需要 10 分鐘的時間才會反映出來。
->2. 目前無法在共同管理的 Windows 10 裝置上變更主要使用者。 
->3. 變更裝置的主要使用者並不會對本機群組成員資格進行任何變更，例如，從 "Administrators" 本機群組新增或移除使用者
->4. 變更主要使用者並不會變更「註冊者為」使用者。 
+>2. 變更裝置的主要使用者並不會對本機群組成員資格進行任何變更，例如，從 "Administrators" 本機群組新增或移除使用者
+>3. 變更主要使用者並不會變更「註冊者為」使用者。 
 
 
 ## <a name="what-is-the-primary-user"></a>什麼是主要使用者？
@@ -88,7 +87,9 @@ Intune 會在註冊期間或之後，自動將主要使用者新增至裝置。 
 | Android | Android 公司擁有的專用裝置 | 無 | 不適用 |
 
 ## <a name="primary-user-and-azure-ad-device-owner"></a>主要使用者和 Azure AD 裝置擁有者
-在某些情況下，Intune 主要使用者可能不同於 Azure AD 裝置的 [擁有者]  屬性 (可在 [裝置]   > [Azure AD 裝置]  下檢視)。 Azure AD 裝置擁有者會在裝置註冊期間新增至 Azure Active Directory。
+在某些情況下，Intune 主要使用者可能不同於 Azure AD 裝置的 [擁有者] 屬性 (可在 [裝置] > [Azure AD 裝置] 下檢視)。 Azure AD 裝置擁有者會在裝置註冊期間新增至 Azure Active Directory。
+
+針對新註冊的 Azure AD 裝置，Azure AD **擁有者**屬性會在設定 Intune 主要使用者時自動設定。
 
 ## <a name="next-steps"></a>後續步驟
 [管理您的 Intune 裝置](device-management.md)。
