@@ -135,8 +135,6 @@
               href: app-configuration-managed-home-screen-app.md
             - name: 設定公司入口網站
               href: company-portal-app.md
-            - name: 設定 Managed Browser
-              href: app-configuration-managed-browser.md
             - name: 設定 Microsoft Launcher
               href: configure-microsoft-launcher.md
             - name: 設定 Microsoft Edge
