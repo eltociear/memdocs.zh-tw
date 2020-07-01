@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0811c695acba4859bf32de535a28ea55cf8eee07
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 7403dc26f5fe1789fcda6b3eddf30136a4cd6e68
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268737"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795646"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>啟用電腦分析的資料共用
 
@@ -31,23 +31,23 @@ ms.locfileid: "83268737"
 > [!Important]  
 > 在大多數情況下，只會使用 Configuration Manager 來進行這些設定。 請不要將這些設定也套用到網域群組原則物件。 如需詳細資訊，請參閱[衝突解決](enroll-devices.md#conflict-resolution)。
 
-電腦分析的基本功能會在 [基本]  [診斷資料層級](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels)上運作。 若您沒有在 Configuration Manager 中設定 [增強 (受限)]  層級，您將無法取得電腦分析的下列功能：
+電腦分析的基本功能會在 [基本] [診斷資料層級](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels)上運作。 若您沒有在 Configuration Manager 中設定 [增強 (受限)] 層級，您將無法取得電腦分析的下列功能：
 
 - 應用程式使用量
 - [其他應用程式見解](compat-assessment.md#additional-insights)
-- 部署狀態資料
-- 健康情況監視資料
+- [部署狀態資料](deploy-prod.md#address-deployment-alerts)
+- [健康情況監視資料](health-status-monitoring.md)
 
-Microsoft 建議您搭配電腦分析啟用 [增強 (受限)]  診斷資料層級，以利最大化您的獲益。
+Microsoft 建議您搭配電腦分析啟用 [增強 (受限)] 診斷資料層級，以利最大化您的獲益。
 
 > [!Tip]
-> Configuration Manager 中的 [增強 (受限)]  設定，與執行 Windows 10 版本 1709 及更新版本裝置上可用的**將增強診斷資料限制在 Windows Analytics 所需要的最低程度**原則是相同的設定。
+> Configuration Manager 中的 [增強 (受限)] 設定，與執行 Windows 10 版本 1709 及更新版本裝置上可用的**將增強診斷資料限制在 Windows Analytics 所需要的最低程度**原則是相同的設定。
 >
-> 執行 Windows 10 版本 1703 及更早版本、Windows 8.1 或 Windows 7 的裝置沒有此原則設定。 當您在 Configuration Manager 中設定 [增強 (受限)]  設定時，這些裝置會回復為 [基本]  層級。
+> 執行 Windows 10 版本 1703 及更早版本、Windows 8.1 或 Windows 7 的裝置沒有此原則設定。 當您在 Configuration Manager 中設定 [增強 (受限)] 設定時，這些裝置會回復為 [基本] 層級。
 >
-> 執行 Windows 10 版本 1709 的裝置則包含此原則設定。 但是，當您在 Configuration Manager 中設定 [增強 (受限)]  設定時，這些裝置也會回復為 [基本]  層級。
+> 執行 Windows 10 版本 1709 的裝置則包含此原則設定。 但是，當您在 Configuration Manager 中設定 [增強 (受限)] 設定時，這些裝置也會回復為 [基本] 層級。
 
-如需使用 [增強 (受限)]  與 Microsoft 共用的診斷資料詳細資訊，請參閱 [Windows 10 增強診斷資料事件與欄位](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)。
+如需使用 [增強 (受限)] 與 Microsoft 共用的診斷資料詳細資訊，請參閱 [Windows 10 增強診斷資料事件與欄位](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)。
 
 > [!Important]
 > Microsoft 堅決致力於提供可讓您掌控隱私權的工具和資源。 因此，雖然電腦分析支援 Windows 8.1 裝置，Microsoft 不會從位於歐洲國家/地區 (EEA 與瑞士) 的 Windows 8.1 裝置收集 Windows 診斷資料。
@@ -96,7 +96,7 @@ Microsoft 建議您搭配電腦分析啟用 [增強 (受限)]  診斷資料層�
 | 端點  | 函式  |
 |-----------|-----------|
 | `https://v10c.events.data.microsoft.com` | 已連線的使用者體驗和診斷元件端點。 由執行 Windows 10 版本 1809 或更新版本，或是安裝了 2018-09 累積更新的版本 1803 或更新版本裝置使用。 |
-| `https://v10.events.data.microsoft.com` | 已連線的使用者體驗和診斷元件端點。 由執行「並未」  安裝 2018-09 累積更新的 Windows 10 版本 1803 裝置使用。 |
+| `https://v10.events.data.microsoft.com` | 已連線的使用者體驗和診斷元件端點。 由執行「並未」安裝 2018-09 累積更新的 Windows 10 版本 1803 裝置使用。 |
 | `https://v10.vortex-win.data.microsoft.com` | 已連線的使用者體驗和診斷元件端點。 由執行 Windows 10 版本 1709 或更早版本的裝置使用。 |
 | `https://vortex-win.data.microsoft.com` | 已連線的使用者體驗和診斷元件端點。 由執行 Windows 7 和 Windows 8.1 的裝置使用 |
 
@@ -135,7 +135,7 @@ Microsoft 建議您搭配電腦分析啟用 [增強 (受限)]  診斷資料層�
 
 - 裝置具有受支援 Windows 版本的最新品質更新
 
-- 在 Windows 設定的 [網路與網際網路] 群組中的 [Proxy 設定]  內，設定使用者層級 Proxy (WinINET Proxy)。 您也可以使用舊版的 [網際網路選項] 控制台。
+- 在 Windows 設定的 [網路與網際網路] 群組中的 [Proxy 設定] 內，設定使用者層級 Proxy (WinINET Proxy)。 您也可以使用舊版的 [網際網路選項] 控制台。
 
 - 請確認使用者具備觸達診斷資料端點的 Proxy 權限。 此選項需要裝置具備擁有 Proxy 權限的主控台使用者，因此您無法搭配無周邊裝置使用此方法。
 

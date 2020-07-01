@@ -10,16 +10,16 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0c596ba410adc979b92a000c28d815e89695a9b0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f4089f52d912491b3b1396906fe391c5c334e061
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694346"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814896"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>與 Power BI 報表伺服器整合
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 <!--3721603-->
 
@@ -43,6 +43,8 @@ ms.locfileid: "81694346"
     > - 請只使用[標示**針對 Power BI 報表伺服器最佳化**的 Power BI Desktop 版本](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop)。
 
 - Power BI 整合會使用以相同角色為基礎的系統管理來進行報告。
+    > [!NOTE]
+    > Power BI 報表伺服器不支援已啟用 RBAC 的報表，因此不論報表檢視者的受指派範圍為何，所有檢視者都會看到相同結果。
 
 ## <a name="configure-the-reporting-services-point"></a>設定 Reporting Services 點
 
@@ -89,19 +91,19 @@ ms.locfileid: "81694346"
 
 ## <a name="create-power-bi-reports"></a>建立 Power BI 報表
 
-1. 在 Configuration Manager 主控台中，移至 [監視]  工作區並展開 [報告]  ，然後選取新的 [Power BI 報表]  節點。
+1. 在 Configuration Manager 主控台中，移至 [監視] 工作區並展開 [報告]，然後選取新的 [Power BI 報表] 節點。
 
-1. 在功能區中，選取 [建立報表]  。 此動作會開啟 Power BI Desktop。
+1. 在功能區中，選取 [建立報表]。 此動作會開啟 Power BI Desktop。
 
 1. 在 Power BI Desktop 中建立報表。
 
-    - 在 Power BI Desktop 中，當連線到資料來源時，請選取 [DirectQuery]  進行連線設定。
+    - 在 Power BI Desktop 中，當連線到資料來源時，請選取 [DirectQuery] 進行連線設定。
 
     - 請在這些報表中僅使用受支援的 SQL 檢視表。 如需詳細資訊，請參閱[在 Configuration Manager 中使用 SQL Server 檢視建立自訂報表](../../../develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views.md)。
 
-1. 當報表可供儲存時，請移至 [檔案]  功能表，然後選取 [另存新檔]  ，再選擇 [Power BI 報表伺服器]  。
+1. 當報表可供儲存時，請移至 [檔案] 功能表，然後選取 [另存新檔]，再選擇 [Power BI 報表伺服器]。
 
-1. 在 [Power BI Report Server Selection] \(Power BI 報表伺服器選項\)  視窗中，輸入 Reporting Services 點的 URL 作為 [新增報表伺服器位址]  。 例如 `https://rsp.contoso.com/Reports`。
+1. 在 [Power BI Report Server Selection] \(Power BI 報表伺服器選項\) 視窗中，輸入 Reporting Services 點的 URL 作為 [新增報表伺服器位址]。 例如 `https://rsp.contoso.com/Reports`。
 
 在 Configuration Manager 主控台中，可於 Power BI 報表清單中看到新的報表。
 
@@ -114,6 +116,6 @@ ms.locfileid: "81694346"
     > [!TIP]
     > 您只能在網頁瀏覽器中檢視這些報表。
 
-- **編輯**：在 Power BI Desktop 中變更報表。 針對現有的報表，請使用 [儲存]  選項，將變更內容儲存回報表伺服器。
+- **編輯**：在 Power BI Desktop 中變更報表。 針對現有的報表，請使用 [儲存] 選項，將變更內容儲存回報表伺服器。
 
 如需用於報告的記錄檔詳細資訊，請參閱[記錄檔參考 - 報告](../../plan-design/hierarchy/log-files.md#BKMK_ReportLog)。

@@ -2,7 +2,7 @@
 title: 規劃雲端管理閘道
 titleSuffix: Configuration Manager
 description: 規劃和設計雲端管理閘道 (CMG)，以簡化網際網路用戶端的管理。
-ms.date: 04/21/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 67b6fc51493dce4ee1718586cbf454da91883409
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 136e11f97849e5fd8a27d9f83ea1bd44791c492e
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254617"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715640"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中進行雲端管理閘道規劃
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 <!--1101764-->
 雲端管理閘道 (CMG) 可讓您輕鬆管理網際網路上的 Configuration Manager 用戶端。 您可以部署 CMG 作為 Microsoft Azure 中的雲端服務，來管理在網際網路上漫遊的傳統用戶端，而不需要額外的內部部署基礎結構。 您也不需要將內部部署基礎結構公開至網際網路。
@@ -85,9 +85,12 @@ CMG 的部署和作業包括下列元件：
 
 - [**服務連接點**](../../../servers/deploy/configure/about-the-service-connection-point.md)站台系統角色會執行雲端服務管理員元件，以處理所有 CMG 部署工作。 此外，它也會從 Azure AD 監視並報告服務健康情況和記錄資訊。 請確認您的服務連接點處於[線上模式](../../../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes)。  
 
-- **管理點**站台系統角色可以回應一般用戶端要求。  
+- **管理點**站台系統角色可以回應一般用戶端要求。
 
-- **軟體更新點**站台系統角色可以回應一般用戶端要求。  
+- **軟體更新點**站台系統角色可以回應一般用戶端要求。
+
+    > [!NOTE]
+    > 管理點和軟體更新點的大小調整指導方針並不會改變，無論其服務對象是內部部署或網際網路型用戶端。 如需詳細資訊，請參閱[大小和縮放比例](../../../plan-design/configs/size-and-scale-numbers.md#management-point)。
 
 - **以網際網路為基礎的用戶端**會連線到 CMG，以存取內部部署的 Configuration Manager 元件。
 
@@ -151,15 +154,33 @@ Fourth Coffee 在其西雅圖總部的內部部署資料中心具有管理中心
 > [!TIP]
 > 您不需要為了地理位置而部署多個雲端管理閘道。 雲端服務可能發生輕微延遲，但設定管理員用戶端幾乎不會受其影響，即使在地理位置較遠的情況下也是如此。
 
+### <a name="test-environments"></a>測試環境
+<!-- SCCMDocs#1225 -->
+許多組織都有用於生產、測試、開發或品質保證的個別環境。 當您規劃 CMG 部署時，請考慮下列問題：
+
+- 您的組織具有多少個 Azure AD 租用戶？
+  - 是否有用於測試的個別租用戶？
+  - 使用者和裝置身分識別是否位於相同的租用戶？
+
+- 每個租用戶中有多少個訂用帳戶？
+  - 是否有特別用於測試的訂用帳戶？
+
+Configuration Manager 適用於**雲端管理**的 Azure 服務支援多個租用戶。 多個 Configuration Manager 站台可以連線到相同的租用戶。 單一站台可以將多個 CMG 服務部署到不同的訂用帳戶。 多個站台可以將 CMG 服務部署到相同的訂用帳戶。 Configuration Manager 能根據您的環境和商務需求提供彈性。
+
+如需詳細資訊，請參閱下列常見問題集：[使用者帳戶是否必須與裝載 CMG 雲端服務的訂用帳戶所相關聯的租用戶位於相同的 Azure AD 租用戶？](cloud-management-gateway-faq.md#bkmk_tenant)
+
 ## <a name="requirements"></a>需求
 
 - 裝載 CMG 的 **Azure 訂用帳戶**。
+
+    > [!IMPORTANT]
+    > CMG 不支援具有 Azure 雲端服務提供者 (CSP) 的訂用帳戶。<!-- MEMDocs#320 -->
 
 - 您的使用者帳戶在 Configuration Manager 中必須為**系統高權限管理員**或**基礎結構系統管理員**。<!-- SCCMDocs#2146 -->
 
 - 需要 **Azure 系統管理員**參與部分元件的初始建立 (視您的設計而定)。 此角色與 Configuration Manager 系統管理員可以為相同 (或個別) 角色。 若為個別角色，則不需要 Configuration Manager 中的權限。
 
-  - 若要部署 CMG，您需要**訂用帳戶管理員**
+  - 若要部署 CMG，您需要**訂用帳戶擁有者**
   - 若要將網站與 Azure AD 整合以使用 Azure Resource Manager 來部署 CMG，您需要**全域管理員**
 
 - 至少一個內部部署 Windows 伺服器以裝載 **CMG 連接點**。 您可以搭配另一個 Configuration Manager 站台系統角色共置此角色。  
@@ -172,7 +193,7 @@ Fourth Coffee 在其西雅圖總部的內部部署資料中心具有管理中心
 
 - 視您用戶端 OS 版本及驗證模型的不同，它可能會需要**其他憑證**。 如需詳細資訊，請參閱 [CMG 憑證](certificates-for-cloud-management-gateway.md)。  
 
-    當使用 [為 HTTP 站台系統使用 Configuration Manager 產生的憑證]  站台選項時，HTTP 可作為管理點。 如需詳細資訊，請參閱[Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md) (增強 HTTP)。
+    當使用 [為 HTTP 站台系統使用 Configuration Manager 產生的憑證] 站台選項時，HTTP 可作為管理點。 如需詳細資訊，請參閱[Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md) (增強 HTTP)。
 
 - 在 Configuration Manager 1810 版和更早版本中，如果使用 Azure 傳統部署方法，您必須使用 [**Azure 管理憑證**](certificates-for-cloud-management-gateway.md#bkmk_azuremgmt)。  
 
@@ -193,7 +214,7 @@ Fourth Coffee 在其西雅圖總部的內部部署資料中心具有管理中心
 
 - 使用網路負載平衡器的軟體更新點無法與 CMG 搭配使用。 <!--505311-->  
 
-- 使用 Azure 資源模型的 CMG 部署將不會提供對 Azure 雲端服務提供者 (CSP) 的支援。 含 Azure Resource Manager 的 CMG 部署會繼續使用 CSP 不支援的傳統雲端服務。 如需詳細資訊，請參閱 [Azure CSP 中可用的 Azure 服務](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)  
+- 使用 Azure 資源模型的 CMG 部署將不會提供對 Azure 雲端服務提供者 (CSP) 的支援。 含 Azure Resource Manager 的 CMG 部署會繼續使用 CSP 不支援的傳統雲端服務。 如需詳細資訊，請參閱 [Azure CSP 計畫中可用的 Azure 服務](https://docs.microsoft.com/partner-center/azure-plan-available)。
 
 ### <a name="support-for-configuration-manager-features"></a>針對 Configuration Manager 功能的支援
 
@@ -288,7 +309,7 @@ CMG 會使用下列 Azure 元件，並會針對 Azure 訂用帳戶產生費用�
 - 以網際網路為基礎的用戶端能免費從 Windows Update 取得 Microsoft 軟體更新內容。 請不要將具有 Microsoft 更新內容的更新套件發佈至雲端發佈點，否則可能會產生儲存和資料輸出成本。  
 
 - 針對所有其他必要內容 (例如應用程式或協力廠商軟體更新)，您必須將它發佈至雲端發佈點。 目前，CMG 僅支援使用雲端發佈點將內容傳送至用戶端。
-   - 使用 CMG 來儲存內容時，如果已啟用 [Download delta content when available] \(在提供差異內容時下載\)  的[用戶端設定](../../deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available)，協力廠商更新的內容就不會下載至用戶端。 <!--6598587--> 
+   - 使用 CMG 來儲存內容時，如果已啟用 [Download delta content when available] \(在提供差異內容時下載\) 的[用戶端設定](../../deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available)，協力廠商更新的內容就不會下載至用戶端。 <!--6598587--> 
 
 - 如需詳細資訊，請參閱使用[雲端發佈點](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_cost)的成本。  
 
@@ -333,6 +354,9 @@ CMG 會使用下列 Azure 元件，並會針對 Azure 訂用帳戶產生費用�
 
 3. 用戶端會透過 HTTPS 連接埠 443 連線至 CMG。 它會使用 Azure AD 或用戶端驗證憑證進行驗證。  
 
+    > [!NOTE]
+    > 如果您啟用 CMG 以提供內容或使用雲端發佈點，用戶端會透過 HTTPS 連接埠 443 直接連線到 Azure Blob 儲存體。 如需詳細資訊，請參閱[使用雲端式發佈點](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_dataflow)。<!-- SCCMDocs#2332 -->
+
 4. CMG 會透過針對內部部署 CMG 連接點的現有連線轉送用戶端通訊。 您不需要開啟任何輸入防火牆連接埠。  
 
 5. CMG 連接點會將用戶端通訊轉送至內部部署管理點和軟體更新點。  
@@ -341,7 +365,7 @@ CMG 會使用下列 Azure 元件，並會針對 Azure 訂用帳戶產生費用�
 
 ### <a name="required-ports"></a>必要的連接埠
 
-此表列出必要的網路連接埠和通訊協定。 [用戶端]  是起始連線的裝置，需要輸出連接埠。 [伺服器]  是接受連線的裝置，需要輸入連接埠。
+此表列出必要的網路連接埠和通訊協定。 [用戶端] 是起始連線的裝置，需要輸出連接埠。 [伺服器] 是接受連線的裝置，需要輸入連接埠。
 
 | 用戶端 | 通訊協定 | Port | 伺服器 | 說明 |
 |--------|----------|------|--------|-------------|
@@ -350,6 +374,7 @@ CMG 會使用下列 Azure 元件，並會針對 Azure 訂用帳戶產生費用�
 | CMG 連接點 | HTTPS | 443 | CMG 服務 | 僅針對單一 VM 執行個體建置 CMG 通道的後援通訊協定<sup>[附註 2](#bkmk_port-note2)</sup> |
 | CMG 連接點 | HTTPS | 10124-10139 | CMG 服務 | 針對兩個或多個 VM 執行個體建置 CMG 通道的後援通訊協定<sup>[附註 3](#bkmk_port-note3)</sup> |
 | 用戶端 | HTTPS | 443 | CMG | 一般用戶端通訊 |
+| 用戶端 | HTTPS | 443 | Blob 儲存體 | 下載雲端式內容 |
 | CMG 連接點 | HTTPS 或 HTTP | 443 或 80 | 管理點 | 內部部署流量，連接埠會因管理點設定而有所不同 |
 | CMG 連接點 | HTTPS 或 HTTP | 443 或 80 | 軟體更新點 | 內部部署流量，連接埠會因軟體更新點設定而有所不同 |
 

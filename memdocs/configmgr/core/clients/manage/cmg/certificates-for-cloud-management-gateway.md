@@ -5,17 +5,17 @@ description: 了解搭配雲端管理閘道使用的不同數位憑證。
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 7e9602ef5ea784dd3e97578d5ff585f2ca662c1e
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: b5a9a4a7f23942ac06dc16a0b54b657c7fd617a9
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347197"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715606"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>雲端管理閘道的憑證
 
@@ -28,7 +28,8 @@ ms.locfileid: "84347197"
   - [公用提供者所發行的伺服器驗證憑證](#bkmk_serverauthpublic)  
   - [企業 PKI 所發行的伺服器驗證憑證](#bkmk_serverauthpki)  
 
-- [用戶端驗證憑證](#bkmk_clientauth)  
+- [用戶端驗證憑證](#bkmk_clientauth)
+  - [CMG 連接點](#bkmk_cmgcp)
   - [CMG 的用戶端受信任根憑證](#bkmk_clientroot)  
 
 - [啟用 HTTPS 的管理點](#bkmk_mphttps)  
@@ -73,7 +74,7 @@ CMG 會建立以網際網路為基礎的用戶端連線至的 HTTPS 服務。 �
     > [!Important]  
     > 請勿在入口網站中建立服務，只要使用此程序檢查名稱可用性。
 
-如果您也將針對內容啟用 CMG，請確認 CMG 服務名稱也是唯一的 Azure 儲存體帳戶名稱。 如果 CMG 雲端服務名稱是唯一的，但儲存體帳戶名稱不是，Configuration Manager 就無法在 Azure 中佈建該服務。 在 Azure 入口網站中，使用下列變更重複執行上述程序：
+如果您也針對內容啟用 CMG，請確認 CMG 服務名稱也是唯一的 Azure 儲存體帳戶名稱。 如果 CMG 雲端服務名稱是唯一的，但儲存體帳戶名稱不是，Configuration Manager 就無法在 Azure 中佈建該服務。 在 Azure 入口網站中，使用下列變更重複執行上述程序：
 
 - 搜尋**儲存體帳戶**
 - 在 [儲存體帳戶名稱] 欄位中測試您的名稱
@@ -90,7 +91,7 @@ DNS 名稱前置詞 (例如 *GraniteFalls*) 的長度必須是 3 到 24 個字�
 
   - 您也可以使用 Configuration Manager 憑證設定檔，在用戶端上佈建憑證。 如需詳細資訊，請參閱[憑證設定檔簡介](../../../../protect/deploy-use/introduction-to-certificate-profiles.md)。
 
-  - 如果您打算[從 Intune 安裝 Configuration Manager 用戶端](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client)，也可以使用 Intune 憑證設定檔在用戶端上佈建憑證。 如需詳細資訊，請參閱[設定憑證設定檔](https://docs.microsoft.com/intune/certificates-configure)。
+  - 如果您打算[從 Intune 安裝 Configuration Manager 用戶端](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client)，也可以使用 Intune 憑證設定檔在用戶端上佈建憑證。 如需詳細資訊，請參閱[設定憑證設定檔](../../../../../intune/protect/certificates-configure.md)。
 
 ### <a name="server-authentication-certificate-issued-by-public-provider"></a><a name="bkmk_serverauthpublic"></a> 公用提供者所發行的伺服器驗證憑證
 
@@ -129,18 +130,35 @@ DNS 名稱前置詞 (例如 *GraniteFalls*) 的長度必須是 3 到 24 個字�
 
 ## <a name="client-authentication-certificate"></a><a name="bkmk_clientauth"></a> 用戶端驗證憑證
 
-*執行 Windows 8.1 的網際網路型用戶端與未加入 Azure Active Directory (Azure AD) 的 Windows 10 裝置需要此憑證。CMG 連接點上也需要此憑證。已加入 Azure AD 的 Windows 10 用戶端則不需要。*
+用戶端驗證憑證需求：
+
+- 執行 Windows 8.1 的網際網路型用戶端與未加入 Azure Active Directory (Azure AD) 的 Windows 10 裝置需要此憑證。
+- CMG 連接點上可能也需要此憑證。 如需詳細資訊，請參閱 [CMG 連接點](#bkmk_cmgcp)。
+- 已加入 Azure AD 的 Windows 10 用戶端則不需要此憑證。
+- 如果您的站台是 2002 版或更新版本，則裝置可以使用由站台所發行的權杖。 如需詳細資訊，請參閱 [CMG 的權杖型驗證](../../deploy/deploy-clients-cmg-token.md)。
 
 用戶端會使用此憑證來向 CMG 進行驗證。 混合式部署或已加入雲端網域的 Windows 10 裝置不需要此憑證，因為它們使用 Azure AD 進行驗證。
 
 在 Configuration Manager 環境之外佈建此憑證。 例如，使用 Active Directory 憑證服務和群組原則來發出用戶端驗證憑證。 如需詳細資訊，請參閱[部署 Windows 電腦的用戶端憑證](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012)。
 
-若要安全地轉送用戶端要求，CMG 連接點需要用戶端驗證憑證，其會對應至 HTTPS 管理點上的伺服器驗證憑證。 如果用戶端使用 Azure AD 驗證，或您設定增強式 HTTP 的管理點，則不需要此憑證。 如需詳細資訊，請參閱[啟用 HTTPS 的管理點](#bkmk_mphttps)。
-
 > [!NOTE]
 > Microsoft 建議將裝置加入至 Azure AD。 以網際網路為基礎的裝置可以使用 Azure AD 向 Configuration Manager 進行驗證。 無論該裝置是在網際網路上，或與內部網路連線，Azure AD 都會同時啟用裝置與使用者案例。 如需詳細資訊，請參閱[使用 Azure AD 身分識別安裝和註冊用戶端](../../deploy/deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity)。
 >
-> 從 2002 版開始，<!--5686290--> Configuration Manager 已可支援不常連線至內部網路、無法加入 Azure Active Directory (Azure AD)，且沒有方法可安裝 PKI 發行憑證等的裝置。 如需詳細資訊，請參閱 [CMG 的權杖型驗證](../../deploy/deploy-clients-cmg-token.md)。
+> 從 2002 版開始，<!--5686290--> Configuration Manager 已可支援不常連線至內部網路、無法加入 Azure AD，以及沒有方法可安裝 PKI 發行憑證的網際網路型裝置。 如需詳細資訊，請參閱 [CMG 的權杖型驗證](../../deploy/deploy-clients-cmg-token.md)。
+
+### <a name="cmg-connection-point"></a><a name="bkmk_cmgcp"></a> CMG 連接點
+
+若要安全地轉送用戶端要求，CMG 連接點需要與管理點之間的安全連線。 您裝置和管理點的設定方式會決定 CMG 連接點設定。
+
+- 管理點是 HTTPS
+
+  - 用戶端具有用戶端驗證憑證：CMG 連接點需要對應至 HTTPS 管理點上伺服器驗證憑證的用戶端驗證憑證。
+
+  - 用戶端使用 Azure AD 驗證或 Configuration Manager 權杖：不需要此憑證。
+
+- 如果您將管理點設定為使用增強 HTTP：不需要此憑證。
+
+如需詳細資訊，請參閱[啟用 HTTPS 的管理點](#bkmk_mphttps)。
 
 ### <a name="client-trusted-root-certificate-to-cmg"></a><a name="bkmk_clientroot"></a> CMG 的用戶端受信任根憑證
 
@@ -150,8 +168,8 @@ DNS 名稱前置詞 (例如 *GraniteFalls*) 的長度必須是 3 到 24 個字�
 
 CMG 必須信任用戶端驗證憑證。 若要完成這個信任，請提供受信任的根憑證鏈結。 請務必在信任鏈結中新增所有憑證。 例如，如果用戶端驗證憑證是由中繼 CA 所發行的，請同時新增中繼憑證和根 CA 憑證。
 
-> [!Note]  
-> 當建立 CMG 時，已不再需要於 [設定] 頁面上提供受信任的根憑證。 使用 Azure Active Directory (Azure AD) 進行用戶端驗證時，不需要此憑證，但以前在精靈中需要此憑證。 如果您要使用 PKI 用戶端驗證憑證，則仍然必須將受信任的根憑證新增至 CMG。<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
+> [!NOTE]  
+> 當建立 CMG 時，已不再需要於 [設定] 頁面上提供受信任的根憑證。 使用 Azure AD 進行用戶端驗證時，不需要此憑證，但以前在精靈中需要此憑證。 如果您要使用 PKI 用戶端驗證憑證，則仍然必須將受信任的根憑證新增至 CMG。<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
 >
 > 在 1902 版和更早版本中，您只能指定兩個信任的根 CA，以及四個中繼 (從屬) CA。
 
@@ -193,7 +211,7 @@ CMG 必須信任用戶端驗證憑證。 若要完成這個信任，請提供受
 
 在使用 [為 HTTP 站台系統使用 Configuration Manager 產生的憑證] 站台選項時，HTTP 可作為管理點。 如需詳細資訊，請參閱[Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md) (增強 HTTP)。
 
-> [!Tip]  
+> [!TIP]
 > 如果您未使用增強式 HTTP，而且您的環境具有多個管理點，您不需要針對 CMG 全部啟用 HTTPS。 將啟用 CMG 的管理點設定為**僅限網際網路**。 之後，您的內部部署用戶端就不會嘗試使用它們。<!-- SCCMDocs#1676 -->
 
 ### <a name="enhanced-http-certificate-for-management-points"></a>管理點的增強型 HTTP 憑證
@@ -240,14 +258,14 @@ CMG 必須信任用戶端驗證憑證。 若要完成這個信任，請提供受
 
 - *工作群組*：裝置未加入網域或 Azure AD，但有[用戶端驗證憑證](#bkmk_clientauth)。
 - *加入 AD 網域*：您將裝置加入了內部部署 Active Directory 網域。
-- *加入 Azure AD*：也稱為「雲端網域加入」，您將裝置加入了 Azure Active Directory 租用戶。 如需詳細資訊，請參閱 [Azure AD 加入裝置](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join) \(部分機器翻譯\)。
-- *混合式加入*：將裝置加入您的內部部署 Active Directory，並向您的 Azure Active Directory 註冊。 如需詳細資訊，請參閱[混合式 Azure AD 加入裝置](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid) \(部分機器翻譯\)。
+- *加入 Azure AD*：也稱為「已加入雲端網域」，您將裝置加入 Azure AD 租用戶。 如需詳細資訊，請參閱 [Azure AD 加入裝置](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join) \(部分機器翻譯\)。
+- *混合式加入*：您將裝置加入您的內部部署 Active Directory，並向您的 Azure AD 加以註冊。 如需詳細資訊，請參閱[混合式 Azure AD 加入裝置](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid) \(部分機器翻譯\)。
 - *HTTP*：在管理點屬性上，您將用戶端連線設定為 **HTTP**。
 - *HTTPS*：在管理點屬性上，您將用戶端連線設定為 **HTTPS**。
-- *E-HTTP*：在站台屬性的 [用戶端電腦通訊] 索引標籤上，您要將站台系統設定設為 [HTTPS 或 HTTP]，並啟用 [為 HTTP 站台系統使用 Configuration Manager 產生的憑證] 選項。 您會設定 HTTP 的管理點，HTTP 管理點已就緒，可供 HTTP 與 HTTPS 通訊使用 (權杖驗證案例)。
+- *E-HTTP*：在站台屬性的 [通訊安全性] 索引標籤上，您要將站台系統設定設為 [HTTPS 或 HTTP]，並啟用 [為 HTTP 站台系統使用 Configuration Manager 產生的憑證] 選項。 您會設定 HTTP 的管理點，HTTP 管理點已就緒，可供 HTTP 與 HTTPS 通訊使用 (權杖驗證案例)。
 
     > [!Note]
-    > 從 1906 版開始，此索引標籤稱為**通訊安全性**。<!-- SCCMDocs#1645 -->
+    > 在 1902 版和更舊版本中，此索引標籤名為 [用戶端電腦通訊]。<!-- SCCMDocs#1645 -->
 
 ## <a name="azure-management-certificate"></a><a name="bkmk_azuremgmt"></a> Azure 管理憑證
 

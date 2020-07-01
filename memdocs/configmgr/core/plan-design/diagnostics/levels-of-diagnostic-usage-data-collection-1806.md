@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f455615db6600a39460b0180d46039535d331f86
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e47d9ac210d4af25070c6a9cd4b710c383370f54
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695226"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506293"
 ---
 # <a name="diagnostic-and-usage-data-for-1806"></a>1806 的診斷和使用方式資料
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 下列各節提供有關在每個層級所收集資料的額外詳細資料。 如需層級和其變更方式的詳細資訊，請參閱[診斷使用方式資料的層級](levels-overview.md)。
 
@@ -291,7 +291,7 @@ ms.locfileid: "81695226"
 
 - Windows Hello 企業版原則 (已建立、已部署)  
 
-- [新增] 已部署之 Microsoft Edge 瀏覽器原則的計數  
+- ***[新增]*** 已部署的 Microsoft Edge 舊版瀏覽器原則計數  
 
 
 ### <a name="content"></a>Content  

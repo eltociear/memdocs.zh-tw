@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
-ms.openlocfilehash: 4093eafe9f8a337ce322165a529f630a759b365f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ff018bc81ecdb3d11ebb71f1850804a5679c67f7
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701376"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746573"
 ---
 # <a name="manage-express-installation-files-for-windows-10-updates"></a>管理適用於 Windows 10 更新的快速安裝檔案
 
@@ -31,14 +31,14 @@ Configuration Manager 支援適用於 Windows 10 更新的快速安裝檔案。 
 ## <a name="enable-the-site-to-download-express-installation-files-for-windows-10-updates"></a>讓站台可以下載 Windows 10 更新的快速安裝檔案
 若要開始同步 Windows 10 快速安裝檔案的中繼資料，請在軟體更新點內容中加以啟用。  
 
-1. 在 Configuration Manager 主控台中，移至 [系統管理]  工作區，展開 [站台設定]  ，然後選取 [站台]  節點。  
+1. 在 Configuration Manager 主控台中，移至 [系統管理] 工作區，展開 [站台設定]，然後選取 [站台] 節點。  
 
 2. 選取管理中心網站或獨立主要站台。  
 
-3. 在功能區中，依序按一下 [設定站台元件]  和 [軟體更新點]  。 切換至 [更新檔案]  索引標籤，然後選取 [下載所有核准更新的完整檔案和 Windows 10 的快速安裝檔案]  。
+3. 在功能區中，依序按一下 [設定站台元件] 和 [軟體更新點]。 切換至 [更新檔案] 索引標籤，然後選取 [下載所有核准更新的完整檔案和 Windows 10 的快速安裝檔案]。
 
 > [!NOTE]    
-> 您無法將軟體更新點元件設定為僅  下載快速更新。  除了完整檔案之外，這個站台還會下載快速安裝檔案。 這樣會增加內容庫中儲存的內容量，也會增加發佈至發佈點和發佈點上儲存的內容量。
+> 您無法將軟體更新點元件設定為僅下載快速更新。  除了完整檔案之外，這個站台還會下載快速安裝檔案。 這樣會增加內容庫中儲存的內容量，也會增加發佈至發佈點和發佈點上儲存的內容量。
 
 > [!Tip]  
 > 若要確定各個檔案實際使用的磁碟空間，請檢查檔案的**磁碟大小**屬性。 「磁碟大小」屬性應該比「大小值」小得的多。 如需詳細資訊，請參閱 [Windows 10 更新傳遞最佳化常見問答集](optimize-windows-10-update-delivery.md#bkmk_faq)。  
@@ -54,12 +54,14 @@ Configuration Manager 支援適用於 Windows 10 更新的快速安裝檔案。 
 
 1. 在軟體更新點元件內容 (上一個程序) 中啟用快速安裝檔案的支援。  
 
-2. 在 Configuration Manager 主控台中，移至 [系統管理]  工作區，然後選取 [用戶端設定]  。  
+2. 在 Configuration Manager 主控台中，移至 [系統管理] 工作區，然後選取 [用戶端設定]。  
 
-3. 選取適當的用戶端設定，然後按一下功能區中的 [內容]  。  
+3. 選取適當的用戶端設定，然後按一下功能區中的 [內容]。  
 
-4. 選取 [軟體中心]  群組。 將 [啟用用戶端上的快速更新安裝]  設定成 [是]  。 將 [下載快速更新所需內容時會用到的連接埠]  設定成用戶端 HTTP 接聽程式會用到的連接埠。
+4. 選取 [軟體中心] 群組。 將 [啟用用戶端上的快速更新安裝] 設定成 [是]。 將 [下載快速更新所需內容時會用到的連接埠] 設定成用戶端 HTTP 接聽程式會用到的連接埠。
+    - 在 1902 版中，[啟用用戶端上的快速更新安裝] 已變更為 [讓用戶端得以在提供差異內容時，進行下載]。
     - 在 1902 版中，**用以下載 Express Update 內容的連接埠**已變更為**用戶端用以接收差異內容要求的連接埠**。
+    
 
 ## <a name="next-steps"></a>後續步驟
 

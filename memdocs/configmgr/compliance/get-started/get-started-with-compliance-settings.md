@@ -10,16 +10,16 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9143c224082f00b882d3cb557b47b737012393fa
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f0a26d02770ff8460787ee9897bdc8f1218a2c12
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906330"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506157"
 ---
 # <a name="get-started-with-compliance-settings-in-configuration-manager"></a>開始使用 Configuration Manager 中的相容性設定
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 建立 Configuration Manager 合規性設定之前，請先了解核心概念並了解其運作方式。  
 
@@ -68,14 +68,14 @@ ms.locfileid: "82906330"
 用戶端裝置會針對每個已部署的組態基準評估其相容性，並立即使用狀況訊息和狀態訊息，將結果報告至站台。 如果裝置目前未與網路連線，但已下載設定基準，它仍然會評估設定項目的合規性。 當裝置重新連線時，就會傳送合規性資訊。  
 
 ### <a name="monitoring-configuration-baselines"></a>監視設定基準
-- 在 Configuration Manager 主控台的 [監視]  工作區下的 [部署]  節點中，監視合規性評估的結果。 例如：
+- 在 Configuration Manager 主控台的 [監視] 工作區下的 [部署] 節點中，監視合規性評估的結果。 例如：
   - 不符合規範的常見原因
   - 錯誤
   - 受影響的使用者和裝置數目
 - 執行有其他詳細資料的合規性設定報告。 例如：
   - 哪些裝置符合規範或不符合規範
   - 設定基準的哪個元素導致電腦不符合規範
-- 從執行 Configuration Manager 用戶端的 Windows 電腦檢視合規性評估結果。 開啟 **Configuration Manager** 控制台，切換至 [設定]  索引標籤。  
+- 從執行 Configuration Manager 用戶端的 Windows 電腦檢視合規性評估結果。 開啟 **Configuration Manager** 控制台，切換至 [設定] 索引標籤。  
 
 
 
@@ -85,7 +85,7 @@ ms.locfileid: "82906330"
 - 離線檔案
 - 漫遊設定檔  
 
-將這些設定項目部署到使用者集合。 從 Configuration Manager 主控台的 [監視]  節點監控其合規性。 不同於其他設定項目，在部署之前，請不要將這些項目加入設定基準。 按一下功能區中的 [部署]  直接部署項目。  
+將這些設定項目部署到使用者集合。 從 Configuration Manager 主控台的 [監視] 節點監控其合規性。 不同於其他設定項目，在部署之前，請不要將這些項目加入設定基準。 按一下功能區中的 [部署] 直接部署項目。  
 
 如需詳細資訊，請參閱[建立使用者資料和設定檔設定項目](../deploy-use/create-user-data-and-profiles-configuration-items.md)。  
 
@@ -103,11 +103,8 @@ ms.locfileid: "82906330"
 
 如需詳細資訊，請參閱[使用版本升級原則升級 Windows 裝置](../deploy-use/upgrade-windows-version.md)
 
-
-
-## <a name="microsoft-edge-browser-profiles"></a>Microsoft Edge 瀏覽器設定檔
+## <a name="microsoft-edge-legacy-browser-profiles"></a>Microsoft Edge 舊版瀏覽器設定檔
 <!-- 1357310 -->
-從 1802 版開始，針對在 Windows 10 用戶端上使用 [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) 網頁瀏覽器的客戶，會建立合規性設定原則來設定數個 Microsoft Edge 設定。 
+針對在 Windows 10 用戶端上使用 [Microsoft Edge 舊版](https://docs.microsoft.com/microsoft-edge/deploy/) \(部分機器翻譯\) 網頁瀏覽器的客戶，請建立 Configuration Manager 合規性政策來設定瀏覽器設定。
 
-如需詳細資訊，請參閱 [Microsoft Edge 瀏覽器設定檔](../deploy-use/browser-profiles.md)。
-
+如需詳細資訊，請參閱 [Microsoft Edge 舊版瀏覽器設定檔](../deploy-use/browser-profiles.md)。

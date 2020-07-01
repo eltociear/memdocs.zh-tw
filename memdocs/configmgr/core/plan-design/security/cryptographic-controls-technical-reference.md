@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 623a8dab52e13c4674b961e825033430d34a8f88
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: fe50aad3cb35ab5908f604560f4dcd22800919a5
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906553"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353440"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>密碼編譯控制項技術參考
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 Configuration Manager 使用簽署和加密來協助保護 Configuration Manager 階層中的裝置管理。 使用簽署時，如果資料在轉換時遭到變更，則會予以捨棄。 加密則可藉由使用網路通訊協定解析程式，協助防止攻擊者讀取資料。  
 
@@ -70,7 +70,7 @@ Configuration Manager 使用簽署和加密來協助保護 Configuration Manager
  針對每個作業系統部署套件，您可以在使用多點傳送將套件傳輸至電腦時啟用加密。 加密使用進階加密標準 (AES)。 若啟用加密，就不需要額外的憑證設定。 啟用多點傳送的發佈點會自動產生對稱金鑰，以便加密套件。 每個套件都有不同的加密金鑰。 金鑰會經由使用標準 Windows API，儲存在啟用多點傳送的發佈點。 用戶端連線至多點傳送工作階段時，會在使用 PKI 發行之用戶端驗證憑證 (用戶端使用 HTTPS 時) 或自我簽署憑證 (用戶端使用 HTTP 時) 加密的通道上產生金鑰交換。 用戶端會將金鑰儲存於記憶體中，僅用於多點傳送工作階段。  
 
 ### <a name="encryption-for-media-to-deploy-operating-systems"></a>加密媒體以部署作業系統  
- 使用媒體部署作業系統並指定密碼來保護媒體時，會使用進階加密標準 (AES) 來加密環境變數。 媒體上的其他資料，包括應用程式的套件與內容，則不會加密。  
+ 使用媒體部署作業系統並指定密碼來保護媒體時，會使用具有 128 位元金鑰大小的進階加密標準 (AES) 來加密環境變數。 媒體上的其他資料，包括應用程式的套件與內容，則不會加密。  
 
 ### <a name="encryption-for-content-that-is-hosted-on-cloud-based-distribution-points"></a>將裝載於雲端發佈點的內容加密  
  從 System Center 2012 Configuration Manager SP1 開始，使用雲端發佈點時，會使用具備 256 位元金鑰大小的進階加密標準 (AES) 來加密您上傳至這些發佈點的內容。 只要您更新內容，就會將內容重新加密。 用戶端下載內容時，會以 HTTPS 連線來進行加密與保護。  

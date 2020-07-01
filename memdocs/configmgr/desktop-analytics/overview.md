@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: a2829c5bd86192c4f2421550af9f27aef64aa353
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: 774e77f62ee31daa89eeb4273f3c1e7db68a374d
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428648"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353474"
 ---
 # <a name="what-is-desktop-analytics"></a>什麼是電腦分析？
 
@@ -81,7 +81,7 @@ ms.locfileid: "84428648"
 
     - 若要在上線之後存取入口網站，您必須：
 
-      - 在工作區建立所在的資源群組上具有[**電腦分析系統管理員**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) \(部分機器翻譯\) 角色與[**擁有者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner) \(部分機器翻譯\) 或[**參與者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) \(部分機器翻譯\) 權限。
+      - 在所建立的 Log Analytics 工作區上具有[**電腦分析系統管理員**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions)角色與[**擁有者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)或[**參與者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)權限。
 
 - Configuration Manager 1902 版含更新彙總套件 (4500571) 或更新版本。 如需詳細資訊，請參閱[更新 Configuration Manager](connect-configmgr.md#bkmk_hotfix)。  
 

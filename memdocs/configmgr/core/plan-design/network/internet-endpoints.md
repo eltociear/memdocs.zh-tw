@@ -2,7 +2,7 @@
 title: 網際網路存取需求
 titleSuffix: Configuration Manager
 description: 了解允許用於 Configuration Manager 功能之完整功能的網際網路端點。
-ms.date: 04/21/2020
+ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8423af8d4c743965f627a94a07f587fd97d45bdf
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: fb965ec6547ff1c06586464780b6db224b943000
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454965"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740758"
 ---
 # <a name="internet-access-requirements"></a>網際網路存取需求
 
@@ -77,7 +77,8 @@ ms.locfileid: "84454965"
 
 如需此功能的詳細資訊，請參閱[設定要與 Configuration Manager 搭配使用的 Azure 服務](../../servers/deploy/configure/azure-services-wizard.md)。
 
-- `management.azure.com`  
+- `management.azure.com` (Azure 公用雲端)
+- `management.usgovcloudapi.net` (Azure 美國政府雲端)
 
 ## <a name="co-management"></a>共同管理
 
@@ -110,31 +111,66 @@ ms.locfileid: "84454965"
 - Azure Active Directory (Azure AD) 整合
 - 以 Azure AD 為基礎的探索
 
-針對 CMG/CDP 服務部署，**服務連接點**需要存取：
+如需 CMG 的詳細資訊，請參閱[進行 CMG 規劃](../../clients/manage/cmg/plan-cloud-management-gateway.md)。
 
-- 每個環境的特定 Azure 端點都會因設定而有所不同。 Configuration Manager 會將這些端點儲存於站台資料庫中。 在 SQL Server 中查詢 **AzureEnvironments** 資料表以取得 Azure 端點清單。  
+下列各節依角色列出端點。 某些端點會依 `<name>` 參考服務，這是 CMG 或 CDP 的雲端服務名稱。 例如，如果您的 CMG 為 `GraniteFalls.CloudApp.Net`，則實際儲存體端點為 `GraniteFalls.blob.core.windows.net`。<!-- SCCMDocs#2288 -->
 
-**CMG 連接點**需要存取下列服務端點：
+### <a name="service-connection-point"></a>服務連接點
+
+針對 CMG/CDP 服務部署，服務連接點需要下列項目的存取權：
+
+- 每個環境的特定 Azure 端點都會因設定而有所不同。 Configuration Manager 會將這些端點儲存於站台資料庫中。 在 SQL Server 中查詢 **AzureEnvironments** 資料表以取得 Azure 端點清單。
+
+- [Azure 服務](#azure-services)
+
+- 若為 Azure AD 使用者探索：
+
+  - 1902 版和更新版本：Microsoft Graph 端點 `https://graph.microsoft.com/`
+
+  - 1810 版和更早版本：Azure AD Graph 端點 `https://graph.windows.net/`  
+
+### <a name="cmg-connection-point"></a>CMG 連接點
+
+CMG 連接點需要下列服務端點的存取權：
+
+- 雲端服務名稱 (針對 CMG 或 CDP)：
+  - `<name>.cloudapp.net` (Azure 公用雲端)
+  - `<name>.usgovcloudapp.net` (Azure 美國政府雲端)
 
 - 服務管理端點：`https://management.core.windows.net/`  
 
-- 儲存體端點：`<name>.blob.core.windows.net` 及 `<name>.table.core.windows.net`
+- 儲存體端點 (針對啟用內容的 CMG 或 CDP)：
+  - `<name>.blob.core.windows.net` (Azure 公用雲端)
+  - `<name>.blob.core.usgovcloudapi.net` (Azure 美國政府雲端)
+<!--  and `<name>.table.core.windows.net` per DC, only used internally -->
 
-    其中 `<name>` 是 CMG 或 CDP 的雲端服務名稱。 例如，如果您的 CMG 為 `GraniteFalls.CloudApp.Net`，則第一個要允許的儲存體端點為 `GraniteFalls.blob.core.windows.net`。<!-- SCCMDocs#2288 -->
+CMG 連接點站台系統支援使用 Web Proxy。 如需針對 Proxy 設定此角色的詳細資訊，請參閱 [Proxy 伺服器支援](proxy-server-support.md#configure-the-proxy-for-a-site-system-server)。 CMG 連接點只需連線到 CMG 服務端點。 它不需要存取其他 Azure 端點。
 
-若為由 **Configuration Manager 主控台**及**用戶端**所進行的 Azure AD 權杖擷取：
+### <a name="configuration-manager-client"></a>Configuration Manager 用戶端
 
-- ActiveDirectoryEndpoint `https://login.microsoftonline.com/`  
+- 雲端服務名稱 (針對 CMG 或 CDP)：
+  - `<name>.cloudapp.net` (Azure 公用雲端)
+  - `<name>.usgovcloudapp.net` (Azure 美國政府雲端)
 
-針對 Azure AD 使用者探索，**服務連接點**需要存取：
+- 儲存體端點 (針對啟用內容的 CMG 或 CDP)：
+  - `<name>.blob.core.windows.net` (Azure 公用雲端)
+  - `<name>.blob.core.usgovcloudapi.net` (Azure 美國政府雲端)
 
-- 1810 版和更早版本：Azure AD Graph 端點 `https://graph.windows.net/`  
+- Azure AD 端點 (針對 Azure AD 權杖擷取)：
+  - `login.microsoftonline.com` (Azure 公用雲端)
+  - `login.microsoftonline.us` (Azure 美國政府雲端)
 
-- 1902 版和更新版本：Microsoft Graph 端點 `https://graph.microsoft.com/`
+### <a name="configuration-manager-console"></a>Configuration Manager 主控台
 
-雲端管理點 (CMG) 連接點站台系統支援使用 Web Proxy。 如需針對 Proxy 設定此角色的詳細資訊，請參閱 [Proxy 伺服器支援](proxy-server-support.md#configure-the-proxy-for-a-site-system-server)。 CMG 連接點只需連線到 CMG 服務端點。 它不需要存取其他 Azure 端點。
+- Azure AD 端點 (針對 Azure AD 權杖擷取)：
 
-如需 CMG 的詳細資訊，請參閱[進行 CMG 規劃](../../clients/manage/cmg/plan-cloud-management-gateway.md)。
+  - Azure 公用雲端
+    - `login.microsoftonline.com`
+    - `aadcdn.msauth.net`<!-- MEMDocs#351 -->
+    - `aadcdn.msftauth.net`
+
+  - Azure 美國政府雲端
+    - `login.microsoftonline.us`
 
 ## <a name="software-updates"></a><a name="bkmk_sum"></a> 軟體更新
 
@@ -204,18 +240,23 @@ ms.locfileid: "84454965"
 
 如需此功能的詳細資訊，請參閱[產品意見反應](../../understand/find-help.md#product-feedback)。
 
-### <a name="community-workspace-documentation-node"></a>[社群] 工作區、[文件] 節點
+### <a name="community-workspace"></a>社群工作區
+
+#### <a name="documentation-node"></a>文件節點
+
+如需此主控台節點的詳細資訊，請參閱[使用 Configuration Manager 主控台](../../servers/manage/admin-console.md)。
 
 - `https://aka.ms`
 
 - `https://raw.githubusercontent.com`
 
-如需此主控台節點的詳細資訊，請參閱[使用 Configuration Manager 主控台](../../servers/manage/admin-console.md)。
+#### <a name="community-hub"></a>社群中樞
 
-<!-- 
-Community Hub
-when in current branch, get details from SCCMDocs-pr #3403 
- -->
+如需此功能的詳細資訊，請參閱[社群中樞](../../servers/manage/community-hub.md)。
+
+- `https://github.com`
+
+- `https://communityhub.microsoft.com`
 
 ### <a name="monitoring-workspace-site-hierarchy-node"></a>[監視] 工作區、[站台階層] 節點
 

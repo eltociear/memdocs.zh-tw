@@ -10,16 +10,16 @@ ms.assetid: bce9e299-7b3a-4f51-8863-a322877daa2c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 77b4af9d6f5c84cc2c7aaa62d151f9c89b7f474a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0d9feeacf77bbd54c9ac38c2c05ee1560eeacb80
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703836"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506310"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1902"></a>1902 版的診斷及使用方式資料
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 下列各節提供有關在每個層級所收集資料的額外詳細資料。 如需層級和其變更方式的詳細資訊，請參閱[診斷使用方式資料的層級](levels-overview.md)。
 
@@ -314,7 +314,7 @@ ms.locfileid: "81703836"
 
 - Windows Hello 企業版原則 (已建立、已部署)  
 
-- 已部署的 Microsoft Edge 瀏覽器原則計數  
+- 已部署的 Microsoft Edge 舊版瀏覽器原則計數  
 
 - ***[新增]*** OneDrive 原則的計數 (已建立、已部署)
 

@@ -10,16 +10,16 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ebd847e44c1acd87c316514ec9919f8a6690a647
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 4a050ab523730adbfdd2ecf541557fabbf95081b
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428581"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715691"
 ---
 # <a name="deploy-bitlocker-management"></a>部署 BitLocker 管理
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 <!--3601034-->
 
@@ -40,13 +40,13 @@ Configuration Manager 中的 BitLocker 管理包含下列元件：
 當您建立並部署此原則時，Configuration Manager 用戶端會在裝置上啟用 BitLocker 管理代理程式。
 
 > [!NOTE]
-> 若要建立 BitLocker 管理原則，您需要在 Configuration Manager 中具備 [系統高權限管理員]  角色。
+> 若要建立 BitLocker 管理原則，您需要在 Configuration Manager 中具備 [系統高權限管理員] 角色。
 
-1. 在 Configuration Manager 主控台中，移至 [資產與合規性]  工作區，展開 [Endpoint Protection]  ，然後選取 [BitLocker 管理]  節點。
+1. 在 Configuration Manager 主控台中，移至 [資產與合規性] 工作區，展開 [Endpoint Protection]，然後選取 [BitLocker 管理] 節點。
 
-1. 在功能區中，選取 [建立 BitLocker 管理控制原則]  。
+1. 在功能區中，選取 [建立 BitLocker 管理控制原則]。
 
-1. 在 [一般]  頁面中指定名稱和選擇性描述。 選取要使用此原則在用戶端上啟用的元件：  
+1. 在 [一般] 頁面中指定名稱和選擇性描述。 選取要使用此原則在用戶端上啟用的元件：  
 
     - **作業系統磁碟機**：管理是否要加密 OS 磁碟機
 
@@ -56,20 +56,20 @@ Configuration Manager 中的 BitLocker 管理包含下列元件：
 
     - **用戶端管理**：管理 BitLocker 磁碟機加密復原資訊的金鑰復原服務備份  
 
-1. 在 [設定]  頁面上，為 [BitLocker 磁碟機加密] 設定下列全域設定：
+1. 在 [設定] 頁面上，為 [BitLocker 磁碟機加密] 設定下列全域設定：
 
     > [!NOTE]
     > 當您啟用 BitLocker 時，Configuration Manager 會套用這些設定。 如果磁碟機已經加密或正在進行中，則對這些原則設定所做的任何變更都不會變更裝置上的磁碟機加密。
     >
     > 如果您停用或未進行這些設定，BitLocker 就會使用預設加密方法 (AES 128 位元)。
 
-    - 針對 Windows 8.1 裝置，請啟用 [磁碟機加密方法和加密強度]  選項。 然後選取加密方法。
+    - 針對 Windows 8.1 裝置，請啟用 [磁碟機加密方法和加密強度] 選項。 然後選取加密方法。
 
-    - 針對 Windows 10 裝置，請啟用 [磁碟機加密方法和加密強度 (Windows 10)]  選項。 然後，分別針對 OS 磁碟機、固定資料磁碟機及抽取式資料磁碟機選取加密方法。
+    - 針對 Windows 10 裝置，請啟用 [磁碟機加密方法和加密強度 (Windows 10)] 選項。 然後，分別針對 OS 磁碟機、固定資料磁碟機及抽取式資料磁碟機選取加密方法。
 
     如需這些設定及此頁面上其他設定的詳細資訊，請參閱[設定參考 - 設定](../../tech-ref/bitlocker/settings.md#setup)。
 
-1. 在 [作業系統磁碟機]  頁面上，指定下列設定：  
+1. 在 [作業系統磁碟機] 頁面上，指定下列設定：  
 
     - **作業系統磁碟機加密設定**：如果您啟用此設定，使用者必須保護 OS 磁碟機和 BitLocker 加密磁碟機。 如果您停用此設定，則使用者無法保護磁碟機。  
 
@@ -81,15 +81,15 @@ Configuration Manager 中的 BitLocker 管理包含下列元件：
 
     如需這些設定及此頁面上其他設定的詳細資訊，請參閱[設定參考 - OS 磁碟機](../../tech-ref/bitlocker/settings.md#os-drive)。
 
-1. 在 [固定磁碟機]  頁面上，指定下列設定：
+1. 在 [固定磁碟機] 頁面上，指定下列設定：
 
-    - **固定資料磁碟機加密**：如果您啟用此設定，BitLocker 就會要求使用者將所有固定資料磁碟機置於保護之下。 接著，其會加密資料磁碟機。 當您啟用此原則時，請啟用自動解除鎖定或 [固定資料磁碟機密碼原則]  的設定。
+    - **固定資料磁碟機加密**：如果您啟用此設定，BitLocker 就會要求使用者將所有固定資料磁碟機置於保護之下。 接著，其會加密資料磁碟機。 當您啟用此原則時，請啟用自動解除鎖定或 [固定資料磁碟機密碼原則] 的設定。
 
     - **對固定資料磁碟機設定自動解除鎖定**：允許或要求 BitLocker 自動解除鎖定任何加密的資料磁碟機。 若要使用自動解除鎖定，也需要 BitLocker 加密 OS 磁碟機。
 
     如需這些設定及此頁面上其他設定的詳細資訊，請參閱[設定參考 - 固定磁碟機](../../tech-ref/bitlocker/settings.md#fixed-drive)。
 
-1. 在 [抽取式磁碟機]  頁面上，指定下列設定：
+1. 在 [抽取式磁碟機] 頁面上，指定下列設定：
 
     - **抽取式資料磁碟機加密**：當您啟用此設定並允許使用者套用 BitLocker 保護時，Configuration Manager 用戶端會將抽取式磁碟機的復原資訊儲存到管理點上的復原服務。 如果使用者忘記或遺失保護裝置 (密碼)，此行為可讓使用者復原磁碟機。
 
@@ -99,7 +99,7 @@ Configuration Manager 中的 BitLocker 管理包含下列元件：
 
     如需這些設定及此頁面上其他設定的詳細資訊，請參閱[設定參考 - 抽取式磁碟機](../../tech-ref/bitlocker/settings.md#removable-drive)。
 
-1. 在 [用戶端管理]  頁面上，指定下列設定：
+1. 在 [用戶端管理] 頁面上，指定下列設定：
 
     > [!IMPORTANT]
     > 如果您沒有具備 HTTPS 功能之網站的管理點，請不要設定此設定。 如需詳細資訊，請參閱[復原服務](#recovery-service)。
@@ -114,33 +114,33 @@ Configuration Manager 中的 BitLocker 管理包含下列元件：
 
 1. 完成精靈。
 
-若要變更現有原則的設定，請在清單中選擇該原則，然後選取 [屬性]  。
+若要變更現有原則的設定，請在清單中選擇該原則，然後選取 [屬性]。
 
 當您建立一個以上的原則時，您可以設定其相對優先順序。 如果您將多個原則部署到用戶端，則其會使用優先順序值來判斷設定。
 
 ## <a name="deploy-a-policy"></a>部署原則
 
-1. 在 [BitLocker 管理]  節點中，選擇現有的原則。 在功能區中，選取 [部署]  。
+1. 在 [BitLocker 管理] 節點中，選擇現有的原則。 在功能區中，選取 [部署]。
 
 1. 選取裝置集合作為部署的目標。
 
-1. 如果您想要讓裝置隨時都能加密或解密其磁碟機，請選取 [允許在維護期間以外補救]  選項。 如果集合有任何維護視窗，則其仍會補救此 BitLocker 原則。
+1. 如果您想要讓裝置隨時都能加密或解密其磁碟機，請選取 [允許在維護期間以外補救] 選項。 如果集合有任何維護視窗，則其仍會補救此 BitLocker 原則。
 
-1. 設定 [簡單]  或 [自訂]  排程。 根據預設，用戶端每隔 12 小時就會評估其與此原則的合規性。
+1. 設定 [簡單] 或 [自訂] 排程。 用戶端會根據排程中指定的設定來評估其合規性。
 
-1. 選取 [確定]  以部署原則。
+1. 選取 [確定] 以部署原則。
 
-您可以建立相同原則的多個部署。 若要檢視關於每個部署的其他資訊，請在 [BitLocker 管理]  節點中選取原則，然後在詳細資料窗格中切換至 [部署]  索引標籤。
+您可以建立相同原則的多個部署。 若要檢視關於每個部署的其他資訊，請在 [BitLocker 管理] 節點中選取原則，然後在詳細資料窗格中切換至 [部署] 索引標籤。
 
 ## <a name="monitor"></a>監視
 
-在 [BitLocker 管理]  節點的詳細資料窗格中，檢視關於原則部署的基本合規性統計資料：
+在 [BitLocker 管理] 節點的詳細資料窗格中，檢視關於原則部署的基本合規性統計資料：
 
 - 符合規範計數
 - 失敗計數
 - 不符合規範計數
 
-切換至 [部署]  索引標籤，以查看合規性百分比和建議的動作。 選取部署，然後在功能區中選取 [檢視狀態]  。 此動作會將檢視切換至 [監視]  工作區的 [部署]  節點。 與部署其他設定原則部署類似，您可以在此檢視中查看更詳細的合規性狀態。
+切換至 [部署] 索引標籤，以查看合規性百分比和建議的動作。 選取部署，然後在功能區中選取 [檢視狀態]。 此動作會將檢視切換至 [監視] 工作區的 [部署] 節點。 與部署其他設定原則部署類似，您可以在此檢視中查看更詳細的合規性狀態。
 
 若要了解為什麼用戶端會報告不符合 BitLocker 管理原則的規範，請參閱[不符合規範代碼](../../tech-ref/bitlocker/non-compliance-codes.md)。
 
@@ -191,7 +191,7 @@ Configuration Manager 會將這些復原資訊儲存於站台資料庫中。 如
 
 Configuration Manager 不會重新加密已經使用 BitLocker 磁碟機加密來保護的磁碟機。 如果您部署不符合磁碟機目前保護的 BitLocker 管理原則，系統會將其報告為不符合規範。 磁碟機仍會受到保護。
 
-例如，您使用 MBAM 來加密不具 PIN 保護的磁碟機，但 Configuration Manager 原則需要 PIN。 該磁碟機會因此不符合原則的規範，即使該磁碟機已加密也一樣。
+例如，您搭配 AES-XTS 128 加密演算法使用 MBAM 來將磁碟機加密，但 Configuration Manager 原則需要 AES-XTS 256。 該磁碟機會因此不符合原則的規範，即使該磁碟機已加密也一樣。
 
 若要解決此行為，請先停用裝置上的 BitLocker。 然後部署具有新設定的新原則。
 
@@ -201,7 +201,7 @@ Configuration Manager 不會重新加密已經使用 BitLocker 磁碟機加密�
 
 適用於 BitLocker 的 Configuration Manager 用戶端處理常式是共同管理感知的。 如果裝置是共同管理的，而您將 [Endpoint Protection 工作負載](../../../comanage/workloads.md#endpoint-protection)切換至 Intune，則 Configuration Manager 用戶端會忽略其 BitLocker 原則。 裝置會從 Intune 取得 Windows 加密原則。
 
-當您切換加密管理授權單位時，請為[重新加密](#re-encryption)做規劃。
+當您切換加密管理授權單位，而且所需的加密演算法也變更時，您必須規劃[重新加密](#re-encryption)。
 
 如需有關使用 Intune 來管理 BitLocker 的詳細資訊，請參閱下列文章：
 

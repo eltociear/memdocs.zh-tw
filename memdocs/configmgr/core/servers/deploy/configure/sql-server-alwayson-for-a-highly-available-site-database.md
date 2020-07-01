@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79e83a7ba111b1d7f96fb623914ffe8e11f22f3d
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 576f909be15a35f4c29e803236c220cdde33c0ac
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270866"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383150"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>準備將 SQL Server AlwaysOn 可用性群組與 Configuration Manager 搭配使用
 
@@ -256,11 +256,7 @@ Configuration Manager 安裝程式必須連線至每個複本。 當您在 Azure
 
 - 透過 TCP 的 SQL：**TCP 1433**
 
-在安裝程式執行完成之後，下列連接埠必須為 Configuration Manager 保持開啟：  
-
-- SQL Server Service Broker：**TCP 4022**  
-
-- 透過 TCP 的 SQL：**TCP 1433**  
+安裝完成之後，這些連接埠必須保持開啟，以供 Configuration Manager 和複寫連結分析師使用。<!-- MEMDocs#375 -->
 
 您可以使用自訂連接埠來進行這些設定。 請在端點及可用性群組中的所有複本上，使用相同的自訂連接埠。
 

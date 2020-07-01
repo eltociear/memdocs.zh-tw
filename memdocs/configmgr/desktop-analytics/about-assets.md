@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: d5900fd4cb4fdebea23e626ffbe17c5289712b31
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: f87c4cc1bcbe8039acb5876dc8e26ac597f12e59
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268907"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107299"
 ---
 # <a name="assets-in-desktop-analytics"></a>電腦分析中的資產
 
@@ -56,7 +56,7 @@ ms.locfileid: "83268907"
 
 當 [應用程式版本詳細資料] 設定為 [關閉] 時，[應用程式詳細資料] 窗格會顯示其合併的應用程式版本與語言數目。 如果您將任何變更儲存至應用程式詳細資料，其會套用至所有版本。 例如，設定**重要性**或**擁有者**。 有些值會顯示「多個」，這表示所有版本之間沒有一個一致的值。
 
-### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" /> 系統和 Store 應用程式的自動升級決策
+### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp"> </a> 系統和 Store 應用程式的自動升級決策
 
 <!-- 3587232 -->
 識別**重要性**和**升級決策**對電腦分析工作流程中所有值得注意的應用程式而言至關重要。 為有助於簡省您批註這些應用程式的精力，某些類型的應用程式會自動標示為 [不重要]。 這些應用程式的部署計劃升級決策也會標示為 [就緒]。 下列應用程式皆相容，而且在您升級 Windows 之後應可繼續運作：

@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 27994107c32fac87a465240f07b68d57fddfc140
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d481976a6c86da67670871690ba16985a67c80d8
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983818"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746454"
 ---
 # <a name="paths-to-co-management"></a>共同管理的路徑
 
@@ -60,6 +60,5 @@ ms.locfileid: "83983818"
 3. [設定管理點和用戶端以使用雲端管理閘道](../core/clients/manage/cmg/setup-cloud-management-gateway.md)  
 4. [使用 Intune 來部署 Configuration Manager 用戶端](how-to-prepare-Win10.md)  
 
-> [!Note]  
-> 此路徑的教學課程即將推出。
+如需此路徑的教學課程，請參閱[教學課程：為新的網際網路型裝置啟用共同管理](tutorial-co-manage-new-devices.md)。
 

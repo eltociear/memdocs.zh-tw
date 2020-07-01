@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2523d06034f4a7effe769235cb5a4ede4df7e167
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 2c03d5d06dc6b49ceff6af8ce862eb19cb4a517a
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764113"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531463"
 ---
 # <a name="plan-for-bitlocker-management"></a>BitLocker 管理規劃
 
@@ -23,7 +23,7 @@ ms.locfileid: "83764113"
 
 <!-- 3601034 -->
 
-從 1910 版開始，請使用 Configuration Manager 來管理內部部署 Windows 用戶端的 BitLocker 磁碟機加密 (BDE)。 Configuration Manager 提供完整的 BitLocker 生命週期管理，其可取代使用 Microsoft BitLocker Administration and Monitoring (MBAM)。
+從 1910 版開始，請使用 Configuration Manager 來管理內部部署 Windows 用戶端 (已加入 Active Directory) 的 BitLocker 磁碟機加密 (BDE)。 不支援已加入 Azure Active Directory 的用戶端或工作群組用戶端。 Configuration Manager 提供完整的 BitLocker 生命週期管理，其可取代使用 Microsoft BitLocker Administration and Monitoring (MBAM)。
 
 > [!Note]  
 > 根據預設，Configuration Manager 不會啟用此選擇性功能。 您必須先先啟用這項功能才能使用它。 如需詳細資訊，請參閱[從更新啟用選擇性功能](../../core/servers/manage/install-in-console-updates.md#bkmk_options)。  
@@ -92,7 +92,7 @@ Configuration Manager 提供下列適用於 BitLocker 磁碟機加密的管理�
     > [!NOTE]
     > 只安裝具有主要站台資料庫的自助入口網站，以及管理與監視網站。 在階層中，為每個主要站台安裝這些網站。
 
-- 在即將裝載自助入口網站的網頁伺服器上，安裝 [Microsoft ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4)。
+- 在開始安裝程序之前，於將會裝載自助入口網站的 Web 伺服器上，安裝 [Microsoft ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4) 與 .NET Framework 3.5 功能。 在入口網站安裝程序中，將會自動安裝其他必要的 Windows 伺服器角色和功能。
 
 - 執行入口網站安裝程式指令碼的使用者帳戶需要站台資料庫伺服器上的 SQL **系統管理員**權限。 在安裝流程中，該指令碼會設定網頁伺服器電腦帳戶的登入、使用者與 SQL 角色權限。 當完成安裝自助入口網站和管理與監視網站後，即可以從系統管理員角色移除此使用者帳戶。
 

@@ -12,16 +12,34 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 75dd74e3c1019c9819b44a0ffa8936eeb9eee366
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 18e703691696a2cfc02a5b9715fb6062360229e2
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268346"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353457"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Ready for modern desktop 淘汰的常見問題集
 
 <!-- placeholder -->
+
+## <a name="ready-for-windows-adoption-status"></a>Ready for Windows 採用狀態
+
+採用狀態會以與 Microsoft 共用資料之商業裝置的資訊為基礎。 此狀態會與軟體廠商的支援聲明整合。
+
+電腦分析則為在商業裝置中找到的每個資產版本提供採用狀態。 此狀態不包含取用者裝置的資料或不共用資料的裝置資料。 而且此狀態並不代表所有 Windows 10 裝置的採用率。
+
+可能的類別包括：
+
+- **已高度採用**：至少有 100,000 部商業 Windows 10 裝置安裝此應用程式。
+
+- **已採用**：至少有 10,000 部商業 Windows 10 裝置安裝此應用程式。
+
+- **資料不足**：共用此應用程式資訊的商業 Windows 10 裝置太少，因此 Microsoft 無法分類其採用狀況。
+
+- **連絡開發人員**：此應用程式版本可能有相容性問題。 Microsoft 建議連絡軟體提供者以深入了解。
+
+- **未知**：此應用程式的此版本沒有可用的資訊。 應用程式的其他版本可能會提供資訊。
 
 ## <a name="general"></a>一般
 
@@ -34,7 +52,7 @@ ms.locfileid: "83268346"
 根據 IT 主管們的意見反應，其希望將這些見解與已經用於部署計劃的工具整合在一起。 使用[電腦分析](https://aka.ms/dadocs)與 [Office 365 ProPlus 整備功能](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch)在 Configuration Manager 中規劃及管理 Windows 10 與 Office 365 ProPlus 升級專案。 
 
 > [!Note]
-> 從 2020 年 4 月 21 日開始，「Office 365 專業增強版」會重新命名為「Microsoft 365 Apps 企業版」  。 如需詳細資訊，請參閱 [Office 365 專業增強版的名稱變更](https://docs.microsoft.com/deployoffice/name-change) \(部分機器翻譯\)。 在主控台正在進行更新時，您在 Configuration Manager 主控台與輔助文件中可能仍會看到提及舊名稱。
+> 從 2020 年 4 月 21 日開始，「Office 365 專業增強版」會重新命名為「Microsoft 365 Apps 企業版」。 如需詳細資訊，請參閱 [Office 365 專業增強版的名稱變更](https://docs.microsoft.com/deployoffice/name-change) \(部分機器翻譯\)。 在主控台正在進行更新時，您在 Configuration Manager 主控台與輔助文件中可能仍會看到提及舊名稱。
 
 ### <a name="what-is-desktop-analytics"></a>什麼是電腦分析？
 

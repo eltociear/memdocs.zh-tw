@@ -2,7 +2,7 @@
 title: 支援的 SQL Server 版本
 titleSuffix: Configuration Manager
 description: 取得裝載 Configuration Manager 站台資料庫的 SQL Server 版本與設定需求。
-ms.date: 04/03/2020
+ms.date: 06/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c52008089a6d23d5c4efe44f0970bb186eb334a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: b30380f4e272050b7224b52d092f39aa8ab5bad4
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904640"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383167"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager 的 SQL Server 版本支援
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 每個 Configuration Manager 站台都必須有支援的 SQL Server 版本和設定，才能裝載站台資料庫。  
 
@@ -74,7 +74,7 @@ SQL Server 必須位於站台伺服器電腦上。
 
 ### <a name="sql-server-2019-standard-enterprise"></a>SQL Server 2019：Standard、Enterprise
 
-從 Configuration Manager 1910 版開始，您可以使用此版本來搭配任何累積更新，只要 SQL 生命週期支援您的累積更新版本即可。
+從 Configuration Manager 1910 版開始，您可以使用此版本來搭配累積更新 5 (CU5) 或更新版本，只要 SQL 生命週期支援您的累積更新版本即可。 CU5 是 SQL Server 2019 的最低需求，因為其解決了[純量 UDF 內嵌](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining)的問題。
 
 此版本的 SQL 可用於下列網站:
 
@@ -82,19 +82,20 @@ SQL Server 必須位於站台伺服器電腦上。
 - 主要站台
 - 次要站台
 
-#### <a name="known-issue-with-sql-server-2019"></a>SQL Server 2019 的已知問題
+<!--
+#### Known issue with SQL Server 2019
 
-SQL 2019 中<!--6436234--> 新的[純量 UDF 內嵌](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining)功能有已知的問題。 若要解決此問題並停用 UDF 內嵌，請在 SQL 2019 伺服器上執行下列指令碼：
+There's a known issue<!--6436234 with the new [scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF  
 ```
 
-雖然不一定是必要的，但在執行此指令碼之後，您可能需要重新啟動 SQL 伺服器。 如需詳細資訊，請參閱[停用純量 UDF 內嵌而不變更相容性層級](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level)。
+While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
 
-您可以安全地停用站台資料庫伺服器的這個 SQL 功能，因為 Configuration Manager 不會使用該功能。
+You can safely disable this SQL feature for the site database server because Configuration Manager doesn't use it.
 
-如果您未在 SQL 2019 中停用純量 UDF 內嵌，站台伺服器將會隨機失敗，以查詢站台資料庫。 例如，您會在 **hman.log** 中看到下列錯誤：
+If you don't disable scalar UDF inlining in SQL 2019, the site server will randomly fail to query the site database. For example, you'll see the following errors in **hman.log**:
 
 ```hman.log
 *** [HY000][0][Microsoft][SQL Server Native Client 11.0]Unspecified error occurred on SQL Server. Connection may have been terminated by the server.
@@ -103,13 +104,14 @@ ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF
 Failed to execute SQL command select dbo.fnGetSiteMode(dbo.fnGetSiteCode())
 ```
 
-您可能會在其他記錄中看到類似的錯誤，例如 **SmsAdminUI.log**。
+You may see similar errors in other logs, such as **SmsAdminUI.log**.
 
-SQL Server 2019 版會記錄下列錯誤：
+SQL Server version 2019 logs the following error:
 
 `Microsoft SQL Server reported SQL message 596, severity 21: [HY000][596][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot continue the execution because the session is in the kill state.`
 
-您也會在其記錄目錄中看到來自 SQL 的損毀傾印 (`.mdump` 檔案)，其預設為 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`。
+You'll also see crash dumps (`.mdump` files) from SQL in its log directory, which by default is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`.
+-->
 
 ### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017：Standard、Enterprise
 
@@ -203,7 +205,7 @@ Configuration Manager 需要 **Windows 驗證**來驗證資料庫連線。
 
 ### <a name="sql-server-memory"></a>SQL Server 記憶體
 
-使用 SQL Server Management Studio 來為 SQL Server 保留記憶體。 在 [伺服器記憶體選項]  底下，設定 [最小伺服器記憶體]  設定。 如需有關如何設定此設定的詳細資訊，請參閱 [SQL Server 記憶體伺服器設定選項](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options)。  
+使用 SQL Server Management Studio 來為 SQL Server 保留記憶體。 在 [伺服器記憶體選項] 底下，設定 [最小伺服器記憶體] 設定。 如需有關如何設定此設定的詳細資訊，請參閱 [SQL Server 記憶體伺服器設定選項](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options)。  
 
 - **針對與站台伺服器安裝在同一部電腦上的資料庫伺服器**：請將 SQL Server 記憶體的限制設為可用可定址系統記憶體的 50% 到 80%。  
 

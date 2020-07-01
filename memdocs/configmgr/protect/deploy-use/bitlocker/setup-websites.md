@@ -10,16 +10,16 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cbd7c516515718cca96bff9b1715233964cb2aa5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 53fc4f694579fb8c53a4aea1054cf49dff21e1d2
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699626"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715674"
 ---
 # <a name="set-up-bitlocker-portals"></a>設定 BitLocker 入口網站
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 <!--3601034-->
 
@@ -28,7 +28,7 @@ ms.locfileid: "81699626"
 - 使用者自助入口網站
 - 管理與監視網站 (服務台入口網站)
 
-您可以在使用 IIS 的現有站台伺服器上安裝入口網站，或使用獨立的 Web 伺服器來加以裝載。
+您可以在已安裝 IIS 的現有站台伺服器或站台系統伺服器上安裝入口網站，或使用獨立的 Web 伺服器來加以裝載。
 
 > [!NOTE]
 > 只安裝具有主要站台資料庫的自助入口網站，以及管理與監視網站。 在階層中，為每個主要站台安裝這些網站。
@@ -45,12 +45,12 @@ ms.locfileid: "81699626"
 
 - `-SqlDatabaseName <DatabaseName>` (必要)：主要站台資料庫的名稱，例如 `CM_ABC`。
 
-- `-ReportWebServiceUrl <ReportWebServiceUrl>`：主要站台之 Reporting Services 點的 Web 服務 URL。 它是 [Reporting Services 組態管理員]  中的 [Web 服務 URL]  值。
+- `-ReportWebServiceUrl <ReportWebServiceUrl>`：主要站台之 Reporting Services 點的 Web 服務 URL。 它是 [Reporting Services 組態管理員] 中的 [Web 服務 URL] 值。
 
     > [!NOTE]
     > 此參數的目的是要安裝連結至管理與監視網站的**復原稽核報告**。 根據預設，Configuration Manager 包含其他 BitLocker 管理報告。
 
-- `-HelpdeskUsersGroupName <DomainUserGroup>`：例如 `contoso\BitLocker help desk users`。 其成員對於管理和監視網站中 [管理 TPM]  和 [磁碟機修復]  區域具有存取權的網域使用者群組。 當使用這些選項時，此角色需要填寫所有欄位，包括使用者的網域與帳戶名稱。
+- `-HelpdeskUsersGroupName <DomainUserGroup>`：例如 `contoso\BitLocker help desk users`。 其成員對於管理和監視網站中 [管理 TPM] 和 [磁碟機修復] 區域具有存取權的網域使用者群組。 當使用這些選項時，此角色需要填寫所有欄位，包括使用者的網域與帳戶名稱。
 
 - `-HelpdeskAdminsGroupName <DomainUserGroup>`：例如 `contoso\BitLocker help desk admins`。 成員可存取管理及監視網站之所有復原區域的網域使用者群組。 協助使用者修復其驅動程式時，此角色只需要輸入修復金鑰。
 

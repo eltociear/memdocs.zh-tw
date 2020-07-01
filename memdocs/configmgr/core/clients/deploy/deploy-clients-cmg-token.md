@@ -2,7 +2,7 @@
 title: CMG 的權杖型驗證
 titleSuffix: Configuration Manager
 description: 在內部網路上註冊用戶端以取得唯一權杖，或為網際網路型裝置建立大量註冊權杖。
-ms.date: 04/29/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5054d44371fd3114a9644f90d37dabf1e81d1997
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 8146c9c2605f8693ad7375b974a5dd13c089d946
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455016"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715657"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>雲端管理閘道的權杖型驗證
 
@@ -70,6 +70,16 @@ Configuration Manager 用戶端會與管理點一起管理此權杖，因此不�
 ```ClientLocation.log
 Rotating internet management point, new management point [1] is: https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 (0) with capabilities: <Capabilities SchemaVersion ="1.0"><Property Name="SSL" Version="1" /></Capabilities>
 ```
+
+若要對安裝進行疑難排解，請檢閱用戶端上的 `%WinDir%\ccmsetup\logs\ccmsetup.log`。 安裝後，請檢閱 `%WinDir%\ccm\logs\ClientIDManagerStartup.log`。
+
+在伺服器上，請檢閱下列記錄：
+
+- [CMG 記錄](../../plan-design/hierarchy/log-files.md#cloud-management-gateway)
+- 管理點
+  - CCM_STS.log
+  - MP_RegistrationManager.log
+  - ClientAuth.log
 
 ### <a name="known-issues"></a>已知問題
 

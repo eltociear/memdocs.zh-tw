@@ -2,7 +2,7 @@
 title: Technical Preview 版本
 titleSuffix: Configuration Manager
 description: 了解可試用 Configuration Manager 新功能的 Technical Preview 分支。
-ms.date: 05/29/2020
+ms.date: 06/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e4c0842a3e23eb8503c945073a4be35db5173086
-ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
+ms.openlocfilehash: 5dfa3b33a46166cfa4e1233eb71125696f5aa39d
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226248"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383133"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>設定管理員的 Technical Preview
 
@@ -116,9 +116,41 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2005.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2006.md) <!--ID-->
 
 以下是最新 Configuration Manager Technical Preview 版本所提供的功能：
+
+### <a name="technical-preview-version-2006"></a>2006 技術預覽版
+
+- [在共同管理的裝置上使用公司入口網站應用程式](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
+- [透過 CMG 提供的可用應用程式改善](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
+- [內部網路用戶端可以使用 CMG 軟體更新點](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
+- [透過 CMG 的工作順序改善](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
+- [針對遠端工作者進行最佳化的管理見解](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
+- [VPN 界限類型的改善](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
+- [租用戶連結：Microsoft 端點管理員系統管理中心中 Configuration Manager 動作的改善](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
+- [端點保護原則的 CMG 支援](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
+- [在租用戶連結上線期間匯入先前建立的 Azure AD 應用程式](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
+- [計量付費連線上的用戶端升級改善](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
+- [管理裝置重新啟動的改善](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
+- [適用於 Windows 虛擬桌面的改善支援](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
+- [Configuration Manager 社群中樞項目的直接連結](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
+
+> [!NOTE]
+> 舊版 Technical Preview 中的可用功能仍會保留在較新版本中。 同樣地，已新增至 Configuration Manager 最新分支的功能仍會保留在 Technical Preview 分支中。
+
+## <a name="features-in-recent-technical-previews"></a>最新 Technical Preview 中的功能
+
+<!-- (explanatory comment)
+This is the full list of new features in the past TP releases since the last CB release.
+Each month, add features from the list above to a new H3 section at the top of this section.
+When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
+-->
+
+下列是自最新分支 2002 版以來，Configuration Manager Technical Preview 分支所發行過的功能：
+
+> [!TIP]
+> 當新的最新分支版本推出時，於該版本中推出的功能會列在最新的新功能文章。 如需詳細資訊，請參閱[累加版本的新功能](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)。
 
 ### <a name="technical-preview-version-2005"></a>2005 技術預覽版
 
@@ -138,22 +170,6 @@ bullet format:
 - [BitLocker 工作順序步驟的改善](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
 - [內容庫清理工具的改善](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
 - [在 Windows 10 就地升級期間移除命令提示字元](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
-
-> [!NOTE]
-> 舊版 Technical Preview 中的可用功能仍會保留在較新版本中。 同樣地，已新增至 Configuration Manager 最新分支的功能仍會保留在 Technical Preview 分支中。
-
-## <a name="features-in-recent-technical-previews"></a>最新 Technical Preview 中的功能
-
-<!-- (explanatory comment)
-This is the full list of new features in the past TP releases since the last CB release.
-Each month, add features from the list above to a new H3 section at the top of this section.
-When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
--->
-
-下列是自最新分支 2002 版以來，Configuration Manager Technical Preview 分支所發行過的功能：
-
-> [!TIP]
-> 當新的最新分支版本推出時，於該版本中推出的功能會列在最新的新功能文章。 如需詳細資訊，請參閱[累加版本的新功能](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)。
 
 ### <a name="technical-preview-version-2004"></a>Technical Preview 2004 版
 

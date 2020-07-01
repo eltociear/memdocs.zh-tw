@@ -2,7 +2,7 @@
 title: 2002 版有什麼新功能
 titleSuffix: Configuration Manager
 description: 取得 Configuration Manager 最新分支 2002 版所引進的變更與新功能詳細資料。
-ms.date: 05/26/2020
+ms.date: 06/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: afdcc608133d306042c9c6dc817396bb2fc3f387
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: 4100f8747418bff769a7830fa63383ce545895ce
+ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126476"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721851"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager 最新分支 2002 版的新功能
 
@@ -329,7 +329,7 @@ Configuration Manager 現在會偵測服務堆疊更新 (SSU) 是否為多個更
 <!-- 5229962 -->
 Configuration Manager 已擴展將裝置上線至 Microsoft Defender ATP 的支援。 如需詳細資訊，請參閱 [Microsoft Defender 進階威脅防護](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices)。
 
-## <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> 透過 Microsoft 端點管理員系統管理中心將 Configuration Manager 用戶端上線至 Microsoft Defender ATP
+### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> 透過 Microsoft 端點管理員系統管理中心將 Configuration Manager 用戶端上線至 Microsoft Defender ATP
 <!--5691658-->
 現在可以將 Microsoft Defender ATP 端點偵測及回應 (EDR) 上線原則部署到 Configuration Manager 受控用戶端。 這些用戶端不需要 Azure AD 或 MDM 註冊，且原則會將目標放在 ConfigMgr 集合而不是 Azure AD 群組。
 
@@ -386,6 +386,16 @@ Configuration Manager 已擴展將裝置上線至 Microsoft Defender ATP 的支�
 <!--5891241-->
 
 類似於舊版的改善功能，您現在可以從 [設定項目] 和 [設定基準] 節點使用 [所有子資料夾] 搜尋選項。
+
+### <a name="community-hub"></a>社群中樞
+
+<!--3555935, 3555936-->
+
+2020 年 6 月首次引進
+
+多年來，IT 管理員社群已經發展出豐富的知識。 我們不是從頭開始重新編寫指令碼和報告之類的項目，而是已建置一個 **Configuration Manager 社群中樞**，您可以在其中與彼此分享。 藉由其他人的工作，您可以節省數小時的工作。 社群中樞透過以他人的工作為基礎進行建置，或讓其他人以您的工作為基礎進行建置來培養創意。 GitHub 已經擁有專為共用而建置的產業程序和工具。 現在，社群中樞將直接在 Configuration Manager 主控台中，利用那些工具作為推動此新社群的基本部分。
+
+如需詳細資訊，請參閱[社群中樞與 GitHub](../../servers/manage/community-hub.md)。
 
 ## <a name="tools"></a><a name="bkmk_tools"></a> 工具
 

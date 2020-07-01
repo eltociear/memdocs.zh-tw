@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 70d4930da712eccff8bdb1f1986a68aa5fe77644
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 5bea4fab3b32464cc0d03469d4966fe3611d2f76
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455271"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814915"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 中的 Microsoft 連線快取
 
@@ -37,7 +37,7 @@ ms.locfileid: "84455271"
 
 ## <a name="how-it-works"></a>運作方式
 
-當您將用戶端設定為使用連線快取伺服器時，就不會再向網際網路要求 Microsoft 雲端管理的內容。 用戶端會向安裝在發佈點上的快取伺服器要求此內容。 內部部署伺服器會使用應用程式要求路由 (ARR) 的 IIS 功能來快取此內容。 接著，快取伺服器可以快速回應相同內容的任何未來要求。 如果連線快取伺服器無法使用，或尚未快取內容，則用戶端就會從網際網路下載內容。 用戶端也會使用傳遞最佳化，因此請從其網路中的對等，下載部分內容。
+當您將用戶端設定為使用連線快取伺服器時，就不會再向網際網路要求 Microsoft 雲端管理的內容。 用戶端會向安裝在發佈點上的快取伺服器要求此內容。 內部部署伺服器會使用應用程式要求路由 (ARR) 的 IIS 功能來快取此內容。 接著，快取伺服器可以快速回應相同內容的任何未來要求。 如果連線快取伺服器無法使用，或尚未快取內容，則用戶端就會從網際網路下載內容。 用戶端也會使用傳遞最佳化從其網路中的對等下載部分內容。
 
 ![連線快取運作方式的圖表](media/3555764-microsoft-connected-cache.png)
 

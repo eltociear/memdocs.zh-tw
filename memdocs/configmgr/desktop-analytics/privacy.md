@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 82c8495391dcc22aa2784657bc1461887e412577
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 34005a63b372198bbc2e3079f8ab560ef6b2b791
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223657"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795630"
 ---
 # <a name="desktop-analytics-data-privacy"></a>電腦分析資料隱私權
 
@@ -57,6 +57,8 @@ ms.locfileid: "84223657"
 
 3. 裝置將診斷資料傳送至適用於 Windows 的 Microsoft 診斷資料管理服務。 所有診斷資料都會透過 HTTPS 加密，並在從裝置傳輸到此服務期間使用憑證釘選。 Microsoft 資料管理服務裝載於美國。
 
+      - 應用程式錯誤、核心錯誤、沒有回應的應用程式，以及其他應用程式特定的問題，會使用 Windows 錯誤報告 API 將特定於應用程式的問題報告傳送給 Microsoft。 如需此資料流程的特定詳細資料，請參閱[使用 WER](https://docs.microsoft.com/windows/win32/wer/using-wer) \(英文\)。
+      
 4. Microsoft 每天都會產生以 IT 為主的見解快照集。 此快照集結合了來自 Windows 的診斷資料與已註冊裝置的輸入。 此程序會在只有電腦分析能使用的暫時性儲存體中進行。 該暫時性儲存體裝載於美國的 Microsoft 資料中心。 所有資料都是透過 SSL (HTTPS) 加密通道來傳送。 快照集會依商業識別碼來分隔。  
 
 5. 快照集接著會複製到 Azure Log Analytics 工作區。 這項資料轉送會透過 HTTPS 使用 Webhook 擷取通訊協定進行，這是 Log Analytics 的功能。 電腦分析對 Log Analytics 儲存體沒有任何讀取或寫入權限。 電腦分析使用共用存取簽章 (SAS) URI 來呼叫 Webhook API。 然後，Log Analytics 會透過 HTTPS 從儲存體資料表取得資料。
@@ -78,6 +80,8 @@ ms.locfileid: "84223657"
 - [Windows 10 1809 版基本層級 Windows 診斷事件與欄位](https://docs.microsoft.com/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
 
 - [電腦分析使用的 Windows 10 1709 版增強診斷資料事件與欄位](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
+
+- [Windows 安裝程式錯誤報告](https://docs.microsoft.com/windows/deployment/upgrade/windows-error-reporting) \(部分機器翻譯\)
 
 - [診斷資料檢視器概觀](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
 

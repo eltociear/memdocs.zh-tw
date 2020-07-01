@@ -10,16 +10,16 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0861bb73769beb6c7595b896afc8d0e156eef94d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5109ababd00011784618f9c989e1d2b756a322d9
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688616"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715623"
 ---
 # <a name="size-and-scale-numbers-for-configuration-manager"></a>Configuration Manager 的大小和縮放數字
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 每個 Configuration Manager 部署都有可支援的站台、站台系統角色和裝置數目上限。 這些數目會根據您的階層結構、使用的站台類型和數目，以及部署的站台系統角色而不同。 本文中的資訊可協助您判斷支援您預期管理之裝置所需的站台系統角色和站台數目。
 
@@ -136,6 +136,9 @@ ms.locfileid: "81688616"
 
 如需管理點可支援之用戶端與裝置數目的相關資訊，請參閱[管理點](#bkmk_mp)一節。  
 
+> [!NOTE]
+> 如果您啟用管理點以支援[雲端管理閘道](../../clients/manage/cmg/plan-cloud-management-gateway.md)，其將按常規來為網際網路型用戶端要求提供服務。 無論服務的是內部部署或網際網路型用戶端，管理點的大小調整指導方針都不會改變。
+
 ### <a name="software-update-point"></a>軟體更新點  
 
 使用下列建議作為基準。 此基準可協助您判定適用於組織的軟體更新容量規劃資訊。 實際的容量需求可能會依下列準則而與本文中列出的建議有所不同：
@@ -144,6 +147,9 @@ ms.locfileid: "81688616"
 - 您用來裝載軟體更新點站台系統的硬體
 - 受控的用戶端數目
 - 安裝在伺服器上的其他站台系統角色  
+
+> [!NOTE]
+> 如果您啟用軟體更新點以支援[雲端管理閘道](../../clients/manage/cmg/plan-cloud-management-gateway.md)，其將按常規來為網際網路型用戶端要求提供服務。 無論服務的是內部部署或網際網路型用戶端，軟體更新點的大小調整指導方針都不會改變。
 
 #### <a name="capacity-planning-for-the-software-update-point"></a><a name="BKMK_SUMCapacity"></a> 軟體更新點的容量規劃  
 
@@ -164,7 +170,7 @@ ms.locfileid: "81688616"
 
 使用下列容量資訊規劃軟體更新物件：  
 
-- **將部署中的軟體更新數目限制為 1000 個** - 將各軟體更新部署的軟體更新數目限制為 1000 個。 當您建立自動部署規則 (ADR) 時，可指定限制軟體更新數目的準則。 ADR 會在指定的準則傳回超過 1000 個軟體更新時失敗。 從 Configuration Manager 主控台的 [自動部署規則]  節點檢查 ADR 的狀態。 當您手動部署軟體更新時，請勿選取部署多於 1000 個更新。  
+- **將部署中的軟體更新數目限制為 1000 個** - 將各軟體更新部署的軟體更新數目限制為 1000 個。 當您建立自動部署規則 (ADR) 時，可指定限制軟體更新數目的準則。 ADR 會在指定的準則傳回超過 1000 個軟體更新時失敗。 從 Configuration Manager 主控台的 [自動部署規則] 節點檢查 ADR 的狀態。 當您手動部署軟體更新時，請勿選取部署多於 1000 個更新。  
 
   此外，請在設定基準中將軟體更新數目限制為 1000。 如需詳細資訊，請參閱[建立設定基準](../../../compliance/deploy-use/create-configuration-baselines.md)。
 

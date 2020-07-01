@@ -2,7 +2,7 @@
 title: 記錄檔參考
 titleSuffix: Configuration Manager
 description: Configuration Manager 用戶端、伺服器及相依元件之所有記錄檔的參考。
-ms.date: 04/24/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 36ab89f1e9988adc167bf69ff7d9f53b02bbe10f
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 63f8ad6827a1aa72c3aaa51e21fecbf639fbb405
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166531"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715572"
 ---
 # <a name="log-file-reference"></a>記錄檔參考
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 在 Configuration Manager 中，用戶端和站台伺服器元件會在個別記錄檔中記錄處理程序資訊。 利用這些記錄檔中的資訊，可幫助您針對可能發生的問題進行疑難排解。 根據預設，Configuration Manager 會針對用戶端和伺服器元件啟用記錄。
 
@@ -122,7 +122,7 @@ ms.locfileid: "82166531"
 |ADALOperationProvider.log|使用 Azure Active Directory (Azure AD) 驗證程式庫 (ADAL) 的用戶端驗證權杖要求資訊。|
 |BitLockerManagementHandler.log|記錄有關 BitLocker 管理原則的資訊。|
 |CAS.log|內容存取服務。 維護用戶端上的本機套件快取。|  
-|Ccm32BitLauncher.log|記錄啟動用戶端上標記為「以 32 位元執行」  之應用程式的動作。|  
+|Ccm32BitLauncher.log|記錄啟動用戶端上標記為「以 32 位元執行」之應用程式的動作。|  
 |CcmEval.log|記錄 Configuration Manager 用戶端狀態評估活動，以及 Configuration Manager 用戶端所需元件的詳細資料。|  
 |CcmEvalTask.log|記錄評估排程工作起始的 Configuration Manager 用戶端狀態評估活動。|  
 |CcmExec.log|記錄用戶端和 SMS Agent Host 服務的活動。 此記錄檔也包含有關啟用和停用喚醒 Proxy 的資訊。|  
@@ -167,13 +167,13 @@ ms.locfileid: "82166531"
 |PolicySdk.log|記錄原則系統 SDK 介面的活動。|  
 |Pwrmgmt.log|記錄有關啟用或停用和設定喚醒 Proxy 用戶端設定的資訊。|  
 |PwrProvider.log|記錄 WMI 服務中所裝載電源管理提供者 (PWRInvProvider) 的活動。 在所有支援的 Windows 版本上，提供者會在硬體清查期間列舉電腦上目前的設定，並套用電源計畫的設定。|  
-|SCClient_&lt;網域  \>@&lt;使用者名稱  \>_1.log|記錄軟體中心內用戶端電腦上所指定使用者的活動。|  
-|SCClient_&lt;網域  \>@&lt;使用者名稱  \>_2.log|記錄軟體中心內用戶端電腦上所指定使用者的歷史活動。|  
+|SCClient_&lt;網域\>@&lt;使用者名稱\>_1.log|記錄軟體中心內用戶端電腦上所指定使用者的活動。|  
+|SCClient_&lt;網域\>@&lt;使用者名稱\>_2.log|記錄軟體中心內用戶端電腦上所指定使用者的歷史活動。|  
 |Scheduler.log|記錄所有用戶端操作之排程工作的活動。|  
-|SCNotify_&lt;網域  \>@&lt;使用者名稱  \>_1.log|記錄通知使用者有關所指定使用者之軟體的活動。|  
-|SCNotify_&lt;網域  \>@&lt;使用者名稱  \>_1-&lt;日期時間  >.log|記錄通知使用者有關所指定使用者之軟體的歷史資訊。|  
+|SCNotify_&lt;網域\>@&lt;使用者名稱\>_1.log|記錄通知使用者有關所指定使用者之軟體的活動。|  
+|SCNotify_&lt;網域\>@&lt;使用者名稱\>_1-&lt;日期時間>.log|記錄通知使用者有關所指定使用者之軟體的歷史資訊。|  
 |setuppolicyevaluator.log|記錄 WMI 中的設定和清查原則建立。|  
-|SleepAgent_&lt;網域  \>@SYSTEM_0.log|喚醒 Proxy 的主要記錄檔。|  
+|SleepAgent_&lt;網域\>@SYSTEM_0.log|喚醒 Proxy 的主要記錄檔。|  
 |smscliui.log|記錄控制台中 Configuration Manager 用戶端的使用。|  
 |SrcUpdateMgr.log|記錄更新為最新發佈點來源位置之已安裝 Windows Installer 應用程式的活動。|  
 |StatusAgent.log|記錄用戶端元件所建立的狀態訊息。|  
@@ -248,10 +248,10 @@ Mac 電腦所適用 Configuration Manager 用戶端會在 Mac 電腦上的下列
 
 |記錄檔名稱|詳細資料|位置|
 |--------------|-------------|-------------|
-|CCMClient-&lt;日期時間  >.log|記錄與 Mac 用戶端操作相關的活動，包括應用程式管理、清查以及錯誤記錄。| `/Library/Application Support/Microsoft/CCM/Logs`|  
-|CCMAgent-&lt;日期時間  >.log|記錄與用戶端操作相關的資訊，包括使用者登入與登出操作以及 Mac 電腦活動。| `~/Library/Logs`|  
-|CCMNotifications-&lt;日期時間  >.log|記錄顯示在 Mac 電腦上，與 Configuration Manager 通知相關的活動。| `~/Library/Logs`|  
-|CCMPrefPane-&lt;日期時間  >.log|記錄 Mac 電腦上，與 Configuration Manager 喜好設定對話方塊相關的活動，包括一般狀態與錯誤記錄。| `~/Library/Logs`|  
+|CCMClient-&lt;日期時間>.log|記錄與 Mac 用戶端操作相關的活動，包括應用程式管理、清查以及錯誤記錄。| `/Library/Application Support/Microsoft/CCM/Logs`|  
+|CCMAgent-&lt;日期時間>.log|記錄與用戶端操作相關的資訊，包括使用者登入與登出操作以及 Mac 電腦活動。| `~/Library/Logs`|  
+|CCMNotifications-&lt;日期時間>.log|記錄顯示在 Mac 電腦上，與 Configuration Manager 通知相關的活動。| `~/Library/Logs`|  
+|CCMPrefPane-&lt;日期時間>.log|記錄 Mac 電腦上，與 Configuration Manager 喜好設定對話方塊相關的活動，包括一般狀態與錯誤記錄。| `~/Library/Logs`|  
 
 站台系統伺服器上的 **SMS_DM.log** 記錄檔也會記錄 Mac 電腦與針對行動裝置和 Mac 電腦設定的管理點之間的通訊。  
 
@@ -384,7 +384,9 @@ Mac 電腦所適用 Configuration Manager 用戶端會在 Mac 電腦上的下列
 
 |記錄檔名稱|說明|含有記錄檔的電腦|  
 |--------------|-----------------|----------------------------|  
-|CcmIsapi.log|記錄端點上的用戶端訊息活動。|網站系統伺服器|  
+|CcmIsapi.log|記錄端點上的用戶端訊息活動。|網站系統伺服器|
+|CCM_STS.log|記錄來自 Azure Active Directory 或網站發出之用戶端權杖的驗證權杖活動。|網站系統伺服器|
+|ClientAuth.log|記錄簽署和驗證活動。|網站系統伺服器|
 |MP_CliReg.log|記錄由管理點處理的用戶端註冊活動。|網站系統伺服器|  
 |MP_Ddr.log|記錄來自用戶端的 XML.ddr 記錄轉換，然後將這些記錄複製到站台伺服器。|網站系統伺服器|  
 |MP_Framework.log|記錄核心管理點與用戶端架構元件的活動。|網站系統伺服器|  
@@ -394,6 +396,7 @@ Mac 電腦所適用 Configuration Manager 用戶端會在 Mac 電腦上的下列
 |MP_Location.log|記錄來自用戶端的位置要求與回覆活動。|網站系統伺服器|  
 |MP_OOBMgr.log|記錄從用戶端接收 OTP 的相關管理點活動。|網站系統伺服器|  
 |MP_Policy.log|記錄原則的通訊。|網站系統伺服器|  
+|MP_RegistrationManager.log|記錄與用戶端註冊相關的活動，例如驗證憑證、CRL 和權杖。|網站系統伺服器|
 |MP_Relay.log|記錄收集自用戶端的檔案傳輸。|網站系統伺服器|  
 |MP_Retry.log|記錄硬體清查重試程序。|網站系統伺服器|  
 |MP_Sinv.log|記錄來自用戶端的 XML 軟體清查記錄轉換的詳細資料，並將這些檔案複製到網站伺服器。|網站系統伺服器|  
@@ -481,6 +484,7 @@ Mac 電腦所適用 Configuration Manager 用戶端會在 Mac 電腦上的下列
 |SMSdpmon.log|記錄有關發佈點上所設定發佈點健全狀況監視排程工作的詳細資料。|網站伺服器|  
 |SoftwareCatalogUpdateEndpoint.log|記錄管理軟體中心內所顯示應用程式類別目錄 URL 的活動。|用戶端|  
 |SoftwareCenterSystemTasks.log|記錄與軟體中心必要條件元件驗證相關的活動。|用戶端|  
+|TSDTHandler.log|適用於工作順序部署類型。 其記錄了從應用程式強制執行 (安裝或解除安裝) 到工作順序啟動的程序。 將其與 AppEnforce.log 和 smsts.log 搭配使用。|用戶端|<!-- MEMDocs#336 -->
 
 #### <a name="packages-and-programs"></a>封裝和程式
 
@@ -561,8 +565,8 @@ Mac 電腦所適用 Configuration Manager 用戶端會在 Mac 電腦上的下列
 |記錄檔名稱|說明|含有記錄檔的電腦|
 |--------------|-----------------|----------------------------|  
 |CloudMgr.log|記錄有關雲端管理閘道服務的部署、進行中的服務狀態，以及服務相關使用資料的詳細資料。 若要設定記錄層級，請編輯下列登錄機碼中的**記錄層級**值：`HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER`|主要站台伺服器或 CAS 上的 *installdir* 資料夾。|
-|CMGSetup.log <sup>[附註 1](#bkmk_note1)</sup>|記錄有關雲端管理閘道部署 (Azure 中的本機部署) 第二階段的詳細資料。 若要設定記錄層級，請使用 [Azure 入口網站\雲端服務設定]  索引標籤上的 [追蹤層級]  ([資訊]  (預設)、[詳細資訊]  、[錯誤]  ) 設定。|您 Azure 伺服器上的 **%approot%\logs**，或站台系統伺服器上的 SMS/Logs 資料夾|
-|CMGService.log <sup>[附註 1](#bkmk_note1)</sup>|記錄 Azure 中雲端管理閘道服務核心元件的詳細資料。 若要設定記錄層級，請使用 [Azure 入口網站\雲端服務設定]  索引標籤上的 [追蹤層級]  ([資訊]  (預設)、[詳細資訊]  、[錯誤]  ) 設定。|您 Azure 伺服器上的 **%approot%\logs**，或站台系統伺服器上的 SMS/Logs 資料夾|
+|CMGSetup.log <sup>[附註 1](#bkmk_note1)</sup>|記錄有關雲端管理閘道部署 (Azure 中的本機部署) 第二階段的詳細資料。 若要設定記錄層級，請使用 [Azure 入口網站\雲端服務設定] 索引標籤上的 [追蹤層級] ([資訊] (預設)、[詳細資訊]、[錯誤]) 設定。|您 Azure 伺服器上的 **%approot%\logs**，或站台系統伺服器上的 SMS/Logs 資料夾|
+|CMGService.log <sup>[附註 1](#bkmk_note1)</sup>|記錄 Azure 中雲端管理閘道服務核心元件的詳細資料。 若要設定記錄層級，請使用 [Azure 入口網站\雲端服務設定] 索引標籤上的 [追蹤層級] ([資訊] (預設)、[詳細資訊]、[錯誤]) 設定。|您 Azure 伺服器上的 **%approot%\logs**，或站台系統伺服器上的 SMS/Logs 資料夾|
 |SMS_Cloud_ProxyConnector.log|記錄了雲端管理閘道服務和雲端管理閘道連接點之間的連線設定詳細資料。|網站系統伺服器|
 |CMGContentService.log <sup>[附註 1](#bkmk_note1)</sup>|<!--SCCMDocs-pr issue #2822-->當啟用 CMG 以同時從 Azure 儲存體提供內容時，此記錄會記錄該服務的詳細資料。|您 Azure 伺服器上的 **%approot%\logs**，或站台系統伺服器上的 SMS/Logs 資料夾|
 
@@ -855,7 +859,7 @@ Configuration Manager 用戶端上的記錄檔位於下列目錄：`%WinDir%\CCM
 下表列出包含與使用網路喚醒相關資訊的記錄檔。  
 
 > [!NOTE]  
-> 如果您使用喚醒 Proxy 來補充網路喚醒，這項活動就會記錄在用戶端上。 例如，您可以參閱本文之[用戶端操作](#BKMK_ClientOpLogs)一節中的 CcmExec.log 與 SleepAgent_<網域  \>@SYSTEM_0.log。  
+> 如果您使用喚醒 Proxy 來補充網路喚醒，這項活動就會記錄在用戶端上。 例如，您可以參閱本文之[用戶端操作](#BKMK_ClientOpLogs)一節中的 CcmExec.log 與 SleepAgent_<網域\>@SYSTEM_0.log。  
 
 |記錄檔名稱|說明|含有記錄檔的電腦|  
 |--------------|-----------------|----------------------------|  

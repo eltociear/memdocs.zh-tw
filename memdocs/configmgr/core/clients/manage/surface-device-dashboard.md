@@ -5,21 +5,21 @@ description: 使用儀表板檢閱 Surface 裝置的相關資訊。
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 06/09/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: f9b9c49bde16754b7a60112905f14da2cd5e48eb
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 7e6a98c25fabff31d3eae688edf89540c1ab71a7
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906284"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84613947"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Configuration Manager 中的 Surface 裝置儀表板
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 從 1802 版開始，Surface 裝置儀表板能夠一覽無遺地提供在您的環境中所找到的 Surface 裝置的相關資訊。 <!--1355788-->
 
@@ -28,8 +28,8 @@ ms.locfileid: "82906284"
 若要開啟 Surface 裝置儀表板，請使用下列步驟： 
 
 1. 開啟 Configuration Manager 主控台。 
-2. 按一下 [監視]  節點。 
-3. 若要載入儀表板，請按一下 [Surface 裝置]  。
+2. 按一下 [監視] 節點。 
+3. 若要載入儀表板，請按一下 [Surface 裝置]。
 
 **Surface 裝置儀表板**
 ![Surface 裝置儀表板](media/Surface-device-dashboard.PNG)
@@ -59,7 +59,7 @@ Surface 裝置儀表板會針對您的環境顯示三個圖形。
 
 如需 Surface 裝置的詳細資訊，請參閱 [Surface](https://www.microsoft.com/surface) 網站。
 
-如需在 Configuration Manager 中部署 Surface 韌體更新的詳細資訊，請參閱[如何管理 Surface 驅動程式更新](https://support.microsoft.com/help/4098906) (機器翻譯)。
+如需在 Configuration Manager 中部署 Surface 韌體更新的詳細資訊，請參閱[管理 Surface 驅動程式更新](../../../sum/deploy-use/surface-drivers.md)。
 
 
 
