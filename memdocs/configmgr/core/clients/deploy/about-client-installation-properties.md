@@ -2,7 +2,7 @@
 title: 用戶端安裝參數和屬性
 titleSuffix: Configuration Manager
 description: 了解用來安裝 Configuration Manager用戶端的 ccmsetup 命令列參數和屬性。
-ms.date: 04/01/2020
+ms.date: 06/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fda1e877f8e0bc211b36e288af13de204305cc5a
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 02a281b800c1156cf8492e8a897a5cf1b412006e
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455033"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383031"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>關於 Configuration Manager 中的用戶端安裝參數和屬性
 
@@ -256,6 +256,28 @@ CCMSetup.exe 及其支援檔案位於站台伺服器上 Configuration Manager �
 
 > [!NOTE]  
 > `ClientUI` 是 **/ExcludeFeatures** 參數唯一支援的值。
+
+### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
+
+此參數會指定用戶端是否會在您啟用 [[自動用戶端升級](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate)] 時自動升級。
+
+支援的值：
+
+- `TRUE`：用戶端不會自動升級
+- `FALSE`：用戶端會自動升級 (預設值)
+
+例如：  
+
+`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
+
+如需詳細資訊，請參閱[延伸互通性用戶端](../../understand/interoperability-client.md)。
+
+> [!NOTE]  
+> 使用 **/AlwaysExcludeUpgrade** 參數時，自動升級仍會執行。 不過，當系統執行 CCMSetup 以執行升級時，其會注意到已設定 **/AlwaysExcludeUpgrade** 參數，並會在 **ccmsetup.log** 中記錄下列這一行：
+>
+> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
+>
+> CCMSetup 將會立即結束，且不會執行升級。
 
 ## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a> CCMSetup.exe 傳回碼
 

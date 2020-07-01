@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02e07ec75b7c0d07a81a9c6f555cf119310a9a9f
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 62348a4e551112a93f960388d6e21b398c447dfc
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093697"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502369"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Intune 中的 Android 與 Samsung Knox Standard 裝置限制設定
 
@@ -178,7 +178,7 @@ ms.locfileid: "85093697"
 
 Kiosk 設定僅套用至 Samsung Knox Standard 裝置，且只套用至您使用 Intune 管理的應用程式。
 
-- 新增您想要在裝置處於 kiosk 模式時執行的應用程式。 在 kiosk 模式中，只會執行您新增的應用程式；未新增的應用程式無法執行。 當裝置處於 kiosk 模式時，預先安裝的瀏覽器不會作為應用程式執行。 如果瀏覽器為必要項目，請考慮使用[受控瀏覽器](../apps/app-configuration-managed-browser.md)。
+- 新增您想要在裝置處於 kiosk 模式時執行的應用程式。 在 kiosk 模式中，只會執行您新增的應用程式；未新增的應用程式無法執行。 當裝置處於 kiosk 模式時，預先安裝的瀏覽器不會作為應用程式執行。 如果瀏覽器為必要項目，請考慮使用[受控瀏覽器](../apps/manage-microsoft-edge.md)。
 
   您的應用程式選項：
 

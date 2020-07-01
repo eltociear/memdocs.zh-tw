@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de83a021343b733816330bc9be94c57a57afd9f1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 43d412fda772fd36710895496087e97d782b8dba
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989832"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502624"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Microsoft Intune 的已註冊裝置管理功能
 
@@ -55,7 +55,7 @@ Microsoft Intune 可讓您向服務*註冊*某個範圍的裝置來管理這些�
 |行動應用程式管理|對於所有使用 Intune 管理的裝置和未使用 Intune 管理的裝置，使用行動應用程式管理來設定應用程式的限制。 您可以藉由限制某些作業來提升公司資料的安全性，例如複製並貼上、從外部備份資料，以及在應用程式間傳輸資料。|[在 Microsoft Intune 主控台中設定和部署行動應用程式管理原則](../developer/app-wrapper-prepare-android.md)|
 |iOS 行動裝置應用程式組態|使用行動裝置應用程式設定原則來為 iOS/iPadOS 應用程式提供使用者執行應用程式時可能需要的設定。 例如，應用程式可能需要使用者指定連接埠號碼或登入資訊。 您可以簡化應用程式設定，並減少連絡支援人員的次數。|[在 Microsoft Intune 中使用行動應用程式設定原則設定 iOS/iPadOS 應用程式](../apps/app-configuration-policies-use-ios.md)|
 |iOS/iPadOS 行動應用程式佈建設定檔|協助您將佈建設定檔部署至即將到期的 iOS/iPadOS 應用程式。 |[使用 iOS/iPadOS 行動佈建設定檔原則，以避免您的應用程式過期](../apps/app-provisioning-profile-ios.md)|
-|受管理的瀏覽器|設定受管理的瀏覽器原則來控制裝置使用者可以瀏覽的網站。 此外也可將行動應用程式管理原則，套用到受管理的瀏覽器。|[搭配 Microsoft Intune 使用受管理的瀏覽器原則管理網際網路存取](../apps/app-configuration-managed-browser.md)|
+|受管理的瀏覽器|設定受管理的瀏覽器原則來控制裝置使用者可以瀏覽的網站。 此外也可將行動應用程式管理原則，套用到受管理的瀏覽器。|[搭配 Microsoft Intune 使用受管理的瀏覽器原則管理網際網路存取](../apps/manage-microsoft-edge.md)|
 |Windows Hello 企業版|讓您與 Windows Hello 企業版整合，這是使用內部部署 Active Directory 或 Azure Active Directory 取代密碼、智慧卡或虛擬智慧卡來登入 Windows 10 的替代方法。|[使用 Microsoft Intune 控制裝置上的 Windows Hello 企業版設定](../protect/windows-hello.md)|
 |大量採購的應用程式|藉由從應用程式市集匯入授權資訊、追蹤您已經使用了多少個授權，並避免您安裝超過擁有數目的應用程式複本，來協助您管理透過大量採購方案購買的應用程式。|[使用 Microsoft Intune 管理大量購買的應用程式](../apps/vpp-apps.md)|
 

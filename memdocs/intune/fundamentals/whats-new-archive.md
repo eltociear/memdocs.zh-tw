@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1881e43c1725d92a81d794fa240e6394eff1cbd4
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 2cf8e493ed1318fbf1e1fee6ca8a50001a586cd6
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85264068"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502386"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune 的新功能 - 前幾個月
 
@@ -1674,7 +1674,7 @@ Microsoft Teams 應用程式可加入作為 Office 專業增強版應用程式�
 您現在可以使用 Intune 來檢視 Azure Active Directory 中 BitLocker 金鑰識別碼和 BitLocker 修復金鑰的相關[詳細資料](../protect/encryption-monitor.md)。
 
 #### <a name="microsoft-edge-support-for-intune-scenarios-on-ios-and-android-devices---3411007---"></a>對 iOS 和 Android 裝置上 Intune 案例的 Microsoft Edge 支援<!-- 3411007 -->
-Microsoft Edge 將支援與 Intune Managed Browser 相同的所有管理案例，另外還改善終端使用者體驗。 Microsoft Edge 企業功能是由 Intune 原則啟用，其中包含雙重身分識別、應用程式防護原則整合、Azure 應用程式 Proxy 整合，以及受控的我的最愛和首頁捷徑。 如需詳細資訊，請參閱 [Microsoft Edge 支援](../apps/app-configuration-managed-browser.md#microsoft-edge-support)。
+Microsoft Edge 將支援與 Intune Managed Browser 相同的所有管理案例，另外還改善終端使用者體驗。 Microsoft Edge 企業功能是由 Intune 原則啟用，其中包含雙重身分識別、應用程式防護原則整合、Azure 應用程式 Proxy 整合，以及受控的我的最愛和首頁捷徑。 如需詳細資訊，請參閱 [Microsoft Edge 支援](../apps/manage-microsoft-edge.md)。
 
 #### <a name="exchange-onlineintune-connector-deprecate-support-for-eas-only-devices--3105122----"></a>Exchange Online/Intune 連接器淘汰僅限 EAS 裝置的支援<!--3105122  -->
 Intune 主控台不再支援檢視和管理使用 Intune 連接器連線到 Exchange Online 的僅限 EAS 裝置。 相反地，您有下列選項：
@@ -1721,7 +1721,7 @@ Intune 唯讀存取權已授與下列 Azure Active Directory 角色。 透過 Az
 您可以將範圍標籤新增至應用程式設定原則，僅限具有角色並同時獲派該範圍標籤的人員才能存取應用程式設定原則。 應用程式設定原則只能指定給或關聯到獲派相同範圍標籤的應用程式。 如需詳細資訊，請參閱[使用 RBAC 和範圍標籤](scope-tags.md)。
 
 #### <a name="microsoft-edge-support-for-intune-scenarios-on-ios-and-android-devices---3411007---"></a>對 iOS 和 Android 裝置上 Intune 案例的 Microsoft Edge 支援<!-- 3411007 -->
-Microsoft Edge 將支援與 Intune Managed Browser 相同的所有管理案例，並將在終端使用者體驗中新增增強功能。 Microsoft Edge 企業功能是由 Intune 原則啟用，其中包含雙重身分識別、應用程式防護原則整合、Azure 應用程式 Proxy 整合，以及受控的我的最愛和首頁捷徑。 如需詳細資訊，請參閱 [Microsoft Edge 支援](../apps/app-configuration-managed-browser.md#microsoft-edge-support)。
+Microsoft Edge 將支援與 Intune Managed Browser 相同的所有管理案例，並將在終端使用者體驗中新增增強功能。 Microsoft Edge 企業功能是由 Intune 原則啟用，其中包含雙重身分識別、應用程式防護原則整合、Azure 應用程式 Proxy 整合，以及受控的我的最愛和首頁捷徑。 如需詳細資訊，請參閱 [Microsoft Edge 支援](../apps/manage-microsoft-edge.md)。
 
 
 
@@ -3927,7 +3927,7 @@ Kiosk 模式具有下列要求：
 #### <a name="access-to-managed-app-logs-for-ios---1469920---"></a>存取 iOS 的受控應用程式記錄檔<!-- 1469920 -->
 安裝 Managed Browser 的終端使用者現在已可檢視所有 Microsoft 發行之應用程式的管理狀態，並傳送記錄檔來為受管理的 iOS 應用程式進行疑難排解。
 
-深入了解如何在 iOS 裝置上的 Managed Browser 啟用疑難排解模式，請參閱 [How to access to managed app logs using the Managed Browser on iOS](../apps/app-configuration-managed-browser.md) (如何在 iOS 上使用 Managed Browser 存取受管理應用程式記錄檔)。
+深入了解如何在 iOS 裝置上的 Managed Browser 啟用疑難排解模式，請參閱 [How to access to managed app logs using the Managed Browser on iOS](../apps/manage-microsoft-edge.md) (如何在 iOS 上使用 Managed Browser 存取受管理應用程式記錄檔)。
 
 #### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290---1417174---"></a>iOS 版公司入口網站 2.9.0 版中裝置設定工作流程的改善<!-- 1417174 -->
 
@@ -4347,11 +4347,11 @@ Intune 現在支援上傳 iOS、macOS 和 Android 序號以作為公司裝置識
 適用於 iOS 和 Android 的 Microsoft Teams 應用程式，現在是針對適用於 Exchange 和 SharePoint Online 之應用程式型條件式存取原則核准的應用程式一部分。 可以透過 Azure 入口網站中的 [Intune 應用程式防護] 刀鋒視窗，使用應用程式型條件式存取，將應用程式設定為所有租用戶。
 
 #### <a name="managed-browser-and-app-proxy-integration---1287310---"></a>受控瀏覽器和應用程式 Proxy 整合<!-- 1287310 -->
-Intune Managed Browser 現在可以整合 Azure AD Application Proxy 服務，讓使用者即使在遠端工作時也能存取內部網路網站。 瀏覽器的使用者只需和平常一樣輸入網站 URL，Managed Browser 便會透過應用程式 Proxy Web 閘道來路由傳送要求。 如需詳細資訊，請參閱[使用受管理的瀏覽器原則管理網際網路存取](../apps/app-configuration-managed-browser.md)。
+Intune Managed Browser 現在可以整合 Azure AD Application Proxy 服務，讓使用者即使在遠端工作時也能存取內部網路網站。 瀏覽器的使用者只需和平常一樣輸入網站 URL，Managed Browser 便會透過應用程式 Proxy Web 閘道來路由傳送要求。 如需詳細資訊，請參閱[使用受管理的瀏覽器原則管理網際網路存取](../apps/manage-microsoft-edge.md)。
 
 #### <a name="new-app-configuration-settings-for-the-intune-managed-browser---682951---"></a>適用於 Intune Managed Browser 的新應用程式組態設定<!-- 682951 -->
 在此版本中，我們已新增 iOS 和 Android 的 Intune Managed Browser 應用程式的進一步設定。 您現在能使用應用程式設定原則，針對瀏覽器設定預設的首頁和書籤。
-如需詳細資訊，請參閱[使用 Managed Browser 原則管理網際網路存取](../apps/app-configuration-managed-browser.md)
+如需詳細資訊，請參閱[使用 Managed Browser 原則管理網際網路存取](../apps/manage-microsoft-edge.md)
 
 #### <a name="bitlocker-settings-for-windows-10----951707---"></a>Windows 10 的 BitLocker 設定 <!-- 951707 -->
 您現在可以使用新的 Intune 裝置設定檔，設定 Windows 10 裝置的 BitLocker 設定。 例如，您可以要求裝置加密，也可以設定在開啟 BitLocker 時套用的進一步設定。
@@ -4438,10 +4438,10 @@ Intune 現在可使用 [TeamViewer](https://www.teamviewer.com) 軟體 (另行�
 市集中有一些 Android 應用程式支援受管理設定選項，可以讓 IT 系統管理員控制應用程式在工作設定檔中執行的方式。 您現在可以使用 Intune 來檢視應用程式支援的設定，並使用設定設計工具或 JSON 編輯器從 Azure 入口網站進行設定。 如需詳細資訊，請參閱[使用 Android for Work 的應用程式設定](../apps/app-configuration-policies-use-android.md)。
 
 #### <a name="new-app-configuration-capability-for-mam-without-enrollment---677969---"></a>不需註冊的新 MAM 應用程式設定功能<!-- 677969 -->
-您現在可以在沒有註冊通道的情況下，透過 MAM 建立應用程式設定原則。 此功能相當於行動裝置管理 (MDM) 應用程式設定中的應用程式設定原則。 如需使用 MAM 而不註冊的應用程式設定範例，請參閱[搭配 Microsoft Intune 使用 Managed Browser 原則管理網際網路存取](../apps/app-configuration-managed-browser.md)。
+您現在可以在沒有註冊通道的情況下，透過 MAM 建立應用程式設定原則。 此功能相當於行動裝置管理 (MDM) 應用程式設定中的應用程式設定原則。 如需使用 MAM 而不註冊的應用程式設定範例，請參閱[搭配 Microsoft Intune 使用 Managed Browser 原則管理網際網路存取](../apps/manage-microsoft-edge.md)。
 
 #### <a name="configure-allowed-and-blocked-url-lists-for-the-managed-browser---682960---"></a>為 Managed Browser 設定允許和封鎖的 URL 清單<!-- 682960 -->
-您現在可以在 Azure 入口網站中使用應用程式組態設定，為 Intune Managed Browser 設定允許和封鎖的網域及 URL 清單。 不論 Intune Managed Browser 是用於受管理或未受管理的裝置上，都適用這些設定。 如需詳細資訊，請參閱[搭配 Microsoft Intune 使用 Managed Browser 原則管理網際網路存取](../apps/app-configuration-managed-browser.md)。
+您現在可以在 Azure 入口網站中使用應用程式組態設定，為 Intune Managed Browser 設定允許和封鎖的網域及 URL 清單。 不論 Intune Managed Browser 是用於受管理或未受管理的裝置上，都適用這些設定。 如需詳細資訊，請參閱[搭配 Microsoft Intune 使用 Managed Browser 原則管理網際網路存取](../apps/manage-microsoft-edge.md)。
 
 #### <a name="app-protection-policy-helpdesk-view---1069473---"></a>應用程式保護原則技術支援中心檢視<!-- 1069473 -->
 IT 技術支援使用者現在可以在 [疑難排解] 刀鋒視窗中查看使用者授權狀態，和指派給使用者的應用程式保護原則應用程式的狀態。 如需詳細資訊，請參閱[疑難排解](./help-desk-operators.md)。

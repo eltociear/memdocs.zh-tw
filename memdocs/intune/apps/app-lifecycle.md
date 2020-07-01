@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8605b33d8fb83fb4537182127860f0cbb098e620
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: 890a42e3668b00a59f12498ab4f2ba3769225a96
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428608"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502692"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Microsoft Intune 中的應用程式生命週期概觀
 
@@ -43,7 +43,7 @@ ms.locfileid: "84428608"
 隨著應用程式生命週期，會定期發佈新版本的應用程式。 Intune 提供工具，可輕鬆地[更新您已部署為新版本的應用程式](apps-add.md)。 此外，您可以設定某些應用程式的額外功能，例如︰
 
 - [iOS/iPadOS 應用程式設定原則](app-configuration-policies-use-ios.md)提供執行應用程式時所使用相容 iOS/iPadOS 應用程式的設定。 例如，應用程式可能需要特定品牌設定或它必須連線之伺服器的名稱。
-- [受管理的瀏覽器原則](app-configuration-managed-browser.md)可協助您設定 [Microsoft Edge](apps-supported-intune-apps.md#microsoft-apps) 的設定，其會取代預設的裝置瀏覽器，並可讓您限制使用者可以瀏覽的網站。
+- [受管理的瀏覽器原則](manage-microsoft-edge.md)可協助您設定 [Microsoft Edge](apps-supported-intune-apps.md#microsoft-apps) 的設定，其會取代預設的裝置瀏覽器，並可讓您限制使用者可以瀏覽的網站。
 
 ## <a name="protect"></a>保護
 

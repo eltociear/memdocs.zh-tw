@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68e337f6315fc6d198e27c494b7689bb1cb9bc97
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 28401c314d70f1d810fe12e815d8558afc8aab89
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989622"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502590"
 ---
 # <a name="app-protection-policies-overview"></a>應用程式保護原則概觀
 
@@ -312,7 +312,7 @@ MAM 選擇性抹除僅會從應用程式移除公司應用程式資料。 該要
 Intune 應用程式防護會取決於使用者的身分識別，以在應用程式與 [Intune SDK](../developer/app-sdk.md) 之間保持一致。 保證一致的唯一方式是透過新式驗證。 有些案例中，應用程式可搭配內部部署組態運作，但是不保證一定運作。
 
 **從受控應用程式開啟網頁連結的安全方式**<br>
-IT 系統管理員可以針對 [Microsoft Edge](app-configuration-managed-browser.md)部署與設定應用程式保護原則，這是可利用 Intune 輕鬆管理的網頁瀏覽器。 針對 Intune 受控應用程式，IT 系統管理員可以要求其中的所有網頁連結都必須使用 Managed Browser 應用程式來開啟。
+IT 系統管理員可以針對 [Microsoft Edge](manage-microsoft-edge.md)部署與設定應用程式保護原則，這是可利用 Intune 輕鬆管理的網頁瀏覽器。 針對 Intune 受控應用程式，IT 系統管理員可以要求其中的所有網頁連結都必須使用 Managed Browser 應用程式來開啟。
 
 ## <a name="app-protection-experience-for-ios-devices"></a>iOS 裝置的應用程式防護體驗
 
