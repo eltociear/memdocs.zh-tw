@@ -10,16 +10,16 @@ ms.assetid: 600086d5-bd9e-4ac1-8ace-c7a62de80dc2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 61296321251be45cfa0449a3e4f21ba79a024753
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 78e89307e66107b259d818a84fa4dbca878a843c
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706976"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590893"
 ---
 # <a name="use-the-configuration-manager-client-software-for-extended-interoperability-with-future-versions-of-a-current-branch-site"></a>使用適用於延伸互通性的 Configuration Manager 用戶端軟體來搭配未來的「最新分支」站台版本使用
 
-適用於：  Configuration Manager (最新分支)  
+適用於：Configuration Manager (最新分支)  
 
 商務需求可能不允許您定期更新某些裝置上的 Configuration Manager 用戶端。 例如，您需要遵循變更管理原則，或裝置為關鍵任務所需。 為配合這些需求，您可以安裝長期使用的新用戶端，稱為延伸互通性用戶端 (EIC)。 請將 EIC 只用於無法頻繁更新的特定裝置，例如資訊站或收銀機裝置。 至於您大部分的用戶端，則繼續使用[自動用戶端升級](../clients/manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate)。
 
@@ -48,8 +48,10 @@ ms.locfileid: "81706976"
 
 1. 從 Configuration Manager 更新安裝媒體的 `\SMSSETUP\Client` 資料夾取得支援的 EIC 版本。 確定您已複製整個資料夾的內容。  
 
-    > [!TIP]  
-    > 若要在[大量授權服務中心](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC) 中尋找 Configuration Manager 媒體，請前往 [下載和金鑰]  索引標籤，並搜尋 `System Center Config`，然後選取 [System Center Configuration Manager (最新分支)]  。
+<!--
+    > [!TIP]
+    > To find Configuration Manager media in the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC), go to the **Downloads and Keys** tab, and search for **Microsoft Endpoint Configmgr (current branch)**.
+-->
 
 1. 在那些裝置上手動安裝 EIC。 如需詳細資訊，請參閱[手動安裝用戶端](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual)。  
 

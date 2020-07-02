@@ -10,12 +10,12 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5bdfd566682156e39e1dbed7c55af85b20a78671
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 0a7ee54e3bfa4a4231d0d57b48caa49cf9869b76
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906671"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591097"
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
@@ -80,7 +80,7 @@ Endpoint Protection 會管理 Configuration Manager 階層中用戶端電腦的�
 
 ## <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender 進階威脅防護
 
-Endpoint Protection 可協助管理及監視 Microsoft Defender 進階威脅防護 (ATP)，這先前稱為 Windows Defender ATP。 Microsoft Defender ATP 服務可協助企業偵測、調查和回應其公司網路的進階攻擊。 如需詳細資訊，請參閱 [Microsoft Defender 進階威脅防護](windows-defender-advanced-threat-protection.md)。
+Endpoint Protection 可協助管理及監視 Microsoft Defender 進階威脅防護 (ATP)，這先前稱為 Windows Defender ATP。 Microsoft Defender ATP 服務可協助企業偵測、調查和回應其公司網路的進階攻擊。 如需詳細資訊，請參閱 [Microsoft Defender 進階威脅防護](defender-advanced-threat-protection.md)。
 
 ## <a name="endpoint-protection-workflow"></a>Endpoint Protection 工作流程  
  下圖可協助您了解在 Configuration Manager 階層中實作 Endpoint Protection 的工作流程。  

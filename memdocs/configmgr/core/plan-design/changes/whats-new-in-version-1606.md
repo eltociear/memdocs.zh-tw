@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4298a6a66d60d79d05f8b5cdc9ff8caa0e7f4426
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 070c616ed8411bcd90b2d3edb12b04edd57241e1
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074022"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590468"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Configuration Manager 1606 版中的新功能
 
@@ -198,7 +198,7 @@ Configuration Manager 可以透過兩種方式協助您管理啟用鎖定：
 
 Endpoint Protection 可協助管理及監視 Microsoft Defender 進階威脅防護 (ATP)。 Microsoft Defender ATP 是新的服務，將可協助企業偵測、調查和回應其網路上的進階攻擊。 Configuration Manager 原則可協助您登入及監視執行 Windows 10 1607 版 (組建 14328) 或更新版本的受管理電腦。
 
-如需詳細資訊，請參閱 [Microsoft Defender 進階威脅防護](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md)。
+如需詳細資訊，請參閱 [Microsoft Defender 進階威脅防護](../../../protect/deploy-use/defender-advanced-threat-protection.md)。
 
 ### <a name="device-categories"></a>裝置類別
 您可以建立裝置類別，以在使用 Configuration Manager 與 Microsoft Intune 時自動將裝置放入裝置集合。 使用者向 Intune 註冊裝置時，必須選擇裝置類別。 您也可以從 Configuration Manager 主控台中變更裝置類別。

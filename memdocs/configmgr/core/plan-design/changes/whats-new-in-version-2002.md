@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4100f8747418bff769a7830fa63383ce545895ce
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: 58819d764f69ab7e1cc928e14189e01470deb73b
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721851"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590434"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager 最新分支 2002 版的新功能
 
@@ -325,9 +325,9 @@ Configuration Manager 現在會偵測服務堆疊更新 (SSU) 是否為多個更
 ## <a name="protection"></a><a name="bkmk_protect"></a>保護
 
 ### <a name="expand-microsoft-defender-advanced-threat-protection-atp-onboarding"></a>擴展 Microsoft Defender 進階威脅防護 (ATP) 上線
-
+ 
 <!-- 5229962 -->
-Configuration Manager 已擴展將裝置上線至 Microsoft Defender ATP 的支援。 如需詳細資訊，請參閱 [Microsoft Defender 進階威脅防護](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices)。
+Configuration Manager 已擴展將裝置上線至 Microsoft Defender ATP 的支援。 如需詳細資訊，請參閱 [Microsoft Defender 進階威脅防護](../../../protect/deploy-use/defender-advanced-threat-protection.md)。
 
 ### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> 透過 Microsoft 端點管理員系統管理中心將 Configuration Manager 用戶端上線至 Microsoft Defender ATP
 <!--5691658-->
