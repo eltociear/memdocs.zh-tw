@@ -10,12 +10,12 @@ ms.assetid: e3e3c97f-5945-49ab-a622-9f6fe6b9737e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b97f9bb6be00129e0b88dc3943af1de166a801d4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 91b938b5ab64616a35773406cd18b54de80b40e7
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590402"
 ---
 # <a name="windows-autopilot-with-co-management"></a>搭配共同管理的 Windows Autopilot
 
@@ -77,9 +77,9 @@ Windows Autopilot 使用已預先安裝在裝置上的 Windows 10 OEM 最佳化�
 
 ## <a name="case-study"></a>案例研究
 
-德國物流與鐵路貨運公司 DB Shenker 使用 Autopilot 來提升員工產能，並使其 IT 團隊免於處理日常的支援工作。 Shenker 已經放棄傳統的映像處理，並以透過雲端進行佈建來取代。 他們現在使用 Azure AD Join 與 Intune 來設定新裝置並讓它開始執行。 
+德國物流與鐵路貨運公司 DB Schenker 使用 Autopilot 來提升員工生產力，並使其 IT 小組免於處理日常的支援工作。 DB Schenker 已將傳統的映像處理技術取代為透過雲端進行佈建。 他們現在使用 Azure AD Join 與 Intune 來設定新裝置並讓它開始執行。 
 
-Shenker 現在使用 Windows Autopilot，而不是讓他們的遠端員工浪費時間前往有 IT 服務的位置。 他們將員工的硬體直接從製造商運送到當地的現場辦公室。 員工將新裝置連線到網際網路，然後使用 Azure AD 認證登入。 然後，裝置將連線到 Schenker IT 部門指派給使用者的個別設定檔的應用程式與服務。
+DB Schenker 現在使用 Windows Autopilot，讓遠端員工不需浪費時間前往提供 IT 服務的位置。 他們將員工的硬體直接從製造商運送到當地的現場辦公室。 員工將新裝置連線到網際網路，然後使用 Azure AD 認證登入。 裝置即可連線到 DB Schenker IT 部門指派給個別使用者設定檔的應用程式與服務。
 
 如需詳細資訊，請參閱[全球物流公司集中 IT，將員工與現代數位工作場所聯繫在一起](https://customers.microsoft.com/story/db-schenker-travel-transportation-windows-10) \(英文\)。
 

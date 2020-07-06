@@ -2,7 +2,7 @@
 title: 更新與服務
 titleSuffix: Configuration Manager
 description: 了解稱為更新與服務的主控台內服務方法，可讓您輕鬆尋找並安裝建議的更新。
-ms.date: 04/15/2020
+ms.date: 06/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ffee9d851f00bcac5ed7ba562bdc9db8e0fa2767
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4f92d95b4e1cc814db72b45cfb92cb989b7767c8
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82903948"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591012"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Configuration Manager 的更新與服務
 
@@ -24,7 +24,7 @@ ms.locfileid: "82903948"
 Configuration Manager 使用稱為**更新與服務**的主控台內服務方法。 此主控台內方法可針對您的 Configuration Manager 基礎結構，輕鬆地尋找並安裝建議的更新。 主控台內的服務會以頻外更新的方式進行增補，例如 Hotfix。 這些頻外更新適用於需要解決其環境特有問題的客戶。  
 
 > [!TIP]  
-> 「升級」  、「更新」  及「安裝」  等詞彙是用來描述 Configuration Manager 中的三種不同概念。 如需如何使用每個詞彙的詳細資訊，請參閱[關於升級、更新及安裝](../../understand/upgrade-update-install.md)。  
+> 「升級」、「更新」及「安裝」等詞彙是用來描述 Configuration Manager 中的三種不同概念。 如需如何使用每個詞彙的詳細資訊，請參閱[關於升級、更新及安裝](../../understand/upgrade-update-install.md)。  
 
 ## <a name="baseline-and-update-versions"></a><a name="bkmk_Baselines"></a> 基準和更新版本  
 
@@ -73,11 +73,11 @@ Configuration Manager 使用稱為**更新與服務**的主控台內服務方法
 > [!Note]  
 > <sup>**附註 1：** </sup>基準媒體會當作[大量授權服務中心](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC) 的下列版本一部分來提供：
 >
-> - System Center Config Mgr (最新分支)
-> - System Center 2016 Datacenter
-> - System Center 2016 Standard  
+> - Microsoft Endpoint Configmgr (最新分支)
+> - System Center Datacenter
+> - System Center Standard  
 >
-> 例如，在 VLSC 中搜尋 `System Center Config Mgr (current branch)`。 在檔案清單中尋找基準媒體，然後下載該版本。  
+> 例如，在 VLSC 中搜尋 `Microsoft Endpoint Configmgr (current branch)`。 在檔案清單中尋找基準媒體，然後下載該版本。  
 
 #### <a name="historical-versions"></a>歷程記錄版本
 
@@ -98,7 +98,7 @@ Configuration Manager 使用稱為**更新與服務**的主控台內服務方法
 
 #### <a name="how-to-check-the-version"></a>如何檢查版本
 
-若要檢查 Configuration Manager 站台的版本，請在主控台中，移至主控台左上角的 [關於 Configuration Manager]  。 此對話方塊會顯示站台和主控台版本。  
+若要檢查 Configuration Manager 站台的版本，請在主控台中，移至主控台左上角的 [關於 Configuration Manager]。 此對話方塊會顯示站台和主控台版本。  
 
 > [!Note]  
 > 主控台版本與站台版本稍有不同。 主控台的次要版本會對應至 Configuration Manager 發行版本。 例如，在 Configuration Manager 1802 版中，初始站台版本是 5.0.8634.1000，而初始主控台版本為 5.**1802**.1082.1700。 組建 (1082) 和修訂 (1700) 編號可能會隨未來的 Hotfix 而有所變更。

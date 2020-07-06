@@ -2,7 +2,7 @@
 title: 針對電腦分析進行疑難排解
 titleSuffix: Configuration Manager
 description: 可協助您針對電腦分析問題進行疑難排解的技術詳細資料。
-ms.date: 04/01/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: cfd329b7edb695c1e7316323555bfc18a2fd479e
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: 68506ba11e356a1e9f14d58880a80bdf3cfcb5f4
+ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85828970"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>針對電腦分析進行疑難排解
 
@@ -205,7 +205,7 @@ ms.locfileid: "84428579"
 
 - **診斷資料**是指從用戶端裝置上傳到 Microsoft 的系統中繼資料。 此資料會驅動電腦分析。 其中包含裝置清查之類的屬性，以及安全性和功能更新狀態。
 
-根據預設，電腦分析入口網站中的所有資料都會每天自動重新整理。 此重新整理包括診斷資料的變更，以及您對設定所做的任何變更 (系統管理員資料)。 重新整理後的資料應該會在每天上午 08:00 UTC 於您的電腦分析入口網站中顯示。
+根據預設，電腦分析入口網站中的所有資料都會每天自動重新整理。 此重新整理包括 2 天前診斷資料的變更，以及對設定所做的任何變更 (系統管理員資料)。 重新整理後的資料應該會在每天上午 08:00 UTC 於您的電腦分析入口網站中顯示。
 
 當您對系統管理員資料進行變更時，可能會在工作區中觸發系統管理員資料的隨選重新整理。 從電腦分析入口網站中的任何頁面，開啟資料流通飛出視窗：
 
@@ -221,3 +221,39 @@ ms.locfileid: "84428579"
 
 > [!IMPORTANT]
 > **檢視最近的資料**的 [電腦分析] 選項已被取代。 此動作將在未來的 [電腦分析] 服務版本中移除。 如需詳細資訊，請參閱[已淘汰的功能](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)。<!--7080949-->  
+
+## <a name="service-notifications"></a>服務通知
+
+<!-- 4982509 -->
+
+電腦分析入口網站會向系統管理員顯示通知橫幅。 這些通知可供 Microsoft 與您溝通重要的事件和問題。 下列各節將詳述您可能會看到的通知。
+
+### <a name="see-whats-new-this-month-in-desktop-analytics"></a>查看這個月的電腦分析新功能
+
+這個資訊通知可讓您注意到服務的變更。 如需詳細資訊，請參閱[電腦分析的新功能](whats-new.md) (`https://aka.ms/danews`)。
+
+### <a name="there-are-new-prerequisites-to-continue-using-desktop-analytics-review-the-new-requirements"></a>沒有新的必要條件。 若要繼續使用電腦分析，請檢閱新的需求
+
+這個資訊通知可讓您注意到必要條件的變更。 例如，新的網際網路端點或軟體更新。 如需詳細資訊，請參閱[必要條件](overview.md#prerequisites) (`https://aka.ms/daprereqs`)。
+
+### <a name="were-investigating-an-issue-that-impacts-desktop-analytics"></a>我們正在調查影響電腦分析的問題
+
+這個警告通知表示 Microsoft 發現到影響電腦分析服務的問題。 問題通常是與快照集的產生有關。 當看到這個通知時，Microsoft 正在調查問題以判斷影響範圍和原因。 您不需要連絡 Microsoft 支援服務。 如需詳細資訊，請參閱[資料流程](privacy.md#data-flow)。
+
+### <a name="were-investigating-an-issue-with-data-latency-if-you-enrolled-new-devices-or-changed-any-assets-in-the-last-24-hours-they-may-not-appear-right-away"></a>我們正在調查資料延遲的問題。 如果在過去 24 小時內註冊了新的裝置或變更了任何資產，這些裝置或資產可能不會立即顯示
+
+這個警告通知表示 Microsoft 發現到影響電腦分析服務的問題。 Microsoft 會持續監視服務，以確認所有元件都在正確的時間更新快照集。 在此監視期間，其中一個元件未如預期般完成。 當看到這個通知時，Microsoft 正在調查問題。 您不需要連絡 Microsoft 支援服務。 如需詳細資訊，請參閱[資料流程](privacy.md#data-flow)。
+
+如果最近[註冊裝置](enroll-devices.md)或變更[資產](about-assets.md)，請等候 Microsoft 解決問題。 您不需要重複任何動作。
+
+### <a name="weve-resolved-a-temporary-issue-with-data-latency-daily-refresh-of-portal-data-is-delayed"></a>我們解決了資料延遲的暫時性問題。 入口網站資料的每日重新整理發生延遲
+
+這個通知會告知發生資料延遲的問題。 服務仍持續處理快照集，但資料的重新整理發生延遲。 如需詳細資訊，請參閱[資料延遲](#data-latency)。
+
+### <a name="weve-resolved-an-issue-with-data-latency-if-you-enrolled-new-devices-or-changed-any-assets-in-the-last-24-hours-they-may-not-appear-right-away"></a>我們解決了資料延遲的問題。 如果在過去 24 小時內註冊了新的裝置或變更了任何資產，這些裝置或資產可能不會立即顯示
+
+這個通知會告知有關 Microsoft 已解決先前回報的資料延遲問題。 您可能會看到明天的快照集有過時資料。 如果在過去 24 小時內[註冊裝置](enroll-devices.md)或變更了任何裝置設定，入口網站可能不會立即顯示這些內容。 您可繼續使用電腦分析來分類[資產](about-assets.md)，並準備[部署計劃](about-deployment-plans.md)。 這些動作可使用上一個快照集中的資料。
+
+### <a name="weve-resolved-an-issue-with-desktop-analytics-daily-refresh-of-the-portal-data-is-on-track"></a>我們解決了電腦分析的問題。 入口網站資料的每日重新整理已按照進度執行
+
+這個通知會告知有關 Microsoft 已找出在處理期間停止運作的快照集元件。 Microsoft 已重新啟動元件，因此需要一些時間來處理快照集。 Microsoft 會持續監視服務，以確認所有元件都在正確的時間更新快照集。

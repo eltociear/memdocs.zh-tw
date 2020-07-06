@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
-ms.openlocfilehash: bd846b0155a0baddad76d6027ffbd239d7dbf26f
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: ecc91168cc90af58c40903ea3d288eeaa82be7a0
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721885"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502233"
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>雲端管理閘道的相關常見問題集
 
@@ -87,6 +87,16 @@ ms.locfileid: "84721885"
 如果您選擇部署 CMG 並使用 PKI 憑證在啟用 CMG 的管理點上進行 HTTPS 通訊，請於管理點屬性上選取選項以**允許僅限網際網路的用戶端**。 這項設定能確保內部用戶端在您的環境中繼續使用 HTTP 管理點。
 
 如果您使用增強式 HTTP，則不需要進行此設定。 當直接對啟用 CMG 的管理點通訊時，用戶端會繼續使用 HTTP。 如需詳細資訊，請參閱[Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md) (增強 HTTP)。
+
+### <a name="what-are-the-differences-with-client-authentication-between-azure-ad-and-certificates"></a>Azure AD 和憑證之間的用戶端驗證有何差異？
+<!-- MEMDocs#277 -->
+您可使用 Azure AD 或[用戶端驗證憑證](certificates-for-cloud-management-gateway.md#bkmk_clientauth)，讓裝置向 CMG 服務進行驗證。
+
+如果使用加入 Active Directory 網域的身分識別來管理傳統 Windows 用戶端，則這些 Windows 用戶端需要使用 PKI 憑證來保護通道的安全。 這些用戶端包括 Windows 8.1 與 Windows 10。 您可使用所有 CMG 支援的功能，但軟體發佈僅限用於裝置。 先安裝 Configuration Manager 用戶端，然後再讓裝置漫遊網際網路；若為 2002 版或更新版本，則使用權杖驗證。
+
+您也可以使用新式身分識別來管理 Windows 10 用戶端，不論是透過 Azure AD 加入的混合式或單純雲端網域。 用戶端會使用 Azure AD 進行驗證，而不是使用 PKI 憑證。 相較於複雜的 PKI 系統，使用 Azure AD 會更容易設定和維護。 您可執行所有相同的管理活動，並將軟體發佈給使用者。 Azure AD 也可供使用其他方法以在遠端裝置上安裝用戶端。
+
+Microsoft 建議將裝置加入至 Azure AD。 以網際網路為基礎的裝置可以使用 Azure AD 向 Configuration Manager 進行驗證。 無論該裝置是在網際網路上，或與內部網路連線，Azure AD 都會同時啟用裝置與使用者案例。 如需詳細資訊，請參閱[使用 Azure AD 身分識別安裝和註冊用戶端](../../deploy/deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity)。
 
 ## <a name="next-steps"></a>後續步驟
 

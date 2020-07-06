@@ -2,7 +2,7 @@
 title: 網際網路存取需求
 titleSuffix: Configuration Manager
 description: 了解允許用於 Configuration Manager 功能之完整功能的網際網路端點。
-ms.date: 06/12/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fb965ec6547ff1c06586464780b6db224b943000
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: 986b8d83c705be84b04a89c99d9559471c6345c4
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740758"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85819945"
 ---
 # <a name="internet-access-requirements"></a>網際網路存取需求
 
@@ -230,6 +230,8 @@ CMG 連接點站台系統支援使用 Web Proxy。 如需針對 Proxy 設定此�
 
 - `config.office.com` - 用來建立 Microsoft 365 Apps 企業版部署的自訂設定
 
+- `contentstorage.osi.office.net` - 用來支援評估 Office 增益集的整備程度<!-- MEMDocs#410 -->
+
 ## <a name="configuration-manager-console"></a>Configuration Manager 主控台
 
 具有 Configuration Manager 主控台的電腦需要存取下列網際網路端點以取得特定功能：
@@ -267,6 +269,14 @@ CMG 連接點站台系統支援使用 Web Proxy。 如需針對 Proxy 設定此�
 ## <a name="desktop-analytics"></a>電腦分析
 
 如需適用於電腦分析雲端服務所需端點的詳細資訊，請參閱[啟用資料共用](../../../desktop-analytics/enable-data-sharing.md#endpoints)。
+
+## <a name="tenant-attach"></a>租用戶附加
+
+如需租用戶附加功能的必要端點詳細資訊，請參閱[啟用租用戶附加](../../../tenant-attach/device-sync-actions.md#internet-endpoints)。
+
+## <a name="endpoint-analytics"></a>端點分析
+
+如需端點分析的必要端點詳細資訊，請參閱[端點分析 Proxy 設定](../../../../analytics/troubleshoot.md#bkmk_endpoints)。
 
 ## <a name="microsoft-public-ip-addresses"></a>Microsoft 公用 IP 位址
 

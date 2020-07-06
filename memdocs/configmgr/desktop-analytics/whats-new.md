@@ -2,7 +2,7 @@
 title: 電腦分析的新功能
 titleSuffix: Configuration Manager
 description: 電腦分析雲端服務最新每月版本中的新功能摘要。
-ms.date: 06/04/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 5265ee88cbe6dc119d6d14dadd3fadad6a52b253
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: ec554d755b92d1c710def580a34fdbbddc7b4d45
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454948"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85819964"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>電腦分析的新功能
 
@@ -27,6 +27,28 @@ ms.locfileid: "84454948"
 
 若要在此頁面更新時收到通知，請複製下列 URL 並貼到您的 RSS 摘要讀取程式：`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="july-2020"></a>2020 年 7 月
+
+### <a name="windows-10-version-2004-now-available-in-desktop-analytics"></a>電腦分析現已提供 Windows 10 2004 版
+
+<!-- 7370207 -->
+
+現在，當在電腦分析入口網站中監視安全性和功能更新時，將可看到 Windows 10 2004 版。 當建立部署計劃時，可以選取 Windows 10 2004 版作為目標版本。
+
+### <a name="improved-support-for-viewing-the-portal-from-any-device"></a>加強從任何裝置檢視入口網站的支援
+
+<!-- 6270240 -->
+
+您現在可透過各種裝置類型，在 Microsoft Endpoint Manager 系統管理中心中查看電腦分析入口網站。 電腦分析入口網站現在符合 Web 內容無障礙指導方針 (WCAG) 2.1，最低適用於 320 x 256 像素的顯示器解析度。 例如，下列是 Apple iPhone 8 的入口網站影像：
+
+:::image type="content" source="media/dashboard-iphone8.png" alt-text="iPhone 8 上的電腦分析入口網站":::
+
+### <a name="notifications-for-service-impacting-events"></a>服務影響事件的通知
+
+<!-- 4982509 -->
+
+電腦分析入口網站現在會顯示通知橫幅。 這些通知可供 Microsoft 與您溝通重要的事件和問題。 例如，服務的已知問題、資料延遲或新的必要條件。 如需詳細資訊，請參閱[服務通知](troubleshooting.md#service-notifications)。
 
 ## <a name="june-2020"></a>2020 年 6 月
 

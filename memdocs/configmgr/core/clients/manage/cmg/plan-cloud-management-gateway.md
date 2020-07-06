@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 136e11f97849e5fd8a27d9f83ea1bd44791c492e
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 2d6165678331811f4b04e8b1f540f3dcbb7f015d
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715640"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502250"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中進行雲端管理閘道規劃
 
@@ -227,15 +227,16 @@ Configuration Manager 適用於**雲端管理**的 Azure 服務支援多個租�
 | 硬體與軟體清查     | ![支援](media/green_check.png) |
 | 用戶端狀態和通知     | ![支援](media/green_check.png) |
 | 執行指令碼     | ![支援](media/green_check.png) |
+| CMPivot     | ![支援](media/green_check.png) |
 | 相容性設定     | ![支援](media/green_check.png) |
-| 用戶端安裝<br>(搭配 Azure AD 整合)     | ![支援](media/green_check.png) |
+| 用戶端安裝<br>(使用 [Azure AD 整合](../../deploy/deploy-clients-cmg-azure.md)) | ![支援](media/green_check.png) |
+| 用戶端安裝<br>(使用[權杖驗證 ](../../deploy/deploy-clients-cmg-token.md)) | ![支援](media/green_check.png) (2002) |
 | 軟體發佈 (以裝置為目標)     | ![支援](media/green_check.png) |
 | 軟體發佈 (以使用者為目標，必要)<br>(搭配 Azure AD 整合)     | ![支援](media/green_check.png) |
 | 軟體發佈 (以使用者為目標，可用)<br>([所有需求](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![支援](media/green_check.png) |
-| Windows 10 就地升級工作順序      | ![支援](media/green_check.png) |
-| 不使用開機映像且使用以下選項部署的工作順序：**啟動工作順序之前下載所有內容到本機**      | ![支援](media/green_check.png) |
-| 不使用開機映像的工作順序  | ![支援](media/green_check.png) (1910)|
-| CMPivot     | ![支援](media/green_check.png) |
+| Windows 10 [就地升級工作順序](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) | ![支援](media/green_check.png) |
+| 不使用開機映像且使用以下選項部署的工作順序：**啟動工作順序之前下載所有內容到本機** | ![支援](media/green_check.png) |
+| 不使用開機映像與[任何一種下載選項](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg)的工作順序： | ![支援](media/green_check.png) (1910)|
 | 所有其他工作順序案例     | ![不支援](media/Red_X.png) |
 | 用戶端推入     | ![不支援](media/Red_X.png) |
 | 自動站台指派     | ![不支援](media/Red_X.png) |

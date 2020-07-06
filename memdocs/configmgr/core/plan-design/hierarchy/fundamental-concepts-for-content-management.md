@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cb91e62c4ffce37068b2de5e125865e28ff8c53b
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: ffd6487297bb682ef9bda7c5bf5ee9cb3beede15
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878944"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590451"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager 中的內容管理基本概念
 
@@ -147,7 +147,7 @@ Configuration Manager 支援數個選項來管理相同網路上對等裝置之�
 <!-- 1324696 -->
 您可以使用 Configuration Manager 界限群組，來定義和規範在您的公司網路上以及到遠端辦公室的內容發佈。 [Windows 傳遞最佳化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)是一種雲端式點對點技術，可在 Windows 10 裝置之間共用內容。 請設定讓「傳遞最佳化」在於同儕節點之間共用內容時，使用您的界限群組。 用戶端設定會套用界限群組識別碼作為用戶端上的「傳遞最佳化」群組識別碼。 當用戶端與「傳遞最佳化」雲端服務進行通訊時，它會使用此識別碼來尋找含有內容的同儕節點。 如需詳細資訊，請參閱[傳遞最佳化](../../clients/deploy/about-client-settings.md#delivery-optimization)用戶端設定。
 
-傳遞最佳化是針對適用於 Windows 10 品質更新的快速安裝檔案，將 Windows 10 更新傳遞最佳化的建議技術。 從 Configuration Manager 1910 版開始，若要使用「傳遞最佳化」的點對點功能，必須要能透過網際網路存取「傳遞最佳化」雲端服務。 如需所必要網際網路端點的資訊，請參閱[傳遞最佳化的常見問題集](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)。 最佳化可用於所有 Windows 更新。 如需詳細資訊，請參閱[將 Windows 10 更新傳遞最佳化](../../../sum/deploy-use/optimize-windows-10-update-delivery.md)。
+傳遞最佳化是針對適用於 Windows 10 品質更新的快速安裝檔案，將 Windows 10 更新傳遞最佳化的建議技術。 從 Configuration Manager 1910 版開始，必須要能透過網際網路存取「傳遞最佳化」雲端服務，才能使用其中的點對點功能。 如需所必要網際網路端點的資訊，請參閱[傳遞最佳化的常見問題集](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)。 最佳化可用於所有 Windows 更新。 如需詳細資訊，請參閱[將 Windows 10 更新傳遞最佳化](../../../sum/deploy-use/optimize-windows-10-update-delivery.md)。
 
 
 ## <a name="microsoft-connected-cache"></a>Microsoft 連線快取
