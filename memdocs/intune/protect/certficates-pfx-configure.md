@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2694897e0a9e0ebf0744615e65d76f29416811d0
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 609f7209d79acd944d141930f2287b5572a51c89
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990394"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332832"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>透過 Intune 設定並使用 PKCS 憑證
 
@@ -56,8 +56,8 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
 - **根憑證**：  
   從您的企業 CA 匯出的根憑證複本。
 
-- **Intune 憑證連接器** (亦稱為「NDES 憑證連接器」  )：  
-  在 Intune 入口網站中，移至 [裝置設定]   > [憑證連接器]   > [新增]  ，並遵循「安裝 PKCS #12 連接器的步驟」  。 使用入口網站中的下載連結，開始下載憑證連接器安裝程式 **NDESConnectorSetup.exe**。  
+- **Intune 憑證連接器** (亦稱為「NDES 憑證連接器」)：  
+  在 Intune 入口網站中，移至 [裝置設定] > [憑證連接器] > [新增]，並遵循「安裝 PKCS #12 連接器的步驟」。 使用入口網站中的下載連結，開始下載憑證連接器安裝程式 **NDESConnectorSetup.exe**。  
 
   Intune 支援每個租用戶最多 100 此連接器的個執行個體。 連接器的每個執行個體都必須位於個別的 Windows 伺服器上。 您可以在與 Microsoft Intune 的 PFX 憑證連接器執行個體相同的伺服器上，安裝此連接器的執行個體。 當您使用多個連接器時，連接器基礎結構支援高可用性與負載平衡，因為任何可用的連接器執行個體都可以處理您的 PKCS 憑證要求。 
 
@@ -66,7 +66,7 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
   Microsoft Intune 憑證連接器也支援聯邦資訊處理標準 (FIPS) 模式。 FIPS 並非必要，但啟用時可發出及撤銷憑證。
 
 - **適用於 Microsoft Intune 的 PFX 憑證連接器**：  
-  如果您打算使用 S/MIME 電子郵件加密，請使用 Intune 入口網站來下載支援匯入 PFX 憑證的 *PFX 憑證連接器*。  移至 [裝置設定]   > [憑證連接器]   > [新增]  ，並遵循「安裝匯入 PFX 憑證連接器的步驟」  。 使用入口網站中的下載連結，開始下載安裝程式 **PfxCertificateConnectorBootstrapper.exe**。
+  如果您打算使用 S/MIME 電子郵件加密，請使用 Intune 入口網站來下載支援匯入 PFX 憑證的 *PFX 憑證連接器*。  移至 [裝置設定] > [憑證連接器] > [新增]，並遵循「安裝匯入 PFX 憑證連接器的步驟」。 使用入口網站中的下載連結，開始下載安裝程式 **PfxCertificateConnectorBootstrapper.exe**。
 
   每個 Intune 租用戶都支援此連接器的單一執行個體。 您可在相同的伺服器上安裝此連接器，作為 Microsoft Intune 憑證連接器的執行個體。
 
@@ -95,7 +95,7 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
 **使用命令列**：  
 1. 使用系統管理員帳戶登入根憑證授權單位伺服器。
  
-2. 移至 [開始]   > [執行]  ，然後輸入 **Cmd** 來開啟命令提示字元。 
+2. 移至 [開始] > [執行]，然後輸入 **Cmd** 來開啟命令提示字元。 
     
 3. 指定 **certutil -ca.cert ca_name.cer**，將根憑證匯出為名為 *ca_name.cer* 的檔案。
 
@@ -104,38 +104,38 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
 ## <a name="configure-certificate-templates-on-the-ca"></a>設定 CA 上的憑證範本
 
 1. 使用具有系統管理權限的帳戶登入您的企業 CA。
-2. 開啟 [憑證授權單位]  主控台、以滑鼠右鍵按一下 [憑證範本]  ，然後選取 [管理]  。
-3. 找出 [使用者]  憑證範本、以滑鼠右鍵按一下它，然後選擇 [複製範本]  ，以開啟 [新範本的內容]  。
+2. 開啟 [憑證授權單位] 主控台、以滑鼠右鍵按一下 [憑證範本]，然後選取 [管理]。
+3. 找出 [使用者] 憑證範本、以滑鼠右鍵按一下它，然後選擇 [複製範本]，以開啟 [新範本的內容]。
 
     > [!NOTE]
-    > 在 S/MIME 電子郵件簽署和加密情況下，許多系統管理員使用個別的憑證進行簽署和加密。 如果您要使用 Microsoft Active Directory 憑證服務，則可以將 [僅限 Exchange 簽章]  範本用於 S/MIME 電子郵件簽署憑證，並將 [Exchange 使用者]  範本用於 S/MIME 加密憑證。  如果您要使用協力廠商憑證授權單位，建議您檢閱其設定簽署和加密範本的指引。
+    > 在 S/MIME 電子郵件簽署和加密情況下，許多系統管理員使用個別的憑證進行簽署和加密。 如果您要使用 Microsoft Active Directory 憑證服務，則可以將 [僅限 Exchange 簽章] 範本用於 S/MIME 電子郵件簽署憑證，並將 [Exchange 使用者] 範本用於 S/MIME 加密憑證。  如果您要使用協力廠商憑證授權單位，建議您檢閱其設定簽署和加密範本的指引。
 
-4. 在 [相容性]  索引標籤上：
+4. 在 [相容性] 索引標籤上：
 
-    - 將 [憑證授權單位]  設為 [Windows Server 2008 R2] 
-    - 將 [憑證接收者]  設為 [Windows 7 / Server 2008 R2] 
+    - 將 [憑證授權單位] 設為 [Windows Server 2008 R2]
+    - 將 [憑證接收者] 設為 [Windows 7 / Server 2008 R2]
 
-5. 在 [一般]  索引標籤上，將 [範本顯示名稱]  設為對您有意義的名稱。
+5. 在 [一般] 索引標籤上，將 [範本顯示名稱] 設為對您有意義的名稱。
 
     > [!WARNING]
-    > [範本名稱]  預設會與 [範本顯示名稱]  相同，但*沒有空格*。 請記下範本名稱，您之後會需要它。
+    > [範本名稱] 預設會與 [範本顯示名稱] 相同，但*沒有空格*。 請記下範本名稱，您之後會需要它。
 
-6. 在 [要求處理]  索引標籤中，選取 [允許匯出私密金鑰]  。
-7. 在 [密碼編譯]  中，確認 [最小金鑰大小]  已設為 2048。
-8. 在 [主體名稱]  中，選擇 [在要求中提供]  。
-9. 在 [延伸模組]  中，確認您在 [應用程式原則]  下看到「加密檔案系統」、「安全電子郵件」和「用戶端驗證」。
+6. 在 [要求處理] 索引標籤中，選取 [允許匯出私密金鑰]。
+7. 在 [密碼編譯] 中，確認 [最小金鑰大小] 已設為 2048。
+8. 在 [主體名稱] 中，選擇 [在要求中提供]。
+9. 在 [延伸模組] 中，確認您在 [應用程式原則] 下看到「加密檔案系統」、「安全電子郵件」和「用戶端驗證」。
 
     > [!IMPORTANT]
-    > 若為 iOS/iPadOS 憑證範本，請前往 [延伸模組]  索引標籤、更新 [金鑰使用方式]  ，並確認未選取 [簽章為原件證明]  。
+    > 若為 iOS/iPadOS 憑證範本，請前往 [延伸模組] 索引標籤、更新 [金鑰使用方式]，並確認未選取 [簽章為原件證明]。
 
-10. 在 [安全性]  中，新增您安裝 Microsoft Intune 憑證連接器之伺服器的電腦帳戶。 允許此帳戶的 [讀取]  和 [註冊]  權限。
-11. 選取 [套用]   > [確定]  ，儲存憑證範本。 關閉 [憑證範本主控台]  。
-12. 在 [憑證授權單位]  主控台中，以滑鼠右鍵按一下 [憑證範本]   > [新增]   > [要發出的憑證範本]  。 選擇您在前述步驟中建立的範本。 選取 [確定]  。
+10. 在 [安全性] 中，新增您安裝 Microsoft Intune 憑證連接器之伺服器的電腦帳戶。 允許此帳戶的 [讀取] 和 [註冊] 權限。
+11. 選取 [套用] > [確定]，儲存憑證範本。 關閉 [憑證範本主控台]。
+12. 在 [憑證授權單位] 主控台中，以滑鼠右鍵按一下 [憑證範本] > [新增] > [要發出的憑證範本]。 選擇您在前述步驟中建立的範本。 選取 [確定]。
 13. 若要讓伺服器為已註冊的裝置及使用者管理憑證，請使用下列步驟：
 
-    1. 以滑鼠右鍵按一下憑證授權單位，選擇 [內容]  。
+    1. 以滑鼠右鍵按一下憑證授權單位，選擇 [內容]。
     2. 在 [安全性] 索引標籤上，新增您執行連接器 (**Microsoft Intune 憑證連接器**或**適用於 Microsoft Intune 的 PFX 憑證連接器**) 之伺服器的電腦帳戶。 
-    3. 將 [發行及管理憑證]  和 [要求憑證]  的「允許」權限授與該電腦帳戶。
+    3. 將 [發行及管理憑證] 和 [要求憑證] 的「允許」權限授與該電腦帳戶。
 
 14. 登出企業 CA。
 
@@ -146,24 +146,24 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 選取 [租用戶系統管理]   > [連接器與權杖]   > [憑證連接器]   > [+ 新增]  。
+2. 選取 [租用戶系統管理] > [連接器與權杖] > [憑證連接器] > [+ 新增]。
 
-3. 針對 PKCS #12 的連接器按一下 [下載憑證連接器軟體]  ，並將該檔案儲存到要安裝連接器的伺服器所能存取位置。
+3. 針對 PKCS #12 的連接器按一下 [下載憑證連接器軟體]，並將該檔案儲存到要安裝連接器的伺服器所能存取位置。
 
    ![Microsoft Intune 憑證連接器下載](./media/certficates-pfx-configure/download-ndes-connector.png)
 
 4. 下載完成後，請登入伺服器。 然後：
 
     1. 確定已安裝 .NET 4.5 Framework 或更高版本，這是 NDES 憑證連接器的必要項目。 Windows Server 2012 R2 及更新版本會自動隨附 .NET 4.5 Framework。
-    2. 執行安裝程式 (NDESConnectorSetup.exe)，並接受預設位置。 它會將連接器安裝到 `\Program Files\Microsoft Intune\NDESConnectorUI`。 在 [安裝程式選項] 中，選取 [PFX 發佈]  。 繼續並完成安裝。
+    2. 執行安裝程式 (NDESConnectorSetup.exe)，並接受預設位置。 它會將連接器安裝到 `\Program Files\Microsoft Intune\NDESConnectorUI`。 在 [安裝程式選項] 中，選取 [PFX 發佈]。 繼續並完成安裝。
     3. 連接器服務預設會以本機系統帳戶執行。 如果需要有 Proxy 才能存取網際網路，請確認本機服務帳戶可以存取伺服器上的 Proxy 設定。
 
-5. Microsoft Intune 憑證連接器會開啟 [註冊]  索引標籤。若要連線到 Intune，請**登入**並輸入具有全域系統管理權限的帳戶。
-6. 在 [進階]  索引標籤上，建議保持選取 [使用此電腦的 SYSTEM 帳戶 (預設)]  。
-7. [套用]   > [關閉] 
-8. 返回 Intune 入口網站 ([Intune]   > [裝置設定]   > [憑證連接器]  )。 在幾分鐘後會顯示綠色的核取記號，且 [連線狀態]  為 [使用中]  。 連接器伺服器現在可以與 Intune 通訊。
+5. Microsoft Intune 憑證連接器會開啟 [註冊] 索引標籤。若要連線到 Intune，請**登入**並輸入具有全域系統管理權限的帳戶。
+6. 在 [進階] 索引標籤上，建議保持選取 [使用此電腦的 SYSTEM 帳戶 (預設)]。
+7. [套用] > [關閉]
+8. 返回 Intune 入口網站 ([Intune] > [裝置設定] > [憑證連接器])。 在幾分鐘後會顯示綠色的核取記號，且 [連線狀態] 為 [使用中]。 連接器伺服器現在可以與 Intune 通訊。
 9. 如果在您的網路環境中有 Web Proxy，您可能需要其他設定才能讓連接器運作。 如需詳細資訊，請參閱 Azure Active Directory 文件中的[使用現有的內部部署 Proxy 伺服器](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers)。
-    - Android Enterprise (工作設定檔  )
+    - Android Enterprise (工作設定檔)
     - iOS
     - macOS
     - Windows 10 及更新版本
@@ -175,48 +175,48 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 選取並移至 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取並移至 [裝置] > [組態設定檔] > [建立設定檔]。
 
 3. 輸入下列內容：
    - **平台**：選擇將接收此設定檔之裝置的平台。
-   - **設定檔**：選取 [信任的憑證] 
+   - **設定檔**：選取 [信任的憑證]
   
-4. 選取 [建立]  。
+4. 選取 [建立]。
 
-5. 在 [基本資訊]  中，輸入下列內容：
+5. 在 [基本資訊] 中，輸入下列內容：
    - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，良好設定檔名稱為*適用於整家公司的受信任憑證設定檔*。
    - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
 
-6. 選取 [下一步]  。
+6. 選取 [下一步]。
 
-7. 在 [組態設定]  中，指定先前匯出的根 CA 憑證 .cer 檔案。
+7. 在 [組態設定] 中，指定先前匯出的根 CA 憑證 .cer 檔案。
 
    > [!NOTE]
-   > 視您在**步驟 3** 中選擇的平台而定，您可能會有選擇憑證 [目的地存放區]  的選項。
+   > 視您在**步驟 3** 中選擇的平台而定，您可能會有選擇憑證 [目的地存放區] 的選項。
 
    ![建立設定檔並上傳受信任的憑證](./media/certficates-pfx-configure/certificates-pfx-configure-profile-fill.png)
 
-8. 選取 [下一步]  。
+8. 選取 [下一步]。
 
-9. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+9. 在 [範圍標籤] (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
 
-   選取 [下一步]  。
+   選取 [下一步]。
 
-10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 請規劃將此憑證設定檔部署到接收 PKCS 憑證設定檔的相同群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
+10. 在 [指派] 中，選取將接收您設定檔的使用者或群組。 請規劃將此憑證設定檔部署到接收 PKCS 憑證設定檔的相同群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
 
-    選取 [下一步]  。
+    選取 [下一步]。
 
-11. (*僅適用於 Windows 10*) 在 [適用性規則]  中，指定適用性規則以精簡此設定檔的指派。 您可以根據作業系統版本或裝置版本，選擇指派或不指派設定檔。
+11. (*僅適用於 Windows 10*) 在 [適用性規則] 中，指定適用性規則以精簡此設定檔的指派。 您可以根據作業系統版本或裝置版本，選擇指派或不指派設定檔。
 
   如需詳細資訊，請參閱*在 Microsoft Intune 中建立裝置設定檔*中的[適用性規則](../configuration/device-profile-create.md#applicability-rules)。
 
-12. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
+12. 在 [檢閱 + 建立] 中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 ## <a name="create-a-pkcs-certificate-profile"></a>建立 PKCS 憑證設定檔
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 選取並移至 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取並移至 [裝置] > [組態設定檔] > [建立設定檔]。
 
 3. 輸入下列內容：
    - **平台**：選擇您的裝置平台。 選項包括：
@@ -226,18 +226,18 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
      - iOS/iPadOS
      - macOS
      - Windows 10 及更新版本
-   - **設定檔**：選取 [PKCS 憑證] 
+   - **設定檔**：選取 [PKCS 憑證]
 
    > [!NOTE]
    > 在具有 Android 企業設定檔的裝置上，使用 PKCS 憑證設定檔安裝的憑證不會顯示在裝置上。 若要確認憑證部署成功，請在 Intune 主控台中檢查設定檔的狀態。
-4. 選取 [建立]  。
+4. 選取 [建立]。
 
-5. 在 [基本資訊]  中，輸入下列內容：
+5. 在 [基本資訊] 中，輸入下列內容：
    - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，良好的設定檔名稱為*適用於整家公司的 PKCS 設定檔*。
    - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
 
-6. 選取 [下一步]  。
-7. 在 [組態設定]  中，您可進行的設定會根據您選擇的平台而不同。 選取您的平台以進行詳細設定：-Android 裝置系統管理員 -Android 企業 -iOS/iPadOS -Windows 10
+6. 選取 [下一步]。
+7. 在 [組態設定] 中，您可進行的設定會根據您選擇的平台而不同。 選取您的平台以進行詳細設定：-Android 裝置系統管理員 -Android 企業 -iOS/iPadOS -Windows 10
    
    |設定     | 平台     | 詳細資料   |
    |------------|------------|------------|
@@ -247,33 +247,33 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
    |**憑證授權單位**      |<ul><li>全部         |顯示您企業 CA 的內部完整網域名稱 (FQDN)。  |
    |**憑證授權單位名稱** |<ul><li>全部         |列出您企業 CA 的名稱，例如 "Contoso Certification Authority"。 |
    |**憑證範本名稱**    |<ul><li>全部         |列出您的憑證範本名稱。 |
-   |**憑證類型**             |<ul><li>Android Enterprise (工作設定檔  )</li><li>iOS</li><li>macOS</li><li>Windows 10 及更新版本|選取類型： <ul><li> [使用者]  憑證可在憑證的主旨與 SAN 中包含使用者屬性和裝置屬性。 </il><li>[裝置]  憑證只能在憑證的主旨與 SAN 中包含裝置屬性。 針對無使用者裝置 (如 Kiosk 或其他共用裝置) 等情況使用 [裝置]。  <br><br> 此選項會影響 [主體名稱格式]。 |
-   |**主體名稱格式**          |<ul><li>全部         |如需如何設定主體名稱格式的詳細資料，請參閱本文稍後的[主體名稱格式](#subject-name-format)。  <br><br> 針對大部分平台，除非另有需要，否則請使用 [一般名稱]  選項。 <br><br>對於下列平台，[主體名稱格式] 取決於憑證類型： <ul><li>Android Enterprise (工作設定檔  )</li><li>iOS</li><li>macOS</li><li>Windows 10 及更新版本</li></ul>  <p>  |
-   |**主體別名**     |<ul><li>全部         |針對「屬性」  ，除非另有需要，否則請選取 [使用者主體名稱 (UPN)]  並設定對應的「值」  ，然後按一下 [新增]  。 <br><br>如需詳細資訊，請參閱本文稍後的[主體名稱格式](#subject-name-format)。|
-   |**擴充金鑰使用方法**           |<ul><li> Android 裝置管理員 </li><li>Android Enterprise (裝置擁有者  、工作設定檔  ) </li><li>Windows 10 |憑證需要 [用戶端驗證]  ，使用者或裝置才能向伺服器進行驗證。 |
-   |**允許所有應用程式存取私密金鑰** |<ul><li>macOS  |設定為 [啟用]  ，將 PKCS 憑證私密金鑰的存取權，授與為相關聯 Mac 裝置設定的應用程式。 <br><br> 如需此設定的詳細資訊，請參閱 Apple 開發人員文件中[組態設定檔參考](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) \(英文\) 的 *AllowAllAppsAccess* 憑證承載一節。 |
-   |**根憑證**             |<ul><li>Android 裝置管理員 </li><li>Android Enterprise (裝置擁有者  、工作設定檔  ) |選取先前指派的根 CA 憑證設定檔。 |
+   |**憑證類型**             |<ul><li>Android Enterprise (工作設定檔)</li><li>iOS</li><li>macOS</li><li>Windows 10 及更新版本|選取類型： <ul><li> [使用者] 憑證可在憑證的主旨與 SAN 中包含使用者屬性和裝置屬性。 </il><li>[裝置] 憑證只能在憑證的主旨與 SAN 中包含裝置屬性。 針對無使用者裝置 (如 Kiosk 或其他共用裝置) 等情況使用 [裝置]。  <br><br> 此選項會影響 [主體名稱格式]。 |
+   |**主體名稱格式**          |<ul><li>全部         |如需如何設定主體名稱格式的詳細資料，請參閱本文稍後的[主體名稱格式](#subject-name-format)。  <br><br> 針對大部分平台，除非另有需要，否則請使用 [一般名稱] 選項。 <br><br>對於下列平台，[主體名稱格式] 取決於憑證類型： <ul><li>Android Enterprise (工作設定檔)</li><li>iOS</li><li>macOS</li><li>Windows 10 及更新版本</li></ul>  <p>  |
+   |**主體別名**     |<ul><li>全部         |針對「屬性」，除非另有需要，否則請選取 [使用者主體名稱 (UPN)] 並設定對應的「值」，然後按一下 [新增]。 <br><br>如需詳細資訊，請參閱本文稍後的[主體名稱格式](#subject-name-format)。|
+   |**擴充金鑰使用方法**           |<ul><li> Android 裝置管理員 </li><li>Android Enterprise (裝置擁有者、工作設定檔) </li><li>Windows 10 |憑證需要 [用戶端驗證]，使用者或裝置才能向伺服器進行驗證。 |
+   |**允許所有應用程式存取私密金鑰** |<ul><li>macOS  |設定為 [啟用]，將 PKCS 憑證私密金鑰的存取權，授與為相關聯 Mac 裝置設定的應用程式。 <br><br> 如需此設定的詳細資訊，請參閱 Apple 開發人員文件中[組態設定檔參考](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) \(英文\) 的 *AllowAllAppsAccess* 憑證承載一節。 |
+   |**根憑證**             |<ul><li>Android 裝置管理員 </li><li>Android Enterprise (裝置擁有者、工作設定檔) |選取先前指派的根 CA 憑證設定檔。 |
 
-8. 選取 [下一步]  。
+8. 選取 [下一步]。
 
-9. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+9. 在 [範圍標籤] (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
 
-   選取 [下一步]  。
+   選取 [下一步]。
 
-10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 請規劃將此憑證設定檔部署到接收受信任憑證設定檔的相同群組。如需有關指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
+10. 在 [指派] 中，選取將接收您設定檔的使用者或群組。 請規劃將此憑證設定檔部署到接收受信任憑證設定檔的相同群組。如需有關指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
 
-    選取 [下一步]  。
+    選取 [下一步]。
 
-11. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
+11. 在 [檢閱 + 建立] 中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 
 ### <a name="subject-name-format"></a>主體名稱格式
 
-當您針對下列平台建立 PKCS 憑證設定檔時，主體名稱格式的選項，取決於您選取的憑證類型 ([使用者]  或 [裝置]  )。  
+當您針對下列平台建立 PKCS 憑證設定檔時，主體名稱格式的選項，取決於您選取的憑證類型 ([使用者] 或 [裝置])。  
 
 平台：
 
-- Android Enterprise (工作設定檔  )
+- Android Enterprise (工作設定檔)
 - iOS
 - macOS
 - Windows 10 及更新版本
@@ -286,7 +286,7 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
 > - =
 
 - **使用者憑證類型**  
-  「主體名稱格式」  的格式選項包括兩個變數：**一般名稱 (CN)** 和**電子郵件 (E)** 。 **一般名稱 (CN)** 可以設定為下列任何變數：
+  「主體名稱格式」的格式選項包括兩個變數：**一般名稱 (CN)** 和**電子郵件 (E)** 。 **一般名稱 (CN)** 可以設定為下列任何變數：
 
   - **CN={{UserName}}** ：使用者的使用者主體名稱，例如 janedoe@contoso.com。
   - **CN={{AAD_Device_ID}}** ：您在 Azure Active Directory (AD) 中註冊裝置時所指派的識別碼。 此識別碼通常用於向 Azure AD 驗證。
@@ -323,14 +323,14 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
 
   > [!IMPORTANT]  
   > - 當您指定變數時，請將變數名稱括在大括弧 { } 中 (如範例所示)，以避免發生錯誤。  
-  > - 裝置憑證的「主體」  或 *SAN* 中所使用裝置屬性 (例如 **IMEI**、**SerialNumber** 和 **FullyQualifiedDomainName**)，這些屬性可由具有裝置存取權的人員來偽造。
+  > - 裝置憑證的「主體」或 *SAN* 中所使用裝置屬性 (例如 **IMEI**、**SerialNumber** 和 **FullyQualifiedDomainName**)，這些屬性可由具有裝置存取權的人員來偽造。
   > - 裝置必須支援憑證設定檔中指定的所有變數，才能在該裝置上安裝該設定檔。  例如，如果 SCEP 設定檔的主體名稱中使用 **{{IMEI}}** ，但該設定檔指派給沒有 IMEI 編號的裝置，則設定檔安裝將會失敗。  
  
 ## <a name="whats-new-for-connectors"></a>連接器的新功能
 
 這兩個憑證連接器的更新會定期發行。 當我們更新連接器時，您可在此閱讀有關變更的資訊。
 
-「適用於 Microsoft Intune 的 PFX 憑證連接器」  [支援自動更新](#requirements)，而「Intune 憑證連接器」  則以手動方式更新。
+「適用於 Microsoft Intune 的 PFX 憑證連接器」[支援自動更新](#requirements)，而「Intune 憑證連接器」則以手動方式更新。
 
 ### <a name="may-17-2019"></a>2019 年 5 月 17 日
 
@@ -365,3 +365,5 @@ Microsoft Intune 中包含的內建設定，可使用 PKCS 憑證對您的組織
 設定檔已建立，但還不會執行任何動作。 接下來，[指派設定檔](../configuration/device-profile-assign.md)並[監視其狀態](../configuration/device-profile-monitor.md)。
 
 [使用 SCEP 憑證](certificates-scep-configure.md)，或[從 Symantec PKI Manager Web 服務發行 PKCS 憑證](certificates-digicert-configure.md)。
+
+[針對 PKCS 憑證設定檔進行疑難排解](../protect/troubleshoot-pkcs-certificate-profiles.md)

@@ -6,30 +6,33 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/29/2019
+ms.date: 06/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ac77b590-a7ec-45a0-9516-ebf5243b6210
-ms.reviewer: davidra
+ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0aa02c58f2a2d75389be357ac7c700c2bac99027
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1b9aedb7595db5ff0f40f2d12b8cee985fb7be99
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351574"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332851"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Mobile Threat Defense 與 Intune 的整合
 
 Intune 可整合來自 Mobile Threat Defense (MTD) 廠商的資料，作為裝置合規性政策與裝置條件式存取規則的資訊來源。 您可以利用這項資訊，藉由封鎖遭入侵行動裝置的存取，來協助保護 Exchange 和 Sharepoint 等公司資源。
 
 Intune 可以使用此相同的資料，作為使用 Intune 應用程式防護原則尚未註冊之裝置的來源。 因此，系統管理員可以使用此資訊來協助保護[受 Microsoft Intune 保護的應用程式](../apps/apps-supported-intune-apps.md)中的公司資料，發出封鎖或選擇性抹除。
+
+> [!NOTE]
+> 目前「不」支援 Mobile Threat Defense 與 Intune GCC High 和 DoD 供應項目的整合。 深入了解[適用於 US Government GCC High 支援的 Microsoft Intune](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-intune-govt-service-description) \(部分機器翻譯\)。
 
 ## <a name="protect-corporate-resources"></a>保護公司資源
 

@@ -1,11 +1,11 @@
 ---
 title: 找到現有的公司電子郵件帳戶 | Microsoft Docs
-description: 描述如何將更新套用到您的裝置，讓您可以再次存取您的工作或學校電子郵件。
+description: 描述如何更新您的裝置，讓您可以再次存取您的公司或學校電子郵件。
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/17/2018
+ms.date: 06/29/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,36 +15,37 @@ ms.assetid: 74c51f7b-7bd8-45cf-99bd-02d1972267cb
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: chrisgre
+ms.reviewer: samyada
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: c6917c2ad2650ae093293ba172934661a4f9863f
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 78beb08555a9c276bec79a65bb10bb9dad816926
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881280"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590978"
 ---
-# <a name="an-existing-company-email-account-was-found"></a>找到現有的公司電子郵件帳戶
+# <a name="an-existing-email-account-was-found"></a>找到現有的電子郵件帳戶
 
-您的行動裝置可能在受控「之前」  ，即已能夠存取您的工作或學校電子郵件帳戶。 如果您的裝置目前受控，建議您：
+如果您在註冊之前於裝置上設定公司電子郵件，您的組織可能會要求您將其移除。 
 
-* 將現有的工作電子郵件帳戶與您的裝置中斷連線。
-* 從 [公司入口網站] 應用程式重新同步裝置設定。  
+這麼做可讓您的組織以符合其網路與安全性需求的電子郵件設定檔來設定您的個人資料。 中斷連線之後，您只需要同步處理您的裝置，您就可以重新存取您的電子郵件。 
 
-這些步驟將可確保您的裝置符合公司的安全性需求，並讓您的電子郵件保持安全。
+完成以下步驟，以與現有帳戶中斷連線並更新裝置設定。 如果您未完成這些步驟，則可能會遺失公司帳戶或對該公司帳戶的行動存取權受到限制。
 
-1. 在您的裝置上，移至 [設定]  ，然後尋找已連線的帳戶。 例如，在 iOS 11+ 裝置上，請選取 [密碼與帳號]  。
+1. 在您的裝置上，移至 [設定]，然後尋找已連線的帳戶。 例如，在 iOS 11+ 裝置上，您可以選取 [密碼與帳號]。
  
-2. 選取您的工作電子郵件帳戶並將其移除。
+2. 選取並移除您已連結到公司電子郵件的帳戶。 
 
 3. 在您的裝置上開啟「公司入口網站」應用程式。  
 
 4. 在您的裝置清單底下，選取您想要更新的裝置。
 
-5. 選取 [檢查設定]  。 幾分鐘之內，您的裝置便會同步新的電子郵件設定。
+5. 選取 [檢查設定]。 幾分鐘之內，您的裝置便會同步新的電子郵件設定。
 
-6. 登入您的工作或學校電子郵件帳戶。
+6. 登入您的電子郵件帳戶。 
+
+## <a name="next-steps"></a>後續步驟
 
 是否仍需要協助？ 請連絡您公司的支援人員。 如需其連絡資訊，請查看[公司入口網站](https://go.microsoft.com/fwlink/?linkid=2010980)。

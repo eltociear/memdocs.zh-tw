@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 06/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 99facc87d068239962ab0d40874aa081f5e19189
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1f2a6955a430427fe3f4e2791da6bbaecdd90523
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989684"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353561"
 ---
 # <a name="use-filevault-disk-encryption-for--macos-with-intune"></a>搭配 Intune 使用 macOS 的 FileVault 磁碟加密
 
@@ -30,18 +30,18 @@ Intune 支援 macOS FileVault 磁碟加密。 FileVault 是隨附於 macOS 的�
 
 使用下列其中一項原則類型，在您管理的裝置設定 FileVault：
 
-- **[macOS FileVault 的端點安全性原則](#create-an-endpoint-security-policy-for-filevault)** 。 「端點安全性」 中的 FileVault 設定檔是專用於設定 FileVault 的一組設定。
+- **[macOS FileVault 的端點安全性原則](#create-endpoint-security-policy-for-filevault)** 。 「端點安全性」 中的 FileVault 設定檔是專用於設定 FileVault 的一組設定。
 
   檢視[磁碟加密原則設定檔中提供的 FileVault 設定](../protect/endpoint-security-disk-encryption-profile-settings.md)。
 
-- **[macOS FileVault 的 Endpoint Protection 裝置設定檔](#create-an-endpoint-security-policy-for-filevault)** 。 FileVault 設定是 macOS Endpoint Protection 其中一項可用的設定類別。 如需使用裝置組態設定檔的詳細資訊，請參閱[在 Inunte 中建立裝置設定檔](../configuration/device-profile-create.md)。
+- **[macOS FileVault 的 Endpoint Protection 裝置設定檔](#create-endpoint-security-policy-for-filevault)** 。 FileVault 設定是 macOS Endpoint Protection 其中一項可用的設定類別。 如需使用裝置組態設定檔的詳細資訊，請參閱[在 Inunte 中建立裝置設定檔](../configuration/device-profile-create.md)。
 
   檢視[裝置設定原則之 Endpoint Protection 設定檔中提供的 FileVault 設定](../protect/endpoint-protection-macos.md#filevault)。
 
 若要管理 Windows 10 的 BitLocker，請參閱[管理 BitLocker 原則](../protect/encrypt-devices.md)。
 
 > [!TIP]
-> 顯示涵蓋所有受控裝置之裝置加密狀態詳細資料的[加密報告](encryption-monitor.md)。
+> Intune 所提供的內建[加密報告](encryption-monitor.md)會顯示涵蓋所有受控裝置的裝置加密狀態詳細資料。
 
 當您使用 FileVault 建立加密裝置的原則後，原則會以兩階段套用至裝置。 首先，裝置已準備好讓 Intune 擷取和備份修復金鑰。 此動作稱為委付。 委付金鑰之後，磁碟加密就可以啟動。
 
@@ -60,17 +60,15 @@ Intune 支援 macOS FileVault 磁碟加密。 FileVault 是隨附於 macOS 的�
 - **輪替 FileVault 金鑰**
   - 技術服務人員
 
-## <a name="create-and-deploy-policy"></a>建立並部署原則
-
-### <a name="create-an-endpoint-security-policy-for-filevault"></a>建立 FileVault 的端點安全性原則
+## <a name="create-endpoint-security-policy-for-filevault"></a>建立 FileVault 的端點安全性原則
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [端點安全性] > [磁碟加密] > [建立原則]。
 
 3. 在 [基本] 頁面上輸入下列屬性，然後選擇 [下一步]。
-   1. **平台**：macOS
-   2. **設定檔**：FileVault
+   - **平台**：macOS
+   - **設定檔**：FileVault
 
    ![選取 FileVault 設定檔](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
 
@@ -92,35 +90,51 @@ Intune 支援 macOS FileVault 磁碟加密。 FileVault 是隨附於 macOS 的�
 7. 在 [指派] 頁面上，選取將接收此設定檔的群組。 如需指派設定檔的詳細資訊，請參閱＜指派使用者和裝置設定檔＞。
 選取 [下一步]。
 
-8. 在 [檢閱 + 建立] 頁面上，當您完成操作時，請選擇 [建立]。 當您為自己建立的設定檔選取原則類型時，新的設定檔就會顯示在清單中。
+8. 在 [檢閱 + 建立] 頁面上，當您完成操作時，請選擇 [建立]。 新的設定檔會在您選取所建立設定檔的原則類型時顯示在清單中。
 
-### <a name="create-a-device-configuration-policy-for-filevault"></a>建立 FileVault 的裝置設定原則
+## <a name="create-device-configuration-policy-for-filevault"></a>建立 FileVault 的裝置設定原則
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 選取 [裝置] > [組態設定檔] > [建立設定檔]。
 
-3. 設定下列選項：
-   1. **平台**：macOS
-   2. **設定檔**：Endpoint Protection
+3. 在 [建立設定檔] 頁面上，設定下列選項，然後按一下 [建立]：
+   - **平台**：macOS
+   - **設定檔**：Endpoint Protection
 
    ![選取 FileVault 設定檔](./media/encrypt-devices-filevault/select-macos-filevault-dc.png)
 
-4. 選取 [設定] > [FileVault]。
+4. 在 [基本] 頁面上，輸入下列屬性：
 
-   ![FileVault 設定](./media/encrypt-devices-filevault/filevault-settings.png)
+   - **名稱**：輸入政策的描述性名稱。 為您的設定檔命名，以方便之後能夠輕鬆識別。 例如，好的原則名稱可能包括設定檔類型和平台。
 
-5. 針對 [FileVault]，選取 [啟用]。
+   - **描述**：輸入政策的描述。 這是選擇性設定，但建議執行。
 
-6. 針對 [修復金鑰類型]，只支援 [個人金鑰]。
+5. 在 [組態設定] 頁面上，選取 [FileVault] 以展開可用的設定：
 
-   請考慮新增一則訊息來協助引導使用者擷取其裝置的修復金鑰。 當您使用個人修復金鑰輪替的設定時，這項資訊對您的使用者會很有幫助，其可以自動為裝置定期產生新的修復金鑰。
+   > [!div class="mx-imgBorder"]
+   > ![FileVault 設定](./media/encrypt-devices-filevault/filevault-settings.png)
 
-   例如：若要擷取遺失或最近輪替的修復金鑰，請從任何裝置登入 Intune 公司入口網站。 在入口網站中，前往 [裝置] 並選取已啟用 FileVault 的裝置，然後選取 [取得修復金鑰]。 目前的修復金鑰會隨即顯示。
+6. 進行以下設定：
+  
+   - 針對 [啟用 FileVault]，請選取 [是]。
 
-7. 完成其餘 [FileVault 設定](endpoint-protection-macos.md#filevault)以符合您的商務需求，然後選取 [確定]。
+   - 針對 [修復金鑰類型]，請選取 [個人金鑰]。
 
-8. 完成其他組態設定，然後儲存設定檔。
+   - 針對*個人修復金鑰的委付位置描述*，請新增一則訊息，以協助引導使用者了解如何取得其裝置的修復金鑰。 當您使用個人修復金鑰輪替的設定時，這項資訊對您的使用者會很有幫助，其可以自動為裝置定期產生新的修復金鑰。
+
+     例如：若要擷取遺失或最近輪替的修復金鑰，請從任何裝置登入 Intune 公司入口網站。 在入口網站中，前往 [裝置] 並選取已啟用 FileVault 的裝置，然後選取 [取得修復金鑰]。 目前的修復金鑰會隨即顯示。
+
+   完成其餘 [FileVault 設定](endpoint-protection-macos.md#filevault)以符合您的商務需求，然後選取 [下一步]。
+
+7. 在 [範圍 (標籤)] 頁面上，選擇 [選取範圍標籤] 以開啟 [選取標籤] 窗格，並將範圍標籤指派至設定檔。
+
+   選取 [下一步] 以繼續進行操作。
+
+8. 在 [指派] 頁面上，選取將接收此設定檔的群組。 如需指派設定檔的詳細資訊，請參閱＜指派使用者和裝置設定檔＞。
+選取 [下一步]。
+
+9. 在 [檢閱 + 建立] 頁面上，當您完成操作時，請選擇 [建立]。 新的設定檔會在您選取所建立設定檔的原則類型時顯示在清單中。
 
 ## <a name="manage-filevault"></a>管理 FileVault
 

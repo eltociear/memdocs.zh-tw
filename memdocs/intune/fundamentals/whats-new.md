@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/23/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87cf4d9fc21b951386c496e49fe482810febcda3
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 89703c8aec11517417f9459391c431b9db75456c
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85263949"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502284"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune 的新功能
 
@@ -58,18 +58,32 @@ ms.locfileid: "85263949"
 
 ## <a name="week-of-june-22-2020"></a>2020 年 6 月 22 日當週
 
+### <a name="app-management"></a>應用程式管理
+
+#### <a name="newly-available-protected-apps-for-intune---7248952---"></a>新推出的受保護 Intune 應用程式<!-- 7248952 -->
+下列受保護的應用程式現已推出：
+- BlueJeans 視訊會議
+- 適用於 Intune 的 Cisco Jabber
+- 適用於 Intune 的 Tableau Mobile
+- 適用於 Intune 的 ZERO
+
+如需受保護應用程式的詳細資訊，請參閱[受 Microsoft Intune 保護的應用程式](../apps/apps-supported-intune-apps.md)。
+
 ### <a name="monitor-and-troubleshoot"></a>監視及疑難排解
+
+#### <a name="use-endpoint-analytics-to-improve-user-productivity-and-reduce-it-support-costs---5653063---"></a>使用端點分析改善使用者生產力並降低 IT 支援成本<!-- 5653063 --> 
+在下一週期間，將會推出此功能。端點分析旨在改善使用者生產力，並透過提供使用者體驗的見解來降低 IT 支援成本。 見解可讓 IT 利用主動式支援來最佳化終端使用者體驗，並透過評估設定變更對使用者的影響來偵測使用者體驗的迴歸。 如需詳細資訊，請參閱[端點分析預覽](https://aka.ms/uea) \(英文\)。
 
 #### <a name="proactively-remediate-end-user-device-issues-using-script-packages---5933328---"></a>使用指令碼套件主動補救終端使用者的裝置問題<!-- 5933328 -->
 您可以在終端使用者裝置上建立並執行指令碼套件，以主動找出並修正貴組織中首要的支援問題。 部署指令碼套件有助於減少聯絡支援人員的次數。 請選擇建立自己的指令碼套件，或部署我們已撰寫並在環境中使用的其中一個指令碼套件，以減少支援票證。 Intune 可讓您查看已部署指令碼套件的狀態，並且監視偵測和修復的結果。 在 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，選取 [報表] > [端點分析] > [主動式補救]。 如需詳細資訊，請參閱[主動式補救](https://aka.ms/uea_prs) (英文)。
 
 ### <a name="device-security"></a>裝置安全性
 
-### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>在 Android 的相容性原則中使用 Microsoft Defender ATP<!-- 4425686  -->
+#### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>在 Android 的相容性原則中使用 Microsoft Defender ATP<!-- 4425686  -->
 
 您現在可以使用 Intune [將 Android 裝置上線到 Microsoft Defender 進階威脅防護](../protect/advanced-threat-protection.md#onboard-android-devices) (MicrosoftDefender ATP) 上。 將註冊裝置上線之後，您的 Android 合規性政策就可以使用來自 Microsoft Defender ATP 的「威脅等級」訊號。 這些是您先前可用於 Windows 10 裝置的相同訊號。
 
-### <a name="configure-defender-atp-web-protection-for-android-devices---6185563-wnready---"></a>設定 Android 裝置適用的 Defender ATP Web 防護<!-- 6185563 WNReady -->
+#### <a name="configure-defender-atp-web-protection-for-android-devices---6185563-wnready---"></a>設定 Android 裝置適用的 Defender ATP Web 防護<!-- 6185563 WNReady -->
 
 當您使用 Android 裝置適用的 Microsoft Defender 進階威脅防護 (Microsoft Defender ATP) 時，您可以[設定 Microsoft Defender ATP Web 防護](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android) (英文) 來停用網路釣魚掃描功能，或防止該掃描使用 VPN。
 

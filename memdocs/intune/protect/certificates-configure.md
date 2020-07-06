@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4441fdaf8c3fb8bfb6613805df9eca27cc3ebf0c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e5de1268b8b04c98ac7a9cfa96d42349fc0f8890
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990388"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383201"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>在 Microsoft Intune 中使用憑證進行驗證
 
@@ -72,7 +72,7 @@ ms.locfileid: "83990388"
 - 使用下列機制來部署憑證：
   - [受信任的憑證設定檔](certificates-configure.md#create-trusted-certificate-profiles)，以將來自您的根或中繼 (發行) CA 的受信任根 CA 憑證部署到裝置
   - SCEP 憑證設定檔
-  - PKCS 憑證設定檔 (僅支援 [Digicert PKI 平台](certificates-digicert-configure.md)) 
+  - PKCS 憑證設定檔 (僅支援 [Digicert PKI 平台](certificates-digicert-configure.md))
   - 已匯入 PKCS 的憑證設定檔
 
 ## <a name="supported-platforms-and-certificate-profiles"></a>支援的平台和憑證設定檔
@@ -105,29 +105,34 @@ SCEP 憑證設定檔會直接參考受信任的憑證設定檔。 PKCS 憑證設
 
 針對每個您想要支援的裝置平台，建立個別的受信任憑證設定檔，如同您針對 SCEP、PKCS 和 PKCS 所匯入憑證設定檔進行的作業一樣。
 
+> [!IMPORTANT]
+> 您為平台 [Windows 10 及更新版本] 建立的受信任根設定檔會顯示在 Microsoft 端點管理員系統管理中心中，作為平台 [Windows 8.1 及更新版本] 的設定檔。 
+>
+> 這是受信任憑證設定檔之平台呈現的已知問題。 雖然設定檔會顯示 Windows 8.1 與更新版本的平台，但其適用於 Windows 10 與更新版本。
+
 ### <a name="to-create-a-trusted-certificate-profile"></a>建立可信任的憑證設定檔
 
 1. 登入 [Microsoft Endpoint Manager 系統管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 選取並移至 [裝置]   > [組態設定檔]   > [建立設定檔]  。
+2. 選取並移至 [裝置] > [組態設定檔] > [建立設定檔]。
 
    ![巡覽至 Intune 並建立受信任憑證的新設定檔](./media/certificates-configure/certificates-configure-profile-new.png)
 
 3. 輸入下列內容：
    - **平台**：選擇將接收此設定檔之裝置的平台。
-   - **設定檔**：選取 [信任的憑證] 
+   - **設定檔**：選取 [信任的憑證]
   
-4. 選取 [建立]  。
+4. 選取 [建立]。
 
-5. 在 [基本資訊]  中，輸入下列內容：
+5. 在 [基本資訊] 中，輸入下列內容：
    - **名稱**：為設定檔輸入描述性名稱。 命名您的設定檔，以方便之後能輕鬆識別。 例如，良好設定檔名稱為*適用於整家公司的受信任憑證設定檔*。
    - **描述**：輸入設定檔的描述。 這是選擇性設定，但建議執行。
 
-6. 選取 [下一步]  。
+6. 選取 [下一步]。
 
-7. 在 [組態設定]  中，指定先前匯出的受信任根 CA 憑證 .cer 檔案。 
+7. 在 [組態設定] 中，指定先前匯出的受信任根 CA 憑證 .cer 檔案。 
 
-   僅適用於 Windows 8.1 與 Windows 10 裝置，請為來自以下位置的受信任憑證，選取 [目的地存放區]  ︰
+   僅適用於 Windows 8.1 與 Windows 10 裝置，請為來自以下位置的受信任憑證，選取 [目的地存放區]︰
 
    - **電腦憑證存放區 - 根**
    - **電腦憑證存放區 - 中繼**
@@ -135,21 +140,21 @@ SCEP 憑證設定檔會直接參考受信任的憑證設定檔。 PKCS 憑證設
 
    ![建立設定檔並上傳受信任的憑證](./media/certificates-configure/certificates-configure-profile-fill.png)
 
-8. 選取 [下一步]  。
+8. 選取 [下一步]。
 
-9. 在 [範圍標籤]  (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
+9. 在 [範圍標籤] (選擇性) 中，指派標籤來針對特定 IT 群組篩選設定檔，例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 如需範圍標籤的詳細資訊，請參閱[針對分散式 IT 使用 RBAC 和範圍標籤](../fundamentals/scope-tags.md)。
 
-   選取 [下一步]  。
+   選取 [下一步]。
 
-10. 在 [指派]  中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
+10. 在 [指派] 中，選取將接收您設定檔的使用者或群組。 如需指派設定檔的詳細資訊，請參閱[指派使用者和裝置設定檔](../configuration/device-profile-assign.md)。
 
-    選取 [下一步]  。
+    選取 [下一步]。
 
-11. (*僅適用於 Windows 10*) 在 [適用性規則]  中，指定適用性規則以精簡此設定檔的指派。 您可以根據作業系統版本或裝置版本，選擇指派或不指派設定檔。
+11. (*僅適用於 Windows 10*) 在 [適用性規則] 中，指定適用性規則以精簡此設定檔的指派。 您可以根據作業系統版本或裝置版本，選擇指派或不指派設定檔。
 
   如需詳細資訊，請參閱*在 Microsoft Intune 中建立裝置設定檔*中的[適用性規則](../configuration/device-profile-create.md#applicability-rules)。
 
-12. 在 [檢閱 + 建立]  中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
+12. 在 [檢閱 + 建立] 中，檢閱您的設定。 當您選取 [建立] 時，系統會儲存您的變更，然後指派設定檔。 原則也會顯示在設定檔清單中。
 
 ## <a name="additional-resources"></a>其他資源
 

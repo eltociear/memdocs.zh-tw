@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 06/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96b547c50cda0ef623370bae20d347d4ccf1976b
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 6f4fd580a2e36a1cf7a29766c7a5e325e17fc528
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216479"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591063"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>使用 Intune 來允許或限制功能的 Windows 10 (和更新版本) 裝置設定
 
@@ -30,6 +30,8 @@ ms.locfileid: "85216479"
 
 > [!Note]
 > 並非所有版本的 Windows 都提供全部選項。 若要查看支援的版本，請參閱 [Policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (原則 CSP) (開啟另一個 Microsoft 網站)。
+>  
+> Windows 10 裝置限制設定檔中大部分可設定的設定都是在裝置層級部署。 部署到使用者群組的原則將會同時套用到目標使用者，以及後續登入該裝置並擁有 Intune 授權的任何其他使用者。
 
 ## <a name="before-you-begin"></a>開始之前
 

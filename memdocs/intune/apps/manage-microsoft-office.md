@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41b85299057f172fec224873607509aaaec60024
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 5d23eaeee839122bad46cd9619a790b9ca6332a6
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84977258"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383252"
 ---
 # <a name="manage-collaboration-experiences-using-office-for-ios-and-android-with-microsoft-intune"></a>使用 iOS 及 Android 版 Office 搭配 Microsoft Intune 來管理共同作業體驗
 
@@ -56,7 +56,7 @@ iOS 及 Android 版 Office 傳遞了數個重要的權益，包括：
 
 無論裝置是否已在聯合式端點管理 (UEM) 解決方案中註冊，都必須使用[如何建立及指派應用程式保護原則](app-protection-policies.md)中的步驟，為 iOS 與 Android 應用程式建立 Intune 應用程式保護原則。 這些原則至少必須符合下列條件：
 
-1. 包括所有 Microsoft 365 行動應用程式，例如 Edge、Outlook、OneDrive、Office 或 Teams，因為這可確保使用者能夠以安全的管道，存取及操作任何 Microsoft 應用程式中的公司或學校資料。
+1. 包括所有 Microsoft 365 行動應用程式，例如 Edge、Outlook、OneDrive、Office 或 Teams，因為這可確保使用者能夠以安全的方式存取及操作任何 Microsoft 應用程式中的公司或學校資料。
 
 2. 其會指派給所有使用者。 這可確保所有使用者都受到保護，不論其是否使用 iOS 及 Android 版 Office。
 
@@ -108,7 +108,13 @@ iOS 及 Android 版 Office 支援允許 Microsoft Endpoint Manager 等聯合式�
 
 ### <a name="manage-file-transfers"></a>管理檔案傳輸
 
-根據預設，Office 可讓使用者與附近的使用者共用檔案，以及將檔案傳輸到桌面系統。
+根據預設，iOS 及 Android 版 Office 可讓使用者使用各種機制來共用內容：
+
+- 如果檔案是裝載於 OneDrive 或 SharePoint 中，使用者可以直接在檔案內起始共用要求。
+- 使用者可以使用 [傳輸檔案] 動作來將檔案傳輸到桌面系統。
+- 使用者可以使用 [鄰近分享] 動作來將檔案共用到鄰近的行動裝置。
+
+[傳輸檔案] 和 [鄰近分享] 動作只能用於媒體、本機檔案，以及未受應用程式保護原則保護的檔案。 
 
 |    機碼    |    值    |
 |-------------------------------------------------------------------|-------------|

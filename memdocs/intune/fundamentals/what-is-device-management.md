@@ -4,7 +4,7 @@ description: Microsoft 365 企業版隨附 Microsoft Intune。 了解 Intune 如
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 06/24/2020
 ms.topic: overview
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 540faaca71d3694b95d32a24c947a977989a3223
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 0dedb4746c40ff1cc2f5a2f166b1e0277997cb88
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223631"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353610"
 ---
 # <a name="device-management-overview"></a>裝置管理概觀
 
-任何系統管理員的一項主要工作是保護組織的資源和資料安全。 這項工作為「裝置管理」。 使用者擁有許多裝置，他們可以在裝置上開啟及共用個人檔案、瀏覽網站，以及安裝應用程式和遊戲。 同樣的這些使用者也是員工和學生。 他們想要使用其裝置來存取工作和學校資源，例如電子郵件和 OneNote。
+任何系統管理員的一個主要工作是在組織中使用者裝置上保護組織的資源與資料安全。 這項工作為「裝置管理」。 使用者從個人帳戶接收及傳送電子郵件、從家中和餐廳瀏覽網站，並安裝應用程式與遊戲。 這些使用者也是員工與學生。 在其裝置上，他們想要存取公司或學校資源 (例如電子郵件與 OneNote)，並快速地加以存取。 身為系統管理員，您的目標是要保護這些資源，並讓使用者可跨其眾多裝置上同時輕鬆地存取。
 
 裝置管理可讓組織從不同裝置保護其資源和資料的安全。
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0739b27d5b2b6bb21809b2a9f109c894765ea7e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 17f1d045d89df3ad5bb37d85957e872ec6692b7e
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988572"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353491"
 ---
 # <a name="enroll-android-devices"></a>註冊 Android 裝置
 
@@ -39,6 +39,8 @@ ms.locfileid: "83988572"
 ## <a name="prerequisites"></a>先決條件
 
 若要準備管理行動裝置，您必須將行動裝置管理 (MDM) 授權單位設定為 **Microsoft Intune**。 請參閱[設定 MDM 授權單](../fundamentals/mdm-authority-set.md)以取得相關指示。 此項目只會設定一次，也就是第一次為行動裝置管理設定 Intune 之時。
+
+針對 Android Enterprise，請參閱下列來自 Google 的支援文章，以確保 Android Enterprise 可在您的國家或地區中提供使用： https://support.google.com/work/android/answer/6270910
 
 針對斑馬技術公司 (Zebra Technologies) 製造的裝置，您可能需要根據特定裝置的功能，授與公司入口網站額外的權限。 [Zebra 裝置上的行動性延伸模組](../configuration/android-zebra-mx-overview.md)提供更多詳細資料。
 

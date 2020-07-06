@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cb6b4df9e3834ce447b176b5dfab158deb0d543
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 8fe0b1748a40858bca55cc66b250c96725bfd9f1
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85094104"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332876"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>使用 Apple 的自動裝置註冊來自動註冊 iOS/iPadOS 裝置
 
@@ -69,7 +69,7 @@ iOS/iPadOS 11 中對非監督式 ADE 裝置的支援已淘汰。 在 iOS/iPadOS 
 - 每個權杖的註冊設定檔上限：1,000  
 - 每個設定檔的 Automated Device Enrollment 裝置上限：無限制 (在每個權杖的裝置數目上限內)
 - 每個 Intune 帳戶的 Automated Device Enrollment 權杖上限：2,000
-- 每個權杖的 Automated Device Enrollment 裝置數目上限：75,000
+- 每個權杖的 Automated Device Enrollment 裝置數目上限：第一次同步的限制為 75,000 到 80,000 個裝置。 Intune 將會每隔 12 小時簽入來持續與 ABM 或 ASM 同步，且每次都會新增額外 80,000 個裝置。 手動同步也會再度新增額外 80,000 個裝置。 同步將會持續發生，且裝置將會持續以 75,000 到 80,000 個裝置的批次從 ABM/ASM 同步到 Intune。 
 
 ## <a name="get-an-apple-ade-token"></a>取得 Apple ADE 權杖
 

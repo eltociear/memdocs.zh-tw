@@ -5,7 +5,7 @@ keywords: 什麼是 Intune
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/14/2019
+ms.date: 06/23/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,16 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a10709972b0387681d00c8fe848079807c6293a
-ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
+ms.openlocfilehash: 28a5bc7a1ee00e9595c50d274605af1b33c1ea90
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538085"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332799"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune 是適用於您裝置的 MDM 和 MAM 提供者
 
-Microsoft Intune 是以雲端為基礎的服務，著重於行動裝置管理 (MDM) 和行動應用程式管理 (MAM)。 Intune 包含在 Microsoft 的 [Enterprise Mobility + Security (EMS) 套件](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)中，可讓使用者提高生產力，同時保護您的組織資料。 它會與其他服務整合，包括 Microsoft 365 和 Azure Active Directory (Azure AD) 以控制具有存取權的人員以及他們有權存取的內容，還有用於資料保護的 Azure 資訊保護。 將它與 Microsoft 365 搭配使用時，您可以讓您的工作人員在所有裝置上都具有生產力，同時持續保護您的組織資訊。
+Microsoft Intune 是以雲端為基礎的服務，著重於行動裝置管理 (MDM) 和行動應用程式管理 (MAM)。 您可以控制組織裝置 (包括行動電話、平板電腦與膝上型電腦) 的使用方式。 您也可以設定特定原則來控制應用程式。 例如，您可以防止電子郵件傳送給組織外部的人。 Intune 也可以讓您組織中的人將其個人裝置用於學校或公司。 在個人裝置上，Intune 可協助確保您的組織資料保持受保護狀態，並可隔離組織資料與個人資料。
+
+Intune 是 Microsoft [Enterprise Mobility + Security (EMS) 套件](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)的一部分。 Intune 會與 Azure Active Directory (Azure AD) 整合，以控制誰有存取權，以及他們可以存取的內容。 其也與用於資料保護的 Azure 資訊保護整合。 其可搭配 Microsoft 365 套件產品使用。 例如，您可以將 Microsoft Teams、OneNote 與其他 Microsoft 365 應用程式部署到裝置。 此功能可讓組織中的人員在其所有裝置上都有生產力，同時使用您所建立的原則保護您組織的資訊。
 
 [![Intune 架構的影像](./media/what-is-intune/intunearch_sm.png )](./media/what-is-intune/intunearchitecture.svg#lightbox)
 
