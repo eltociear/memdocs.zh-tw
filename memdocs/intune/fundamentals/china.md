@@ -50,7 +50,7 @@ Microsoft 不會參與服務本身的實際營運。 服務由 21Vianet 獨立�
 - 適用於 Android 的 Intune 公司入口網站應用程式會使用 Google 行動服務來與 Microsoft Intune 服務通訊。 由於 Google Play 服務在中國無法使用，因此某些工作最多可能需要 8 小時才能完成。 如需詳細資訊，請參閱這篇[文章](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)。 
 - 為了遵循當地法規並提供改良的功能，在中國的 Intune 用戶端體驗 (公司入口網站應用程式) 可能會有所不同。
 - 隔離 (Fencing) 功能無法使用。
-- 行動應用程式管理 (MAM) 可用性視在中國大陸可用的應用程式而定。
+- 行動應用程式管理 (MAM) 可用性視在中國可用的應用程式而定。
 
 ## <a name="you-control-customer-data"></a>控制客戶資料
 
