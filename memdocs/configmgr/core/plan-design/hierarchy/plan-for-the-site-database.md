@@ -21,7 +21,7 @@ ms.locfileid: "81704416"
 
 適用於：  Configuration Manager (最新分支)
 
-站台資料庫伺服器是用來執行支援版本之 Mcrosoft SQL Server 的電腦。 SQL Server 則是用來儲存 Configuration Manager 站台的資訊。 Configuration Manager 階層中的每個網站都包含網站資料庫，以及獲指派網站資料庫伺服器角色的伺服器。  
+站台資料庫伺服器是用來執行支援版本之 Microsoft SQL Server 的電腦。 SQL Server 則是用來儲存 Configuration Manager 站台的資訊。 Configuration Manager 階層中的每個網站都包含網站資料庫，以及獲指派網站資料庫伺服器角色的伺服器。  
 
 -   針對管理中心網站和主要網站，您可以在網站伺服器上安裝 SQL Server，或者在網站伺服器以外的電腦上安裝 SQL Server。  
 
