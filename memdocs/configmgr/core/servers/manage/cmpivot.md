@@ -2,7 +2,7 @@
 title: 即時資料的 CMPivot
 titleSuffix: Configuration Manager
 description: 了解如何在 Configuration Manager 中使用 CMPivot 即時查詢用戶端。
-ms.date: 04/08/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,18 +10,17 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: dcd441c7f35748f42adc8824c68ec703291a13e0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
-ms.translationtype: HT
+ms.openlocfilehash: 7bf9d6018acb74ccd1a33b6101d5cceb119ca982
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702086"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914634"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>Configuration Manager 中即時資料的 CMPivot
 
 <!--1358456-->
 
-適用於：  Configuration Manager (最新分支)
+適用於：Configuration Manager (最新分支)
 
 Configuration Manager 一律提供大型中央裝置資料存放區，供客戶處理報表時使用。 站台通常會每週收集此資料。 從 1806 版本開始，CMPivot 是新的主控台內公用程式，現在可存取環境中裝置的即時狀態。 它能立即在目標集合中，所有目前已連線的裝置上執行查詢，然後傳回結果。 然後，使用這個工具來篩選此資料並進行分組。 提供線上用戶端的即時資料，讓您更快速地回答事務問題、解決問題，並回應安全性事件。
 
@@ -46,20 +45,23 @@ Configuration Manager 一律提供大型中央裝置資料存放區，供客戶�
   - IPConfig
   - SMBConfig
 
+- CMPivot 與 [Microsoft Edge](../../../apps/deploy-use/deploy-edge.md) 安裝程式會使用 **Microsoft 程式碼簽署**憑證進行簽署。 若該憑證未列在**受信任的發行者**存放區中，則必須新增該憑證。 否則，當 PowerShell 執行原則設定為 **AllSigned** 時，即無法執行 CMPivot 與 Microsoft Edge 安裝程式。 <!--7585106-->
 
 - CMPivot 的權限：
   - **SMS 指令碼**物件的**讀取**權限
   - **集合**的**執行指令碼**權限
-    - 或者，從 1906 版開始，您可以在 [集合]  上使用 [執行 CMPivot]  。
+    - 或者，從 1906 版開始，您可以在 [集合] 上使用 [執行 CMPivot]。
   - **清查報告**的**讀取**權限
   - 預設範圍。
 
 >[!NOTE]
-> [執行指令碼]  是 [執行 CMPivot]  權限的超集。
+> [執行指令碼] 是 [執行 CMPivot] 權限的超集。
+
+CMPivot 與 Edge 安裝程式會使用 **Microsoft 程式碼簽署**憑證進行簽署。 若該憑證未列在**受信任的發行者**存放區中，則必須新增該憑證。 否則，當 PowerShell 執行原則設定為 **AllSigned** 時，就無法執行 CMPivot 與 Edge 安裝程式。
  
 ## <a name="limitations"></a>限制
 
-- 在階層中，將 Configuration Manager 主控台連線至「主要站台」  以執行 CMPivot。 **啟動 CMPivot**動作在連線至管理中心網站 (CAS) 時，將不會出現在主控台。
+- 在階層中，將 Configuration Manager 主控台連線至「主要站台」以執行 CMPivot。 **啟動 CMPivot**動作在連線至管理中心網站 (CAS) 時，將不會出現在主控台。
   - 從 Configuration Manager 1902 版開始，您可以從 CAS 執行 CMPivot。 在某些環境中，需要額外的權限。 如需詳細資訊，請參閱[從 1902 版開始的 CMPivot](#bkmk_cmpivot1902)。
 
 - CMPivot 只會傳回已連線到目前站台的用戶端資料。  
@@ -75,20 +77,20 @@ Configuration Manager 一律提供大型中央裝置資料存放區，供客戶�
 
 ## <a name="start-cmpivot"></a>啟動 CMPivot
 
-1. 在 Configuration Manager 主控台中，連線至主要站台。 移至 [資產與合規性]  工作區，然後選擇 [裝置集合]  節點。 選取一個目標集合，然後按一下功能區中的 [啟動 CMPivot]  來啟動這個工具。  
+1. 在 Configuration Manager 主控台中，連線至主要站台。 移至 [資產與合規性] 工作區，然後選擇 [裝置集合] 節點。 選取一個目標集合，然後按一下功能區中的 [啟動 CMPivot] 來啟動這個工具。  
 
     > [!Tip]  
     > 如果您沒有看到此選項，請檢查下列設定：  
     > 
     > - 與站台系統管理員確認您的帳戶具有必要權限。 如需詳細資訊，請參閱[必要條件](#prerequisites)。  
     > 
-    > - 將主控台連線至「主要站台」  。  
+    > - 將主控台連線至「主要站台」。  
 
 2. 這個介面提供工具更詳細的操作方法。  
 
      - 在上方手動輸入查詢字串，或按一下內嵌文件中的連結。  
 
-     - 按一下其中一個 [實體]  ，將它加入查詢字串。  
+     - 按一下其中一個 [實體]，將它加入查詢字串。  
 
      - **資料表運算子**，**彙總函式**和**純量函式**的連結會在瀏覽器中開啟語言參考文件。 CMPivot 會使用 [Kusto 查詢語言 (KQL)](https://docs.microsoft.com/azure/kusto/query/) \(英文\)。  
 
@@ -107,7 +109,7 @@ CMPivot 視窗包含下列項目：
 
 1. CMPivot 目前設為目標的集合位於頂端的標題列，以及視窗底部的狀態列。 例如，上面螢幕擷取畫面中的 "PM_Team_Machines"。  
 
-2. 左側的窗格列出用戶端上可用的 [實體]  。 有些實體會依賴 WMI，有些則會使用 PowerShell，從用戶端取得資料。   
+2. 左側的窗格列出用戶端上可用的 [實體]。 有些實體會依賴 WMI，有些則會使用 PowerShell，從用戶端取得資料。   
 
     - 以滑鼠右鍵按一下實體，即可執行下列動作：  
 
@@ -119,9 +121,9 @@ CMPivot 視窗包含下列項目：
 
     - 展開實體以查看每個實體可用的特定屬性。 按兩下屬性可將它新增至查詢的目前游標位置。  
 
-3. [首頁]  索引標籤會顯示 CMPivot 的一般資訊，包括查詢範例和支援文件的連結。  
+3. [首頁] 索引標籤會顯示 CMPivot 的一般資訊，包括查詢範例和支援文件的連結。  
 
-4. [查詢]  索引標籤會顯示 [查詢] 窗格、[結果] 窗格和狀態列。 上述螢幕擷取畫面範例中，已選取 [查詢] 索引標籤。  
+4. [查詢] 索引標籤會顯示 [查詢] 窗格、[結果] 窗格和狀態列。 上述螢幕擷取畫面範例中，已選取 [查詢] 索引標籤。  
 
 5. [查詢] 窗格可讓您建置或鍵入查詢，以在集合中的用戶端上執行。  
 
@@ -129,7 +131,7 @@ CMPivot 視窗包含下列項目：
 
     - 請在 [查詢] 窗格中剪下、複製或貼上內容。  
     <!-- markdownlint-disable MD038 -->
-    - 根據預設，此窗格會使用 IntelliSense。 例如，如果您開始輸入 `D`，IntelliSense 會建議所有以該字母開頭的實體。 選取一個選項，並按 Tab 鍵插入它。 鍵入直立線符號字元和空格 `| `，IntelliSense 會建議所有資料表運算子。 插入 `summarize` 並鍵入一個空格，IntelliSense 會建議所有彙總函式。 如需這些運算子和函式的詳細資訊，請按一下 CMPivot 中的 [首頁]  索引標籤。  
+    - 根據預設，此窗格會使用 IntelliSense。 例如，如果您開始輸入 `D`，IntelliSense 會建議所有以該字母開頭的實體。 選取一個選項，並按 Tab 鍵插入它。 鍵入直立線符號字元和空格 `| `，IntelliSense 會建議所有資料表運算子。 插入 `summarize` 並鍵入一個空格，IntelliSense 會建議所有彙總函式。 如需這些運算子和函式的詳細資訊，請按一下 CMPivot 中的 [首頁] 索引標籤。  
 
     - [查詢] 窗格也會提供下列選項：  
 
@@ -198,31 +200,31 @@ CMPivot 視窗包含下列項目：
 
 ### <a name="example-1-stop-a-running-service"></a>範例 1：停止執行中的服務
 
-安全性系統管理員要求您儘快停止並停用會計部門中所有裝置上的 Computer Browser 服務。 您在會計部門所有裝置的集合上啟動 CMPivot，並選取 [服務]  實體上的 [查詢全部]  。 
+安全性系統管理員要求您儘快停止並停用會計部門中所有裝置上的 Computer Browser 服務。 您在會計部門所有裝置的集合上啟動 CMPivot，並選取 [服務] 實體上的 [查詢全部]。 
 
 `Service`
 
-結果顯示時，您以滑鼠右鍵按一下 [名稱]  資料行，然後選取 [分組依據]  。 
+結果顯示時，您以滑鼠右鍵按一下 [名稱] 資料行，然後選取 [分組依據]。 
 
 `Service | summarize dcount( Device ) by Name`
 
-在 [Browser]  服務的資料列中，按一下 [dcount_]  資料行中的超連結數字。 
+在 [Browser] 服務的資料列中，按一下 [dcount_] 資料行中的超連結數字。 
 
 `Service | where (Name == 'Browser') | summarize count() by Device`
 
-多重選取所有的裝置、以滑鼠右鍵按一下選取範圍，然後選擇 [執行指令碼]  。 這個動作會啟動 [執行指令碼精靈]，您從該處執行現有的指令碼，以停止及停用服務。 您使用 CMPivot 快速地回應所有使用中電腦的安全性事件，並在 [執行指令碼精靈] 中檢視結果。 接著後續追蹤來建立設定基準，以便當集合中的其他電腦在未來變成使用中時加以補救。 
+多重選取所有的裝置、以滑鼠右鍵按一下選取範圍，然後選擇 [執行指令碼]。 這個動作會啟動 [執行指令碼精靈]，您從該處執行現有的指令碼，以停止及停用服務。 您使用 CMPivot 快速地回應所有使用中電腦的安全性事件，並在 [執行指令碼精靈] 中檢視結果。 接著後續追蹤來建立設定基準，以便當集合中的其他電腦在未來變成使用中時加以補救。 
 
 ![Browser 服務和執行指令碼動作的 CMPivot 範例](media/cmpivot-example1.png)
 
 
 ### <a name="example-2-proactively-resolve-application-failures"></a>範例 2：主動解決應用程式失敗  
 
-為主動處理維護作業，您每週一次針對您管理的伺服器集合執行 CMPivot，並在 **AppCrash** 實體上選取 [查詢全部]  。 您以滑鼠右鍵按一下 [檔名]  資料行，然後選取 [遞增排序]  。 一部裝置在每天會針對 sqlsqm.exe 傳回七個結果，時間戳記大約是 03:00。 您在其中一個資料列中選取檔案名稱、以滑鼠右鍵按一下，然後選取 [Bing 一下]  。 在網頁瀏覽器中瀏覽搜尋結果，即可找到此問題的 Microsoft 技術支援文件，其中有詳細資訊及解決方法。 
+為主動處理維護作業，您每週一次針對您管理的伺服器集合執行 CMPivot，並在 **AppCrash** 實體上選取 [查詢全部]。 您以滑鼠右鍵按一下 [檔名] 資料行，然後選取 [遞增排序]。 一部裝置在每天會針對 sqlsqm.exe 傳回七個結果，時間戳記大約是 03:00。 您在其中一個資料列中選取檔案名稱、以滑鼠右鍵按一下，然後選取 [Bing 一下]。 在網頁瀏覽器中瀏覽搜尋結果，即可找到此問題的 Microsoft 技術支援文件，其中有詳細資訊及解決方法。 
 
 
 ### <a name="example-3-bios-version"></a>範例 3：BIOS 版本
 
-若要[修補投機性執行端通道漏洞](https://techcommunity.microsoft.com/t5/configuration-manager-blog/additional-guidance-to-mitigate-speculative-execution-side/ba-p/274974)，其中一項需求是更新系統 BIOS。 首先要查詢 **BIOS** 實體。 然後依據 **Version** 屬性進行 [分組]  。 然後以滑鼠右鍵按一下特定值，例如 "LENOVO - 1140"，並選取 [顯示具有以下項目的裝置]  。  
+若要[修補投機性執行端通道漏洞](https://techcommunity.microsoft.com/t5/configuration-manager-blog/additional-guidance-to-mitigate-speculative-execution-side/ba-p/274974)，其中一項需求是更新系統 BIOS。 首先要查詢 **BIOS** 實體。 然後依據 **Version** 屬性進行 [分組]。 然後以滑鼠右鍵按一下特定值，例如 "LENOVO - 1140"，並選取 [顯示具有以下項目的裝置]。  
 
 `Bios | summarize countif( (Version == 'LENOVO - 1140') ) by Device | where (countif_ > 0)`
 
@@ -253,7 +255,7 @@ CMPivot 視窗包含下列項目：
   - 如果實體有 5 個屬性，這表示 5 個資料行，最多會顯示 20,000 個資料列。
   - 如果實體有 10 個屬性，則最多會顯示 10,000 個資料列。
   - 顯示的總資料量會小於或等於 100,000 個資料格。
-- 在 [查詢摘要] 索引標籤上，選取失敗或離線裝置計數，然後選取 [建立集合]  選項。 此選項讓您更容易以具有補救部署的裝置為目標。
+- 在 [查詢摘要] 索引標籤上，選取失敗或離線裝置計數，然後選取 [建立集合] 選項。 此選項讓您更容易以具有補救部署的裝置為目標。
 - 按一下資料夾圖示以儲存**最常用**查詢。
    ![在 CMPivot 中儲存最常用查詢的範例](media/cmpivot-favorite.png)
 
@@ -379,13 +381,13 @@ CMPivot 包含下列純量運算子：
 
 ### <a name="query-summary"></a><a name="bkmk_cmpivot-summary"></a> 查詢摘要
 
-選取 CMPivot 視窗底部的 [查詢摘要]  索引標籤。 此狀態可協助您識別離線的用戶端，或針對可能發生的錯誤進行疑難排解。 在 [計數] 欄中選取值，以開啟具有該狀態的特定裝置清單。 
+選取 CMPivot 視窗底部的 [查詢摘要] 索引標籤。 此狀態可協助您識別離線的用戶端，或針對可能發生的錯誤進行疑難排解。 在 [計數] 欄中選取值，以開啟具有該狀態的特定裝置清單。 
 
 例如，選取具有 [失敗] 狀態的裝置計數。 請參閱特定錯誤訊息，並匯出這些裝置的清單。 如果錯誤是無法辨識特定 Cmdlet，請從匯出的裝置清單建立集合，以部署 Windows PowerShell 更新。  
 
 ### <a name="cmpivot-audit-status-messages"></a>CMPivot 稽核狀態訊息
 
-從 1810 版開始，當您執行 CMPivot 時，會建立一則稽核狀態訊息，**MessageID 為 40805**。 您可以移至 [監視]   > [系統狀態]   > [狀態訊息查詢]  來檢視狀態訊息。 您可以執行 [特定使用者的所有稽核狀態訊息]  、[特定站台的所有稽核狀態訊息]  ，或建立您自己的狀態訊息查詢。
+從 1810 版開始，當您執行 CMPivot 時，會建立一則稽核狀態訊息，**MessageID 為 40805**。 您可以移至 [監視] > [系統狀態] > [狀態訊息查詢] 來檢視狀態訊息。 您可以執行 [特定使用者的所有稽核狀態訊息]、[特定站台的所有稽核狀態訊息]，或建立您自己的狀態訊息查詢。
 
 訊息使用下列格式：
 
@@ -413,14 +415,14 @@ MessageId 40805：使用者 &lt;UserName> 已在集合 &lt;Collection-ID> 上執
    1. 將 CAS 遠端 SQL Server 和 CAS 站台伺服器新增至 [Configmgr_DviewAccess](../../plan-design/hierarchy/accounts.md#configmgr_dviewaccess) 群組。
    ![主要站台 SQL Server 上的 Configmgr_DviewAccess 群組](media/cmpivot-dviewaccess-group.png)
 1. 移至 [Active Directory 使用者和電腦]。
-   1. 針對每個主要站台伺服器，按一下滑鼠右鍵並選取 [屬性]  。
-      1. 在 [委派] 索引標籤中，選擇第三個選項 [信任這台電腦，但只委派指定的服務]  。 
-      1. 選擇 [只使用 Kerberos]  。
+   1. 針對每個主要站台伺服器，按一下滑鼠右鍵並選取 [屬性]。
+      1. 在 [委派] 索引標籤中，選擇第三個選項 [信任這台電腦，但只委派指定的服務]。 
+      1. 選擇 [只使用 Kerberos]。
       1. 使用連接埠和執行個體，新增 CAS 的 SQL Server 服務。
       1. 確定這些變更符合您公司的安全性原則！
-   1. 針對 CAS 站台，按一下滑鼠右鍵並選取 [屬性]  。
-      1. 在 [委派] 索引標籤中，選擇第三個選項 [信任這台電腦，但只委派指定的服務]  。 
-      1. 選擇 [只使用 Kerberos]  。
+   1. 針對 CAS 站台，按一下滑鼠右鍵並選取 [屬性]。
+      1. 在 [委派] 索引標籤中，選擇第三個選項 [信任這台電腦，但只委派指定的服務]。 
+      1. 選擇 [只使用 Kerberos]。
       1. 使用連接埠和執行個體，新增每個主要站台的 SQL Server 服務。
       1. 確定這些變更符合您公司的安全性原則！
 
@@ -431,14 +433,14 @@ MessageId 40805：使用者 &lt;UserName> 已在集合 &lt;Collection-ID> 上執
 1. 移至每個主要站台的 SQL Server。
    1. 將 CAS 提供者電腦帳戶和 CAS 站台伺服器新增至 [Configmgr_DviewAccess](../../plan-design/hierarchy/accounts.md#configmgr_dviewaccess) 群組。
 1. 移至 [Active Directory 使用者和電腦]。
-   1. 選取 CAS 提供者電腦，按一下滑鼠右鍵並選取 [屬性]  。
-      1. 在 [委派] 索引標籤中，選擇第三個選項 [信任這台電腦，但只委派指定的服務]  。 
-      1. 選擇 [只使用 Kerberos]  。
+   1. 選取 CAS 提供者電腦，按一下滑鼠右鍵並選取 [屬性]。
+      1. 在 [委派] 索引標籤中，選擇第三個選項 [信任這台電腦，但只委派指定的服務]。 
+      1. 選擇 [只使用 Kerberos]。
       1. 使用連接埠和執行個體，新增每個主要站台的 SQL Server 服務。
       1. 確定這些變更符合您公司的安全性原則！
-   1. 選取 CAS 站台伺服器，按一下滑鼠右鍵並選取 [屬性]  。
-      1. 在 [委派] 索引標籤中，選擇第三個選項 [信任這台電腦，但只委派指定的服務]  。 
-      1. 選擇 [只使用 Kerberos]  。
+   1. 選取 CAS 站台伺服器，按一下滑鼠右鍵並選取 [屬性]。
+      1. 在 [委派] 索引標籤中，選擇第三個選項 [信任這台電腦，但只委派指定的服務]。 
+      1. 選擇 [只使用 Kerberos]。
       1. 使用連接埠和執行個體，新增每個主要站台的 SQL Server 服務。
       1. 確定這些變更符合您公司的安全性原則！
 1. 重新啟動 CAS 遠端提供者電腦。
@@ -448,14 +450,14 @@ MessageId 40805：使用者 &lt;UserName> 已在集合 &lt;Collection-ID> 上執
 1. 移至每個主要站台的 SQL Server。
    1. 將 CAS 站台伺服器新增至 [Configmgr_DviewAccess](../../plan-design/hierarchy/accounts.md#configmgr_dviewaccess) 群組。
 1. 移至 [Active Directory 使用者和電腦]。
-   1. 針對每個主要站台伺服器，按一下滑鼠右鍵並選取 [屬性]  。
-      1. 在 [委派] 索引標籤中，選擇第三個選項 [信任這台電腦，但只委派指定的服務]  。 
-      1. 選擇 [只使用 Kerberos]  。
+   1. 針對每個主要站台伺服器，按一下滑鼠右鍵並選取 [屬性]。
+      1. 在 [委派] 索引標籤中，選擇第三個選項 [信任這台電腦，但只委派指定的服務]。 
+      1. 選擇 [只使用 Kerberos]。
       1. 使用連接埠和執行個體，新增 CAS 的 SQL Server 服務帳戶作為 SQL 節點。
       1. 確定這些變更符合您公司的安全性原則！
-   1. 選取 CAS 站台伺服器，按一下滑鼠右鍵並選取 [屬性]  。
-      1. 在 [委派] 索引標籤中，選擇第三個選項 [信任這台電腦，但只委派指定的服務]  。 
-      1. 選擇 [只使用 Kerberos]  。
+   1. 選取 CAS 站台伺服器，按一下滑鼠右鍵並選取 [屬性]。
+      1. 在 [委派] 索引標籤中，選擇第三個選項 [信任這台電腦，但只委派指定的服務]。 
+      1. 選擇 [只使用 Kerberos]。
       1. 使用連接埠和執行個體，新增每個主要站台的 SQL Server 服務。
       1. 確定這些變更符合您公司的安全性原則！
 1. 確定針對 CAS SQL 接聽程式名稱和每個主要 SQL 接聽程式名稱[發佈 SPN](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover?view=sql-server-2017#SPNs)。
@@ -485,7 +487,7 @@ CMPivot 已經有轉譯運算子。 已新增 **with** 陳述式及多個數列�
 
 #### <a name="limitations-for-joins"></a>聯結的限制
 
-1. 聯結資料行會一律在 [裝置]  欄位上以隱含方式完成。
+1. 聯結資料行會一律在 [裝置] 欄位上以隱含方式完成。
 1. 您最多可以針對每個查詢使用 5 個聯結。
 1. 您最多可以使用 64 個合併資料行。
 
@@ -550,7 +552,7 @@ CMPivot 已經有轉譯運算子。 已新增 **with** 陳述式及多個數列�
  - **讀取**清查報告
 
 >[!NOTE]
-> [執行指令碼]  是 [執行 CMPivot]  權限的超集。
+> [執行指令碼] 是 [執行 CMPivot] 權限的超集。
  
 
 ### <a name="cmpivot-standalone"></a><a name="bkmk_standalone"></a> CMPivot 獨立
@@ -574,7 +576,7 @@ CMPivot 已經有轉譯運算子。 已新增 **with** 陳述式及多個數列�
    ![瀏覽至您想要對其執行查詢的集合](./media/3555890-cmpivot-standalone-browse-collection.png)
 
 > [!NOTE]
-> 以滑鼠右鍵按一下動作 (例如，[執行指令碼]  、[資源總管]  和 Web 搜尋) 無法在 CMPivot 獨立中使用。 CMPivot 獨立的主要用途是於 Configuration Manager 基礎結構進行獨立查詢。 為了協助安全性系統管理員，CMpivot 獨立的功能包含連線至 Microsoft Defender 資訊安全中心。 <!--5605358-->
+> 以滑鼠右鍵按一下動作 (例如，[執行指令碼]、[資源總管] 和 Web 搜尋) 無法在 CMPivot 獨立中使用。 CMPivot 獨立的主要用途是於 Configuration Manager 基礎結構進行獨立查詢。 為了協助安全性系統管理員，CMpivot 獨立的功能包含連線至 Microsoft Defender 資訊安全中心。 <!--5605358-->
 
 ## <a name="cmpivot-starting-in-version-1910"></a><a name="bkmk_cmpivot1910"></a>從 1910 版開始的 CMPivot
 <!--5410930, 3197353-->
@@ -617,7 +619,7 @@ CMPivot 最佳化會大幅減少執行 CMPivot 查詢所需的網路和伺服器
    | project Device, MalwareFound = iif( isnull(FileName), 'No', 'Yes')
    ```
 
-### <a name="wineventlognametimespan"></a><a name="bkmk_WinEvent"></a> WinEvent(\<logname>,[\<timespan>])
+### <a name="wineventlognametimespan"></a><a name="bkmk_WinEvent"></a> WinEvent(\<logname>、[\<timespan>])
 
 此實體是用來從記錄檔與事件追蹤記錄檔取得事件。 實體會從 Windows 事件記錄檔技術產生的事件記錄檔取得資料。 實體也會取得 Windows 事件追蹤 (ETW) 產生的記錄檔取得事件。 WinEvent 預設會搜尋在過去 24 小時內發生的事件。 不過，24 小時的預設值可透過包括時間範圍來覆寫。
 
@@ -708,7 +710,7 @@ EPStatus
 
 - CMPivot 會自動連線到上一個站台。<!-- 5420395 --> 當您啟動 CMPivot 之後，您可以視需要連線到新的站台。
 
-- 從 [匯出]  功能表，選取新的選項以 [查詢連結到剪貼簿]  。<!-- 5431577 --> 此動作會將連結複製到剪貼簿，以方便您與其他人共用。 例如：
+- 從 [匯出] 功能表，選取新的選項以 [查詢連結到剪貼簿]。<!-- 5431577 --> 此動作會將連結複製到剪貼簿，以方便您與其他人共用。 例如：
 
     `cmpivot:Ly8gU2FtcGxlIHF1ZXJ5DQpPcGVyYXRpbmdTeXN0ZW0NCnwgc3VtbWFyaXplIGNvdW50KCkgYnkgQ2FwdGlvbg0KfCBvcmRlciBieSBjb3VudF8gYXNjDQp8IHJlbmRlciBiYXJjaGFydA==`
 

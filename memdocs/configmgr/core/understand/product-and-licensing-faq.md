@@ -2,7 +2,7 @@
 title: 產品與授權常見問題集
 titleSuffix: Configuration Manager
 description: 尋找 Configuration Manager 常見產品和授權問題答案。
-ms.date: 02/12/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,11 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63e53c502e67d2bfbfc5f8a706006c6ec14f8fcd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
-ms.translationtype: HT
+ms.openlocfilehash: 7b2c785fb41fa78ea0bd5d480560d45a3a7a7eda
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706836"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854417"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager 分支和授權常見問題集
 
@@ -37,7 +36,7 @@ LTSB 是 Configuration Manager 的生產環境就緒組建。 它適用於允許
 
 - **軟體保證 (SA)** ：客戶必須具有 Configuration Manager 授權的使用中 SA 或對等訂閱權限，才能安裝和使用 Configuration Manager 的最新分支選項。
 
-  雖然 SA 對部分 Microsoft 產品是選擇性項目，但是取得 Configuration Manager 最新分支使用權限的唯一方式是使用 SA「或對等訂閱權限」  。 如需詳細資訊，請參閱[軟體保證常見問題集](https://www.microsoft.com/licensing/licensing-programs/FAQ-Software-Assurance.aspx)。
+  雖然 SA 對部分 Microsoft 產品是選擇性項目，但是取得 Configuration Manager 最新分支使用權限的唯一方式是使用 SA「或對等訂閱權限」。 如需詳細資訊，請參閱[軟體保證常見問題集](https://www.microsoft.com/licensing/licensing-programs/FAQ-Software-Assurance.aspx)。
 
 - **Microsoft 授權和軟體保證 (L&SA)** ：購買 Configuration Manager 新授權的客戶必須取得 L&SA (授權和 SA 涵蓋範圍)。
 
@@ -68,19 +67,54 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 > [!IMPORTANT]
 > Configuration Manager 未包括在 [Microsoft 365 商務版](https://www.microsoft.com/microsoft-365/business)方案中。
 
-### <a name="does-anything-change-with-the-rebrand-to-microsoft-endpoint-manager"></a><a name="bkmk_mem"></a> 重新品牌化至 Microsoft 端點管理員的過程中是否有任何變更？
+### <a name="what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager"></a><a name="bkmk_mem"></a> Microsoft 端點管理員中的共同管理授權有哪些變更？
 
-是。 自 2019 年 12 月 1 日起，如果已獲得 Configuration Manager 的授權，則您在註冊[共同管理](../../comanage/overview.md)中的 Windows 電腦時，也會自動獲得 Intune 的授權。 此變更可讓您更輕鬆使用 Microsoft 端點管理員來管理 Windows 裝置。
+<!-- 7202432 -->
 
-我們現在提供新的授權，可讓具有軟體保證的 Configuration Manager 客戶取得 Intune 電腦管理權限，無須購買額外的 Intune 授權來進行共同管理。 您不再需要購買並指派個別的 Intune 授權給使用者。
+共同管理授權讓具有軟體保證的 Configuration Manager 客戶，無須購買及指派個別的 Intune 授權給使用者，即可取得 Intune 電腦管理權限。 此授權可供更輕鬆使用 Microsoft 端點管理員來管理 Windows 裝置。
 
-- 由 Configuration Manager 管理並已註冊於共同管理的裝置，與 Intune 獨立管理的電腦具有近乎相同的權限。 不過，在重設之後，就無法使用 Autopilot 將其重新佈建。
+- 已註冊 Intune 以共同管理且已由 Configuration Manager 管理的裝置，其具有與 Intune 獨立受管理電腦近乎相同的權限。 若在此裝置上重設 Windows，則無法使用 Windows Autopilot 進行佈建。 Autopilot 需要完整的 Intune 授權。
 
-- 使用其他方式向 Intune 註冊的 Windows 10 裝置，需要完整的 Intune 授權。
+- 若以其他方式向 Intune 註冊 Windows 10 裝置，其仍然需要完整的 Intune 授權。 例如，您使用 Autopilot 來佈建裝置，或使用者手動執行自助註冊。
 
-- 如果希望使用 Intune 來管理 iOS、Android 或 macOS 裝置，則您需要透過獨立的 Intune 授權、Enterprise Mobility + Security (EMS) 或 Microsoft 365 的適當 Intune 訂用帳戶。
+- 為了使現有 Configuration Manager 受管理裝置無需使用者互動即可註冊至 Intune，以進行大規模的共同管理，共同管理會使用稱為 Windows 10 自動註冊的 Azure Active Directory (Azure AD) 功能。 自動註冊需要與 Microsoft 端點管理員分隔的 Azure AD Premium (AADP1) 授權。 為了讓共同管理在本案例中能夠運作，其通常會要求將 AADP1 與 Intune 授權指派給每位個別使用者。 共同管理授權自 2019 年 12 月 1 日起開始變更。 您現在不須要為本案例指派個別的 Intune 授權，但在其他註冊案例中，仍然需要這些授權。 AADP1 授權需求維持不變，自動註冊與共同管理才能運作。
+
+- 若要使用 Intune 來管理 iOS、Android 或 macOS 裝置，則必須透過獨立的 Intune 授權、Enterprise Mobility + Security (EMS) 或 Microsoft 365 來擁有適用的 Intune 訂閱。
+
+- 若沒有任何 Intune 相關的訂閱方案，為了支援共同管理，則必須購買至少一個 Intune 授權。 此授權是為了讓系統管理員存取 Microsoft 端點管理員系統管理中心。
+
+- 若使用 Microsoft 365 內建[基本行動力與安全性](https://support.microsoft.com/office/capabilities-of-built-in-mobile-device-management-for-microsoft-365-a1da44e5-7475-4992-be91-9ccec25905b0)，則無法針對也具有由基本行動力與安全性所管理裝置的使用者使用新共同管理授權。 若要針對使用者的 Configuration Manager 受管理裝置使用共同管理授權，請執行下列其中一項動作：
+
+  - 將完整的 Intune 授權指派給該使用者，然後透過 Intune 管理其裝置。
+  - 從基本的行動力與安全性取消註冊裝置。
 
 - 您先前擁有的 System Center Configuration Manager 授權，仍適用於 Microsoft Endpoint Configuration Manager。 如果要安裝新的站台，請使用現有的產品金鑰。
+
+|功能 | 共同管理授權 | 完整的 Intune 授權 |
+|---------|---------|---------|
+|Windows 10 註冊|是 (僅適用於現有的 Configuration Manager 受管理裝置)|是|
+|iOS、Android、macOS 註冊|否|是|
+|Autopilot|否|是|
+|行動應用程式管理 (MAM)|否|是|
+|條件式存取<br>(需要額外 AADP1)|是|是|
+|裝置設定檔|是|是|
+|軟體更新管理|是|是|
+|清查|是|是|
+|應用程式管理|是|是|
+|遠端協助<br>(需要 TeamViewer 授權)|是|是|
+|電腦分析<br>(需要 Windows 訂閱授權|是|N/A|
+|租用戶附加|是|N/A|
+|端點分析|是|是|
+
+如需詳細資訊，請參閱下列文章：
+
+- [共同管理先決條件](../../comanage/overview.md#prerequisites)
+- [Windows Autopilot 需求](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements)
+- [電腦分析先決條件](../../desktop-analytics/overview.md#prerequisites)
+- [租用戶附加先決條件](../../tenant-attach/device-sync-actions.md#prerequisites)
+- [端點分析授權先決條件](../../../analytics/overview.md#licensing-prerequisites)
+- [搭配 Intune 使用條件式存取](../../../intune/protect/conditional-access.md#use-conditional-access-with-intune)
+- [TeamViewer 先決條件](../../../intune/remote-actions/teamviewer-support.md#prerequisites)
 
 ### <a name="i-have-enterprise-mobility--security-and-it-expired-what-must-i-do-now"></a><a name="bkmk_ems-expires"></a> 我有 Enterprise Mobility + Security 但已過期，我現在必須怎麼做？  
 
@@ -92,11 +126,11 @@ EMS 會授與 Configuration Manager 最新分支和長期維護分支的使用�
 
 如果您的 SA 在 2016 年 10 月 1 日之前過期，但保留 Configuration Manager 的永久授權，則持續使用的唯一選項是安裝和使用 System Center 2012 R2 Configuration Manager 和其可用的 Service Pack。 您的 SA 過期之後，會要求您解除安裝最新分支，並重新安裝產品的較舊版本。 不支援從 Configuration Manager 最新分支移轉至或降級至舊版 Configuration Manager。
 
-如果您使用 System Center Endpoint Protection，且您的 SA 過期，則您必須將它解除安裝。 System Center Endpoint Protection 不會提供「L (授權)」  權限，也不會提供永久權限。<!--506238-->
+如果您使用 System Center Endpoint Protection，且您的 SA 過期，則您必須將它解除安裝。 System Center Endpoint Protection 不會提供「L (授權)」權限，也不會提供永久權限。<!--506238-->
 
 ### <a name="do-i-own-the-current-branch"></a><a name="bkmk_owncb"></a> 我是否「擁有」最新分支？
 
-否。 您有有效 SA 時，即有權使用最新分支。 例如，透過 *L&SA*，當 *SA* 過期時，您只會有「L (授權)」  權限，但這不包括使用最新分支的權限。 如果您的 L 提供永久權限，您可以使用 Configuration Manager LTSB 取代最新分支。 如果您的 SA 在 2016 年 10 月 1 日之前過期，您也可以使用 System Center 2012 R2 Configuration Manager。
+否。 您有有效 SA 時，即有權使用最新分支。 例如，透過 *L&SA*，當 *SA* 過期時，您只會有「L (授權)」權限，但這不包括使用最新分支的權限。 如果您的 L 提供永久權限，您可以使用 Configuration Manager LTSB 取代最新分支。 如果您的 SA 在 2016 年 10 月 1 日之前過期，您也可以使用 System Center 2012 R2 Configuration Manager。
 
 ### <a name="can-i-purchase-configuration-manager-standalone-without-sa"></a><a name="bkmk_standalone"></a> 我是否可以購買不含 SA 的獨立 Configuration Manager？
 
@@ -126,7 +160,7 @@ EMS 會授與 Configuration Manager 最新分支和長期維護分支的使用�
 
 ### <a name="is-my-subscription-end-date-the-same-as-an-sa-expiration-date"></a><a name="bkmk_expiration-date"></a> 我的訂閱結束日期與 SA 到期日相同嗎？
 
-如果 *SA* 或訂閱為使用中，則您具有 Configuration Manager 最新分支的使用權限。 使用中訂閱相當於具有使用中 *SA*，但沒有永久「"L" (授權)」  。 當您的訂閱結束之後，請將最新分支解除安裝。 目前，您沒有 LTSB 的使用權。  
+如果 *SA* 或訂閱為使用中，則您具有 Configuration Manager 最新分支的使用權限。 使用中訂閱相當於具有使用中 *SA*，但沒有永久「"L" (授權)」。 當您的訂閱結束之後，請將最新分支解除安裝。 目前，您沒有 LTSB 的使用權。  
 
 ### <a name="what-are-the-use-rights-associated-with-the-sql-technology-provided-with-configuration-manager"></a><a name="bkmk_sql"></a> 隨 Configuration Manager 提供的 SQL 技術有哪些相關聯的使用權限？
 

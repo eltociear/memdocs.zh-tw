@@ -10,12 +10,11 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 02a281b800c1156cf8492e8a897a5cf1b412006e
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
-ms.translationtype: HT
+ms.openlocfilehash: 388a051f899369aa6a7754f94b0a7727f943f0ec
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383031"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854400"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>關於 Configuration Manager 中的用戶端安裝參數和屬性
 
@@ -601,7 +600,11 @@ Configuration Manager 預設會啟用記錄。
 
 從 2002 版開始，您可使用此屬性在用戶端成功向站台註冊後，於其上啟動工作順序。
 
+> [!NOTE]
+> 若工作順序會安裝軟體更新或應用程式，用戶端就需要有效的用戶端驗證憑證。 單一權杖驗證無法使用。 如需詳細資訊，請參閱[版本資訊 - OS 部署](../../servers/deploy/install/release-notes.md#os-deployment)。<!--7527072-->
+      
 例如，您使用 Windows Autopilot 佈建新的 Windows 10 裝置、將該裝置自動註冊到 Microsoft Intune，然後安裝 Configuration Manager 用戶端以進行共同管理。 如果指定這個新選項，新佈建的用戶端就會執行工作順序。 這個處理序可讓您更靈活地安裝應用程式和軟體更新，或進行設定。
+
 
 請使用下列程序：
 
@@ -617,6 +620,8 @@ Configuration Manager 預設會啟用記錄。
       > 這個方法可能有其他必要條件。 例如，將站台註冊到 Azure Active Directory，或建立已啟用內容的雲端管理閘道。
 
 在用戶端安裝並正確地向站台註冊之後，就會啟動參考的工作順序。 如果用戶端註冊失敗，則不會啟動工作順序。
+
+
 
 ### <a name="resetkeyinformation"></a>RESETKEYINFORMATION
 

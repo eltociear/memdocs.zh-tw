@@ -5,17 +5,16 @@ description: 了解如何使用 Configuration Manager 和 Microsoft Intune 同�
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 07/01/2020
 ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 86bd566e9582c7dd7c83f93c22430edcc8ea0d0d
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
-ms.translationtype: HT
+ms.openlocfilehash: a7f38f48946244deb6026d040c44159d0384f7b1
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347180"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854434"
 ---
 # <a name="what-is-co-management"></a>什麼是共同管理？
 
@@ -88,7 +87,7 @@ ms.locfileid: "84347180"
     > [!Tip]
     > 請務必將 Intune 授權指派給您用來登入租用戶的帳戶。 否則登入將會失敗，並顯示錯誤訊息「無法辨識的使用者」。
     >
-    > 您不再需要購買並指派個別的 Intune 或 EMS 授權給使用者。 如需詳細資訊，請參閱[產品與授權常見問題集](../core/understand/product-and-licensing-faq.md#bkmk_mem)。
+    > 您可能不需要購買及指派個別的 Intune 或 EMS 授權給使用者。 如需詳細資訊，請參閱[產品與授權常見問題集](../core/understand/product-and-licensing-faq.md#bkmk_mem)。
 
 ### <a name="configuration-manager"></a>Configuration Manager
 
